@@ -1,9 +1,14 @@
 {
   "total_functions": 5783,
-  "current_batch": 3,
-  "completed_functions": 300,
-  "failed_functions": [],
-  "last_updated": "2025-07-28T21:21:14.835610",
+  "current_batch": 6,
+  "completed_functions": 716,
+  "failed_functions": [
+    "C_Club.SendMessage",
+    "C_Club.SetAutoAdvanceStreamViewMarker",
+    "C_Club.SetAvatarTexture",
+    "C_Club.SetClubMemberNote"
+  ],
+  "last_updated": "2025-07-28T22:12:40.461507",
   "batch_size": 100,
   "functions": [
     {
@@ -1809,2282 +1814,2282 @@
     {
       "name": "C_AzeriteEssence.GetNumUnlockedEssences",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetNumUnlockedEssences",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:47.223903"
     },
     {
       "name": "C_AzeriteEssence.GetNumUsableEssences",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetNumUsableEssences",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:47.817920"
     },
     {
       "name": "C_AzeriteEssence.GetPendingActivationEssence",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetPendingActivationEssence",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:48.386044"
     },
     {
       "name": "C_AzeriteEssence.HasNeverActivatedAnyEssences",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.HasNeverActivatedAnyEssences",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:48.982511"
     },
     {
       "name": "C_AzeriteEssence.HasPendingActivationEssence",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.HasPendingActivationEssence",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:49.557504"
     },
     {
       "name": "C_AzeriteEssence.IsAtForge",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.IsAtForge",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:50.142486"
     },
     {
       "name": "C_AzeriteEssence.SetPendingActivationEssence",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.SetPendingActivationEssence",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:50.766529"
     },
     {
       "name": "C_AzeriteEssence.UnlockMilestone",
       "url": "https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.UnlockMilestone",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:51.355851"
     },
     {
       "name": "C_Bank.AreAnyBankTypesViewable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.AreAnyBankTypesViewable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:51.937081"
     },
     {
       "name": "C_Bank.AutoDepositItemsIntoBank",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.AutoDepositItemsIntoBank",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:52.542234"
     },
     {
       "name": "C_Bank.CanDepositMoney",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CanDepositMoney",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:53.161408"
     },
     {
       "name": "C_Bank.CanPurchaseBankTab",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CanPurchaseBankTab",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:53.748977"
     },
     {
       "name": "C_Bank.CanUseBank",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CanUseBank",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:54.352389"
     },
     {
       "name": "C_Bank.CanViewBank",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CanViewBank",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:54.949836"
     },
     {
       "name": "C_Bank.CanWithdrawMoney",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CanWithdrawMoney",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:55.521654"
     },
     {
       "name": "C_Bank.CloseBankFrame",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.CloseBankFrame",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:56.201257"
     },
     {
       "name": "C_Bank.DepositMoney",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.DepositMoney",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:56.780438"
     },
     {
       "name": "C_Bank.DoesBankTypeSupportAutoDeposit",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportAutoDeposit",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:57.407266"
     },
     {
       "name": "C_Bank.DoesBankTypeSupportMoneyTransfer",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportMoneyTransfer",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:57.971740"
     },
     {
       "name": "C_Bank.FetchBankLockedReason",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchBankLockedReason",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:58.541238"
     },
     {
       "name": "C_Bank.FetchDepositedMoney",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchDepositedMoney",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:59.153907"
     },
     {
       "name": "C_Bank.FetchNextPurchasableBankTabData",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabData",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:23:59.727983"
     },
     {
       "name": "C_Bank.FetchNumPurchasedBankTabs",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNumPurchasedBankTabs",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:00.295126"
     },
     {
       "name": "C_Bank.FetchPurchasedBankTabData",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchPurchasedBankTabData",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:01.060388"
     },
     {
       "name": "C_Bank.FetchPurchasedBankTabIDs",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchPurchasedBankTabIDs",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:01.672473"
     },
     {
       "name": "C_Bank.FetchViewableBankTypes",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.FetchViewableBankTypes",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:02.252709"
     },
     {
       "name": "C_Bank.HasMaxBankTabs",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.HasMaxBankTabs",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:02.922400"
     },
     {
       "name": "C_Bank.IsItemAllowedInBankType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.IsItemAllowedInBankType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:03.485006"
     },
     {
       "name": "C_Bank.PurchaseBankTab",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.PurchaseBankTab",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:04.062137"
     },
     {
       "name": "C_Bank.UpdateBankTabSettings",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.UpdateBankTabSettings",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:04.665550"
     },
     {
       "name": "C_Bank.WithdrawMoney",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Bank.WithdrawMoney",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:05.333852"
     },
     {
       "name": "C_BarberShop.ApplyCustomizationChoices",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.ApplyCustomizationChoices",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:05.926745"
     },
     {
       "name": "C_BarberShop.Cancel",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.Cancel",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:06.605440"
     },
     {
       "name": "C_BarberShop.ClearPreviewChoices",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.ClearPreviewChoices",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:07.222516"
     },
     {
       "name": "C_BarberShop.GetAvailableCustomizations",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetAvailableCustomizations",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:07.803648"
     },
     {
       "name": "C_BarberShop.GetCurrentCameraZoom",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCameraZoom",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:08.371008"
     },
     {
       "name": "C_BarberShop.GetCurrentCharacterData",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCharacterData",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:08.969025"
     },
     {
       "name": "C_BarberShop.GetCurrentCost",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCost",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:09.527014"
     },
     {
       "name": "C_BarberShop.GetViewingChrModel",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetViewingChrModel",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:10.104038"
     },
     {
       "name": "C_BarberShop.HasAlteredForm",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAlteredForm",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:10.685786"
     },
     {
       "name": "C_BarberShop.HasAnyChanges",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAnyChanges",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:11.314992"
     },
     {
       "name": "C_BarberShop.HasCustomizationFeature",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasCustomizationFeature",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:11.888272"
     },
     {
       "name": "C_BarberShop.IsViewingAlteredForm",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.IsViewingAlteredForm",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:12.461941"
     },
     {
       "name": "C_BarberShop.MarkCustomizationChoiceAsSeen",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.MarkCustomizationChoiceAsSeen",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:13.036566"
     },
     {
       "name": "C_BarberShop.MarkCustomizationOptionAsSeen",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.MarkCustomizationOptionAsSeen",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:13.613712"
     },
     {
       "name": "C_BarberShop.PreviewCustomizationChoice",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.PreviewCustomizationChoice",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:14.173286"
     },
     {
       "name": "C_BarberShop.RandomizeCustomizationChoices",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.RandomizeCustomizationChoices",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:14.735907"
     },
     {
       "name": "C_BarberShop.ResetCameraRotation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.ResetCameraRotation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:15.300241"
     },
     {
       "name": "C_BarberShop.ResetCustomizationChoices",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.ResetCustomizationChoices",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:15.890666"
     },
     {
       "name": "C_BarberShop.RotateCamera",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.RotateCamera",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:16.457857"
     },
     {
       "name": "C_BarberShop.SaveSeenChoices",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SaveSeenChoices",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:17.079866"
     },
     {
       "name": "C_BarberShop.SetCameraDistanceOffset",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCameraDistanceOffset",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:17.651956"
     },
     {
       "name": "C_BarberShop.SetCameraZoomLevel",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCameraZoomLevel",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:18.234852"
     },
     {
       "name": "C_BarberShop.SetCustomizationChoice",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCustomizationChoice",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:18.809776"
     },
     {
       "name": "C_BarberShop.SetModelDressState",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetModelDressState",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:19.394371"
     },
     {
       "name": "C_BarberShop.SetSelectedSex",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetSelectedSex",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:19.971278"
     },
     {
       "name": "C_BarberShop.SetViewingAlteredForm",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingAlteredForm",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:20.548443"
     },
     {
       "name": "C_BarberShop.SetViewingChrModel",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingChrModel",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:21.128874"
     },
     {
       "name": "C_BarberShop.SetViewingShapeshiftForm",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingShapeshiftForm",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:21.708362"
     },
     {
       "name": "C_BarberShop.ZoomCamera",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BarberShop.ZoomCamera",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:22.382258"
     },
     {
       "name": "C_BattleNet.GetFriendAccountInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendAccountInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:23.010519"
     },
     {
       "name": "C_BattleNet.GetAccountInfoByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:23.589089"
     },
     {
       "name": "C_BattleNet.GetAccountInfoByGUID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByGUID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:24.192697"
     },
     {
       "name": "C_BattleNet.GetFriendGameAccountInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendGameAccountInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:24.781653"
     },
     {
       "name": "C_BattleNet.GetGameAccountInfoByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:25.425249"
     },
     {
       "name": "C_BattleNet.GetGameAccountInfoByGUID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByGUID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:26.031429"
     },
     {
       "name": "C_BattleNet.GetFriendNumGameAccounts",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendNumGameAccounts",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:26.655621"
     },
     {
       "name": "C_BehavioralMessaging.SendNotificationReceipt",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BehavioralMessaging.SendNotificationReceipt",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:27.288382"
     },
     {
       "name": "C_BlackMarket.Close",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:27.854582"
     },
     {
       "name": "C_BlackMarket.GetHotItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetHotItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:28.422603"
     },
     {
       "name": "C_BlackMarket.GetItemInfoByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:29.033042"
     },
     {
       "name": "C_BlackMarket.GetItemInfoByIndex",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByIndex",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:29.633193"
     },
     {
       "name": "C_BlackMarket.GetNumItems",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetNumItems",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:30.237560"
     },
     {
       "name": "C_BlackMarket.IsViewOnly",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.IsViewOnly",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:30.817202"
     },
     {
       "name": "C_BlackMarket.ItemPlaceBid",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.ItemPlaceBid",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:31.399877"
     },
     {
       "name": "C_BlackMarket.RequestItems",
       "url": "https://warcraft.wiki.gg/wiki/API_C_BlackMarket.RequestItems",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:31.966367"
     },
     {
       "name": "GetBuildInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_GetBuildInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:32.575512"
     },
     {
       "name": "Is64BitClient",
       "url": "https://warcraft.wiki.gg/wiki/API_Is64BitClient",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:33.146397"
     },
     {
       "name": "IsBetaBuild",
       "url": "https://warcraft.wiki.gg/wiki/API_IsBetaBuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:33.746477"
     },
     {
       "name": "IsDebugBuild",
       "url": "https://warcraft.wiki.gg/wiki/API_IsDebugBuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:34.373956"
     },
     {
       "name": "IsLinuxClient",
       "url": "https://warcraft.wiki.gg/wiki/API_IsLinuxClient",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:35.006117"
     },
     {
       "name": "IsMacClient",
       "url": "https://warcraft.wiki.gg/wiki/API_IsMacClient",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:35.610425"
     },
     {
       "name": "IsPublicBuild",
       "url": "https://warcraft.wiki.gg/wiki/API_IsPublicBuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:36.174374"
     },
     {
       "name": "IsPublicTestClient",
       "url": "https://warcraft.wiki.gg/wiki/API_IsPublicTestClient",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:36.736402"
     },
     {
       "name": "IsTestBuild",
       "url": "https://warcraft.wiki.gg/wiki/API_IsTestBuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:37.318149"
     },
     {
       "name": "IsWindowsClient",
       "url": "https://warcraft.wiki.gg/wiki/API_IsWindowsClient",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:37.882746"
     },
     {
       "name": "SupportsClipCursor",
       "url": "https://warcraft.wiki.gg/wiki/API_SupportsClipCursor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:38.459154"
     },
     {
       "name": "C_Calendar.AddEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.AddEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:39.168337"
     },
     {
       "name": "C_Calendar.AreNamesReady",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.AreNamesReady",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:39.744482"
     },
     {
       "name": "C_Calendar.CanAddEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CanAddEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:40.325408"
     },
     {
       "name": "C_Calendar.CanSendInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CanSendInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:40.965263"
     },
     {
       "name": "C_Calendar.CloseEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CloseEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:41.585925"
     },
     {
       "name": "C_Calendar.ContextMenuEventCanComplain",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanComplain",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:42.140215"
     },
     {
       "name": "C_Calendar.ContextMenuEventCanEdit",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanEdit",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:42.716542"
     },
     {
       "name": "C_Calendar.ContextMenuEventCanRemove",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanRemove",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:43.286793"
     },
     {
       "name": "C_Calendar.ContextMenuEventClipboard",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventClipboard",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:43.850979"
     },
     {
       "name": "C_Calendar.ContextMenuEventCopy",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCopy",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:44.404137"
     },
     {
       "name": "C_Calendar.ContextMenuEventGetCalendarType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventGetCalendarType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:44.997171"
     },
     {
       "name": "C_Calendar.ContextMenuEventPaste",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventPaste",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:45.592297"
     },
     {
       "name": "C_Calendar.ContextMenuEventRemove",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventRemove",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:24:46.184205"
     },
     {
       "name": "C_Calendar.ContextMenuEventSignUp",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventSignUp",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:39.070972"
     },
     {
       "name": "C_Calendar.ContextMenuGetEventIndex",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuGetEventIndex",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:39.665629"
     },
     {
       "name": "C_Calendar.ContextMenuInviteAvailable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteAvailable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:40.262964"
     },
     {
       "name": "C_Calendar.ContextMenuInviteDecline",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteDecline",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:40.842116"
     },
     {
       "name": "C_Calendar.ContextMenuInviteRemove",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteRemove",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:41.505541"
     },
     {
       "name": "C_Calendar.ContextMenuInviteTentative",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteTentative",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:42.105569"
     },
     {
       "name": "C_Calendar.ContextMenuSelectEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuSelectEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:42.689779"
     },
     {
       "name": "C_Calendar.CreateCommunitySignUpEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateCommunitySignUpEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:43.299178"
     },
     {
       "name": "C_Calendar.CreateGuildAnnouncementEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateGuildAnnouncementEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:43.894980"
     },
     {
       "name": "C_Calendar.CreateGuildSignUpEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateGuildSignUpEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:44.464889"
     },
     {
       "name": "C_Calendar.CreatePlayerEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.CreatePlayerEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:45.091456"
     },
     {
       "name": "C_Calendar.EventAvailable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventAvailable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:45.680427"
     },
     {
       "name": "C_Calendar.EventCanEdit",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventCanEdit",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:46.284137"
     },
     {
       "name": "C_Calendar.EventClearAutoApprove",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearAutoApprove",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:46.861138"
     },
     {
       "name": "C_Calendar.EventClearLocked",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearLocked",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:47.439335"
     },
     {
       "name": "C_Calendar.EventClearModerator",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearModerator",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:48.054492"
     },
     {
       "name": "C_Calendar.EventDecline",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventDecline",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:48.648455"
     },
     {
       "name": "C_Calendar.EventGetCalendarType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetCalendarType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:49.216343"
     },
     {
       "name": "C_Calendar.EventGetClubId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetClubId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:49.828537"
     },
     {
       "name": "C_Calendar.EventGetInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:50.424506"
     },
     {
       "name": "C_Calendar.EventGetInviteResponseTime",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInviteResponseTime",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:51.061902"
     },
     {
       "name": "C_Calendar.EventGetInviteSortCriterion",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInviteSortCriterion",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:51.662408"
     },
     {
       "name": "C_Calendar.EventGetSelectedInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetSelectedInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:52.296390"
     },
     {
       "name": "C_Calendar.EventGetStatusOptions",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetStatusOptions",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:52.905959"
     },
     {
       "name": "C_Calendar.EventGetTextures",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTextures",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:53.528262"
     },
     {
       "name": "C_Calendar.EventGetTypes",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTypes",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:54.122592"
     },
     {
       "name": "C_Calendar.EventGetTypesDisplayOrdered",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTypesDisplayOrdered",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:54.717484"
     },
     {
       "name": "C_Calendar.EventHasPendingInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventHasPendingInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:55.332480"
     },
     {
       "name": "C_Calendar.EventHaveSettingsChanged",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventHaveSettingsChanged",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:55.935508"
     },
     {
       "name": "C_Calendar.EventInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:56.529739"
     },
     {
       "name": "C_Calendar.EventRemoveInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventRemoveInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:57.163404"
     },
     {
       "name": "C_Calendar.EventRemoveInviteByGuid",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventRemoveInviteByGuid",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:57.765561"
     },
     {
       "name": "C_Calendar.EventSelectInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSelectInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:58.336424"
     },
     {
       "name": "C_Calendar.EventSetAutoApprove",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetAutoApprove",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:58.926422"
     },
     {
       "name": "C_Calendar.EventSetClubId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetClubId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:25:59.505403"
     },
     {
       "name": "C_Calendar.EventSetDate",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetDate",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:00.104371"
     },
     {
       "name": "C_Calendar.EventSetDescription",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetDescription",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:00.673598"
     },
     {
       "name": "C_Calendar.EventSetInviteStatus",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetInviteStatus",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:01.256850"
     },
     {
       "name": "C_Calendar.EventSetLocked",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetLocked",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:01.835356"
     },
     {
       "name": "C_Calendar.EventSetModerator",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetModerator",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:02.460875"
     },
     {
       "name": "C_Calendar.EventSetTextureID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTextureID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:03.104259"
     },
     {
       "name": "C_Calendar.EventSetTime",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTime",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:03.693278"
     },
     {
       "name": "C_Calendar.EventSetTitle",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTitle",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:04.275650"
     },
     {
       "name": "C_Calendar.EventSetType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:04.876922"
     },
     {
       "name": "C_Calendar.EventSignUp",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSignUp",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:05.474608"
     },
     {
       "name": "C_Calendar.EventSortInvites",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSortInvites",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:06.045019"
     },
     {
       "name": "C_Calendar.EventTentative",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.EventTentative",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:06.629124"
     },
     {
       "name": "C_Calendar.GetClubCalendarEvents",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetClubCalendarEvents",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:07.247305"
     },
     {
       "name": "C_Calendar.GetDayEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetDayEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:07.975840"
     },
     {
       "name": "C_Calendar.GetDefaultGuildFilter",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetDefaultGuildFilter",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:08.554707"
     },
     {
       "name": "C_Calendar.GetEventIndex",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventIndex",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:09.228513"
     },
     {
       "name": "C_Calendar.GetEventIndexInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventIndexInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:09.822131"
     },
     {
       "name": "C_Calendar.GetEventInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:10.437126"
     },
     {
       "name": "C_Calendar.GetFirstPendingInvite",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetFirstPendingInvite",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:11.007214"
     },
     {
       "name": "C_Calendar.GetGuildEventInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetGuildEventInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:11.573280"
     },
     {
       "name": "C_Calendar.GetGuildEventSelectionInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetGuildEventSelectionInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:12.135073"
     },
     {
       "name": "C_Calendar.GetHolidayInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetHolidayInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:12.708331"
     },
     {
       "name": "C_Calendar.GetMaxCreateDate",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMaxCreateDate",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:13.309173"
     },
     {
       "name": "C_Calendar.GetMinDate",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMinDate",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:13.886066"
     },
     {
       "name": "C_Calendar.GetMonthInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMonthInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:14.454077"
     },
     {
       "name": "C_Calendar.GetNextClubId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNextClubId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:15.102023"
     },
     {
       "name": "C_Calendar.GetNumDayEvents",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumDayEvents",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:15.671872"
     },
     {
       "name": "C_Calendar.GetNumGuildEvents",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumGuildEvents",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:16.254859"
     },
     {
       "name": "C_Calendar.GetNumInvites",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumInvites",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:16.849983"
     },
     {
       "name": "C_Calendar.GetNumPendingInvites",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumPendingInvites",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:17.408975"
     },
     {
       "name": "C_Calendar.GetRaidInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.GetRaidInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:18.025886"
     },
     {
       "name": "C_Calendar.IsActionPending",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.IsActionPending",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:18.640971"
     },
     {
       "name": "C_Calendar.IsEventOpen",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.IsEventOpen",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:19.249504"
     },
     {
       "name": "C_Calendar.MassInviteCommunity",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.MassInviteCommunity",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:19.861881"
     },
     {
       "name": "C_Calendar.MassInviteGuild",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.MassInviteGuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:20.480879"
     },
     {
       "name": "C_Calendar.OpenCalendar",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.OpenCalendar",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:21.108447"
     },
     {
       "name": "C_Calendar.OpenEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.OpenEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:21.693975"
     },
     {
       "name": "C_Calendar.RemoveEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.RemoveEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:22.264886"
     },
     {
       "name": "C_Calendar.SetAbsMonth",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.SetAbsMonth",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:23.019868"
     },
     {
       "name": "C_Calendar.SetMonth",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.SetMonth",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:23.621689"
     },
     {
       "name": "C_Calendar.SetNextClubId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.SetNextClubId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:24.231789"
     },
     {
       "name": "C_Calendar.UpdateEvent",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Calendar.UpdateEvent",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:24.800501"
     },
     {
       "name": "C_ChallengeMode.CanUseKeystoneInCurrentMap",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.CanUseKeystoneInCurrentMap",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:25.602333"
     },
     {
       "name": "C_ChallengeMode.ClearKeystone",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.ClearKeystone",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:26.205734"
     },
     {
       "name": "C_ChallengeMode.CloseKeystoneFrame",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.CloseKeystoneFrame",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:26.790776"
     },
     {
       "name": "C_ChallengeMode.GetActiveChallengeMapID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetActiveChallengeMapID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:27.419394"
     },
     {
       "name": "C_ChallengeMode.GetActiveKeystoneInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetActiveKeystoneInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:27.973798"
     },
     {
       "name": "C_ChallengeMode.GetAffixInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetAffixInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:28.556154"
     },
     {
       "name": "C_ChallengeMode.GetChallengeCompletionInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetChallengeCompletionInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:29.125287"
     },
     {
       "name": "C_ChallengeMode.GetDeathCount",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDeathCount",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:29.684057"
     },
     {
       "name": "C_ChallengeMode.GetDungeonScoreRarityColor",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:30.297635"
     },
     {
       "name": "C_ChallengeMode.GetGuildLeaders",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetGuildLeaders",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:30.874121"
     },
     {
       "name": "C_ChallengeMode.GetKeystoneLevelRarityColor",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:31.443188"
     },
     {
       "name": "C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:32.001265"
     },
     {
       "name": "C_ChallengeMode.GetMapScoreInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapScoreInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:32.562365"
     },
     {
       "name": "C_ChallengeMode.GetMapTable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapTable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:33.193661"
     },
     {
       "name": "C_ChallengeMode.GetMapUIInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapUIInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:33.758805"
     },
     {
       "name": "C_ChallengeMode.GetOverallDungeonScore",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetOverallDungeonScore",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:34.376481"
     },
     {
       "name": "C_ChallengeMode.GetPowerLevelDamageHealthMod",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetPowerLevelDamageHealthMod",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:34.968319"
     },
     {
       "name": "C_ChallengeMode.GetSlottedKeystoneInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSlottedKeystoneInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:35.532533"
     },
     {
       "name": "C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:36.133028"
     },
     {
       "name": "C_ChallengeMode.GetSpecificDungeonScoreRarityColor",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:36.723596"
     },
     {
       "name": "C_ChallengeMode.GetStartTime",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetStartTime",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:37.314883"
     },
     {
       "name": "C_ChallengeMode.HasSlottedKeystone",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.HasSlottedKeystone",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:37.935703"
     },
     {
       "name": "C_ChallengeMode.IsChallengeModeActive",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeActive",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:26:38.561833"
     },
     {
       "name": "C_ChallengeMode.IsChallengeModeResettable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeResettable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:38.010100"
     },
     {
       "name": "C_ChallengeMode.RemoveKeystone",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.RemoveKeystone",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:38.606081"
     },
     {
       "name": "C_ChallengeMode.RequestLeaders",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.RequestLeaders",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:39.202199"
     },
     {
       "name": "C_ChallengeMode.Reset",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.Reset",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:39.778345"
     },
     {
       "name": "C_ChallengeMode.SlotKeystone",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.SlotKeystone",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:40.363025"
     },
     {
       "name": "C_ChallengeMode.StartChallengeMode",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.StartChallengeMode",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:40.945169"
     },
     {
       "name": "C_ChatBubbles.GetAllChatBubbles",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatBubbles.GetAllChatBubbles",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:41.539700"
     },
     {
       "name": "C_ChatInfo.CanPlayerSpeakLanguage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:42.123848"
     },
     {
       "name": "C_ChatInfo.DropCautionaryChatMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.DropCautionaryChatMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:42.717998"
     },
     {
       "name": "C_ChatInfo.GetChannelInfoFromIdentifier",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:43.321150"
     },
     {
       "name": "C_ChatInfo.GetChannelRosterInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRosterInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:43.986511"
     },
     {
       "name": "C_ChatInfo.GetChannelRuleset",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRuleset",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:44.578240"
     },
     {
       "name": "C_ChatInfo.GetChannelRulesetForChannelID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRulesetForChannelID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:45.196396"
     },
     {
       "name": "C_ChatInfo.GetChannelShortcut",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcut",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:45.783544"
     },
     {
       "name": "C_ChatInfo.GetChannelShortcutForChannelID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcutForChannelID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:46.361705"
     },
     {
       "name": "C_ChatInfo.GetChatLineSenderGUID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderGUID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:46.977863"
     },
     {
       "name": "C_ChatInfo.GetChatLineSenderName",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderName",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:47.575016"
     },
     {
       "name": "C_ChatInfo.GetChatLineText",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineText",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:48.141159"
     },
     {
       "name": "C_ChatInfo.GetChatTypeName",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatTypeName",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:48.744311"
     },
     {
       "name": "C_ChatInfo.GetClubStreamIDs",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetClubStreamIDs",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:49.299451"
     },
     {
       "name": "C_ChatInfo.GetColorForChatType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetColorForChatType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:49.939701"
     },
     {
       "name": "C_ChatInfo.GetGeneralChannelID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:50.522856"
     },
     {
       "name": "C_ChatInfo.GetGeneralChannelLocalID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelLocalID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:51.112004"
     },
     {
       "name": "C_ChatInfo.GetMentorChannelID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetMentorChannelID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:51.700154"
     },
     {
       "name": "C_ChatInfo.GetNumActiveChannels",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumActiveChannels",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:52.282316"
     },
     {
       "name": "C_ChatInfo.GetNumReservedChatWindows",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumReservedChatWindows",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:52.874011"
     },
     {
       "name": "C_ChatInfo.IsChannelRegional",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegional",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:53.477163"
     },
     {
       "name": "C_ChatInfo.IsChannelRegionalForChannelID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegionalForChannelID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:54.068312"
     },
     {
       "name": "C_ChatInfo.IsChatLineCensored",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChatLineCensored",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:54.662462"
     },
     {
       "name": "C_ChatInfo.IsLoggingChat",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingChat",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:55.258925"
     },
     {
       "name": "C_ChatInfo.IsLoggingCombat",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingCombat",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:55.922792"
     },
     {
       "name": "C_ChatInfo.IsPartyChannelType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsPartyChannelType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:56.489935"
     },
     {
       "name": "C_ChatInfo.IsRegionalServiceAvailable",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsRegionalServiceAvailable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:57.060191"
     },
     {
       "name": "C_ChatInfo.IsTimerunningPlayer",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsTimerunningPlayer",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:57.674349"
     },
     {
       "name": "C_ChatInfo.IsValidChatLine",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidChatLine",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:58.267005"
     },
     {
       "name": "C_ChatInfo.IsValidCombatFilterName",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidCombatFilterName",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:58.864274"
     },
     {
       "name": "C_ChatInfo.ReplaceIconAndGroupExpressions",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ReplaceIconAndGroupExpressions",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:36:59.437660"
     },
     {
       "name": "C_ChatInfo.RequestCanLocalWhisperTarget",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:00.028336"
     },
     {
       "name": "C_ChatInfo.ResetDefaultZoneChannels",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ResetDefaultZoneChannels",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:00.613484"
     },
     {
       "name": "C_ChatInfo.SendCautionaryChatMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendCautionaryChatMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:01.178626"
     },
     {
       "name": "C_ChatInfo.SendChatMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendChatMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:01.835792"
     },
     {
       "name": "C_ChatInfo.SwapChatChannelsByChannelIndex",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:02.409937"
     },
     {
       "name": "C_ChatInfo.UncensorChatLine",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.UncensorChatLine",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:02.974585"
     },
     {
       "name": "C_ChatInfo.GetRegisteredAddonMessagePrefixes",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:03.573256"
     },
     {
       "name": "C_ChatInfo.IsAddonMessagePrefixRegistered",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:04.159404"
     },
     {
       "name": "C_ChatInfo.RegisterAddonMessagePrefix",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:04.738550"
     },
     {
       "name": "C_ChatInfo.SendAddonMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:05.354858"
     },
     {
       "name": "C_ChatInfo.SendAddonMessageLogged",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessageLogged",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:05.959035"
     },
     {
       "name": "C_ChromieTime.CloseUI",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChromieTime.CloseUI",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:06.525669"
     },
     {
       "name": "C_ChromieTime.GetChromieTimeExpansionOption",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChromieTime.GetChromieTimeExpansionOption",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:07.114339"
     },
     {
       "name": "C_ChromieTime.GetChromieTimeExpansionOptions",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChromieTime.GetChromieTimeExpansionOptions",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:07.752500"
     },
     {
       "name": "C_ChromieTime.SelectChromieTimeOption",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ChromieTime.SelectChromieTimeOption",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:08.385660"
     },
     {
       "name": "CinematicFinished",
       "url": "https://warcraft.wiki.gg/wiki/API_CinematicFinished",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:08.962805"
     },
     {
       "name": "CinematicStarted",
       "url": "https://warcraft.wiki.gg/wiki/API_CinematicStarted",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:09.538088"
     },
     {
       "name": "InCinematic",
       "url": "https://warcraft.wiki.gg/wiki/API_InCinematic",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:10.107232"
     },
     {
       "name": "MouseOverrideCinematicDisable",
       "url": "https://warcraft.wiki.gg/wiki/API_MouseOverrideCinematicDisable",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:10.692380"
     },
     {
       "name": "OpeningCinematic",
       "url": "https://warcraft.wiki.gg/wiki/API_OpeningCinematic",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:11.284529"
     },
     {
       "name": "StopCinematic",
       "url": "https://warcraft.wiki.gg/wiki/API_StopCinematic",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:11.886276"
     },
     {
       "name": "C_ClassColor.GetClassColor",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassColor.GetClassColor",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:12.473438"
     },
     {
       "name": "C_ClassTalents.CanChangeTalents",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanChangeTalents",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:13.074644"
     },
     {
       "name": "C_ClassTalents.CanCreateNewConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanCreateNewConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:13.710309"
     },
     {
       "name": "C_ClassTalents.CanEditTalents",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanEditTalents",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:14.285455"
     },
     {
       "name": "C_ClassTalents.CommitConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CommitConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:14.879604"
     },
     {
       "name": "C_ClassTalents.DeleteConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.DeleteConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:15.472754"
     },
     {
       "name": "C_ClassTalents.GetActiveConfigID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetActiveConfigID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:16.092911"
     },
     {
       "name": "C_ClassTalents.GetActiveHeroTalentSpec",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetActiveHeroTalentSpec",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:16.684059"
     },
     {
       "name": "C_ClassTalents.GetConfigIDsBySpecID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetConfigIDsBySpecID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:17.277209"
     },
     {
       "name": "C_ClassTalents.GetHasStarterBuild",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetHasStarterBuild",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:17.863357"
     },
     {
       "name": "C_ClassTalents.GetHeroTalentSpecsForClassSpec",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetHeroTalentSpecsForClassSpec",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:18.512521"
     },
     {
       "name": "C_ClassTalents.GetLastSelectedSavedConfigID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetLastSelectedSavedConfigID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:19.133680"
     },
     {
       "name": "C_ClassTalents.GetNextStarterBuildPurchase",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetNextStarterBuildPurchase",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:19.802848"
     },
     {
       "name": "C_ClassTalents.GetStarterBuildActive",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetStarterBuildActive",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:20.405001"
     },
     {
       "name": "C_ClassTalents.GetTraitTreeForSpec",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetTraitTreeForSpec",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:21.013701"
     },
     {
       "name": "C_ClassTalents.HasUnspentHeroTalentPoints",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentHeroTalentPoints",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:21.581844"
     },
     {
       "name": "C_ClassTalents.HasUnspentTalentPoints",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentTalentPoints",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:22.227018"
     },
     {
       "name": "C_ClassTalents.ImportLoadout",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.ImportLoadout",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:22.828393"
     },
     {
       "name": "C_ClassTalents.InitializeViewLoadout",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.InitializeViewLoadout",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:23.541432"
     },
     {
       "name": "C_ClassTalents.IsConfigPopulated",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.IsConfigPopulated",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:24.139583"
     },
     {
       "name": "C_ClassTalents.LoadConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.LoadConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:24.720730"
     },
     {
       "name": "C_ClassTalents.RenameConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.RenameConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:25.339783"
     },
     {
       "name": "C_ClassTalents.RequestNewConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.RequestNewConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:25.979944"
     },
     {
       "name": "C_ClassTalents.SaveConfig",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SaveConfig",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:26.591098"
     },
     {
       "name": "C_ClassTalents.SetStarterBuildActive",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SetStarterBuildActive",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:27.169244"
     },
     {
       "name": "C_ClassTalents.SetUsesSharedActionBars",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SetUsesSharedActionBars",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:27.795962"
     },
     {
       "name": "C_ClassTalents.UpdateLastSelectedSavedConfigID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.UpdateLastSelectedSavedConfigID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:28.394112"
     },
     {
       "name": "C_ClassTalents.ViewLoadout",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClassTalents.ViewLoadout",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:29.001265"
     },
     {
       "name": "C_ClickBindings.CanSpellBeClickBound",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.CanSpellBeClickBound",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:29.576134"
     },
     {
       "name": "C_ClickBindings.ExecuteBinding",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.ExecuteBinding",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:30.138585"
     },
     {
       "name": "C_ClickBindings.GetBindingType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetBindingType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:30.732112"
     },
     {
       "name": "C_ClickBindings.GetEffectiveInteractionButton",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetEffectiveInteractionButton",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:31.329263"
     },
     {
       "name": "C_ClickBindings.GetProfileInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetProfileInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:31.983428"
     },
     {
       "name": "C_ClickBindings.GetStringFromModifiers",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetStringFromModifiers",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:32.558573"
     },
     {
       "name": "C_ClickBindings.GetTutorialShown",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetTutorialShown",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:33.121169"
     },
     {
       "name": "C_ClickBindings.MakeModifiers",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.MakeModifiers",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:33.696616"
     },
     {
       "name": "C_ClickBindings.ResetCurrentProfile",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.ResetCurrentProfile",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:34.262744"
     },
     {
       "name": "C_ClickBindings.SetProfileByInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.SetProfileByInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:34.831404"
     },
     {
       "name": "C_ClickBindings.SetTutorialShown",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ClickBindings.SetTutorialShown",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:35.415017"
     },
     {
       "name": "FlashClientIcon",
       "url": "https://warcraft.wiki.gg/wiki/API_FlashClientIcon",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:36.004978"
     },
     {
       "name": "GetBillingTimeRested",
       "url": "https://warcraft.wiki.gg/wiki/API_GetBillingTimeRested",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:36.559117"
     },
     {
       "name": "GetFileIDFromPath",
       "url": "https://warcraft.wiki.gg/wiki/API_GetFileIDFromPath",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:37:37.304305"
     },
     {
       "name": "GetFramerate",
       "url": "https://warcraft.wiki.gg/wiki/API_GetFramerate",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:33.833826"
     },
     {
       "name": "IsCpuBound",
       "url": "https://warcraft.wiki.gg/wiki/API_IsCpuBound",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:34.425014"
     },
     {
       "name": "ReportBug",
       "url": "https://warcraft.wiki.gg/wiki/API_ReportBug",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:34.998801"
     },
     {
       "name": "ReportSuggestion",
       "url": "https://warcraft.wiki.gg/wiki/API_ReportSuggestion",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:35.561009"
     },
     {
       "name": "RestartGx",
       "url": "https://warcraft.wiki.gg/wiki/API_RestartGx",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:36.139109"
     },
     {
       "name": "Screenshot",
       "url": "https://warcraft.wiki.gg/wiki/API_Screenshot",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:36.722775"
     },
     {
       "name": "UpdateWindow",
       "url": "https://warcraft.wiki.gg/wiki/API_UpdateWindow",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:37.299734"
     },
     {
       "name": "C_Club.AcceptInvitation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.AcceptInvitation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:38.001907"
     },
     {
       "name": "C_Club.AddClubStreamChatChannel",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.AddClubStreamChatChannel",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:38.579989"
     },
     {
       "name": "C_Club.AdvanceStreamViewMarker",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.AdvanceStreamViewMarker",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:39.168432"
     },
     {
       "name": "C_Club.AreMembersReady",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.AreMembersReady",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:39.788246"
     },
     {
       "name": "C_Club.AssignMemberRole",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.AssignMemberRole",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:40.375956"
     },
     {
       "name": "C_Club.CanResolvePlayerLocationFromClubMessageData",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.CanResolvePlayerLocationFromClubMessageData",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:40.994139"
     },
     {
       "name": "C_Club.ClearAutoAdvanceStreamViewMarker",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.ClearAutoAdvanceStreamViewMarker",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:41.556981"
     },
     {
       "name": "C_Club.ClearClubPresenceSubscription",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.ClearClubPresenceSubscription",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:42.126396"
     },
     {
       "name": "C_Club.CompareBattleNetDisplayName",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.CompareBattleNetDisplayName",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:42.708345"
     },
     {
       "name": "C_Club.CreateClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.CreateClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:43.299322"
     },
     {
       "name": "C_Club.CreateStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.CreateStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:43.878195"
     },
     {
       "name": "C_Club.CreateTicket",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.CreateTicket",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:44.447522"
     },
     {
       "name": "C_Club.DeclineInvitation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DeclineInvitation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:45.032979"
     },
     {
       "name": "C_Club.DestroyClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DestroyClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:45.729450"
     },
     {
       "name": "C_Club.DestroyMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DestroyMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:46.316194"
     },
     {
       "name": "C_Club.DestroyStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DestroyStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:46.882424"
     },
     {
       "name": "C_Club.DestroyTicket",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DestroyTicket",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:47.468169"
     },
     {
       "name": "C_Club.DoesAnyCommunityHaveUnreadMessages",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DoesAnyCommunityHaveUnreadMessages",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:48.464920"
     },
     {
       "name": "C_Club.DoesCommunityHaveMembersOfTheOppositeFaction",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.DoesCommunityHaveMembersOfTheOppositeFaction",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:49.041380"
     },
     {
       "name": "C_Club.EditClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.EditClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:49.630706"
     },
     {
       "name": "C_Club.EditMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.EditMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:50.236484"
     },
     {
       "name": "C_Club.EditStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.EditStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:50.813671"
     },
     {
       "name": "C_Club.Flush",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.Flush",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:51.401083"
     },
     {
       "name": "C_Club.FocusCommunityStreams",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.FocusCommunityStreams",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:52.042418"
     },
     {
       "name": "C_Club.FocusMembers",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.FocusMembers",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:52.612414"
     },
     {
       "name": "C_Club.FocusStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.FocusStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:53.300682"
     },
     {
       "name": "C_Club.GetAssignableRoles",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetAssignableRoles",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:53.888293"
     },
     {
       "name": "C_Club.GetAvatarIdList",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetAvatarIdList",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:54.462408"
     },
     {
       "name": "C_Club.GetClubCapacity",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubCapacity",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:55.126283"
     },
     {
       "name": "C_Club.GetClubInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:55.698229"
     },
     {
       "name": "C_Club.GetClubLimits",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubLimits",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:56.276347"
     },
     {
       "name": "C_Club.GetClubMembers",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubMembers",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:56.846314"
     },
     {
       "name": "C_Club.GetClubPrivileges",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubPrivileges",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:57.496345"
     },
     {
       "name": "C_Club.GetClubStreamNotificationSettings",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetClubStreamNotificationSettings",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:58.154304"
     },
     {
       "name": "C_Club.GetCommunityNameResultText",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetCommunityNameResultText",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:58.723170"
     },
     {
       "name": "C_Club.GetGuildClubId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetGuildClubId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:59.370123"
     },
     {
       "name": "C_Club.GetInfoFromLastCommunityChatLine",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetInfoFromLastCommunityChatLine",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:11:59.960887"
     },
     {
       "name": "C_Club.GetInvitationCandidates",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationCandidates",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:00.543059"
     },
     {
       "name": "C_Club.GetInvitationInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:01.143014"
     },
     {
       "name": "C_Club.GetInvitationsForClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:01.782388"
     },
     {
       "name": "C_Club.GetInvitationsForSelf",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForSelf",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:02.387199"
     },
     {
       "name": "C_Club.GetLastTicketResponse",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetLastTicketResponse",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:03.092392"
     },
     {
       "name": "C_Club.GetMemberInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMemberInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:03.683401"
     },
     {
       "name": "C_Club.GetMemberInfoForSelf",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMemberInfoForSelf",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:04.335566"
     },
     {
       "name": "C_Club.GetMessageInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:04.932799"
     },
     {
       "name": "C_Club.GetMessageRanges",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageRanges",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:05.492803"
     },
     {
       "name": "C_Club.GetMessagesBefore",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesBefore",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:06.076171"
     },
     {
       "name": "C_Club.GetMessagesInRange",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesInRange",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:06.678446"
     },
     {
       "name": "C_Club.GetStreamInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetStreamInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:07.253114"
     },
     {
       "name": "C_Club.GetStreams",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetStreams",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:07.870132"
     },
     {
       "name": "C_Club.GetStreamViewMarker",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetStreamViewMarker",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:08.724173"
     },
     {
       "name": "C_Club.GetSubscribedClubs",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetSubscribedClubs",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:09.567343"
     },
     {
       "name": "C_Club.GetTickets",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.GetTickets",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:10.422348"
     },
     {
       "name": "C_Club.IsAccountMuted",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.IsAccountMuted",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:11.306809"
     },
     {
       "name": "C_Club.IsBeginningOfStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.IsBeginningOfStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:12.168979"
     },
     {
       "name": "C_Club.IsEnabled",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.IsEnabled",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:13.072009"
     },
     {
       "name": "C_Club.IsRestricted",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.IsRestricted",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:13.936429"
     },
     {
       "name": "C_Club.IsSubscribedToStream",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.IsSubscribedToStream",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:14.867177"
     },
     {
       "name": "C_Club.KickMember",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.KickMember",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:15.753161"
     },
     {
       "name": "C_Club.LeaveClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.LeaveClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:16.917543"
     },
     {
       "name": "C_Club.RedeemTicket",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RedeemTicket",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:17.823806"
     },
     {
       "name": "C_Club.RequestInvitationsForClub",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RequestInvitationsForClub",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:18.698204"
     },
     {
       "name": "C_Club.RequestMoreMessagesBefore",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RequestMoreMessagesBefore",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:19.558606"
     },
     {
       "name": "C_Club.RequestTicket",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RequestTicket",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:20.453593"
     },
     {
       "name": "C_Club.RequestTickets",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RequestTickets",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:21.130762"
     },
     {
       "name": "C_Club.RevokeInvitation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.RevokeInvitation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:21.976972"
     },
     {
       "name": "C_Club.SendBattleTagFriendRequest",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SendBattleTagFriendRequest",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:22.801005"
     },
     {
       "name": "C_Club.SendCharacterInvitation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SendCharacterInvitation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:23.643609"
     },
     {
       "name": "C_Club.SendInvitation",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SendInvitation",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T22:12:24.488616"
     },
     {
       "name": "C_Club.SendMessage",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SendMessage",
-      "status": "pending",
-      "processed_at": null
+      "status": "failed",
+      "processed_at": "2025-07-28T22:12:28.489229"
     },
     {
       "name": "C_Club.SetAutoAdvanceStreamViewMarker",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SetAutoAdvanceStreamViewMarker",
-      "status": "pending",
-      "processed_at": null
+      "status": "failed",
+      "processed_at": "2025-07-28T22:12:32.653956"
     },
     {
       "name": "C_Club.SetAvatarTexture",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SetAvatarTexture",
-      "status": "pending",
-      "processed_at": null
+      "status": "failed",
+      "processed_at": "2025-07-28T22:12:36.596067"
     },
     {
       "name": "C_Club.SetClubMemberNote",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Club.SetClubMemberNote",
-      "status": "pending",
-      "processed_at": null
+      "status": "failed",
+      "processed_at": "2025-07-28T22:12:40.461507"
     },
     {
       "name": "C_Club.SetClubPresenceSubscription",
@@ -10809,242 +10814,242 @@
     {
       "name": "C_Item.IsEquippedItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsEquippedItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:41.038905"
     },
     {
       "name": "C_Item.IsEquippedItemType",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsEquippedItemType",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:41.974141"
     },
     {
       "name": "C_Item.IsHarmfulItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsHarmfulItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:42.873138"
     },
     {
       "name": "C_Item.IsHelpfulItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsHelpfulItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:43.699975"
     },
     {
       "name": "C_Item.IsItemBindToAccountUntilEquip",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemBindToAccountUntilEquip",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:44.547165"
     },
     {
       "name": "C_Item.IsItemConduit",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConduit",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:45.504272"
     },
     {
       "name": "C_Item.IsItemConvertibleAndValidForPlayer",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConvertibleAndValidForPlayer",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:46.387185"
     },
     {
       "name": "C_Item.IsItemCorrupted",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorrupted",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:47.080360"
     },
     {
       "name": "C_Item.IsItemCorruptionRelated",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionRelated",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:47.955870"
     },
     {
       "name": "C_Item.IsItemCorruptionResistant",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionResistant",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:48.810655"
     },
     {
       "name": "C_Item.IsItemDataCached",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemDataCached",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:49.709214"
     },
     {
       "name": "C_Item.IsItemDataCachedByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemDataCachedByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:50.391206"
     },
     {
       "name": "C_Item.IsItemGUIDInInventory",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemGUIDInInventory",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:51.091028"
     },
     {
       "name": "C_Item.IsItemInRange",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemInRange",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:51.948976"
     },
     {
       "name": "C_Item.IsItemKeystoneByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemKeystoneByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:52.836249"
     },
     {
       "name": "C_Item.IsItemSpecificToPlayerClass",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsItemSpecificToPlayerClass",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:53.684481"
     },
     {
       "name": "C_Item.IsLocked",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsLocked",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:54.548182"
     },
     {
       "name": "C_Item.IsUsableItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.IsUsableItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:55.212404"
     },
     {
       "name": "C_Item.ItemHasRange",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.ItemHasRange",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:56.127899"
     },
     {
       "name": "C_Item.LockItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.LockItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:57.009720"
     },
     {
       "name": "C_Item.LockItemByGUID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.LockItemByGUID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:57.772158"
     },
     {
       "name": "C_Item.PickupItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.PickupItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:58.455927"
     },
     {
       "name": "C_Item.ReplaceEnchant",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceEnchant",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:42:59.311151"
     },
     {
       "name": "C_Item.ReplaceTradeEnchant",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceTradeEnchant",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:00.384422"
     },
     {
       "name": "C_Item.ReplaceTradeskillEnchant",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceTradeskillEnchant",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:02.462101"
     },
     {
       "name": "C_Item.RequestLoadItemData",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemData",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:06.731650"
     },
     {
       "name": "C_Item.RequestLoadItemDataByID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemDataByID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:11.038842"
     },
     {
       "name": "C_Item.UnlockItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:13.098766"
     },
     {
       "name": "C_Item.UnlockItemByGUID",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItemByGUID",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:17.422431"
     },
     {
       "name": "C_Item.UseItemByName",
       "url": "https://warcraft.wiki.gg/wiki/API_C_Item.UseItemByName",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:21.480705"
     },
     {
       "name": "C_ItemInteraction.ClearPendingItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.ClearPendingItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:22.320828"
     },
     {
       "name": "C_ItemInteraction.CloseUI",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.CloseUI",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:23.348801"
     },
     {
       "name": "C_ItemInteraction.GetChargeInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetChargeInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:24.443322"
     },
     {
       "name": "C_ItemInteraction.GetItemConversionCurrencyCost",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:28.856350"
     },
     {
       "name": "C_ItemInteraction.GetItemInteractionInfo",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionInfo",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:31.132925"
     },
     {
       "name": "C_ItemInteraction.GetItemInteractionSpellId",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionSpellId",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:35.354091"
     },
     {
       "name": "C_ItemInteraction.InitializeFrame",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.InitializeFrame",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:37.221244"
     },
     {
       "name": "C_ItemInteraction.PerformItemInteraction",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.PerformItemInteraction",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:38.085169"
     },
     {
       "name": "C_ItemInteraction.Reset",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.Reset",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:42.297355"
     },
     {
       "name": "C_ItemInteraction.SetPendingItem",
       "url": "https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.SetPendingItem",
-      "status": "pending",
-      "processed_at": null
+      "status": "completed",
+      "processed_at": "2025-07-28T21:43:43.288952"
     },
     {
       "name": "C_ItemSocketInfo.CompleteSocketing",
