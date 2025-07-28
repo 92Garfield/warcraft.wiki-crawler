@@ -20,7 +20,7 @@ class EnhancedWoWAPIParser:
         self.base_url = base_url
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
         })
         self.db = APIDatabase()
     
@@ -432,7 +432,7 @@ class EnhancedWoWAPIParser:
                 print(f"  Error processing {func_info['name']}: {e}")
                 failed += 1
         
-        print(f"\\nScraping completed:")
+        print(f"\nScraping completed:")
         print(f"  Successful: {successful}")
         print(f"  Failed: {failed}")
         
@@ -446,10 +446,10 @@ if __name__ == "__main__":
     db = parser.scrape_all_functions(limit=10)
     
     # Save results
-    db.save_to_json('/workspaces/warcraft.wiki-crawler/python/api_data.json')
-    
+    db.save_to_json('E:\\JavaScript\\WoW\\warcraft.wiki-crawler\\python\\api_data.json')
+
     # Print statistics
     stats = db.get_statistics()
-    print("\\nDatabase Statistics:")
+    print("\nDatabase Statistics:")
     for key, value in stats.items():
         print(f"  {key}: {value}")

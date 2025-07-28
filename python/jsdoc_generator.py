@@ -56,7 +56,7 @@ class AdvancedJSDocGenerator:
         if func.examples:
             lines.append(' * @example')
             for example in func.examples[:2]:  # Limit to 2 examples
-                example_lines = example.split('\\n')
+                example_lines = example.split('\n')
                 for ex_line in example_lines:
                     lines.append(f' * {ex_line}')
         
@@ -73,8 +73,8 @@ class AdvancedJSDocGenerator:
         js_signature = self._convert_to_js_signature(func)
         lines.append(js_signature)
         
-        return '\\n'.join(lines)
-    
+        return '\n'.join(lines)
+
     def _generate_param_jsdoc(self, arg: APIArgument) -> str:
         """Generate JSDoc parameter line"""
         js_type = map_wow_type_to_typescript(arg.type)
@@ -203,8 +203,8 @@ class AdvancedJSDocGenerator:
         # Write combined file
         filepath = os.path.join(self.output_dir, filename)
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write('\\n'.join(lines))
-        
+            f.write('\n'.join(lines))
+
         print(f"Generated combined file: {filename}")
     
     def generate_typescript_definitions(self, db: APIDatabase, filename: str = 'wow-api.d.ts'):
@@ -231,7 +231,7 @@ class AdvancedJSDocGenerator:
             
             for func in sorted(functions, key=lambda f: f.name):
                 ts_definition = self._generate_typescript_definition(func)
-                lines.extend([f'  {line}' for line in ts_definition.split('\\n')])
+                lines.extend([f'  {line}' for line in ts_definition.split('\n')])
                 lines.append('')
         
         lines.append('}')
@@ -239,8 +239,8 @@ class AdvancedJSDocGenerator:
         # Write TypeScript definitions
         filepath = os.path.join(self.output_dir, filename)
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write('\\n'.join(lines))
-        
+            f.write('\n'.join(lines))
+
         print(f"Generated TypeScript definitions: {filename}")
     
     def _generate_typescript_definition(self, func: APIFunction) -> str:
@@ -273,8 +273,8 @@ class AdvancedJSDocGenerator:
         if func.description:
             desc_lines = self._wrap_text(func.description, 60)
             comment_lines = ['/**'] + [f' * {line}' for line in desc_lines] + [' */']
-            definition = '\\n'.join(comment_lines) + '\\n' + definition
-        
+            definition = '\n'.join(comment_lines) + '\n' + definition
+
         return definition
     
     def _extract_category(self, function_name: str) -> str:
@@ -340,8 +340,8 @@ class AdvancedJSDocGenerator:
         # Write README
         readme_path = os.path.join(self.output_dir, 'README.md')
         with open(readme_path, 'w', encoding='utf-8') as f:
-            f.write('\\n'.join(lines))
-        
+            f.write('\n'.join(lines))
+
         print("Generated documentation index: README.md")
 
 
@@ -353,7 +353,7 @@ def main():
     db = APIDatabase()
     
     # For testing, let's load from JSON if it exists
-    json_path = '/workspaces/warcraft.wiki-crawler/python/api_data.json'
+    json_path = 'E:\\JavaScript\\WoW\\warcraft.wiki-crawler\\python\\api_data.json'
     if os.path.exists(json_path):
         db.load_from_json(json_path)
         print(f"Loaded {len(db.get_all_functions())} functions from JSON")
@@ -362,8 +362,8 @@ def main():
         return
     
     # Generate documentation
-    generator = AdvancedJSDocGenerator('/workspaces/warcraft.wiki-crawler/jsdocs')
-    
+    generator = AdvancedJSDocGenerator('E:\\JavaScript\\WoW\\warcraft.wiki-crawler\\jsdocs')
+
     print("Generating individual JSDoc files...")
     generator.generate_individual_files(db)
     

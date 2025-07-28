@@ -21,7 +21,7 @@ class WoWAPIParser:
         self.base_url = base_url
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
         })
     
     def get_page(self, url: str) -> Optional[BeautifulSoup]:
@@ -289,8 +289,8 @@ class JSDocGenerator:
             function_name = api_data.get('name', 'unknownFunction')
             lines.append(f"function {function_name}() {{}}")
         
-        return '\\n'.join(lines)
-    
+        return '\n'.join(lines)
+
     def _map_wow_type_to_js(self, wow_type: str) -> str:
         """Map WoW API types to JavaScript/JSDoc types"""
         type_mapping = {
@@ -356,8 +356,8 @@ class JSDocGenerator:
         
         filepath = os.path.join(self.output_dir, 'wow-api.js')
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write('\\n'.join(lines))
-        
+            f.write('\n'.join(lines))
+
         print(f"Generated combined JSDoc file: {filepath}")
 
 
@@ -367,8 +367,8 @@ def main():
     
     # Initialize components
     parser = WoWAPIParser()
-    jsdoc_generator = JSDocGenerator('/workspaces/warcraft.wiki-crawler/jsdocs')
-    
+    jsdoc_generator = JSDocGenerator('E:\\JavaScript\\WoW\\warcraft.wiki-crawler\\jsdocs')
+
     # First, get the main API page to extract function list
     print("Fetching main API page...")
     main_api_url = "https://warcraft.wiki.gg/wiki/World_of_Warcraft_API"
