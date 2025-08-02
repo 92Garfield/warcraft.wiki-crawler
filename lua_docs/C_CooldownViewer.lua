@@ -1,0 +1,64 @@
+--[=[
+-- C_CooldownViewer API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_CooldownViewer
+--- C_CooldownViewer namespace contains 3 functions
+local C_CooldownViewer = {}
+
+--[=[
+-- C_CooldownViewer Functions:
+-- - C_CooldownViewer.GetCooldownViewerCategorySet
+-- - C_CooldownViewer.GetCooldownViewerCooldownInfo
+-- - C_CooldownViewer.IsCooldownViewerAvailable
+--]=]
+
+---======================================================================
+--- C_CooldownViewer.GetCooldownViewerCategorySet
+---======================================================================
+--- Arguments:
+--- @param category Enum.CooldownViewerCategory
+---
+--- Returns:
+--- @return number cooldownIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CooldownViewer.GetCooldownViewerCategorySet
+---
+--- Usage: cooldownIDs = C_CooldownViewer.GetCooldownViewerCategorySet(category)
+---
+-- function C_CooldownViewer.GetCooldownViewerCategorySet()
+-- end
+
+---======================================================================
+--- C_CooldownViewer.GetCooldownViewerCooldownInfo
+---======================================================================
+--- Arguments:
+--- @param cooldownID number
+---
+--- Returns:
+--- @return CooldownViewerCooldown cooldownInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CooldownViewer.GetCooldownViewerCooldownInfo
+---
+--- Usage: cooldownInfo = C_CooldownViewer.GetCooldownViewerCooldownInfo(cooldownID)
+---
+-- function C_CooldownViewer.GetCooldownViewerCooldownInfo()
+-- end
+
+---======================================================================
+--- C_CooldownViewer.IsCooldownViewerAvailable
+---======================================================================
+--- Returns:
+--- @return boolean isAvailable
+--- @return string failureReason
+---
+--- @since Patch 11.1.7 (2025-06-17): Added failureReason return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CooldownViewer.IsCooldownViewerAvailable
+---
+--- Usage: isAvailable, failureReason = C_CooldownViewer.IsCooldownViewerAvailable()
+---
+-- function C_CooldownViewer.IsCooldownViewerAvailable()
+-- end

@@ -1,0 +1,585 @@
+--[=[
+-- C_FriendList API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 30
+--]=]
+
+--- @class C_FriendList
+--- C_FriendList namespace contains 30 functions
+local C_FriendList = {}
+
+--[=[
+-- C_FriendList Functions:
+-- - C_FriendList.AddFriend
+-- - C_FriendList.AddIgnore
+-- - C_FriendList.AddOrDelIgnore
+-- - C_FriendList.AddOrRemoveFriend
+-- - C_FriendList.DelIgnore
+-- - C_FriendList.DelIgnoreByIndex
+-- - C_FriendList.GetFriendInfo
+-- - C_FriendList.GetFriendInfoByIndex
+-- - C_FriendList.GetIgnoreName
+-- - C_FriendList.GetNumFriends
+-- - C_FriendList.GetNumIgnores
+-- - C_FriendList.GetNumOnlineFriends
+-- - C_FriendList.GetNumWhoResults
+-- - C_FriendList.GetSelectedFriend
+-- - C_FriendList.GetSelectedIgnore
+-- - C_FriendList.GetWhoInfo
+-- - C_FriendList.IsFriend
+-- - C_FriendList.IsIgnored
+-- - C_FriendList.IsIgnoredByGuid
+-- - C_FriendList.IsOnIgnoredList
+-- - C_FriendList.RemoveFriend
+-- - C_FriendList.RemoveFriendByIndex
+-- - C_FriendList.SendWho
+-- - C_FriendList.SetFriendNotes
+-- - C_FriendList.SetFriendNotesByIndex
+-- - C_FriendList.SetSelectedFriend
+-- - C_FriendList.SetSelectedIgnore
+-- - C_FriendList.SetWhoToUi
+-- - C_FriendList.ShowFriends
+-- - C_FriendList.SortWho
+--]=]
+
+---======================================================================
+--- C_FriendList.AddFriend
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param name string - The name of the player you would like to add.
+--- @param notes string ? - The note that will show in your friend list.
+---
+--- @since Patch 9.1.5 (2021-11-02): Protected when called from a (macro) script.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.AddFriend
+---
+--- Usage: C_FriendList.AddFriend(name [, notes])
+---
+-- function C_FriendList.AddFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.AddIgnore
+---======================================================================
+--- Adds a player to your ignore list.
+---
+--- Arguments:
+--- @param name string - the name of the player you would like to ignore.
+---
+--- Returns:
+--- @return boolean added - whether the player was succesfully added to your ignore list. This seems to only return false when trying to ignore someone who is already being ignored, otherwise true.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved into C_FriendList. The former alias AddIgnore is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.AddIgnore
+---
+--- Usage: added = C_FriendList.AddIgnore(name)
+---
+-- function C_FriendList.AddIgnore()
+-- end
+
+---======================================================================
+--- C_FriendList.AddOrDelIgnore
+---======================================================================
+--- Adds or removes a player to/from the ignore list.
+---
+--- Arguments:
+--- @param name string - the name of the player to add or remove.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias AddOrDelIgnore is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.AddOrDelIgnore
+---
+--- Usage: C_FriendList.AddOrDelIgnore(name)
+---
+-- function C_FriendList.AddOrDelIgnore()
+-- end
+
+---======================================================================
+--- C_FriendList.AddOrRemoveFriend
+---======================================================================
+--- Adds or removes a player to or from the friends list.
+---
+--- Arguments:
+--- @param name string - The name of the player to add or remove.
+--- @param notes string - (Required) The note in the friends frame.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.AddOrRemoveFriend
+---
+--- Usage: C_FriendList.AddOrRemoveFriend(name, notes)
+---
+-- function C_FriendList.AddOrRemoveFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.DelIgnore
+---======================================================================
+--- Removes a player from your ignore list.
+---
+--- Arguments:
+--- @param name string - the name of the player you would like to remove from your ignore list.
+---
+--- Returns:
+--- @return boolean removed - whether the player was succesfully removed from your ignore list.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias DelIgnore is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.DelIgnore
+---
+--- Usage: removed = C_FriendList.DelIgnore(name)
+---
+-- function C_FriendList.DelIgnore()
+-- end
+
+---======================================================================
+--- C_FriendList.DelIgnoreByIndex
+---======================================================================
+--- Removes a player from your ignore list.
+---
+--- Arguments:
+--- @param index number - index of the player you would like to remove.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.DelIgnoreByIndex
+---
+--- Usage: C_FriendList.DelIgnoreByIndex(index)
+---
+-- function C_FriendList.DelIgnoreByIndex()
+-- end
+
+---======================================================================
+--- C_FriendList.GetFriendInfo
+---======================================================================
+--- Retrieves information about a person on your friends list.
+---
+--- Arguments:
+--- @param name string - name of friend in the friend list.
+---
+--- Returns:
+--- @return FriendInfo info
+---
+--- @since Patch 11.0.5 (2024-10-22): Removed mobile field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetFriendInfo
+---
+--- Usage: info = C_FriendList.GetFriendInfo(name)
+     = C_FriendList.GetFriendInfoByIndex(index)
+---
+--- Examples:
+--- Example 1:
+---   local f = C_FriendList.GetFriendInfoByIndex(1)
+---   print(format("Your friend %s (level %d %s) is in %s", f.name, f.level, f.className, f.area))
+---   -- Your friend Aërto (level 74 Warrior) is in Sholazar Basin
+---
+-- function C_FriendList.GetFriendInfo()
+-- end
+
+---======================================================================
+--- C_FriendList.GetFriendInfoByIndex
+---======================================================================
+--- Retrieves information about a person on your friends list.
+---
+--- Arguments:
+--- @param name string - name of friend in the friend list.
+---
+--- Returns:
+--- @return FriendInfo info
+---
+--- @since Patch 11.0.5 (2024-10-22): Removed mobile field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetFriendInfoByIndex
+---
+--- Usage: info = C_FriendList.GetFriendInfo(name)
+     = C_FriendList.GetFriendInfoByIndex(index)
+---
+--- Examples:
+--- Example 1:
+---   local f = C_FriendList.GetFriendInfoByIndex(1)
+---   print(format("Your friend %s (level %d %s) is in %s", f.name, f.level, f.className, f.area))
+---   -- Your friend Aërto (level 74 Warrior) is in Sholazar Basin
+---
+-- function C_FriendList.GetFriendInfoByIndex()
+-- end
+
+---======================================================================
+--- C_FriendList.GetIgnoreName
+---======================================================================
+--- Returns the name of a currently ignored player.
+---
+--- Arguments:
+--- @param index number - index of the ignored player, up to C_FriendList.GetNumIgnores (max 50).
+---
+--- Returns:
+--- @return string name ? - name of the ignored player.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias GetIgnoreName is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetIgnoreName
+---
+--- Usage: name = C_FriendList.GetIgnoreName(index)
+---
+-- function C_FriendList.GetIgnoreName()
+-- end
+
+---======================================================================
+--- C_FriendList.GetNumFriends
+---======================================================================
+--- Returns how many friends you have.
+---
+--- Returns:
+--- @return number numFriends - the number of friends you have (max 100).
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias GetNumFriends() is deprecated.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetNumFriends
+---
+--- Usage: numFriends = C_FriendList.GetNumFriends()
+---
+-- function C_FriendList.GetNumFriends()
+-- end
+
+---======================================================================
+--- C_FriendList.GetNumIgnores
+---======================================================================
+--- Returns the number of entries on your ignore list.
+---
+--- Returns:
+--- @return number numIgnores - the number of players on your ignore list (max 50).
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias GetNumIgnores is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetNumIgnores
+---
+--- Usage: numIgnores = C_FriendList.GetNumIgnores()
+---
+-- function C_FriendList.GetNumIgnores()
+-- end
+
+---======================================================================
+--- C_FriendList.GetNumOnlineFriends
+---======================================================================
+--- Returns the number of online friends.
+---
+--- Returns:
+--- @return number numOnline - the number of online friends.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetNumOnlineFriends
+---
+--- Usage: numOnline = C_FriendList.GetNumOnlineFriends()
+---
+-- function C_FriendList.GetNumOnlineFriends()
+-- end
+
+---======================================================================
+--- C_FriendList.GetSelectedFriend
+---======================================================================
+--- Returns the index of the currently selected friend.
+---
+--- Returns:
+--- @return number index ? - The index of the friend which is currently selected on the friend list. Returns nil if you have no friends.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias GetSelectedFriend is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetSelectedFriend
+---
+--- Usage: index = C_FriendList.GetSelectedFriend()
+---
+-- function C_FriendList.GetSelectedFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.GetSelectedIgnore
+---======================================================================
+--- Returns the currently selected index in the ignore listing.
+---
+--- Returns:
+--- @return number index ? - the index of the ignored player which is currently selected on the friend list. Returns nil if you have nobody ignored.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias GetSelectedIgnore is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetSelectedIgnore
+---
+--- Usage: index = C_FriendList.GetSelectedIgnore()
+---
+-- function C_FriendList.GetSelectedIgnore()
+-- end
+
+---======================================================================
+--- C_FriendList.IsFriend
+---======================================================================
+--- Returns whether a character is your friend.
+---
+--- Arguments:
+--- @param guid string : GUID
+---
+--- Returns:
+--- @return boolean isFriend - whether the character is your friend.
+---
+--- @since Patch 8.1.0 (2018-12-11): Changed to C_FriendList.IsFriend()
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.IsFriend
+---
+--- Usage: isFriend = C_FriendList.IsFriend(guid)
+---
+-- function C_FriendList.IsFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.IsIgnored
+---======================================================================
+--- Returns whether a character is being ignored by you.
+---
+--- Arguments:
+--- @param token string - The UnitId or name of the character.
+---
+--- Returns:
+--- @return boolean isIgnored - whether the character is ignored.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The previous alias IsIgnored is deprecated and will be removed in the next expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.IsIgnored
+---
+--- Usage: isIgnored = C_FriendList.IsIgnored(token)
+---
+-- function C_FriendList.IsIgnored()
+-- end
+
+---======================================================================
+--- C_FriendList.IsIgnoredByGuid
+---======================================================================
+--- Returns whether a character is being ignored by you.
+---
+--- Arguments:
+--- @param guid string - GUID of the character.
+---
+--- Returns:
+--- @return boolean isIgnored - whether the character is ignored.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.IsIgnoredByGuid
+---
+--- Usage: isIgnored = C_FriendList.IsIgnoredByGuid(guid)
+---
+-- function C_FriendList.IsIgnoredByGuid()
+-- end
+
+---======================================================================
+--- C_FriendList.IsOnIgnoredList
+---======================================================================
+--- Arguments:
+--- @param token string
+---
+--- Returns:
+--- @return boolean isIgnored
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.IsOnIgnoredList
+---
+--- Usage: isIgnored = C_FriendList.IsOnIgnoredList(token)
+---
+-- function C_FriendList.IsOnIgnoredList()
+-- end
+
+---======================================================================
+--- C_FriendList.RemoveFriend
+---======================================================================
+--- Removes a friend from the friends list.
+---
+--- Arguments:
+--- @param name string - the name of the friend to remove.
+---
+--- Returns:
+--- @return boolean removed - whether the friend was successfully removed.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The previous alias RemoveFriend is deprecated and will be removed in the next expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.RemoveFriend
+---
+--- Usage: removed = C_FriendList.RemoveFriend(name)
+---
+-- function C_FriendList.RemoveFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.RemoveFriendByIndex
+---======================================================================
+--- Removes a friend from the friends list.
+---
+--- Arguments:
+--- @param index number - the index of the friend in the friends list to remove.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.RemoveFriendByIndex
+---
+--- Usage: C_FriendList.RemoveFriendByIndex(index)
+---
+-- function C_FriendList.RemoveFriendByIndex()
+-- end
+
+---======================================================================
+--- C_FriendList.SetFriendNotes
+---======================================================================
+--- Sets the note text for a friend.
+---
+--- Arguments:
+--- @param name string - name of friend in the friend list.
+--- @param notes string - the text that the friends note will be set to, up to 48 characters, anything longer will be truncated.
+---
+--- Returns:
+--- @return boolean found - Whether the friend's note was successfully set.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias SetFriendNotes is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SetFriendNotes
+---
+--- Usage: found = C_FriendList.SetFriendNotes(name, notes)
+---
+-- function C_FriendList.SetFriendNotes()
+-- end
+
+---======================================================================
+--- C_FriendList.SetFriendNotesByIndex
+---======================================================================
+--- Sets the note text for a friend.
+---
+--- Arguments:
+--- @param index number - index of the friend, up to C_FriendList.GetNumFriends (max 100). Note that status changes can re-order the friend list, indices are not guaranteed to remain stable across events.
+--- @param notes string - the text that the friends note will be set to, up to 48 characters, anything longer will be truncated.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SetFriendNotesByIndex
+---
+--- Usage: C_FriendList.SetFriendNotesByIndex(index, notes)
+---
+-- function C_FriendList.SetFriendNotesByIndex()
+-- end
+
+---======================================================================
+--- C_FriendList.SetSelectedFriend
+---======================================================================
+--- Updates the current selected friend.
+---
+--- Arguments:
+--- @param index number - the index of the friend to be selected.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias SetSelectedFriend is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SetSelectedFriend
+---
+--- Usage: C_FriendList.SetSelectedFriend(index)
+---
+-- function C_FriendList.SetSelectedFriend()
+-- end
+
+---======================================================================
+--- C_FriendList.SetSelectedIgnore
+---======================================================================
+--- Sets the currently selected ignore entry.
+---
+--- Arguments:
+--- @param index number - the index of the ignored player to be selected.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias SetSelectedIgnore is deprecated and will be removed in the following expansion.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SetSelectedIgnore
+---
+--- Usage: C_FriendList.SetSelectedIgnore(index)
+---
+-- function C_FriendList.SetSelectedIgnore()
+-- end
+
+---======================================================================
+--- C_FriendList.ShowFriends
+---======================================================================
+--- Requests updated friends information from server.
+---
+--- @since Patch 9.0.1 (2020-10-13): As of this or an earlier patch, the FRIENDLIST_UPDATE event is no longer triggered by this.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.ShowFriends
+---
+--- Usage: C_FriendList.ShowFriends()
+---
+-- function C_FriendList.ShowFriends()
+-- end
+
+---======================================================================
+--- C_FriendList.GetNumWhoResults
+---======================================================================
+--- Get the number of entries resulting from your most recent /who query.
+---
+--- Returns:
+--- @return number numWhos - Number of results returned
+--- @return number totalNumWhos - Number of results to display
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetNumWhoResults
+---
+--- Usage: numWhos, totalNumWhos = C_FriendList.GetNumWhoResults()
+---
+-- function C_FriendList.GetNumWhoResults()
+-- end
+
+---======================================================================
+--- C_FriendList.GetWhoInfo
+---======================================================================
+--- Retrieves info about a character on your current /who list.
+---
+--- Arguments:
+--- @param index number - Index 1 up to C_FriendList.GetNumWhoResults()
+---
+--- Returns:
+--- @return WhoInfo info
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList.GetWhoInfo()[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.GetWhoInfo
+---
+--- Usage: info = C_FriendList.GetWhoInfo(index)
+---
+--- Examples:
+--- Example 1:
+---   local p = C_FriendList.GetWhoInfo(1)
+---   print(format("%s (level %d %s %s) is in %s", p.fullName, p.level, p.raceStr, p.classStr, p.area))
+---
+--- See also:
+--- - C_FriendList.SendWho
+--- - /who
+---
+-- function C_FriendList.GetWhoInfo()
+-- end
+
+---======================================================================
+--- C_FriendList.SendWho
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param filter string - The criteria for which you want to perform a Who query. This can be anything for which you could normally search in a Who query:
+---
+--- @since Patch 10.2.0 (2023-11-07): Added origin argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SendWho
+---
+--- Usage: C_FriendList.SendWho(filter, origin)
+---
+--- See also:
+--- - C_FriendList.GetWhoInfo
+--- - C_FriendList.SetWhoToUi
+---
+-- function C_FriendList.SendWho()
+-- end
+
+---======================================================================
+--- C_FriendList.SetWhoToUi
+---======================================================================
+--- Sets how the result of a /who request will be delivered.
+---
+--- Arguments:
+--- @param whoToUi boolean = false - If true the results will always be delivered as a WHO_LIST_UPDATE event and displayed in the FriendsFrame. If false the results may be returned as a sequence of CHAT_MSG_SYSTEM events (up to 3 results) or a WHO_LIST_UPDATE event (4+ results).
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList.SetWhoToUi() ⚠️ Note the lowercase i at the end.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SetWhoToUi
+---
+--- Usage: C_FriendList.SetWhoToUi(whoToUi)
+---
+-- function C_FriendList.SetWhoToUi()
+-- end
+
+---======================================================================
+--- C_FriendList.SortWho
+---======================================================================
+--- Sorts the last /who reply received by the client.
+---
+--- Arguments:
+--- @param sorting  "name" (default), "level", "class", "zone", "guild", "race"
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_FriendList. The former alias SortWho is deprecated and will be removed in the following expansion.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_FriendList.SortWho
+---
+--- Usage: C_FriendList.SortWho(sorting)
+---
+-- function C_FriendList.SortWho()
+-- end

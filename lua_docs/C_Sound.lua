@@ -1,0 +1,76 @@
+--[=[
+-- C_Sound API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_Sound
+--- C_Sound namespace contains 4 functions
+local C_Sound = {}
+
+--[=[
+-- C_Sound Functions:
+-- - C_Sound.GetSoundScaledVolume
+-- - C_Sound.IsPlaying
+-- - C_Sound.PlayItemSound
+-- - C_Sound.PlayVocalErrorSound
+--]=]
+
+---======================================================================
+--- C_Sound.GetSoundScaledVolume
+---======================================================================
+--- Arguments:
+--- @param soundHandle number
+---
+--- Returns:
+--- @return number scaledVolume
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Sound.GetSoundScaledVolume
+---
+--- Usage: scaledVolume = C_Sound.GetSoundScaledVolume(soundHandle)
+---
+-- function C_Sound.GetSoundScaledVolume()
+-- end
+
+---======================================================================
+--- C_Sound.IsPlaying
+---======================================================================
+--- Arguments:
+--- @param soundHandle number
+---
+--- Returns:
+--- @return boolean isPlaying
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Sound.IsPlaying
+---
+--- Usage: isPlaying = C_Sound.IsPlaying(soundHandle)
+---
+-- function C_Sound.IsPlaying()
+-- end
+
+---======================================================================
+--- C_Sound.PlayItemSound
+---======================================================================
+--- Arguments:
+--- @param soundType Enum.ItemSoundType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Sound.PlayItemSound
+---
+--- Usage: C_Sound.PlayItemSound(soundType, itemLocation)
+---
+-- function C_Sound.PlayItemSound()
+-- end
+
+---======================================================================
+--- C_Sound.PlayVocalErrorSound
+---======================================================================
+--- Arguments:
+--- @param vocalErrorSoundID Enum.Vocalerrorsounds
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Sound.PlayVocalErrorSound
+---
+--- Usage: C_Sound.PlayVocalErrorSound(vocalErrorSoundID)
+---
+-- function C_Sound.PlayVocalErrorSound()
+-- end

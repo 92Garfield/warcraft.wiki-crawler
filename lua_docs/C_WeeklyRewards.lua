@@ -1,0 +1,332 @@
+--[=[
+-- C_WeeklyRewards API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 20
+--]=]
+
+--- @class C_WeeklyRewards
+--- C_WeeklyRewards namespace contains 20 functions
+local C_WeeklyRewards = {}
+
+--[=[
+-- C_WeeklyRewards Functions:
+-- - C_WeeklyRewards.AreRewardsForCurrentRewardPeriod
+-- - C_WeeklyRewards.CanClaimRewards
+-- - C_WeeklyRewards.ClaimReward
+-- - C_WeeklyRewards.CloseInteraction
+-- - C_WeeklyRewards.GetActivities
+-- - C_WeeklyRewards.GetActivityEncounterInfo
+-- - C_WeeklyRewards.GetConquestWeeklyProgress
+-- - C_WeeklyRewards.GetDifficultyIDForActivityTier
+-- - C_WeeklyRewards.GetExampleRewardItemHyperlinks
+-- - C_WeeklyRewards.GetItemHyperlink
+-- - C_WeeklyRewards.GetNextActivitiesIncrease
+-- - C_WeeklyRewards.GetNextMythicPlusIncrease
+-- - C_WeeklyRewards.GetNumCompletedDungeonRuns
+-- - C_WeeklyRewards.HasAvailableRewards
+-- - C_WeeklyRewards.HasGeneratedRewards
+-- - C_WeeklyRewards.HasInteraction
+-- - C_WeeklyRewards.IsWeeklyChestRetired
+-- - C_WeeklyRewards.OnUIInteract
+-- - C_WeeklyRewards.ShouldShowFinalRetirementMessage
+-- - C_WeeklyRewards.ShouldShowRetirementMessage
+--]=]
+
+---======================================================================
+--- C_WeeklyRewards.AreRewardsForCurrentRewardPeriod
+---======================================================================
+--- Returns:
+--- @return boolean isCurrentPeriod
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.AreRewardsForCurrentRewardPeriod
+---
+--- Usage: isCurrentPeriod = C_WeeklyRewards.AreRewardsForCurrentRewardPeriod()
+---
+-- function C_WeeklyRewards.AreRewardsForCurrentRewardPeriod()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.CanClaimRewards
+---======================================================================
+--- Returns:
+--- @return boolean canClaimRewards
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.CanClaimRewards
+---
+--- Usage: canClaimRewards = C_WeeklyRewards.CanClaimRewards()
+---
+-- function C_WeeklyRewards.CanClaimRewards()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.ClaimReward
+---======================================================================
+--- Arguments:
+--- @param id number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.ClaimReward
+---
+--- Usage: C_WeeklyRewards.ClaimReward(id)
+---
+-- function C_WeeklyRewards.ClaimReward()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.CloseInteraction
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.CloseInteraction
+---
+--- Usage: C_WeeklyRewards.CloseInteraction()
+---
+-- function C_WeeklyRewards.CloseInteraction()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetActivities
+---======================================================================
+--- Arguments:
+--- @param type Enum.WeeklyRewardChestThresholdType ?
+---
+--- Returns:
+--- @return WeeklyRewardActivityInfo activities []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added raidString field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetActivities
+---
+--- Usage: activities = C_WeeklyRewards.GetActivities([type])
+---
+-- function C_WeeklyRewards.GetActivities()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetActivityEncounterInfo
+---======================================================================
+--- Arguments:
+--- @param type Enum.WeeklyRewardChestThresholdType
+---
+--- Returns:
+--- @return WeeklyRewardActivityEncounterInfo info []
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetActivityEncounterInfo
+---
+--- Usage: info = C_WeeklyRewards.GetActivityEncounterInfo(type, index)
+---
+-- function C_WeeklyRewards.GetActivityEncounterInfo()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetConquestWeeklyProgress
+---======================================================================
+--- Returns:
+--- @return ConquestWeeklyProgress weeklyProgress
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetConquestWeeklyProgress
+---
+--- Usage: weeklyProgress = C_WeeklyRewards.GetConquestWeeklyProgress()
+---
+-- function C_WeeklyRewards.GetConquestWeeklyProgress()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetDifficultyIDForActivityTier
+---======================================================================
+--- Arguments:
+--- @param activityTierID number
+---
+--- Returns:
+--- @return number difficultyID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetDifficultyIDForActivityTier
+---
+--- Usage: difficultyID = C_WeeklyRewards.GetDifficultyIDForActivityTier(activityTierID)
+---
+-- function C_WeeklyRewards.GetDifficultyIDForActivityTier()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetExampleRewardItemHyperlinks
+---======================================================================
+--- Arguments:
+--- @param id number
+---
+--- Returns:
+--- @return string hyperlink
+--- @return string upgradeHyperlink
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetExampleRewardItemHyperlinks
+---
+--- Usage: hyperlink, upgradeHyperlink = C_WeeklyRewards.GetExampleRewardItemHyperlinks(id)
+---
+-- function C_WeeklyRewards.GetExampleRewardItemHyperlinks()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetItemHyperlink
+---======================================================================
+--- Arguments:
+--- @param itemDBID string
+---
+--- Returns:
+--- @return string hyperlink
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetItemHyperlink
+---
+--- Usage: hyperlink = C_WeeklyRewards.GetItemHyperlink(itemDBID)
+---
+-- function C_WeeklyRewards.GetItemHyperlink()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetNextActivitiesIncrease
+---======================================================================
+--- Arguments:
+--- @param activityTierID number
+--- @param level number
+---
+--- Returns:
+--- @return boolean hasSeasonData
+--- @return number nextActivityTierID ?
+--- @return number nextLevel ?
+--- @return number itemLevel ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNextActivitiesIncrease
+---
+--- Usage: hasSeasonData, nextActivityTierID, nextLevel, itemLevel = C_WeeklyRewards.GetNextActivitiesIncrease(activityTierID, level)
+---
+-- function C_WeeklyRewards.GetNextActivitiesIncrease()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetNextMythicPlusIncrease
+---======================================================================
+--- Arguments:
+--- @param mythicPlusLevel number
+---
+--- Returns:
+--- @return boolean hasSeasonData
+--- @return number nextMythicPlusLevel ?
+--- @return number itemLevel ?
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNextMythicPlusIncrease
+---
+--- Usage: hasSeasonData, nextMythicPlusLevel, itemLevel = C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel)
+---
+-- function C_WeeklyRewards.GetNextMythicPlusIncrease()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.GetNumCompletedDungeonRuns
+---======================================================================
+--- Returns:
+--- @return number numHeroic
+--- @return number numMythic
+--- @return number numMythicPlus
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNumCompletedDungeonRuns
+---
+--- Usage: numHeroic, numMythic, numMythicPlus = C_WeeklyRewards.GetNumCompletedDungeonRuns()
+---
+-- function C_WeeklyRewards.GetNumCompletedDungeonRuns()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.HasAvailableRewards
+---======================================================================
+--- Returns:
+--- @return boolean hasAvailableRewards
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.HasAvailableRewards
+---
+--- Usage: hasAvailableRewards = C_WeeklyRewards.HasAvailableRewards()
+---
+-- function C_WeeklyRewards.HasAvailableRewards()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.HasGeneratedRewards
+---======================================================================
+--- Returns:
+--- @return boolean hasGeneratedRewards
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.HasGeneratedRewards
+---
+--- Usage: hasGeneratedRewards = C_WeeklyRewards.HasGeneratedRewards()
+---
+-- function C_WeeklyRewards.HasGeneratedRewards()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.HasInteraction
+---======================================================================
+--- Returns:
+--- @return boolean isInteracting
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.HasInteraction
+---
+--- Usage: isInteracting = C_WeeklyRewards.HasInteraction()
+---
+-- function C_WeeklyRewards.HasInteraction()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.IsWeeklyChestRetired
+---======================================================================
+--- Returns:
+--- @return boolean isRetired
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.IsWeeklyChestRetired
+---
+--- Usage: isRetired = C_WeeklyRewards.IsWeeklyChestRetired()
+---
+-- function C_WeeklyRewards.IsWeeklyChestRetired()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.OnUIInteract
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.OnUIInteract
+---
+--- Usage: C_WeeklyRewards.OnUIInteract()
+---
+-- function C_WeeklyRewards.OnUIInteract()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.ShouldShowFinalRetirementMessage
+---======================================================================
+--- Returns:
+--- @return boolean showRetirementMessage
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.ShouldShowFinalRetirementMessage
+---
+--- Usage: showRetirementMessage = C_WeeklyRewards.ShouldShowFinalRetirementMessage()
+---
+-- function C_WeeklyRewards.ShouldShowFinalRetirementMessage()
+-- end
+
+---======================================================================
+--- C_WeeklyRewards.ShouldShowRetirementMessage
+---======================================================================
+--- Returns:
+--- @return boolean showRetirementMessage
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.ShouldShowRetirementMessage
+---
+--- Usage: showRetirementMessage = C_WeeklyRewards.ShouldShowRetirementMessage()
+---
+-- function C_WeeklyRewards.ShouldShowRetirementMessage()
+-- end

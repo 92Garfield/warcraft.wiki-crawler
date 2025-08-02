@@ -1,0 +1,100 @@
+--[=[
+-- C_ScenarioInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_ScenarioInfo
+--- C_ScenarioInfo namespace contains 5 functions
+local C_ScenarioInfo = {}
+
+--[=[
+-- C_ScenarioInfo Functions:
+-- - C_ScenarioInfo.GetCriteriaInfo
+-- - C_ScenarioInfo.GetCriteriaInfoByStep
+-- - C_ScenarioInfo.GetJailersTowerTypeString
+-- - C_ScenarioInfo.GetScenarioInfo
+-- - C_ScenarioInfo.GetScenarioStepInfo
+--]=]
+
+---======================================================================
+--- C_ScenarioInfo.GetCriteriaInfo
+---======================================================================
+--- Arguments:
+--- @param criteriaIndex number
+---
+--- Returns:
+--- @return ScenarioCriteriaInfo scenarioCriteriaInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetCriteriaInfo
+---
+--- Usage: scenarioCriteriaInfo = C_ScenarioInfo.GetCriteriaInfo(criteriaIndex)
+---
+-- function C_ScenarioInfo.GetCriteriaInfo()
+-- end
+
+---======================================================================
+--- C_ScenarioInfo.GetCriteriaInfoByStep
+---======================================================================
+--- Arguments:
+--- @param stepID number
+--- @param criteriaIndex number
+---
+--- Returns:
+--- @return ScenarioCriteriaInfo scenarioCriteriaInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetCriteriaInfoByStep
+---
+--- Usage: scenarioCriteriaInfo = C_ScenarioInfo.GetCriteriaInfoByStep(stepID, criteriaIndex)
+---
+-- function C_ScenarioInfo.GetCriteriaInfoByStep()
+-- end
+
+---======================================================================
+--- C_ScenarioInfo.GetJailersTowerTypeString
+---======================================================================
+--- Arguments:
+--- @param runType Enum.JailersTowerType
+---
+--- Returns:
+--- @return string typeString ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added (Build 36949, Dec 14 2020). Replaces JAILERS_TOWER_LEVEL_TYPE_STRINGS
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString
+---
+--- Usage: typeString = C_ScenarioInfo.GetJailersTowerTypeString(runType)
+---
+-- function C_ScenarioInfo.GetJailersTowerTypeString()
+-- end
+
+---======================================================================
+--- C_ScenarioInfo.GetScenarioInfo
+---======================================================================
+--- Returns:
+--- @return ScenarioInformation scenarioInfo
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetScenarioInfo
+---
+--- Usage: scenarioInfo = C_ScenarioInfo.GetScenarioInfo()
+---
+-- function C_ScenarioInfo.GetScenarioInfo()
+-- end
+
+---======================================================================
+--- C_ScenarioInfo.GetScenarioStepInfo
+---======================================================================
+--- Arguments:
+--- @param scenarioStepID number ?
+---
+--- Returns:
+--- @return ScenarioStepInfo scenarioStepInfo
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetScenarioStepInfo
+---
+--- Usage: scenarioStepInfo = C_ScenarioInfo.GetScenarioStepInfo([scenarioStepID])
+---
+-- function C_ScenarioInfo.GetScenarioStepInfo()
+-- end

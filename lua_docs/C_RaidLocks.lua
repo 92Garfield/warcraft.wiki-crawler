@@ -1,0 +1,52 @@
+--[=[
+-- C_RaidLocks API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_RaidLocks
+--- C_RaidLocks namespace contains 2 functions
+local C_RaidLocks = {}
+
+--[=[
+-- C_RaidLocks Functions:
+-- - C_RaidLocks.GetRedirectedDifficultyID
+-- - C_RaidLocks.IsEncounterComplete
+--]=]
+
+---======================================================================
+--- C_RaidLocks.IsEncounterComplete
+---======================================================================
+--- Arguments:
+--- @param mapID number : UiMapID
+--- @param encounterID number : JournalEncounterID
+--- @param difficultyID number ? : DifficultyID
+---
+--- Returns:
+--- @return boolean encounterIsComplete
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RaidLocks.IsEncounterComplete
+---
+--- Usage: encounterIsComplete = C_RaidLocks.IsEncounterComplete(mapID, encounterID [, difficultyID])
+---
+-- function C_RaidLocks.IsEncounterComplete()
+-- end
+
+---======================================================================
+--- C_RaidLocks.GetRedirectedDifficultyID
+---======================================================================
+--- Arguments:
+--- @param mapID number
+--- @param difficultyID number
+---
+--- Returns:
+--- @return number redirectedDifficultyID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_RaidLocks.GetRedirectedDifficultyID
+---
+--- Usage: redirectedDifficultyID = C_RaidLocks.GetRedirectedDifficultyID(mapID, difficultyID)
+---
+-- function C_RaidLocks.GetRedirectedDifficultyID()
+-- end

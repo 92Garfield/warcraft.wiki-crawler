@@ -1,0 +1,134 @@
+--[=[
+-- C_QuestInfoSystem API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_QuestInfoSystem
+--- C_QuestInfoSystem namespace contains 7 functions
+local C_QuestInfoSystem = {}
+
+--[=[
+-- C_QuestInfoSystem Functions:
+-- - C_QuestInfoSystem.GetQuestClassification
+-- - C_QuestInfoSystem.GetQuestRewardCurrencies
+-- - C_QuestInfoSystem.GetQuestRewardSpellInfo
+-- - C_QuestInfoSystem.GetQuestRewardSpells
+-- - C_QuestInfoSystem.GetQuestShouldToastCompletion
+-- - C_QuestInfoSystem.HasQuestRewardCurrencies
+-- - C_QuestInfoSystem.HasQuestRewardSpells
+--]=]
+
+---======================================================================
+--- C_QuestInfoSystem.GetQuestClassification
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return Enum.QuestClassification classification
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestClassification
+---
+--- Usage: classification = C_QuestInfoSystem.GetQuestClassification([questID])
+---
+-- function C_QuestInfoSystem.GetQuestClassification()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.GetQuestRewardCurrencies
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return QuestRewardCurrencyInfo questRewardCurrencyInfo []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestRewardCurrencies
+---
+--- Usage: questRewardCurrencyInfo = C_QuestInfoSystem.GetQuestRewardCurrencies([questID])
+---
+-- function C_QuestInfoSystem.GetQuestRewardCurrencies()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.GetQuestRewardSpellInfo
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+--- @param spellID number - Spell Ids from C_QuestInfoSystem.GetQuestRewardSpells
+---
+--- Returns:
+--- @return QuestRewardSpellInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestRewardSpellInfo
+---
+--- Usage: info = C_QuestInfoSystem.GetQuestRewardSpellInfo([questID], spellID)
+---
+-- function C_QuestInfoSystem.GetQuestRewardSpellInfo()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.GetQuestRewardSpells
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return number spellIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestRewardSpells
+---
+--- Usage: spellIDs = C_QuestInfoSystem.GetQuestRewardSpells([questID])
+---
+-- function C_QuestInfoSystem.GetQuestRewardSpells()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.GetQuestShouldToastCompletion
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return boolean shouldToast
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestShouldToastCompletion
+---
+--- Usage: shouldToast = C_QuestInfoSystem.GetQuestShouldToastCompletion([questID])
+---
+-- function C_QuestInfoSystem.GetQuestShouldToastCompletion()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.HasQuestRewardCurrencies
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return boolean hasQuestRewardCurrencies
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.HasQuestRewardCurrencies
+---
+--- Usage: hasQuestRewardCurrencies = C_QuestInfoSystem.HasQuestRewardCurrencies([questID])
+---
+-- function C_QuestInfoSystem.HasQuestRewardCurrencies()
+-- end
+
+---======================================================================
+--- C_QuestInfoSystem.HasQuestRewardSpells
+---======================================================================
+--- Arguments:
+--- @param questID number ?
+---
+--- Returns:
+--- @return boolean hasRewardSpells
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.HasQuestRewardSpells
+---
+--- Usage: hasRewardSpells = C_QuestInfoSystem.HasQuestRewardSpells([questID])
+---
+-- function C_QuestInfoSystem.HasQuestRewardSpells()
+-- end

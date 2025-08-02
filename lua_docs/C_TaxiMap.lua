@@ -1,0 +1,74 @@
+--[=[
+-- C_TaxiMap API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_TaxiMap
+--- C_TaxiMap namespace contains 3 functions
+local C_TaxiMap = {}
+
+--[=[
+-- C_TaxiMap Functions:
+-- - C_TaxiMap.GetAllTaxiNodes
+-- - C_TaxiMap.GetTaxiNodesForMap
+-- - C_TaxiMap.ShouldMapShowTaxiNodes
+--]=]
+
+---======================================================================
+--- C_TaxiMap.GetAllTaxiNodes
+---======================================================================
+--- Returns information on taxi nodes at the current flight master.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return TaxiNodeInfo taxiNodes []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added useSpecialIcon, specialIconCostString fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaxiMap.GetAllTaxiNodes
+---
+--- Usage: taxiNodes = C_TaxiMap.GetAllTaxiNodes(uiMapID)
+---
+-- function C_TaxiMap.GetAllTaxiNodes()
+-- end
+
+---======================================================================
+--- C_TaxiMap.GetTaxiNodesForMap
+---======================================================================
+--- Returns information on taxi nodes for a given map, without considering the current flight master.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return MapTaxiNodeInfo mapTaxiNodes []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added textureKit field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaxiMap.GetTaxiNodesForMap
+---
+--- Usage: mapTaxiNodes = C_TaxiMap.GetTaxiNodesForMap(uiMapID)
+---
+-- function C_TaxiMap.GetTaxiNodesForMap()
+-- end
+
+---======================================================================
+--- C_TaxiMap.ShouldMapShowTaxiNodes
+---======================================================================
+--- Returns whether taxi nodes should be shown on a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return boolean shouldShowNodes
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaxiMap.ShouldMapShowTaxiNodes
+---
+--- Usage: shouldShowNodes = C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID)
+---
+-- function C_TaxiMap.ShouldMapShowTaxiNodes()
+-- end

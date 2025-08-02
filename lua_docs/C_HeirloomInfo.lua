@@ -1,0 +1,119 @@
+--[=[
+-- C_HeirloomInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_HeirloomInfo
+--- C_HeirloomInfo namespace contains 7 functions
+local C_HeirloomInfo = {}
+
+--[=[
+-- C_HeirloomInfo Functions:
+-- - C_HeirloomInfo.AreAllCollectionFiltersChecked
+-- - C_HeirloomInfo.AreAllSourceFiltersChecked
+-- - C_HeirloomInfo.IsHeirloomSourceValid
+-- - C_HeirloomInfo.IsUsingDefaultFilters
+-- - C_HeirloomInfo.SetAllCollectionFilters
+-- - C_HeirloomInfo.SetAllSourceFilters
+-- - C_HeirloomInfo.SetDefaultFilters
+--]=]
+
+---======================================================================
+--- C_HeirloomInfo.AreAllCollectionFiltersChecked
+---======================================================================
+--- Returns:
+--- @return boolean areAllCollectionFiltersChecked
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.AreAllCollectionFiltersChecked
+---
+--- Usage: areAllCollectionFiltersChecked = C_HeirloomInfo.AreAllCollectionFiltersChecked()
+---
+-- function C_HeirloomInfo.AreAllCollectionFiltersChecked()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.AreAllSourceFiltersChecked
+---======================================================================
+--- Returns:
+--- @return boolean areAllSourceFiltersChecked
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.AreAllSourceFiltersChecked
+---
+--- Usage: areAllSourceFiltersChecked = C_HeirloomInfo.AreAllSourceFiltersChecked()
+---
+-- function C_HeirloomInfo.AreAllSourceFiltersChecked()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.IsHeirloomSourceValid
+---======================================================================
+--- Arguments:
+--- @param source number
+---
+--- Returns:
+--- @return boolean isHeirloomSourceValid
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.IsHeirloomSourceValid
+---
+--- Usage: isHeirloomSourceValid = C_HeirloomInfo.IsHeirloomSourceValid(source)
+---
+-- function C_HeirloomInfo.IsHeirloomSourceValid()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.IsUsingDefaultFilters
+---======================================================================
+--- Returns:
+--- @return boolean isUsingDefaultFilters
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.IsUsingDefaultFilters
+---
+--- Usage: isUsingDefaultFilters = C_HeirloomInfo.IsUsingDefaultFilters()
+---
+-- function C_HeirloomInfo.IsUsingDefaultFilters()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.SetAllCollectionFilters
+---======================================================================
+--- Arguments:
+--- @param checked boolean
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetAllCollectionFilters
+---
+--- Usage: C_HeirloomInfo.SetAllCollectionFilters(checked)
+---
+-- function C_HeirloomInfo.SetAllCollectionFilters()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.SetAllSourceFilters
+---======================================================================
+--- Arguments:
+--- @param checked boolean
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetAllSourceFilters
+---
+--- Usage: C_HeirloomInfo.SetAllSourceFilters(checked)
+---
+-- function C_HeirloomInfo.SetAllSourceFilters()
+-- end
+
+---======================================================================
+--- C_HeirloomInfo.SetDefaultFilters
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetDefaultFilters
+---
+--- Usage: C_HeirloomInfo.SetDefaultFilters()
+---
+-- function C_HeirloomInfo.SetDefaultFilters()
+-- end

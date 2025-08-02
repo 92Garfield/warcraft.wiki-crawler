@@ -1,0 +1,77 @@
+--[=[
+-- C_QuestOffer API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_QuestOffer
+--- C_QuestOffer namespace contains 4 functions
+local C_QuestOffer = {}
+
+--[=[
+-- C_QuestOffer Functions:
+-- - C_QuestOffer.GetHideRequiredItems
+-- - C_QuestOffer.GetQuestOfferMajorFactionReputationRewards
+-- - C_QuestOffer.GetQuestRequiredCurrencyInfo
+-- - C_QuestOffer.GetQuestRewardCurrencyInfo
+--]=]
+
+---======================================================================
+--- C_QuestOffer.GetHideRequiredItems
+---======================================================================
+--- Returns:
+--- @return boolean hideRequiredItems
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestOffer.GetHideRequiredItems
+---
+--- Usage: hideRequiredItems = C_QuestOffer.GetHideRequiredItems()
+---
+-- function C_QuestOffer.GetHideRequiredItems()
+-- end
+
+---======================================================================
+--- C_QuestOffer.GetQuestOfferMajorFactionReputationRewards
+---======================================================================
+--- Returns:
+--- @return QuestRewardReputationInfo reputationRewards []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestOffer.GetQuestOfferMajorFactionReputationRewards
+---
+--- Usage: reputationRewards = C_QuestOffer.GetQuestOfferMajorFactionReputationRewards()
+---
+-- function C_QuestOffer.GetQuestOfferMajorFactionReputationRewards()
+-- end
+
+---======================================================================
+--- C_QuestOffer.GetQuestRequiredCurrencyInfo
+---======================================================================
+--- Arguments:
+--- @param questRewardIndex number
+---
+--- Returns:
+--- @return QuestRequiredCurrencyInfo questRequiredCurrencyInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestOffer.GetQuestRequiredCurrencyInfo
+---
+--- Usage: questRequiredCurrencyInfo = C_QuestOffer.GetQuestRequiredCurrencyInfo(questRewardIndex)
+---
+-- function C_QuestOffer.GetQuestRequiredCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_QuestOffer.GetQuestRewardCurrencyInfo
+---======================================================================
+--- Arguments:
+--- @param questInfoType string
+--- @param questRewardIndex number
+---
+--- Returns:
+--- @return QuestRewardCurrencyInfo questRewardCurrencyInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestOffer.GetQuestRewardCurrencyInfo
+---
+--- Usage: questRewardCurrencyInfo = C_QuestOffer.GetQuestRewardCurrencyInfo(questInfoType, questRewardIndex)
+---
+-- function C_QuestOffer.GetQuestRewardCurrencyInfo()
+-- end

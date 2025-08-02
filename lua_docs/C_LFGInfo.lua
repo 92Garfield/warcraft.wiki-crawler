@@ -1,0 +1,362 @@
+--[=[
+-- C_LFGInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 21
+--]=]
+
+--- @class C_LFGInfo
+--- C_LFGInfo namespace contains 21 functions
+local C_LFGInfo = {}
+
+--[=[
+-- C_LFGInfo Functions:
+-- - C_LFGInfo.AreCrossFactionGroupQueuesAllowed
+-- - C_LFGInfo.CanPlayerUseGroupFinder
+-- - C_LFGInfo.CanPlayerUseLFD
+-- - C_LFGInfo.CanPlayerUseLFR
+-- - C_LFGInfo.CanPlayerUsePVP
+-- - C_LFGInfo.CanPlayerUsePremadeGroup
+-- - C_LFGInfo.CanPlayerUseScenarioFinder
+-- - C_LFGInfo.ConfirmLfgExpandSearch
+-- - C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount
+-- - C_LFGInfo.DoesCrossFactionQueueRequireFullPremade
+-- - C_LFGInfo.GetAllEntriesForCategory
+-- - C_LFGInfo.GetDungeonInfo
+-- - C_LFGInfo.GetLFDLockStates
+-- - C_LFGInfo.GetLevelUpInstances
+-- - C_LFGInfo.GetRoleCheckDifficultyDetails
+-- - C_LFGInfo.HideNameFromUI
+-- - C_LFGInfo.IsGroupFinderEnabled
+-- - C_LFGInfo.IsInLFGFollowerDungeon
+-- - C_LFGInfo.IsLFDEnabled
+-- - C_LFGInfo.IsLFGFollowerDungeon
+-- - C_LFGInfo.IsLFREnabled
+--]=]
+
+---======================================================================
+--- C_LFGInfo.AreCrossFactionGroupQueuesAllowed
+---======================================================================
+--- Arguments:
+--- @param lfgDungeonID number
+---
+--- Returns:
+--- @return boolean areCrossFactionGroupQueuesAllowed
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.AreCrossFactionGroupQueuesAllowed
+---
+--- Usage: areCrossFactionGroupQueuesAllowed = C_LFGInfo.AreCrossFactionGroupQueuesAllowed(lfgDungeonID)
+---
+-- function C_LFGInfo.AreCrossFactionGroupQueuesAllowed()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUseGroupFinder
+---======================================================================
+--- Returns true if the player is allowed to use group finder tools, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseGroupFinder
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUseGroupFinder()
+---
+-- function C_LFGInfo.CanPlayerUseGroupFinder()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUseLFD
+---======================================================================
+--- Returns true if the player is allowed to queue for instanced dungeon content, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseLFD
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUseLFD()
+---
+-- function C_LFGInfo.CanPlayerUseLFD()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUseLFR
+---======================================================================
+--- Returns true if the player is allowed to queue for instanced raid content, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseLFR
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUseLFR()
+---
+-- function C_LFGInfo.CanPlayerUseLFR()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUsePremadeGroup
+---======================================================================
+--- Returns true if the player is allowed to use the premade group finder, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUsePremadeGroup
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUsePremadeGroup()
+---
+-- function C_LFGInfo.CanPlayerUsePremadeGroup()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUsePVP
+---======================================================================
+--- Returns true if the player is allowed to queue for instanced PvP content, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUsePVP
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUsePVP()
+---
+-- function C_LFGInfo.CanPlayerUsePVP()
+-- end
+
+---======================================================================
+--- C_LFGInfo.CanPlayerUseScenarioFinder
+---======================================================================
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseScenarioFinder
+---
+--- Usage: canUse, failureReason = C_LFGInfo.CanPlayerUseScenarioFinder()
+---
+-- function C_LFGInfo.CanPlayerUseScenarioFinder()
+-- end
+
+---======================================================================
+--- C_LFGInfo.ConfirmLfgExpandSearch
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.ConfirmLfgExpandSearch
+---
+--- Usage: C_LFGInfo.ConfirmLfgExpandSearch()
+---
+-- function C_LFGInfo.ConfirmLfgExpandSearch()
+-- end
+
+---======================================================================
+--- C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount
+---======================================================================
+--- Arguments:
+--- @param lfgDungeonID number
+---
+--- Returns:
+--- @return boolean doesActivePartyMeetPremadeLaunchCount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount
+---
+--- Usage: doesActivePartyMeetPremadeLaunchCount = C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount(lfgDungeonID)
+---
+-- function C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount()
+-- end
+
+---======================================================================
+--- C_LFGInfo.DoesCrossFactionQueueRequireFullPremade
+---======================================================================
+--- Arguments:
+--- @param lfgDungeonID number
+---
+--- Returns:
+--- @return boolean doesCrossFactionQueueRequireFullPremade
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.DoesCrossFactionQueueRequireFullPremade
+---
+--- Usage: doesCrossFactionQueueRequireFullPremade = C_LFGInfo.DoesCrossFactionQueueRequireFullPremade(lfgDungeonID)
+---
+-- function C_LFGInfo.DoesCrossFactionQueueRequireFullPremade()
+-- end
+
+---======================================================================
+--- C_LFGInfo.GetAllEntriesForCategory
+---======================================================================
+--- Returns any dungeons for a LFG category you're queued up for.
+---
+--- Arguments:
+--- @param category number
+---
+--- Returns:
+--- @return number lfgDungeonIDs []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetAllEntriesForCategory
+---
+--- Usage: lfgDungeonIDs = C_LFGInfo.GetAllEntriesForCategory(category)
+---
+-- function C_LFGInfo.GetAllEntriesForCategory()
+-- end
+
+---======================================================================
+--- C_LFGInfo.GetDungeonInfo
+---======================================================================
+--- Arguments:
+--- @param lfgDungeonID number
+---
+--- Returns:
+--- @return LFGDungeonInfo dungeonInfo
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetDungeonInfo
+---
+--- Usage: dungeonInfo = C_LFGInfo.GetDungeonInfo(lfgDungeonID)
+---
+-- function C_LFGInfo.GetDungeonInfo()
+-- end
+
+---======================================================================
+--- C_LFGInfo.GetLevelUpInstances
+---======================================================================
+--- Arguments:
+--- @param currPlayerLevel number
+--- @param isRaid boolean
+---
+--- Returns:
+--- @return number instances []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetLevelUpInstances
+---
+--- Usage: instances = C_LFGInfo.GetLevelUpInstances(currPlayerLevel, isRaid)
+---
+-- function C_LFGInfo.GetLevelUpInstances()
+-- end
+
+---======================================================================
+--- C_LFGInfo.GetLFDLockStates
+---======================================================================
+--- Returns:
+--- @return LFGLockInfo lockInfo []
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_LFGInfo.GetLFDLockStates()
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetLFDLockStates
+---
+--- Usage: lockInfo = C_LFGInfo.GetLFDLockStates()
+---
+-- function C_LFGInfo.GetLFDLockStates()
+-- end
+
+---======================================================================
+--- C_LFGInfo.GetRoleCheckDifficultyDetails
+---======================================================================
+--- Returns:
+--- @return number maxLevel ?
+--- @return boolean isLevelReduced
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetRoleCheckDifficultyDetails
+---
+--- Usage: maxLevel, isLevelReduced = C_LFGInfo.GetRoleCheckDifficultyDetails()
+---
+-- function C_LFGInfo.GetRoleCheckDifficultyDetails()
+-- end
+
+---======================================================================
+--- C_LFGInfo.HideNameFromUI
+---======================================================================
+--- Returns true if a dungeon name has to be hidden in the UI.
+---
+--- Arguments:
+--- @param dungeonID number
+---
+--- Returns:
+--- @return boolean shouldHide
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.HideNameFromUI
+---
+--- Usage: shouldHide = C_LFGInfo.HideNameFromUI(dungeonID)
+---
+-- function C_LFGInfo.HideNameFromUI()
+-- end
+
+---======================================================================
+--- C_LFGInfo.IsGroupFinderEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsGroupFinderEnabled
+---
+--- Usage: enabled = C_LFGInfo.IsGroupFinderEnabled()
+---
+-- function C_LFGInfo.IsGroupFinderEnabled()
+-- end
+
+---======================================================================
+--- C_LFGInfo.IsInLFGFollowerDungeon
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsInLFGFollowerDungeon
+---
+--- Usage: result = C_LFGInfo.IsInLFGFollowerDungeon()
+---
+-- function C_LFGInfo.IsInLFGFollowerDungeon()
+-- end
+
+---======================================================================
+--- C_LFGInfo.IsLFDEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFDEnabled
+---
+--- Usage: enabled = C_LFGInfo.IsLFDEnabled()
+---
+-- function C_LFGInfo.IsLFDEnabled()
+-- end
+
+---======================================================================
+--- C_LFGInfo.IsLFGFollowerDungeon
+---======================================================================
+--- Arguments:
+--- @param dungeonID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFGFollowerDungeon
+---
+--- Usage: result = C_LFGInfo.IsLFGFollowerDungeon(dungeonID)
+---
+-- function C_LFGInfo.IsLFGFollowerDungeon()
+-- end
+
+---======================================================================
+--- C_LFGInfo.IsLFREnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFREnabled
+---
+--- Usage: enabled = C_LFGInfo.IsLFREnabled()
+---
+-- function C_LFGInfo.IsLFREnabled()
+-- end

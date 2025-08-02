@@ -1,0 +1,51 @@
+--[=[
+-- C_KeyBindings API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_KeyBindings
+--- C_KeyBindings namespace contains 2 functions
+local C_KeyBindings = {}
+
+--[=[
+-- C_KeyBindings Functions:
+-- - C_KeyBindings.GetBindingIndex
+-- - C_KeyBindings.GetCustomBindingType
+--]=]
+
+---======================================================================
+--- C_KeyBindings.GetBindingIndex
+---======================================================================
+--- Arguments:
+--- @param action string
+---
+--- Returns:
+--- @return number bindingIndex ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_KeyBindings.GetBindingIndex
+---
+--- Usage: bindingIndex = C_KeyBindings.GetBindingIndex(action)
+---
+-- function C_KeyBindings.GetBindingIndex()
+-- end
+
+---======================================================================
+--- C_KeyBindings.GetCustomBindingType
+---======================================================================
+--- Returns the type of a custom binding.
+---
+--- Arguments:
+--- @param bindingIndex number
+---
+--- Returns:
+--- @return  customBindingType Enum.CustomBindingType (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_KeyBindings.GetCustomBindingType
+---
+--- Usage: customBindingType = C_KeyBindings.GetCustomBindingType(bindingIndex)
+---
+-- function C_KeyBindings.GetCustomBindingType()
+-- end

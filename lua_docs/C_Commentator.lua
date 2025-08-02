@@ -1,0 +1,2279 @@
+--[=[
+-- C_Commentator API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 140
+--]=]
+
+--- @class C_Commentator
+--- C_Commentator namespace contains 140 functions
+local C_Commentator = {}
+
+--[=[
+-- C_Commentator Functions:
+-- - C_Commentator.AddPlayerOverrideName
+-- - C_Commentator.AddTrackedDefensiveAuras
+-- - C_Commentator.AddTrackedOffensiveAuras
+-- - C_Commentator.AreTeamsSwapped
+-- - C_Commentator.AssignPlayerToTeam
+-- - C_Commentator.AssignPlayersToTeam
+-- - C_Commentator.AssignPlayersToTeamInCurrentInstance
+-- - C_Commentator.CanUseCommentatorCheats
+-- - C_Commentator.ClearCameraTarget
+-- - C_Commentator.ClearFollowTarget
+-- - C_Commentator.ClearLookAtTarget
+-- - C_Commentator.EnterInstance
+-- - C_Commentator.ExitInstance
+-- - C_Commentator.FindSpectatedUnit
+-- - C_Commentator.FindTeamNameInCurrentInstance
+-- - C_Commentator.FindTeamNameInDirectory
+-- - C_Commentator.FlushCommentatorHistory
+-- - C_Commentator.FollowPlayer
+-- - C_Commentator.FollowUnit
+-- - C_Commentator.ForceFollowTransition
+-- - C_Commentator.GetAdditionalCameraWeight
+-- - C_Commentator.GetAdditionalCameraWeightByToken
+-- - C_Commentator.GetAllPlayerOverrideNames
+-- - C_Commentator.GetCamera
+-- - C_Commentator.GetCameraCollision
+-- - C_Commentator.GetCameraPosition
+-- - C_Commentator.GetCommentatorHistory
+-- - C_Commentator.GetCurrentMapID
+-- - C_Commentator.GetDampeningPercent
+-- - C_Commentator.GetDistanceBeforeForcedHorizontalConvergence
+-- - C_Commentator.GetDurationToForceHorizontalConvergence
+-- - C_Commentator.GetExcludeDistance
+-- - C_Commentator.GetHardlockWeight
+-- - C_Commentator.GetHorizontalAngleThresholdToSmooth
+-- - C_Commentator.GetIndirectSpellID
+-- - C_Commentator.GetInstanceInfo
+-- - C_Commentator.GetLookAtLerpAmount
+-- - C_Commentator.GetMapInfo
+-- - C_Commentator.GetMatchDuration
+-- - C_Commentator.GetMaxNumPlayersPerTeam
+-- - C_Commentator.GetMaxNumTeams
+-- - C_Commentator.GetMode
+-- - C_Commentator.GetMsToHoldForHorizontalMovement
+-- - C_Commentator.GetMsToHoldForVerticalMovement
+-- - C_Commentator.GetMsToSmoothHorizontalChange
+-- - C_Commentator.GetMsToSmoothVerticalChange
+-- - C_Commentator.GetNumMaps
+-- - C_Commentator.GetNumPlayers
+-- - C_Commentator.GetOrCreateSeries
+-- - C_Commentator.GetPlayerAuraInfo
+-- - C_Commentator.GetPlayerAuraInfoByUnit
+-- - C_Commentator.GetPlayerCooldownInfo
+-- - C_Commentator.GetPlayerCooldownInfoByUnit
+-- - C_Commentator.GetPlayerCrowdControlInfo
+-- - C_Commentator.GetPlayerCrowdControlInfoByUnit
+-- - C_Commentator.GetPlayerData
+-- - C_Commentator.GetPlayerFlagInfo
+-- - C_Commentator.GetPlayerFlagInfoByUnit
+-- - C_Commentator.GetPlayerItemCooldownInfo
+-- - C_Commentator.GetPlayerItemCooldownInfoByUnit
+-- - C_Commentator.GetPlayerOverrideName
+-- - C_Commentator.GetPlayerSpellCharges
+-- - C_Commentator.GetPlayerSpellChargesByUnit
+-- - C_Commentator.GetPositionLerpAmount
+-- - C_Commentator.GetSmoothFollowTransitioning
+-- - C_Commentator.GetSoftlockWeight
+-- - C_Commentator.GetSpeedFactor
+-- - C_Commentator.GetStartLocation
+-- - C_Commentator.GetTeamColor
+-- - C_Commentator.GetTeamColorByUnit
+-- - C_Commentator.GetTimeLeftInMatch
+-- - C_Commentator.GetTrackedSpellID
+-- - C_Commentator.GetTrackedSpells
+-- - C_Commentator.GetTrackedSpellsByUnit
+-- - C_Commentator.GetUnitData
+-- - C_Commentator.GetWargameInfo
+-- - C_Commentator.HasTrackedAuras
+-- - C_Commentator.IsSmartCameraLocked
+-- - C_Commentator.IsSpectating
+-- - C_Commentator.IsTrackedDefensiveAura
+-- - C_Commentator.IsTrackedOffensiveAura
+-- - C_Commentator.IsTrackedSpell
+-- - C_Commentator.IsTrackedSpellByUnit
+-- - C_Commentator.IsUsingSmartCamera
+-- - C_Commentator.LookAtPlayer
+-- - C_Commentator.RemoveAllOverrideNames
+-- - C_Commentator.RemovePlayerOverrideName
+-- - C_Commentator.RequestPlayerCooldownInfo
+-- - C_Commentator.ResetFoVTarget
+-- - C_Commentator.ResetSeriesScores
+-- - C_Commentator.ResetSettings
+-- - C_Commentator.ResetTrackedAuras
+-- - C_Commentator.SetAdditionalCameraWeight
+-- - C_Commentator.SetAdditionalCameraWeightByToken
+-- - C_Commentator.SetBlocklistedAuras
+-- - C_Commentator.SetBlocklistedCooldowns
+-- - C_Commentator.SetBlocklistedItemCooldowns
+-- - C_Commentator.SetCamera
+-- - C_Commentator.SetCameraCollision
+-- - C_Commentator.SetCameraPosition
+-- - C_Commentator.SetCheatsEnabled
+-- - C_Commentator.SetCommentatorHistory
+-- - C_Commentator.SetDistanceBeforeForcedHorizontalConvergence
+-- - C_Commentator.SetDurationToForceHorizontalConvergence
+-- - C_Commentator.SetExcludeDistance
+-- - C_Commentator.SetFollowCameraSpeeds
+-- - C_Commentator.SetHardlockWeight
+-- - C_Commentator.SetHorizontalAngleThresholdToSmooth
+-- - C_Commentator.SetLookAtLerpAmount
+-- - C_Commentator.SetMapAndInstanceIndex
+-- - C_Commentator.SetMouseDisabled
+-- - C_Commentator.SetMoveSpeed
+-- - C_Commentator.SetMsToHoldForHorizontalMovement
+-- - C_Commentator.SetMsToHoldForVerticalMovement
+-- - C_Commentator.SetMsToSmoothHorizontalChange
+-- - C_Commentator.SetMsToSmoothVerticalChange
+-- - C_Commentator.SetPositionLerpAmount
+-- - C_Commentator.SetRequestedDebuffCooldowns
+-- - C_Commentator.SetRequestedDefensiveCooldowns
+-- - C_Commentator.SetRequestedItemCooldowns
+-- - C_Commentator.SetRequestedOffensiveCooldowns
+-- - C_Commentator.SetSeriesScore
+-- - C_Commentator.SetSeriesScores
+-- - C_Commentator.SetSmartCameraLocked
+-- - C_Commentator.SetSmoothFollowTransitioning
+-- - C_Commentator.SetSoftlockWeight
+-- - C_Commentator.SetSpeedFactor
+-- - C_Commentator.SetTargetHeightOffset
+-- - C_Commentator.SetUseSmartCamera
+-- - C_Commentator.SnapCameraLookAtPoint
+-- - C_Commentator.SpellUsesItemCharges
+-- - C_Commentator.StartWargame
+-- - C_Commentator.SwapTeamSides
+-- - C_Commentator.ToggleCheats
+-- - C_Commentator.UpdateMapInfo
+-- - C_Commentator.UpdatePlayerInfo
+-- - C_Commentator.ZoomIn
+-- - C_Commentator.ZoomIn_Position
+-- - C_Commentator.ZoomOut
+-- - C_Commentator.ZoomOut_Position
+--]=]
+
+---======================================================================
+--- C_Commentator.AddPlayerOverrideName
+---======================================================================
+--- Arguments:
+--- @param playerName string
+--- @param overrideName string
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AddPlayerOverrideName
+---
+--- Usage: C_Commentator.AddPlayerOverrideName(playerName, overrideName)
+---
+-- function C_Commentator.AddPlayerOverrideName()
+-- end
+
+---======================================================================
+--- C_Commentator.AddTrackedDefensiveAuras
+---======================================================================
+--- Arguments:
+--- @param spellIDs table
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AddTrackedDefensiveAuras
+---
+--- Usage: C_Commentator.AddTrackedDefensiveAuras(spellIDs)
+---
+-- function C_Commentator.AddTrackedDefensiveAuras()
+-- end
+
+---======================================================================
+--- C_Commentator.AddTrackedOffensiveAuras
+---======================================================================
+--- Arguments:
+--- @param spellIDs table
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AddTrackedOffensiveAuras
+---
+--- Usage: C_Commentator.AddTrackedOffensiveAuras(spellIDs)
+---
+-- function C_Commentator.AddTrackedOffensiveAuras()
+-- end
+
+---======================================================================
+--- C_Commentator.AreTeamsSwapped
+---======================================================================
+--- Returns:
+--- @return boolean teamsAreSwapped
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AreTeamsSwapped
+---
+--- Usage: teamsAreSwapped = C_Commentator.AreTeamsSwapped()
+---
+-- function C_Commentator.AreTeamsSwapped()
+-- end
+
+---======================================================================
+--- C_Commentator.AssignPlayersToTeam
+---======================================================================
+--- Arguments:
+--- @param playerName string []
+--- @param teamName string
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AssignPlayersToTeam
+---
+--- Usage: C_Commentator.AssignPlayersToTeam(playerName, teamName)
+---
+-- function C_Commentator.AssignPlayersToTeam()
+-- end
+
+---======================================================================
+--- C_Commentator.AssignPlayersToTeamInCurrentInstance
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param teamName string
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AssignPlayersToTeamInCurrentInstance
+---
+--- Usage: C_Commentator.AssignPlayersToTeamInCurrentInstance(teamIndex, teamName)
+---
+-- function C_Commentator.AssignPlayersToTeamInCurrentInstance()
+-- end
+
+---======================================================================
+--- C_Commentator.AssignPlayerToTeam
+---======================================================================
+--- Arguments:
+--- @param playerName string
+--- @param teamName string
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.AssignPlayerToTeam
+---
+--- Usage: C_Commentator.AssignPlayerToTeam(playerName, teamName)
+---
+-- function C_Commentator.AssignPlayerToTeam()
+-- end
+
+---======================================================================
+--- C_Commentator.CanUseCommentatorCheats
+---======================================================================
+--- Returns:
+--- @return boolean canUseCommentatorCheats
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.CanUseCommentatorCheats
+---
+--- Usage: canUseCommentatorCheats = C_Commentator.CanUseCommentatorCheats()
+---
+-- function C_Commentator.CanUseCommentatorCheats()
+-- end
+
+---======================================================================
+--- C_Commentator.ClearCameraTarget
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ClearCameraTarget
+---
+--- Usage: C_Commentator.ClearCameraTarget()
+---
+-- function C_Commentator.ClearCameraTarget()
+-- end
+
+---======================================================================
+--- C_Commentator.ClearFollowTarget
+---======================================================================
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ClearFollowTarget
+---
+--- Usage: C_Commentator.ClearFollowTarget()
+---
+-- function C_Commentator.ClearFollowTarget()
+-- end
+
+---======================================================================
+--- C_Commentator.ClearLookAtTarget
+---======================================================================
+--- Arguments:
+--- @param lookAtIndex number ?
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ClearLookAtTarget
+---
+--- Usage: C_Commentator.ClearLookAtTarget([lookAtIndex])
+---
+-- function C_Commentator.ClearLookAtTarget()
+-- end
+
+---======================================================================
+--- C_Commentator.EnterInstance
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.EnterInstance
+---
+--- Usage: C_Commentator.EnterInstance()
+---
+-- function C_Commentator.EnterInstance()
+-- end
+
+---======================================================================
+--- C_Commentator.ExitInstance
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ExitInstance
+---
+--- Usage: C_Commentator.ExitInstance()
+---
+-- function C_Commentator.ExitInstance()
+-- end
+
+---======================================================================
+--- C_Commentator.FindSpectatedUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return number playerIndex
+--- @return number teamIndex
+--- @return boolean isPet
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FindSpectatedUnit
+---
+--- Usage: playerIndex, teamIndex, isPet = C_Commentator.FindSpectatedUnit(unitToken)
+---
+-- function C_Commentator.FindSpectatedUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.FindTeamNameInCurrentInstance
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+---
+--- Returns:
+--- @return string teamName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FindTeamNameInCurrentInstance
+---
+--- Usage: teamName = C_Commentator.FindTeamNameInCurrentInstance(teamIndex)
+---
+-- function C_Commentator.FindTeamNameInCurrentInstance()
+-- end
+
+---======================================================================
+--- C_Commentator.FindTeamNameInDirectory
+---======================================================================
+--- Arguments:
+--- @param playerNames string []
+---
+--- Returns:
+--- @return string teamName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FindTeamNameInDirectory
+---
+--- Usage: teamName = C_Commentator.FindTeamNameInDirectory(playerNames)
+---
+-- function C_Commentator.FindTeamNameInDirectory()
+-- end
+
+---======================================================================
+--- C_Commentator.FlushCommentatorHistory
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FlushCommentatorHistory
+---
+--- Usage: C_Commentator.FlushCommentatorHistory()
+---
+-- function C_Commentator.FlushCommentatorHistory()
+-- end
+
+---======================================================================
+--- C_Commentator.FollowPlayer
+---======================================================================
+--- Arguments:
+--- @param factionIndex number
+--- @param playerIndex number
+--- @param forceInstantTransition boolean ?
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FollowPlayer
+---
+--- Usage: C_Commentator.FollowPlayer(factionIndex, playerIndex [, forceInstantTransition])
+---
+-- function C_Commentator.FollowPlayer()
+-- end
+
+---======================================================================
+--- C_Commentator.FollowUnit
+---======================================================================
+--- Arguments:
+--- @param token string
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.FollowUnit
+---
+--- Usage: C_Commentator.FollowUnit(token)
+---
+-- function C_Commentator.FollowUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.ForceFollowTransition
+---======================================================================
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ForceFollowTransition
+---
+--- Usage: C_Commentator.ForceFollowTransition()
+---
+-- function C_Commentator.ForceFollowTransition()
+-- end
+
+---======================================================================
+--- C_Commentator.GetAdditionalCameraWeight
+---======================================================================
+--- Returns:
+--- @return number teamIndex
+--- @return number playerIndex
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetAdditionalCameraWeight
+---
+--- Usage: teamIndex, playerIndex = C_Commentator.GetAdditionalCameraWeight()
+---
+-- function C_Commentator.GetAdditionalCameraWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.GetAdditionalCameraWeightByToken
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return number weight
+---
+--- @since Patch 9.0.1 (2020-10-13): Added unitToken argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetAdditionalCameraWeightByToken
+---
+--- Usage: weight = C_Commentator.GetAdditionalCameraWeightByToken(unitToken)
+---
+-- function C_Commentator.GetAdditionalCameraWeightByToken()
+-- end
+
+---======================================================================
+--- C_Commentator.GetAllPlayerOverrideNames
+---======================================================================
+--- Returns:
+--- @return  nameEntries structure - NameOverrideEntry[]
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetAllPlayerOverrideNames
+---
+--- Usage: nameEntries = C_Commentator.GetAllPlayerOverrideNames()
+---
+-- function C_Commentator.GetAllPlayerOverrideNames()
+-- end
+
+---======================================================================
+--- C_Commentator.GetCamera
+---======================================================================
+--- Returns:
+--- @return number xPos
+--- @return number yPos
+--- @return number zPos
+--- @return number yaw
+--- @return number pitch
+--- @return number roll
+--- @return number fov
+---
+--- @since Patch 8.3.0 (2020-01-14): Added roll return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCamera
+---
+--- Usage: xPos, yPos, zPos, yaw, pitch, roll, fov = C_Commentator.GetCamera()
+---
+-- function C_Commentator.GetCamera()
+-- end
+
+---======================================================================
+--- C_Commentator.GetCameraCollision
+---======================================================================
+--- Returns:
+--- @return boolean isColliding
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCameraCollision
+---
+--- Usage: isColliding = C_Commentator.GetCameraCollision()
+---
+-- function C_Commentator.GetCameraCollision()
+-- end
+
+---======================================================================
+--- C_Commentator.GetCameraPosition
+---======================================================================
+--- Returns:
+--- @return number xPos
+--- @return number yPos
+--- @return number zPos
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCameraPosition
+---
+--- Usage: xPos, yPos, zPos = C_Commentator.GetCameraPosition()
+---
+-- function C_Commentator.GetCameraPosition()
+-- end
+
+---======================================================================
+--- C_Commentator.GetCommentatorHistory
+---======================================================================
+--- Returns:
+--- @return CommentatorHistory history
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCommentatorHistory
+---
+--- Usage: history = C_Commentator.GetCommentatorHistory()
+---
+-- function C_Commentator.GetCommentatorHistory()
+-- end
+
+---======================================================================
+--- C_Commentator.GetCurrentMapID
+---======================================================================
+--- Returns:
+--- @return number mapID ?
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCurrentMapID
+---
+--- Usage: mapID = C_Commentator.GetCurrentMapID()
+---
+-- function C_Commentator.GetCurrentMapID()
+-- end
+
+---======================================================================
+--- C_Commentator.GetDampeningPercent
+---======================================================================
+--- Returns:
+--- @return number percentage
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetDampeningPercent
+---
+--- Usage: percentage = C_Commentator.GetDampeningPercent()
+---
+-- function C_Commentator.GetDampeningPercent()
+-- end
+
+---======================================================================
+--- C_Commentator.GetDistanceBeforeForcedHorizontalConvergence
+---======================================================================
+--- Returns:
+--- @return number distance
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetDistanceBeforeForcedHorizontalConvergence
+---
+--- Usage: distance = C_Commentator.GetDistanceBeforeForcedHorizontalConvergence()
+---
+-- function C_Commentator.GetDistanceBeforeForcedHorizontalConvergence()
+-- end
+
+---======================================================================
+--- C_Commentator.GetDurationToForceHorizontalConvergence
+---======================================================================
+--- Returns:
+--- @return number ms
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetDurationToForceHorizontalConvergence
+---
+--- Usage: ms = C_Commentator.GetDurationToForceHorizontalConvergence()
+---
+-- function C_Commentator.GetDurationToForceHorizontalConvergence()
+-- end
+
+---======================================================================
+--- C_Commentator.GetExcludeDistance
+---======================================================================
+--- Returns:
+--- @return number excludeDistance
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetExcludeDistance
+---
+--- Usage: excludeDistance = C_Commentator.GetExcludeDistance()
+---
+-- function C_Commentator.GetExcludeDistance()
+-- end
+
+---======================================================================
+--- C_Commentator.GetHardlockWeight
+---======================================================================
+--- Returns:
+--- @return number weight
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetHardlockWeight
+---
+--- Usage: weight = C_Commentator.GetHardlockWeight()
+---
+-- function C_Commentator.GetHardlockWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.GetHorizontalAngleThresholdToSmooth
+---======================================================================
+--- Returns:
+--- @return number angle
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetHorizontalAngleThresholdToSmooth
+---
+--- Usage: angle = C_Commentator.GetHorizontalAngleThresholdToSmooth()
+---
+-- function C_Commentator.GetHorizontalAngleThresholdToSmooth()
+-- end
+
+---======================================================================
+--- C_Commentator.GetIndirectSpellID
+---======================================================================
+--- Arguments:
+--- @param trackedSpellID number
+---
+--- Returns:
+--- @return number indirectSpellID
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetIndirectSpellID
+---
+--- Usage: indirectSpellID = C_Commentator.GetIndirectSpellID(trackedSpellID)
+---
+-- function C_Commentator.GetIndirectSpellID()
+-- end
+
+---======================================================================
+--- C_Commentator.GetInstanceInfo
+---======================================================================
+--- Arguments:
+--- @param mapIndex number
+--- @param instanceIndex number
+---
+--- Returns:
+--- @return number mapID
+--- @return string mapName ?
+--- @return number status
+--- @return number instanceIDLow
+--- @return number instanceIDHigh
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetInstanceInfo
+---
+--- Usage: mapID, mapName, status, instanceIDLow, instanceIDHigh = C_Commentator.GetInstanceInfo(mapIndex, instanceIndex)
+---
+-- function C_Commentator.GetInstanceInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetLookAtLerpAmount
+---======================================================================
+--- Returns:
+--- @return number amount
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetLookAtLerpAmount
+---
+--- Usage: amount = C_Commentator.GetLookAtLerpAmount()
+---
+-- function C_Commentator.GetLookAtLerpAmount()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMapInfo
+---======================================================================
+--- Arguments:
+--- @param mapIndex number
+---
+--- Returns:
+--- @return number teamSize
+--- @return number minLevel
+--- @return number maxLevel
+--- @return number numInstances
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMapInfo
+---
+--- Usage: teamSize, minLevel, maxLevel, numInstances = C_Commentator.GetMapInfo(mapIndex)
+---
+-- function C_Commentator.GetMapInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMatchDuration
+---======================================================================
+--- Returns:
+--- @return number seconds
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMatchDuration
+---
+--- Usage: seconds = C_Commentator.GetMatchDuration()
+---
+-- function C_Commentator.GetMatchDuration()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMaxNumPlayersPerTeam
+---======================================================================
+--- Returns:
+--- @return number maxNumPlayersPerTeam
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMaxNumPlayersPerTeam
+---
+--- Usage: maxNumPlayersPerTeam = C_Commentator.GetMaxNumPlayersPerTeam()
+---
+-- function C_Commentator.GetMaxNumPlayersPerTeam()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMaxNumTeams
+---======================================================================
+--- Returns:
+--- @return number maxNumTeams
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMaxNumTeams
+---
+--- Usage: maxNumTeams = C_Commentator.GetMaxNumTeams()
+---
+-- function C_Commentator.GetMaxNumTeams()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMode
+---======================================================================
+--- Returns:
+--- @return number commentatorMode
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMode
+---
+--- Usage: commentatorMode = C_Commentator.GetMode()
+---
+-- function C_Commentator.GetMode()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMsToHoldForHorizontalMovement
+---======================================================================
+--- Returns:
+--- @return number ms
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMsToHoldForHorizontalMovement
+---
+--- Usage: ms = C_Commentator.GetMsToHoldForHorizontalMovement()
+---
+-- function C_Commentator.GetMsToHoldForHorizontalMovement()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMsToHoldForVerticalMovement
+---======================================================================
+--- Returns:
+--- @return number ms
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMsToHoldForVerticalMovement
+---
+--- Usage: ms = C_Commentator.GetMsToHoldForVerticalMovement()
+---
+-- function C_Commentator.GetMsToHoldForVerticalMovement()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMsToSmoothHorizontalChange
+---======================================================================
+--- Returns:
+--- @return number ms
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMsToSmoothHorizontalChange
+---
+--- Usage: ms = C_Commentator.GetMsToSmoothHorizontalChange()
+---
+-- function C_Commentator.GetMsToSmoothHorizontalChange()
+-- end
+
+---======================================================================
+--- C_Commentator.GetMsToSmoothVerticalChange
+---======================================================================
+--- Returns:
+--- @return number ms
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetMsToSmoothVerticalChange
+---
+--- Usage: ms = C_Commentator.GetMsToSmoothVerticalChange()
+---
+-- function C_Commentator.GetMsToSmoothVerticalChange()
+-- end
+
+---======================================================================
+--- C_Commentator.GetNumMaps
+---======================================================================
+--- Returns:
+--- @return number numMaps
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetNumMaps
+---
+--- Usage: numMaps = C_Commentator.GetNumMaps()
+---
+-- function C_Commentator.GetNumMaps()
+-- end
+
+---======================================================================
+--- C_Commentator.GetNumPlayers
+---======================================================================
+--- Arguments:
+--- @param factionIndex number
+---
+--- Returns:
+--- @return number numPlayers
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetNumPlayers
+---
+--- Usage: numPlayers = C_Commentator.GetNumPlayers(factionIndex)
+---
+-- function C_Commentator.GetNumPlayers()
+-- end
+
+---======================================================================
+--- C_Commentator.GetOrCreateSeries
+---======================================================================
+--- Arguments:
+--- @param teamName1 string
+--- @param teamName2 string
+---
+--- Returns:
+--- @return CommentatorSeries data
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetOrCreateSeries
+---
+--- Usage: data = C_Commentator.GetOrCreateSeries(teamName1, teamName2)
+---
+-- function C_Commentator.GetOrCreateSeries()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerAuraInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param spellID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerAuraInfo
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerAuraInfo(teamIndex, playerIndex, spellID)
+---
+-- function C_Commentator.GetPlayerAuraInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerAuraInfoByUnit
+---======================================================================
+--- Arguments:
+--- @param token string
+--- @param spellID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerAuraInfoByUnit
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerAuraInfoByUnit(token, spellID)
+---
+-- function C_Commentator.GetPlayerAuraInfoByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerCooldownInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param spellID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerCooldownInfo
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerCooldownInfo(teamIndex, playerIndex, spellID)
+---
+-- function C_Commentator.GetPlayerCooldownInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerCooldownInfoByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param spellID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerCooldownInfoByUnit
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerCooldownInfoByUnit(unitToken, spellID)
+---
+-- function C_Commentator.GetPlayerCooldownInfoByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerCrowdControlInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+---
+--- Returns:
+--- @return number spellID
+--- @return number expiration
+--- @return number duration
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerCrowdControlInfo
+---
+--- Usage: spellID, expiration, duration = C_Commentator.GetPlayerCrowdControlInfo(teamIndex, playerIndex)
+---
+-- function C_Commentator.GetPlayerCrowdControlInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerCrowdControlInfoByUnit
+---======================================================================
+--- Arguments:
+--- @param token string
+---
+--- Returns:
+--- @return number spellID
+--- @return number expiration
+--- @return number duration
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerCrowdControlInfoByUnit
+---
+--- Usage: spellID, expiration, duration = C_Commentator.GetPlayerCrowdControlInfoByUnit(token)
+---
+-- function C_Commentator.GetPlayerCrowdControlInfoByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerData
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+---
+--- Returns:
+--- @return CommentatorPlayerData info ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added soloShuffleRoundLosses, soloShuffleRoundWins returns.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerData
+---
+--- Usage: info = C_Commentator.GetPlayerData(teamIndex, playerIndex)
+---
+-- function C_Commentator.GetPlayerData()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerFlagInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+---
+--- Returns:
+--- @return boolean hasFlag
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerFlagInfo
+---
+--- Usage: hasFlag = C_Commentator.GetPlayerFlagInfo(teamIndex, playerIndex)
+---
+-- function C_Commentator.GetPlayerFlagInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerFlagInfoByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return boolean hasFlag
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerFlagInfoByUnit
+---
+--- Usage: hasFlag = C_Commentator.GetPlayerFlagInfoByUnit(unitToken)
+---
+-- function C_Commentator.GetPlayerFlagInfoByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerItemCooldownInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param itemID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerItemCooldownInfo
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerItemCooldownInfo(teamIndex, playerIndex, itemID)
+---
+-- function C_Commentator.GetPlayerItemCooldownInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerItemCooldownInfoByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param itemID number
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+--- @return boolean enable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerItemCooldownInfoByUnit
+---
+--- Usage: startTime, duration, enable = C_Commentator.GetPlayerItemCooldownInfoByUnit(unitToken, itemID)
+---
+-- function C_Commentator.GetPlayerItemCooldownInfoByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerOverrideName
+---======================================================================
+--- Arguments:
+--- @param originalName string
+---
+--- Returns:
+--- @return string overrideName
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerOverrideName
+---
+--- Usage: overrideName = C_Commentator.GetPlayerOverrideName(originalName)
+---
+-- function C_Commentator.GetPlayerOverrideName()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerSpellCharges
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param spellID number
+---
+--- Returns:
+--- @return number charges
+--- @return number maxCharges
+--- @return number startTime
+--- @return number duration
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerSpellCharges
+---
+--- Usage: charges, maxCharges, startTime, duration = C_Commentator.GetPlayerSpellCharges(teamIndex, playerIndex, spellID)
+---
+-- function C_Commentator.GetPlayerSpellCharges()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPlayerSpellChargesByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param spellID number
+---
+--- Returns:
+--- @return number charges
+--- @return number maxCharges
+--- @return number startTime
+--- @return number duration
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPlayerSpellChargesByUnit
+---
+--- Usage: charges, maxCharges, startTime, duration = C_Commentator.GetPlayerSpellChargesByUnit(unitToken, spellID)
+---
+-- function C_Commentator.GetPlayerSpellChargesByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetPositionLerpAmount
+---======================================================================
+--- Returns:
+--- @return number amount
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetPositionLerpAmount
+---
+--- Usage: amount = C_Commentator.GetPositionLerpAmount()
+---
+-- function C_Commentator.GetPositionLerpAmount()
+-- end
+
+---======================================================================
+--- C_Commentator.GetSmoothFollowTransitioning
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetSmoothFollowTransitioning
+---
+--- Usage: enabled = C_Commentator.GetSmoothFollowTransitioning()
+---
+-- function C_Commentator.GetSmoothFollowTransitioning()
+-- end
+
+---======================================================================
+--- C_Commentator.GetSoftlockWeight
+---======================================================================
+--- Returns:
+--- @return number weight
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetSoftlockWeight
+---
+--- Usage: weight = C_Commentator.GetSoftlockWeight()
+---
+-- function C_Commentator.GetSoftlockWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.GetSpeedFactor
+---======================================================================
+--- Returns:
+--- @return number factor
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetSpeedFactor
+---
+--- Usage: factor = C_Commentator.GetSpeedFactor()
+---
+-- function C_Commentator.GetSpeedFactor()
+-- end
+
+---======================================================================
+--- C_Commentator.GetStartLocation
+---======================================================================
+--- Arguments:
+--- @param instanceID number
+---
+--- Returns:
+--- @return Vector3DMixin pos 🔗
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetStartLocation
+---
+--- Usage: pos = C_Commentator.GetStartLocation(instanceID)
+---
+-- function C_Commentator.GetStartLocation()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTeamColor
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+---
+--- Returns:
+--- @return ColorMixin color 🔗
+---
+--- @since Patch 9.0.1 (2020-10-13): Changed to C_Commentator.GetTeamColor() and returns a mixin.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTeamColor
+---
+--- Usage: color = C_Commentator.GetTeamColor(teamIndex)
+      = C_Commentator.GetTeamColorByUnit(unitToken)
+---
+-- function C_Commentator.GetTeamColor()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTeamColorByUnit
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+---
+--- Returns:
+--- @return ColorMixin color 🔗
+---
+--- @since Patch 9.0.1 (2020-10-13): Changed to C_Commentator.GetTeamColor() and returns a mixin.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTeamColorByUnit
+---
+--- Usage: color = C_Commentator.GetTeamColor(teamIndex)
+      = C_Commentator.GetTeamColorByUnit(unitToken)
+---
+-- function C_Commentator.GetTeamColorByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTimeLeftInMatch
+---======================================================================
+--- Returns:
+--- @return number timeLeft ?
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTimeLeftInMatch
+---
+--- Usage: timeLeft = C_Commentator.GetTimeLeftInMatch()
+---
+-- function C_Commentator.GetTimeLeftInMatch()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTrackedSpellID
+---======================================================================
+--- Arguments:
+--- @param indirectSpellID number
+---
+--- Returns:
+--- @return number trackedSpellID
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpellID
+---
+--- Usage: trackedSpellID = C_Commentator.GetTrackedSpellID(indirectSpellID)
+---
+-- function C_Commentator.GetTrackedSpellID()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTrackedSpells
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param category number - Enum.TrackedSpellCategory
+---
+--- Returns:
+--- @return number spells []?
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpells
+---
+--- Usage: spells = C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category)
+---
+-- function C_Commentator.GetTrackedSpells()
+-- end
+
+---======================================================================
+--- C_Commentator.GetTrackedSpellsByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param category Enum.TrackedSpellCategory
+---
+--- Returns:
+--- @return number spells []?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpellsByUnit
+---
+--- Usage: spells = C_Commentator.GetTrackedSpellsByUnit(unitToken, category)
+---
+-- function C_Commentator.GetTrackedSpellsByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.GetUnitData
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return CommentatorUnitData data
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetUnitData
+---
+--- Usage: data = C_Commentator.GetUnitData(unitToken)
+---
+-- function C_Commentator.GetUnitData()
+-- end
+
+---======================================================================
+--- C_Commentator.GetWargameInfo
+---======================================================================
+--- Arguments:
+--- @param listID number
+---
+--- Returns:
+--- @return string name
+--- @return number minPlayers
+--- @return number maxPlayers
+--- @return boolean isArena
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.GetWargameInfo
+---
+--- Usage: name, minPlayers, maxPlayers, isArena = C_Commentator.GetWargameInfo(listID)
+---
+-- function C_Commentator.GetWargameInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.HasTrackedAuras
+---======================================================================
+--- Arguments:
+--- @param token string
+---
+--- Returns:
+--- @return boolean hasOffensiveAura
+--- @return boolean hasDefensiveAura
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.HasTrackedAuras
+---
+--- Usage: hasOffensiveAura, hasDefensiveAura = C_Commentator.HasTrackedAuras(token)
+---
+-- function C_Commentator.HasTrackedAuras()
+-- end
+
+---======================================================================
+--- C_Commentator.IsSmartCameraLocked
+---======================================================================
+--- Returns:
+--- @return boolean isSmartCameraLocked
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsSmartCameraLocked
+---
+--- Usage: isSmartCameraLocked = C_Commentator.IsSmartCameraLocked()
+---
+-- function C_Commentator.IsSmartCameraLocked()
+-- end
+
+---======================================================================
+--- C_Commentator.IsSpectating
+---======================================================================
+--- Returns:
+--- @return boolean isSpectating
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsSpectating
+---
+--- Usage: isSpectating = C_Commentator.IsSpectating()
+---
+-- function C_Commentator.IsSpectating()
+-- end
+
+---======================================================================
+--- C_Commentator.IsTrackedDefensiveAura
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean isDefensiveTrigger
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsTrackedDefensiveAura
+---
+--- Usage: isDefensiveTrigger = C_Commentator.IsTrackedDefensiveAura(spellID)
+---
+-- function C_Commentator.IsTrackedDefensiveAura()
+-- end
+
+---======================================================================
+--- C_Commentator.IsTrackedOffensiveAura
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean isOffensiveTrigger
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsTrackedOffensiveAura
+---
+--- Usage: isOffensiveTrigger = C_Commentator.IsTrackedOffensiveAura(spellID)
+---
+-- function C_Commentator.IsTrackedOffensiveAura()
+-- end
+
+---======================================================================
+--- C_Commentator.IsTrackedSpell
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param spellID number
+--- @param category number - Enum.TrackedSpellCategory
+---
+--- Returns:
+--- @return boolean isTracked
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsTrackedSpell
+---
+--- Usage: isTracked = C_Commentator.IsTrackedSpell(teamIndex, playerIndex, spellID, category)
+---
+-- function C_Commentator.IsTrackedSpell()
+-- end
+
+---======================================================================
+--- C_Commentator.IsTrackedSpellByUnit
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param spellID number
+--- @param category Enum.TrackedSpellCategory
+---
+--- Returns:
+--- @return boolean isTracked
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsTrackedSpellByUnit
+---
+--- Usage: isTracked = C_Commentator.IsTrackedSpellByUnit(unitToken, spellID, category)
+---
+-- function C_Commentator.IsTrackedSpellByUnit()
+-- end
+
+---======================================================================
+--- C_Commentator.IsUsingSmartCamera
+---======================================================================
+--- Returns:
+--- @return boolean isUsingSmartCamera
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.IsUsingSmartCamera
+---
+--- Usage: isUsingSmartCamera = C_Commentator.IsUsingSmartCamera()
+---
+-- function C_Commentator.IsUsingSmartCamera()
+-- end
+
+---======================================================================
+--- C_Commentator.LookAtPlayer
+---======================================================================
+--- Arguments:
+--- @param factionIndex number
+--- @param playerIndex number
+--- @param lookAtIndex number ?
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.LookAtPlayer
+---
+--- Usage: C_Commentator.LookAtPlayer(factionIndex, playerIndex [, lookAtIndex])
+---
+-- function C_Commentator.LookAtPlayer()
+-- end
+
+---======================================================================
+--- C_Commentator.RemoveAllOverrideNames
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.RemoveAllOverrideNames
+---
+--- Usage: C_Commentator.RemoveAllOverrideNames()
+---
+-- function C_Commentator.RemoveAllOverrideNames()
+-- end
+
+---======================================================================
+--- C_Commentator.RemovePlayerOverrideName
+---======================================================================
+--- Arguments:
+--- @param originalPlayerName string
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.RemovePlayerOverrideName
+---
+--- Usage: C_Commentator.RemovePlayerOverrideName(originalPlayerName)
+---
+-- function C_Commentator.RemovePlayerOverrideName()
+-- end
+
+---======================================================================
+--- C_Commentator.RequestPlayerCooldownInfo
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.RequestPlayerCooldownInfo
+---
+--- Usage: C_Commentator.RequestPlayerCooldownInfo(teamIndex, playerIndex)
+---
+-- function C_Commentator.RequestPlayerCooldownInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.ResetFoVTarget
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ResetFoVTarget
+---
+--- Usage: C_Commentator.ResetFoVTarget()
+---
+-- function C_Commentator.ResetFoVTarget()
+-- end
+
+---======================================================================
+--- C_Commentator.ResetSeriesScores
+---======================================================================
+--- Arguments:
+--- @param teamName1 string
+--- @param teamName2 string
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ResetSeriesScores
+---
+--- Usage: C_Commentator.ResetSeriesScores(teamName1, teamName2)
+---
+-- function C_Commentator.ResetSeriesScores()
+-- end
+
+---======================================================================
+--- C_Commentator.ResetSettings
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ResetSettings
+---
+--- Usage: C_Commentator.ResetSettings()
+---
+-- function C_Commentator.ResetSettings()
+-- end
+
+---======================================================================
+--- C_Commentator.ResetTrackedAuras
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ResetTrackedAuras
+---
+--- Usage: C_Commentator.ResetTrackedAuras()
+---
+-- function C_Commentator.ResetTrackedAuras()
+-- end
+
+---======================================================================
+--- C_Commentator.SetAdditionalCameraWeight
+---======================================================================
+--- Arguments:
+--- @param teamIndex number
+--- @param playerIndex number
+--- @param weight number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetAdditionalCameraWeight
+---
+--- Usage: C_Commentator.SetAdditionalCameraWeight(teamIndex, playerIndex, weight)
+---
+-- function C_Commentator.SetAdditionalCameraWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.SetAdditionalCameraWeightByToken
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param weight number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added unitToken argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetAdditionalCameraWeightByToken
+---
+--- Usage: C_Commentator.SetAdditionalCameraWeightByToken(unitToken, weight)
+---
+-- function C_Commentator.SetAdditionalCameraWeightByToken()
+-- end
+
+---======================================================================
+--- C_Commentator.SetBlocklistedAuras
+---======================================================================
+--- Arguments:
+--- @param spellIDs number []
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetBlocklistedAuras
+---
+--- Usage: C_Commentator.SetBlocklistedAuras(spellIDs)
+---
+-- function C_Commentator.SetBlocklistedAuras()
+-- end
+
+---======================================================================
+--- C_Commentator.SetBlocklistedCooldowns
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param spellIDs number []
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetBlocklistedCooldowns
+---
+--- Usage: C_Commentator.SetBlocklistedCooldowns(specID, spellIDs)
+---
+-- function C_Commentator.SetBlocklistedCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetBlocklistedItemCooldowns
+---======================================================================
+--- Arguments:
+--- @param itemIDs number []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetBlocklistedItemCooldowns
+---
+--- Usage: C_Commentator.SetBlocklistedItemCooldowns(itemIDs)
+---
+-- function C_Commentator.SetBlocklistedItemCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetCamera
+---======================================================================
+--- Arguments:
+--- @param xPos number
+--- @param yPos number
+--- @param zPos number
+--- @param yaw number
+--- @param pitch number
+--- @param roll number
+--- @param fov number
+---
+--- @since Patch 8.3.0 (2020-01-14): Added roll argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetCamera
+---
+--- Usage: C_Commentator.SetCamera(xPos, yPos, zPos, yaw, pitch, roll, fov)
+---
+-- function C_Commentator.SetCamera()
+-- end
+
+---======================================================================
+--- C_Commentator.SetCameraCollision
+---======================================================================
+--- Arguments:
+--- @param collide boolean
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetCameraCollision
+---
+--- Usage: C_Commentator.SetCameraCollision(collide)
+---
+-- function C_Commentator.SetCameraCollision()
+-- end
+
+---======================================================================
+--- C_Commentator.SetCameraPosition
+---======================================================================
+--- Arguments:
+--- @param xPos number
+--- @param yPos number
+--- @param zPos number
+--- @param snapToLocation boolean
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetCameraPosition
+---
+--- Usage: C_Commentator.SetCameraPosition(xPos, yPos, zPos, snapToLocation)
+---
+-- function C_Commentator.SetCameraPosition()
+-- end
+
+---======================================================================
+--- C_Commentator.SetCheatsEnabled
+---======================================================================
+--- Arguments:
+--- @param enableCheats boolean
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetCheatsEnabled
+---
+--- Usage: C_Commentator.SetCheatsEnabled(enableCheats)
+---
+-- function C_Commentator.SetCheatsEnabled()
+-- end
+
+---======================================================================
+--- C_Commentator.SetCommentatorHistory
+---======================================================================
+--- Arguments:
+--- @param history CommentatorHistory
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetCommentatorHistory
+---
+--- Usage: C_Commentator.SetCommentatorHistory(history)
+---
+-- function C_Commentator.SetCommentatorHistory()
+-- end
+
+---======================================================================
+--- C_Commentator.SetDistanceBeforeForcedHorizontalConvergence
+---======================================================================
+--- Arguments:
+--- @param distance number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetDistanceBeforeForcedHorizontalConvergence
+---
+--- Usage: C_Commentator.SetDistanceBeforeForcedHorizontalConvergence(distance)
+---
+-- function C_Commentator.SetDistanceBeforeForcedHorizontalConvergence()
+-- end
+
+---======================================================================
+--- C_Commentator.SetDurationToForceHorizontalConvergence
+---======================================================================
+--- Arguments:
+--- @param ms number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetDurationToForceHorizontalConvergence
+---
+--- Usage: C_Commentator.SetDurationToForceHorizontalConvergence(ms)
+---
+-- function C_Commentator.SetDurationToForceHorizontalConvergence()
+-- end
+
+---======================================================================
+--- C_Commentator.SetExcludeDistance
+---======================================================================
+--- Arguments:
+--- @param excludeDistance number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetExcludeDistance
+---
+--- Usage: C_Commentator.SetExcludeDistance(excludeDistance)
+---
+-- function C_Commentator.SetExcludeDistance()
+-- end
+
+---======================================================================
+--- C_Commentator.SetFollowCameraSpeeds
+---======================================================================
+--- Arguments:
+--- @param elasticSpeed number
+--- @param minSpeed number
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetFollowCameraSpeeds
+---
+--- Usage: C_Commentator.SetFollowCameraSpeeds(elasticSpeed, minSpeed)
+---
+-- function C_Commentator.SetFollowCameraSpeeds()
+-- end
+
+---======================================================================
+--- C_Commentator.SetHardlockWeight
+---======================================================================
+--- Arguments:
+--- @param weight number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetHardlockWeight
+---
+--- Usage: C_Commentator.SetHardlockWeight(weight)
+---
+-- function C_Commentator.SetHardlockWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.SetHorizontalAngleThresholdToSmooth
+---======================================================================
+--- Arguments:
+--- @param angle number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetHorizontalAngleThresholdToSmooth
+---
+--- Usage: C_Commentator.SetHorizontalAngleThresholdToSmooth(angle)
+---
+-- function C_Commentator.SetHorizontalAngleThresholdToSmooth()
+-- end
+
+---======================================================================
+--- C_Commentator.SetLookAtLerpAmount
+---======================================================================
+--- Arguments:
+--- @param amount number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetLookAtLerpAmount
+---
+--- Usage: C_Commentator.SetLookAtLerpAmount(amount)
+---
+-- function C_Commentator.SetLookAtLerpAmount()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMapAndInstanceIndex
+---======================================================================
+--- Arguments:
+--- @param mapIndex number
+--- @param instanceIndex number
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMapAndInstanceIndex
+---
+--- Usage: C_Commentator.SetMapAndInstanceIndex(mapIndex, instanceIndex)
+---
+-- function C_Commentator.SetMapAndInstanceIndex()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMouseDisabled
+---======================================================================
+--- Arguments:
+--- @param disabled boolean
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMouseDisabled
+---
+--- Usage: C_Commentator.SetMouseDisabled(disabled)
+---
+-- function C_Commentator.SetMouseDisabled()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMoveSpeed
+---======================================================================
+--- Arguments:
+--- @param newSpeed number
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMoveSpeed
+---
+--- Usage: C_Commentator.SetMoveSpeed(newSpeed)
+---
+-- function C_Commentator.SetMoveSpeed()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMsToHoldForHorizontalMovement
+---======================================================================
+--- Arguments:
+--- @param ms number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMsToHoldForHorizontalMovement
+---
+--- Usage: C_Commentator.SetMsToHoldForHorizontalMovement(ms)
+---
+-- function C_Commentator.SetMsToHoldForHorizontalMovement()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMsToHoldForVerticalMovement
+---======================================================================
+--- Arguments:
+--- @param ms number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMsToHoldForVerticalMovement
+---
+--- Usage: C_Commentator.SetMsToHoldForVerticalMovement(ms)
+---
+-- function C_Commentator.SetMsToHoldForVerticalMovement()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMsToSmoothHorizontalChange
+---======================================================================
+--- Arguments:
+--- @param ms number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMsToSmoothHorizontalChange
+---
+--- Usage: C_Commentator.SetMsToSmoothHorizontalChange(ms)
+---
+-- function C_Commentator.SetMsToSmoothHorizontalChange()
+-- end
+
+---======================================================================
+--- C_Commentator.SetMsToSmoothVerticalChange
+---======================================================================
+--- Arguments:
+--- @param ms number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetMsToSmoothVerticalChange
+---
+--- Usage: C_Commentator.SetMsToSmoothVerticalChange(ms)
+---
+-- function C_Commentator.SetMsToSmoothVerticalChange()
+-- end
+
+---======================================================================
+--- C_Commentator.SetPositionLerpAmount
+---======================================================================
+--- Arguments:
+--- @param amount number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetPositionLerpAmount
+---
+--- Usage: C_Commentator.SetPositionLerpAmount(amount)
+---
+-- function C_Commentator.SetPositionLerpAmount()
+-- end
+
+---======================================================================
+--- C_Commentator.SetRequestedDebuffCooldowns
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param spellIDs table
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetRequestedDebuffCooldowns
+---
+--- Usage: C_Commentator.SetRequestedDebuffCooldowns(specID, spellIDs)
+---
+-- function C_Commentator.SetRequestedDebuffCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetRequestedDefensiveCooldowns
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param spellIDs table
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetRequestedDefensiveCooldowns
+---
+--- Usage: C_Commentator.SetRequestedDefensiveCooldowns(specID, spellIDs)
+---
+-- function C_Commentator.SetRequestedDefensiveCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetRequestedItemCooldowns
+---======================================================================
+--- Arguments:
+--- @param itemIDs number []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetRequestedItemCooldowns
+---
+--- Usage: C_Commentator.SetRequestedItemCooldowns(itemIDs)
+---
+-- function C_Commentator.SetRequestedItemCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetRequestedOffensiveCooldowns
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param spellIDs table
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetRequestedOffensiveCooldowns
+---
+--- Usage: C_Commentator.SetRequestedOffensiveCooldowns(specID, spellIDs)
+---
+-- function C_Commentator.SetRequestedOffensiveCooldowns()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSeriesScore
+---======================================================================
+--- Arguments:
+--- @param teamName1 string
+--- @param teamName2 string
+--- @param scoringTeamName string
+--- @param score number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSeriesScore
+---
+--- Usage: C_Commentator.SetSeriesScore(teamName1, teamName2, scoringTeamName, score)
+---
+-- function C_Commentator.SetSeriesScore()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSeriesScores
+---======================================================================
+--- Arguments:
+--- @param teamName1 string
+--- @param teamName2 string
+--- @param score1 number
+--- @param score2 number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSeriesScores
+---
+--- Usage: C_Commentator.SetSeriesScores(teamName1, teamName2, score1, score2)
+---
+-- function C_Commentator.SetSeriesScores()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSmartCameraLocked
+---======================================================================
+--- Arguments:
+--- @param locked boolean
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSmartCameraLocked
+---
+--- Usage: C_Commentator.SetSmartCameraLocked(locked)
+---
+-- function C_Commentator.SetSmartCameraLocked()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSmoothFollowTransitioning
+---======================================================================
+--- Arguments:
+--- @param enabled boolean
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSmoothFollowTransitioning
+---
+--- Usage: C_Commentator.SetSmoothFollowTransitioning(enabled)
+---
+-- function C_Commentator.SetSmoothFollowTransitioning()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSoftlockWeight
+---======================================================================
+--- Arguments:
+--- @param weight number
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSoftlockWeight
+---
+--- Usage: C_Commentator.SetSoftlockWeight(weight)
+---
+-- function C_Commentator.SetSoftlockWeight()
+-- end
+
+---======================================================================
+--- C_Commentator.SetSpeedFactor
+---======================================================================
+--- Arguments:
+--- @param factor number
+---
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetSpeedFactor
+---
+--- Usage: C_Commentator.SetSpeedFactor(factor)
+---
+-- function C_Commentator.SetSpeedFactor()
+-- end
+
+---======================================================================
+--- C_Commentator.SetTargetHeightOffset
+---======================================================================
+--- Arguments:
+--- @param offset number
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetTargetHeightOffset
+---
+--- Usage: C_Commentator.SetTargetHeightOffset(offset)
+---
+-- function C_Commentator.SetTargetHeightOffset()
+-- end
+
+---======================================================================
+--- C_Commentator.SetUseSmartCamera
+---======================================================================
+--- Arguments:
+--- @param useSmartCamera boolean
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SetUseSmartCamera
+---
+--- Usage: C_Commentator.SetUseSmartCamera(useSmartCamera)
+---
+-- function C_Commentator.SetUseSmartCamera()
+-- end
+
+---======================================================================
+--- C_Commentator.SnapCameraLookAtPoint
+---======================================================================
+--- @since Patch 6.2.2 (2015-09-01): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SnapCameraLookAtPoint
+---
+--- Usage: C_Commentator.SnapCameraLookAtPoint()
+---
+-- function C_Commentator.SnapCameraLookAtPoint()
+-- end
+
+---======================================================================
+--- C_Commentator.SpellUsesItemCharges
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean spellUsesItemCharges
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SpellUsesItemCharges
+---
+--- Usage: spellUsesItemCharges = C_Commentator.SpellUsesItemCharges(spellID)
+---
+-- function C_Commentator.SpellUsesItemCharges()
+-- end
+
+---======================================================================
+--- C_Commentator.StartWargame
+---======================================================================
+--- Arguments:
+--- @param listID number
+--- @param teamSize number
+--- @param tournamentRules boolean
+--- @param teamOneCaptain string
+--- @param teamTwoCaptain string
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.StartWargame
+---
+--- Usage: C_Commentator.StartWargame(listID, teamSize, tournamentRules, teamOneCaptain, teamTwoCaptain)
+---
+-- function C_Commentator.StartWargame()
+-- end
+
+---======================================================================
+--- C_Commentator.SwapTeamSides
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.SwapTeamSides
+---
+--- Usage: C_Commentator.SwapTeamSides()
+---
+-- function C_Commentator.SwapTeamSides()
+-- end
+
+---======================================================================
+--- C_Commentator.ToggleCheats
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ToggleCheats
+---
+--- Usage: C_Commentator.ToggleCheats()
+---
+-- function C_Commentator.ToggleCheats()
+-- end
+
+---======================================================================
+--- C_Commentator.UpdateMapInfo
+---======================================================================
+--- Arguments:
+--- @param targetPlayer string ?
+---
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.UpdateMapInfo
+---
+--- Usage: C_Commentator.UpdateMapInfo([targetPlayer])
+---
+-- function C_Commentator.UpdateMapInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.UpdatePlayerInfo
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.UpdatePlayerInfo
+---
+--- Usage: C_Commentator.UpdatePlayerInfo()
+---
+-- function C_Commentator.UpdatePlayerInfo()
+-- end
+
+---======================================================================
+--- C_Commentator.ZoomIn_Position
+---======================================================================
+--- Arguments:
+--- @param zoomAmount number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomIn_Position
+---
+--- Usage: C_Commentator.ZoomIn_Position([zoomAmount])
+---
+-- function C_Commentator.ZoomIn_Position()
+-- end
+
+---======================================================================
+--- C_Commentator.ZoomIn
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomIn
+---
+--- Usage: C_Commentator.ZoomIn()
+---
+-- function C_Commentator.ZoomIn()
+-- end
+
+---======================================================================
+--- C_Commentator.ZoomOut_Position
+---======================================================================
+--- Arguments:
+--- @param zoomAmount number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomOut_Position
+---
+--- Usage: C_Commentator.ZoomOut_Position([zoomAmount])
+---
+-- function C_Commentator.ZoomOut_Position()
+-- end
+
+---======================================================================
+--- C_Commentator.ZoomOut
+---======================================================================
+--- @since Patch 6.1.0 (2015-02-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomOut
+---
+--- Usage: C_Commentator.ZoomOut()
+---
+-- function C_Commentator.ZoomOut()
+-- end

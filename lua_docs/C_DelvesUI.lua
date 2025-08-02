@@ -1,0 +1,324 @@
+--[=[
+-- C_DelvesUI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 19
+--]=]
+
+--- @class C_DelvesUI
+--- C_DelvesUI namespace contains 19 functions
+local C_DelvesUI = {}
+
+--[=[
+-- C_DelvesUI Functions:
+-- - C_DelvesUI.GetCompanionInfoForActivePlayer
+-- - C_DelvesUI.GetCreatureDisplayInfoForCompanion
+-- - C_DelvesUI.GetCurioLink
+-- - C_DelvesUI.GetCurioNodeForCompanion
+-- - C_DelvesUI.GetCurioRarityByTraitCondAccountElementID
+-- - C_DelvesUI.GetCurrentDelvesSeasonNumber
+-- - C_DelvesUI.GetDelvesAffixSpellsForSeason
+-- - C_DelvesUI.GetDelvesFactionForSeason
+-- - C_DelvesUI.GetDelvesMinRequiredLevel
+-- - C_DelvesUI.GetFactionForCompanion
+-- - C_DelvesUI.GetModelSceneForCompanion
+-- - C_DelvesUI.GetRoleNodeForCompanion
+-- - C_DelvesUI.GetRoleSubtreeForCompanion
+-- - C_DelvesUI.GetTraitTreeForCompanion
+-- - C_DelvesUI.GetUnseenCuriosBySlotType
+-- - C_DelvesUI.HasActiveDelve
+-- - C_DelvesUI.IsEligibleForActiveDelveRewards
+-- - C_DelvesUI.RequestPartyEligibilityForDelveTiers
+-- - C_DelvesUI.SaveSeenCuriosBySlotType
+--]=]
+
+---======================================================================
+--- C_DelvesUI.GetCompanionInfoForActivePlayer
+---======================================================================
+--- Returns:
+--- @return number playerCompanionInfoID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCompanionInfoForActivePlayer
+---
+--- Usage: playerCompanionInfoID = C_DelvesUI.GetCompanionInfoForActivePlayer()
+---
+-- function C_DelvesUI.GetCompanionInfoForActivePlayer()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetCreatureDisplayInfoForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+---
+--- Returns:
+--- @return number creatureDisplayInfoID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCreatureDisplayInfoForCompanion
+---
+--- Usage: creatureDisplayInfoID = C_DelvesUI.GetCreatureDisplayInfoForCompanion([companionID])
+---
+-- function C_DelvesUI.GetCreatureDisplayInfoForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetCurioLink
+---======================================================================
+--- Given the spell ID for an owned curio and its rarity, return a spell link style hyperlink for the curio spell, since they aren't items when learned
+---
+--- Arguments:
+--- @param spellID number
+--- @param rarity Enum.CurioRarity
+---
+--- Returns:
+--- @return string curioLink
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioLink
+---
+--- Usage: curioLink = C_DelvesUI.GetCurioLink(spellID, rarity)
+---
+-- function C_DelvesUI.GetCurioLink()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetCurioNodeForCompanion
+---======================================================================
+--- Arguments:
+--- @param curioType Enum.CurioType
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioNodeForCompanion
+---
+--- Usage: nodeID = C_DelvesUI.GetCurioNodeForCompanion(curioType [, companionID])
+---
+-- function C_DelvesUI.GetCurioNodeForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetCurioRarityByTraitCondAccountElementID
+---======================================================================
+--- Arguments:
+--- @param traitCondAccountElementID number
+---
+--- Returns:
+--- @return Enum.CurioRarity rarity
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioRarityByTraitCondAccountElementID
+---
+--- Usage: rarity = C_DelvesUI.GetCurioRarityByTraitCondAccountElementID(traitCondAccountElementID)
+---
+-- function C_DelvesUI.GetCurioRarityByTraitCondAccountElementID()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetCurrentDelvesSeasonNumber
+---======================================================================
+--- Returns:
+--- @return number seasonNumber
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurrentDelvesSeasonNumber
+---
+--- Usage: seasonNumber = C_DelvesUI.GetCurrentDelvesSeasonNumber()
+---
+-- function C_DelvesUI.GetCurrentDelvesSeasonNumber()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetDelvesAffixSpellsForSeason
+---======================================================================
+--- Returns:
+--- @return number affixSpellIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetDelvesAffixSpellsForSeason
+---
+--- Usage: affixSpellIDs = C_DelvesUI.GetDelvesAffixSpellsForSeason()
+---
+-- function C_DelvesUI.GetDelvesAffixSpellsForSeason()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetDelvesFactionForSeason
+---======================================================================
+--- Returns:
+--- @return number factionID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetDelvesFactionForSeason
+---
+--- Usage: factionID = C_DelvesUI.GetDelvesFactionForSeason()
+---
+-- function C_DelvesUI.GetDelvesFactionForSeason()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetDelvesMinRequiredLevel
+---======================================================================
+--- Players must be at or above the min level + offset to enter Delves. This function returns that min level.
+---
+--- Returns:
+--- @return number minRequiredLevel ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetDelvesMinRequiredLevel
+---
+--- Usage: minRequiredLevel = C_DelvesUI.GetDelvesMinRequiredLevel()
+---
+-- function C_DelvesUI.GetDelvesMinRequiredLevel()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetFactionForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+---
+--- Returns:
+--- @return number factionID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetFactionForCompanion
+---
+--- Usage: factionID = C_DelvesUI.GetFactionForCompanion([companionID])
+---
+-- function C_DelvesUI.GetFactionForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetModelSceneForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+---
+--- Returns:
+--- @return number modelSceneID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetModelSceneForCompanion
+---
+--- Usage: modelSceneID = C_DelvesUI.GetModelSceneForCompanion([companionID])
+---
+-- function C_DelvesUI.GetModelSceneForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetRoleNodeForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetRoleNodeForCompanion
+---
+--- Usage: nodeID = C_DelvesUI.GetRoleNodeForCompanion([companionID])
+---
+-- function C_DelvesUI.GetRoleNodeForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetRoleSubtreeForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+--- @param roleType Enum.CompanionRoleType
+---
+--- Returns:
+--- @return number subTreeID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetRoleSubtreeForCompanion
+---
+--- Usage: subTreeID = C_DelvesUI.GetRoleSubtreeForCompanion(companionID?, roleType)
+---
+-- function C_DelvesUI.GetRoleSubtreeForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetTraitTreeForCompanion
+---======================================================================
+--- Arguments:
+--- @param companionID number ?
+---
+--- Returns:
+--- @return number treeID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetTraitTreeForCompanion
+---
+--- Usage: treeID = C_DelvesUI.GetTraitTreeForCompanion([companionID])
+---
+-- function C_DelvesUI.GetTraitTreeForCompanion()
+-- end
+
+---======================================================================
+--- C_DelvesUI.GetUnseenCuriosBySlotType
+---======================================================================
+--- Arguments:
+--- @param slotType Enum.CompanionConfigSlotTypes
+---
+--- Returns:
+--- @return number unseenCurioNodeIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetUnseenCuriosBySlotType
+---
+--- Usage: unseenCurioNodeIDs = C_DelvesUI.GetUnseenCuriosBySlotType(slotType, ownedCurioNodeIDs)
+---
+-- function C_DelvesUI.GetUnseenCuriosBySlotType()
+-- end
+
+---======================================================================
+--- C_DelvesUI.HasActiveDelve
+---======================================================================
+--- Arguments:
+--- @param mapID number ?
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.HasActiveDelve
+---
+--- Usage: result = C_DelvesUI.HasActiveDelve([mapID])
+---
+-- function C_DelvesUI.HasActiveDelve()
+-- end
+
+---======================================================================
+--- C_DelvesUI.IsEligibleForActiveDelveRewards
+---======================================================================
+--- Arguments:
+--- @param unit string : UnitToken
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.IsEligibleForActiveDelveRewards
+---
+--- Usage: result = C_DelvesUI.IsEligibleForActiveDelveRewards(unit)
+---
+-- function C_DelvesUI.IsEligibleForActiveDelveRewards()
+-- end
+
+---======================================================================
+--- C_DelvesUI.RequestPartyEligibilityForDelveTiers
+---======================================================================
+--- Queries private party members to see what level they have unlocked for the Delve. Ineligible members are added to the tooltip of dropdown entries.
+---
+--- Arguments:
+--- @param gossipOption number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.RequestPartyEligibilityForDelveTiers
+---
+--- Usage: C_DelvesUI.RequestPartyEligibilityForDelveTiers(gossipOption)
+---
+-- function C_DelvesUI.RequestPartyEligibilityForDelveTiers()
+-- end
+
+---======================================================================
+--- C_DelvesUI.SaveSeenCuriosBySlotType
+---======================================================================
+--- Arguments:
+--- @param slotType Enum.CompanionConfigSlotTypes
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DelvesUI.SaveSeenCuriosBySlotType
+---
+--- Usage: C_DelvesUI.SaveSeenCuriosBySlotType(slotType, ownedCurioNodeIDs)
+---
+-- function C_DelvesUI.SaveSeenCuriosBySlotType()
+-- end

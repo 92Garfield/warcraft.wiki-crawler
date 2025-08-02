@@ -1,0 +1,211 @@
+--[=[
+-- C_AddOnProfiler API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_AddOnProfiler
+--- C_AddOnProfiler namespace contains 10 functions
+local C_AddOnProfiler = {}
+
+--[=[
+-- C_AddOnProfiler Functions:
+-- - C_AddOnProfiler.AddMeasuredCallEvent
+-- - C_AddOnProfiler.AddPerformanceMessageShown
+-- - C_AddOnProfiler.CheckForPerformanceMessage
+-- - C_AddOnProfiler.GetAddOnMetric
+-- - C_AddOnProfiler.GetApplicationMetric
+-- - C_AddOnProfiler.GetOverallMetric
+-- - C_AddOnProfiler.GetTicksPerSecond
+-- - C_AddOnProfiler.GetTopKAddOnsForMetric
+-- - C_AddOnProfiler.IsEnabled
+-- - C_AddOnProfiler.MeasureCall
+--]=]
+
+---======================================================================
+--- C_AddOnProfiler.AddMeasuredCallEvent
+---======================================================================
+--- Adds a measured event to any ongoing measured calls. If no such calls are currently taking place, this function does nothing.
+---
+--- Arguments:
+--- @param name stringView - User-defined string describing the measured event. This should be kept under 48 bytes to avoid memory allocations.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.AddMeasuredCallEvent
+---
+--- Usage: C_AddOnProfiler.AddMeasuredCallEvent(name)
+---
+-- function C_AddOnProfiler.AddMeasuredCallEvent()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.AddPerformanceMessageShown
+---======================================================================
+--- Internal API for telemetry.
+---
+--- Arguments:
+--- @param msg AddOnPerformanceMessage
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.AddPerformanceMessageShown
+---
+--- Usage: C_AddOnProfiler.AddPerformanceMessageShown(msg)
+---
+-- function C_AddOnProfiler.AddPerformanceMessageShown()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.CheckForPerformanceMessage
+---======================================================================
+--- Optimized check for determining if AddOns are severely impacting UI performance.
+---
+--- Returns:
+--- @return AddOnPerformanceMessage msg
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.CheckForPerformanceMessage
+---
+--- Usage: msg = C_AddOnProfiler.CheckForPerformanceMessage()
+---
+-- function C_AddOnProfiler.CheckForPerformanceMessage()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.GetAddOnMetric
+---======================================================================
+--- Returns an addon specific performance metric
+---
+--- Arguments:
+--- @param name string - The name of the addon to be queried. Blizzard addons cannot be queried.
+--- @param metric number - Enum.AddOnProfilerMetric
+---
+--- Returns:
+--- @return number result - The value corresponding to the requested metric. Time values are measured in milliseconds.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetAddOnMetric
+---
+--- Usage: result = C_AddOnProfiler.GetAddOnMetric(name, metric)
+---
+--- See also:
+--- - C_AddOnProfiler.GetOverallMetric
+--- - C_AddOnProfiler.GetApplicationMetric
+--- - C_AddOnProfiler.GetTopKAddOnsForMetric
+---
+-- function C_AddOnProfiler.GetAddOnMetric()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.GetApplicationMetric
+---======================================================================
+--- Overall profiling data for the entire application (not just the UI)
+---
+--- Arguments:
+--- @param metric number : Enum.AddOnProfilerMetric
+---
+--- Returns:
+--- @return number result - The value corresponding to the requested metric. Time values are measured in milliseconds.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetApplicationMetric
+---
+--- Usage: result = C_AddOnProfiler.GetApplicationMetric(metric)
+---
+--- See also:
+--- - C_AddOnProfiler.GetAddOnMetric
+--- - C_AddOnProfiler.GetOverallMetric
+--- - C_AddOnProfiler.GetTopKAddOnsForMetric
+---
+-- function C_AddOnProfiler.GetApplicationMetric()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.GetOverallMetric
+---======================================================================
+--- Returns the specified performance metric, measured across all user-installed addons.
+---
+--- Arguments:
+--- @param metric number : Enum.AddOnProfilerMetric
+---
+--- Returns:
+--- @return number result - The value corresponding to the requested metric. Time values are measured in milliseconds.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetOverallMetric
+---
+--- Usage: result = C_AddOnProfiler.GetOverallMetric(metric)
+---
+--- See also:
+--- - C_AddOnProfiler.GetAddOnMetric
+--- - C_AddOnProfiler.GetApplicationMetric
+--- - C_AddOnProfiler.GetTopKAddOnsForMetric
+---
+-- function C_AddOnProfiler.GetOverallMetric()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.GetTicksPerSecond
+---======================================================================
+--- Returns the number of profiling clock ticks that occur within a single real-time second.
+---
+--- Returns:
+--- @return number frequency : BigInteger
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetTicksPerSecond
+---
+--- Usage: frequency = C_AddOnProfiler.GetTicksPerSecond()
+---
+-- function C_AddOnProfiler.GetTicksPerSecond()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.GetTopKAddOnsForMetric
+---======================================================================
+--- Get the top K addons for a given metric
+---
+--- Arguments:
+--- @param metric number - Enum.AddOnProfilerMetric
+--- @param k number - number of results to return
+---
+--- Returns:
+--- @return AddOnProfilerResult results [] - Returns the top K addons for a given metric.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetTopKAddOnsForMetric
+---
+--- Usage: result = C_AddOnProfiler.GetTopKAddOnsForMetric(metric, k)
+---
+--- See also:
+--- - C_AddOnProfiler.GetAddOnMetric
+--- - C_AddOnProfiler.GetOverallMetric
+--- - C_AddOnProfiler.GetApplicationMetric
+---
+-- function C_AddOnProfiler.GetTopKAddOnsForMetric()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.IsEnabled
+---======================================================================
+--- Returns whether profiling is enabled. Currently this is always true.
+---
+--- Returns:
+--- @return boolean enabled - True if profiling is enabled. Currently this is always true.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.IsEnabled
+---
+--- Usage: enabled = C_AddOnProfiler.IsEnabled(name, metric)
+---
+-- function C_AddOnProfiler.IsEnabled()
+-- end
+
+---======================================================================
+--- C_AddOnProfiler.MeasureCall
+---======================================================================
+--- Performs a profiled measurement of a single function call with any supplied arguments.
+---
+--- Arguments:
+--- @param func table : LuaValueVariant
+---
+--- Returns:
+--- @return AddOnProfilerCallResults results
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.MeasureCall
+---
+--- Usage: results, unpackedPrimitiveType = C_AddOnProfiler.MeasureCall(func, unpackedPrimitiveType)
+---
+-- function C_AddOnProfiler.MeasureCall()
+-- end

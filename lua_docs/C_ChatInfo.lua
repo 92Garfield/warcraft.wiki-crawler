@@ -1,0 +1,848 @@
+--[=[
+-- C_ChatInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 41
+--]=]
+
+--- @class C_ChatInfo
+--- C_ChatInfo namespace contains 41 functions
+local C_ChatInfo = {}
+
+--[=[
+-- C_ChatInfo Functions:
+-- - C_ChatInfo.CanPlayerSpeakLanguage
+-- - C_ChatInfo.DropCautionaryChatMessage
+-- - C_ChatInfo.GetChannelInfoFromIdentifier
+-- - C_ChatInfo.GetChannelRosterInfo
+-- - C_ChatInfo.GetChannelRuleset
+-- - C_ChatInfo.GetChannelRulesetForChannelID
+-- - C_ChatInfo.GetChannelShortcut
+-- - C_ChatInfo.GetChannelShortcutForChannelID
+-- - C_ChatInfo.GetChatLineSenderGUID
+-- - C_ChatInfo.GetChatLineSenderName
+-- - C_ChatInfo.GetChatLineText
+-- - C_ChatInfo.GetChatTypeName
+-- - C_ChatInfo.GetClubStreamIDs
+-- - C_ChatInfo.GetColorForChatType
+-- - C_ChatInfo.GetGeneralChannelID
+-- - C_ChatInfo.GetGeneralChannelLocalID
+-- - C_ChatInfo.GetMentorChannelID
+-- - C_ChatInfo.GetNumActiveChannels
+-- - C_ChatInfo.GetNumReservedChatWindows
+-- - C_ChatInfo.GetRegisteredAddonMessagePrefixes
+-- - C_ChatInfo.IsAddonMessagePrefixRegistered
+-- - C_ChatInfo.IsChannelRegional
+-- - C_ChatInfo.IsChannelRegionalForChannelID
+-- - C_ChatInfo.IsChatLineCensored
+-- - C_ChatInfo.IsLoggingChat
+-- - C_ChatInfo.IsLoggingCombat
+-- - C_ChatInfo.IsPartyChannelType
+-- - C_ChatInfo.IsRegionalServiceAvailable
+-- - C_ChatInfo.IsTimerunningPlayer
+-- - C_ChatInfo.IsValidChatLine
+-- - C_ChatInfo.IsValidCombatFilterName
+-- - C_ChatInfo.RegisterAddonMessagePrefix
+-- - C_ChatInfo.ReplaceIconAndGroupExpressions
+-- - C_ChatInfo.RequestCanLocalWhisperTarget
+-- - C_ChatInfo.ResetDefaultZoneChannels
+-- - C_ChatInfo.SendAddonMessage
+-- - C_ChatInfo.SendAddonMessageLogged
+-- - C_ChatInfo.SendCautionaryChatMessage
+-- - C_ChatInfo.SendChatMessage
+-- - C_ChatInfo.SwapChatChannelsByChannelIndex
+-- - C_ChatInfo.UncensorChatLine
+--]=]
+
+---======================================================================
+--- C_ChatInfo.CanPlayerSpeakLanguage
+---======================================================================
+--- Arguments:
+--- @param languageId number
+---
+--- Returns:
+--- @return boolean canSpeakLanguage
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage
+---
+--- Usage: canSpeakLanguage = C_ChatInfo.CanPlayerSpeakLanguage(languageId)
+---
+-- function C_ChatInfo.CanPlayerSpeakLanguage()
+-- end
+
+---======================================================================
+--- C_ChatInfo.DropCautionaryChatMessage
+---======================================================================
+--- Arguments:
+--- @param confirmNumber number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.DropCautionaryChatMessage
+---
+--- Usage: C_ChatInfo.DropCautionaryChatMessage(confirmNumber)
+---
+-- function C_ChatInfo.DropCautionaryChatMessage()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelInfoFromIdentifier
+---======================================================================
+--- Arguments:
+--- @param channelIdentifier string
+---
+--- Returns:
+--- @return ChatChannelInfo info ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier
+---
+--- Usage: info = C_ChatInfo.GetChannelInfoFromIdentifier(channelIdentifier)
+---
+-- function C_ChatInfo.GetChannelInfoFromIdentifier()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelRosterInfo
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+--- @param rosterIndex number
+---
+--- Returns:
+--- @return string name
+--- @return boolean owner
+--- @return boolean moderator
+--- @return string guid
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_ChatInfo.GetChannelRosterInfo.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRosterInfo
+---
+--- Usage: name, owner, moderator, guid = C_ChatInfo.GetChannelRosterInfo(channelIndex, rosterIndex)
+---
+-- function C_ChatInfo.GetChannelRosterInfo()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelRuleset
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return Enum.ChatChannelRuleset ruleset
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRuleset
+---
+--- Usage: ruleset = C_ChatInfo.GetChannelRuleset(channelIndex)
+        = C_ChatInfo.GetChannelRulesetForChannelID(channelID)
+---
+-- function C_ChatInfo.GetChannelRuleset()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelRulesetForChannelID
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return Enum.ChatChannelRuleset ruleset
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRulesetForChannelID
+---
+--- Usage: ruleset = C_ChatInfo.GetChannelRuleset(channelIndex)
+        = C_ChatInfo.GetChannelRulesetForChannelID(channelID)
+---
+-- function C_ChatInfo.GetChannelRulesetForChannelID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelShortcut
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return string shortcut
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcut
+---
+--- Usage: shortcut = C_ChatInfo.GetChannelShortcut(channelIndex)
+         = C_ChatInfo.GetChannelShortcutForChannelID(channelID)
+---
+-- function C_ChatInfo.GetChannelShortcut()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChannelShortcutForChannelID
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return string shortcut
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcutForChannelID
+---
+--- Usage: shortcut = C_ChatInfo.GetChannelShortcut(channelIndex)
+         = C_ChatInfo.GetChannelShortcutForChannelID(channelID)
+---
+-- function C_ChatInfo.GetChannelShortcutForChannelID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChatLineSenderGUID
+---======================================================================
+--- Arguments:
+--- @param chatLine number
+---
+--- Returns:
+--- @return string guid : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderGUID
+---
+--- Usage: guid = C_ChatInfo.GetChatLineSenderGUID(chatLine)
+---
+-- function C_ChatInfo.GetChatLineSenderGUID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChatLineSenderName
+---======================================================================
+--- Arguments:
+--- @param chatLine number
+---
+--- Returns:
+--- @return string name
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderName
+---
+--- Usage: name = C_ChatInfo.GetChatLineSenderName(chatLine)
+---
+-- function C_ChatInfo.GetChatLineSenderName()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChatLineText
+---======================================================================
+--- Arguments:
+--- @param chatLine number
+---
+--- Returns:
+--- @return string text
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineText
+---
+--- Usage: text = C_ChatInfo.GetChatLineText(chatLine)
+---
+-- function C_ChatInfo.GetChatLineText()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetChatTypeName
+---======================================================================
+--- Arguments:
+--- @param typeID number
+---
+--- Returns:
+--- @return string name ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatTypeName
+---
+--- Usage: name = C_ChatInfo.GetChatTypeName(typeID)
+---
+-- function C_ChatInfo.GetChatTypeName()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetClubStreamIDs
+---======================================================================
+--- Arguments:
+--- @param clubID string
+---
+--- Returns:
+--- @return string ids []
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetClubStreamIDs
+---
+--- Usage: ids = C_ChatInfo.GetClubStreamIDs(clubID)
+---
+-- function C_ChatInfo.GetClubStreamIDs()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetColorForChatType
+---======================================================================
+--- Arguments:
+--- @param chatType string
+---
+--- Returns:
+--- @return colorRGB color ?🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetColorForChatType
+---
+--- Usage: color = C_ChatInfo.GetColorForChatType(chatType)
+---
+-- function C_ChatInfo.GetColorForChatType()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetGeneralChannelID
+---======================================================================
+--- Returns:
+--- @return number channelID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelID
+---
+--- Usage: channelID = C_ChatInfo.GetGeneralChannelID()
+---
+-- function C_ChatInfo.GetGeneralChannelID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetGeneralChannelLocalID
+---======================================================================
+--- Returns:
+--- @return number localID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelLocalID
+---
+--- Usage: localID = C_ChatInfo.GetGeneralChannelLocalID()
+---
+-- function C_ChatInfo.GetGeneralChannelLocalID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetMentorChannelID
+---======================================================================
+--- Returns:
+--- @return number channelID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetMentorChannelID
+---
+--- Usage: channelID = C_ChatInfo.GetMentorChannelID()
+---
+-- function C_ChatInfo.GetMentorChannelID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetNumActiveChannels
+---======================================================================
+--- Returns:
+--- @return number numChannels
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumActiveChannels
+---
+--- Usage: numChannels = C_ChatInfo.GetNumActiveChannels()
+---
+-- function C_ChatInfo.GetNumActiveChannels()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetNumReservedChatWindows
+---======================================================================
+--- Returns:
+--- @return number numReserved
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumReservedChatWindows
+---
+--- Usage: numReserved = C_ChatInfo.GetNumReservedChatWindows()
+---
+-- function C_ChatInfo.GetNumReservedChatWindows()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsChannelRegional
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return boolean isRegional
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegional
+---
+--- Usage: isRegional = C_ChatInfo.IsChannelRegional(channelIndex)
+           = C_ChatInfo.IsChannelRegionalForChannelID(channelID)
+---
+-- function C_ChatInfo.IsChannelRegional()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsChannelRegionalForChannelID
+---======================================================================
+--- Arguments:
+--- @param channelIndex number
+---
+--- Returns:
+--- @return boolean isRegional
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegionalForChannelID
+---
+--- Usage: isRegional = C_ChatInfo.IsChannelRegional(channelIndex)
+           = C_ChatInfo.IsChannelRegionalForChannelID(channelID)
+---
+-- function C_ChatInfo.IsChannelRegionalForChannelID()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsChatLineCensored
+---======================================================================
+--- Arguments:
+--- @param chatLine number
+---
+--- Returns:
+--- @return boolean isCensored
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChatLineCensored
+---
+--- Usage: isCensored = C_ChatInfo.IsChatLineCensored(chatLine)
+---
+-- function C_ChatInfo.IsChatLineCensored()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsLoggingChat
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingChat
+---
+--- Usage: enabled = C_ChatInfo.IsLoggingChat()
+---
+-- function C_ChatInfo.IsLoggingChat()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsLoggingCombat
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+--- @return boolean advanced
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingCombat
+---
+--- Usage: enabled, advanced = C_ChatInfo.IsLoggingCombat()
+---
+-- function C_ChatInfo.IsLoggingCombat()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsPartyChannelType
+---======================================================================
+--- Arguments:
+--- @param channelType  Enum.ChatChannelType
+---
+--- Returns:
+--- @return boolean isPartyChannelType
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsPartyChannelType
+---
+--- Usage: isPartyChannelType = C_ChatInfo.IsPartyChannelType(channelType)
+---
+-- function C_ChatInfo.IsPartyChannelType()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsRegionalServiceAvailable
+---======================================================================
+--- Returns:
+--- @return boolean available
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsRegionalServiceAvailable
+---
+--- Usage: available = C_ChatInfo.IsRegionalServiceAvailable()
+---
+-- function C_ChatInfo.IsRegionalServiceAvailable()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsTimerunningPlayer
+---======================================================================
+--- Arguments:
+--- @param playerGUID string : WOWGUID
+---
+--- Returns:
+--- @return boolean isTimerunning
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsTimerunningPlayer
+---
+--- Usage: isTimerunning = C_ChatInfo.IsTimerunningPlayer(playerGUID)
+---
+-- function C_ChatInfo.IsTimerunningPlayer()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsValidChatLine
+---======================================================================
+--- Arguments:
+--- @param chatLine number ?
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidChatLine
+---
+--- Usage: isValid = C_ChatInfo.IsValidChatLine([chatLine])
+---
+-- function C_ChatInfo.IsValidChatLine()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsValidCombatFilterName
+---======================================================================
+--- Arguments:
+--- @param name string
+---
+--- Returns:
+--- @return boolean isApproved
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidCombatFilterName
+---
+--- Usage: isApproved = C_ChatInfo.IsValidCombatFilterName(name)
+---
+-- function C_ChatInfo.IsValidCombatFilterName()
+-- end
+
+---======================================================================
+--- C_ChatInfo.ReplaceIconAndGroupExpressions
+---======================================================================
+--- Replaces icon and group tags like {rt4}, {diamond} and {g1}.
+---
+--- Arguments:
+--- @param input string
+--- @param noIconReplacement boolean ?
+--- @param noGroupReplacement boolean ?
+---
+--- Returns:
+--- @return string output
+---
+--- @since Patch 8.1.5 (2019-03-12): Added. Replaces the FrameXML version [1].
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ReplaceIconAndGroupExpressions
+---
+--- Usage: output = C_ChatInfo.ReplaceIconAndGroupExpressions(input [, noIconReplacement, noGroupReplacement])
+---
+-- function C_ChatInfo.ReplaceIconAndGroupExpressions()
+-- end
+
+---======================================================================
+--- C_ChatInfo.RequestCanLocalWhisperTarget
+---======================================================================
+--- Arguments:
+--- @param whisperTarget string : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget
+---
+--- Usage: C_ChatInfo.RequestCanLocalWhisperTarget(whisperTarget)
+---
+-- function C_ChatInfo.RequestCanLocalWhisperTarget()
+-- end
+
+---======================================================================
+--- C_ChatInfo.ResetDefaultZoneChannels
+---======================================================================
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ResetDefaultZoneChannels
+---
+--- Usage: C_ChatInfo.ResetDefaultZoneChannels()
+---
+-- function C_ChatInfo.ResetDefaultZoneChannels()
+-- end
+
+---======================================================================
+--- C_ChatInfo.SendCautionaryChatMessage
+---======================================================================
+--- Arguments:
+--- @param confirmNumber number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendCautionaryChatMessage
+---
+--- Usage: C_ChatInfo.SendCautionaryChatMessage(confirmNumber)
+---
+-- function C_ChatInfo.SendCautionaryChatMessage()
+-- end
+
+---======================================================================
+--- C_ChatInfo.SendChatMessage
+---======================================================================
+--- Arguments:
+--- @param message string
+--- @param chatType SendChatMessageType ? - Chat type string ('SAY', 'EMOTE', etc.). Defaults to 'SAY' if not specified.
+--- @param languageID number ? - Language to send the message in.
+--- @param target string ? - Name of the player to send a message to. Only applies to chat types that support targeted messages.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendChatMessage
+---
+--- Usage: C_ChatInfo.SendChatMessage(message [, chatType [, languageID [, target]]])
+---
+-- function C_ChatInfo.SendChatMessage()
+-- end
+
+---======================================================================
+--- C_ChatInfo.SwapChatChannelsByChannelIndex
+---======================================================================
+--- Arguments:
+--- @param firstChannelIndex number
+--- @param secondChannelIndex number
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex
+---
+--- Usage: C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex)
+---
+-- function C_ChatInfo.SwapChatChannelsByChannelIndex()
+-- end
+
+---======================================================================
+--- C_ChatInfo.UncensorChatLine
+---======================================================================
+--- Arguments:
+--- @param chatLine number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.UncensorChatLine
+---
+--- Usage: C_ChatInfo.UncensorChatLine(chatLine)
+---
+-- function C_ChatInfo.UncensorChatLine()
+-- end
+
+---======================================================================
+--- C_ChatInfo.GetRegisteredAddonMessagePrefixes
+---======================================================================
+--- Returns addon message prefixes the client is currently registered to receive.
+---
+--- Returns:
+--- @return string registeredPrefixes []
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_ChatInfo.GetRegisteredAddonMessagePrefixes()
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes
+---
+--- Usage: registeredPrefixes = C_ChatInfo.GetRegisteredAddonMessagePrefixes()
+---
+--- See also:
+--- - C_ChatInfo.IsAddonMessagePrefixRegistered
+--- - C ChatInfo.RegisterAddonMessagePrefix
+---
+-- function C_ChatInfo.GetRegisteredAddonMessagePrefixes()
+-- end
+
+---======================================================================
+--- C_ChatInfo.IsAddonMessagePrefixRegistered
+---======================================================================
+--- Returns whether the prefix is registered.
+---
+--- Arguments:
+--- @param prefix string
+---
+--- Returns:
+--- @return boolean isRegistered
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_ChatInfo.IsAddonMessagePrefixRegistered
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered
+---
+--- Usage: isRegistered = C_ChatInfo.IsAddonMessagePrefixRegistered(prefix)
+---
+--- See also:
+--- - C_ChatInfo.GetRegisteredAddonMessagePrefixes
+--- - C ChatInfo.RegisterAddonMessagePrefix
+---
+-- function C_ChatInfo.IsAddonMessagePrefixRegistered()
+-- end
+
+---======================================================================
+--- C_ChatInfo.RegisterAddonMessagePrefix
+---======================================================================
+--- Registers an addon message prefix to receive messages for that prefix.
+---
+--- Arguments:
+--- @param prefix string - The message prefix to register for delivery, at most 16 characters.
+---
+--- Returns:
+--- @return Enum.RegisterAddonMessagePrefixResult result - Result code indicating if the prefix was registered successfully.
+---
+--- @since Patch 10.2.7 (2024-05-07): Now returns a result code, rather than a boolean.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix
+---
+--- Usage: result = C_ChatInfo.RegisterAddonMessagePrefix(prefix)
+---
+--- See also:
+--- - C_ChatInfo.GetRegisteredAddonMessagePrefixes
+--- - C_ChatInfo.IsAddonMessagePrefixRegistered
+--- - C_ChatInfo.SendAddonMessage
+---
+-- function C_ChatInfo.RegisterAddonMessagePrefix()
+-- end
+
+---======================================================================
+--- C_ChatInfo.SendAddonMessage
+---======================================================================
+--- Sends a message over an addon comm channel.
+---
+--- Arguments:
+--- @param prefix string - Message prefix, can be used as your addon identifier; at most 16 characters.
+--- @param message string - Text to send, at most 255 characters. All characters (decimal ID 1-255) are permissible except NULL (ASCII 0).
+--- @param chatType string ? = "PARTY" - The addon channel to send to.
+--- @param target string |number? - The player name or custom channel number receiving the message for "WHISPER" or "CHANNEL" chatTypes.
+---
+--- Returns:
+--- @return Enum.SendAddonMessageResult result - Result code indicating if the message has been enqueued by the API for submission. This does not mean that the message has yet been sent, and may still be subject to any server-side throttling.
+---
+--- @since Patch 10.2.7 (2024-05-07): All chat types are now subject to a per-prefix throttle. Now returns a result code, rather than a boolean.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessage
+---
+--- Usage: result = C_ChatInfo.SendAddonMessage(prefix, message [, chatType [, target]])
+       = C_ChatInfo.SendAddonMessageLogged
+---
+--- Examples:
+--- Example 1:
+---   local prefix = "SomePrefix123"
+---   local playerName = UnitName("player")
+---   
+---   local function OnEvent(self, event, ...)
+---   	if event == "CHAT_MSG_ADDON" then
+---   		print(event, ...)
+---   	elseif event == "PLAYER_ENTERING_WORLD" then
+---   		local isLogin, isReload = ...
+---   		if isLogin or isReload then
+---   			C_ChatInfo.SendAddonMessage(prefix, "You can't see this message", "WHISPER", playerName)
+---   			C_ChatInfo.RegisterAddonMessagePrefix(prefix)
+---   			C_ChatInfo.SendAddonMessage(prefix, "Hello world!", "WHISPER", playerName)
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("CHAT_MSG_ADDON")
+---   f:RegisterEvent("PLAYER_ENTERING_WORLD")
+---   f:SetScript("OnEvent", OnEvent)
+--- Example 2:
+---   -- Dependencies: AceAddon-3.0, AceComm-3.0, LibSerialize, LibDeflate
+---   MyAddon = LibStub("AceAddon-3.0"):NewAddon("MyAddon", "AceComm-3.0")
+---   local LibSerialize = LibStub("LibSerialize")
+---   local LibDeflate = LibStub("LibDeflate")
+---   
+---   function MyAddon:OnEnable()
+---       self:RegisterComm("MyPrefix")
+---   end
+---   
+---   -- With compression (recommended):
+---   function MyAddon:Transmit(data)
+---       local serialized = LibSerialize:Serialize(data)
+---       local compressed = LibDeflate:CompressDeflate(serialized)
+---       local encoded = LibDeflate:EncodeForWoWAddonChannel(compressed)
+---       self:SendCommMessage("MyPrefix", encoded, "WHISPER", UnitName("player"))
+---   end
+---   
+---   function MyAddon:OnCommReceived(prefix, payload, distribution, sender)
+---       local decoded = LibDeflate:DecodeForWoWAddonChannel(payload)
+---       if not decoded then return end
+---       local decompressed = LibDeflate:DecompressDeflate(decoded)
+---       if not decompressed then return end
+---       local success, data = LibSerialize:Deserialize(decompressed)
+---       if not success then return end
+---   
+---       -- Handle `data`
+---   end
+---
+--- See also:
+--- - C_ChatInfo.GetRegisteredAddonMessagePrefixes
+--- - C_ChatInfo.IsAddonMessagePrefixRegistered
+--- - BNSendGameData
+---
+-- function C_ChatInfo.SendAddonMessage()
+-- end
+
+---======================================================================
+--- C_ChatInfo.SendAddonMessageLogged
+---======================================================================
+--- Sends a message over an addon comm channel.
+---
+--- Arguments:
+--- @param prefix string - Message prefix, can be used as your addon identifier; at most 16 characters.
+--- @param message string - Text to send, at most 255 characters. All characters (decimal ID 1-255) are permissible except NULL (ASCII 0).
+--- @param chatType string ? = "PARTY" - The addon channel to send to.
+--- @param target string |number? - The player name or custom channel number receiving the message for "WHISPER" or "CHANNEL" chatTypes.
+---
+--- Returns:
+--- @return Enum.SendAddonMessageResult result - Result code indicating if the message has been enqueued by the API for submission. This does not mean that the message has yet been sent, and may still be subject to any server-side throttling.
+---
+--- @since Patch 10.2.7 (2024-05-07): All chat types are now subject to a per-prefix throttle. Now returns a result code, rather than a boolean.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessageLogged
+---
+--- Usage: result = C_ChatInfo.SendAddonMessage(prefix, message [, chatType [, target]])
+       = C_ChatInfo.SendAddonMessageLogged
+---
+--- Examples:
+--- Example 1:
+---   local prefix = "SomePrefix123"
+---   local playerName = UnitName("player")
+---   
+---   local function OnEvent(self, event, ...)
+---   	if event == "CHAT_MSG_ADDON" then
+---   		print(event, ...)
+---   	elseif event == "PLAYER_ENTERING_WORLD" then
+---   		local isLogin, isReload = ...
+---   		if isLogin or isReload then
+---   			C_ChatInfo.SendAddonMessage(prefix, "You can't see this message", "WHISPER", playerName)
+---   			C_ChatInfo.RegisterAddonMessagePrefix(prefix)
+---   			C_ChatInfo.SendAddonMessage(prefix, "Hello world!", "WHISPER", playerName)
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("CHAT_MSG_ADDON")
+---   f:RegisterEvent("PLAYER_ENTERING_WORLD")
+---   f:SetScript("OnEvent", OnEvent)
+--- Example 2:
+---   -- Dependencies: AceAddon-3.0, AceComm-3.0, LibSerialize, LibDeflate
+---   MyAddon = LibStub("AceAddon-3.0"):NewAddon("MyAddon", "AceComm-3.0")
+---   local LibSerialize = LibStub("LibSerialize")
+---   local LibDeflate = LibStub("LibDeflate")
+---   
+---   function MyAddon:OnEnable()
+---       self:RegisterComm("MyPrefix")
+---   end
+---   
+---   -- With compression (recommended):
+---   function MyAddon:Transmit(data)
+---       local serialized = LibSerialize:Serialize(data)
+---       local compressed = LibDeflate:CompressDeflate(serialized)
+---       local encoded = LibDeflate:EncodeForWoWAddonChannel(compressed)
+---       self:SendCommMessage("MyPrefix", encoded, "WHISPER", UnitName("player"))
+---   end
+---   
+---   function MyAddon:OnCommReceived(prefix, payload, distribution, sender)
+---       local decoded = LibDeflate:DecodeForWoWAddonChannel(payload)
+---       if not decoded then return end
+---       local decompressed = LibDeflate:DecompressDeflate(decoded)
+---       if not decompressed then return end
+---       local success, data = LibSerialize:Deserialize(decompressed)
+---       if not success then return end
+---   
+---       -- Handle `data`
+---   end
+---
+--- See also:
+--- - C_ChatInfo.GetRegisteredAddonMessagePrefixes
+--- - C_ChatInfo.IsAddonMessagePrefixRegistered
+--- - BNSendGameData
+---
+-- function C_ChatInfo.SendAddonMessageLogged()
+-- end

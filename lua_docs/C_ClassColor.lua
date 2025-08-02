@@ -1,0 +1,48 @@
+--[=[
+-- C_ClassColor API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 1
+--]=]
+
+--- @class C_ClassColor
+--- C_ClassColor namespace contains 1 functions
+local C_ClassColor = {}
+
+--[=[
+-- C_ClassColor Functions:
+-- - C_ClassColor.GetClassColor
+--]=]
+
+---======================================================================
+--- C_ClassColor.GetClassColor
+---======================================================================
+--- Returns a ColorMixin for a class.
+---
+--- Arguments:
+--- @param className string : classFilename
+---
+--- Returns:
+--- @return ColorMixin classColor 🔗 - Returns nil with invalid input.
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassColor.GetClassColor
+---
+--- Usage: classColor = C_ClassColor.GetClassColor(className)
+---
+--- Examples:
+--- Example 1:
+---   {
+---   	r = 1,
+---   	g = 1,
+---   	b = 1,
+---   	GenerateHexColor() = "ffffffff",
+---   	-- and more ColorMixin methods
+---   }
+---
+--- See also:
+--- - Class colors
+--- - GetClassColor
+---
+-- function C_ClassColor.GetClassColor()
+-- end

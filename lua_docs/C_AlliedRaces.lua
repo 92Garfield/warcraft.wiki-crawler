@@ -1,0 +1,54 @@
+--[=[
+-- C_AlliedRaces API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_AlliedRaces
+--- C_AlliedRaces namespace contains 2 functions
+local C_AlliedRaces = {}
+
+--[=[
+-- C_AlliedRaces Functions:
+-- - C_AlliedRaces.GetAllRacialAbilitiesFromID
+-- - C_AlliedRaces.GetRaceInfoByID
+--]=]
+
+---======================================================================
+--- C_AlliedRaces.GetAllRacialAbilitiesFromID
+---======================================================================
+--- Returns the racial spells from an allied race.
+---
+--- Arguments:
+--- @param raceID number
+---
+--- Returns:
+--- @return  allDisplayInfo structure - AlliedRaceRacialAbility[]
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID
+---
+--- Usage: allDisplayInfo = C_AlliedRaces.GetAllRacialAbilitiesFromID(raceID)
+---
+-- function C_AlliedRaces.GetAllRacialAbilitiesFromID()
+-- end
+
+---======================================================================
+--- C_AlliedRaces.GetRaceInfoByID
+---======================================================================
+--- Returns allied race info.
+---
+--- Arguments:
+--- @param raceID number : RaceId
+---
+--- Returns:
+--- @return AlliedRaceInfo info
+---
+--- @since Patch 9.0.2 (2020-11-17): Added achievementIds field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AlliedRaces.GetRaceInfoByID
+---
+--- Usage: info = C_AlliedRaces.GetRaceInfoByID(raceID)
+---
+-- function C_AlliedRaces.GetRaceInfoByID()
+-- end

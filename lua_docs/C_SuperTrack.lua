@@ -1,0 +1,329 @@
+--[=[
+-- C_SuperTrack API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 21
+--]=]
+
+--- @class C_SuperTrack
+--- C_SuperTrack namespace contains 21 functions
+local C_SuperTrack = {}
+
+--[=[
+-- C_SuperTrack Functions:
+-- - C_SuperTrack.ClearAllSuperTracked
+-- - C_SuperTrack.ClearSuperTrackedContent
+-- - C_SuperTrack.ClearSuperTrackedMapPin
+-- - C_SuperTrack.GetHighestPrioritySuperTrackingType
+-- - C_SuperTrack.GetNextWaypointForMap
+-- - C_SuperTrack.GetSuperTrackedContent
+-- - C_SuperTrack.GetSuperTrackedItemName
+-- - C_SuperTrack.GetSuperTrackedMapPin
+-- - C_SuperTrack.GetSuperTrackedQuestID
+-- - C_SuperTrack.GetSuperTrackedVignette
+-- - C_SuperTrack.IsSuperTrackingAnything
+-- - C_SuperTrack.IsSuperTrackingContent
+-- - C_SuperTrack.IsSuperTrackingCorpse
+-- - C_SuperTrack.IsSuperTrackingMapPin
+-- - C_SuperTrack.IsSuperTrackingQuest
+-- - C_SuperTrack.IsSuperTrackingUserWaypoint
+-- - C_SuperTrack.SetSuperTrackedContent
+-- - C_SuperTrack.SetSuperTrackedMapPin
+-- - C_SuperTrack.SetSuperTrackedQuestID
+-- - C_SuperTrack.SetSuperTrackedUserWaypoint
+-- - C_SuperTrack.SetSuperTrackedVignette
+--]=]
+
+---======================================================================
+--- C_SuperTrack.ClearAllSuperTracked
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.ClearAllSuperTracked
+---
+--- Usage: C_SuperTrack.ClearAllSuperTracked()
+---
+-- function C_SuperTrack.ClearAllSuperTracked()
+-- end
+
+---======================================================================
+--- C_SuperTrack.ClearSuperTrackedContent
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.ClearSuperTrackedContent
+---
+--- Usage: C_SuperTrack.ClearSuperTrackedContent()
+---
+-- function C_SuperTrack.ClearSuperTrackedContent()
+-- end
+
+---======================================================================
+--- C_SuperTrack.ClearSuperTrackedMapPin
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.ClearSuperTrackedMapPin
+---
+--- Usage: C_SuperTrack.ClearSuperTrackedMapPin()
+---
+-- function C_SuperTrack.ClearSuperTrackedMapPin()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetHighestPrioritySuperTrackingType
+---======================================================================
+--- Returns the type of the location currently being tracked as the highest priority, if one exists.
+---
+--- Returns:
+--- @return Enum.SuperTrackingType type ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetHighestPrioritySuperTrackingType
+---
+--- Usage: type = C_SuperTrack.GetHighestPrioritySuperTrackingType()
+---
+-- function C_SuperTrack.GetHighestPrioritySuperTrackingType()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetNextWaypointForMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return number x
+--- @return number y
+--- @return string waypointDescription
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetNextWaypointForMap
+---
+--- Usage: x, y, waypointDescription = C_SuperTrack.GetNextWaypointForMap(uiMapID)
+---
+-- function C_SuperTrack.GetNextWaypointForMap()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetSuperTrackedContent
+---======================================================================
+--- Returns:
+--- @return Enum.ContentTrackingType trackableType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedContent
+---
+--- Usage: trackableType, trackableID = C_SuperTrack.GetSuperTrackedContent()
+---
+-- function C_SuperTrack.GetSuperTrackedContent()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetSuperTrackedItemName
+---======================================================================
+--- Returns:
+--- @return string name
+--- @return string description
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedItemName
+---
+--- Usage: name, description = C_SuperTrack.GetSuperTrackedItemName()
+---
+-- function C_SuperTrack.GetSuperTrackedItemName()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetSuperTrackedMapPin
+---======================================================================
+--- Returns:
+--- @return Enum.SuperTrackingMapPinType type
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedMapPin
+---
+--- Usage: type, typeID = C_SuperTrack.GetSuperTrackedMapPin()
+---
+-- function C_SuperTrack.GetSuperTrackedMapPin()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetSuperTrackedQuestID
+---======================================================================
+--- Returns the quest ID currently being tracked, if set. Replaces `GetSuperTrackedQuestID`.
+---
+--- Returns:
+--- @return number questID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedQuestID
+---
+--- Usage: questID = C_SuperTrack.GetSuperTrackedQuestID()
+---
+-- function C_SuperTrack.GetSuperTrackedQuestID()
+-- end
+
+---======================================================================
+--- C_SuperTrack.GetSuperTrackedVignette
+---======================================================================
+--- Returns:
+--- @return string vignetteGUID ? : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedVignette
+---
+--- Usage: vignetteGUID = C_SuperTrack.GetSuperTrackedVignette()
+---
+-- function C_SuperTrack.GetSuperTrackedVignette()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingAnything
+---======================================================================
+--- Returns true if the location of any point is actively being tracked.
+---
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingAnything
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingAnything()
+---
+-- function C_SuperTrack.IsSuperTrackingAnything()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingContent
+---======================================================================
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingContent
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingContent()
+---
+-- function C_SuperTrack.IsSuperTrackingContent()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingCorpse
+---======================================================================
+--- Returns true if the current location being tracked is your own corpse.
+---
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingCorpse
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingCorpse()
+---
+-- function C_SuperTrack.IsSuperTrackingCorpse()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingMapPin
+---======================================================================
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingMapPin
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingMapPin()
+---
+-- function C_SuperTrack.IsSuperTrackingMapPin()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingQuest
+---======================================================================
+--- Returns true if the current location being tracked is a quest indicator.
+---
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingQuest
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingQuest()
+---
+-- function C_SuperTrack.IsSuperTrackingQuest()
+-- end
+
+---======================================================================
+--- C_SuperTrack.IsSuperTrackingUserWaypoint
+---======================================================================
+--- Returns true if the current location being tracked is a user-defined waypoint, as set via the `C_Map` API.
+---
+--- Returns:
+--- @return boolean isSuperTracking
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.IsSuperTrackingUserWaypoint
+---
+--- Usage: isSuperTracking = C_SuperTrack.IsSuperTrackingUserWaypoint()
+---
+-- function C_SuperTrack.IsSuperTrackingUserWaypoint()
+-- end
+
+---======================================================================
+--- C_SuperTrack.SetSuperTrackedContent
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedContent
+---
+--- Usage: C_SuperTrack.SetSuperTrackedContent(trackableType, trackableID)
+---
+-- function C_SuperTrack.SetSuperTrackedContent()
+-- end
+
+---======================================================================
+--- C_SuperTrack.SetSuperTrackedMapPin
+---======================================================================
+--- Arguments:
+--- @param type Enum.SuperTrackingMapPinType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedMapPin
+---
+--- Usage: C_SuperTrack.SetSuperTrackedMapPin(type, typeID)
+---
+-- function C_SuperTrack.SetSuperTrackedMapPin()
+-- end
+
+---======================================================================
+--- C_SuperTrack.SetSuperTrackedQuestID
+---======================================================================
+--- Changes the quest ID actively being tracked. Replaces `SetSuperTrackedQuestID`.
+---
+--- Arguments:
+--- @param questID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedQuestID
+---
+--- Usage: C_SuperTrack.SetSuperTrackedQuestID(questID)
+---
+-- function C_SuperTrack.SetSuperTrackedQuestID()
+-- end
+
+---======================================================================
+--- C_SuperTrack.SetSuperTrackedUserWaypoint
+---======================================================================
+--- Controls whether or not a user waypoint should be tracked. Set to true if the user waypoint should be tracked, or false if not.
+---
+--- Arguments:
+--- @param superTracked boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedUserWaypoint
+---
+--- Usage: C_SuperTrack.SetSuperTrackedUserWaypoint(superTracked)
+---
+-- function C_SuperTrack.SetSuperTrackedUserWaypoint()
+-- end
+
+---======================================================================
+--- C_SuperTrack.SetSuperTrackedVignette
+---======================================================================
+--- Arguments:
+--- @param vignetteGUID string : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedVignette
+---
+--- Usage: C_SuperTrack.SetSuperTrackedVignette(vignetteGUID)
+---
+-- function C_SuperTrack.SetSuperTrackedVignette()
+-- end

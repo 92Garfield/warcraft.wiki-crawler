@@ -1,0 +1,119 @@
+--[=[
+-- C_Timer API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_Timer
+--- C_Timer namespace contains 3 functions
+local C_Timer = {}
+
+--[=[
+-- C_Timer Functions:
+-- - C_Timer.After
+-- - C_Timer.NewTicker
+-- - C_Timer.NewTimer
+--]=]
+
+---======================================================================
+--- C_Timer.After
+---======================================================================
+--- Prints "Hello" after 2.5 seconds.
+---
+--- Arguments:
+--- @param seconds number - Time in seconds before the timer finishes.
+--- @param callback function |FunctionContainer - Callback function to run.
+function(cb: FunctionContainer)
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_Timer.After
+---
+--- Usage: C_Timer.After(seconds, callback)
+---
+--- Examples:
+--- Example 1:
+---   /run C_Timer.After(2.5, function() print("Hello") end)
+--- Example 2:
+---   -- prints "hello" and then "world"
+---   RunNextFrame(function() print("world") end)
+---   print("hello")
+---
+-- function C_Timer.After()
+-- end
+
+---======================================================================
+--- C_Timer.NewTimer
+---======================================================================
+--- Schedules a (repeating) timer that can be canceled.
+---
+--- Arguments:
+--- @param seconds number - Time in seconds between each iteration.
+--- @param callback function |FunctionContainer - Callback function to run. It will be supplied a view of the timer handle (cbObject) when invoked. The handle returned from the function and the one supplied to the callback are distinct objects that both reference a shared state.
+function(cb: FunctionContainer)
+---
+--- Returns:
+--- @return FunctionContainer cbObject - Timer handle with :Cancel(), :IsCancelled() and :Invoke() methods.
+---
+--- @since Patch 10.0.0 (2022-10-25): Implementation moved to native code. APIs no longer accept non-function callback arguments, and now return userdata handles.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Timer.NewTimer
+---
+--- Usage: cbObject = C_Timer.NewTimer (seconds, callback)
+         = C_Timer.NewTicker(seconds, callback [, iterations])
+---
+--- Examples:
+--- Example 1:
+---   /run C_Timer.NewTicker(2.5, function() print(GetTime()) end, 4)
+--- Example 2:
+---   local myTimer = C_Timer.NewTimer(3, function() print("Hello") end)
+---   print(myTimer:IsCancelled()) -- false
+---   myTimer:Cancel()
+---   print(myTimer:IsCancelled()) -- true
+--- Example 3:
+---   local myTimer = C_Timer.NewTimer(2.5, function(self) print("self.data is:", self.data) end)
+---   myTimer.data = GetTime()
+---
+--- See also:
+--- - AceTimer-3.0
+--- - OnUpdate
+---
+-- function C_Timer.NewTimer()
+-- end
+
+---======================================================================
+--- C_Timer.NewTicker
+---======================================================================
+--- Schedules a (repeating) timer that can be canceled.
+---
+--- Arguments:
+--- @param seconds number - Time in seconds between each iteration.
+--- @param callback function |FunctionContainer - Callback function to run. It will be supplied a view of the timer handle (cbObject) when invoked. The handle returned from the function and the one supplied to the callback are distinct objects that both reference a shared state.
+function(cb: FunctionContainer)
+---
+--- Returns:
+--- @return FunctionContainer cbObject - Timer handle with :Cancel(), :IsCancelled() and :Invoke() methods.
+---
+--- @since Patch 10.0.0 (2022-10-25): Implementation moved to native code. APIs no longer accept non-function callback arguments, and now return userdata handles.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Timer.NewTicker
+---
+--- Usage: cbObject = C_Timer.NewTimer (seconds, callback)
+         = C_Timer.NewTicker(seconds, callback [, iterations])
+---
+--- Examples:
+--- Example 1:
+---   /run C_Timer.NewTicker(2.5, function() print(GetTime()) end, 4)
+--- Example 2:
+---   local myTimer = C_Timer.NewTimer(3, function() print("Hello") end)
+---   print(myTimer:IsCancelled()) -- false
+---   myTimer:Cancel()
+---   print(myTimer:IsCancelled()) -- true
+--- Example 3:
+---   local myTimer = C_Timer.NewTimer(2.5, function(self) print("self.data is:", self.data) end)
+---   myTimer.data = GetTime()
+---
+--- See also:
+--- - AceTimer-3.0
+--- - OnUpdate
+---
+-- function C_Timer.NewTicker()
+-- end

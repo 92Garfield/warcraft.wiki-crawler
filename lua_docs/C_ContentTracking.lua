@@ -1,0 +1,313 @@
+--[=[
+-- C_ContentTracking API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 18
+--]=]
+
+--- @class C_ContentTracking
+--- C_ContentTracking namespace contains 18 functions
+local C_ContentTracking = {}
+
+--[=[
+-- C_ContentTracking Functions:
+-- - C_ContentTracking.GetBestMapForTrackable
+-- - C_ContentTracking.GetCollectableSourceTrackingEnabled
+-- - C_ContentTracking.GetCollectableSourceTypes
+-- - C_ContentTracking.GetCurrentTrackingTarget
+-- - C_ContentTracking.GetEncounterTrackingInfo
+-- - C_ContentTracking.GetNextWaypointForTrackable
+-- - C_ContentTracking.GetObjectiveText
+-- - C_ContentTracking.GetTitle
+-- - C_ContentTracking.GetTrackablesOnMap
+-- - C_ContentTracking.GetTrackedIDs
+-- - C_ContentTracking.GetVendorTrackingInfo
+-- - C_ContentTracking.GetWaypointText
+-- - C_ContentTracking.IsNavigable
+-- - C_ContentTracking.IsTrackable
+-- - C_ContentTracking.IsTracking
+-- - C_ContentTracking.StartTracking
+-- - C_ContentTracking.StopTracking
+-- - C_ContentTracking.ToggleTracking
+--]=]
+
+---======================================================================
+--- C_ContentTracking.GetBestMapForTrackable
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingResult result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetBestMapForTrackable
+---
+--- Usage: result, mapID = C_ContentTracking.GetBestMapForTrackable(trackableType, trackableID [, ignoreWaypoint])
+---
+-- function C_ContentTracking.GetBestMapForTrackable()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetCollectableSourceTrackingEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetCollectableSourceTrackingEnabled
+---
+--- Usage: isEnabled = C_ContentTracking.GetCollectableSourceTrackingEnabled()
+---
+-- function C_ContentTracking.GetCollectableSourceTrackingEnabled()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetCollectableSourceTypes
+---======================================================================
+--- Returns:
+--- @return Enum.ContentTrackingType collectableSourceTypes []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetCollectableSourceTypes
+---
+--- Usage: collectableSourceTypes = C_ContentTracking.GetCollectableSourceTypes()
+---
+-- function C_ContentTracking.GetCollectableSourceTypes()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetCurrentTrackingTarget
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingTargetType targetType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetCurrentTrackingTarget
+---
+--- Usage: targetType, targetID = C_ContentTracking.GetCurrentTrackingTarget(type, id)
+---
+-- function C_ContentTracking.GetCurrentTrackingTarget()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetEncounterTrackingInfo
+---======================================================================
+--- Arguments:
+--- @param journalEncounterID number
+---
+--- Returns:
+--- @return EncounterTrackingInfo trackingInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetEncounterTrackingInfo
+---
+--- Usage: trackingInfo = C_ContentTracking.GetEncounterTrackingInfo(journalEncounterID)
+---
+-- function C_ContentTracking.GetEncounterTrackingInfo()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetNextWaypointForTrackable
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingResult result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetNextWaypointForTrackable
+---
+--- Usage: result, mapInfo = C_ContentTracking.GetNextWaypointForTrackable(trackableType, trackableID, uiMapID)
+---
+-- function C_ContentTracking.GetNextWaypointForTrackable()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetObjectiveText
+---======================================================================
+--- Arguments:
+--- @param targetType Enum.ContentTrackingTargetType
+---
+--- Returns:
+--- @return string objectiveText
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetObjectiveText
+---
+--- Usage: objectiveText = C_ContentTracking.GetObjectiveText(targetType, targetID [, includeHyperlinks])
+---
+-- function C_ContentTracking.GetObjectiveText()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetTitle
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return string title
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetTitle
+---
+--- Usage: title = C_ContentTracking.GetTitle(trackableType, trackableID)
+---
+-- function C_ContentTracking.GetTitle()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetTrackablesOnMap
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingResult result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetTrackablesOnMap
+---
+--- Usage: result, trackableMapInfos = C_ContentTracking.GetTrackablesOnMap(trackableType, uiMapID)
+---
+-- function C_ContentTracking.GetTrackablesOnMap()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetTrackedIDs
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return number entryIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetTrackedIDs
+---
+--- Usage: entryIDs = C_ContentTracking.GetTrackedIDs(trackableType)
+---
+-- function C_ContentTracking.GetTrackedIDs()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetVendorTrackingInfo
+---======================================================================
+--- Arguments:
+--- @param collectableEntryID number
+---
+--- Returns:
+--- @return VendorTrackingInfo vendorTrackingInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetVendorTrackingInfo
+---
+--- Usage: vendorTrackingInfo = C_ContentTracking.GetVendorTrackingInfo(collectableEntryID)
+---
+-- function C_ContentTracking.GetVendorTrackingInfo()
+-- end
+
+---======================================================================
+--- C_ContentTracking.GetWaypointText
+---======================================================================
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return string waypointText
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.GetWaypointText
+---
+--- Usage: waypointText = C_ContentTracking.GetWaypointText(trackableType, trackableID)
+---
+-- function C_ContentTracking.GetWaypointText()
+-- end
+
+---======================================================================
+--- C_ContentTracking.IsNavigable
+---======================================================================
+--- If successful, returns if the trackable is either on your current map, or if we're able to determine a route to that map from your location via waypoints.
+---
+--- Arguments:
+--- @param trackableType Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingResult result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.IsNavigable
+---
+--- Usage: result, isNavigable = C_ContentTracking.IsNavigable(trackableType, trackableID)
+---
+-- function C_ContentTracking.IsNavigable()
+-- end
+
+---======================================================================
+--- C_ContentTracking.IsTrackable
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- Returns:
+--- @return boolean isTrackable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.IsTrackable
+---
+--- Usage: isTrackable = C_ContentTracking.IsTrackable(type, id)
+---
+-- function C_ContentTracking.IsTrackable()
+-- end
+
+---======================================================================
+--- C_ContentTracking.IsTracking
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- Returns:
+--- @return boolean isTracking
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.IsTracking
+---
+--- Usage: isTracking = C_ContentTracking.IsTracking(type, id)
+---
+-- function C_ContentTracking.IsTracking()
+-- end
+
+---======================================================================
+--- C_ContentTracking.StartTracking
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingError error ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.StartTracking
+---
+--- Usage: error = C_ContentTracking.StartTracking(type, id)
+---
+-- function C_ContentTracking.StartTracking()
+-- end
+
+---======================================================================
+--- C_ContentTracking.StopTracking
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.StopTracking
+---
+--- Usage: C_ContentTracking.StopTracking(type, id, stoptype)
+---
+-- function C_ContentTracking.StopTracking()
+-- end
+
+---======================================================================
+--- C_ContentTracking.ToggleTracking
+---======================================================================
+--- Arguments:
+--- @param type Enum.ContentTrackingType
+---
+--- Returns:
+--- @return Enum.ContentTrackingError error ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContentTracking.ToggleTracking
+---
+--- Usage: error = C_ContentTracking.ToggleTracking(type, id)
+---
+-- function C_ContentTracking.ToggleTracking()
+-- end

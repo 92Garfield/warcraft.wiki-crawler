@@ -1,0 +1,365 @@
+--[=[
+-- C_ContributionCollector API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 18
+--]=]
+
+--- @class C_ContributionCollector
+--- C_ContributionCollector namespace contains 18 functions
+local C_ContributionCollector = {}
+
+--[=[
+-- C_ContributionCollector Functions:
+-- - C_ContributionCollector.Close
+-- - C_ContributionCollector.Contribute
+-- - C_ContributionCollector.GetActive
+-- - C_ContributionCollector.GetAtlases
+-- - C_ContributionCollector.GetBuffs
+-- - C_ContributionCollector.GetContributionAppearance
+-- - C_ContributionCollector.GetContributionCollectorsForMap
+-- - C_ContributionCollector.GetContributionResult
+-- - C_ContributionCollector.GetDescription
+-- - C_ContributionCollector.GetManagedContributionsForCreatureID
+-- - C_ContributionCollector.GetName
+-- - C_ContributionCollector.GetOrderIndex
+-- - C_ContributionCollector.GetRequiredContributionCurrency
+-- - C_ContributionCollector.GetRequiredContributionItem
+-- - C_ContributionCollector.GetRewardQuestID
+-- - C_ContributionCollector.GetState
+-- - C_ContributionCollector.HasPendingContribution
+-- - C_ContributionCollector.IsAwaitingRewardQuestData
+--]=]
+
+---======================================================================
+--- C_ContributionCollector.Close
+---======================================================================
+--- Closes the contribution collector API state.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.Close
+---
+--- Usage: C_ContributionCollector.Close()
+---
+-- function C_ContributionCollector.Close()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.Contribute
+---======================================================================
+--- Contributes resources to a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.Contribute
+---
+--- Usage: C_ContributionCollector.Contribute(contributionID)
+---
+-- function C_ContributionCollector.Contribute()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetActive
+---======================================================================
+--- Returns the currently active buildings.
+---
+--- Returns:
+--- @return number contributionID
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetActive
+---
+--- Usage: contributionID, ... = C_ContributionCollector.GetActive()
+---
+-- function C_ContributionCollector.GetActive()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetAtlases
+---======================================================================
+--- Returns a table listing the possible states for a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return string atlasName []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetAtlases
+---
+--- Usage: atlasName = C_ContributionCollector.GetAtlases(contributionID)
+---
+-- function C_ContributionCollector.GetAtlases()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetBuffs
+---======================================================================
+--- Returns the buffs provided by a building (e.g. in a Warfront).
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return number spellID - the spellID of the first buff provided. This buff is always provided when the building is active.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetBuffs
+---
+--- Usage: spellID, ... = C_ContributionCollector.GetBuffs(contributionID)
+---
+-- function C_ContributionCollector.GetBuffs()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetContributionAppearance
+---======================================================================
+--- Returns contribution appearance info.
+---
+--- Arguments:
+--- @param contributionID number
+--- @param contributionState  Enum.ContributionState
+---
+--- Returns:
+--- @return  appearance ContributionAppearance?Optional, could be nil.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetContributionAppearance
+---
+--- Usage: appearance = C_ContributionCollector.GetContributionAppearance(contributionID, contributionState)
+---
+-- function C_ContributionCollector.GetContributionAppearance()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetContributionCollectorsForMap
+---======================================================================
+--- Returns contribution buildings on a map.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return  contributionCollectors structure - ContributionMapInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetContributionCollectorsForMap
+---
+--- Usage: contributionCollectors = C_ContributionCollector.GetContributionCollectorsForMap(uiMapID)
+---
+-- function C_ContributionCollector.GetContributionCollectorsForMap()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetContributionResult
+---======================================================================
+--- Returns a value indicating the result of a contribution.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return  result Enum.ContributionResult
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetContributionResult
+---
+--- Usage: result = C_ContributionCollector.GetContributionResult(contributionID)
+---
+-- function C_ContributionCollector.GetContributionResult()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetDescription
+---======================================================================
+--- Returns the description of a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return string description
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetDescription
+---
+--- Usage: description = C_ContributionCollector.GetDescription(contributionID)
+---
+-- function C_ContributionCollector.GetDescription()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetManagedContributionsForCreatureID
+---======================================================================
+--- Returns contributions for a creature.
+---
+--- Arguments:
+--- @param creatureID number
+---
+--- Returns:
+--- @return number contributionID (variable returns)
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetManagedContributionsForCreatureID
+---
+--- Usage: contributionID = C_ContributionCollector.GetManagedContributionsForCreatureID(creatureID)
+---
+-- function C_ContributionCollector.GetManagedContributionsForCreatureID()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetName
+---======================================================================
+--- Returns the name of a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return string name
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetName
+---
+--- Usage: name = C_ContributionCollector.GetName(contributionID)
+---
+-- function C_ContributionCollector.GetName()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetOrderIndex
+---======================================================================
+--- Returns the order in which buildings are displayed.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return number orderIndex
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetOrderIndex
+---
+--- Usage: orderIndex = C_ContributionCollector.GetOrderIndex(contributionID)
+---
+-- function C_ContributionCollector.GetOrderIndex()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetRequiredContributionCurrency
+---======================================================================
+--- Returns the currencyID and amount needed to contribute to a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return number currencyID
+--- @return number currencyAmount
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetRequiredContributionCurrency
+---
+--- Usage: currencyID, currencyAmount = C_ContributionCollector.GetRequiredContributionCurrency(contributionID)
+---
+-- function C_ContributionCollector.GetRequiredContributionCurrency()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetRequiredContributionItem
+---======================================================================
+--- Returns the itemID and amount needed to contribute to a building.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return number itemID
+--- @return number itemCount
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetRequiredContributionItem
+---
+--- Usage: itemID, itemCount = C_ContributionCollector.GetRequiredContributionItem(contributionID)
+---
+-- function C_ContributionCollector.GetRequiredContributionItem()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetRewardQuestID
+---======================================================================
+--- Returns the hidden quest that is flagged completed when a contribution is made.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return number questID
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetRewardQuestID
+---
+--- Usage: questID = C_ContributionCollector.GetRewardQuestID(contributionID)
+---
+-- function C_ContributionCollector.GetRewardQuestID()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.GetState
+---======================================================================
+--- Returns the current state of a building, its completion percentage, and time until next state change.
+---
+--- Arguments:
+--- @param contributionID number : ContributionID
+---
+--- Returns:
+--- @return Enum.ContributionState contributionState ? = None
+---
+--- @since Patch 8.0.1 (2018-07-17): Added startTime return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetState
+---
+--- Usage: contributionState, contributionPercentageComplete, timeOfNextStateChange, startTime = C_ContributionCollector.GetState(contributionID)
+---
+-- function C_ContributionCollector.GetState()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.HasPendingContribution
+---======================================================================
+--- Returns whether there is a pending contribution.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return boolean hasPending
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.HasPendingContribution
+---
+--- Usage: hasPending = C_ContributionCollector.HasPendingContribution(contributionID)
+---
+-- function C_ContributionCollector.HasPendingContribution()
+-- end
+
+---======================================================================
+--- C_ContributionCollector.IsAwaitingRewardQuestData
+---======================================================================
+--- Returns true if the client is waiting for quest reward data.
+---
+--- Arguments:
+--- @param contributionID number
+---
+--- Returns:
+--- @return boolean awaitingData
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.IsAwaitingRewardQuestData
+---
+--- Usage: awaitingData = C_ContributionCollector.IsAwaitingRewardQuestData(contributionID)
+---
+-- function C_ContributionCollector.IsAwaitingRewardQuestData()
+-- end

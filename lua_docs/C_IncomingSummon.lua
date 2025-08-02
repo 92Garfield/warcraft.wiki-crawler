@@ -1,0 +1,54 @@
+--[=[
+-- C_IncomingSummon API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_IncomingSummon
+--- C_IncomingSummon namespace contains 2 functions
+local C_IncomingSummon = {}
+
+--[=[
+-- C_IncomingSummon Functions:
+-- - C_IncomingSummon.HasIncomingSummon
+-- - C_IncomingSummon.IncomingSummonStatus
+--]=]
+
+---======================================================================
+--- C_IncomingSummon.HasIncomingSummon
+---======================================================================
+--- Returns whether a group member has an incoming summon.
+---
+--- Arguments:
+--- @param unit string : UnitId
+---
+--- Returns:
+--- @return boolean summon
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IncomingSummon.HasIncomingSummon
+---
+--- Usage: summon = C_IncomingSummon.HasIncomingSummon(unit)
+---
+-- function C_IncomingSummon.HasIncomingSummon()
+-- end
+
+---======================================================================
+--- C_IncomingSummon.IncomingSummonStatus
+---======================================================================
+--- Returns the status of an group member's incoming summon.
+---
+--- Arguments:
+--- @param unit string : UnitId
+---
+--- Returns:
+--- @return  status Enum.SummonStatus
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IncomingSummon.IncomingSummonStatus
+---
+--- Usage: status = C_IncomingSummon.IncomingSummonStatus(unit)
+---
+-- function C_IncomingSummon.IncomingSummonStatus()
+-- end

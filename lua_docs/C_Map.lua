@@ -1,0 +1,876 @@
+--[=[
+-- C_Map API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 40
+--]=]
+
+--- @class C_Map
+--- C_Map namespace contains 40 functions
+local C_Map = {}
+
+--[=[
+-- C_Map Functions:
+-- - C_Map.CanSetUserWaypointOnMap
+-- - C_Map.ClearUserWaypoint
+-- - C_Map.CloseWorldMapInteraction
+-- - C_Map.GetAreaInfo
+-- - C_Map.GetBestMapForUnit
+-- - C_Map.GetBountySetMaps
+-- - C_Map.GetFallbackWorldMapID
+-- - C_Map.GetMapArtBackgroundAtlas
+-- - C_Map.GetMapArtHelpTextPosition
+-- - C_Map.GetMapArtID
+-- - C_Map.GetMapArtLayerTextures
+-- - C_Map.GetMapArtLayers
+-- - C_Map.GetMapArtZoneTextPosition
+-- - C_Map.GetMapBannersForMap
+-- - C_Map.GetMapChildrenInfo
+-- - C_Map.GetMapDisplayInfo
+-- - C_Map.GetMapGroupID
+-- - C_Map.GetMapGroupMembersInfo
+-- - C_Map.GetMapHighlightInfoAtPosition
+-- - C_Map.GetMapHighlightPulseInfo
+-- - C_Map.GetMapInfo
+-- - C_Map.GetMapInfoAtPosition
+-- - C_Map.GetMapLevels
+-- - C_Map.GetMapLinksForMap
+-- - C_Map.GetMapPosFromWorldPos
+-- - C_Map.GetMapRectOnMap
+-- - C_Map.GetMapWorldSize
+-- - C_Map.GetPlayerMapPosition
+-- - C_Map.GetUserWaypoint
+-- - C_Map.GetUserWaypointFromHyperlink
+-- - C_Map.GetUserWaypointHyperlink
+-- - C_Map.GetUserWaypointPositionForMap
+-- - C_Map.GetWorldPosFromMapPos
+-- - C_Map.HasUserWaypoint
+-- - C_Map.IsCityMap
+-- - C_Map.IsMapValidForNavBarDropdown
+-- - C_Map.MapHasArt
+-- - C_Map.OpenWorldMap
+-- - C_Map.RequestPreloadMap
+-- - C_Map.SetUserWaypoint
+--]=]
+
+---======================================================================
+--- C_Map.CanSetUserWaypointOnMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return boolean canSet
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.CanSetUserWaypointOnMap
+---
+--- Usage: canSet = C_Map.CanSetUserWaypointOnMap(uiMapID)
+---
+-- function C_Map.CanSetUserWaypointOnMap()
+-- end
+
+---======================================================================
+--- C_Map.ClearUserWaypoint
+---======================================================================
+--- Clears the currently assigned user waypoint, if one exists.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.ClearUserWaypoint
+---
+--- Usage: C_Map.ClearUserWaypoint()
+---
+-- function C_Map.ClearUserWaypoint()
+-- end
+
+---======================================================================
+--- C_Map.CloseWorldMapInteraction
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.CloseWorldMapInteraction
+---
+--- Usage: C_Map.CloseWorldMapInteraction()
+---
+-- function C_Map.CloseWorldMapInteraction()
+-- end
+
+---======================================================================
+--- C_Map.GetAreaInfo
+---======================================================================
+--- Returns a map subzone name.
+---
+--- Arguments:
+--- @param areaID number : AreaTable.db2
+---
+--- Returns:
+--- @return string name
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetAreaInfo
+---
+--- Usage: name = C_Map.GetAreaInfo(areaID)
+---
+--- See also:
+--- - C_MapExplorationInfo.GetExploredAreaIDsAtPosition
+---
+-- function C_Map.GetAreaInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetBestMapForUnit
+---======================================================================
+--- Returns the current UI map for the given unit. Only works for the player and group members.
+---
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return number uiMapID ? : UiMapID - Returns the "lowest" map the unit is on. For example, if a unit is in a microdungeon it will return that instead of the zone or continent map.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetBestMapForUnit
+---
+--- Usage: uiMapID = C_Map.GetBestMapForUnit(unitToken)
+---
+--- Examples:
+--- Example 1:
+---   /run local mapID = C_Map.GetBestMapForUnit("player"); print(format("You are in %s (%d)", C_Map.GetMapInfo(mapID).name, mapID))
+---   -- You are in Stormwind City (84)
+---
+-- function C_Map.GetBestMapForUnit()
+-- end
+
+---======================================================================
+--- C_Map.GetBountySetMaps
+---======================================================================
+--- Returns the maps for a bounty.
+---
+--- Arguments:
+--- @param bountySetID number - from BountySet.db2
+---
+--- Returns:
+--- @return number mapIDs [] : UiMapID
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetBountySetMaps
+---
+--- Usage: mapIDs = C_Map.GetBountySetMaps(bountySetID)
+---
+-- function C_Map.GetBountySetMaps()
+-- end
+
+---======================================================================
+--- C_Map.GetFallbackWorldMapID
+---======================================================================
+--- Returns the world map id.
+---
+--- Returns:
+--- @return  uiMapID Returns 947 (Azeroth)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetFallbackWorldMapID
+---
+--- Usage: uiMapID = C_Map.GetFallbackWorldMapID()
+---
+-- function C_Map.GetFallbackWorldMapID()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtBackgroundAtlas
+---======================================================================
+--- Returns the background atlas for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return string atlasName - AtlasID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtBackgroundAtlas
+---
+--- Usage: atlasName = C_Map.GetMapArtBackgroundAtlas(uiMapID)
+---
+-- function C_Map.GetMapArtBackgroundAtlas()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtHelpTextPosition
+---======================================================================
+--- Returns the position for the "Click to Zoom In" hint text on flight maps.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return Enum.MapCanvasPosition position
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtHelpTextPosition
+---
+--- Usage: position = C_Map.GetMapArtHelpTextPosition(uiMapID)
+---
+-- function C_Map.GetMapArtHelpTextPosition()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtID
+---======================================================================
+--- Returns the art for a (phased) map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number uiMapArtID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtID
+---
+--- Usage: uiMapArtID = C_Map.GetMapArtID(uiMapID)
+---
+-- function C_Map.GetMapArtID()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtLayers
+---======================================================================
+--- Returns the art layers for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return UiMapLayerInfo layerInfo []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtLayers
+---
+--- Usage: layerInfo = C_Map.GetMapArtLayers(uiMapID)
+---
+-- function C_Map.GetMapArtLayers()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtLayerTextures
+---======================================================================
+--- Returns the art layer textures for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param layerIndex number
+---
+--- Returns:
+--- @return number textures []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtLayerTextures
+---
+--- Usage: textures = C_Map.GetMapArtLayerTextures(uiMapID, layerIndex)
+---
+-- function C_Map.GetMapArtLayerTextures()
+-- end
+
+---======================================================================
+--- C_Map.GetMapArtZoneTextPosition
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return Enum.MapCanvasPosition position
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtZoneTextPosition
+---
+--- Usage: position = C_Map.GetMapArtZoneTextPosition(uiMapID)
+---
+-- function C_Map.GetMapArtZoneTextPosition()
+-- end
+
+---======================================================================
+--- C_Map.GetMapBannersForMap
+---======================================================================
+--- Returns the poi banners for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return MapBannerInfo mapBanners []
+---
+--- @since Patch 8.1.0 (2018-12-11): Added uiTextureKit field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapBannersForMap
+---
+--- Usage: mapBanners = C_Map.GetMapBannersForMap(uiMapID)
+---
+-- function C_Map.GetMapBannersForMap()
+-- end
+
+---======================================================================
+--- C_Map.GetMapChildrenInfo
+---======================================================================
+--- Returns info for the children of a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param mapType Enum.UIMapType ?  - Filters results by a specific map type.
+--- @param allDescendants boolean ?  - Whether to recurse on each child or not.
+---
+--- Returns:
+--- @return UiMapDetails info []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapChildrenInfo
+---
+--- Usage: info = C_Map.GetMapChildrenInfo(uiMapID [, mapType, allDescendants])
+---
+-- function C_Map.GetMapChildrenInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetMapDisplayInfo
+---======================================================================
+--- Returns whether group member pins should be hidden.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return boolean hideIcons
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapDisplayInfo
+---
+--- Usage: hideIcons = C_Map.GetMapDisplayInfo(uiMapID)
+---
+-- function C_Map.GetMapDisplayInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetMapGroupID
+---======================================================================
+--- Returns the map group for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number uiMapGroupID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapGroupID
+---
+--- Usage: uiMapGroupID = C_Map.GetMapGroupID(uiMapID)
+---
+-- function C_Map.GetMapGroupID()
+-- end
+
+---======================================================================
+--- C_Map.GetMapGroupMembersInfo
+---======================================================================
+--- Returns the floors for a map group.
+---
+--- Arguments:
+--- @param uiMapGroupID number
+---
+--- Returns:
+--- @return table info UiMapGroupMemberInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapGroupMembersInfo
+---
+--- Usage: info = C_Map.GetMapGroupMembersInfo(uiMapGroupID)
+---
+-- function C_Map.GetMapGroupMembersInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetMapHighlightInfoAtPosition
+---======================================================================
+--- Returns a map highlight pin for a location.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param x number
+--- @param y number
+---
+--- Returns:
+--- @return number fileDataID - FileDataID
+--- @return string atlasID - AtlasID
+--- @return number texturePercentageX
+--- @return number texturePercentageY
+--- @return number textureX
+--- @return number textureY
+--- @return number scrollChildX
+--- @return number scrollChildY
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapHighlightInfoAtPosition
+---
+--- Usage: fileDataID, atlasID, texturePercentageX, texturePercentageY, textureX, textureY, scrollChildX, scrollChildY = C_Map.GetMapHighlightInfoAtPosition(uiMapID, x, y)
+---
+-- function C_Map.GetMapHighlightInfoAtPosition()
+-- end
+
+---======================================================================
+--- C_Map.GetMapHighlightPulseInfo
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return number fileDataID : fileID
+--- @return string atlasID : textureAtlas
+--- @return number texturePercentageX
+--- @return number texturePercentageY
+--- @return number textureX
+--- @return number textureY
+--- @return number scrollChildX
+--- @return number scrollChildY
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapHighlightPulseInfo
+---
+--- Usage: fileDataID, atlasID, texturePercentageX, texturePercentageY, textureX, textureY, scrollChildX, scrollChildY = C_Map.GetMapHighlightPulseInfo(uiMapID)
+---
+-- function C_Map.GetMapHighlightPulseInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetMapInfo
+---======================================================================
+--- Returns map information.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return UiMapDetails info
+---
+--- @since Patch 8.0.1 (2018-07-17): Added. Replaces GetMapInfo() and GetMapNameByID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapInfo
+---
+--- Usage: info = C_Map.GetMapInfo(uiMapID)
+---
+--- Examples:
+--- Example 1:
+---   /run local mapID = C_Map.GetBestMapForUnit("player"); print(format("You are in %s (%d)", C_Map.GetMapInfo(mapID).name, mapID))
+---   -- You are in Stormwind City (84)
+---
+-- function C_Map.GetMapInfo()
+-- end
+
+---======================================================================
+--- C_Map.GetMapInfoAtPosition
+---======================================================================
+--- Returns info for any child or adjacent maps at a position on the map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param x number : [0.0 - 1.0]
+--- @param y number : [0.0 - 1.0]
+--- @param ignoreZoneMapPositionData boolean ?
+---
+--- Returns:
+--- @return UiMapDetails info
+---
+--- @since Patch 10.1.0 (2023-05-02): Added ignoreZoneMapPositionData argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapInfoAtPosition
+---
+--- Usage: info = C_Map.GetMapInfoAtPosition(uiMapID, x, y [, ignoreZoneMapPositionData])
+---
+-- function C_Map.GetMapInfoAtPosition()
+-- end
+
+---======================================================================
+--- C_Map.GetMapLevels
+---======================================================================
+--- Returns the suggested player and battle pet levels for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number playerMinLevel
+--- @return number playerMaxLevel
+--- @return number petMinLevel ? = 0
+--- @return number petMaxLevel ? = 0
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapLevels
+---
+--- Usage: playerMinLevel, playerMaxLevel, petMinLevel, petMaxLevel = C_Map.GetMapLevels(uiMapID)
+---
+-- function C_Map.GetMapLevels()
+-- end
+
+---======================================================================
+--- C_Map.GetMapLinksForMap
+---======================================================================
+--- Returns the map pins that link to another map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return MapLinkInfo mapLinks []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapLinksForMap
+---
+--- Usage: mapLinks = C_Map.GetMapLinksForMap(uiMapID)
+---
+-- function C_Map.GetMapLinksForMap()
+-- end
+
+---======================================================================
+--- C_Map.GetMapPosFromWorldPos
+---======================================================================
+--- Translates a world map position to a map position.
+---
+--- Arguments:
+--- @param continentID number - InstanceID of the continent
+--- @param worldPosition Vector2DMixin 🔗
+--- @param overrideUiMapID number ? - If you don't set this to the map that you want a relative position in, it defaults to the mapID for the player's continent, essentially normalizing world coordinates (i.e. 478.1,598.2) into continent map coordinates (i.e. 0.44,0.61)
+---
+--- Returns:
+--- @return number uiMapID : UiMapID
+--- @return Vector2DMixin mapPosition 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapPosFromWorldPos
+---
+--- Usage: uiMapID, mapPosition = C_Map.GetMapPosFromWorldPos(continentID, worldPosition [, overrideUiMapID])
+---
+-- function C_Map.GetMapPosFromWorldPos()
+-- end
+
+---======================================================================
+--- C_Map.GetMapRectOnMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param topUiMapID number
+---
+--- Returns:
+--- @return number minX
+--- @return number maxX
+--- @return number minY
+--- @return number maxY
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapRectOnMap
+---
+--- Usage: minX, maxX, minY, maxY = C_Map.GetMapRectOnMap(uiMapID, topUiMapID)
+---
+-- function C_Map.GetMapRectOnMap()
+-- end
+
+---======================================================================
+--- C_Map.GetMapWorldSize
+---======================================================================
+--- Returns the size in yards of the area represented by the map.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return number width
+--- @return number height
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetMapWorldSize
+---
+--- Usage: width, height = C_Map.GetMapWorldSize(uiMapID)
+---
+-- function C_Map.GetMapWorldSize()
+-- end
+
+---======================================================================
+--- C_Map.GetPlayerMapPosition
+---======================================================================
+--- #noinstance - This only works outdoors and not in instanced content (dungeons/raids/battlegrounds/arena).
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param unitToken string : UnitToken
+---
+--- Returns:
+--- @return table position ? : vector2
+---
+--- @since Patch 8.0.1 (2018-07-17): Changed to C_Map.GetPlayerMapPosition() and returns a vector2d.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetPlayerMapPosition
+---
+--- Usage: position = C_Map.GetPlayerMapPosition(uiMapID, unitToken)
+---
+--- Examples:
+--- Example 1:
+---   local map = C_Map.GetBestMapForUnit("player")
+---   local position = C_Map.GetPlayerMapPosition(map, "player")
+---   print(position:GetXY()) -- 0.54766619205475, 0.54863452911377
+--- Example 2:
+---   /run local c,p,t,m=C_Map,"player","target"m=c.GetBestMapForUnit(p)c.SetUserWaypoint{uiMapID=m,position=c.GetPlayerMapPosition(m,p)}SendChatMessage(format("%%t (%d%%)%s",UnitHealth(t)/UnitHealthMax(t)*100,c.GetUserWaypointHyperlink()),"CHANNEL",nil,1)
+---
+--- See also:
+--- - C_Map.GetPlayerMapPosition Memory Usage
+---
+-- function C_Map.GetPlayerMapPosition()
+-- end
+
+---======================================================================
+--- C_Map.GetUserWaypoint
+---======================================================================
+--- Returns the UiMapPoint structure for the currently assigned user waypoint, if one exists.
+---
+--- Arguments:
+--- @param hyperlink string ? : worldmapLink
+---
+--- Returns:
+--- @return  point UiMapPoint
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypoint
+---
+--- Usage: point = C_Map.GetUserWaypoint()
+      = C_Map.GetUserWaypointFromHyperlink(hyperlink)
+---
+--- Examples:
+--- Example 1:
+---   {
+---   	uiMapID = 84,
+---   	position = {
+---   		y = 0.71433198451996,
+---   		x = 0.63557040691376
+---   	}
+---   }
+---
+-- function C_Map.GetUserWaypoint()
+-- end
+
+---======================================================================
+--- C_Map.GetUserWaypointFromHyperlink
+---======================================================================
+--- Returns the UiMapPoint structure for the currently assigned user waypoint, if one exists.
+---
+--- Arguments:
+--- @param hyperlink string ? : worldmapLink
+---
+--- Returns:
+--- @return  point UiMapPoint
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointFromHyperlink
+---
+--- Usage: point = C_Map.GetUserWaypoint()
+      = C_Map.GetUserWaypointFromHyperlink(hyperlink)
+---
+--- Examples:
+--- Example 1:
+---   {
+---   	uiMapID = 84,
+---   	position = {
+---   		y = 0.71433198451996,
+---   		x = 0.63557040691376
+---   	}
+---   }
+---
+-- function C_Map.GetUserWaypointFromHyperlink()
+-- end
+
+---======================================================================
+--- C_Map.GetUserWaypointHyperlink
+---======================================================================
+--- Returns a worldmap hyperlink for the currently assigned user waypoint, if one exists.
+---
+--- Returns:
+--- @return string hyperlink : worldmapLink
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointHyperlink
+---
+--- Usage: hyperlink = C_Map.GetUserWaypointHyperlink()
+---
+--- Examples:
+--- Example 1:
+---   /run local c,p,t,m=C_Map,"player","target"m=c.GetBestMapForUnit(p)c.SetUserWaypoint{uiMapID=m,position=c.GetPlayerMapPosition(m,p)}SendChatMessage(format("%%t (%d%%)%s",UnitHealth(t)/UnitHealthMax(t)*100,c.GetUserWaypointHyperlink()),"CHANNEL",nil,1)
+---
+-- function C_Map.GetUserWaypointHyperlink()
+-- end
+
+---======================================================================
+--- C_Map.GetUserWaypointPositionForMap
+---======================================================================
+--- Returns the map position for a user waypoint that is placed on a specified map ID.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return Vector2DMixin mapPosition 🔗
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointPositionForMap
+---
+--- Usage: mapPosition = C_Map.GetUserWaypointPositionForMap(uiMapID)
+---
+-- function C_Map.GetUserWaypointPositionForMap()
+-- end
+
+---======================================================================
+--- C_Map.GetWorldPosFromMapPos
+---======================================================================
+--- Translates a map position to a world map position.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param mapPosition Vector2DMixin 🔗 - as returned from C_Map.GetPlayerMapPosition()
+---
+--- Returns:
+--- @return number continentID : InstanceID
+--- @return Vector2DMixin worldPosition 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.GetWorldPosFromMapPos
+---
+--- Usage: continentID, worldPosition = C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition)
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Map.GetWorldPosFromMapPos(37, {x=0, y=0}) -- x = -7939.580078125, y = 1535.4200439453
+---   /dump C_Map.GetWorldPosFromMapPos(37, {x=1, y=1}) -- x = -10254.200195312, y = -1935.4200439453
+---   /dump C_Map.GetMapWorldSize(37) -- 3470.8400878906, 2314.6201171875
+---
+--- See also:
+--- - UnitPosition
+--- - HereBeDragons
+---
+-- function C_Map.GetWorldPosFromMapPos()
+-- end
+
+---======================================================================
+--- C_Map.HasUserWaypoint
+---======================================================================
+--- Returns true if a user waypoint has been assigned.
+---
+--- Returns:
+--- @return boolean hasUserWaypoint
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.HasUserWaypoint
+---
+--- Usage: hasUserWaypoint = C_Map.HasUserWaypoint()
+---
+-- function C_Map.HasUserWaypoint()
+-- end
+
+---======================================================================
+--- C_Map.IsCityMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return boolean isCityMap
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.IsCityMap
+---
+--- Usage: isCityMap = C_Map.IsCityMap(uiMapID)
+---
+-- function C_Map.IsCityMap()
+-- end
+
+---======================================================================
+--- C_Map.IsMapValidForNavBarDropdown
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.IsMapValidForNavBarDropdown
+---
+--- Usage: isValid = C_Map.IsMapValidForNavBarDropdown(uiMapID)
+---
+-- function C_Map.IsMapValidForNavBarDropdown()
+-- end
+
+---======================================================================
+--- C_Map.MapHasArt
+---======================================================================
+--- Returns true if the map has art and can be displayed by the FrameXML.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return boolean hasArt
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.MapHasArt
+---
+--- Usage: hasArt = C_Map.MapHasArt(uiMapID)
+---
+-- function C_Map.MapHasArt()
+-- end
+
+---======================================================================
+--- C_Map.OpenWorldMap
+---======================================================================
+--- #nocombat - This cannot be called while in combat.
+---
+--- Arguments:
+--- @param uiMapID number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.OpenWorldMap
+---
+--- Usage: C_Map.OpenWorldMap([uiMapID])
+---
+--- See also:
+--- - WORLD_MAP_OPEN
+---
+-- function C_Map.OpenWorldMap()
+-- end
+
+---======================================================================
+--- C_Map.RequestPreloadMap
+---======================================================================
+--- Preloads textures for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.RequestPreloadMap
+---
+--- Usage: C_Map.RequestPreloadMap(uiMapID)
+---
+-- function C_Map.RequestPreloadMap()
+-- end
+
+---======================================================================
+--- C_Map.SetUserWaypoint
+---======================================================================
+--- Changes the user-assigned waypoint to the specified location, encoded as a UiMapPoint structure.
+---
+--- Arguments:
+--- @param point  UiMapPoint
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Map.SetUserWaypoint
+---
+--- Usage: C_Map.SetUserWaypoint(point)
+---
+--- Examples:
+--- Example 1:
+---   local mapID = C_Map.GetBestMapForUnit("player")
+---   
+---   if C_Map.CanSetUserWaypointOnMap(mapID) then
+---   	local pos = C_Map.GetPlayerMapPosition(mapID, "player")
+---   	local mapPoint = UiMapPoint.CreateFromVector2D(mapID, pos)
+---   	C_Map.SetUserWaypoint(mapPoint)
+---   else
+---   	print("Cannot set waypoints on this map")
+---   end
+---
+-- function C_Map.SetUserWaypoint()
+-- end

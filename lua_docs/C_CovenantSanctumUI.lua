@@ -1,0 +1,256 @@
+--[=[
+-- C_CovenantSanctumUI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 16
+--]=]
+
+--- @class C_CovenantSanctumUI
+--- C_CovenantSanctumUI namespace contains 16 functions
+local C_CovenantSanctumUI = {}
+
+--[=[
+-- C_CovenantSanctumUI Functions:
+-- - C_CovenantSanctumUI.CanAccessReservoir
+-- - C_CovenantSanctumUI.CanDepositAnima
+-- - C_CovenantSanctumUI.DepositAnima
+-- - C_CovenantSanctumUI.EndInteraction
+-- - C_CovenantSanctumUI.GetAnimaInfo
+-- - C_CovenantSanctumUI.GetCurrentTalentTreeID
+-- - C_CovenantSanctumUI.GetFeatures
+-- - C_CovenantSanctumUI.GetRenownLevel
+-- - C_CovenantSanctumUI.GetRenownLevels
+-- - C_CovenantSanctumUI.GetRenownRewardsForLevel
+-- - C_CovenantSanctumUI.GetSanctumType
+-- - C_CovenantSanctumUI.GetSoulCurrencies
+-- - C_CovenantSanctumUI.HasMaximumRenown
+-- - C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode
+-- - C_CovenantSanctumUI.IsWeeklyRenownCapped
+-- - C_CovenantSanctumUI.RequestCatchUpState
+--]=]
+
+---======================================================================
+--- C_CovenantSanctumUI.CanAccessReservoir
+---======================================================================
+--- Returns:
+--- @return boolean canAccess
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.CanAccessReservoir
+---
+--- Usage: canAccess = C_CovenantSanctumUI.CanAccessReservoir()
+---
+-- function C_CovenantSanctumUI.CanAccessReservoir()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.CanDepositAnima
+---======================================================================
+--- Returns:
+--- @return boolean canDeposit
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.CanDepositAnima
+---
+--- Usage: canDeposit = C_CovenantSanctumUI.CanDepositAnima()
+---
+-- function C_CovenantSanctumUI.CanDepositAnima()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.DepositAnima
+---======================================================================
+--- #protected - This can only be called from secure code.Silently fails when not at the Sanctum Reservoir NPC.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.DepositAnima
+---
+--- Usage: C_CovenantSanctumUI.DepositAnima()
+---
+-- function C_CovenantSanctumUI.DepositAnima()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.EndInteraction
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.EndInteraction
+---
+--- Usage: C_CovenantSanctumUI.EndInteraction()
+---
+-- function C_CovenantSanctumUI.EndInteraction()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetAnimaInfo
+---======================================================================
+--- Returns:
+--- @return number currencyID : CurrencyID - Seems to return 1813
+--- @return number maxDisplayableValue
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetAnimaInfo
+---
+--- Usage: currencyID, maxDisplayableValue = C_CovenantSanctumUI.GetAnimaInfo()
+---
+-- function C_CovenantSanctumUI.GetAnimaInfo()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetCurrentTalentTreeID
+---======================================================================
+--- Returns:
+--- @return number currentTalentTreeID ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetCurrentTalentTreeID
+---
+--- Usage: currentTalentTreeID = C_CovenantSanctumUI.GetCurrentTalentTreeID()
+---
+-- function C_CovenantSanctumUI.GetCurrentTalentTreeID()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetFeatures
+---======================================================================
+--- Returns:
+--- @return CovenantSanctumFeatureInfo features []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetFeatures
+---
+--- Usage: features = C_CovenantSanctumUI.GetFeatures()
+---
+-- function C_CovenantSanctumUI.GetFeatures()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetRenownLevel
+---======================================================================
+--- Get Renown level for currently active covenant.
+---
+--- Returns:
+--- @return number level
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownLevel
+---
+--- Usage: level = C_CovenantSanctumUI.GetRenownLevel()
+---
+-- function C_CovenantSanctumUI.GetRenownLevel()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetRenownLevels
+---======================================================================
+--- Arguments:
+--- @param covenantID Enum.CovenantType
+---
+--- Returns:
+--- @return CovenantSanctumRenownLevelInfo levels []
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownLevels
+---
+--- Usage: levels = C_CovenantSanctumUI.GetRenownLevels(covenantID)
+---
+-- function C_CovenantSanctumUI.GetRenownLevels()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetRenownRewardsForLevel
+---======================================================================
+--- Arguments:
+--- @param covenantID Enum.CovenantType
+---
+--- Returns:
+--- @return CovenantSanctumRenownRewardInfo rewards []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownRewardsForLevel
+---
+--- Usage: rewards = C_CovenantSanctumUI.GetRenownRewardsForLevel(covenantID, renownLevel)
+---
+-- function C_CovenantSanctumUI.GetRenownRewardsForLevel()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetSanctumType
+---======================================================================
+--- Returns:
+--- @return Enum.GarrTalentFeatureSubtype sanctumType ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetSanctumType
+---
+--- Usage: sanctumType = C_CovenantSanctumUI.GetSanctumType()
+---
+-- function C_CovenantSanctumUI.GetSanctumType()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.GetSoulCurrencies
+---======================================================================
+--- Returns:
+--- @return number currencyIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetSoulCurrencies
+---
+--- Usage: currencyIDs = C_CovenantSanctumUI.GetSoulCurrencies()
+---
+-- function C_CovenantSanctumUI.GetSoulCurrencies()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.HasMaximumRenown
+---======================================================================
+--- Returns:
+--- @return boolean hasMaxRenown
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.HasMaximumRenown
+---
+--- Usage: hasMaxRenown = C_CovenantSanctumUI.HasMaximumRenown()
+---
+-- function C_CovenantSanctumUI.HasMaximumRenown()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode
+---======================================================================
+--- Returns:
+--- @return boolean isInCatchUpMode
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode
+---
+--- Usage: isInCatchUpMode = C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode()
+---
+-- function C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.IsWeeklyRenownCapped
+---======================================================================
+--- Returns:
+--- @return boolean isWeeklyCapped
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.IsWeeklyRenownCapped
+---
+--- Usage: isWeeklyCapped = C_CovenantSanctumUI.IsWeeklyRenownCapped()
+---
+-- function C_CovenantSanctumUI.IsWeeklyRenownCapped()
+-- end
+
+---======================================================================
+--- C_CovenantSanctumUI.RequestCatchUpState
+---======================================================================
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.RequestCatchUpState
+---
+--- Usage: C_CovenantSanctumUI.RequestCatchUpState()
+---
+-- function C_CovenantSanctumUI.RequestCatchUpState()
+-- end

@@ -1,0 +1,114 @@
+--[=[
+-- C_MerchantFrame API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_MerchantFrame
+--- C_MerchantFrame namespace contains 6 functions
+local C_MerchantFrame = {}
+
+--[=[
+-- C_MerchantFrame Functions:
+-- - C_MerchantFrame.GetBuybackItemID
+-- - C_MerchantFrame.GetItemInfo
+-- - C_MerchantFrame.GetNumJunkItems
+-- - C_MerchantFrame.IsMerchantItemRefundable
+-- - C_MerchantFrame.IsSellAllJunkEnabled
+-- - C_MerchantFrame.SellAllJunkItems
+--]=]
+
+---======================================================================
+--- C_MerchantFrame.GetBuybackItemID
+---======================================================================
+--- Arguments:
+--- @param buybackSlotIndex number
+---
+--- Returns:
+--- @return number buybackItemID
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.GetBuybackItemID
+---
+--- Usage: buybackItemID = C_MerchantFrame.GetBuybackItemID(buybackSlotIndex)
+---
+-- function C_MerchantFrame.GetBuybackItemID()
+-- end
+
+---======================================================================
+--- C_MerchantFrame.GetItemInfo
+---======================================================================
+--- Returns info for a merchant item.
+---
+--- Arguments:
+--- @param index number : luaIndex - The index of the item in the merchant's inventory
+---
+--- Returns:
+--- @return MerchantItemInfo info []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added isPurchasable.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.GetItemInfo
+---
+--- Usage: info = C_MerchantFrame.GetItemInfo(index)
+---
+--- See also:
+--- - GetMerchantItemCostInfo
+---
+-- function C_MerchantFrame.GetItemInfo()
+-- end
+
+---======================================================================
+--- C_MerchantFrame.GetNumJunkItems
+---======================================================================
+--- Returns:
+--- @return number numJunkItems
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.GetNumJunkItems
+---
+--- Usage: numJunkItems = C_MerchantFrame.GetNumJunkItems()
+---
+-- function C_MerchantFrame.GetNumJunkItems()
+-- end
+
+---======================================================================
+--- C_MerchantFrame.IsMerchantItemRefundable
+---======================================================================
+--- Returns if an item is refundable.
+---
+--- Arguments:
+--- @param index number - merchant item index, up to MERCHANT_ITEMS_PER_PAGE (10).
+---
+--- Returns:
+--- @return boolean refundable
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.IsMerchantItemRefundable
+---
+--- Usage: refundable = C_MerchantFrame.IsMerchantItemRefundable(index)
+---
+-- function C_MerchantFrame.IsMerchantItemRefundable()
+-- end
+
+---======================================================================
+--- C_MerchantFrame.IsSellAllJunkEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.IsSellAllJunkEnabled
+---
+--- Usage: enabled = C_MerchantFrame.IsSellAllJunkEnabled()
+---
+-- function C_MerchantFrame.IsSellAllJunkEnabled()
+-- end
+
+---======================================================================
+--- C_MerchantFrame.SellAllJunkItems
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.SellAllJunkItems
+---
+--- Usage: C_MerchantFrame.SellAllJunkItems()
+---
+-- function C_MerchantFrame.SellAllJunkItems()
+-- end

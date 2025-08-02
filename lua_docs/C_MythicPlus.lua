@@ -1,0 +1,364 @@
+--[=[
+-- C_MythicPlus API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 21
+--]=]
+
+--- @class C_MythicPlus
+--- C_MythicPlus namespace contains 21 functions
+local C_MythicPlus = {}
+
+--[=[
+-- C_MythicPlus Functions:
+-- - C_MythicPlus.GetCurrentAffixes
+-- - C_MythicPlus.GetCurrentSeason
+-- - C_MythicPlus.GetCurrentSeasonValues
+-- - C_MythicPlus.GetCurrentUIDisplaySeason
+-- - C_MythicPlus.GetEndOfRunGearSequenceLevel
+-- - C_MythicPlus.GetLastWeeklyBestInformation
+-- - C_MythicPlus.GetOwnedKeystoneChallengeMapID
+-- - C_MythicPlus.GetOwnedKeystoneLevel
+-- - C_MythicPlus.GetOwnedKeystoneMapID
+-- - C_MythicPlus.GetRewardLevelForDifficultyLevel
+-- - C_MythicPlus.GetRewardLevelFromKeystoneLevel
+-- - C_MythicPlus.GetRunHistory
+-- - C_MythicPlus.GetSeasonBestAffixScoreInfoForMap
+-- - C_MythicPlus.GetSeasonBestForMap
+-- - C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion
+-- - C_MythicPlus.GetWeeklyBestForMap
+-- - C_MythicPlus.GetWeeklyChestRewardLevel
+-- - C_MythicPlus.IsMythicPlusActive
+-- - C_MythicPlus.RequestCurrentAffixes
+-- - C_MythicPlus.RequestMapInfo
+-- - C_MythicPlus.RequestRewards
+--]=]
+
+---======================================================================
+--- C_MythicPlus.GetCurrentAffixes
+---======================================================================
+--- Returns a table listing the current AffixIDs that are available this week.
+---
+--- Returns:
+--- @return MythicPlusKeystoneAffix affixIDs []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetCurrentAffixes
+---
+--- Usage: affixIDs = C_MythicPlus.GetCurrentAffixes()
+---
+-- function C_MythicPlus.GetCurrentAffixes()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetCurrentSeason
+---======================================================================
+--- Returns the current Mythic Plus season.
+---
+--- Returns:
+--- @return number seasonID
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetCurrentSeason
+---
+--- Usage: seasonID = C_MythicPlus.GetCurrentSeason()
+---
+-- function C_MythicPlus.GetCurrentSeason()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetCurrentSeasonValues
+---======================================================================
+--- Returns:
+--- @return number displaySeasonID
+--- @return number milestoneSeasonID
+--- @return number rewardSeasonID
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetCurrentSeasonValues
+---
+--- Usage: displaySeasonID, milestoneSeasonID, rewardSeasonID = C_MythicPlus.GetCurrentSeasonValues()
+---
+-- function C_MythicPlus.GetCurrentSeasonValues()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetCurrentUIDisplaySeason
+---======================================================================
+--- Returns:
+--- @return number seasonID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetCurrentUIDisplaySeason
+---
+--- Usage: seasonID = C_MythicPlus.GetCurrentUIDisplaySeason()
+---
+-- function C_MythicPlus.GetCurrentUIDisplaySeason()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetEndOfRunGearSequenceLevel
+---======================================================================
+--- Arguments:
+--- @param keystoneLevel number
+---
+--- Returns:
+--- @return number sequenceLevel ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetEndOfRunGearSequenceLevel
+---
+--- Usage: sequenceLevel = C_MythicPlus.GetEndOfRunGearSequenceLevel(keystoneLevel)
+---
+-- function C_MythicPlus.GetEndOfRunGearSequenceLevel()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetLastWeeklyBestInformation
+---======================================================================
+--- Returns:
+--- @return number challengeMapId
+--- @return number level
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation
+---
+--- Usage: challengeMapId, level = C_MythicPlus.GetLastWeeklyBestInformation()
+---
+-- function C_MythicPlus.GetLastWeeklyBestInformation()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetOwnedKeystoneChallengeMapID
+---======================================================================
+--- Returns:
+--- @return number challengeMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetOwnedKeystoneChallengeMapID
+---
+--- Usage: challengeMapID = C_MythicPlus.GetOwnedKeystoneChallengeMapID()
+---
+-- function C_MythicPlus.GetOwnedKeystoneChallengeMapID()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetOwnedKeystoneLevel
+---======================================================================
+--- Returns:
+--- @return number keyStoneLevel
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetOwnedKeystoneLevel
+---
+--- Usage: keyStoneLevel = C_MythicPlus.GetOwnedKeystoneLevel()
+---
+-- function C_MythicPlus.GetOwnedKeystoneLevel()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetOwnedKeystoneMapID
+---======================================================================
+--- Returns:
+--- @return number mapID
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetOwnedKeystoneMapID
+---
+--- Usage: mapID = C_MythicPlus.GetOwnedKeystoneMapID()
+---
+-- function C_MythicPlus.GetOwnedKeystoneMapID()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetRewardLevelForDifficultyLevel
+---======================================================================
+--- Arguments:
+--- @param difficultyLevel number
+---
+--- Returns:
+--- @return number weeklyRewardLevel
+--- @return number endOfRunRewardLevel
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetRewardLevelForDifficultyLevel
+---
+--- Usage: weeklyRewardLevel, endOfRunRewardLevel = C_MythicPlus.GetRewardLevelForDifficultyLevel(difficultyLevel)
+---
+-- function C_MythicPlus.GetRewardLevelForDifficultyLevel()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetRewardLevelFromKeystoneLevel
+---======================================================================
+--- Arguments:
+--- @param keystoneLevel number
+---
+--- Returns:
+--- @return number rewardLevel ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetRewardLevelFromKeystoneLevel
+---
+--- Usage: rewardLevel = C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel)
+---
+-- function C_MythicPlus.GetRewardLevelFromKeystoneLevel()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetRunHistory
+---======================================================================
+--- Arguments:
+--- @param includePreviousWeeks boolean ? = false
+--- @param includeIncompleteRuns boolean ? = false
+---
+--- Returns:
+--- @return MythicPlusRunInfo runs []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added runScore field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetRunHistory
+---
+--- Usage: runs = C_MythicPlus.GetRunHistory([includePreviousWeeks, includeIncompleteRuns])
+---
+-- function C_MythicPlus.GetRunHistory()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetSeasonBestAffixScoreInfoForMap
+---======================================================================
+--- Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.
+---
+--- Arguments:
+--- @param mapChallengeModeID number : MapChallengeMode.ID
+---
+--- Returns:
+--- @return MythicPlusAffixScoreInfo affixScores []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetSeasonBestAffixScoreInfoForMap
+---
+--- Usage: affixScores, bestOverAllScore = C_MythicPlus.GetSeasonBestAffixScoreInfoForMap(mapChallengeModeID)
+---
+--- See also:
+--- - Mythic Plus Score Computation
+---
+-- function C_MythicPlus.GetSeasonBestAffixScoreInfoForMap()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetSeasonBestForMap
+---======================================================================
+--- Returns your best intime and overtime runs of the season, irrespective of the run's affix, or the current week's affix.
+---
+--- Arguments:
+--- @param mapChallengeModeID number : MapChallengeMode.ID
+---
+--- Returns:
+--- @return MapSeasonBestInfo intimeInfo ? - your highest rating run, that was completed in time. Nil if you've not completed any run in time this season.
+--- @return MapSeasonBestInfo overtimeInfo ? - your highest rating run, that was not completed in time. Nil if you've only ever completed runs in time this season.
+---
+--- @since Patch 9.1.0 (2021-06-29): Added dungeonScore field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetSeasonBestForMap
+---
+--- Usage: intimeInfo, overtimeInfo = C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID)
+---
+-- function C_MythicPlus.GetSeasonBestForMap()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion
+---======================================================================
+--- Returns:
+--- @return number bestSeasonScore
+--- @return number bestSeason
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion
+---
+--- Usage: bestSeasonScore, bestSeason = C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion()
+---
+-- function C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetWeeklyBestForMap
+---======================================================================
+--- Arguments:
+--- @param mapChallengeModeID number : MapChallengeMode.ID
+---
+--- Returns:
+--- @return number durationSec
+--- @return number level
+--- @return MythicPlusDate completionDate
+---
+--- @since Patch 9.1.0 (2021-06-29): Added dungeonScore return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetWeeklyBestForMap
+---
+--- Usage: durationSec, level, completionDate, affixIDs, members, dungeonScore = C_MythicPlus.GetWeeklyBestForMap(mapChallengeModeID)
+---
+-- function C_MythicPlus.GetWeeklyBestForMap()
+-- end
+
+---======================================================================
+--- C_MythicPlus.GetWeeklyChestRewardLevel
+---======================================================================
+--- Returns:
+--- @return number currentWeekBestLevel
+--- @return number weeklyRewardLevel
+--- @return number nextDifficultyWeeklyRewardLevel
+--- @return number nextBestLevel
+---
+--- @since Patch 8.1.0 (2018-12-11): Added nextBestLevel return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetWeeklyChestRewardLevel
+---
+--- Usage: currentWeekBestLevel, weeklyRewardLevel, nextDifficultyWeeklyRewardLevel, nextBestLevel = C_MythicPlus.GetWeeklyChestRewardLevel()
+---
+-- function C_MythicPlus.GetWeeklyChestRewardLevel()
+-- end
+
+---======================================================================
+--- C_MythicPlus.IsMythicPlusActive
+---======================================================================
+--- Returns:
+--- @return boolean isMythicPlusActive
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.IsMythicPlusActive
+---
+--- Usage: isMythicPlusActive = C_MythicPlus.IsMythicPlusActive()
+---
+-- function C_MythicPlus.IsMythicPlusActive()
+-- end
+
+---======================================================================
+--- C_MythicPlus.RequestCurrentAffixes
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.RequestCurrentAffixes
+---
+--- Usage: C_MythicPlus.RequestCurrentAffixes()
+---
+-- function C_MythicPlus.RequestCurrentAffixes()
+-- end
+
+---======================================================================
+--- C_MythicPlus.RequestMapInfo
+---======================================================================
+--- Loads various information to allow corresponding C_MythicPlus functions to return valid values.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.RequestMapInfo
+---
+--- Usage: C_MythicPlus.RequestMapInfo()
+---
+-- function C_MythicPlus.RequestMapInfo()
+-- end
+
+---======================================================================
+--- C_MythicPlus.RequestRewards
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MythicPlus.RequestRewards
+---
+--- Usage: C_MythicPlus.RequestRewards()
+---
+-- function C_MythicPlus.RequestRewards()
+-- end

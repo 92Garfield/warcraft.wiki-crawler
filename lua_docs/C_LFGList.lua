@@ -1,0 +1,991 @@
+--[=[
+-- C_LFGList API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 56
+--]=]
+
+--- @class C_LFGList
+--- C_LFGList namespace contains 56 functions
+local C_LFGList = {}
+
+--[=[
+-- C_LFGList Functions:
+-- - C_LFGList.ApplyToGroup
+-- - C_LFGList.CanActiveEntryUseAutoAccept
+-- - C_LFGList.CanCreateQuestGroup
+-- - C_LFGList.CanCreateScenarioGroup
+-- - C_LFGList.ClearApplicationTextFields
+-- - C_LFGList.ClearCreationTextFields
+-- - C_LFGList.ClearSearchResults
+-- - C_LFGList.ClearSearchTextFields
+-- - C_LFGList.CopyActiveEntryInfoToCreationFields
+-- - C_LFGList.CreateListing
+-- - C_LFGList.CreateScenarioListing
+-- - C_LFGList.DoesEntryTitleMatchPrebuiltTitle
+-- - C_LFGList.GetActiveEntryInfo
+-- - C_LFGList.GetActivityFullName
+-- - C_LFGList.GetActivityGroupInfo
+-- - C_LFGList.GetActivityInfoExpensive
+-- - C_LFGList.GetActivityInfoTable
+-- - C_LFGList.GetAdvancedFilter
+-- - C_LFGList.GetApplicantBestDungeonScore
+-- - C_LFGList.GetApplicantDungeonScoreForListing
+-- - C_LFGList.GetApplicantInfo
+-- - C_LFGList.GetApplicantMemberInfo
+-- - C_LFGList.GetApplicantMemberStats
+-- - C_LFGList.GetApplicantPvpRatingInfoForListing
+-- - C_LFGList.GetApplicants
+-- - C_LFGList.GetAvailableActivities
+-- - C_LFGList.GetAvailableActivityGroups
+-- - C_LFGList.GetAvailableCategories
+-- - C_LFGList.GetFilteredSearchResults
+-- - C_LFGList.GetGroupLeaverCountsByRole
+-- - C_LFGList.GetKeystoneForActivity
+-- - C_LFGList.GetLfgCategoryInfo
+-- - C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel
+-- - C_LFGList.GetPlaystyleString
+-- - C_LFGList.GetPremadeGroupFinderStyle
+-- - C_LFGList.GetSearchResultFriends
+-- - C_LFGList.GetSearchResultInfo
+-- - C_LFGList.GetSearchResultLeaderInfo
+-- - C_LFGList.GetSearchResultPlayerInfo
+-- - C_LFGList.GetSearchResults
+-- - C_LFGList.HasActiveEntryInfo
+-- - C_LFGList.HasSearchResultInfo
+-- - C_LFGList.InviteApplicant
+-- - C_LFGList.IsPlayerAuthenticatedForLFG
+-- - C_LFGList.IsPremadeGroupFinderEnabled
+-- - C_LFGList.RemoveListing
+-- - C_LFGList.RequestAvailableActivities
+-- - C_LFGList.SaveAdvancedFilter
+-- - C_LFGList.Search
+-- - C_LFGList.SetEntryTitle
+-- - C_LFGList.SetSearchToActivity
+-- - C_LFGList.SetSearchToQuestID
+-- - C_LFGList.SetSearchToScenarioID
+-- - C_LFGList.UpdateListing
+-- - C_LFGList.ValidateRequiredDungeonScore
+-- - C_LFGList.ValidateRequiredPvpRatingForActivity
+--]=]
+
+---======================================================================
+--- C_LFGList.ApplyToGroup
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param resultID number
+--- @param tankOK boolean ?
+--- @param healerOK boolean ?
+--- @param damageOK boolean ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Hardware event protected [1].
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ApplyToGroup
+---
+--- Usage: C_LFGList.ApplyToGroup(resultID [, tankOK, healerOK, damageOK])
+---
+-- function C_LFGList.ApplyToGroup()
+-- end
+
+---======================================================================
+--- C_LFGList.CanActiveEntryUseAutoAccept
+---======================================================================
+--- Returns:
+--- @return boolean canUseAutoAccept
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CanActiveEntryUseAutoAccept
+---
+--- Usage: canUseAutoAccept = C_LFGList.CanActiveEntryUseAutoAccept()
+---
+-- function C_LFGList.CanActiveEntryUseAutoAccept()
+-- end
+
+---======================================================================
+--- C_LFGList.CanCreateQuestGroup
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean canCreate
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CanCreateQuestGroup
+---
+--- Usage: canCreate = C_LFGList.CanCreateQuestGroup(questID)
+---
+-- function C_LFGList.CanCreateQuestGroup()
+-- end
+
+---======================================================================
+--- C_LFGList.CanCreateScenarioGroup
+---======================================================================
+--- Arguments:
+--- @param scenarioID number
+---
+--- Returns:
+--- @return boolean canCreate
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CanCreateScenarioGroup
+---
+--- Usage: canCreate = C_LFGList.CanCreateScenarioGroup(scenarioID)
+---
+-- function C_LFGList.CanCreateScenarioGroup()
+-- end
+
+---======================================================================
+--- C_LFGList.ClearApplicationTextFields
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearApplicationTextFields
+---
+--- Usage: C_LFGList.ClearApplicationTextFields()
+---
+-- function C_LFGList.ClearApplicationTextFields()
+-- end
+
+---======================================================================
+--- C_LFGList.ClearCreationTextFields
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearCreationTextFields
+---
+--- Usage: C_LFGList.ClearCreationTextFields()
+---
+-- function C_LFGList.ClearCreationTextFields()
+-- end
+
+---======================================================================
+--- C_LFGList.ClearSearchResults
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 7.2.0 (2017-03-28): Hardware event protected [1].
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearSearchResults
+---
+--- Usage: C_LFGList.ClearSearchResults()
+---
+-- function C_LFGList.ClearSearchResults()
+-- end
+
+---======================================================================
+--- C_LFGList.ClearSearchTextFields
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearSearchTextFields
+---
+--- Usage: C_LFGList.ClearSearchTextFields()
+---
+-- function C_LFGList.ClearSearchTextFields()
+-- end
+
+---======================================================================
+--- C_LFGList.CopyActiveEntryInfoToCreationFields
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields
+---
+--- Usage: C_LFGList.CopyActiveEntryInfoToCreationFields()
+---
+-- function C_LFGList.CopyActiveEntryInfoToCreationFields()
+-- end
+
+---======================================================================
+--- C_LFGList.CreateListing
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param createData LfgListingCreateData
+---
+--- Returns:
+--- @return boolean success - Generally returns true if there was a valid group title.
+---
+--- @since Patch 11.1.0 (2025-02-25): Now returns a structured table.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateListing
+---
+--- Usage: success = C_LFGList.CreateListing(createData)
+---
+-- function C_LFGList.CreateListing()
+-- end
+
+---======================================================================
+--- C_LFGList.CreateScenarioListing
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param itemLevel number
+--- @param autoAccept boolean
+--- @param privateGroup boolean
+--- @param scenarioID number
+---
+--- Returns:
+--- @return boolean canCreate
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateScenarioListing
+---
+--- Usage: canCreate = C_LFGList.CreateScenarioListing(activityID, itemLevel, autoAccept, privateGroup, scenarioID)
+---
+-- function C_LFGList.CreateScenarioListing()
+-- end
+
+---======================================================================
+--- C_LFGList.DoesEntryTitleMatchPrebuiltTitle
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param groupID number
+--- @param playstyle Enum.LFGEntryPlaystyle ?
+---
+--- Returns:
+--- @return boolean matches
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle
+---
+--- Usage: matches = C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID [, playstyle])
+---
+-- function C_LFGList.DoesEntryTitleMatchPrebuiltTitle()
+-- end
+
+---======================================================================
+--- C_LFGList.GetActiveEntryInfo
+---======================================================================
+--- Returns information about your currently listed group.
+---
+--- Returns:
+--- @return LfgEntryData entryData
+---
+--- @since Patch 10.2.7 (2024-05-07): Changed activityID return value to activityIDs.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActiveEntryInfo
+---
+--- Usage: entryData = C_LFGList.GetActiveEntryInfo()
+---
+-- function C_LFGList.GetActiveEntryInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetActivityFullName
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param questID number ?
+--- @param showWarmode boolean ?
+---
+--- Returns:
+--- @return string fullName
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityFullName
+---
+--- Usage: fullName = C_LFGList.GetActivityFullName(activityID [, questID, showWarmode])
+---
+-- function C_LFGList.GetActivityFullName()
+-- end
+
+---======================================================================
+--- C_LFGList.GetActivityGroupInfo
+---======================================================================
+--- Returns info for an activity group.
+---
+--- Arguments:
+--- @param groupID number - The groupID for which information are requested, as returned by C_LFGList.GetAvailableActivityGroups().
+---
+--- Returns:
+--- @return string name - Name of the group.
+--- @return number groupOrder - ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityGroupInfo
+---
+--- Usage: name, groupOrder = C_LFGList.GetActivityGroupInfo(groupID)
+---
+-- function C_LFGList.GetActivityGroupInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetActivityInfoExpensive
+---======================================================================
+--- Returns the zone associated with an activity.
+---
+--- Arguments:
+--- @param activityID number - The activityID for which information are requested, as returned by C_LFGList.GetAvailableActivities().
+---
+--- Returns:
+--- @return boolean currentArea - True if you are in the zone of the activity, false otherwise.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityInfoExpensive
+---
+--- Usage: currentArea = C_LFGList.GetActivityInfoExpensive(activityID)
+---
+-- function C_LFGList.GetActivityInfoExpensive()
+-- end
+
+---======================================================================
+--- C_LFGList.GetActivityInfoTable
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param questID number ?
+--- @param showWarmode boolean ?
+---
+--- Returns:
+--- @return GroupFinderActivityInfo activityInfo
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityInfoTable
+---
+--- Usage: activityInfo = C_LFGList.GetActivityInfoTable(activityID [, questID, showWarmode])
+---
+-- function C_LFGList.GetActivityInfoTable()
+-- end
+
+---======================================================================
+--- C_LFGList.GetAdvancedFilter
+---======================================================================
+--- Returns:
+--- @return AdvancedFilterOptions options
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAdvancedFilter
+---
+--- Usage: options = C_LFGList.GetAdvancedFilter()
+---
+-- function C_LFGList.GetAdvancedFilter()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantBestDungeonScore
+---======================================================================
+--- Arguments:
+--- @param localID number
+--- @param applicantIndex number
+---
+--- Returns:
+--- @return BestDungeonScoreMapInfo bestDungeonScoreForListing
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantBestDungeonScore
+---
+--- Usage: bestDungeonScoreForListing = C_LFGList.GetApplicantBestDungeonScore(localID, applicantIndex)
+---
+-- function C_LFGList.GetApplicantBestDungeonScore()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantDungeonScoreForListing
+---======================================================================
+--- Arguments:
+--- @param localID number
+--- @param applicantIndex number
+--- @param activityID number
+---
+--- Returns:
+--- @return BestDungeonScoreMapInfo bestDungeonScoreForListing
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantDungeonScoreForListing
+---
+--- Usage: bestDungeonScoreForListing = C_LFGList.GetApplicantDungeonScoreForListing(localID, applicantIndex, activityID)
+---
+-- function C_LFGList.GetApplicantDungeonScoreForListing()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantInfo
+---======================================================================
+--- Returns status informations and custom message of an applicant.
+---
+--- Arguments:
+--- @param applicantID number - Ascending number of applicants since creation of the activity.
+---
+--- Returns:
+--- @return LfgApplicantData applicantData
+---
+--- @since Patch 8.1.0 (2018-12-11): Return parameters changed to structure.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantInfo
+---
+--- Usage: applicantData = C_LFGList.GetApplicantInfo(applicantID)
+---
+-- function C_LFGList.GetApplicantInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantMemberInfo
+---======================================================================
+--- Returns info for an applicant.
+---
+--- Arguments:
+--- @param applicantID number - ascending number of applicants since creation of the activity returned by C_LFGList.GetApplicants()
+--- @param memberIndex number - iteration of C_LFGList.GetApplicants() argument #4 (numMembers)
+---
+--- Returns:
+--- @return string 1. name - Character name and realm
+--- @return string 2. class - english class name (uppercase)
+--- @return string 3. localizedClass - localized class name
+--- @return number 4. level
+--- @return number 5. itemLevel
+--- @return number 6. honorLevel
+--- @return boolean 7. tank - true if applicant offer tank role
+--- @return boolean 8. healer - true if applicant offer healer role
+--- @return boolean 9. damage - true if applicant offer damage role
+--- @return string 10. assignedRole - english role name (uppercase)
+--- @return boolean 11. relationship ? - true if a friend otherwise nil
+--- @return number 12. dungeonScore
+--- @return number 13. pvpItemLevel
+---
+--- @since Patch 9.1.5 (2021-11-02): Added pvpItemLevel
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantMemberInfo
+---
+--- Usage: name, class, localizedClass, level, itemLevel, honorLevel, tank, healer, damage, assignedRole, relationship, dungeonScore, pvpItemLevel = C_LFGList.GetApplicantMemberInfo(applicantID, memberIndex)
+---
+-- function C_LFGList.GetApplicantMemberInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantMemberStats
+---======================================================================
+--- Returns the Proving Grounds stats of an applicant.
+---
+--- Arguments:
+--- @param applicantID number - ascending number of applicants since creation of the activity returned by C_LFGList.GetApplicants()
+--- @param memberIndex number - iteration of C_LFGList.GetApplicants() argument #4 (numMembers)
+---
+--- Returns:
+--- @return table stats
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantMemberStats
+---
+--- Usage: stats = C_LFGList.GetApplicantMemberStats(applicantID, memberIndex)
+---
+--- See also:
+--- - C_LFGList.GetApplicants
+--- - C_LFGList.GetApplicantMemberInfo
+---
+-- function C_LFGList.GetApplicantMemberStats()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicantPvpRatingInfoForListing
+---======================================================================
+--- Arguments:
+--- @param localID number
+--- @param applicantIndex number
+--- @param activityID number
+---
+--- Returns:
+--- @return PvpRatingInfo pvpRatingInfo
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantPvpRatingInfoForListing
+---
+--- Usage: pvpRatingInfo = C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, activityID)
+---
+-- function C_LFGList.GetApplicantPvpRatingInfoForListing()
+-- end
+
+---======================================================================
+--- C_LFGList.GetApplicants
+---======================================================================
+--- Returns the list of applicants to your group.
+---
+--- Returns:
+--- @return table applicants - a simple table with applicantIDs (numbers)
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicants
+---
+--- Usage: applicants = C_LFGList.GetApplicants()
+---
+-- function C_LFGList.GetApplicants()
+-- end
+
+---======================================================================
+--- C_LFGList.GetAvailableActivities
+---======================================================================
+--- Returns a list of available LFG activities.
+---
+--- Arguments:
+--- @param categoryID number ? - Use to only get activityIDs associated with a specific category. Use C_LFGList.GetAvailableCategories() to get a list of all available categoryIDs. If omitted the function returns activities of all categories.
+--- @param groupID number ? - Use to only get activityIDs associated with a specific group. See C_LFGList.GetActivityGroupInfo for more information. If omitted the function returns activities of all groups.
+--- @param filter number ? - Bit mask to filter the results. See C_LFGList.GetActivityInfo for more information.
+---
+--- Returns:
+--- @return table activities - A table containing the requested activityIDs (not in order).
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableActivities
+---
+--- Usage: activities = C_LFGList.GetAvailableActivities([categoryID [, groupID [, filter]]])
+---
+-- function C_LFGList.GetAvailableActivities()
+-- end
+
+---======================================================================
+--- C_LFGList.GetAvailableActivityGroups
+---======================================================================
+--- Returns a list of available LFG groups.
+---
+--- Arguments:
+--- @param categoryID number - The categoryID of the category you want to get available groups of. Use C_LFGList.GetAvailableCategories() to get a list of all available categoryIDs.
+--- @param filter number ? = 0 - Bit mask to filter the results. See C_LFGList.GetActivityInfo for more information.
+---
+--- Returns:
+--- @return number activityIDs [] - A table containing the requested groupIDs (not in order).
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableActivityGroups
+---
+--- Usage: activityIDs = C_LFGList.GetAvailableActivityGroups(categoryID [, filter])
+---
+-- function C_LFGList.GetAvailableActivityGroups()
+-- end
+
+---======================================================================
+--- C_LFGList.GetAvailableCategories
+---======================================================================
+--- Returns a list of available LFG categories.
+---
+--- Arguments:
+--- @param filter number ? - Bit mask to filter the results. If omitted the function returns all categories. See C_LFGList.GetActivityInfo for more information.
+---
+--- Returns:
+--- @return table categories - A table containing the requested categoryIDs (not in order).
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableCategories
+---
+--- Usage: categories = C_LFGList.GetAvailableCategories([filter])
+---
+-- function C_LFGList.GetAvailableCategories()
+-- end
+
+---======================================================================
+--- C_LFGList.GetFilteredSearchResults
+---======================================================================
+--- Returns:
+--- @return number totalResultsFound ? = 0
+--- @return number filteredResults []
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetFilteredSearchResults
+---
+--- Usage: totalResultsFound, filteredResults = C_LFGList.GetFilteredSearchResults()
+---
+-- function C_LFGList.GetFilteredSearchResults()
+-- end
+
+---======================================================================
+--- C_LFGList.GetGroupLeaverCountsByRole
+---======================================================================
+--- Returns:
+--- @return number tankLeavers
+--- @return number healerLeavers
+--- @return number damageLeavers
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetGroupLeaverCountsByRole
+---
+--- Usage: tankLeavers, healerLeavers, damageLeavers = C_LFGList.GetGroupLeaverCountsByRole()
+---
+-- function C_LFGList.GetGroupLeaverCountsByRole()
+-- end
+
+---======================================================================
+--- C_LFGList.GetKeystoneForActivity
+---======================================================================
+--- Arguments:
+--- @param activityID number
+---
+--- Returns:
+--- @return number level
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetKeystoneForActivity
+---
+--- Usage: level = C_LFGList.GetKeystoneForActivity(activityID)
+---
+-- function C_LFGList.GetKeystoneForActivity()
+-- end
+
+---======================================================================
+--- C_LFGList.GetLfgCategoryInfo
+---======================================================================
+--- Arguments:
+--- @param categoryID number
+---
+--- Returns:
+--- @return LfgCategoryData categoryData
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetLfgCategoryInfo
+---
+--- Usage: categoryData = C_LFGList.GetLfgCategoryInfo(categoryID)
+---
+-- function C_LFGList.GetLfgCategoryInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel
+---======================================================================
+--- Arguments:
+--- @param getTimewalking boolean ? = false
+---
+--- Returns:
+--- @return number activityID
+--- @return number groupID
+--- @return number keystoneLevel
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel
+---
+--- Usage: activityID, groupID, keystoneLevel = C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel([getTimewalking])
+---
+-- function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel()
+-- end
+
+---======================================================================
+--- C_LFGList.GetPlaystyleString
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param playstyle Enum.LFGEntryPlaystyle
+---
+--- Returns:
+--- @return string playstyleString
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPlaystyleString
+---
+--- Usage: playstyleString = C_LFGList.GetPlaystyleString(playstyle, activityInfo)
+---
+-- function C_LFGList.GetPlaystyleString()
+-- end
+
+---======================================================================
+--- C_LFGList.GetPremadeGroupFinderStyle
+---======================================================================
+--- Returns:
+--- @return Enum.PremadeGroupFinderStyle style
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPremadeGroupFinderStyle
+---
+--- Usage: style = C_LFGList.GetPremadeGroupFinderStyle()
+---
+-- function C_LFGList.GetPremadeGroupFinderStyle()
+-- end
+
+---======================================================================
+--- C_LFGList.GetSearchResultFriends
+---======================================================================
+--- Returns 3 arrays of "related" member names for the given LFGList search result ID
+---
+--- Arguments:
+--- @param searchResultID number
+---
+--- Returns:
+--- @return string bnetFriends [] - table array of listing members that are Battle.Net friends with the user player.
+--- @return string charFriends [] - table array of listing members also in user player's character friends list.
+--- @return string guildMates [] - table array of listing members in the same guild as the user player.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultFriends
+---
+--- Usage: bnetFriends, charFriends, guildMates = C_LFGList.GetSearchResultFriends(searchResultID)
+---
+-- function C_LFGList.GetSearchResultFriends()
+-- end
+
+---======================================================================
+--- C_LFGList.GetSearchResultInfo
+---======================================================================
+--- Arguments:
+--- @param searchResultID number
+---
+--- Returns:
+--- @return LfgSearchResultData searchResultData
+---
+--- @since Patch 11.0.7 (2024-12-17): Changed activityID field to activityIDs.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultInfo
+---
+--- Usage: searchResultData = C_LFGList.GetSearchResultInfo(searchResultID)
+---
+-- function C_LFGList.GetSearchResultInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetSearchResultLeaderInfo
+---======================================================================
+--- Arguments:
+--- @param searchResultID number
+---
+--- Returns:
+--- @return LfgSearchResultPlayerInfo leaderInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultLeaderInfo
+---
+--- Usage: leaderInfo = C_LFGList.GetSearchResultLeaderInfo(searchResultID)
+---
+-- function C_LFGList.GetSearchResultLeaderInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetSearchResultPlayerInfo
+---======================================================================
+--- Arguments:
+--- @param searchResultID number
+--- @param memberIndex number
+---
+--- Returns:
+--- @return LfgSearchResultPlayerInfo playerInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultPlayerInfo
+---
+--- Usage: playerInfo = C_LFGList.GetSearchResultPlayerInfo(searchResultID, memberIndex)
+---
+-- function C_LFGList.GetSearchResultPlayerInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.GetSearchResults
+---======================================================================
+--- Returns a table of search result IDs.
+---
+--- Returns:
+--- @return number totalResultsFound ? = 0 - Total number of IDs inside results
+--- @return number results [] - Table of resultIDs
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResults
+---
+--- Usage: totalResultsFound, results = C_LFGList.GetSearchResults()
+---
+-- function C_LFGList.GetSearchResults()
+-- end
+
+---======================================================================
+--- C_LFGList.HasActiveEntryInfo
+---======================================================================
+--- Returns:
+--- @return boolean hasActiveEntryInfo
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.HasActiveEntryInfo
+---
+--- Usage: hasActiveEntryInfo = C_LFGList.HasActiveEntryInfo()
+---
+-- function C_LFGList.HasActiveEntryInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.HasSearchResultInfo
+---======================================================================
+--- Arguments:
+--- @param searchResultID number
+---
+--- Returns:
+--- @return boolean hasSearchResultInfo
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.HasSearchResultInfo
+---
+--- Usage: hasSearchResultInfo = C_LFGList.HasSearchResultInfo(searchResultID)
+---
+-- function C_LFGList.HasSearchResultInfo()
+-- end
+
+---======================================================================
+--- C_LFGList.InviteApplicant
+---======================================================================
+--- Invites a queued applicant to your group.
+---
+--- Arguments:
+--- @param applicantID number
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.InviteApplicant
+---
+--- Usage: C_LFGList.InviteApplicant(applicantID)
+---
+-- function C_LFGList.InviteApplicant()
+-- end
+
+---======================================================================
+--- C_LFGList.IsPlayerAuthenticatedForLFG
+---======================================================================
+--- Arguments:
+--- @param activityCategoryID number ? : GroupFinderActivity.ID
+---
+--- Returns:
+--- @return boolean isAuthenticated
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPlayerAuthenticatedForLFG
+---
+--- Usage: isAuthenticated = C_LFGList.IsPlayerAuthenticatedForLFG([activityCategoryID])
+---
+-- function C_LFGList.IsPlayerAuthenticatedForLFG()
+-- end
+
+---======================================================================
+--- C_LFGList.IsPremadeGroupFinderEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPremadeGroupFinderEnabled
+---
+--- Usage: enabled = C_LFGList.IsPremadeGroupFinderEnabled()
+---
+-- function C_LFGList.IsPremadeGroupFinderEnabled()
+-- end
+
+---======================================================================
+--- C_LFGList.RemoveListing
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 7.2.0 (2017-03-28): Hardware event protected [1].
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.RemoveListing
+---
+--- Usage: C_LFGList.RemoveListing()
+---
+-- function C_LFGList.RemoveListing()
+-- end
+
+---======================================================================
+--- C_LFGList.RequestAvailableActivities
+---======================================================================
+--- Signals the server to request that it send the client information about available activities.
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.RequestAvailableActivities
+---
+--- Usage: C_LFGList.RequestAvailableActivities()
+---
+-- function C_LFGList.RequestAvailableActivities()
+-- end
+
+---======================================================================
+--- C_LFGList.SaveAdvancedFilter
+---======================================================================
+--- Arguments:
+--- @param options AdvancedFilterOptions
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.SaveAdvancedFilter
+---
+--- Usage: C_LFGList.SaveAdvancedFilter(options)
+---
+-- function C_LFGList.SaveAdvancedFilter()
+-- end
+
+---======================================================================
+--- C_LFGList.Search
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param categoryID number
+--- @param filter Enum.LFGListFilter ? = 0 - Bitmask of one or more filter enum values.
+---
+--- @since Patch 11.0.7 (2024-12-17): Added activityIDsFilter argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.Search
+---
+--- Usage: C_LFGList.Search(categoryID [, filter [, preferredFilters [, languageFilter [, searchCrossFactionListings [, advancedFilter [, activityIDsFilter]]]]]])
+---
+-- function C_LFGList.Search()
+-- end
+
+---======================================================================
+--- C_LFGList.SetEntryTitle
+---======================================================================
+--- Arguments:
+--- @param activityID number : GroupFinderActivity.ID
+--- @param groupID number
+--- @param playstyle Enum.LFGEntryPlaystyle ?
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.SetEntryTitle
+---
+--- Usage: C_LFGList.SetEntryTitle(activityID, groupID [, playstyle])
+---
+-- function C_LFGList.SetEntryTitle()
+-- end
+
+---======================================================================
+--- C_LFGList.SetSearchToActivity
+---======================================================================
+--- Arguments:
+--- @param activityID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToActivity
+---
+--- Usage: C_LFGList.SetSearchToActivity(activityID)
+---
+-- function C_LFGList.SetSearchToActivity()
+-- end
+
+---======================================================================
+--- C_LFGList.SetSearchToQuestID
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToQuestID
+---
+--- Usage: C_LFGList.SetSearchToQuestID(questID)
+---
+-- function C_LFGList.SetSearchToQuestID()
+-- end
+
+---======================================================================
+--- C_LFGList.SetSearchToScenarioID
+---======================================================================
+--- Arguments:
+--- @param scenarioID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToScenarioID
+---
+--- Usage: C_LFGList.SetSearchToScenarioID(scenarioID)
+---
+-- function C_LFGList.SetSearchToScenarioID()
+-- end
+
+---======================================================================
+--- C_LFGList.UpdateListing
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.UpdateListing
+---
+-- function C_LFGList.UpdateListing()
+-- end
+
+---======================================================================
+--- C_LFGList.ValidateRequiredDungeonScore
+---======================================================================
+--- Arguments:
+--- @param dungeonScore number
+---
+--- Returns:
+--- @return boolean passes
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredDungeonScore
+---
+--- Usage: passes = C_LFGList.ValidateRequiredDungeonScore(dungeonScore)
+---
+-- function C_LFGList.ValidateRequiredDungeonScore()
+-- end
+
+---======================================================================
+--- C_LFGList.ValidateRequiredPvpRatingForActivity
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param rating number
+---
+--- Returns:
+--- @return boolean passes
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredPvpRatingForActivity
+---
+--- Usage: passes = C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating)
+---
+-- function C_LFGList.ValidateRequiredPvpRatingForActivity()
+-- end

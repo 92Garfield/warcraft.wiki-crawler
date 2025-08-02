@@ -1,0 +1,1388 @@
+--[=[
+-- C_TransmogCollection API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 80
+--]=]
+
+--- @class C_TransmogCollection
+--- C_TransmogCollection namespace contains 80 functions
+local C_TransmogCollection = {}
+
+--[=[
+-- C_TransmogCollection Functions:
+-- - C_TransmogCollection.AccountCanCollectSource
+-- - C_TransmogCollection.AreAllCollectionTypeFiltersChecked
+-- - C_TransmogCollection.AreAllSourceTypeFiltersChecked
+-- - C_TransmogCollection.CanAppearanceHaveIllusion
+-- - C_TransmogCollection.ClearNewAppearance
+-- - C_TransmogCollection.ClearSearch
+-- - C_TransmogCollection.DeleteOutfit
+-- - C_TransmogCollection.EndSearch
+-- - C_TransmogCollection.GetAllAppearanceSources
+-- - C_TransmogCollection.GetAllFactionsShown
+-- - C_TransmogCollection.GetAllRacesShown
+-- - C_TransmogCollection.GetAppearanceCameraID
+-- - C_TransmogCollection.GetAppearanceCameraIDBySource
+-- - C_TransmogCollection.GetAppearanceInfoBySource
+-- - C_TransmogCollection.GetAppearanceSourceDrops
+-- - C_TransmogCollection.GetAppearanceSourceInfo
+-- - C_TransmogCollection.GetAppearanceSources
+-- - C_TransmogCollection.GetArtifactAppearanceStrings
+-- - C_TransmogCollection.GetCategoryAppearances
+-- - C_TransmogCollection.GetCategoryCollectedCount
+-- - C_TransmogCollection.GetCategoryForItem
+-- - C_TransmogCollection.GetCategoryInfo
+-- - C_TransmogCollection.GetCategoryTotal
+-- - C_TransmogCollection.GetClassFilter
+-- - C_TransmogCollection.GetCollectedShown
+-- - C_TransmogCollection.GetFallbackWeaponAppearance
+-- - C_TransmogCollection.GetFilteredCategoryCollectedCount
+-- - C_TransmogCollection.GetFilteredCategoryTotal
+-- - C_TransmogCollection.GetIllusionInfo
+-- - C_TransmogCollection.GetIllusionStrings
+-- - C_TransmogCollection.GetIllusions
+-- - C_TransmogCollection.GetInspectItemTransmogInfoList
+-- - C_TransmogCollection.GetIsAppearanceFavorite
+-- - C_TransmogCollection.GetItemInfo
+-- - C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink
+-- - C_TransmogCollection.GetLatestAppearance
+-- - C_TransmogCollection.GetNumMaxOutfits
+-- - C_TransmogCollection.GetNumTransmogSources
+-- - C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList
+-- - C_TransmogCollection.GetOutfitInfo
+-- - C_TransmogCollection.GetOutfitItemTransmogInfoList
+-- - C_TransmogCollection.GetOutfits
+-- - C_TransmogCollection.GetPairedArtifactAppearance
+-- - C_TransmogCollection.GetSourceIcon
+-- - C_TransmogCollection.GetSourceInfo
+-- - C_TransmogCollection.GetSourceItemID
+-- - C_TransmogCollection.GetSourceRequiredHoliday
+-- - C_TransmogCollection.GetUncollectedShown
+-- - C_TransmogCollection.GetValidAppearanceSourcesForClass
+-- - C_TransmogCollection.HasFavorites
+-- - C_TransmogCollection.IsAppearanceHiddenVisual
+-- - C_TransmogCollection.IsCategoryValidForItem
+-- - C_TransmogCollection.IsNewAppearance
+-- - C_TransmogCollection.IsSearchDBLoading
+-- - C_TransmogCollection.IsSearchInProgress
+-- - C_TransmogCollection.IsSourceTypeFilterChecked
+-- - C_TransmogCollection.IsUsingDefaultFilters
+-- - C_TransmogCollection.ModifyOutfit
+-- - C_TransmogCollection.NewOutfit
+-- - C_TransmogCollection.PlayerCanCollectSource
+-- - C_TransmogCollection.PlayerHasTransmog
+-- - C_TransmogCollection.PlayerHasTransmogByItemInfo
+-- - C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance
+-- - C_TransmogCollection.PlayerKnowsSource
+-- - C_TransmogCollection.RenameOutfit
+-- - C_TransmogCollection.SearchProgress
+-- - C_TransmogCollection.SearchSize
+-- - C_TransmogCollection.SetAllCollectionTypeFilters
+-- - C_TransmogCollection.SetAllFactionsShown
+-- - C_TransmogCollection.SetAllRacesShown
+-- - C_TransmogCollection.SetAllSourceTypeFilters
+-- - C_TransmogCollection.SetClassFilter
+-- - C_TransmogCollection.SetCollectedShown
+-- - C_TransmogCollection.SetDefaultFilters
+-- - C_TransmogCollection.SetIsAppearanceFavorite
+-- - C_TransmogCollection.SetSearch
+-- - C_TransmogCollection.SetSearchAndFilterCategory
+-- - C_TransmogCollection.SetSourceTypeFilter
+-- - C_TransmogCollection.SetUncollectedShown
+-- - C_TransmogCollection.UpdateUsableAppearances
+--]=]
+
+---======================================================================
+--- C_TransmogCollection.AccountCanCollectSource
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return boolean hasItemData
+--- @return boolean canCollect
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.AccountCanCollectSource
+---
+--- Usage: hasItemData, canCollect = C_TransmogCollection.AccountCanCollectSource(sourceID)
+---
+-- function C_TransmogCollection.AccountCanCollectSource()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.AreAllCollectionTypeFiltersChecked
+---======================================================================
+--- Returns:
+--- @return boolean areAllCollectionTypeFiltersChecked
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.AreAllCollectionTypeFiltersChecked
+---
+--- Usage: areAllCollectionTypeFiltersChecked = C_TransmogCollection.AreAllCollectionTypeFiltersChecked()
+---
+-- function C_TransmogCollection.AreAllCollectionTypeFiltersChecked()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.AreAllSourceTypeFiltersChecked
+---======================================================================
+--- Returns:
+--- @return boolean areAllSourceTypeFiltersChecked
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.AreAllSourceTypeFiltersChecked
+---
+--- Usage: areAllSourceTypeFiltersChecked = C_TransmogCollection.AreAllSourceTypeFiltersChecked()
+---
+-- function C_TransmogCollection.AreAllSourceTypeFiltersChecked()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.CanAppearanceHaveIllusion
+---======================================================================
+--- Arguments:
+--- @param appearanceID number
+---
+--- Returns:
+--- @return boolean canHaveIllusion
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.CanAppearanceHaveIllusion
+---
+--- Usage: canHaveIllusion = C_TransmogCollection.CanAppearanceHaveIllusion(appearanceID)
+---
+-- function C_TransmogCollection.CanAppearanceHaveIllusion()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.ClearNewAppearance
+---======================================================================
+--- Arguments:
+--- @param visualID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added. Blizzard documented in 9.1.0
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.ClearNewAppearance
+---
+--- Usage: C_TransmogCollection.ClearNewAppearance(visualID)
+---
+-- function C_TransmogCollection.ClearNewAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.ClearSearch
+---======================================================================
+--- Arguments:
+--- @param searchType Enum.TransmogSearchType
+---
+--- Returns:
+--- @return boolean completed
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.ClearSearch
+---
+--- Usage: completed = C_TransmogCollection.ClearSearch(searchType)
+---
+-- function C_TransmogCollection.ClearSearch()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.DeleteOutfit
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.DeleteOutfit
+---
+--- Usage: C_TransmogCollection.DeleteOutfit(outfitID)
+---
+-- function C_TransmogCollection.DeleteOutfit()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.EndSearch
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.EndSearch
+---
+--- Usage: C_TransmogCollection.EndSearch()
+---
+-- function C_TransmogCollection.EndSearch()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAllAppearanceSources
+---======================================================================
+--- Arguments:
+--- @param itemAppearanceID number
+---
+--- Returns:
+--- @return number itemModifiedAppearanceIDs []
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAllAppearanceSources
+---
+--- Usage: itemModifiedAppearanceIDs = C_TransmogCollection.GetAllAppearanceSources(itemAppearanceID)
+---
+-- function C_TransmogCollection.GetAllAppearanceSources()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAllFactionsShown
+---======================================================================
+--- Returns:
+--- @return boolean shown
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAllFactionsShown
+---
+--- Usage: shown = C_TransmogCollection.GetAllFactionsShown()
+---
+-- function C_TransmogCollection.GetAllFactionsShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAllRacesShown
+---======================================================================
+--- Returns:
+--- @return boolean shown
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAllRacesShown
+---
+--- Usage: shown = C_TransmogCollection.GetAllRacesShown()
+---
+-- function C_TransmogCollection.GetAllRacesShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceCameraID
+---======================================================================
+--- Arguments:
+--- @param itemAppearanceID number
+--- @param variation Enum.TransmogCameraVariation ?
+---
+--- Returns:
+--- @return number cameraID
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceCameraID
+---
+--- Usage: cameraID = C_TransmogCollection.GetAppearanceCameraID(itemAppearanceID [, variation])
+---
+-- function C_TransmogCollection.GetAppearanceCameraID()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceCameraIDBySource
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+--- @param variation Enum.TransmogCameraVariation ?
+---
+--- Returns:
+--- @return number cameraID
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceCameraIDBySource
+---
+--- Usage: cameraID = C_TransmogCollection.GetAppearanceCameraIDBySource(itemModifiedAppearanceID [, variation])
+---
+-- function C_TransmogCollection.GetAppearanceCameraIDBySource()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceInfoBySource
+---======================================================================
+--- Returns information about the appearance tied to the given sourceID
+---
+--- Arguments:
+--- @param itemModifiedAppearanceID number : SourceID - 2nd return value from C_TransmogCollection.GetItemInfo()
+---
+--- Returns:
+--- @return TransmogAppearanceInfoBySourceData info
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceInfoBySource
+---
+--- Usage: info = C_TransmogCollection.GetAppearanceInfoBySource(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetAppearanceInfoBySource()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceSourceDrops
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return TransmogAppearanceJournalEncounterInfo encounterInfo []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceSourceDrops
+---
+--- Usage: encounterInfo = C_TransmogCollection.GetAppearanceSourceDrops(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetAppearanceSourceDrops()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceSourceInfo
+---======================================================================
+--- Returns appearance info for a transmog source.
+---
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return number categoryID : Enum.TransmogCollectionType
+--- @return number visualID
+--- @return boolean canEnchant
+--- @return number icon
+--- @return boolean isCollected - notably, this works across class boundaries, unlike GetSourceInfo() or GetAppearanceSources()
+--- @return string itemLink
+--- @return string transmogLink : transmogillusionLink
+--- @return number unknown1
+--- @return number itemSubTypeIndex - Item's Index into the related SubType Enum
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceSourceInfo
+---
+--- Usage: categoryID, visualID, canEnchant, icon, isCollected, itemLink, transmogLink, unknown1, itemSubTypeIndex = C_TransmogCollection.GetAppearanceSourceInfo(sourceID)
+---
+-- function C_TransmogCollection.GetAppearanceSourceInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetAppearanceSources
+---======================================================================
+--- Returns the sources for an appearance.
+---
+--- Arguments:
+--- @param appearanceID number : AppearanceID
+--- @param categoryType Enum.TransmogCollectionType ?🔗
+--- @param transmogLocation TransmogLocationMixin ?🔗
+---
+--- Returns:
+--- @return AppearanceSourceInfo sources []? - Only returns valid data for the class proficiency, otherwise returns nil.
+---
+--- @since Patch 9.2.5 (2022-05-31): Added transmogLocation argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceSources
+---
+--- Usage: sources = C_TransmogCollection.GetAppearanceSources(appearanceID [, categoryType, transmogLocation])
+---
+-- function C_TransmogCollection.GetAppearanceSources()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetArtifactAppearanceStrings
+---======================================================================
+--- Arguments:
+--- @param appearanceID number
+---
+--- Returns:
+--- @return string name
+--- @return string hyperlink
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetArtifactAppearanceStrings
+---
+--- Usage: name, hyperlink = C_TransmogCollection.GetArtifactAppearanceStrings(appearanceID)
+---
+-- function C_TransmogCollection.GetArtifactAppearanceStrings()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCategoryAppearances
+---======================================================================
+--- Returns all appearances for a category. This is filtered by the class proficiency.
+---
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return TransmogCategoryAppearanceInfo appearances []
+---
+--- @since Patch 11.1.7 (2025-06-17): Removed restrictedSlotID field in return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryAppearances
+---
+--- Usage: appearances = C_TransmogCollection.GetCategoryAppearances(category [, transmogLocation])
+---
+-- function C_TransmogCollection.GetCategoryAppearances()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCategoryCollectedCount
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return number count
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryCollectedCount
+---
+--- Usage: count = C_TransmogCollection.GetCategoryCollectedCount(category)
+---
+-- function C_TransmogCollection.GetCategoryCollectedCount()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCategoryForItem
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return Enum.TransmogCollectionType collectionCategory
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryForItem
+---
+--- Usage: collectionCategory = C_TransmogCollection.GetCategoryForItem(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetCategoryForItem()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCategoryInfo
+---======================================================================
+--- Returns wardrobe category info.
+---
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return string name
+--- @return boolean isWeapon ? = false
+--- @return boolean canHaveIllusions ? = false
+--- @return boolean canMainHand ? = false
+--- @return boolean canOffHand ? = false
+--- @return boolean canRanged ? = false
+---
+--- @since Patch 11.0.5 (2024-10-22): Added canRanged return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryInfo
+---
+--- Usage: name, isWeapon, canHaveIllusions, canMainHand, canOffHand, canRanged = C_TransmogCollection.GetCategoryInfo(category)
+---
+-- function C_TransmogCollection.GetCategoryInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCategoryTotal
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return number total
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryTotal
+---
+--- Usage: total = C_TransmogCollection.GetCategoryTotal(category)
+---
+-- function C_TransmogCollection.GetCategoryTotal()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetClassFilter
+---======================================================================
+--- Returns:
+--- @return number classID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetClassFilter
+---
+--- Usage: classID = C_TransmogCollection.GetClassFilter()
+---
+-- function C_TransmogCollection.GetClassFilter()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetCollectedShown
+---======================================================================
+--- Returns:
+--- @return boolean shown
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCollectedShown
+---
+--- Usage: shown = C_TransmogCollection.GetCollectedShown()
+---
+-- function C_TransmogCollection.GetCollectedShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetFallbackWeaponAppearance
+---======================================================================
+--- Returns:
+--- @return number appearanceID ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFallbackWeaponAppearance
+---
+--- Usage: appearanceID = C_TransmogCollection.GetFallbackWeaponAppearance()
+---
+-- function C_TransmogCollection.GetFallbackWeaponAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetFilteredCategoryCollectedCount
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return number count
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFilteredCategoryCollectedCount
+---
+--- Usage: count = C_TransmogCollection.GetFilteredCategoryCollectedCount(category)
+---
+-- function C_TransmogCollection.GetFilteredCategoryCollectedCount()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetFilteredCategoryTotal
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return number total
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFilteredCategoryTotal
+---
+--- Usage: total = C_TransmogCollection.GetFilteredCategoryTotal(category)
+---
+-- function C_TransmogCollection.GetFilteredCategoryTotal()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetIllusionInfo
+---======================================================================
+--- Arguments:
+--- @param illusionID number
+---
+--- Returns:
+--- @return TransmogIllusionInfo info
+---
+--- @since Patch 9.1.0 (2021-06-29): Added. Replaces C_TransmogCollection.GetIllusionSourceInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIllusionInfo
+---
+--- Usage: info = C_TransmogCollection.GetIllusionInfo(illusionID)
+---
+-- function C_TransmogCollection.GetIllusionInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetIllusions
+---======================================================================
+--- Returns transmoggable enchants for the appearances tab.
+---
+--- Returns:
+--- @return  visualsList structure[]
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIllusions
+---
+--- Usage: visualsList = C_TransmogCollection.GetIllusions()
+---
+--- See also:
+--- - C_TransmogCollection.GetIllusionSourceInfo
+---
+-- function C_TransmogCollection.GetIllusions()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetIllusionStrings
+---======================================================================
+--- Arguments:
+--- @param illusionID number
+---
+--- Returns:
+--- @return string name
+--- @return string hyperlink : transmogillusionLink
+--- @return string sourceText ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added. Replaces C_TransmogCollection.GetIllusionSourceInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIllusionStrings
+---
+--- Usage: name, hyperlink, sourceText = C_TransmogCollection.GetIllusionStrings(illusionID)
+---
+-- function C_TransmogCollection.GetIllusionStrings()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetInspectItemTransmogInfoList
+---======================================================================
+--- Returns:
+--- @return table list []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetInspectItemTransmogInfoList
+---
+--- Usage: list = C_TransmogCollection.GetInspectItemTransmogInfoList()
+---
+-- function C_TransmogCollection.GetInspectItemTransmogInfoList()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetIsAppearanceFavorite
+---======================================================================
+--- Arguments:
+--- @param itemAppearanceID number
+---
+--- Returns:
+--- @return boolean isFavorite
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIsAppearanceFavorite
+---
+--- Usage: isFavorite = C_TransmogCollection.GetIsAppearanceFavorite(itemAppearanceID)
+---
+-- function C_TransmogCollection.GetIsAppearanceFavorite()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetItemInfo
+---======================================================================
+--- Returns appearance info for an item.
+---
+--- Arguments:
+--- @param itemInfo number |string : Item ID, Link or name
+---
+--- Returns:
+--- @return number itemAppearanceID : AppearanceID
+--- @return number itemModifiedAppearanceID - Also known as source ID.
+---
+--- @since Patch 9.0.1 (2020-10-13): No longer accepts an itemModID as the second argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetItemInfo
+---
+--- Usage: itemAppearanceID, itemModifiedAppearanceID = C_TransmogCollection.GetItemInfo(itemInfo)
+---
+-- function C_TransmogCollection.GetItemInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink
+---======================================================================
+--- Arguments:
+--- @param hyperlink string : outfitLink
+---
+--- Returns:
+--- @return ItemTransmogInfo list []🔗
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink
+---
+--- Usage: list = C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink(hyperlink)
+---
+-- function C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetLatestAppearance
+---======================================================================
+--- Returns:
+--- @return number visualID
+--- @return Enum.TransmogCollectionType category
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetLatestAppearance
+---
+--- Usage: visualID, category = C_TransmogCollection.GetLatestAppearance()
+---
+-- function C_TransmogCollection.GetLatestAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetNumMaxOutfits
+---======================================================================
+--- Returns the maximum number of Transmogrification outfits that can be saved by the player.
+---
+--- Returns:
+--- @return number maxOutfits - maximum number of transmog outfits
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetNumMaxOutfits
+---
+--- Usage: maxOutfits = C_TransmogCollection.GetNumMaxOutfits()
+---
+-- function C_TransmogCollection.GetNumMaxOutfits()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetNumTransmogSources
+---======================================================================
+--- Returns:
+--- @return number count
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetNumTransmogSources
+---
+--- Usage: count = C_TransmogCollection.GetNumTransmogSources()
+---
+-- function C_TransmogCollection.GetNumTransmogSources()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList
+---======================================================================
+--- Arguments:
+--- @param itemTransmogInfoList ItemTransmogInfo []🔗
+---
+--- Returns:
+--- @return string hyperlink : outfitLink
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList
+---
+--- Usage: hyperlink = C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList(itemTransmogInfoList)
+---
+-- function C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetOutfitInfo
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetOutfitInfo
+---
+--- Usage: name, icon = C_TransmogCollection.GetOutfitInfo(outfitID)
+---
+-- function C_TransmogCollection.GetOutfitInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetOutfitItemTransmogInfoList
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+---
+--- Returns:
+--- @return ItemTransmogInfo list []🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetOutfitItemTransmogInfoList
+---
+--- Usage: list = C_TransmogCollection.GetOutfitItemTransmogInfoList(outfitID)
+---
+-- function C_TransmogCollection.GetOutfitItemTransmogInfoList()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetOutfits
+---======================================================================
+--- Returns:
+--- @return number outfitID []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetOutfits
+---
+--- Usage: outfitID = C_TransmogCollection.GetOutfits()
+---
+-- function C_TransmogCollection.GetOutfits()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetPairedArtifactAppearance
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return number pairedItemModifiedAppearanceID
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetPairedArtifactAppearance
+---
+--- Usage: pairedItemModifiedAppearanceID = C_TransmogCollection.GetPairedArtifactAppearance(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetPairedArtifactAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetSourceIcon
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return number icon
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetSourceIcon
+---
+--- Usage: icon = C_TransmogCollection.GetSourceIcon(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetSourceIcon()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetSourceInfo
+---======================================================================
+--- Returns appearance source info.
+---
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return  sourceInfo structure - AppearanceSourceInfo
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetSourceInfo
+---
+--- Usage: sourceInfo = C_TransmogCollection.GetSourceInfo(sourceID)
+---
+-- function C_TransmogCollection.GetSourceInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetSourceItemID
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return number itemID
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetSourceItemID
+---
+--- Usage: itemID = C_TransmogCollection.GetSourceItemID(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetSourceItemID()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetSourceRequiredHoliday
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return string holidayName
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetSourceRequiredHoliday
+---
+--- Usage: holidayName = C_TransmogCollection.GetSourceRequiredHoliday(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.GetSourceRequiredHoliday()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetUncollectedShown
+---======================================================================
+--- Returns:
+--- @return boolean shown
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetUncollectedShown
+---
+--- Usage: shown = C_TransmogCollection.GetUncollectedShown()
+---
+-- function C_TransmogCollection.GetUncollectedShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.GetValidAppearanceSourcesForClass
+---======================================================================
+--- Arguments:
+--- @param appearanceID number
+--- @param classID number
+--- @param categoryType Enum.TransmogCollectionType ?
+---
+--- Returns:
+--- @return AppearanceSourceInfo sources []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetValidAppearanceSourcesForClass
+---
+--- Usage: sources = C_TransmogCollection.GetValidAppearanceSourcesForClass(appearanceID, classID [, categoryType, transmogLocation])
+---
+-- function C_TransmogCollection.GetValidAppearanceSourcesForClass()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.HasFavorites
+---======================================================================
+--- Returns:
+--- @return boolean hasFavorites
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.HasFavorites
+---
+--- Usage: hasFavorites = C_TransmogCollection.HasFavorites()
+---
+-- function C_TransmogCollection.HasFavorites()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsAppearanceHiddenVisual
+---======================================================================
+--- Arguments:
+--- @param appearanceID number
+---
+--- Returns:
+--- @return boolean isHiddenVisual
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsAppearanceHiddenVisual
+---
+--- Usage: isHiddenVisual = C_TransmogCollection.IsAppearanceHiddenVisual(appearanceID)
+---
+-- function C_TransmogCollection.IsAppearanceHiddenVisual()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsCategoryValidForItem
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsCategoryValidForItem
+---
+--- Usage: isValid = C_TransmogCollection.IsCategoryValidForItem(category, itemInfo)
+---
+-- function C_TransmogCollection.IsCategoryValidForItem()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsNewAppearance
+---======================================================================
+--- Arguments:
+--- @param visualID number
+---
+--- Returns:
+--- @return boolean isNew
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsNewAppearance
+---
+--- Usage: isNew = C_TransmogCollection.IsNewAppearance(visualID)
+---
+-- function C_TransmogCollection.IsNewAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsSearchDBLoading
+---======================================================================
+--- Returns:
+--- @return boolean isLoading
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsSearchDBLoading
+---
+--- Usage: isLoading = C_TransmogCollection.IsSearchDBLoading()
+---
+-- function C_TransmogCollection.IsSearchDBLoading()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsSearchInProgress
+---======================================================================
+--- Arguments:
+--- @param searchType Enum.TransmogSearchType
+---
+--- Returns:
+--- @return boolean inProgress
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsSearchInProgress
+---
+--- Usage: inProgress = C_TransmogCollection.IsSearchInProgress(searchType)
+---
+-- function C_TransmogCollection.IsSearchInProgress()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsSourceTypeFilterChecked
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return boolean checked
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsSourceTypeFilterChecked
+---
+--- Usage: checked = C_TransmogCollection.IsSourceTypeFilterChecked(index)
+---
+-- function C_TransmogCollection.IsSourceTypeFilterChecked()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.IsUsingDefaultFilters
+---======================================================================
+--- Returns:
+--- @return boolean isUsingDefaultFilters
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsUsingDefaultFilters
+---
+--- Usage: isUsingDefaultFilters = C_TransmogCollection.IsUsingDefaultFilters()
+---
+-- function C_TransmogCollection.IsUsingDefaultFilters()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.ModifyOutfit
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+--- @param itemTransmogInfoList ItemTransmogInfo []🔗
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.ModifyOutfit
+---
+--- Usage: C_TransmogCollection.ModifyOutfit(outfitID, itemTransmogInfoList)
+---
+-- function C_TransmogCollection.ModifyOutfit()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.NewOutfit
+---======================================================================
+--- Arguments:
+--- @param name string
+--- @param icon number
+--- @param itemTransmogInfoList table []
+---
+--- Returns:
+--- @return number outfitID ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.NewOutfit
+---
+--- Usage: outfitID = C_TransmogCollection.NewOutfit(name, icon, itemTransmogInfoList)
+---
+-- function C_TransmogCollection.NewOutfit()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.PlayerCanCollectSource
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return boolean hasItemData
+--- @return boolean canCollect
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.PlayerCanCollectSource
+---
+--- Usage: hasItemData, canCollect = C_TransmogCollection.PlayerCanCollectSource(sourceID)
+---
+-- function C_TransmogCollection.PlayerCanCollectSource()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.PlayerHasTransmog
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param itemAppearanceModID number ? = 0
+---
+--- Returns:
+--- @return boolean hasTransmog
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.PlayerHasTransmog
+---
+--- Usage: hasTransmog = C_TransmogCollection.PlayerHasTransmog(itemID [, itemAppearanceModID])
+---
+-- function C_TransmogCollection.PlayerHasTransmog()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.PlayerHasTransmogByItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return boolean hasTransmog
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.PlayerHasTransmogByItemInfo
+---
+--- Usage: hasTransmog = C_TransmogCollection.PlayerHasTransmogByItemInfo(itemInfo)
+---
+-- function C_TransmogCollection.PlayerHasTransmogByItemInfo()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return boolean hasTransmog
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance
+---
+--- Usage: hasTransmog = C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance(itemModifiedAppearanceID)
+---
+-- function C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.PlayerKnowsSource
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return boolean isKnown
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.PlayerKnowsSource
+---
+--- Usage: isKnown = C_TransmogCollection.PlayerKnowsSource(sourceID)
+---
+-- function C_TransmogCollection.PlayerKnowsSource()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.RenameOutfit
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+--- @param name string
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.RenameOutfit
+---
+--- Usage: C_TransmogCollection.RenameOutfit(outfitID, name)
+---
+-- function C_TransmogCollection.RenameOutfit()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SearchProgress
+---======================================================================
+--- Arguments:
+--- @param searchType Enum.TransmogSearchType
+---
+--- Returns:
+--- @return number progress
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SearchProgress
+---
+--- Usage: progress = C_TransmogCollection.SearchProgress(searchType)
+---
+-- function C_TransmogCollection.SearchProgress()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SearchSize
+---======================================================================
+--- Arguments:
+--- @param searchType Enum.TransmogSearchType
+---
+--- Returns:
+--- @return number size
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SearchSize
+---
+--- Usage: size = C_TransmogCollection.SearchSize(searchType)
+---
+-- function C_TransmogCollection.SearchSize()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetAllCollectionTypeFilters
+---======================================================================
+--- Arguments:
+--- @param checked boolean
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllCollectionTypeFilters
+---
+--- Usage: C_TransmogCollection.SetAllCollectionTypeFilters(checked)
+---
+-- function C_TransmogCollection.SetAllCollectionTypeFilters()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetAllFactionsShown
+---======================================================================
+--- Arguments:
+--- @param shown boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllFactionsShown
+---
+--- Usage: C_TransmogCollection.SetAllFactionsShown(shown)
+---
+-- function C_TransmogCollection.SetAllFactionsShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetAllRacesShown
+---======================================================================
+--- Arguments:
+--- @param shown boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllRacesShown
+---
+--- Usage: C_TransmogCollection.SetAllRacesShown(shown)
+---
+-- function C_TransmogCollection.SetAllRacesShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetAllSourceTypeFilters
+---======================================================================
+--- Arguments:
+--- @param checked boolean
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllSourceTypeFilters
+---
+--- Usage: C_TransmogCollection.SetAllSourceTypeFilters(checked)
+---
+-- function C_TransmogCollection.SetAllSourceTypeFilters()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetClassFilter
+---======================================================================
+--- Arguments:
+--- @param classID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetClassFilter
+---
+--- Usage: C_TransmogCollection.SetClassFilter(classID)
+---
+-- function C_TransmogCollection.SetClassFilter()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetCollectedShown
+---======================================================================
+--- Arguments:
+--- @param shown boolean
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetCollectedShown
+---
+--- Usage: C_TransmogCollection.SetCollectedShown(shown)
+---
+-- function C_TransmogCollection.SetCollectedShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetDefaultFilters
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetDefaultFilters
+---
+--- Usage: C_TransmogCollection.SetDefaultFilters()
+---
+-- function C_TransmogCollection.SetDefaultFilters()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetIsAppearanceFavorite
+---======================================================================
+--- Arguments:
+--- @param itemAppearanceID number
+--- @param isFavorite boolean
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetIsAppearanceFavorite
+---
+--- Usage: C_TransmogCollection.SetIsAppearanceFavorite(itemAppearanceID, isFavorite)
+---
+-- function C_TransmogCollection.SetIsAppearanceFavorite()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetSearch
+---======================================================================
+--- Arguments:
+--- @param searchType Enum.TransmogSearchType
+---
+--- Returns:
+--- @return boolean completed
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetSearch
+---
+--- Usage: completed = C_TransmogCollection.SetSearch(searchType, searchText)
+---
+-- function C_TransmogCollection.SetSearch()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetSearchAndFilterCategory
+---======================================================================
+--- Arguments:
+--- @param category Enum.TransmogCollectionType
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetSearchAndFilterCategory
+---
+--- Usage: C_TransmogCollection.SetSearchAndFilterCategory(category)
+---
+-- function C_TransmogCollection.SetSearchAndFilterCategory()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetSourceTypeFilter
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param checked boolean
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetSourceTypeFilter
+---
+--- Usage: C_TransmogCollection.SetSourceTypeFilter(index, checked)
+---
+-- function C_TransmogCollection.SetSourceTypeFilter()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.SetUncollectedShown
+---======================================================================
+--- Arguments:
+--- @param shown boolean
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetUncollectedShown
+---
+--- Usage: C_TransmogCollection.SetUncollectedShown(shown)
+---
+-- function C_TransmogCollection.SetUncollectedShown()
+-- end
+
+---======================================================================
+--- C_TransmogCollection.UpdateUsableAppearances
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.UpdateUsableAppearances
+---
+--- Usage: C_TransmogCollection.UpdateUsableAppearances()
+---
+-- function C_TransmogCollection.UpdateUsableAppearances()
+-- end

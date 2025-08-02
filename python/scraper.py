@@ -30,6 +30,12 @@ class WoWAPIParser:
             response = self.session.get(url)
             response.raise_for_status()
             return BeautifulSoup(response.content, 'html.parser')
+        except requests.exceptions.HTTPError as e:
+            if response.status_code == 404:
+                print(f"Page not found (404) for {url}: {e}")
+                return None  # Don't retry on 404, page doesn't exist
+            print(f"HTTP error fetching {url}: {e}")
+            return None
         except Exception as e:
             print(f"Error fetching {url}: {e}")
             return None

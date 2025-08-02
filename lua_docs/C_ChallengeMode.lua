@@ -1,0 +1,487 @@
+--[=[
+-- C_ChallengeMode API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 29
+--]=]
+
+--- @class C_ChallengeMode
+--- C_ChallengeMode namespace contains 29 functions
+local C_ChallengeMode = {}
+
+--[=[
+-- C_ChallengeMode Functions:
+-- - C_ChallengeMode.CanUseKeystoneInCurrentMap
+-- - C_ChallengeMode.ClearKeystone
+-- - C_ChallengeMode.CloseKeystoneFrame
+-- - C_ChallengeMode.GetActiveChallengeMapID
+-- - C_ChallengeMode.GetActiveKeystoneInfo
+-- - C_ChallengeMode.GetAffixInfo
+-- - C_ChallengeMode.GetChallengeCompletionInfo
+-- - C_ChallengeMode.GetDeathCount
+-- - C_ChallengeMode.GetDungeonScoreRarityColor
+-- - C_ChallengeMode.GetGuildLeaders
+-- - C_ChallengeMode.GetKeystoneLevelRarityColor
+-- - C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft
+-- - C_ChallengeMode.GetMapScoreInfo
+-- - C_ChallengeMode.GetMapTable
+-- - C_ChallengeMode.GetMapUIInfo
+-- - C_ChallengeMode.GetOverallDungeonScore
+-- - C_ChallengeMode.GetPowerLevelDamageHealthMod
+-- - C_ChallengeMode.GetSlottedKeystoneInfo
+-- - C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor
+-- - C_ChallengeMode.GetSpecificDungeonScoreRarityColor
+-- - C_ChallengeMode.GetStartTime
+-- - C_ChallengeMode.HasSlottedKeystone
+-- - C_ChallengeMode.IsChallengeModeActive
+-- - C_ChallengeMode.IsChallengeModeResettable
+-- - C_ChallengeMode.RemoveKeystone
+-- - C_ChallengeMode.RequestLeaders
+-- - C_ChallengeMode.Reset
+-- - C_ChallengeMode.SlotKeystone
+-- - C_ChallengeMode.StartChallengeMode
+--]=]
+
+---======================================================================
+--- C_ChallengeMode.CanUseKeystoneInCurrentMap
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean canUse
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.CanUseKeystoneInCurrentMap
+---
+--- Usage: canUse = C_ChallengeMode.CanUseKeystoneInCurrentMap(itemLocation)
+---
+-- function C_ChallengeMode.CanUseKeystoneInCurrentMap()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.ClearKeystone
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.ClearKeystone
+---
+--- Usage: C_ChallengeMode.ClearKeystone()
+---
+-- function C_ChallengeMode.ClearKeystone()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.CloseKeystoneFrame
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.CloseKeystoneFrame
+---
+--- Usage: C_ChallengeMode.CloseKeystoneFrame()
+---
+-- function C_ChallengeMode.CloseKeystoneFrame()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetActiveChallengeMapID
+---======================================================================
+--- Returns:
+--- @return number mapChallengeModeID ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetActiveChallengeMapID
+---
+--- Usage: mapChallengeModeID = C_ChallengeMode.GetActiveChallengeMapID()
+---
+-- function C_ChallengeMode.GetActiveChallengeMapID()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetActiveKeystoneInfo
+---======================================================================
+--- Returns:
+--- @return number activeKeystoneLevel
+--- @return number activeAffixIDs []
+--- @return boolean wasActiveKeystoneCharged
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetActiveKeystoneInfo
+---
+--- Usage: activeKeystoneLevel, activeAffixIDs, wasActiveKeystoneCharged = C_ChallengeMode.GetActiveKeystoneInfo()
+---
+-- function C_ChallengeMode.GetActiveKeystoneInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetAffixInfo
+---======================================================================
+--- Arguments:
+--- @param affixID number
+---
+--- Returns:
+--- @return string name
+--- @return string description
+--- @return number filedataid
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetAffixInfo
+---
+--- Usage: name, description, filedataid = C_ChallengeMode.GetAffixInfo(affixID)
+---
+-- function C_ChallengeMode.GetAffixInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetChallengeCompletionInfo
+---======================================================================
+--- Returns:
+--- @return ChallengeCompletionInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetChallengeCompletionInfo
+---
+--- Usage: info = C_ChallengeMode.GetChallengeCompletionInfo()
+---
+-- function C_ChallengeMode.GetChallengeCompletionInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetDeathCount
+---======================================================================
+--- Returns:
+--- @return number numDeaths
+--- @return number timeLost
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDeathCount
+---
+--- Usage: numDeaths, timeLost = C_ChallengeMode.GetDeathCount()
+---
+-- function C_ChallengeMode.GetDeathCount()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetDungeonScoreRarityColor
+---======================================================================
+--- Returns a color value from the passed in overall season M+ rating.
+---
+--- Arguments:
+--- @param dungeonScore number
+---
+--- Returns:
+--- @return ColorMixin scoreColor 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor
+---
+--- Usage: scoreColor = C_ChallengeMode.GetDungeonScoreRarityColor(dungeonScore)
+---
+-- function C_ChallengeMode.GetDungeonScoreRarityColor()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetGuildLeaders
+---======================================================================
+--- Returns:
+--- @return  topAttempt structure - ChallengeModeGuildTopAttempt[]
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetGuildLeaders
+---
+--- Usage: topAttempt = C_ChallengeMode.GetGuildLeaders()
+---
+-- function C_ChallengeMode.GetGuildLeaders()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetKeystoneLevelRarityColor
+---======================================================================
+--- Returns a color value from the passed in keystone level.
+---
+--- Arguments:
+--- @param level number
+---
+--- Returns:
+--- @return ColorMixin levelScore 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor
+---
+--- Usage: levelScore = C_ChallengeMode.GetKeystoneLevelRarityColor(level)
+---
+-- function C_ChallengeMode.GetKeystoneLevelRarityColor()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft
+---======================================================================
+--- Returns how much time is left before player is automatically flagged as a leaver (and removed from the group) for exiting a restricted challenge mode instance
+---
+--- Returns:
+--- @return number timeLeftSeconds ? = 0
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft
+---
+--- Usage: timeLeftSeconds = C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft()
+---
+-- function C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetMapScoreInfo
+---======================================================================
+--- Gets the player's best score information for the current weekly affix, for all maps active in the current season
+---
+--- Returns:
+--- @return MythicPlusRatingLinkInfo displayScores []
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapScoreInfo
+---
+--- Usage: displayScores = C_ChallengeMode.GetMapScoreInfo()
+---
+--- See also:
+--- - Mythic Plus Score Computation
+---
+-- function C_ChallengeMode.GetMapScoreInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetMapTable
+---======================================================================
+--- Returns:
+--- @return number mapChallengeModeIDs []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapTable
+---
+--- Usage: mapChallengeModeIDs = C_ChallengeMode.GetMapTable()
+---
+-- function C_ChallengeMode.GetMapTable()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetMapUIInfo
+---======================================================================
+--- Arguments:
+--- @param mapChallengeModeID number : MapChallengeMode.ID
+---
+--- Returns:
+--- @return string name
+--- @return number id : MapChallengeMode.ID
+--- @return number timeLimit - The time limit in seconds.
+--- @return number texture ? : FileID
+--- @return number backgroundTexture : FileID
+--- @return number mapID
+---
+--- @since Patch 11.2.0 (2025-08-05): Added mapID return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapUIInfo
+---
+--- Usage: name, id, timeLimit, texture, backgroundTexture, mapID = C_ChallengeMode.GetMapUIInfo(mapChallengeModeID)
+---
+-- function C_ChallengeMode.GetMapUIInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetOverallDungeonScore
+---======================================================================
+--- Gets the overall season mythic+ rating for the player.
+---
+--- Returns:
+--- @return number overallDungeonScore
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetOverallDungeonScore
+---
+--- Usage: overallDungeonScore = C_ChallengeMode.GetOverallDungeonScore()
+---
+-- function C_ChallengeMode.GetOverallDungeonScore()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetPowerLevelDamageHealthMod
+---======================================================================
+--- Arguments:
+--- @param powerLevel number
+---
+--- Returns:
+--- @return number damageMod
+--- @return number healthMod
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetPowerLevelDamageHealthMod
+---
+--- Usage: damageMod, healthMod = C_ChallengeMode.GetPowerLevelDamageHealthMod(powerLevel)
+---
+-- function C_ChallengeMode.GetPowerLevelDamageHealthMod()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetSlottedKeystoneInfo
+---======================================================================
+--- Returns:
+--- @return number mapChallengeModeID
+--- @return number affixIDs []
+--- @return number keystoneLevel
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSlottedKeystoneInfo
+---
+--- Usage: mapChallengeModeID, affixIDs, keystoneLevel = C_ChallengeMode.GetSlottedKeystoneInfo()
+---
+-- function C_ChallengeMode.GetSlottedKeystoneInfo()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor
+---======================================================================
+--- Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
+---
+--- Arguments:
+--- @param specificDungeonOverallScore number
+---
+--- Returns:
+--- @return ColorMixin specificDungeonOverallScoreColor 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor
+---
+--- Usage: specificDungeonOverallScoreColor = C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDungeonOverallScore)
+---
+-- function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetSpecificDungeonScoreRarityColor
+---======================================================================
+--- Returns a color value from the passed in mythic+ rating for a specific dungeon.
+---
+--- Arguments:
+--- @param specificDungeonScore number
+---
+--- Returns:
+--- @return ColorMixin specificDungeonScoreColor 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor
+---
+--- Usage: specificDungeonScoreColor = C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore)
+---
+-- function C_ChallengeMode.GetSpecificDungeonScoreRarityColor()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.GetStartTime
+---======================================================================
+--- Returns:
+--- @return number startTime
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetStartTime
+---
+--- Usage: startTime = C_ChallengeMode.GetStartTime()
+---
+-- function C_ChallengeMode.GetStartTime()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.HasSlottedKeystone
+---======================================================================
+--- Returns:
+--- @return boolean hasSlottedKeystone
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.HasSlottedKeystone
+---
+--- Usage: hasSlottedKeystone = C_ChallengeMode.HasSlottedKeystone()
+---
+-- function C_ChallengeMode.HasSlottedKeystone()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.IsChallengeModeActive
+---======================================================================
+--- Returns:
+--- @return boolean challengeModeActive
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeActive
+---
+--- Usage: challengeModeActive = C_ChallengeMode.IsChallengeModeActive()
+---
+-- function C_ChallengeMode.IsChallengeModeActive()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.IsChallengeModeResettable
+---======================================================================
+--- Returns:
+--- @return boolean canReset
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeResettable
+---
+--- Usage: canReset = C_ChallengeMode.IsChallengeModeResettable()
+---
+-- function C_ChallengeMode.IsChallengeModeResettable()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.RemoveKeystone
+---======================================================================
+--- Returns:
+--- @return boolean removalSuccessful
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.RemoveKeystone
+---
+--- Usage: removalSuccessful = C_ChallengeMode.RemoveKeystone()
+---
+-- function C_ChallengeMode.RemoveKeystone()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.RequestLeaders
+---======================================================================
+--- Arguments:
+--- @param mapChallengeModeID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.RequestLeaders
+---
+--- Usage: C_ChallengeMode.RequestLeaders(mapChallengeModeID)
+---
+-- function C_ChallengeMode.RequestLeaders()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.Reset
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.Reset
+---
+--- Usage: C_ChallengeMode.Reset()
+---
+-- function C_ChallengeMode.Reset()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.SlotKeystone
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.SlotKeystone
+---
+--- Usage: C_ChallengeMode.SlotKeystone()
+---
+-- function C_ChallengeMode.SlotKeystone()
+-- end
+
+---======================================================================
+--- C_ChallengeMode.StartChallengeMode
+---======================================================================
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.StartChallengeMode
+---
+--- Usage: success = C_ChallengeMode.StartChallengeMode()
+---
+-- function C_ChallengeMode.StartChallengeMode()
+-- end

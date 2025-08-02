@@ -1,0 +1,1390 @@
+--[=[
+-- C_Garrison API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 59
+--]=]
+
+--- @class C_Garrison
+--- C_Garrison namespace contains 59 functions
+local C_Garrison = {}
+
+--[=[
+-- C_Garrison Functions:
+-- - C_Garrison.AddFollowerToMission
+-- - C_Garrison.GetAutoCombatDamageClassValues
+-- - C_Garrison.GetAutoMissionBoardState
+-- - C_Garrison.GetAutoMissionEnvironmentEffect
+-- - C_Garrison.GetAutoMissionTargetingInfo
+-- - C_Garrison.GetAutoMissionTargetingInfoForSpell
+-- - C_Garrison.GetAutoTroops
+-- - C_Garrison.GetAvailableMissions
+-- - C_Garrison.GetBasicMissionInfo
+-- - C_Garrison.GetBuildingInfo
+-- - C_Garrison.GetCombatLogSpellInfo
+-- - C_Garrison.GetCurrentCypherEquipmentLevel
+-- - C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID
+-- - C_Garrison.GetCurrentGarrTalentTreeID
+-- - C_Garrison.GetCyphersToNextEquipmentLevel
+-- - C_Garrison.GetFollowerAbilities
+-- - C_Garrison.GetFollowerAbilityAtIndex
+-- - C_Garrison.GetFollowerAutoCombatSpells
+-- - C_Garrison.GetFollowerAutoCombatStats
+-- - C_Garrison.GetFollowerInfo
+-- - C_Garrison.GetFollowerItems
+-- - C_Garrison.GetFollowerMissionCompleteInfo
+-- - C_Garrison.GetFollowers
+-- - C_Garrison.GetGarrisonInfo
+-- - C_Garrison.GetGarrisonPlotsInstancesForMap
+-- - C_Garrison.GetGarrisonTalentTreeCurrencyTypes
+-- - C_Garrison.GetGarrisonTalentTreeType
+-- - C_Garrison.GetInProgressMissions
+-- - C_Garrison.GetLandingPageShipmentInfoByContainerID
+-- - C_Garrison.GetLooseShipments
+-- - C_Garrison.GetMaxCypherEquipmentLevel
+-- - C_Garrison.GetMissionCompleteEncounters
+-- - C_Garrison.GetMissionDeploymentInfo
+-- - C_Garrison.GetMissionEncounterIconInfo
+-- - C_Garrison.GetOwnedBuildingInfoAbbrev
+-- - C_Garrison.GetTalentInfo
+-- - C_Garrison.GetTalentPointsSpentInTalentTree
+-- - C_Garrison.GetTalentTreeIDsByClassID
+-- - C_Garrison.GetTalentTreeInfo
+-- - C_Garrison.GetTalentTreeResetInfo
+-- - C_Garrison.GetTalentTreeTalentPointResearchInfo
+-- - C_Garrison.GetTalentUnlockWorldQuest
+-- - C_Garrison.HasAdventures
+-- - C_Garrison.HasShipyard
+-- - C_Garrison.IsAtGarrisonMissionNPC
+-- - C_Garrison.IsEnvironmentCountered
+-- - C_Garrison.IsFollowerOnCompletedMission
+-- - C_Garrison.IsLandingPageMinimapButtonVisible
+-- - C_Garrison.IsTalentConditionMet
+-- - C_Garrison.IsUsingPartyGarrison
+-- - C_Garrison.MarkMissionComplete
+-- - C_Garrison.MissionBonusRoll
+-- - C_Garrison.RegenerateCombatLog
+-- - C_Garrison.RemoveFollowerFromMission
+-- - C_Garrison.RushHealAllFollowers
+-- - C_Garrison.RushHealFollower
+-- - C_Garrison.SetAutoCombatSpellFastForward
+-- - C_Garrison.SetUsingPartyGarrison
+-- - C_Garrison.StartMission
+--]=]
+
+---======================================================================
+--- C_Garrison.GetBuildingInfo
+---======================================================================
+--- Returns garrison building info.
+---
+--- Arguments:
+--- @param buildingID number : GarrBuilding
+---
+--- Returns:
+--- @return number 1. id
+--- @return string 2. name
+--- @return string 3. textureKit
+--- @return number 4. icon : fileID
+--- @return string 5. description
+--- @return number 6. rank
+--- @return number 7. currencyID
+--- @return number 8. currencyQty
+--- @return number 9. goldQty
+--- @return string 10. buildTime
+--- @return boolean 11. needsPlan
+--- @return boolean 12. isPrebuilt
+--- @return table 13. possSpecs
+--- @return number 14. upgrades []
+--- @return boolean 15. canUpgrade
+--- @return boolean 16. isMaxLevel
+--- @return boolean 17. hasFollowerSlot
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingInfo
+---
+--- Usage: id, name, textureKit, icon, description, rank, currencyID, currencyQty, goldQty, buildTime, needsPlan, isPrebuilt, possSpecs, upgrades, canUpgrade, isMaxLevel, hasFollowerSlot = C_Garrison.GetBuildingInfo(buildingID)
+---
+--- Examples:
+--- Example 1:
+---   [1] = 145,
+---   [2] = "Trading Post",
+---   [3] = "GarrBuilding_TradingPost_3_A",
+---   [4] = 975746,
+---   [5] = "The Trading Post is the garrison's center of commerce with the natives of Draenor.",
+---   [6] = 3,
+---   [7] = 0,
+---   [8] = 0,
+---   [9] = 1000,
+---   [10] = "1 hr",
+---   [11] = true,
+---   [12] = false,
+---   [13] = {
+---   },
+---   [14] = {
+---     [1] = 111,
+---     [2] = 144,
+---     [3] = 145
+---   },
+---   [15] = true,
+---   [16] = true,
+---   [17] = false
+---
+--- See also:
+--- - C_Garrison.GetBuildings
+---
+-- function C_Garrison.GetBuildingInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetCurrentCypherEquipmentLevel
+---======================================================================
+--- Returns:
+--- @return number equipmentLevel
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentCypherEquipmentLevel
+---
+--- Usage: equipmentLevel = C_Garrison.GetCurrentCypherEquipmentLevel()
+---
+-- function C_Garrison.GetCurrentCypherEquipmentLevel()
+-- end
+
+---======================================================================
+--- C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID
+---======================================================================
+--- Returns:
+--- @return number currentGarrTalentTreeFriendshipFactionID ?
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID
+---
+--- Usage: currentGarrTalentTreeFriendshipFactionID = C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID()
+---
+-- function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID()
+-- end
+
+---======================================================================
+--- C_Garrison.GetCurrentGarrTalentTreeID
+---======================================================================
+--- Returns:
+--- @return number currentGarrTalentTreeID ?
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentGarrTalentTreeID
+---
+--- Usage: currentGarrTalentTreeID = C_Garrison.GetCurrentGarrTalentTreeID()
+---
+-- function C_Garrison.GetCurrentGarrTalentTreeID()
+-- end
+
+---======================================================================
+--- C_Garrison.GetCyphersToNextEquipmentLevel
+---======================================================================
+--- Returns:
+--- @return number cyphersToNext ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCyphersToNextEquipmentLevel
+---
+--- Usage: cyphersToNext = C_Garrison.GetCyphersToNextEquipmentLevel()
+---
+-- function C_Garrison.GetCyphersToNextEquipmentLevel()
+-- end
+
+---======================================================================
+--- C_Garrison.GetGarrisonInfo
+---======================================================================
+--- Returns information for your character's garrison.
+---
+--- Arguments:
+--- @param garrisonType Enum.GarrisonType
+---
+--- Returns:
+--- @return number garrisonLevel ?
+--- @return string mapTexture ?
+--- @return number townHallX ?
+--- @return number townHallY ?
+---
+--- @since Patch 7.0.3 (2016-07-19): garrisonType is now required, additional returns added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonInfo
+---
+--- Usage: garrisonLevel, mapTexture, townHallX, townHallY = C_Garrison.GetGarrisonInfo(garrisonType)
+---
+-- function C_Garrison.GetGarrisonInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetGarrisonPlotsInstancesForMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return  garrisonPlotInstances structure - GarrisonPlotInstanceMapInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonPlotsInstancesForMap
+---
+--- Usage: garrisonPlotInstances = C_Garrison.GetGarrisonPlotsInstancesForMap(uiMapID)
+---
+-- function C_Garrison.GetGarrisonPlotsInstancesForMap()
+-- end
+
+---======================================================================
+--- C_Garrison.GetGarrisonTalentTreeCurrencyTypes
+---======================================================================
+--- Arguments:
+--- @param garrTalentTreeID number
+---
+--- Returns:
+--- @return number garrTalentTreeCurrencyType ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonTalentTreeCurrencyTypes
+---
+--- Usage: garrTalentTreeCurrencyType = C_Garrison.GetGarrisonTalentTreeCurrencyTypes(garrTalentTreeID)
+---
+-- function C_Garrison.GetGarrisonTalentTreeCurrencyTypes()
+-- end
+
+---======================================================================
+--- C_Garrison.GetGarrisonTalentTreeType
+---======================================================================
+--- Arguments:
+--- @param garrTalentTreeID number
+---
+--- Returns:
+--- @return number garrTalentTreeType
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonTalentTreeType
+---
+--- Usage: garrTalentTreeType = C_Garrison.GetGarrisonTalentTreeType(garrTalentTreeID)
+---
+-- function C_Garrison.GetGarrisonTalentTreeType()
+-- end
+
+---======================================================================
+--- C_Garrison.GetLandingPageShipmentInfoByContainerID
+---======================================================================
+--- Returns information on Garrison/Class Hall/other shipment in progress.
+---
+--- Arguments:
+--- @param containerID number - Container ID as returned from C_Garrison.GetFollowerShipments or C_Garrison.GetLooseShipments.
+---
+--- Returns:
+--- @return string name - shipment name
+--- @return number texture - shipment texture
+--- @return number shipmentCapacity
+--- @return number shipmentsReady
+--- @return number shipmentsTotal
+--- @return number creationTime
+--- @return number duration
+--- @return string timeleftString
+--- @return string itemName - name of item produced by this shipment
+--- @return number itemTexture : FileID
+--- @return number unk1
+--- @return number itemID - ID of item produced by this shipment
+--- @return number followerID
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentInfoByContainerID
+---
+--- Usage: name, texture, shipmentCapacity, shipmentsReady, shipmentsTotal, creationTime, duration, timeleftString, itemName, itemTexture, unk1, itemID, followerID = C_Garrison.GetLandingPageShipmentInfoByContainerID(containerID)
+---
+-- function C_Garrison.GetLandingPageShipmentInfoByContainerID()
+-- end
+
+---======================================================================
+--- C_Garrison.GetLooseShipments
+---======================================================================
+--- Returns Garrison shipments in progress.
+---
+--- Arguments:
+--- @param garrisonType Enum.GarrisonType
+---
+--- Returns:
+--- @return number looseShipments [] - List of shipments. More information is available from C_Garrison.GetLandingPageShipmentInfoByContainerID.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLooseShipments
+---
+--- Usage: looseShipments = C_Garrison.GetLooseShipments(garrisonType)
+---
+-- function C_Garrison.GetLooseShipments()
+-- end
+
+---======================================================================
+--- C_Garrison.GetMaxCypherEquipmentLevel
+---======================================================================
+--- Returns:
+--- @return number maxEquipmentLevel
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMaxCypherEquipmentLevel
+---
+--- Usage: maxEquipmentLevel = C_Garrison.GetMaxCypherEquipmentLevel()
+---
+-- function C_Garrison.GetMaxCypherEquipmentLevel()
+-- end
+
+---======================================================================
+--- C_Garrison.GetOwnedBuildingInfoAbbrev
+---======================================================================
+--- Returns basic information on garrison buildings.
+---
+--- Arguments:
+--- @param plotID number
+---
+--- Returns:
+--- @return number 1. id
+--- @return string 2. name
+--- @return string 3. textureKit
+--- @return number 4. icon : FileID
+--- @return number 5. rank - Rank of the building in this plot, between 1 and 3
+--- @return boolean 6. isBuilding - Returns true when the building in this plot is still in progress.
+--- @return number 7. timeStart - Timestamp when the building was placed.
+--- @return number 8. buildTime - Total duration (in seconds) until the building is completed and can be activated.
+--- @return boolean 9. canActivate - Returns true when the build has been completed but the building has not yet been activated.
+--- @return boolean 10. canUpgrade - Returns true when the building has available upgrades. false when already on max level or or plans not known.
+--- @return boolean 11. isPrebuilt
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetOwnedBuildingInfoAbbrev
+---
+--- Usage: id, name, textureKit, icon, rank, isBuilding, timeStart, buildTime, canActivate, canUpgrade, isPrebuilt = C_Garrison.GetOwnedBuildingInfoAbbrev(plotID)
+---
+--- See also:
+--- - C_Garrison.GetOwnedBuildingInfo
+---
+-- function C_Garrison.GetOwnedBuildingInfoAbbrev()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentInfo
+---======================================================================
+--- Arguments:
+--- @param talentID number - GarrTalent.ID
+---
+--- Returns:
+--- @return GarrisonTalentInfo info
+---
+--- @since Patch 9.2.0 (2022-02-22): Added ignoreTalent, treeID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentInfo
+---
+--- Usage: info = C_Garrison.GetTalentInfo(talentID)
+---
+-- function C_Garrison.GetTalentInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentPointsSpentInTalentTree
+---======================================================================
+--- Arguments:
+--- @param garrTalentTreeID number
+---
+--- Returns:
+--- @return number talentPoints
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentPointsSpentInTalentTree
+---
+--- Usage: talentPoints = C_Garrison.GetTalentPointsSpentInTalentTree(garrTalentTreeID)
+---
+-- function C_Garrison.GetTalentPointsSpentInTalentTree()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentTreeIDsByClassID
+---======================================================================
+--- Arguments:
+--- @param garrType number
+--- @param classID number
+---
+--- Returns:
+--- @return number treeIDs []
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeIDsByClassID
+---
+--- Usage: treeIDs = C_Garrison.GetTalentTreeIDsByClassID(garrType, classID)
+---
+-- function C_Garrison.GetTalentTreeIDsByClassID()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentTreeInfo
+---======================================================================
+--- Arguments:
+--- @param treeID number
+---
+--- Returns:
+--- @return GarrisonTalentTreeInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeInfo
+---
+--- Usage: info = C_Garrison.GetTalentTreeInfo(treeID)
+---
+-- function C_Garrison.GetTalentTreeInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentTreeResetInfo
+---======================================================================
+--- Arguments:
+--- @param garrTalentTreeID number
+---
+--- Returns:
+--- @return number goldCost
+--- @return GarrisonTalentCurrencyCostInfo currencyCosts []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeResetInfo
+---
+--- Usage: goldCost, currencyCosts = C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID)
+---
+-- function C_Garrison.GetTalentTreeResetInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentTreeTalentPointResearchInfo
+---======================================================================
+--- Arguments:
+--- @param garrTalentID number
+--- @param researchRank number
+--- @param garrTalentTreeID number
+--- @param talentPointIndex number
+--- @param isRespec boolean
+---
+--- Returns:
+--- @return number goldCost
+--- @return GarrisonTalentCurrencyCostInfo currencyCosts []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added garrTalentID, researchRank arguments.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeTalentPointResearchInfo
+---
+--- Usage: goldCost, currencyCosts, durationSecs = C_Garrison.GetTalentTreeTalentPointResearchInfo(garrTalentID, researchRank, garrTalentTreeID, talentPointIndex, isRespec)
+---
+-- function C_Garrison.GetTalentTreeTalentPointResearchInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetTalentUnlockWorldQuest
+---======================================================================
+--- Arguments:
+--- @param talentID number
+---
+--- Returns:
+--- @return number worldQuestID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentUnlockWorldQuest
+---
+--- Usage: worldQuestID = C_Garrison.GetTalentUnlockWorldQuest(talentID)
+---
+-- function C_Garrison.GetTalentUnlockWorldQuest()
+-- end
+
+---======================================================================
+--- C_Garrison.HasAdventures
+---======================================================================
+--- Returns:
+--- @return boolean hasAdventures
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.HasAdventures
+---
+--- Usage: hasAdventures = C_Garrison.HasAdventures()
+---
+-- function C_Garrison.HasAdventures()
+-- end
+
+---======================================================================
+--- C_Garrison.HasShipyard
+---======================================================================
+--- Returns true if you have a shipyard.
+---
+--- Returns:
+--- @return boolean hasShipyard
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.HasShipyard
+---
+--- Usage: hasShipyard = C_Garrison.HasShipyard()
+---
+-- function C_Garrison.HasShipyard()
+-- end
+
+---======================================================================
+--- C_Garrison.IsFollowerOnCompletedMission
+---======================================================================
+--- Arguments:
+--- @param followerID string
+---
+--- Returns:
+--- @return boolean followerOnCompletedMission
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsFollowerOnCompletedMission
+---
+--- Usage: followerOnCompletedMission = C_Garrison.IsFollowerOnCompletedMission(followerID)
+---
+-- function C_Garrison.IsFollowerOnCompletedMission()
+-- end
+
+---======================================================================
+--- C_Garrison.IsLandingPageMinimapButtonVisible
+---======================================================================
+--- Arguments:
+--- @param garrType number
+---
+--- Returns:
+--- @return boolean isLandingPageMinimapButtonVisible
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsLandingPageMinimapButtonVisible
+---
+--- Usage: isLandingPageMinimapButtonVisible = C_Garrison.IsLandingPageMinimapButtonVisible(garrType)
+---
+-- function C_Garrison.IsLandingPageMinimapButtonVisible()
+-- end
+
+---======================================================================
+--- C_Garrison.IsTalentConditionMet
+---======================================================================
+--- Arguments:
+--- @param talentID number
+---
+--- Returns:
+--- @return boolean isMet
+--- @return string failureString ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsTalentConditionMet
+---
+--- Usage: isMet, failureString = C_Garrison.IsTalentConditionMet(talentID)
+---
+-- function C_Garrison.IsTalentConditionMet()
+-- end
+
+---======================================================================
+--- C_Garrison.IsUsingPartyGarrison
+---======================================================================
+--- Returns whether your are viewing your party leader's Garrison.
+---
+--- Returns:
+--- @return boolean usingPartyGarrison true - Currently viewing your party leader's Garrison
+false - Currently viewing your own Garrison.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsUsingPartyGarrison
+---
+--- Usage: usingPartyGarrison = C_Garrison.IsUsingPartyGarrison()
+---
+-- function C_Garrison.IsUsingPartyGarrison()
+-- end
+
+---======================================================================
+--- C_Garrison.SetUsingPartyGarrison
+---======================================================================
+--- Switches between viewing your party leader's Garrison or your own.
+---
+--- Arguments:
+--- @param enabled boolean - View your party leader's Garrison if true, false to view your own.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.SetUsingPartyGarrison
+---
+--- Usage: C_Garrison.SetUsingPartyGarrison(enabled)
+---
+-- function C_Garrison.SetUsingPartyGarrison()
+-- end
+
+---======================================================================
+--- C_Garrison.AddFollowerToMission
+---======================================================================
+--- Arguments:
+--- @param missionID number
+--- @param followerID string
+--- @param boardIndex number ?
+---
+--- Returns:
+--- @return boolean followerAdded
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.AddFollowerToMission
+---
+--- Usage: followerAdded = C_Garrison.AddFollowerToMission(missionID, followerID [, boardIndex])
+---
+-- function C_Garrison.AddFollowerToMission()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoCombatDamageClassValues
+---======================================================================
+--- Returns:
+--- @return AutoCombatDamageClassString damageClassStrings []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoCombatDamageClassValues
+---
+--- Usage: damageClassStrings = C_Garrison.GetAutoCombatDamageClassValues()
+---
+-- function C_Garrison.GetAutoCombatDamageClassValues()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoMissionBoardState
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return AutoMissionTargetingInfo targetInfo []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionBoardState
+---
+--- Usage: targetInfo = C_Garrison.GetAutoMissionBoardState(missionID)
+---
+-- function C_Garrison.GetAutoMissionBoardState()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoMissionEnvironmentEffect
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return AutoMissionEnvironmentEffect autoMissionEnvEffect ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionEnvironmentEffect
+---
+--- Usage: autoMissionEnvEffect = C_Garrison.GetAutoMissionEnvironmentEffect(missionID)
+---
+-- function C_Garrison.GetAutoMissionEnvironmentEffect()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoMissionTargetingInfo
+---======================================================================
+--- Arguments:
+--- @param missionID number
+--- @param followerID string
+--- @param casterBoardIndex number
+---
+--- Returns:
+--- @return AutoMissionTargetingInfo targetInfo []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionTargetingInfo
+---
+--- Usage: targetInfo = C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoardIndex)
+---
+-- function C_Garrison.GetAutoMissionTargetingInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoMissionTargetingInfoForSpell
+---======================================================================
+--- Arguments:
+--- @param missionID number
+--- @param autoCombatSpellID number
+--- @param casterBoardIndex number
+---
+--- Returns:
+--- @return AutoMissionTargetingInfo targetInfo []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionTargetingInfoForSpell
+---
+--- Usage: targetInfo = C_Garrison.GetAutoMissionTargetingInfoForSpell(missionID, autoCombatSpellID, casterBoardIndex)
+---
+-- function C_Garrison.GetAutoMissionTargetingInfoForSpell()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAutoTroops
+---======================================================================
+--- Arguments:
+--- @param followerType number
+---
+--- Returns:
+--- @return AutoCombatTroopInfo autoTroopInfo []
+---
+--- @since Patch 9.1.0 (2021-06-29): Removed autoCombatSpells field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoTroops
+---
+--- Usage: autoTroopInfo = C_Garrison.GetAutoTroops(followerType)
+---
+-- function C_Garrison.GetAutoTroops()
+-- end
+
+---======================================================================
+--- C_Garrison.GetAvailableMissions
+---======================================================================
+--- Returns a list of available follower missions.
+---
+--- Arguments:
+--- @param missionList MissionInfo []? - (Not sure what the purpose is, maybe some filtering)
+--- @param garrFollowerTypeID Enum.GarrisonFollowerType
+---
+--- Returns:
+--- @return MissionInfo info []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableMissions
+---
+--- Usage: info = C_Garrison.GetAvailableMissions([missionList,] garrFollowerTypeID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_Garrison.GetAvailableMissions(Enum.GarrisonFollowerType.FollowerType_9_0_GarrisonFollower)
+---   {
+---     [1] = {
+---        areaID = 10413,
+---        basecost = 10,
+---        canStart = true,
+---        completed = false,
+---        cost = 10,
+---        costCurrencyTypesID = 1813,
+---        description = "Дознаватели из архивов скрывают важные сведения о резервах анимы. Добудьте эту информацию.",
+---        duration = "4h",
+---        durationSeconds = 14400,
+---        followers = { ... },
+---        followerTypeID = 123,
+---        hasBonusEffect = false,
+---        inProgress = false,
+---        iLevel = 800,
+---        isTutorialMission = false,
+---        isMaxLevel = true,
+---        isRare = false,
+---        isZoneSupport = false,
+---        level = 60,
+---        location = "Revendreth",
+---        locTextureKit = "GarrMissionLocation-Revendreth",
+---        mapPosX = 0,
+---        mapPosY = 0,
+---        missionID = 2243,
+---        missionScalar = 49,
+---        name = "Дознание среди дознавателей",
+---        numFollowers = 5,
+---        offeredGarrMissionTextureID = 0,
+---        offerEndTime = 824530.75,
+---        offerTimeRemaining = "6h 27min",
+---        overmaxRewards = { ... },
+---        overmaxSucceeded = false,
+---        requiredChampionCount = 1,
+---        requiredSuccessChance = 0,
+---        rewards = { ... },
+---        type = "9.0 Encounter - Revendreth",
+---        typeAtlas = "BfAMission-Icon-QuickStrike",
+---        xp = 500,
+---     }, -- [1]
+---     ...
+---   }
+---
+-- function C_Garrison.GetAvailableMissions()
+-- end
+
+---======================================================================
+--- C_Garrison.GetBasicMissionInfo
+---======================================================================
+--- Returns a table containing information on the requested mission.
+---
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return MissionInfo info
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBasicMissionInfo
+---
+--- Usage: info = C_Garrison.GetBasicMissionInfo(missionID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_Garrison.GetBasicMissionInfo(165)
+---   {
+---   	description = "Energy-siphoning water spirits are giving our spellcasters fits. Time to bring in reinforcements.",
+---   	cost = 10,
+---   	duration = "2 hr",
+---   	durationSeconds = 7200,
+---   	level = 98,
+---   	type = "Combat",
+---   	locPrefix = "GarrMissionLocation-Nagrand",
+---   	rewards = {
+---   		[527] = {
+---   			title = "Bonus Follower XP",
+---   			followerXP = 900,
+---   			tooltip = "+900 XP",
+---   			icon = "Interface\\Icons\\XPBonus_Icon",
+---   			name = "+900 XP"
+---   		}
+---   	},
+---   	numRewards = 1,
+---   	numFollowers = 1,
+---   	state = -2,
+---   	iLevel = 0,
+---   	name = "Surge Protection",
+---   	followers = {
+---   	},
+---   	location = "Nagrand",
+---   	isRare = false,
+---   	typeAtlas = "GarrMission_MissionIcon-Combat",
+---   	missionID = 165
+---   }
+---
+-- function C_Garrison.GetBasicMissionInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetCombatLogSpellInfo
+---======================================================================
+--- Arguments:
+--- @param autoCombatSpellID number
+---
+--- Returns:
+--- @return AutoCombatSpellInfo spellInfo ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCombatLogSpellInfo
+---
+--- Usage: spellInfo = C_Garrison.GetCombatLogSpellInfo(autoCombatSpellID)
+---
+-- function C_Garrison.GetCombatLogSpellInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerAbilities
+---======================================================================
+--- Returns the abilities of a garrison follower.
+---
+--- Arguments:
+--- @param followerID number |string : FollowerID or FollowerGUID
+---
+--- Returns:
+--- @return AbilityInfo abilities [] - A table containing information about abilities of a single follower.
+--- @return AbilityInfo extraAbilities []? - If a FollowerGUID is used, another table of abilities. This seems to be only relevant for BFA followers.
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilities
+---
+--- Usage: abilities, extraAbilities = C_Garrison.GetFollowerAbilities(followerID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_Garrison.GetFollowerAbilities(32) -- Dagg
+---   {
+---     {
+---       description = "Used by a rogue to neutralize a dangerous enemy (or just to annoy you).",
+---       counters = {
+---         [9] = {
+---           description = "An enemy with powerful allies that should be neutralized.",
+---           factor = 300,
+---           icon = 1035504,
+---           name = "Deadly Minions"
+---         }
+---       },
+---       icon = 132310,
+---       id = 104,
+---       isEmptySlot = false,
+---       isSpecialization = false,
+---       isTrait = false
+---       name = "Sap",
+---       temporary = false,
+---     }
+---   }
+---
+-- function C_Garrison.GetFollowerAbilities()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerAbilityAtIndex
+---======================================================================
+--- Returns an ability for the follower.
+---
+--- Arguments:
+--- @param followerID string : FollowerGUID
+--- @param index number - Usually between 1 and 4
+---
+--- Returns:
+--- @return number abilityID
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityAtIndex
+---
+--- Usage: abilityID = C_Garrison.GetFollowerAbilityAtIndex(followerID, index)
+---
+--- See also:
+--- - C_Garrison.GetFollowerAbilities
+---
+-- function C_Garrison.GetFollowerAbilityAtIndex()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerAutoCombatSpells
+---======================================================================
+--- Arguments:
+--- @param garrFollowerID string
+--- @param followerLevel number
+---
+--- Returns:
+--- @return AutoCombatSpellInfo autoCombatSpells []
+--- @return AutoCombatSpellInfo autoCombatAutoAttack ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added autoCombatAutoAttack return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAutoCombatSpells
+---
+--- Usage: autoCombatSpells, autoCombatAutoAttack = C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel)
+---
+-- function C_Garrison.GetFollowerAutoCombatSpells()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerAutoCombatStats
+---======================================================================
+--- Arguments:
+--- @param garrFollowerID string
+---
+--- Returns:
+--- @return FollowerAutoCombatStatsInfo autoCombatInfo ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAutoCombatStats
+---
+--- Usage: autoCombatInfo = C_Garrison.GetFollowerAutoCombatStats(garrFollowerID)
+---
+-- function C_Garrison.GetFollowerAutoCombatStats()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerInfo
+---======================================================================
+--- Returns information about a follower.
+---
+--- Arguments:
+--- @param followerID number |string - a FollowerID e.g. 856
+or a FollowerGUID e.g. "0x0000000004CBDB61". Only works for the followers belonging to a character while on that character.
+---
+--- Returns:
+--- @return GarrFollowerInfo info - Certain information is only returned when using a GUID from an existing follower.
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerInfo
+---
+--- Usage: info = C_Garrison.GetFollowerInfo(followerID)
+---
+--- Examples:
+--- Example 1:
+---   local follower = C_Garrison.GetFollowerInfo(856)
+---   DevTools_Dump(follower)
+--- Example 2:
+---   {
+---   	classAtlas = "GarrMission_ClassIcon-Priest-Discipline",
+---   	className = "Discipline Priest",
+---   	classSpec = 124
+---   	displayHeight = 0.5,
+---   	displayIDs = {
+---   		[1] = {
+---   			id = 67797,
+---   			followerPageScale = 1
+---   		}
+---   	},
+---   	displayScale = 1,
+---   	followerID = 856,
+---   	followerTypeID = 4,
+---   	height = 1,
+---   	iLevel = 760,
+---   	isFavorite = false,
+---   	isMaxLevel = false,
+---   	level = 35,
+---   	name = "Calia Menethil",
+---   	portraitIconID = 1401872,
+---   	quality = 1,
+---   	scale = 0.69999998807907,
+---   }
+--- Example 3:
+---   local followers = C_Garrison.GetFollowers()
+---   local guid = followers[1].followerID
+---   --local id = followers[1].garrFollowerID
+---   DevTools_Dump(C_Garrison.GetFollowerInfo(guid))
+---
+-- function C_Garrison.GetFollowerInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerItems
+---======================================================================
+--- Return information about a follower weapon and armor.
+---
+--- Arguments:
+--- @param followerID string : FollowerGUID
+---
+--- Returns:
+--- @return number weaponItemID - ItemID for displayed item texture
+--- @return number weaponItemLevel - Current weapon item level
+--- @return number armorItemID - ItemID for displayed item texture
+--- @return number armorItemLevel - Current armor item level
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerItems
+---
+--- Usage: weaponItemID, weaponItemLevel, armorItemID, armorItemLevel = C_Garrison.GetFollowerItems(followerID)
+---
+-- function C_Garrison.GetFollowerItems()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowerMissionCompleteInfo
+---======================================================================
+--- Arguments:
+--- @param followerID string : FollowerGUID
+---
+--- Returns:
+--- @return FollowerMissionCompleteInfo followerMissionCompleteInfo
+---
+--- @since Patch 9.0.1 (2020-10-13): Returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerMissionCompleteInfo
+---
+--- Usage: followerMissionCompleteInfo = C_Garrison.GetFollowerMissionCompleteInfo(followerID)
+---
+-- function C_Garrison.GetFollowerMissionCompleteInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetFollowers
+---======================================================================
+--- Returns a list of garrison tech followers.
+---
+--- Arguments:
+--- @param followerType Enum.GarrisonFollowerType ?
+---
+--- Returns:
+--- @return GarrFollowerInfo info []
+---
+--- @since Patch 7.0.3 (2016-07-19): Supports Legion Troops/Champions.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowers
+---
+--- Usage: info = C_Garrison.GetFollowers([followerType])
+---
+--- Examples:
+--- Example 1:
+---   local followers = C_Garrison.GetFollowers()
+---   DevTools_Dump(followers[1])
+--- Example 2:
+---   {
+---   	classAtlas = "GarrMission_ClassIcon-Priest-Discipline",
+---   	className = "Discipline Priest",
+---   	classSpec = 124,
+---   	displayIDs = {
+---   		[1] = {
+---   			followerPageScale = 1,
+---   			id = 67797
+---   			showWeapon = true,
+---   		}
+---   	},
+---   	displayHeight = 0.5,
+---   	displayScale = 1,
+---   	followerID = "0x0000000004CBDB61",
+---   	followerTypeID = 4,
+---   	garrFollowerID = 856
+---   	height = 1,
+---   	iLevel = 900,
+---   	isAutoTroop = false,
+---   	isCollected = true,
+---   	isFavorite = false,
+---   	isMaxLevel = true,
+---   	isSoulbind = false,
+---   	isTroop = false,
+---   	level = 45,
+---   	levelXP = 200000,
+---   	name = "Calia Menethil",
+---   	portraitIconID = 1401872,
+---   	quality = 4,
+---   	scale = 0.69999998807907,
+---   	slotSoundKitID = 62813,
+---   	xp = 60600,
+---   }
+---
+-- function C_Garrison.GetFollowers()
+-- end
+
+---======================================================================
+--- C_Garrison.GetInProgressMissions
+---======================================================================
+--- Returns a list of active follower missions.
+---
+--- Arguments:
+--- @param garrFollowerTypeID Enum.GarrisonFollowerType
+---
+--- Returns:
+--- @return MissionInfo info []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetInProgressMissions
+---
+--- Usage: info = C_Garrison.GetInProgressMissions(garrFollowerTypeID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_Garrison.GetInProgressMissions(Enum.GarrisonFollowerType.FollowerType_9_0)
+---   {
+---     [1] = {
+---         areaID = 11510,
+---         basecost = 50,
+---         canStart = false,
+---         completed = false,
+---         cost = 50,
+---         costCurrencyTypesID = 1813,
+---         description = "Дейфир обуздал свою гордыню и обрел союзников в борьбе. Желаю тебе удачи.",
+---         duration = "14h",
+---         durationSeconds = 50400,
+---         followers = { ... },
+---         followerTypeID = 123,
+---         hasBonusEffect = false,
+---         iLevel = 800,
+---         inProgress = true,
+---         isMaxLevel = true,
+---         isRare = false,
+---         isTutorialMission = false,
+---         isZoneSupport = false,
+---         level = 60,
+---         location = "Ardenweald",
+---         locTextureKit = "GarrMissionLocation-Ardenweald",
+---         mapPosX = 0,
+---         mapPosY = 0,
+---         missionEndTime = 1616376750,
+---         missionID = 2190,
+---         missionScalar = 47,
+---         name = "Дейфир возвращается",
+---         numFollowers = 5,
+---         offeredGarrMissionTextureID = 0,
+---         overmaxRewards = { ... },
+---         overmaxSucceeded = false,
+---         requiredChampionCount = 1,
+---         requiredSuccessChance = 0,
+---         rewards = { ... },
+---         timeLeft = "0s",
+---         timeLeftSeconds = 0,
+---         type = "9.0 Encounter - Ardenweald",
+---         typeAtlas = "ShipMissionIcon-Legendary-Map",
+---         xp = 1200,
+---     }, -- [1]
+---     ...
+---   }
+---
+-- function C_Garrison.GetInProgressMissions()
+-- end
+
+---======================================================================
+--- C_Garrison.GetMissionCompleteEncounters
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return GarrisonEnemyEncounterInfo encounters []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionCompleteEncounters
+---
+--- Usage: encounters = C_Garrison.GetMissionCompleteEncounters(missionID)
+---
+-- function C_Garrison.GetMissionCompleteEncounters()
+-- end
+
+---======================================================================
+--- C_Garrison.GetMissionDeploymentInfo
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return MissionDeploymentInfo missionDeploymentInfo
+---
+--- @since Patch 9.0.1 (2020-10-13): Changed to C_Garrison.GetMissionDeploymentInfo() and returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionDeploymentInfo
+---
+--- Usage: missionDeploymentInfo = C_Garrison.GetMissionDeploymentInfo(missionID)
+---
+-- function C_Garrison.GetMissionDeploymentInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.GetMissionEncounterIconInfo
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return MissionEncounterIconInfo missionEncounterIconInfo
+---
+--- @since Patch 9.1.0 (2021-06-29): Added missionScalar field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionEncounterIconInfo
+---
+--- Usage: missionEncounterIconInfo = C_Garrison.GetMissionEncounterIconInfo(missionID)
+---
+-- function C_Garrison.GetMissionEncounterIconInfo()
+-- end
+
+---======================================================================
+--- C_Garrison.IsAtGarrisonMissionNPC
+---======================================================================
+--- Returns:
+--- @return boolean atGarrisonMissionNPC
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsAtGarrisonMissionNPC
+---
+--- Usage: atGarrisonMissionNPC = C_Garrison.IsAtGarrisonMissionNPC()
+---
+-- function C_Garrison.IsAtGarrisonMissionNPC()
+-- end
+
+---======================================================================
+--- C_Garrison.IsEnvironmentCountered
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return boolean environmentCountered
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.IsEnvironmentCountered
+---
+--- Usage: environmentCountered = C_Garrison.IsEnvironmentCountered(missionID)
+---
+-- function C_Garrison.IsEnvironmentCountered()
+-- end
+
+---======================================================================
+--- C_Garrison.MarkMissionComplete
+---======================================================================
+--- Acknowledges mission completion.
+---
+--- Arguments:
+--- @param missionID number
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.MarkMissionComplete
+---
+--- Usage: C_Garrison.MarkMissionComplete(missionID)
+---
+--- Examples:
+--- Example 1:
+---   for __, mission in pairs(C_Garrison.GetCompleteMissions(123)) do
+---   	C_Garrison.MarkMissionComplete(mission.missionID)
+---       C_Garrison.MissionBonusRoll(mission.missionID)
+---   end
+---
+-- function C_Garrison.MarkMissionComplete()
+-- end
+
+---======================================================================
+--- C_Garrison.MissionBonusRoll
+---======================================================================
+--- Receives mission loot.
+---
+--- Arguments:
+--- @param missionID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.MissionBonusRoll
+---
+--- Usage: C_Garrison.MissionBonusRoll(missionID)
+---
+--- Examples:
+--- Example 1:
+---   for __, mission in pairs(C_Garrison.GetCompleteMissions(123)) do
+---   	C_Garrison.MarkMissionComplete(mission.missionID)
+---       C_Garrison.MissionBonusRoll(mission.missionID)
+---   end
+---
+-- function C_Garrison.MissionBonusRoll()
+-- end
+
+---======================================================================
+--- C_Garrison.RegenerateCombatLog
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 9.0.5 (2021-03-09): Added success return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.RegenerateCombatLog
+---
+--- Usage: success = C_Garrison.RegenerateCombatLog(missionID)
+---
+-- function C_Garrison.RegenerateCombatLog()
+-- end
+
+---======================================================================
+--- C_Garrison.RemoveFollowerFromMission
+---======================================================================
+--- Arguments:
+--- @param missionID number
+--- @param followerID string
+--- @param boardIndex number ?
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.RemoveFollowerFromMission
+---
+--- Usage: C_Garrison.RemoveFollowerFromMission(missionID, followerID [, boardIndex])
+---
+-- function C_Garrison.RemoveFollowerFromMission()
+-- end
+
+---======================================================================
+--- C_Garrison.RushHealAllFollowers
+---======================================================================
+--- Arguments:
+--- @param followerType number
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.RushHealAllFollowers
+---
+--- Usage: C_Garrison.RushHealAllFollowers(followerType)
+---
+-- function C_Garrison.RushHealAllFollowers()
+-- end
+
+---======================================================================
+--- C_Garrison.RushHealFollower
+---======================================================================
+--- Arguments:
+--- @param garrFollowerID string
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.RushHealFollower
+---
+--- Usage: C_Garrison.RushHealFollower(garrFollowerID)
+---
+-- function C_Garrison.RushHealFollower()
+-- end
+
+---======================================================================
+--- C_Garrison.SetAutoCombatSpellFastForward
+---======================================================================
+--- Arguments:
+--- @param state boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.SetAutoCombatSpellFastForward
+---
+--- Usage: C_Garrison.SetAutoCombatSpellFastForward(state)
+---
+-- function C_Garrison.SetAutoCombatSpellFastForward()
+-- end
+
+---======================================================================
+--- C_Garrison.StartMission
+---======================================================================
+--- Arguments:
+--- @param missionID number
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Garrison.StartMission
+---
+--- Usage: C_Garrison.StartMission(missionID)
+---
+-- function C_Garrison.StartMission()
+-- end

@@ -1,0 +1,81 @@
+--[=[
+-- C_StorePublic API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_StorePublic
+--- C_StorePublic namespace contains 4 functions
+local C_StorePublic = {}
+
+--[=[
+-- C_StorePublic Functions:
+-- - C_StorePublic.DoesGroupHavePurchaseableProducts
+-- - C_StorePublic.EventStoreUISetShown
+-- - C_StorePublic.IsDisabledByParentalControls
+-- - C_StorePublic.IsEnabled
+--]=]
+
+---======================================================================
+--- C_StorePublic.DoesGroupHavePurchaseableProducts
+---======================================================================
+--- Arguments:
+--- @param groupID number
+---
+--- Returns:
+--- @return boolean hasPurchaseableProducts
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_StorePublic.DoesGroupHavePurchaseableProducts
+---
+--- Usage: hasPurchaseableProducts = C_StorePublic.DoesGroupHavePurchaseableProducts(groupID)
+---
+-- function C_StorePublic.DoesGroupHavePurchaseableProducts()
+-- end
+
+---======================================================================
+--- C_StorePublic.EventStoreUISetShown
+---======================================================================
+--- Arguments:
+--- @param newShown boolean
+--- @param contextKey string ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StorePublic.EventStoreUISetShown
+---
+--- Usage: C_StorePublic.EventStoreUISetShown(newShown [, contextKey])
+---
+-- function C_StorePublic.EventStoreUISetShown()
+-- end
+
+---======================================================================
+--- C_StorePublic.IsDisabledByParentalControls
+---======================================================================
+--- Returns whether access to the in-game shop is disabled by parental controls.
+---
+--- Returns:
+--- @return boolean isDisabled - true if the player cannot access the in-game shop due to parental controls, false otherwise.
+---
+--- @since Patch 5.4.2 (2013-12-10): No longer protected.
+--- @see https://warcraft.wiki.gg/wiki/API_C_StorePublic.IsDisabledByParentalControls
+---
+--- Usage: isDisabled = C_StorePublic.IsDisabledByParentalControls()
+---
+-- function C_StorePublic.IsDisabledByParentalControls()
+-- end
+
+---======================================================================
+--- C_StorePublic.IsEnabled
+---======================================================================
+--- Returns whether the In-Game Store is available for the player.
+---
+--- Returns:
+--- @return boolean isEnabled - true if the store is available, false otherwise.
+---
+--- @since Patch 5.4.0 (2013-09-10): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_StorePublic.IsEnabled
+---
+--- Usage: isEnabled = C_StorePublic.IsEnabled()
+---
+-- function C_StorePublic.IsEnabled()
+-- end

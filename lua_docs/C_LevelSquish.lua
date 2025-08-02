@@ -1,0 +1,51 @@
+--[=[
+-- C_LevelSquish API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_LevelSquish
+--- C_LevelSquish namespace contains 2 functions
+local C_LevelSquish = {}
+
+--[=[
+-- C_LevelSquish Functions:
+-- - C_LevelSquish.ConvertFollowerLevel
+-- - C_LevelSquish.ConvertPlayerLevel
+--]=]
+
+---======================================================================
+--- C_LevelSquish.ConvertFollowerLevel
+---======================================================================
+--- Arguments:
+--- @param level number
+--- @param maxFollowerLevel number
+---
+--- Returns:
+--- @return number squishedLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LevelSquish.ConvertFollowerLevel
+---
+--- Usage: squishedLevel = C_LevelSquish.ConvertFollowerLevel(level, maxFollowerLevel)
+---
+-- function C_LevelSquish.ConvertFollowerLevel()
+-- end
+
+---======================================================================
+--- C_LevelSquish.ConvertPlayerLevel
+---======================================================================
+--- Arguments:
+--- @param level number
+---
+--- Returns:
+--- @return number squishedLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LevelSquish.ConvertPlayerLevel
+---
+--- Usage: squishedLevel = C_LevelSquish.ConvertPlayerLevel(level)
+---
+-- function C_LevelSquish.ConvertPlayerLevel()
+-- end

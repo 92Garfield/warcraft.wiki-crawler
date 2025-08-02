@@ -1,0 +1,127 @@
+--[=[
+-- C_SummonInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_SummonInfo
+--- C_SummonInfo namespace contains 7 functions
+local C_SummonInfo = {}
+
+--[=[
+-- C_SummonInfo Functions:
+-- - C_SummonInfo.CancelSummon
+-- - C_SummonInfo.ConfirmSummon
+-- - C_SummonInfo.GetSummonConfirmAreaName
+-- - C_SummonInfo.GetSummonConfirmSummoner
+-- - C_SummonInfo.GetSummonConfirmTimeLeft
+-- - C_SummonInfo.GetSummonReason
+-- - C_SummonInfo.IsSummonSkippingStartExperience
+--]=]
+
+---======================================================================
+--- C_SummonInfo.CancelSummon
+---======================================================================
+--- Declines a summon request.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_SummonInfo.CancelSummon. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.CancelSummon
+---
+--- Usage: C_SummonInfo.CancelSummon()
+---
+-- function C_SummonInfo.CancelSummon()
+-- end
+
+---======================================================================
+--- C_SummonInfo.ConfirmSummon
+---======================================================================
+--- Accepts a summon request.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_SummonInfo.ConfirmSummon()
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.ConfirmSummon
+---
+--- Usage: C_SummonInfo.ConfirmSummon()
+---
+-- function C_SummonInfo.ConfirmSummon()
+-- end
+
+---======================================================================
+--- C_SummonInfo.GetSummonConfirmAreaName
+---======================================================================
+--- Returns the zone where you will be summoned to.
+---
+--- Returns:
+--- @return string areaName - the zone of the summoning origin.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_SummonInfo.GetSummonConfirmAreaName()
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.GetSummonConfirmAreaName
+---
+--- Usage: areaName = C_SummonInfo.GetSummonConfirmAreaName()
+---
+-- function C_SummonInfo.GetSummonConfirmAreaName()
+-- end
+
+---======================================================================
+--- C_SummonInfo.GetSummonConfirmSummoner
+---======================================================================
+--- Returns the name of the player summoning you.
+---
+--- Returns:
+--- @return string summoner ? - name of the player summoning you, or nil if no summon is currently pending.
+---
+--- @since Patch 8.1.5 (2019-03-12): Moved to C_SummonInfo.GetSummonConfirmSummoner()
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.GetSummonConfirmSummoner
+---
+--- Usage: summoner = C_SummonInfo.GetSummonConfirmSummoner()
+---
+-- function C_SummonInfo.GetSummonConfirmSummoner()
+-- end
+
+---======================================================================
+--- C_SummonInfo.GetSummonConfirmTimeLeft
+---======================================================================
+--- Returns the time left in seconds for accepting a summon.
+---
+--- Returns:
+--- @return number timeLeft - Time in seconds. Zero if not being summoned.
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_SummonInfo.GetSummonConfirmTimeLeft()
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.GetSummonConfirmTimeLeft
+---
+--- Usage: timeLeft = C_SummonInfo.GetSummonConfirmTimeLeft()
+---
+-- function C_SummonInfo.GetSummonConfirmTimeLeft()
+-- end
+
+---======================================================================
+--- C_SummonInfo.GetSummonReason
+---======================================================================
+--- Returns the reason for a summon.
+---
+--- Returns:
+--- @return number summonReason
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.GetSummonReason
+---
+--- Usage: summonReason = C_SummonInfo.GetSummonReason()
+---
+-- function C_SummonInfo.GetSummonReason()
+-- end
+
+---======================================================================
+--- C_SummonInfo.IsSummonSkippingStartExperience
+---======================================================================
+--- Returns true if the summon will take the player out of a confined starting zone.
+---
+--- Returns:
+--- @return boolean isSummonSkippingStartExperience
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SummonInfo.IsSummonSkippingStartExperience
+---
+--- Usage: isSummonSkippingStartExperience = C_SummonInfo.IsSummonSkippingStartExperience()
+---
+-- function C_SummonInfo.IsSummonSkippingStartExperience()
+-- end

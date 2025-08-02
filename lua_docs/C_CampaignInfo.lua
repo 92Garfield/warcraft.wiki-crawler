@@ -1,0 +1,190 @@
+--[=[
+-- C_CampaignInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_CampaignInfo
+--- C_CampaignInfo namespace contains 10 functions
+local C_CampaignInfo = {}
+
+--[=[
+-- C_CampaignInfo Functions:
+-- - C_CampaignInfo.GetAvailableCampaigns
+-- - C_CampaignInfo.GetCampaignChapterInfo
+-- - C_CampaignInfo.GetCampaignID
+-- - C_CampaignInfo.GetCampaignInfo
+-- - C_CampaignInfo.GetChapterIDs
+-- - C_CampaignInfo.GetCurrentChapterID
+-- - C_CampaignInfo.GetFailureReason
+-- - C_CampaignInfo.GetState
+-- - C_CampaignInfo.IsCampaignQuest
+-- - C_CampaignInfo.SortAsNormalQuest
+--]=]
+
+---======================================================================
+--- C_CampaignInfo.GetAvailableCampaigns
+---======================================================================
+--- Returns:
+--- @return number campaignIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetAvailableCampaigns
+---
+--- Usage: campaignIDs = C_CampaignInfo.GetAvailableCampaigns()
+---
+-- function C_CampaignInfo.GetAvailableCampaigns()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetCampaignChapterInfo
+---======================================================================
+--- Arguments:
+--- @param campaignChapterID number
+---
+--- Returns:
+--- @return CampaignChapterInfo campaignChapterInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetCampaignChapterInfo
+---
+--- Usage: campaignChapterInfo = C_CampaignInfo.GetCampaignChapterInfo(campaignChapterID)
+---
+-- function C_CampaignInfo.GetCampaignChapterInfo()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetCampaignID
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number campaignID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetCampaignID
+---
+--- Usage: campaignID = C_CampaignInfo.GetCampaignID(questID)
+---
+-- function C_CampaignInfo.GetCampaignID()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetCampaignInfo
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return CampaignInfo campaignInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetCampaignInfo
+---
+--- Usage: campaignInfo = C_CampaignInfo.GetCampaignInfo(campaignID)
+---
+-- function C_CampaignInfo.GetCampaignInfo()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetChapterIDs
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return number chapterIDs []?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetChapterIDs
+---
+--- Usage: chapterIDs = C_CampaignInfo.GetChapterIDs(campaignID)
+---
+-- function C_CampaignInfo.GetChapterIDs()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetCurrentChapterID
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return number currentChapterID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetCurrentChapterID
+---
+--- Usage: currentChapterID = C_CampaignInfo.GetCurrentChapterID(campaignID)
+---
+-- function C_CampaignInfo.GetCurrentChapterID()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetFailureReason
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return CampaignFailureReason failureReason ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetFailureReason
+---
+--- Usage: failureReason = C_CampaignInfo.GetFailureReason(campaignID)
+---
+-- function C_CampaignInfo.GetFailureReason()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.GetState
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return Enum.CampaignState state
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.GetState
+---
+--- Usage: state = C_CampaignInfo.GetState(campaignID)
+---
+-- function C_CampaignInfo.GetState()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.IsCampaignQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isCampaignQuest
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.IsCampaignQuest
+---
+--- Usage: isCampaignQuest = C_CampaignInfo.IsCampaignQuest(questID)
+---
+-- function C_CampaignInfo.IsCampaignQuest()
+-- end
+
+---======================================================================
+--- C_CampaignInfo.SortAsNormalQuest
+---======================================================================
+--- Arguments:
+--- @param campaignID number
+---
+--- Returns:
+--- @return boolean sortAsNormalQuest
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CampaignInfo.SortAsNormalQuest
+---
+--- Usage: sortAsNormalQuest = C_CampaignInfo.SortAsNormalQuest(campaignID)
+---
+-- function C_CampaignInfo.SortAsNormalQuest()
+-- end

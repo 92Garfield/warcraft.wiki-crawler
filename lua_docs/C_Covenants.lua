@@ -1,0 +1,68 @@
+--[=[
+-- C_Covenants API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_Covenants
+--- C_Covenants namespace contains 3 functions
+local C_Covenants = {}
+
+--[=[
+-- C_Covenants Functions:
+-- - C_Covenants.GetActiveCovenantID
+-- - C_Covenants.GetCovenantData
+-- - C_Covenants.GetCovenantIDs
+--]=]
+
+---======================================================================
+--- C_Covenants.GetActiveCovenantID
+---======================================================================
+--- Returns the CovenantID of the chosen covenant.
+---
+--- Returns:
+--- @return Enum.CovenantType covenantID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Covenants.GetActiveCovenantID
+---
+--- Usage: covenantID = C_Covenants.GetActiveCovenantID()
+---
+-- function C_Covenants.GetActiveCovenantID()
+-- end
+
+---======================================================================
+--- C_Covenants.GetCovenantData
+---======================================================================
+--- Arguments:
+--- @param covenantID Enum.CovenantType
+---
+--- Returns:
+--- @return CovenantData data ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Covenants.GetCovenantData
+---
+--- Usage: data = C_Covenants.GetCovenantData(covenantID)
+---
+-- function C_Covenants.GetCovenantData()
+-- end
+
+---======================================================================
+--- C_Covenants.GetCovenantIDs
+---======================================================================
+--- Returns:
+--- @return Enum.CovenantType covenantID []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Covenants.GetCovenantIDs
+---
+--- Usage: covenantID = C_Covenants.GetCovenantIDs()
+---
+--- Examples:
+--- Example 1:
+---   {1, 2, 3, 4}
+---
+-- function C_Covenants.GetCovenantIDs()
+-- end

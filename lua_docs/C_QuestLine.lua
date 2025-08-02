@@ -1,0 +1,149 @@
+--[=[
+-- C_QuestLine API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_QuestLine
+--- C_QuestLine namespace contains 7 functions
+local C_QuestLine = {}
+
+--[=[
+-- C_QuestLine Functions:
+-- - C_QuestLine.GetAvailableQuestLines
+-- - C_QuestLine.GetForceVisibleQuests
+-- - C_QuestLine.GetQuestLineInfo
+-- - C_QuestLine.GetQuestLineQuests
+-- - C_QuestLine.IsComplete
+-- - C_QuestLine.QuestLineIgnoresAccountCompletedFiltering
+-- - C_QuestLine.RequestQuestLinesForMap
+--]=]
+
+---======================================================================
+--- C_QuestLine.GetAvailableQuestLines
+---======================================================================
+--- Returns available quest lines on a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return QuestLineInfo questLines []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetAvailableQuestLines
+---
+--- Usage: questLines = C_QuestLine.GetAvailableQuestLines(uiMapID)
+---
+--- See also:
+--- - C_TaskQuest.GetQuestsForPlayerByMapID
+---
+-- function C_QuestLine.GetAvailableQuestLines()
+-- end
+
+---======================================================================
+--- C_QuestLine.GetForceVisibleQuests
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return number questIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetForceVisibleQuests
+---
+--- Usage: questIDs = C_QuestLine.GetForceVisibleQuests(uiMapID)
+---
+-- function C_QuestLine.GetForceVisibleQuests()
+-- end
+
+---======================================================================
+--- C_QuestLine.GetQuestLineInfo
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param uiMapID number ? : UiMapID
+--- @param displayableOnly boolean ? = false
+---
+--- Returns:
+--- @return QuestLineInfo questLineInfo ?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added displayableOnly argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetQuestLineInfo
+---
+--- Usage: questLineInfo = C_QuestLine.GetQuestLineInfo(questID [, uiMapID [, displayableOnly]])
+---
+-- function C_QuestLine.GetQuestLineInfo()
+-- end
+
+---======================================================================
+--- C_QuestLine.GetQuestLineQuests
+---======================================================================
+--- Arguments:
+--- @param questLineID number
+---
+--- Returns:
+--- @return number questIDs []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetQuestLineQuests
+---
+--- Usage: questIDs = C_QuestLine.GetQuestLineQuests(questLineID)
+---
+-- function C_QuestLine.GetQuestLineQuests()
+-- end
+
+---======================================================================
+--- C_QuestLine.IsComplete
+---======================================================================
+--- Arguments:
+--- @param questLineID number
+---
+--- Returns:
+--- @return boolean isComplete
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.IsComplete
+---
+--- Usage: isComplete = C_QuestLine.IsComplete(questLineID)
+---
+-- function C_QuestLine.IsComplete()
+-- end
+
+---======================================================================
+--- C_QuestLine.QuestLineIgnoresAccountCompletedFiltering
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+--- @param questLineID number
+---
+--- Returns:
+--- @return boolean questLineIgnoresAccountCompletedFiltering
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.QuestLineIgnoresAccountCompletedFiltering
+---
+--- Usage: questLineIgnoresAccountCompletedFiltering = C_QuestLine.QuestLineIgnoresAccountCompletedFiltering(uiMapID, questLineID)
+---
+-- function C_QuestLine.QuestLineIgnoresAccountCompletedFiltering()
+-- end
+
+---======================================================================
+--- C_QuestLine.RequestQuestLinesForMap
+---======================================================================
+--- Downloads updated information about quest lines ("chains" or "hubs") that might appear as map pins.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLine.RequestQuestLinesForMap
+---
+--- Usage: C_QuestLine.RequestQuestLinesForMap(uiMapID)
+---
+--- See also:
+--- - QUESTLINE_UPDATE
+--- - C_QuestLine.GetAvailableQuestLines
+---
+-- function C_QuestLine.RequestQuestLinesForMap()
+-- end

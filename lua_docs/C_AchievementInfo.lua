@@ -1,0 +1,120 @@
+--[=[
+-- C_AchievementInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_AchievementInfo
+--- C_AchievementInfo namespace contains 6 functions
+local C_AchievementInfo = {}
+
+--[=[
+-- C_AchievementInfo Functions:
+-- - C_AchievementInfo.AreGuildAchievementsEnabled
+-- - C_AchievementInfo.GetRewardItemID
+-- - C_AchievementInfo.GetSupercedingAchievements
+-- - C_AchievementInfo.IsGuildAchievement
+-- - C_AchievementInfo.IsValidAchievement
+-- - C_AchievementInfo.SetPortraitTexture
+--]=]
+
+---======================================================================
+--- C_AchievementInfo.AreGuildAchievementsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.AreGuildAchievementsEnabled
+---
+--- Usage: enabled = C_AchievementInfo.AreGuildAchievementsEnabled()
+---
+-- function C_AchievementInfo.AreGuildAchievementsEnabled()
+-- end
+
+---======================================================================
+--- C_AchievementInfo.GetRewardItemID
+---======================================================================
+--- Returns any reward item for an achievement.
+---
+--- Arguments:
+--- @param achievementID number - AchievementID
+---
+--- Returns:
+--- @return number rewardItemID ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.GetRewardItemID
+---
+--- Usage: rewardItemID = C_AchievementInfo.GetRewardItemID(achievementID)
+---
+-- function C_AchievementInfo.GetRewardItemID()
+-- end
+
+---======================================================================
+--- C_AchievementInfo.GetSupercedingAchievements
+---======================================================================
+--- Returns the next achievement in a series.
+---
+--- Arguments:
+--- @param achievementID number : AchievementID
+---
+--- Returns:
+--- @return number supercedingAchievements [] - Only returns the next ID in a series even though it's in a table.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.GetSupercedingAchievements
+---
+--- Usage: supercedingAchievements = C_AchievementInfo.GetSupercedingAchievements(achievementID)
+---
+-- function C_AchievementInfo.GetSupercedingAchievements()
+-- end
+
+---======================================================================
+--- C_AchievementInfo.IsGuildAchievement
+---======================================================================
+--- Arguments:
+--- @param achievementId number
+---
+--- Returns:
+--- @return boolean isGuild
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.IsGuildAchievement
+---
+--- Usage: isGuild = C_AchievementInfo.IsGuildAchievement(achievementId)
+---
+-- function C_AchievementInfo.IsGuildAchievement()
+-- end
+
+---======================================================================
+--- C_AchievementInfo.IsValidAchievement
+---======================================================================
+--- Arguments:
+--- @param achievementId number
+---
+--- Returns:
+--- @return boolean isValidAchievement
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.IsValidAchievement
+---
+--- Usage: isValidAchievement = C_AchievementInfo.IsValidAchievement(achievementId)
+---
+-- function C_AchievementInfo.IsValidAchievement()
+-- end
+
+---======================================================================
+--- C_AchievementInfo.SetPortraitTexture
+---======================================================================
+--- Sets a portrait texture for the unit being achievement compared.
+---
+--- Arguments:
+--- @param textureObject Texture🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.SetPortraitTexture
+---
+--- Usage: C_AchievementInfo.SetPortraitTexture(textureObject)
+---
+-- function C_AchievementInfo.SetPortraitTexture()
+-- end

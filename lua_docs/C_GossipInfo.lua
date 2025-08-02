@@ -1,0 +1,425 @@
+--[=[
+-- C_GossipInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 22
+--]=]
+
+--- @class C_GossipInfo
+--- C_GossipInfo namespace contains 22 functions
+local C_GossipInfo = {}
+
+--[=[
+-- C_GossipInfo Functions:
+-- - C_GossipInfo.CloseGossip
+-- - C_GossipInfo.ForceGossip
+-- - C_GossipInfo.GetActiveDelveGossip
+-- - C_GossipInfo.GetActiveQuests
+-- - C_GossipInfo.GetAvailableQuests
+-- - C_GossipInfo.GetCompletedOptionDescriptionString
+-- - C_GossipInfo.GetCustomGossipDescriptionString
+-- - C_GossipInfo.GetFriendshipReputation
+-- - C_GossipInfo.GetFriendshipReputationRanks
+-- - C_GossipInfo.GetGossipDelveMapID
+-- - C_GossipInfo.GetNumActiveQuests
+-- - C_GossipInfo.GetNumAvailableQuests
+-- - C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID
+-- - C_GossipInfo.GetOptions
+-- - C_GossipInfo.GetPoiForUiMapID
+-- - C_GossipInfo.GetPoiInfo
+-- - C_GossipInfo.GetText
+-- - C_GossipInfo.RefreshOptions
+-- - C_GossipInfo.SelectActiveQuest
+-- - C_GossipInfo.SelectAvailableQuest
+-- - C_GossipInfo.SelectOption
+-- - C_GossipInfo.SelectOptionByIndex
+--]=]
+
+---======================================================================
+--- C_GossipInfo.CloseGossip
+---======================================================================
+--- Closes the gossip window.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.CloseGossip()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.CloseGossip
+---
+--- Usage: C_GossipInfo.CloseGossip()
+---
+-- function C_GossipInfo.CloseGossip()
+-- end
+
+---======================================================================
+--- C_GossipInfo.ForceGossip
+---======================================================================
+--- Returns true if gossip text must be displayed. For example making this return true shows the Banker gossip.
+---
+--- Returns:
+--- @return boolean forceGossip
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.ForceGossip()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.ForceGossip
+---
+--- Usage: forceGossip = C_GossipInfo.ForceGossip()
+---
+-- function C_GossipInfo.ForceGossip()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetActiveDelveGossip
+---======================================================================
+--- Returns:
+--- @return GossipOptionUIInfo gossip
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetActiveDelveGossip
+---
+--- Usage: gossip = C_GossipInfo.GetActiveDelveGossip()
+---
+-- function C_GossipInfo.GetActiveDelveGossip()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetActiveQuests
+---======================================================================
+--- Returns the quests which can be turned in at a quest giver.
+---
+--- Returns:
+--- @return GossipQuestUIInfo info []
+---
+--- @since Patch 9.0.1 (2020-10-13): Changed to C_GossipInfo.GetActiveQuests() and returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetActiveQuests
+---
+--- Usage: info = C_GossipInfo.GetActiveQuests()
+---
+--- See also:
+--- - GetNumActiveQuests
+--- - GetNumAvailableQuests
+--- - C_GossipInfo.GetAvailableQuests
+---
+-- function C_GossipInfo.GetActiveQuests()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetAvailableQuests
+---======================================================================
+--- Returns the available quests at a quest giver.
+---
+--- Returns:
+--- @return GossipQuestUIInfo info []
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.GetAvailableQuests()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetAvailableQuests
+---
+--- Usage: info = C_GossipInfo.GetAvailableQuests()
+---
+--- See also:
+--- - GetNumActiveQuests
+--- - GetNumAvailableQuests
+--- - C_GossipInfo.GetActiveQuests
+---
+-- function C_GossipInfo.GetAvailableQuests()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetCompletedOptionDescriptionString
+---======================================================================
+--- Returns:
+--- @return string description ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetCompletedOptionDescriptionString
+---
+--- Usage: description = C_GossipInfo.GetCompletedOptionDescriptionString()
+---
+-- function C_GossipInfo.GetCompletedOptionDescriptionString()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetCustomGossipDescriptionString
+---======================================================================
+--- Returns:
+--- @return string description ?
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetCustomGossipDescriptionString
+---
+--- Usage: description = C_GossipInfo.GetCustomGossipDescriptionString()
+---
+-- function C_GossipInfo.GetCustomGossipDescriptionString()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetFriendshipReputation
+---======================================================================
+--- Arguments:
+--- @param friendshipFactionID number
+---
+--- Returns:
+--- @return FriendshipReputationInfo reputationInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetFriendshipReputation
+---
+--- Usage: reputationInfo = C_GossipInfo.GetFriendshipReputation(friendshipFactionID)
+---
+-- function C_GossipInfo.GetFriendshipReputation()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetFriendshipReputationRanks
+---======================================================================
+--- Arguments:
+--- @param friendshipFactionID number
+---
+--- Returns:
+--- @return FriendshipReputationRankInfo rankInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetFriendshipReputationRanks
+---
+--- Usage: rankInfo = C_GossipInfo.GetFriendshipReputationRanks(friendshipFactionID)
+---
+-- function C_GossipInfo.GetFriendshipReputationRanks()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetGossipDelveMapID
+---======================================================================
+--- Returns:
+--- @return number mapID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetGossipDelveMapID
+---
+--- Usage: mapID = C_GossipInfo.GetGossipDelveMapID()
+---
+-- function C_GossipInfo.GetGossipDelveMapID()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetNumActiveQuests
+---======================================================================
+--- Returns the number of active quests that you should eventually turn in to this NPC.
+---
+--- Returns:
+--- @return number numQuests
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.GetNumActiveQuests()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetNumActiveQuests
+---
+--- Usage: numQuests = C_GossipInfo.GetNumActiveQuests()
+---
+-- function C_GossipInfo.GetNumActiveQuests()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetNumAvailableQuests
+---======================================================================
+--- Returns the number of quests (that you are not already on) offered by this NPC.
+---
+--- Returns:
+--- @return number numQuests
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.GetNumAvailableQuests()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetNumAvailableQuests
+---
+--- Usage: numQuests = C_GossipInfo.GetNumAvailableQuests()
+---
+-- function C_GossipInfo.GetNumAvailableQuests()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetOptions
+---======================================================================
+--- Returns the available gossip options at a quest giver.
+---
+--- Returns:
+--- @return GossipOptionUIInfo info []
+---
+--- @since Patch 10.0.7 (2023-03-21): Changed the gossipOptionID field to be nilable.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetOptions
+---
+--- Usage: info = C_GossipInfo.GetOptions()
+---
+--- Examples:
+--- Example 1:
+---   local function OnEvent(self, event)
+---   	local info = C_GossipInfo.GetOptions()
+---   	for i, v in pairs(info) do
+---   		print(i, v.icon, v.name, v.gossipOptionID)
+---   		if v.icon == 132060 then -- interface/gossipframe/vendorgossipicon.blp
+---   			print("Selecting vendor gossip option.")
+---   			C_GossipInfo.SelectOption(v.gossipOptionID)
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("GOSSIP_SHOW")
+---   f:SetScript("OnEvent", OnEvent)
+---
+-- function C_GossipInfo.GetOptions()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID
+---======================================================================
+--- Arguments:
+--- @param gossipOptionID number
+---
+--- Returns:
+--- @return GossipOptionUIWidgetSetAndType gossipOptionUIWidgetSetsAndTypes []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID
+---
+--- Usage: gossipOptionUIWidgetSetsAndTypes = C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID(gossipOptionID)
+---
+-- function C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetPoiForUiMapID
+---======================================================================
+--- Returns any gossip point of interest on the map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number gossipPoiID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Changed to C_GossipInfo.GetPoiForUiMapID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetPoiForUiMapID
+---
+--- Usage: gossipPoiID = C_GossipInfo.GetPoiForUiMapID(uiMapID)
+---
+-- function C_GossipInfo.GetPoiForUiMapID()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetPoiInfo
+---======================================================================
+--- Returns info for a gossip point of interest (e.g. the red flags when asking city guards for directions).
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param gossipPoiID number
+---
+--- Returns:
+--- @return GossipPoiInfo gossipPoiInfo ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.GetPoiInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetPoiInfo
+---
+--- Usage: gossipPoiInfo = C_GossipInfo.GetPoiInfo(uiMapID, gossipPoiID)
+---
+-- function C_GossipInfo.GetPoiInfo()
+-- end
+
+---======================================================================
+--- C_GossipInfo.GetText
+---======================================================================
+--- Returns the gossip text.
+---
+--- Returns:
+--- @return string gossipText
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_GossipInfo.GetText()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetText
+---
+--- Usage: gossipText = C_GossipInfo.GetText()
+---
+-- function C_GossipInfo.GetText()
+-- end
+
+---======================================================================
+--- C_GossipInfo.RefreshOptions
+---======================================================================
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.RefreshOptions
+---
+--- Usage: C_GossipInfo.RefreshOptions()
+---
+-- function C_GossipInfo.RefreshOptions()
+-- end
+
+---======================================================================
+--- C_GossipInfo.SelectActiveQuest
+---======================================================================
+--- Selects an active quest from the gossip window.
+---
+--- Arguments:
+--- @param optionID number - questID from C_GossipInfo.GetActiveQuests
+---
+--- @since Patch 10.0.0 (2022-10-25): Changed index param to optionID.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.SelectActiveQuest
+---
+--- Usage: C_GossipInfo.SelectActiveQuest(optionID)
+---
+-- function C_GossipInfo.SelectActiveQuest()
+-- end
+
+---======================================================================
+--- C_GossipInfo.SelectAvailableQuest
+---======================================================================
+--- Selects an available quest from the gossip window.
+---
+--- Arguments:
+--- @param optionID number - questID from C_GossipInfo.GetAvailableQuests
+---
+--- @since Patch 10.0.0 (2022-10-25): Changed index param to optionID.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.SelectAvailableQuest
+---
+--- Usage: C_GossipInfo.SelectAvailableQuest(optionID)
+---
+-- function C_GossipInfo.SelectAvailableQuest()
+-- end
+
+---======================================================================
+--- C_GossipInfo.SelectOption
+---======================================================================
+--- Selects a gossip (conversation) option.
+---
+--- Arguments:
+--- @param optionID number - gossipOptionID from C_GossipInfo.GetOptions()
+--- @param text string ?
+--- @param confirmed boolean ?
+---
+--- @since Patch 10.0.0 (2022-10-25): Changed index param to optionID.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.SelectOption
+---
+--- Usage: C_GossipInfo.SelectOption(optionID [, text, confirmed])
+---
+--- Examples:
+--- Example 1:
+---   local function OnEvent(self, event)
+---   	local info = C_GossipInfo.GetOptions()
+---   	for i, v in pairs(info) do
+---   		print(i, v.icon, v.name, v.gossipOptionID)
+---   		if v.icon == 132060 then -- interface/gossipframe/vendorgossipicon.blp
+---   			print("Selecting vendor gossip option.")
+---   			C_GossipInfo.SelectOption(v.gossipOptionID)
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("GOSSIP_SHOW")
+---   f:SetScript("OnEvent", OnEvent)
+---
+--- See also:
+--- - SelectGossipOption
+---
+-- function C_GossipInfo.SelectOption()
+-- end
+
+---======================================================================
+--- C_GossipInfo.SelectOptionByIndex
+---======================================================================
+--- Arguments:
+--- @param optionID number - orderIndex from C_GossipInfo.GetOptions()
+--- @param text string ?
+--- @param confirmed boolean ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GossipInfo.SelectOptionByIndex
+---
+--- Usage: C_GossipInfo.SelectOptionByIndex(optionID [, text, confirmed])
+---
+-- function C_GossipInfo.SelectOptionByIndex()
+-- end

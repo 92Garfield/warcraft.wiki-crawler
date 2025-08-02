@@ -1,0 +1,259 @@
+--[=[
+-- C_RecruitAFriend API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 15
+--]=]
+
+--- @class C_RecruitAFriend
+--- C_RecruitAFriend namespace contains 15 functions
+local C_RecruitAFriend = {}
+
+--[=[
+-- C_RecruitAFriend Functions:
+-- - C_RecruitAFriend.CanSummonFriend
+-- - C_RecruitAFriend.ClaimActivityReward
+-- - C_RecruitAFriend.ClaimNextReward
+-- - C_RecruitAFriend.GenerateRecruitmentLink
+-- - C_RecruitAFriend.GetRAFInfo
+-- - C_RecruitAFriend.GetRAFSystemInfo
+-- - C_RecruitAFriend.GetRecruitActivityRequirementsText
+-- - C_RecruitAFriend.GetRecruitInfo
+-- - C_RecruitAFriend.GetSummonFriendCooldown
+-- - C_RecruitAFriend.IsEnabled
+-- - C_RecruitAFriend.IsRecruitAFriendLinked
+-- - C_RecruitAFriend.IsRecruitingEnabled
+-- - C_RecruitAFriend.RemoveRAFRecruit
+-- - C_RecruitAFriend.RequestUpdatedRecruitmentInfo
+-- - C_RecruitAFriend.SummonFriend
+--]=]
+
+---======================================================================
+--- C_RecruitAFriend.CanSummonFriend
+---======================================================================
+--- Arguments:
+--- @param guid string : WOWGUID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.CanSummonFriend
+---
+--- Usage: result = C_RecruitAFriend.CanSummonFriend(guid)
+---
+-- function C_RecruitAFriend.CanSummonFriend()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.ClaimActivityReward
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param acceptanceID string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimActivityReward
+---
+--- Usage: success = C_RecruitAFriend.ClaimActivityReward(activityID, acceptanceID)
+---
+-- function C_RecruitAFriend.ClaimActivityReward()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.ClaimNextReward
+---======================================================================
+--- Arguments:
+--- @param rafVersion Enum.RecruitAFriendRewardsVersion ?
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 10.0.7 (2023-03-21): Added rafVersion argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimNextReward
+---
+--- Usage: success = C_RecruitAFriend.ClaimNextReward([rafVersion])
+---
+-- function C_RecruitAFriend.ClaimNextReward()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GenerateRecruitmentLink
+---======================================================================
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GenerateRecruitmentLink
+---
+--- Usage: success = C_RecruitAFriend.GenerateRecruitmentLink()
+---
+-- function C_RecruitAFriend.GenerateRecruitmentLink()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GetRAFInfo
+---======================================================================
+--- Returns:
+--- @return RafInfo info
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRAFInfo
+---
+--- Usage: info = C_RecruitAFriend.GetRAFInfo()
+---
+-- function C_RecruitAFriend.GetRAFInfo()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GetRAFSystemInfo
+---======================================================================
+--- Returns:
+--- @return  systemInfo structure - RafSystemInfo
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRAFSystemInfo
+---
+--- Usage: systemInfo = C_RecruitAFriend.GetRAFSystemInfo()
+---
+-- function C_RecruitAFriend.GetRAFSystemInfo()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GetRecruitActivityRequirementsText
+---======================================================================
+--- Arguments:
+--- @param activityID number
+--- @param acceptanceID string
+---
+--- Returns:
+--- @return string requirementsText []
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRecruitActivityRequirementsText
+---
+--- Usage: requirementsText = C_RecruitAFriend.GetRecruitActivityRequirementsText(activityID, acceptanceID)
+---
+-- function C_RecruitAFriend.GetRecruitActivityRequirementsText()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GetRecruitInfo
+---======================================================================
+--- Returns:
+--- @return boolean active
+--- @return number faction
+---
+--- @since Patch 5.4.1 (2013-10-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRecruitInfo
+---
+--- Usage: active, faction = C_RecruitAFriend.GetRecruitInfo()
+---
+-- function C_RecruitAFriend.GetRecruitInfo()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.GetSummonFriendCooldown
+---======================================================================
+--- Returns:
+--- @return number startTimeSeconds
+--- @return number durationSeconds
+--- @return boolean enableCooldownTimer
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetSummonFriendCooldown
+---
+--- Usage: startTimeSeconds, durationSeconds, enableCooldownTimer = C_RecruitAFriend.GetSummonFriendCooldown()
+---
+-- function C_RecruitAFriend.GetSummonFriendCooldown()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.IsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsEnabled
+---
+--- Usage: enabled = C_RecruitAFriend.IsEnabled()
+---
+-- function C_RecruitAFriend.IsEnabled()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.IsRecruitAFriendLinked
+---======================================================================
+--- Arguments:
+--- @param guid string : WOWGUID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsRecruitAFriendLinked
+---
+--- Usage: result = C_RecruitAFriend.IsRecruitAFriendLinked(guid)
+---
+-- function C_RecruitAFriend.IsRecruitAFriendLinked()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.IsRecruitingEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsRecruitingEnabled
+---
+--- Usage: enabled = C_RecruitAFriend.IsRecruitingEnabled()
+---
+-- function C_RecruitAFriend.IsRecruitingEnabled()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.RemoveRAFRecruit
+---======================================================================
+--- Arguments:
+--- @param wowAccountGUID string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.RemoveRAFRecruit
+---
+--- Usage: success = C_RecruitAFriend.RemoveRAFRecruit(wowAccountGUID)
+---
+-- function C_RecruitAFriend.RemoveRAFRecruit()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.RequestUpdatedRecruitmentInfo
+---======================================================================
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.RequestUpdatedRecruitmentInfo
+---
+--- Usage: success = C_RecruitAFriend.RequestUpdatedRecruitmentInfo()
+---
+-- function C_RecruitAFriend.RequestUpdatedRecruitmentInfo()
+-- end
+
+---======================================================================
+--- C_RecruitAFriend.SummonFriend
+---======================================================================
+--- Arguments:
+--- @param target string : WOWGUID
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.SummonFriend
+---
+--- Usage: C_RecruitAFriend.SummonFriend(target, name)
+---
+-- function C_RecruitAFriend.SummonFriend()
+-- end

@@ -1,0 +1,189 @@
+--[=[
+-- C_ClickBindings API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 11
+--]=]
+
+--- @class C_ClickBindings
+--- C_ClickBindings namespace contains 11 functions
+local C_ClickBindings = {}
+
+--[=[
+-- C_ClickBindings Functions:
+-- - C_ClickBindings.CanSpellBeClickBound
+-- - C_ClickBindings.ExecuteBinding
+-- - C_ClickBindings.GetBindingType
+-- - C_ClickBindings.GetEffectiveInteractionButton
+-- - C_ClickBindings.GetProfileInfo
+-- - C_ClickBindings.GetStringFromModifiers
+-- - C_ClickBindings.GetTutorialShown
+-- - C_ClickBindings.MakeModifiers
+-- - C_ClickBindings.ResetCurrentProfile
+-- - C_ClickBindings.SetProfileByInfo
+-- - C_ClickBindings.SetTutorialShown
+--]=]
+
+---======================================================================
+--- C_ClickBindings.CanSpellBeClickBound
+---======================================================================
+--- Arguments:
+--- @param spellID number - Base spellID for spell, spellID for PetAction
+---
+--- Returns:
+--- @return boolean canBeBound
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.CanSpellBeClickBound
+---
+--- Usage: canBeBound = C_ClickBindings.CanSpellBeClickBound(spellID)
+---
+-- function C_ClickBindings.CanSpellBeClickBound()
+-- end
+
+---======================================================================
+--- C_ClickBindings.ExecuteBinding
+---======================================================================
+--- Arguments:
+--- @param targetToken string
+--- @param button string
+--- @param modifiers number
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.ExecuteBinding
+---
+--- Usage: C_ClickBindings.ExecuteBinding(targetToken, button, modifiers)
+---
+-- function C_ClickBindings.ExecuteBinding()
+-- end
+
+---======================================================================
+--- C_ClickBindings.GetBindingType
+---======================================================================
+--- Arguments:
+--- @param button string
+--- @param modifiers number
+---
+--- Returns:
+--- @return Enum.ClickBindingType type
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetBindingType
+---
+--- Usage: type = C_ClickBindings.GetBindingType(button, modifiers)
+---
+-- function C_ClickBindings.GetBindingType()
+-- end
+
+---======================================================================
+--- C_ClickBindings.GetEffectiveInteractionButton
+---======================================================================
+--- Arguments:
+--- @param button string
+--- @param modifiers number
+---
+--- Returns:
+--- @return string effectiveButton
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetEffectiveInteractionButton
+---
+--- Usage: effectiveButton = C_ClickBindings.GetEffectiveInteractionButton(button, modifiers)
+---
+-- function C_ClickBindings.GetEffectiveInteractionButton()
+-- end
+
+---======================================================================
+--- C_ClickBindings.GetProfileInfo
+---======================================================================
+--- Returns:
+--- @return ClickBindingInfo infoVec []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetProfileInfo
+---
+--- Usage: infoVec = C_ClickBindings.GetProfileInfo()
+---
+-- function C_ClickBindings.GetProfileInfo()
+-- end
+
+---======================================================================
+--- C_ClickBindings.GetStringFromModifiers
+---======================================================================
+--- Arguments:
+--- @param modifiers number
+---
+--- Returns:
+--- @return string modifierString
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetStringFromModifiers
+---
+--- Usage: modifierString = C_ClickBindings.GetStringFromModifiers(modifiers)
+---
+-- function C_ClickBindings.GetStringFromModifiers()
+-- end
+
+---======================================================================
+--- C_ClickBindings.GetTutorialShown
+---======================================================================
+--- Returns:
+--- @return boolean tutorialShown
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.GetTutorialShown
+---
+--- Usage: tutorialShown = C_ClickBindings.GetTutorialShown()
+---
+-- function C_ClickBindings.GetTutorialShown()
+-- end
+
+---======================================================================
+--- C_ClickBindings.MakeModifiers
+---======================================================================
+--- Returns:
+--- @return number modifiers
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.MakeModifiers
+---
+--- Usage: modifiers = C_ClickBindings.MakeModifiers()
+---
+-- function C_ClickBindings.MakeModifiers()
+-- end
+
+---======================================================================
+--- C_ClickBindings.ResetCurrentProfile
+---======================================================================
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.ResetCurrentProfile
+---
+--- Usage: C_ClickBindings.ResetCurrentProfile()
+---
+-- function C_ClickBindings.ResetCurrentProfile()
+-- end
+
+---======================================================================
+--- C_ClickBindings.SetProfileByInfo
+---======================================================================
+--- Arguments:
+--- @param infoVec ClickBindingInfo []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.SetProfileByInfo
+---
+--- Usage: C_ClickBindings.SetProfileByInfo(infoVec)
+---
+-- function C_ClickBindings.SetProfileByInfo()
+-- end
+
+---======================================================================
+--- C_ClickBindings.SetTutorialShown
+---======================================================================
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClickBindings.SetTutorialShown
+---
+--- Usage: C_ClickBindings.SetTutorialShown()
+---
+-- function C_ClickBindings.SetTutorialShown()
+-- end

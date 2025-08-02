@@ -1,0 +1,353 @@
+--[=[
+-- C_PerksProgram API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 24
+--]=]
+
+--- @class C_PerksProgram
+--- C_PerksProgram namespace contains 24 functions
+local C_PerksProgram = {}
+
+--[=[
+-- C_PerksProgram Functions:
+-- - C_PerksProgram.ClearFrozenPerksVendorItem
+-- - C_PerksProgram.CloseInteraction
+-- - C_PerksProgram.GetAvailableCategoryIDs
+-- - C_PerksProgram.GetAvailableVendorItemIDs
+-- - C_PerksProgram.GetCategoryInfo
+-- - C_PerksProgram.GetCurrencyAmount
+-- - C_PerksProgram.GetDraggedPerksVendorItem
+-- - C_PerksProgram.GetFrozenPerksVendorItemInfo
+-- - C_PerksProgram.GetPendingChestRewards
+-- - C_PerksProgram.GetPerksProgramItemDisplayInfo
+-- - C_PerksProgram.GetTimeRemaining
+-- - C_PerksProgram.GetVendorItemInfo
+-- - C_PerksProgram.GetVendorItemInfoRefundTimeLeft
+-- - C_PerksProgram.IsAttackAnimToggleEnabled
+-- - C_PerksProgram.IsFrozenPerksVendorItem
+-- - C_PerksProgram.IsMountSpecialAnimToggleEnabled
+-- - C_PerksProgram.ItemSelectedTelemetry
+-- - C_PerksProgram.PickupPerksVendorItem
+-- - C_PerksProgram.RequestCartCheckout
+-- - C_PerksProgram.RequestPendingChestRewards
+-- - C_PerksProgram.RequestPurchase
+-- - C_PerksProgram.RequestRefund
+-- - C_PerksProgram.ResetHeldItemDragAndDrop
+-- - C_PerksProgram.SetFrozenPerksVendorItem
+--]=]
+
+---======================================================================
+--- C_PerksProgram.ClearFrozenPerksVendorItem
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ClearFrozenPerksVendorItem
+---
+--- Usage: C_PerksProgram.ClearFrozenPerksVendorItem()
+---
+-- function C_PerksProgram.ClearFrozenPerksVendorItem()
+-- end
+
+---======================================================================
+--- C_PerksProgram.CloseInteraction
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.CloseInteraction
+---
+--- Usage: C_PerksProgram.CloseInteraction()
+---
+-- function C_PerksProgram.CloseInteraction()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetAvailableCategoryIDs
+---======================================================================
+--- Returns:
+--- @return number categoryIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetAvailableCategoryIDs
+---
+--- Usage: categoryIDs = C_PerksProgram.GetAvailableCategoryIDs()
+---
+-- function C_PerksProgram.GetAvailableCategoryIDs()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetAvailableVendorItemIDs
+---======================================================================
+--- Returns:
+--- @return number vendorItemIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetAvailableVendorItemIDs
+---
+--- Usage: vendorItemIDs = C_PerksProgram.GetAvailableVendorItemIDs()
+---
+-- function C_PerksProgram.GetAvailableVendorItemIDs()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetCategoryInfo
+---======================================================================
+--- Arguments:
+--- @param categoryID number
+---
+--- Returns:
+--- @return PerksVendorCategoryInfo categoryInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetCategoryInfo
+---
+--- Usage: categoryInfo = C_PerksProgram.GetCategoryInfo(categoryID)
+---
+-- function C_PerksProgram.GetCategoryInfo()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetCurrencyAmount
+---======================================================================
+--- Returns:
+--- @return number currencyAmount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetCurrencyAmount
+---
+--- Usage: currencyAmount = C_PerksProgram.GetCurrencyAmount()
+---
+-- function C_PerksProgram.GetCurrencyAmount()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetDraggedPerksVendorItem
+---======================================================================
+--- Returns:
+--- @return number perksVendorItemID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetDraggedPerksVendorItem
+---
+--- Usage: perksVendorItemID = C_PerksProgram.GetDraggedPerksVendorItem()
+---
+-- function C_PerksProgram.GetDraggedPerksVendorItem()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetFrozenPerksVendorItemInfo
+---======================================================================
+--- Returns:
+--- @return PerksVendorItemInfo vendorItemInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetFrozenPerksVendorItemInfo
+---
+--- Usage: vendorItemInfo = C_PerksProgram.GetFrozenPerksVendorItemInfo()
+---
+-- function C_PerksProgram.GetFrozenPerksVendorItemInfo()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetPendingChestRewards
+---======================================================================
+--- Returns:
+--- @return PerksProgramPendingChestRewards pendingRewards []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetPendingChestRewards
+---
+--- Usage: pendingRewards = C_PerksProgram.GetPendingChestRewards()
+---
+-- function C_PerksProgram.GetPendingChestRewards()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetPerksProgramItemDisplayInfo
+---======================================================================
+--- Arguments:
+--- @param id number
+---
+--- Returns:
+--- @return PerksProgramItemDisplayInfo item
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetPerksProgramItemDisplayInfo
+---
+--- Usage: item = C_PerksProgram.GetPerksProgramItemDisplayInfo(id)
+---
+-- function C_PerksProgram.GetPerksProgramItemDisplayInfo()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetTimeRemaining
+---======================================================================
+--- Arguments:
+--- @param vendorItemID number
+---
+--- Returns:
+--- @return number timeRemaining
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetTimeRemaining
+---
+--- Usage: timeRemaining = C_PerksProgram.GetTimeRemaining(vendorItemID)
+---
+-- function C_PerksProgram.GetTimeRemaining()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetVendorItemInfo
+---======================================================================
+--- Arguments:
+--- @param vendorItemID number
+---
+--- Returns:
+--- @return PerksVendorItemInfo vendorItemInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetVendorItemInfo
+---
+--- Usage: vendorItemInfo = C_PerksProgram.GetVendorItemInfo(vendorItemID)
+---
+-- function C_PerksProgram.GetVendorItemInfo()
+-- end
+
+---======================================================================
+--- C_PerksProgram.GetVendorItemInfoRefundTimeLeft
+---======================================================================
+--- Arguments:
+--- @param vendorItemID number
+---
+--- Returns:
+--- @return number refundTimeRemaining
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.GetVendorItemInfoRefundTimeLeft
+---
+--- Usage: refundTimeRemaining = C_PerksProgram.GetVendorItemInfoRefundTimeLeft(vendorItemID)
+---
+-- function C_PerksProgram.GetVendorItemInfoRefundTimeLeft()
+-- end
+
+---======================================================================
+--- C_PerksProgram.IsAttackAnimToggleEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isAttackAnimToggleEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsAttackAnimToggleEnabled
+---
+--- Usage: isAttackAnimToggleEnabled = C_PerksProgram.IsAttackAnimToggleEnabled()
+---
+-- function C_PerksProgram.IsAttackAnimToggleEnabled()
+-- end
+
+---======================================================================
+--- C_PerksProgram.IsFrozenPerksVendorItem
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemID number
+---
+--- Returns:
+--- @return boolean isFrozen
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsFrozenPerksVendorItem
+---
+--- Usage: isFrozen = C_PerksProgram.IsFrozenPerksVendorItem(perksVendorItemID)
+---
+-- function C_PerksProgram.IsFrozenPerksVendorItem()
+-- end
+
+---======================================================================
+--- C_PerksProgram.IsMountSpecialAnimToggleEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isMountSpecialAnimToggleEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsMountSpecialAnimToggleEnabled
+---
+--- Usage: isMountSpecialAnimToggleEnabled = C_PerksProgram.IsMountSpecialAnimToggleEnabled()
+---
+-- function C_PerksProgram.IsMountSpecialAnimToggleEnabled()
+-- end
+
+---======================================================================
+--- C_PerksProgram.ItemSelectedTelemetry
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ItemSelectedTelemetry
+---
+--- Usage: C_PerksProgram.ItemSelectedTelemetry(perksVendorItemID)
+---
+-- function C_PerksProgram.ItemSelectedTelemetry()
+-- end
+
+---======================================================================
+--- C_PerksProgram.PickupPerksVendorItem
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.PickupPerksVendorItem
+---
+--- Usage: C_PerksProgram.PickupPerksVendorItem(perksVendorItemID)
+---
+-- function C_PerksProgram.PickupPerksVendorItem()
+-- end
+
+---======================================================================
+--- C_PerksProgram.RequestCartCheckout
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemIDs number []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestCartCheckout
+---
+--- Usage: C_PerksProgram.RequestCartCheckout(perksVendorItemIDs)
+---
+-- function C_PerksProgram.RequestCartCheckout()
+-- end
+
+---======================================================================
+--- C_PerksProgram.RequestPendingChestRewards
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestPendingChestRewards
+---
+--- Usage: C_PerksProgram.RequestPendingChestRewards()
+---
+-- function C_PerksProgram.RequestPendingChestRewards()
+-- end
+
+---======================================================================
+--- C_PerksProgram.RequestPurchase
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestPurchase
+---
+--- Usage: C_PerksProgram.RequestPurchase(perksVendorItemID)
+---
+-- function C_PerksProgram.RequestPurchase()
+-- end
+
+---======================================================================
+--- C_PerksProgram.RequestRefund
+---======================================================================
+--- Arguments:
+--- @param perksVendorItemID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestRefund
+---
+--- Usage: C_PerksProgram.RequestRefund(perksVendorItemID)
+---
+-- function C_PerksProgram.RequestRefund()
+-- end
+
+---======================================================================
+--- C_PerksProgram.ResetHeldItemDragAndDrop
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ResetHeldItemDragAndDrop
+---
+--- Usage: C_PerksProgram.ResetHeldItemDragAndDrop()
+---
+-- function C_PerksProgram.ResetHeldItemDragAndDrop()
+-- end
+
+---======================================================================
+--- C_PerksProgram.SetFrozenPerksVendorItem
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PerksProgram.SetFrozenPerksVendorItem
+---
+--- Usage: C_PerksProgram.SetFrozenPerksVendorItem()
+---
+-- function C_PerksProgram.SetFrozenPerksVendorItem()
+-- end

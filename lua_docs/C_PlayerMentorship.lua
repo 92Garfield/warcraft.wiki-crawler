@@ -1,0 +1,94 @@
+--[=[
+-- C_PlayerMentorship API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_PlayerMentorship
+--- C_PlayerMentorship namespace contains 5 functions
+local C_PlayerMentorship = {}
+
+--[=[
+-- C_PlayerMentorship Functions:
+-- - C_PlayerMentorship.GetMentorLevelRequirement
+-- - C_PlayerMentorship.GetMentorRequirements
+-- - C_PlayerMentorship.GetMentorshipStatus
+-- - C_PlayerMentorship.IsActivePlayerConsideredNewcomer
+-- - C_PlayerMentorship.IsMentorRestricted
+--]=]
+
+---======================================================================
+--- C_PlayerMentorship.GetMentorLevelRequirement
+---======================================================================
+--- Returns:
+--- @return number level ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.GetMentorLevelRequirement
+---
+--- Usage: level = C_PlayerMentorship.GetMentorLevelRequirement()
+---
+-- function C_PlayerMentorship.GetMentorLevelRequirement()
+-- end
+
+---======================================================================
+--- C_PlayerMentorship.GetMentorRequirements
+---======================================================================
+--- Returns:
+--- @return number achievementIDs []
+--- @return number optionalAchievementIDs []
+--- @return number optionalCompleteAtLeastCount
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.GetMentorRequirements
+---
+--- Usage: achievementIDs, optionalAchievementIDs, optionalCompleteAtLeastCount = C_PlayerMentorship.GetMentorRequirements()
+---
+-- function C_PlayerMentorship.GetMentorRequirements()
+-- end
+
+---======================================================================
+--- C_PlayerMentorship.GetMentorshipStatus
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.PlayerMentorshipStatus status
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.GetMentorshipStatus
+---
+--- Usage: status = C_PlayerMentorship.GetMentorshipStatus(playerLocation)
+---
+-- function C_PlayerMentorship.GetMentorshipStatus()
+-- end
+
+---======================================================================
+--- C_PlayerMentorship.IsActivePlayerConsideredNewcomer
+---======================================================================
+--- Returns:
+--- @return boolean isConsideredNewcomer
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.IsActivePlayerConsideredNewcomer
+---
+--- Usage: isConsideredNewcomer = C_PlayerMentorship.IsActivePlayerConsideredNewcomer()
+---
+-- function C_PlayerMentorship.IsActivePlayerConsideredNewcomer()
+-- end
+
+---======================================================================
+--- C_PlayerMentorship.IsMentorRestricted
+---======================================================================
+--- Returns:
+--- @return boolean isRestricted
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.IsMentorRestricted
+---
+--- Usage: isRestricted = C_PlayerMentorship.IsMentorRestricted()
+---
+-- function C_PlayerMentorship.IsMentorRestricted()
+-- end

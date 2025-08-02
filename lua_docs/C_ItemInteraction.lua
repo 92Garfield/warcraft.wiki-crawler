@@ -1,0 +1,155 @@
+--[=[
+-- C_ItemInteraction API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_ItemInteraction
+--- C_ItemInteraction namespace contains 10 functions
+local C_ItemInteraction = {}
+
+--[=[
+-- C_ItemInteraction Functions:
+-- - C_ItemInteraction.ClearPendingItem
+-- - C_ItemInteraction.CloseUI
+-- - C_ItemInteraction.GetChargeInfo
+-- - C_ItemInteraction.GetItemConversionCurrencyCost
+-- - C_ItemInteraction.GetItemInteractionInfo
+-- - C_ItemInteraction.GetItemInteractionSpellId
+-- - C_ItemInteraction.InitializeFrame
+-- - C_ItemInteraction.PerformItemInteraction
+-- - C_ItemInteraction.Reset
+-- - C_ItemInteraction.SetPendingItem
+--]=]
+
+---======================================================================
+--- C_ItemInteraction.ClearPendingItem
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.ClearPendingItem
+---
+--- Usage: C_ItemInteraction.ClearPendingItem()
+---
+-- function C_ItemInteraction.ClearPendingItem()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.CloseUI
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.CloseUI
+---
+--- Usage: C_ItemInteraction.CloseUI()
+---
+-- function C_ItemInteraction.CloseUI()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.GetChargeInfo
+---======================================================================
+--- Returns:
+--- @return ItemInteractionChargeInfo chargeInfo
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetChargeInfo
+---
+--- Usage: chargeInfo = C_ItemInteraction.GetChargeInfo()
+---
+-- function C_ItemInteraction.GetChargeInfo()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.GetItemConversionCurrencyCost
+---======================================================================
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return ConversionCurrencyCost conversionCost
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost
+---
+--- Usage: conversionCost = C_ItemInteraction.GetItemConversionCurrencyCost(item)
+---
+-- function C_ItemInteraction.GetItemConversionCurrencyCost()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.GetItemInteractionInfo
+---======================================================================
+--- Returns:
+--- @return ItemInteractionFrameInfo info ?
+---
+--- @since Patch 9.1.5 (2021-11-02): Added buttonTooltip, confirmationDescription, flags, interactionType fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionInfo
+---
+--- Usage: info = C_ItemInteraction.GetItemInteractionInfo()
+---
+-- function C_ItemInteraction.GetItemInteractionInfo()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.GetItemInteractionSpellId
+---======================================================================
+--- Returns:
+--- @return number spellId
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionSpellId
+---
+--- Usage: spellId = C_ItemInteraction.GetItemInteractionSpellId()
+---
+-- function C_ItemInteraction.GetItemInteractionSpellId()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.InitializeFrame
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.InitializeFrame
+---
+--- Usage: C_ItemInteraction.InitializeFrame()
+---
+-- function C_ItemInteraction.InitializeFrame()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.Reset
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.Reset
+---
+--- Usage: C_ItemInteraction.Reset()
+---
+-- function C_ItemInteraction.Reset()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.SetPendingItem
+---======================================================================
+--- Arguments:
+--- @param item ItemLocationMixin ?🔗
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.SetPendingItem
+---
+--- Usage: success = C_ItemInteraction.SetPendingItem([item])
+---
+-- function C_ItemInteraction.SetPendingItem()
+-- end
+
+---======================================================================
+--- C_ItemInteraction.PerformItemInteraction
+---======================================================================
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.PerformItemInteraction
+---
+--- Usage: C_ItemInteraction.PerformItemInteraction()
+---
+-- function C_ItemInteraction.PerformItemInteraction()
+-- end

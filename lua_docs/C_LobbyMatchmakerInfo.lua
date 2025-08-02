@@ -1,0 +1,123 @@
+--[=[
+-- C_LobbyMatchmakerInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_LobbyMatchmakerInfo
+--- C_LobbyMatchmakerInfo namespace contains 8 functions
+local C_LobbyMatchmakerInfo = {}
+
+--[=[
+-- C_LobbyMatchmakerInfo Functions:
+-- - C_LobbyMatchmakerInfo.AbandonQueue
+-- - C_LobbyMatchmakerInfo.EnterQueue
+-- - C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry
+-- - C_LobbyMatchmakerInfo.GetCurrQueueState
+-- - C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled
+-- - C_LobbyMatchmakerInfo.GetQueueStartTime
+-- - C_LobbyMatchmakerInfo.IsInQueue
+-- - C_LobbyMatchmakerInfo.RespondToQueuePop
+--]=]
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.AbandonQueue
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.AbandonQueue
+---
+--- Usage: C_LobbyMatchmakerInfo.AbandonQueue()
+---
+-- function C_LobbyMatchmakerInfo.AbandonQueue()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.EnterQueue
+---======================================================================
+--- Arguments:
+--- @param playlistEntry Enum.PartyPlaylistEntry
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.EnterQueue
+---
+--- Usage: C_LobbyMatchmakerInfo.EnterQueue(playlistEntry)
+---
+-- function C_LobbyMatchmakerInfo.EnterQueue()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry
+---======================================================================
+--- Returns:
+--- @return Enum.PartyPlaylistEntry playlistEntry
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry
+---
+--- Usage: playlistEntry = C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry()
+---
+-- function C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.GetCurrQueueState
+---======================================================================
+--- Returns:
+--- @return Enum.PlunderstormQueueState queueState
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.GetCurrQueueState
+---
+--- Usage: queueState = C_LobbyMatchmakerInfo.GetCurrQueueState()
+---
+-- function C_LobbyMatchmakerInfo.GetCurrQueueState()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled
+---======================================================================
+--- Returns:
+--- @return boolean queueFromMainlineEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled
+---
+--- Usage: queueFromMainlineEnabled = C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled()
+---
+-- function C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.GetQueueStartTime
+---======================================================================
+--- Returns:
+--- @return number queueStartTime
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.GetQueueStartTime
+---
+--- Usage: queueStartTime = C_LobbyMatchmakerInfo.GetQueueStartTime()
+---
+-- function C_LobbyMatchmakerInfo.GetQueueStartTime()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.IsInQueue
+---======================================================================
+--- Returns:
+--- @return boolean isInQueue
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.IsInQueue
+---
+--- Usage: isInQueue = C_LobbyMatchmakerInfo.IsInQueue()
+---
+-- function C_LobbyMatchmakerInfo.IsInQueue()
+-- end
+
+---======================================================================
+--- C_LobbyMatchmakerInfo.RespondToQueuePop
+---======================================================================
+--- Arguments:
+--- @param acceptQueue boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LobbyMatchmakerInfo.RespondToQueuePop
+---
+--- Usage: C_LobbyMatchmakerInfo.RespondToQueuePop(acceptQueue)
+---
+-- function C_LobbyMatchmakerInfo.RespondToQueuePop()
+-- end

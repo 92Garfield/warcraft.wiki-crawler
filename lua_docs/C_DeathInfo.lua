@@ -1,0 +1,109 @@
+--[=[
+-- C_DeathInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_DeathInfo
+--- C_DeathInfo namespace contains 5 functions
+local C_DeathInfo = {}
+
+--[=[
+-- C_DeathInfo Functions:
+-- - C_DeathInfo.GetCorpseMapPosition
+-- - C_DeathInfo.GetDeathReleasePosition
+-- - C_DeathInfo.GetGraveyardsForMap
+-- - C_DeathInfo.GetSelfResurrectOptions
+-- - C_DeathInfo.UseSelfResurrectOption
+--]=]
+
+---======================================================================
+--- C_DeathInfo.GetCorpseMapPosition
+---======================================================================
+--- Returns the location of the player's corpse on the map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return Vector2DMixin position ?🔗 - Returns nil when there is no corpse.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetCorpseMapPosition
+---
+--- Usage: position = C_DeathInfo.GetCorpseMapPosition(uiMapID)
+---
+-- function C_DeathInfo.GetCorpseMapPosition()
+-- end
+
+---======================================================================
+--- C_DeathInfo.GetDeathReleasePosition
+---======================================================================
+--- When the player is dead and hasn't released spirit, returns the location of the graveyard they will release to.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return Vector2DMixin position ?🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetDeathReleasePosition
+---
+--- Usage: position = C_DeathInfo.GetDeathReleasePosition(uiMapID)
+---
+-- function C_DeathInfo.GetDeathReleasePosition()
+-- end
+
+---======================================================================
+--- C_DeathInfo.GetGraveyardsForMap
+---======================================================================
+--- Returns graveyard info and location for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return GraveyardMapInfo graveyards []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetGraveyardsForMap
+---
+--- Usage: graveyards = C_DeathInfo.GetGraveyardsForMap(uiMapID)
+---
+-- function C_DeathInfo.GetGraveyardsForMap()
+-- end
+
+---======================================================================
+--- C_DeathInfo.GetSelfResurrectOptions
+---======================================================================
+--- Returns self resurrect options for your character, including from soulstones.
+---
+--- Returns:
+--- @return  options structure - SelfResurrectOption[]
+---
+--- @since Patch 7.3.5 (2018-01-16): Added. Replaces HasSoulstone and CanUseSoulstone. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetSelfResurrectOptions
+---
+--- Usage: options = C_DeathInfo.GetSelfResurrectOptions()
+---
+-- function C_DeathInfo.GetSelfResurrectOptions()
+-- end
+
+---======================================================================
+--- C_DeathInfo.UseSelfResurrectOption
+---======================================================================
+--- Uses a soulstone or similar means of self resurrection.
+---
+--- Arguments:
+--- @param optionType  Enum.SelfResurrectOptionType
+--- @param id number
+---
+--- @since Patch 7.3.5 (2018-01-16): Added. Replaces UseSoulstone. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_DeathInfo.UseSelfResurrectOption
+---
+--- Usage: C_DeathInfo.UseSelfResurrectOption(optionType, id)
+---
+-- function C_DeathInfo.UseSelfResurrectOption()
+-- end

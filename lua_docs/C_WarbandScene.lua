@@ -1,0 +1,112 @@
+--[=[
+-- C_WarbandScene API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_WarbandScene
+--- C_WarbandScene namespace contains 6 functions
+local C_WarbandScene = {}
+
+--[=[
+-- C_WarbandScene Functions:
+-- - C_WarbandScene.GetRandomEntryID
+-- - C_WarbandScene.GetWarbandSceneEntry
+-- - C_WarbandScene.HasWarbandScene
+-- - C_WarbandScene.IsFavorite
+-- - C_WarbandScene.SearchWarbandSceneEntries
+-- - C_WarbandScene.SetFavorite
+--]=]
+
+---======================================================================
+--- C_WarbandScene.GetRandomEntryID
+---======================================================================
+--- Returns:
+--- @return number warbandSceneID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.GetRandomEntryID
+---
+--- Usage: warbandSceneID = C_WarbandScene.GetRandomEntryID()
+---
+-- function C_WarbandScene.GetRandomEntryID()
+-- end
+
+---======================================================================
+--- C_WarbandScene.GetWarbandSceneEntry
+---======================================================================
+--- Arguments:
+--- @param warbandSceneID number
+---
+--- Returns:
+--- @return WarbandSceneEntry warbandSceneEntry
+---
+--- @since Patch 11.1.5 (2025-04-22): Removed qualityColor field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.GetWarbandSceneEntry
+---
+--- Usage: warbandSceneEntry = C_WarbandScene.GetWarbandSceneEntry(warbandSceneID)
+---
+-- function C_WarbandScene.GetWarbandSceneEntry()
+-- end
+
+---======================================================================
+--- C_WarbandScene.HasWarbandScene
+---======================================================================
+--- Arguments:
+--- @param warbandSceneID number
+---
+--- Returns:
+--- @return boolean owned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.HasWarbandScene
+---
+--- Usage: owned = C_WarbandScene.HasWarbandScene(warbandSceneID)
+---
+-- function C_WarbandScene.HasWarbandScene()
+-- end
+
+---======================================================================
+--- C_WarbandScene.IsFavorite
+---======================================================================
+--- Arguments:
+--- @param warbandSceneID number
+---
+--- Returns:
+--- @return boolean favorite
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.IsFavorite
+---
+--- Usage: favorite = C_WarbandScene.IsFavorite(warbandSceneID)
+---
+-- function C_WarbandScene.IsFavorite()
+-- end
+
+---======================================================================
+--- C_WarbandScene.SearchWarbandSceneEntries
+---======================================================================
+--- Arguments:
+--- @param searchParams WarbandSceneSearchInfo
+---
+--- Returns:
+--- @return number matchingEntryIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.SearchWarbandSceneEntries
+---
+--- Usage: matchingEntryIDs = C_WarbandScene.SearchWarbandSceneEntries(searchParams)
+---
+-- function C_WarbandScene.SearchWarbandSceneEntries()
+-- end
+
+---======================================================================
+--- C_WarbandScene.SetFavorite
+---======================================================================
+--- Arguments:
+--- @param warbandSceneID number
+--- @param favorite boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WarbandScene.SetFavorite
+---
+--- Usage: C_WarbandScene.SetFavorite(warbandSceneID, favorite)
+---
+-- function C_WarbandScene.SetFavorite()
+-- end

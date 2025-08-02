@@ -1,0 +1,467 @@
+--[=[
+-- C_ActionBar API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 26
+--]=]
+
+--- @class C_ActionBar
+--- C_ActionBar namespace contains 26 functions
+local C_ActionBar = {}
+
+--[=[
+-- C_ActionBar Functions:
+-- - C_ActionBar.EnableActionRangeCheck
+-- - C_ActionBar.FindAssistedCombatActionButtons
+-- - C_ActionBar.FindFlyoutActionButtons
+-- - C_ActionBar.FindPetActionButtons
+-- - C_ActionBar.FindSpellActionButtons
+-- - C_ActionBar.ForceUpdateAction
+-- - C_ActionBar.GetBonusBarIndexForSlot
+-- - C_ActionBar.GetItemActionOnEquipSpellID
+-- - C_ActionBar.GetPetActionPetBarIndices
+-- - C_ActionBar.GetProfessionQuality
+-- - C_ActionBar.GetSpell
+-- - C_ActionBar.HasAssistedCombatActionButtons
+-- - C_ActionBar.HasFlyoutActionButtons
+-- - C_ActionBar.HasPetActionButtons
+-- - C_ActionBar.HasPetActionPetBarIndices
+-- - C_ActionBar.HasSpellActionButtons
+-- - C_ActionBar.IsAssistedCombatAction
+-- - C_ActionBar.IsAutoCastPetAction
+-- - C_ActionBar.IsEnabledAutoCastPetAction
+-- - C_ActionBar.IsHarmfulAction
+-- - C_ActionBar.IsHelpfulAction
+-- - C_ActionBar.IsOnBarOrSpecialBar
+-- - C_ActionBar.PutActionInSlot
+-- - C_ActionBar.ShouldOverrideBarShowHealthBar
+-- - C_ActionBar.ShouldOverrideBarShowManaBar
+-- - C_ActionBar.ToggleAutoCastPetAction
+--]=]
+
+---======================================================================
+--- C_ActionBar.EnableActionRangeCheck
+---======================================================================
+--- Used in conjunction with ACTION_RANGE_CHECK_UPDATE to inform the UI when an action goes in or out of range with its current target.
+---
+--- Arguments:
+--- @param actionID number
+--- @param enable boolean - True if changes in range for the action should dispatch ActionRangeCheckUpdate. False if the action no longer needs the event.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.EnableActionRangeCheck
+---
+--- Usage: C_ActionBar.EnableActionRangeCheck(actionID, enable)
+---
+-- function C_ActionBar.EnableActionRangeCheck()
+-- end
+
+---======================================================================
+--- C_ActionBar.FindAssistedCombatActionButtons
+---======================================================================
+--- Returns the list of action bar slots that contain the Assisted Combat action spell.
+---
+--- Returns:
+--- @return number slots []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindAssistedCombatActionButtons
+---
+--- Usage: slots = C_ActionBar.FindAssistedCombatActionButtons()
+---
+-- function C_ActionBar.FindAssistedCombatActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.FindFlyoutActionButtons
+---======================================================================
+--- Arguments:
+--- @param flyoutID number
+---
+--- Returns:
+--- @return number slots []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindFlyoutActionButtons
+---
+--- Usage: slots = C_ActionBar.FindFlyoutActionButtons(flyoutID)
+---
+-- function C_ActionBar.FindFlyoutActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.FindPetActionButtons
+---======================================================================
+--- Arguments:
+--- @param petActionID number
+---
+--- Returns:
+--- @return number slots []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindPetActionButtons
+---
+--- Usage: slots = C_ActionBar.FindPetActionButtons(petActionID)
+---
+-- function C_ActionBar.FindPetActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.FindSpellActionButtons
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return number slots []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindSpellActionButtons
+---
+--- Usage: slots = C_ActionBar.FindSpellActionButtons(spellID)
+---
+-- function C_ActionBar.FindSpellActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.ForceUpdateAction
+---======================================================================
+--- Force updates some internals for an action button slot.
+---
+--- Arguments:
+--- @param slotID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.ForceUpdateAction
+---
+--- Usage: C_ActionBar.ForceUpdateAction(slotID)
+---
+-- function C_ActionBar.ForceUpdateAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.GetBonusBarIndexForSlot
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- Returns:
+--- @return number bonusBarIndex ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetBonusBarIndexForSlot
+---
+--- Usage: bonusBarIndex = C_ActionBar.GetBonusBarIndexForSlot(slotID)
+---
+-- function C_ActionBar.GetBonusBarIndexForSlot()
+-- end
+
+---======================================================================
+--- C_ActionBar.GetItemActionOnEquipSpellID
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return number onEquipSpellID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetItemActionOnEquipSpellID
+---
+--- Usage: onEquipSpellID = C_ActionBar.GetItemActionOnEquipSpellID(actionID)
+---
+-- function C_ActionBar.GetItemActionOnEquipSpellID()
+-- end
+
+---======================================================================
+--- C_ActionBar.GetPetActionPetBarIndices
+---======================================================================
+--- Arguments:
+--- @param petActionID number
+---
+--- Returns:
+--- @return number slots []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetPetActionPetBarIndices
+---
+--- Usage: slots = C_ActionBar.GetPetActionPetBarIndices(petActionID)
+---
+-- function C_ActionBar.GetPetActionPetBarIndices()
+-- end
+
+---======================================================================
+--- C_ActionBar.GetProfessionQuality
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return number quality ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetProfessionQuality
+---
+--- Usage: quality = C_ActionBar.GetProfessionQuality(actionID)
+---
+-- function C_ActionBar.GetProfessionQuality()
+-- end
+
+---======================================================================
+--- C_ActionBar.GetSpell
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return number spellID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetSpell
+---
+--- Usage: spellID = C_ActionBar.GetSpell(actionID)
+---
+-- function C_ActionBar.GetSpell()
+-- end
+
+---======================================================================
+--- C_ActionBar.HasAssistedCombatActionButtons
+---======================================================================
+--- Returns:
+--- @return boolean hasButtons
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasAssistedCombatActionButtons
+---
+--- Usage: hasButtons = C_ActionBar.HasAssistedCombatActionButtons()
+---
+-- function C_ActionBar.HasAssistedCombatActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.HasFlyoutActionButtons
+---======================================================================
+--- Arguments:
+--- @param flyoutID number
+---
+--- Returns:
+--- @return boolean hasFlyoutActionButtons
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasFlyoutActionButtons
+---
+--- Usage: hasFlyoutActionButtons = C_ActionBar.HasFlyoutActionButtons(flyoutID)
+---
+-- function C_ActionBar.HasFlyoutActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.HasPetActionButtons
+---======================================================================
+--- True if the pet action is currently on your action bars.
+---
+--- Arguments:
+--- @param petActionID number
+---
+--- Returns:
+--- @return boolean hasPetActionButtons
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasPetActionButtons
+---
+--- Usage: hasPetActionButtons = C_ActionBar.HasPetActionButtons(petActionID)
+---
+-- function C_ActionBar.HasPetActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.HasPetActionPetBarIndices
+---======================================================================
+--- Arguments:
+--- @param petActionID number
+---
+--- Returns:
+--- @return boolean hasPetActionPetBarIndices
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasPetActionPetBarIndices
+---
+--- Usage: hasPetActionPetBarIndices = C_ActionBar.HasPetActionPetBarIndices(petActionID)
+---
+-- function C_ActionBar.HasPetActionPetBarIndices()
+-- end
+
+---======================================================================
+--- C_ActionBar.HasSpellActionButtons
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean hasSpellActionButtons
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasSpellActionButtons
+---
+--- Usage: hasSpellActionButtons = C_ActionBar.HasSpellActionButtons(spellID)
+---
+-- function C_ActionBar.HasSpellActionButtons()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsAssistedCombatAction
+---======================================================================
+--- Returns whether the given action button contains the Assisted Combat action spell.
+---
+--- Arguments:
+--- @param slotID number
+---
+--- Returns:
+--- @return boolean isAssistedCombatAction
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsAssistedCombatAction
+---
+--- Usage: isAssistedCombatAction = C_ActionBar.IsAssistedCombatAction(slotID)
+---
+-- function C_ActionBar.IsAssistedCombatAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsAutoCastPetAction
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- Returns:
+--- @return boolean isAutoCastPetAction
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsAutoCastPetAction
+---
+--- Usage: isAutoCastPetAction = C_ActionBar.IsAutoCastPetAction(slotID)
+---
+-- function C_ActionBar.IsAutoCastPetAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsEnabledAutoCastPetAction
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- Returns:
+--- @return boolean isEnabledAutoCastPetAction
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsEnabledAutoCastPetAction
+---
+--- Usage: isEnabledAutoCastPetAction = C_ActionBar.IsEnabledAutoCastPetAction(slotID)
+---
+-- function C_ActionBar.IsEnabledAutoCastPetAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsHarmfulAction
+---======================================================================
+--- Returns true if the specified action is a harmful one.
+---
+--- Arguments:
+--- @param actionID number
+--- @param useNeutral boolean
+---
+--- Returns:
+--- @return boolean isHarmful
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsHarmfulAction
+---
+--- Usage: isHarmful = C_ActionBar.IsHarmfulAction(actionID, useNeutral)
+---
+-- function C_ActionBar.IsHarmfulAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsHelpfulAction
+---======================================================================
+--- Returns true if the specified action is a helpful one.
+---
+--- Arguments:
+--- @param actionID number
+--- @param useNeutral boolean
+---
+--- Returns:
+--- @return boolean isHelpful
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsHelpfulAction
+---
+--- Usage: isHelpful = C_ActionBar.IsHelpfulAction(actionID, useNeutral)
+---
+-- function C_ActionBar.IsHelpfulAction()
+-- end
+
+---======================================================================
+--- C_ActionBar.IsOnBarOrSpecialBar
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean isOnBarOrSpecialBar
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsOnBarOrSpecialBar
+---
+--- Usage: isOnBarOrSpecialBar = C_ActionBar.IsOnBarOrSpecialBar(spellID)
+---
+-- function C_ActionBar.IsOnBarOrSpecialBar()
+-- end
+
+---======================================================================
+--- C_ActionBar.PutActionInSlot
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.PutActionInSlot
+---
+--- Usage: C_ActionBar.PutActionInSlot(slotID)
+---
+-- function C_ActionBar.PutActionInSlot()
+-- end
+
+---======================================================================
+--- C_ActionBar.ShouldOverrideBarShowHealthBar
+---======================================================================
+--- Returns:
+--- @return boolean showHealthBar
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.ShouldOverrideBarShowHealthBar
+---
+--- Usage: showHealthBar = C_ActionBar.ShouldOverrideBarShowHealthBar()
+---
+-- function C_ActionBar.ShouldOverrideBarShowHealthBar()
+-- end
+
+---======================================================================
+--- C_ActionBar.ShouldOverrideBarShowManaBar
+---======================================================================
+--- Returns:
+--- @return boolean showManaBar
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.ShouldOverrideBarShowManaBar
+---
+--- Usage: showManaBar = C_ActionBar.ShouldOverrideBarShowManaBar()
+---
+-- function C_ActionBar.ShouldOverrideBarShowManaBar()
+-- end
+
+---======================================================================
+--- C_ActionBar.ToggleAutoCastPetAction
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ActionBar.ToggleAutoCastPetAction
+---
+--- Usage: C_ActionBar.ToggleAutoCastPetAction(slotID)
+---
+-- function C_ActionBar.ToggleAutoCastPetAction()
+-- end

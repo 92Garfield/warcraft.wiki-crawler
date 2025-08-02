@@ -1,0 +1,1310 @@
+--[=[
+-- C_PetJournal API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 66
+--]=]
+
+--- @class C_PetJournal
+--- C_PetJournal namespace contains 66 functions
+local C_PetJournal = {}
+
+--[=[
+-- C_PetJournal Functions:
+-- - C_PetJournal.CagePetByID
+-- - C_PetJournal.ClearHoveredBattlePet
+-- - C_PetJournal.ClearSearchFilter
+-- - C_PetJournal.DismissSummonedPet
+-- - C_PetJournal.FindPetIDByName
+-- - C_PetJournal.GetBattlePetLink
+-- - C_PetJournal.GetDisplayIDByIndex
+-- - C_PetJournal.GetDisplayProbabilityByIndex
+-- - C_PetJournal.GetNumCollectedInfo
+-- - C_PetJournal.GetNumDisplays
+-- - C_PetJournal.GetNumPetSources
+-- - C_PetJournal.GetNumPetTypes
+-- - C_PetJournal.GetNumPets
+-- - C_PetJournal.GetNumPetsInJournal
+-- - C_PetJournal.GetOwnedBattlePetString
+-- - C_PetJournal.GetOwnedPetIDs
+-- - C_PetJournal.GetPetAbilityInfo
+-- - C_PetJournal.GetPetAbilityList
+-- - C_PetJournal.GetPetAbilityListTable
+-- - C_PetJournal.GetPetCooldownByGUID
+-- - C_PetJournal.GetPetInfoByIndex
+-- - C_PetJournal.GetPetInfoByItemID
+-- - C_PetJournal.GetPetInfoByPetID
+-- - C_PetJournal.GetPetInfoBySpeciesID
+-- - C_PetJournal.GetPetInfoTableByPetID
+-- - C_PetJournal.GetPetLoadOutInfo
+-- - C_PetJournal.GetPetSortParameter
+-- - C_PetJournal.GetPetStats
+-- - C_PetJournal.GetPetSummonInfo
+-- - C_PetJournal.GetPetTeamAverageLevel
+-- - C_PetJournal.GetSearchFilter
+-- - C_PetJournal.GetSummonedPetGUID
+-- - C_PetJournal.HasFavoritePets
+-- - C_PetJournal.IsCurrentlySummoned
+-- - C_PetJournal.IsFilterChecked
+-- - C_PetJournal.IsFindBattleEnabled
+-- - C_PetJournal.IsPetSourceChecked
+-- - C_PetJournal.IsPetTypeChecked
+-- - C_PetJournal.IsUsingDefaultFilters
+-- - C_PetJournal.PetCanBeReleased
+-- - C_PetJournal.PetIsCapturable
+-- - C_PetJournal.PetIsFavorite
+-- - C_PetJournal.PetIsHurt
+-- - C_PetJournal.PetIsRevoked
+-- - C_PetJournal.PetIsSlotted
+-- - C_PetJournal.PetIsSummonable
+-- - C_PetJournal.PetIsTradable
+-- - C_PetJournal.PetUsesRandomDisplay
+-- - C_PetJournal.PickupPet
+-- - C_PetJournal.ReleasePetByID
+-- - C_PetJournal.SetAbility
+-- - C_PetJournal.SetAllPetSourcesChecked
+-- - C_PetJournal.SetAllPetTypesChecked
+-- - C_PetJournal.SetCustomName
+-- - C_PetJournal.SetDefaultFilters
+-- - C_PetJournal.SetFavorite
+-- - C_PetJournal.SetFilterChecked
+-- - C_PetJournal.SetHoveredBattlePet
+-- - C_PetJournal.SetPetLoadOutInfo
+-- - C_PetJournal.SetPetSortParameter
+-- - C_PetJournal.SetPetSourceChecked
+-- - C_PetJournal.SetPetTypeFilter
+-- - C_PetJournal.SetSearchFilter
+-- - C_PetJournal.SpellTargetBattlePet
+-- - C_PetJournal.SummonPetByGUID
+-- - C_PetJournal.SummonRandomPet
+--]=]
+
+---======================================================================
+--- C_PetJournal.CagePetByID
+---======================================================================
+--- Puts the pet into a cage.
+---
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.CagePetByID
+---
+--- Usage: C_PetJournal.CagePetByID(petID)
+---
+-- function C_PetJournal.CagePetByID()
+-- end
+
+---======================================================================
+--- C_PetJournal.ClearHoveredBattlePet
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearHoveredBattlePet
+---
+--- Usage: C_PetJournal.ClearHoveredBattlePet()
+---
+-- function C_PetJournal.ClearHoveredBattlePet()
+-- end
+
+---======================================================================
+--- C_PetJournal.ClearSearchFilter
+---======================================================================
+--- Clears the search box in the pet journal.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearSearchFilter
+---
+--- Usage: C_PetJournal.ClearSearchFilter()
+---
+--- See also:
+--- - C_PetJournal.SetSearchFilter
+---
+-- function C_PetJournal.ClearSearchFilter()
+-- end
+
+---======================================================================
+--- C_PetJournal.DismissSummonedPet
+---======================================================================
+--- Arguments:
+--- @param petID string : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.DismissSummonedPet
+---
+--- Usage: C_PetJournal.DismissSummonedPet(petID)
+---
+-- function C_PetJournal.DismissSummonedPet()
+-- end
+
+---======================================================================
+--- C_PetJournal.FindPetIDByName
+---======================================================================
+--- Returns pet species and GUID by pet name.
+---
+--- Arguments:
+--- @param petName string - Name of the pet to find species/GUID of.
+---
+--- Returns:
+--- @return number speciesId - Species ID of the first battle pet (or species) with the specified name, nil if no such pet exists.
+--- @return string petGUID - GUID of the first battle pet collected by the player with the specified name, nil if the player has not collected any pets with the specified name.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.FindPetIDByName
+---
+--- Usage: speciesId, petGUID = C_PetJournal.FindPetIDByName(petName)
+---
+-- function C_PetJournal.FindPetIDByName()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetBattlePetLink
+---======================================================================
+--- Returns a battle pet link.
+---
+--- Arguments:
+--- @param petID string - GUID specifying a battle pet in your collection.
+---
+--- Returns:
+--- @return string link - A chat link to the specified battle pet; nil if there is no pet with the specified petID in your collection.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetBattlePetLink
+---
+--- Usage: link = C_PetJournal.GetBattlePetLink(petID)
+---
+-- function C_PetJournal.GetBattlePetLink()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetDisplayIDByIndex
+---======================================================================
+--- Arguments:
+--- @param speciesID number
+--- @param index number
+---
+--- Returns:
+--- @return number displayID ?
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayIDByIndex
+---
+--- Usage: displayID = C_PetJournal.GetDisplayIDByIndex(speciesID, index)
+---
+-- function C_PetJournal.GetDisplayIDByIndex()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetDisplayProbabilityByIndex
+---======================================================================
+--- Arguments:
+--- @param speciesID number
+--- @param index number
+---
+--- Returns:
+--- @return number displayProbability ?
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayProbabilityByIndex
+---
+--- Usage: displayProbability = C_PetJournal.GetDisplayProbabilityByIndex(speciesID, index)
+---
+-- function C_PetJournal.GetDisplayProbabilityByIndex()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumCollectedInfo
+---======================================================================
+--- Returns the number of collected battle pets of a particular species.
+---
+--- Arguments:
+--- @param speciesId number - Battle pet species ID to query, e.g. 635 for Adder battle pets.
+---
+--- Returns:
+--- @return number numCollected - Number of battle pets of the queried species the player has collected.
+--- @return number limit - Maximum number of battle pets of the queried species the player may collect.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumCollectedInfo
+---
+--- Usage: numCollected, limit = C_PetJournal.GetNumCollectedInfo(speciesId)
+---
+-- function C_PetJournal.GetNumCollectedInfo()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumDisplays
+---======================================================================
+--- Arguments:
+--- @param speciesID number
+---
+--- Returns:
+--- @return number numDisplays ?
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumDisplays
+---
+--- Usage: numDisplays = C_PetJournal.GetNumDisplays(speciesID)
+---
+-- function C_PetJournal.GetNumDisplays()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumPets
+---======================================================================
+--- Returns information about the number of battle pets.
+---
+--- Returns:
+--- @return number numPets - Total number of pets available
+--- @return number numOwned - Number of pets currently owned
+---
+--- @since Patch 5.2.0 (2013-03-05): Removed "isWild" argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPets
+---
+--- Usage: numPets, numOwned = C_PetJournal.GetNumPets()
+---
+-- function C_PetJournal.GetNumPets()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumPetsInJournal
+---======================================================================
+--- Arguments:
+--- @param creatureID number
+---
+--- Returns:
+--- @return number maxAllowed
+--- @return number numPets
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPetsInJournal
+---
+--- Usage: maxAllowed, numPets = C_PetJournal.GetNumPetsInJournal(creatureID)
+---
+-- function C_PetJournal.GetNumPetsInJournal()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumPetSources
+---======================================================================
+--- Returns information about the number of pet sources.
+---
+--- Returns:
+--- @return number numSources - Number of pet sources available
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPetSources
+---
+--- Usage: numSources = C_PetJournal.GetNumPetSources()
+---
+--- See also:
+--- - C_PetJournal.SetAllPetSourcesChecked
+--- - C_PetJournal.IsPetSourceChecked
+--- - C_PetJournal.SetPetSourceChecked
+---
+-- function C_PetJournal.GetNumPetSources()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetNumPetTypes
+---======================================================================
+--- Returns information about the number of pet types.
+---
+--- Returns:
+--- @return number numTypes - Number of pet types available
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPetTypes
+---
+--- Usage: numTypes = C_PetJournal.GetNumPetTypes()
+---
+--- See also:
+--- - C_PetJournal.SetAllPetTypesChecked
+--- - C_PetJournal.IsPetTypeChecked
+--- - C_PetJournal.SetPetTypeFilter
+---
+-- function C_PetJournal.GetNumPetTypes()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetOwnedBattlePetString
+---======================================================================
+--- Returns a formatted string how many of a battle pet species the player has collected.
+---
+--- Arguments:
+--- @param speciesId number - Battle pet species ID.
+---
+--- Returns:
+--- @return string ownedString - a description of how many pets of this species you've collected, e.g. "|cFFFFD200Collected (1/3)", or nil if you haven't collected any.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetOwnedBattlePetString
+---
+--- Usage: ownedString = C_PetJournal.GetOwnedBattlePetString(speciesId)
+---
+-- function C_PetJournal.GetOwnedBattlePetString()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetOwnedPetIDs
+---======================================================================
+--- Returns:
+--- @return string ownedPetIDs [] : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetOwnedPetIDs
+---
+--- Usage: ownedPetIDs = C_PetJournal.GetOwnedPetIDs()
+---
+-- function C_PetJournal.GetOwnedPetIDs()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetAbilityInfo
+---======================================================================
+--- Returns information about a battle pet ability.
+---
+--- Arguments:
+--- @param abilityID number - battle pet ability ID, as returned by C_PetJournal.GetPetAbilityList, e.g. 362 for   [Howl].
+---
+--- Returns:
+--- @return string name - Ability name, e.g. "Howl"
+--- @return string icon - Ability icon texture path, e.g. "INTERFACE\ICONS\ABILITY_SHAMAN_FREEDOMWOLF.BLP"
+--- @return battlePetTypeID type
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityInfo
+---
+--- Usage: name, icon, type = C_PetJournal.GetPetAbilityInfo(abilityID)
+---
+--- See also:
+--- - C_PetBattles.GetAbilityInfoByID
+--- - C_PetJournal.GetPetAbilityList
+---
+-- function C_PetJournal.GetPetAbilityInfo()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetAbilityList
+---======================================================================
+--- Returns pet battle abilities available to a particular battle pet species.
+---
+--- Arguments:
+--- @param speciesID number : BattlePetSpeciesID - Battle pet species ID to query the abilities of.
+--- @param idTable table ? - Table that will be used to return ability ID information; a new table will be created if this argument is omitted.
+--- @param levelTable table ?- Table that will be used to return ability level requirement information; a new table will be created if this argument is omitted.
+---
+--- Returns:
+--- @return number idTable [] - An array of ability IDs available to the battle pet species.
+--- @return number levelTable [] - An array of levels at which the corresponding ability in the idTable becomes available to the species.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityList
+---
+--- Usage: idTable, levelTable = C_PetJournal.GetPetAbilityList(speciesID [, idTable, levelTable])
+---
+--- See also:
+--- - C_PetBattles.GetAbilityInfoByID
+--- - C_PetJournal.GetPetAbilityInfo
+--- - Pet Battle Functions
+---
+-- function C_PetJournal.GetPetAbilityList()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetAbilityListTable
+---======================================================================
+--- Arguments:
+--- @param speciesID number
+---
+--- Returns:
+--- @return PetAbilityLevelInfo info []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityListTable
+---
+--- Usage: info = C_PetJournal.GetPetAbilityListTable(speciesID)
+---
+-- function C_PetJournal.GetPetAbilityListTable()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetCooldownByGUID
+---======================================================================
+--- Returns the cooldown associated with summoning a battle pet companion.
+---
+--- Arguments:
+--- @param GUID string - GUID of a battle pet in your collection to query the cooldown of.
+---
+--- Returns:
+--- @return number start - the time the cooldown period began, based on GetTime().
+--- @return number duration - the duration of the cooldown period.
+--- @return number isEnabled - 1 if the cooldown is not paused.
+---
+--- @since Patch 5.2.0 (2013-03-05): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetCooldownByGUID
+---
+--- Usage: start, duration, isEnabled = C_PetJournal.GetPetCooldownByGUID(GUID)
+---
+-- function C_PetJournal.GetPetCooldownByGUID()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetInfoByIndex
+---======================================================================
+--- Returns information about a battle pet.
+---
+--- Arguments:
+--- @param index number - Numeric index of the pet in the Pet Journal, ascending from 1.
+---
+--- @since Patch 5.2.0 (2013-03-05): Added 18th return value, "obtainable". Removed "isWild" argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByIndex
+---
+--- Usage: petID, speciesID, owned, customName, level, favorite, isRevoked, speciesName, icon, petType, companionID, tooltip, description, isWild, canBattle, isTradeable, isUnique, obtainable = C_PetJournal.GetPetInfoByIndex(index)
+---
+-- function C_PetJournal.GetPetInfoByIndex()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetInfoByItemID
+---======================================================================
+--- Retrieves information about the battle pet species taught by the specified item.
+---
+--- Arguments:
+--- @param itemID number - an item ID
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByItemID
+---
+--- Usage: name, icon, petType, creatureID, sourceText, description, isWild, canBattle, isTradeable, isUnique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(itemID)
+---
+--- See also:
+--- - C_PetJournal.GetPetInfoByIndex
+--- - C_PetJournal.GetPetInfoByPetID
+--- - C_PetJournal.GetPetInfoBySpeciesID
+---
+-- function C_PetJournal.GetPetInfoByItemID()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetInfoByPetID
+---======================================================================
+--- Returns information about a battle pet.
+---
+--- Arguments:
+--- @param petID string : GUID
+---
+--- @since Patch 5.2.0 (2013-03-05): Added 18th return value, "obtainable".
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByPetID
+---
+--- Usage: speciesID, customName, level, xp, maxXp, displayID, isFavorite, name, icon, petType, creatureID, sourceText, description, isWild, canBattle, isTradeable, isUnique, obtainable = C_PetJournal.GetPetInfoByPetID(petID)
+---
+--- See also:
+--- - C_PetJournal.GetPetStats
+--- - C_PetJournal.GetPetInfoBySpeciesID
+---
+-- function C_PetJournal.GetPetInfoByPetID()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetInfoBySpeciesID
+---======================================================================
+--- Returns information about a pet species.
+---
+--- Arguments:
+--- @param speciesID number : BattlePetSpeciesID
+---
+--- @since Patch 6.0.2 (2014-10-14): Added 12th return value, "creatureDisplayID".
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoBySpeciesID
+---
+--- Usage: speciesName, speciesIcon, petType, companionID, tooltipSource, tooltipDescription, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(speciesID)
+---
+--- See also:
+--- - C_PetJournal.GetPetInfoByPetID
+---
+-- function C_PetJournal.GetPetInfoBySpeciesID()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetInfoTableByPetID
+---======================================================================
+--- Arguments:
+--- @param petID string
+---
+--- Returns:
+--- @return PetJournalPetInfo info
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoTableByPetID
+---
+--- Usage: info = C_PetJournal.GetPetInfoTableByPetID(petID)
+---
+-- function C_PetJournal.GetPetInfoTableByPetID()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetLoadOutInfo
+---======================================================================
+--- Returns information about a slot in your battle pet team.
+---
+--- Arguments:
+--- @param slotIndex number - battle pet slot index, an integer between 1 and 3. Values outside this range throw an error.
+---
+--- Returns:
+--- @return string petGUID - GUID of the battle pet currently in this slot.
+--- @return number ability1 - Ability ID of the first (level 1/10) ability selected for the battle pet in this slot.
+--- @return number ability2 - Ability ID of the second (level 2/15) ability selected for the battle pet in this slot.
+--- @return number ability3 - Ability ID of the third (level 4/20) ability selected for the battle pet in this slot.
+--- @return boolean locked - false if the player can place a battle pet in this slot, true otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetLoadOutInfo
+---
+--- Usage: petGUID, ability1, ability2, ability3, locked = C_PetJournal.GetPetLoadOutInfo(slotIndex)
+---
+-- function C_PetJournal.GetPetLoadOutInfo()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetSortParameter
+---======================================================================
+--- Returns the index of the currently active sort parameter.
+---
+--- Returns:
+--- @return number sortParameter - currently active ordering for C_PetJournal.GetPetInfoByIndex, e.g. 1 for sorting by name.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetSortParameter
+---
+--- Usage: sortParameter = C_PetJournal.GetPetSortParameter()
+---
+--- See also:
+--- - C_PetJournal.SetPetSortParameter
+---
+-- function C_PetJournal.GetPetSortParameter()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetStats
+---======================================================================
+--- Returns the stats of a collected battle pet.
+---
+--- Arguments:
+--- @param petID string - GUID of pet in Pet Journal (different than speciesID and displayID)
+---
+--- Returns:
+--- @return number health - Current health of the pet. Zero or negative if the pet is dead.
+--- @return number maxHealth - Maximum health of the pet
+--- @return number power
+--- @return number speed
+--- @return number rarity - 1: "Poor", 2: "Common", 3: "Uncommon", 4: "Rare", 5: "Epic", 6: "Legendary"
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetStats
+---
+--- Usage: health, maxHealth, power, speed, rarity = C_PetJournal.GetPetStats(petID)
+---
+-- function C_PetJournal.GetPetStats()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetSummonInfo
+---======================================================================
+--- Arguments:
+--- @param battlePetGUID string : WOWGUID
+---
+--- Returns:
+--- @return boolean isSummonable
+--- @return Enum.PetJournalError error
+---
+--- @since Patch 11.0.0 (2024-07-23): Removed InvalidCovenant field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetSummonInfo
+---
+--- Usage: isSummonable, error, errorText = C_PetJournal.GetPetSummonInfo(battlePetGUID)
+---
+-- function C_PetJournal.GetPetSummonInfo()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetPetTeamAverageLevel
+---======================================================================
+--- Returns the average level of pets in your battle pet team.
+---
+--- Returns:
+--- @return number avgLevel - Average level of pets in your current battle pet team.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetTeamAverageLevel
+---
+--- Usage: avgLevel = C_PetJournal.GetPetTeamAverageLevel()
+---
+-- function C_PetJournal.GetPetTeamAverageLevel()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetSearchFilter
+---======================================================================
+--- Returns:
+--- @return string filterText
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetSearchFilter
+---
+--- Usage: filterText = C_PetJournal.GetSearchFilter()
+---
+-- function C_PetJournal.GetSearchFilter()
+-- end
+
+---======================================================================
+--- C_PetJournal.GetSummonedPetGUID
+---======================================================================
+--- Returns information about a battle pet.
+---
+--- Returns:
+--- @return string summonedPetGUID - GUID identifying the currently-summoned battle pet, or nil if no battle pet is summoned.
+---
+--- @since Patch 5.1.0 (2012-11-27): Changed to C_PetJournal.GetSummonedPetGUID(), the first argument is now a GUID string.
+The GUID can be derived from the old (numeric) unique pet IDs using petGUID = ("0x%016x"):format(petID).
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetSummonedPetGUID
+---
+--- Usage: summonedPetGUID = C_PetJournal.GetSummonedPetGUID()
+---
+--- See also:
+--- - C_PetJournal.SummonPetByGUID
+---
+-- function C_PetJournal.GetSummonedPetGUID()
+-- end
+
+---======================================================================
+--- C_PetJournal.HasFavoritePets
+---======================================================================
+--- Returns:
+--- @return boolean hasFavorites
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.HasFavoritePets
+---
+--- Usage: hasFavorites = C_PetJournal.HasFavoritePets()
+---
+-- function C_PetJournal.HasFavoritePets()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsCurrentlySummoned
+---======================================================================
+--- Arguments:
+--- @param petID string : WOWGUID
+---
+--- Returns:
+--- @return boolean isSummoned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsCurrentlySummoned
+---
+--- Usage: isSummoned = C_PetJournal.IsCurrentlySummoned(petID)
+---
+-- function C_PetJournal.IsCurrentlySummoned()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsFilterChecked
+---======================================================================
+--- Returns true if the selected filter is checked.
+---
+--- Arguments:
+--- @param filter  LE_PET_JOURNAL_FILTER_NOT_COLLECTED: Pets you have not collected
+---
+--- Returns:
+--- @return boolean isFiltered - True if the filter is checked, false if the filter is unchecked
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsFilterChecked
+---
+--- Usage: isFiltered = C_PetJournal.IsFilterChecked(filter)
+---
+--- See also:
+--- - C_PetJournal.SetFilterChecked
+---
+-- function C_PetJournal.IsFilterChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsFindBattleEnabled
+---======================================================================
+--- Returns whether the player can queue for PvP pet battles.
+---
+--- Returns:
+--- @return boolean isEnabled - true if you can queue for a PvP pet battle, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsFindBattleEnabled
+---
+--- Usage: isEnabled = C_PetJournal.IsFindBattleEnabled()
+---
+-- function C_PetJournal.IsFindBattleEnabled()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsPetSourceChecked
+---======================================================================
+--- Returns true if the pet source is checked.
+---
+--- Arguments:
+--- @param index number - Index (from 1 to GetNumPetSources()) of all available pet sources
+---
+--- Returns:
+--- @return boolean isChecked - True if the source is checked, false if the source is unchecked
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsPetSourceChecked
+---
+--- Usage: isChecked = C_PetJournal.IsPetSourceChecked(index)
+---
+--- See also:
+--- - C_PetJournal.SetAllPetSourcesChecked
+--- - C_PetJournal.SetPetSourceChecked
+--- - C_PetJournal.GetNumPetSources
+---
+-- function C_PetJournal.IsPetSourceChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsPetTypeChecked
+---======================================================================
+--- Returns true if the pet type is checked.
+---
+--- Arguments:
+--- @param index number - Index (from 1 to GetNumPetTypes()) of all available pet types
+---
+--- Returns:
+--- @return boolean isChecked - True if the filter is checked, false if the filter is unchecked
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsPetTypeChecked
+---
+--- Usage: isChecked = C_PetJournal.IsPetTypeChecked(index)
+---
+--- See also:
+--- - C_PetJournal.SetAllPetTypesChecked
+--- - C_PetJournal.SetPetTypeFilter
+--- - C_PetJournal.GetNumPetTypes
+---
+-- function C_PetJournal.IsPetTypeChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.IsUsingDefaultFilters
+---======================================================================
+--- Returns:
+--- @return boolean isUsingDefaultFilters
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsUsingDefaultFilters
+---
+--- Usage: isUsingDefaultFilters = C_PetJournal.IsUsingDefaultFilters()
+---
+-- function C_PetJournal.IsUsingDefaultFilters()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetCanBeReleased
+---======================================================================
+--- Returns true if you can release the pet.
+---
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+---
+--- Returns:
+--- @return boolean canRelease - True if you can release the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetCanBeReleased
+---
+--- Usage: canRelease = C_PetJournal.PetCanBeReleased(petID)
+---
+--- See also:
+--- - C_PetJournal.ReleasePetByID
+---
+-- function C_PetJournal.PetCanBeReleased()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsCapturable
+---======================================================================
+--- Returns whether a battle pet in your collection is capturable (i.e. a wild pet).
+---
+--- Arguments:
+--- @param petID string - GUID of a battle pet in your collection, e.g. "0x0000000000067932"
+---
+--- Returns:
+--- @return boolean isCapturable - true if the pet can be captured through wild pet battles, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsCapturable
+---
+--- Usage: isCapturable = C_PetJournal.PetIsCapturable(petID)
+---
+-- function C_PetJournal.PetIsCapturable()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsFavorite
+---======================================================================
+--- Returns true if the collected battle pet is favorited.
+---
+--- Arguments:
+--- @param petGUID string - GUID of a battle pet in your collection.
+---
+--- Returns:
+--- @return boolean isFavorite - true if this pet is marked as a favorite, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsFavorite
+---
+--- Usage: isFavorite = C_PetJournal.PetIsFavorite(petGUID)
+---
+-- function C_PetJournal.PetIsFavorite()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsHurt
+---======================================================================
+--- Returns whether the specified battle pet is injured and unable to participate in battles.
+---
+--- Arguments:
+--- @param petID string - Battle pet GUID of a pet in your collection.
+---
+--- Returns:
+--- @return boolean isHurt - true if the specified pet is injured and cannot fight, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsHurt
+---
+--- Usage: isHurt = C_PetJournal.PetIsHurt(petID)
+---
+-- function C_PetJournal.PetIsHurt()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsRevoked
+---======================================================================
+--- Returns whether or not the pet is revoked.
+---
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+---
+--- Returns:
+--- @return boolean isRevoked - true if the pet is revoked.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsRevoked
+---
+--- Usage: isRevoked = C_PetJournal.PetIsRevoked(petID)
+---
+-- function C_PetJournal.PetIsRevoked()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsSlotted
+---======================================================================
+--- Returns whether a battle pet in your collection is part of your current battle pet team.
+---
+--- Arguments:
+--- @param petID string - GUID of a battle pet in your collection.
+---
+--- Returns:
+--- @return boolean isSlotted - true if the battle pet is part of your current team (loadout), false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsSlotted
+---
+--- Usage: isSlotted = C_PetJournal.PetIsSlotted(petID)
+---
+-- function C_PetJournal.PetIsSlotted()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsSummonable
+---======================================================================
+--- Returns true if you can summon this pet.
+---
+--- Arguments:
+--- @param battlePetGUID string - Unique identifier for this specific pet.
+---
+--- Returns:
+--- @return boolean isSummonable
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsSummonable
+---
+--- Usage: isSummonable = C_PetJournal.PetIsSummonable(battlePetGUID)
+---
+-- function C_PetJournal.PetIsSummonable()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetIsTradable
+---======================================================================
+--- Returns whether or not a pet from the Pet Journal is tradable.
+---
+--- Arguments:
+--- @param petID string - GUID of pet in Pet Journal (different than speciesID and displayID)
+---
+--- Returns:
+--- @return boolean isTradable
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsTradable
+---
+--- Usage: isTradable = C_PetJournal.PetIsTradable(petID)
+---
+--- See also:
+--- - C_PetJournal.PetIsCapturable
+--- - C_PetJournal.PetCanBeReleased
+---
+-- function C_PetJournal.PetIsTradable()
+-- end
+
+---======================================================================
+--- C_PetJournal.PetUsesRandomDisplay
+---======================================================================
+--- Arguments:
+--- @param speciesID number
+---
+--- Returns:
+--- @return boolean usesRandomDisplay ?
+---
+--- @since Patch 7.3.5 (2018-01-16): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetUsesRandomDisplay
+---
+--- Usage: usesRandomDisplay = C_PetJournal.PetUsesRandomDisplay(speciesID)
+---
+-- function C_PetJournal.PetUsesRandomDisplay()
+-- end
+
+---======================================================================
+--- C_PetJournal.PickupPet
+---======================================================================
+--- #nocombat - This cannot be called while in combat.Restricted since patch 5.0.4
+---
+--- Arguments:
+--- @param petID string - GUID of a battle pet in your collection.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.PickupPet
+---
+--- Usage: C_PetJournal.PickupPet(petID)
+---
+--- See also:
+--- - GetCursorInfo
+---
+-- function C_PetJournal.PickupPet()
+-- end
+
+---======================================================================
+--- C_PetJournal.ReleasePetByID
+---======================================================================
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.ReleasePetByID
+---
+--- Usage: C_PetJournal.ReleasePetByID(petID)
+---
+--- See also:
+--- - C_PetJournal.PetCanBeReleased
+---
+-- function C_PetJournal.ReleasePetByID()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetAbility
+---======================================================================
+--- Selects a battle pet ability to make available in battle.
+---
+--- Arguments:
+--- @param slotIndex number - battle pet slot index, integer between 1 and 3.
+--- @param spellIndex number - ability slot index, integer between 1 and 3.
+--- @param petSpellID number - pet ability ID to select for the spellIndex slot of the pet in the slotIndex battle pet slot.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetAbility
+---
+--- Usage: C_PetJournal.SetAbility(slotIndex, spellIndex, petSpellID)
+---
+--- See also:
+--- - C_PetJournal.GetPetLoadOutInfo
+--- - C_PetJournal.GetPetAbilityList
+--- - C_PetJournal.GetPetAbilityInfo
+---
+-- function C_PetJournal.SetAbility()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetAllPetSourcesChecked
+---======================================================================
+--- Sets or clears all the pet sources in the filter menu.
+---
+--- Arguments:
+--- @param value boolean - True to set all the pet sources, false to clear all the pet sources
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetAllPetSourcesChecked
+---
+--- Usage: C_PetJournal.SetAllPetSourcesChecked(value)
+---
+--- See also:
+--- - C_PetJournal.SetPetSourceChecked
+--- - C_PetJournal.IsPetSourceChecked
+--- - C_PetJournal.GetNumPetSources
+---
+-- function C_PetJournal.SetAllPetSourcesChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetAllPetTypesChecked
+---======================================================================
+--- Sets or clears all the pet types in the filter menu.
+---
+--- Arguments:
+--- @param value boolean - True to set all the pet types, false to clear all the pet types
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetAllPetTypesChecked
+---
+--- Usage: C_PetJournal.SetAllPetTypesChecked(value)
+---
+--- See also:
+--- - C_PetJournal.SetPetTypeFilter
+--- - C_PetJournal.IsPetTypeChecked
+--- - C_PetJournal.GetNumPetTypes
+---
+-- function C_PetJournal.SetAllPetTypesChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetCustomName
+---======================================================================
+--- Sets a custom name for the pet.
+---
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+--- @param customName string - Custom name for the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetCustomName
+---
+--- Usage: C_PetJournal.SetCustomName(petID, customName)
+---
+-- function C_PetJournal.SetCustomName()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetDefaultFilters
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetDefaultFilters
+---
+--- Usage: C_PetJournal.SetDefaultFilters()
+---
+-- function C_PetJournal.SetDefaultFilters()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetFavorite
+---======================================================================
+--- Sets (or clears) the pet as a favorite.
+---
+--- Arguments:
+--- @param petID string - Unique identifier for this specific pet
+--- @param value  1: Pet is a favorite
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetFavorite
+---
+--- Usage: C_PetJournal.SetFavorite(petID, value)
+---
+-- function C_PetJournal.SetFavorite()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetFilterChecked
+---======================================================================
+--- Sets the filters in the filter menu.
+---
+--- Arguments:
+--- @param filter  LE_PET_JOURNAL_FILTER_NOT_COLLECTED: Pets you have not collected
+--- @param value boolean - True to set the filter, false to clear the filter
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetFilterChecked
+---
+--- Usage: C_PetJournal.SetFilterChecked(filter, value)
+---
+--- See also:
+--- - C_PetJournal.IsFilterChecked
+---
+-- function C_PetJournal.SetFilterChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetHoveredBattlePet
+---======================================================================
+--- Arguments:
+--- @param battlePetGUID string : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetHoveredBattlePet
+---
+--- Usage: C_PetJournal.SetHoveredBattlePet(battlePetGUID)
+---
+-- function C_PetJournal.SetHoveredBattlePet()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetPetLoadOutInfo
+---======================================================================
+--- Places the specified pet into a battle pet slot.
+---
+--- Arguments:
+--- @param slotIndex number - Battle pet slot index, integer between 1 and 3.
+--- @param petID string - Battle pet GUID of a pet in your collection to move into the battle pet slot.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetLoadOutInfo
+---
+--- Usage: C_PetJournal.SetPetLoadOutInfo(slotIndex, petID)
+---
+--- See also:
+--- - C_PetJournal.SetAbility
+--- - C_PetJournal.GetPetLoadOutInfo
+---
+-- function C_PetJournal.SetPetLoadOutInfo()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetPetSortParameter
+---======================================================================
+--- Changes the battle pet ordering in the pet journal.
+---
+--- Arguments:
+--- @param sortParameter number - Index of the ordering type that should be applied to C_PetJournal.GetPetInfoByIndex returns; one of the following global numeric values:
+LE_SORT_BY_NAME
+LE_SORT_BY_LEVEL
+LE_SORT_BY_RARITY
+LE_SORT_BY_PETTYPE
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetSortParameter
+---
+--- Usage: C_PetJournal.SetPetSortParameter(sortParameter)
+---
+--- See also:
+--- - C_PetJournal.GetPetSortParameter
+---
+-- function C_PetJournal.SetPetSortParameter()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetPetSourceChecked
+---======================================================================
+--- Sets the pet source in the filter menu.
+---
+--- Arguments:
+--- @param index number - Index (from 1 to GetNumPetSources()) of all available pet sources
+--- @param value boolean - True to set the pet source, false to clear the pet source
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetSourceChecked
+---
+--- Usage: C_PetJournal.SetPetSourceChecked(index, value)
+---
+--- See also:
+--- - C_PetJournal.SetAllPetSourcesChecked
+--- - C_PetJournal.IsPetSourceChecked
+--- - C_PetJournal.GetNumPetSources
+---
+-- function C_PetJournal.SetPetSourceChecked()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetPetTypeFilter
+---======================================================================
+--- Sets the pet type in the filter menu.
+---
+--- Arguments:
+--- @param index number - Index (from 1 to GetNumPetTypes()) of all available pet types
+--- @param value boolean - True to set the pet type, false to clear the pet type
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetTypeFilter
+---
+--- Usage: C_PetJournal.SetPetTypeFilter(index, value)
+---
+--- See also:
+--- - C_PetJournal.SetAllPetTypesChecked
+--- - C_PetJournal.IsPetTypeChecked
+--- - C_PetJournal.GetNumPetTypes
+---
+-- function C_PetJournal.SetPetTypeFilter()
+-- end
+
+---======================================================================
+--- C_PetJournal.SetSearchFilter
+---======================================================================
+--- Sets the search filter in the pet journal.
+---
+--- Arguments:
+--- @param text string - Search text for the pet journal
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetSearchFilter
+---
+--- Usage: C_PetJournal.SetSearchFilter(text)
+---
+--- See also:
+--- - C_PetJournal.ClearSearchFilter
+---
+-- function C_PetJournal.SetSearchFilter()
+-- end
+
+---======================================================================
+--- C_PetJournal.SpellTargetBattlePet
+---======================================================================
+--- Arguments:
+--- @param battlePetGUID string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SpellTargetBattlePet
+---
+--- Usage: C_PetJournal.SpellTargetBattlePet(battlePetGUID)
+---
+-- function C_PetJournal.SpellTargetBattlePet()
+-- end
+
+---======================================================================
+--- C_PetJournal.SummonPetByGUID
+---======================================================================
+--- #nocombat - This cannot be called while in combat.Restricted since patch 5.1
+---
+--- Arguments:
+--- @param petID string - GUID of the battle pet to summon. If the pet is already summoned, it will be dismissed.
+---
+--- @since Patch 5.1.0 (2012-11-27): Changed to C_PetJournal.SummonPetByGUID(), the first argument is now a GUID string.
+The GUID can be derived from the old (numeric) unique pet IDs using petGUID = ("0x%016x"):format(petID).
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SummonPetByGUID
+---
+--- Usage: C_PetJournal.SummonPetByGUID(petID)
+---
+--- See also:
+--- - C_PetJournal.GetSummonedPetGUID
+---
+-- function C_PetJournal.SummonPetByGUID()
+-- end
+
+---======================================================================
+--- C_PetJournal.SummonRandomPet
+---======================================================================
+--- Summons a random battle pet companion.
+---
+--- Arguments:
+--- @param favoritePets boolean - false to summon any pet, true to summon one of your favorite pets.
+---
+--- @since Patch 5.1.0 (2012-11-27): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetJournal.SummonRandomPet
+---
+--- Usage: C_PetJournal.SummonRandomPet(favoritePets)
+---
+-- function C_PetJournal.SummonRandomPet()
+-- end

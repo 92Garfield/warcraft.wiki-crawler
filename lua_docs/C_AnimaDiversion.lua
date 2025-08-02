@@ -1,0 +1,127 @@
+--[=[
+-- C_AnimaDiversion API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_AnimaDiversion
+--- C_AnimaDiversion namespace contains 7 functions
+local C_AnimaDiversion = {}
+
+--[=[
+-- C_AnimaDiversion Functions:
+-- - C_AnimaDiversion.CloseUI
+-- - C_AnimaDiversion.GetAnimaDiversionNodes
+-- - C_AnimaDiversion.GetOriginPosition
+-- - C_AnimaDiversion.GetReinforceProgress
+-- - C_AnimaDiversion.GetTextureKit
+-- - C_AnimaDiversion.OpenAnimaDiversionUI
+-- - C_AnimaDiversion.SelectAnimaNode
+--]=]
+
+---======================================================================
+--- C_AnimaDiversion.CloseUI
+---======================================================================
+--- Closes the AnimaDiversionFrame.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.CloseUI
+---
+--- Usage: C_AnimaDiversion.CloseUI()
+---
+-- function C_AnimaDiversion.CloseUI()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.GetAnimaDiversionNodes
+---======================================================================
+--- Returns all Anima Conductor nodes for the player's Covenant.
+---
+--- Returns:
+--- @return AnimaDiversionNodeInfo animaNodes []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetAnimaDiversionNodes
+---
+--- Usage: animaNodes = C_AnimaDiversion.GetAnimaDiversionNodes()
+---
+-- function C_AnimaDiversion.GetAnimaDiversionNodes()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.GetOriginPosition
+---======================================================================
+--- Locates an Anima Conductor.
+---
+--- Returns:
+--- @return table normalizedPosition : vector2 - An Anima Conductor's location on the continent map only while interacting with it; otherwise nil.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetOriginPosition
+---
+--- Usage: normalizedPosition = C_AnimaDiversion.GetOriginPosition()
+---
+-- function C_AnimaDiversion.GetOriginPosition()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.GetReinforceProgress
+---======================================================================
+--- Returns:
+--- @return number progress
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetReinforceProgress
+---
+--- Usage: progress = C_AnimaDiversion.GetReinforceProgress()
+---
+-- function C_AnimaDiversion.GetReinforceProgress()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.GetTextureKit
+---======================================================================
+--- Names the texture kit applied to the AnimaDiversionFrame.
+---
+--- Returns:
+--- @return string textureKit ? - Name of a texture kit if the player has interacted with an Anima Conductor at least once since logging on; otherwise, returns nil.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetTextureKit
+---
+--- Usage: textureKit = C_AnimaDiversion.GetTextureKit()
+---
+--- See also:
+--- - ANIMA_DIVERSION_OPEN
+---
+-- function C_AnimaDiversion.GetTextureKit()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.OpenAnimaDiversionUI
+---======================================================================
+--- Attempts to open the AnimaDiversionFrame.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.OpenAnimaDiversionUI
+---
+--- Usage: C_AnimaDiversion.OpenAnimaDiversionUI()
+---
+-- function C_AnimaDiversion.OpenAnimaDiversionUI()
+-- end
+
+---======================================================================
+--- C_AnimaDiversion.SelectAnimaNode
+---======================================================================
+--- Arguments:
+--- @param talentID number
+--- @param temporary boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.SelectAnimaNode
+---
+--- Usage: C_AnimaDiversion.SelectAnimaNode(talentID, temporary)
+---
+-- function C_AnimaDiversion.SelectAnimaNode()
+-- end

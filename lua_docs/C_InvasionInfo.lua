@@ -1,0 +1,91 @@
+--[=[
+-- C_InvasionInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_InvasionInfo
+--- C_InvasionInfo namespace contains 4 functions
+local C_InvasionInfo = {}
+
+--[=[
+-- C_InvasionInfo Functions:
+-- - C_InvasionInfo.AreInvasionsAvailable
+-- - C_InvasionInfo.GetInvasionForUiMapID
+-- - C_InvasionInfo.GetInvasionInfo
+-- - C_InvasionInfo.GetInvasionTimeLeft
+--]=]
+
+---======================================================================
+--- C_InvasionInfo.AreInvasionsAvailable
+---======================================================================
+--- Returns true if invasions are active in the same physical area as the player.
+---
+--- Returns:
+--- @return boolean areInvasionsAvailable
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_InvasionInfo.AreInvasionsAvailable
+---
+--- Usage: areInvasionsAvailable = C_InvasionInfo.AreInvasionsAvailable()
+---
+-- function C_InvasionInfo.AreInvasionsAvailable()
+-- end
+
+---======================================================================
+--- C_InvasionInfo.GetInvasionForUiMapID
+---======================================================================
+--- Returns any invasion for a map.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return  invasionID number (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_InvasionInfo.GetInvasionForUiMapID
+---
+--- Usage: invasionID = C_InvasionInfo.GetInvasionForUiMapID(uiMapID)
+---
+-- function C_InvasionInfo.GetInvasionForUiMapID()
+-- end
+
+---======================================================================
+--- C_InvasionInfo.GetInvasionInfo
+---======================================================================
+--- Returns invasion info.
+---
+--- Arguments:
+--- @param invasionID  number
+---
+--- Returns:
+--- @return  invasionInfo structure - InvasionMapInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_InvasionInfo.GetInvasionInfo
+---
+--- Usage: invasionInfo = C_InvasionInfo.GetInvasionInfo(invasionID)
+---
+-- function C_InvasionInfo.GetInvasionInfo()
+-- end
+
+---======================================================================
+--- C_InvasionInfo.GetInvasionTimeLeft
+---======================================================================
+--- Returns the time left for an invasion.
+---
+--- Arguments:
+--- @param invasionID  number
+---
+--- Returns:
+--- @return number timeLeftMinutes ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_InvasionInfo.GetInvasionTimeLeft
+---
+--- Usage: timeLeftMinutes = C_InvasionInfo.GetInvasionTimeLeft(invasionID)
+---
+-- function C_InvasionInfo.GetInvasionTimeLeft()
+-- end

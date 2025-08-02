@@ -1,0 +1,54 @@
+--[=[
+-- C_FogOfWar API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_FogOfWar
+--- C_FogOfWar namespace contains 2 functions
+local C_FogOfWar = {}
+
+--[=[
+-- C_FogOfWar Functions:
+-- - C_FogOfWar.GetFogOfWarForMap
+-- - C_FogOfWar.GetFogOfWarInfo
+--]=]
+
+---======================================================================
+--- C_FogOfWar.GetFogOfWarForMap
+---======================================================================
+--- Returns the fog of war for an Island Expedition map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number fogOfWarID ?  : UiMapFogOfWar.db2
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FogOfWar.GetFogOfWarForMap
+---
+--- Usage: fogOfWarID = C_FogOfWar.GetFogOfWarForMap(uiMapID)
+---
+-- function C_FogOfWar.GetFogOfWarForMap()
+-- end
+
+---======================================================================
+--- C_FogOfWar.GetFogOfWarInfo
+---======================================================================
+--- Returns info for the fog of war for an Island Expedition map.
+---
+--- Arguments:
+--- @param fogOfWarID number : UiMapFogOfWar.db2
+---
+--- Returns:
+--- @return FogOfWarInfo fogOfWarInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FogOfWar.GetFogOfWarInfo
+---
+--- Usage: fogOfWarInfo = C_FogOfWar.GetFogOfWarInfo(fogOfWarID)
+---
+-- function C_FogOfWar.GetFogOfWarInfo()
+-- end

@@ -1,0 +1,104 @@
+--[=[
+-- C_ColorOverrides API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_ColorOverrides
+--- C_ColorOverrides namespace contains 6 functions
+local C_ColorOverrides = {}
+
+--[=[
+-- C_ColorOverrides Functions:
+-- - C_ColorOverrides.ClearColorOverrides
+-- - C_ColorOverrides.GetColorForQuality
+-- - C_ColorOverrides.GetColorOverrideInfo
+-- - C_ColorOverrides.GetDefaultColorForQuality
+-- - C_ColorOverrides.RemoveColorOverride
+-- - C_ColorOverrides.SetColorOverride
+--]=]
+
+---======================================================================
+--- C_ColorOverrides.ClearColorOverrides
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.ClearColorOverrides
+---
+--- Usage: C_ColorOverrides.ClearColorOverrides()
+---
+-- function C_ColorOverrides.ClearColorOverrides()
+-- end
+
+---======================================================================
+--- C_ColorOverrides.GetColorForQuality
+---======================================================================
+--- Arguments:
+--- @param quality Enum.ItemQuality 🔗
+---
+--- Returns:
+--- @return colorRGBA color 🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.GetColorForQuality
+---
+--- Usage: color = C_ColorOverrides.GetColorForQuality(quality)
+---
+-- function C_ColorOverrides.GetColorForQuality()
+-- end
+
+---======================================================================
+--- C_ColorOverrides.GetColorOverrideInfo
+---======================================================================
+--- Arguments:
+--- @param overrideType Enum.ColorOverride
+---
+--- Returns:
+--- @return ColorOverrideInfo overrideInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.GetColorOverrideInfo
+---
+--- Usage: overrideInfo = C_ColorOverrides.GetColorOverrideInfo(overrideType)
+---
+-- function C_ColorOverrides.GetColorOverrideInfo()
+-- end
+
+---======================================================================
+--- C_ColorOverrides.GetDefaultColorForQuality
+---======================================================================
+--- Arguments:
+--- @param quality Enum.ItemQuality 🔗
+---
+--- Returns:
+--- @return colorRGBA color 🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.GetDefaultColorForQuality
+---
+--- Usage: color = C_ColorOverrides.GetDefaultColorForQuality(quality)
+---
+-- function C_ColorOverrides.GetDefaultColorForQuality()
+-- end
+
+---======================================================================
+--- C_ColorOverrides.RemoveColorOverride
+---======================================================================
+--- Arguments:
+--- @param overrideType Enum.ColorOverride
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.RemoveColorOverride
+---
+--- Usage: C_ColorOverrides.RemoveColorOverride(overrideType)
+---
+-- function C_ColorOverrides.RemoveColorOverride()
+-- end
+
+---======================================================================
+--- C_ColorOverrides.SetColorOverride
+---======================================================================
+--- Arguments:
+--- @param overrideType Enum.ColorOverride
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ColorOverrides.SetColorOverride
+---
+--- Usage: C_ColorOverrides.SetColorOverride(overrideType, color)
+---
+-- function C_ColorOverrides.SetColorOverride()
+-- end

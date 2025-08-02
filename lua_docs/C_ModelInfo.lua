@@ -1,0 +1,148 @@
+--[=[
+-- C_ModelInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_ModelInfo
+--- C_ModelInfo namespace contains 8 functions
+local C_ModelInfo = {}
+
+--[=[
+-- C_ModelInfo Functions:
+-- - C_ModelInfo.AddActiveModelScene
+-- - C_ModelInfo.AddActiveModelSceneActor
+-- - C_ModelInfo.ClearActiveModelScene
+-- - C_ModelInfo.ClearActiveModelSceneActor
+-- - C_ModelInfo.GetModelSceneActorDisplayInfoByID
+-- - C_ModelInfo.GetModelSceneActorInfoByID
+-- - C_ModelInfo.GetModelSceneCameraInfoByID
+-- - C_ModelInfo.GetModelSceneInfoByID
+--]=]
+
+---======================================================================
+--- C_ModelInfo.AddActiveModelScene
+---======================================================================
+--- Arguments:
+--- @param modelSceneFrame table
+--- @param modelSceneID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.AddActiveModelScene
+---
+--- Usage: C_ModelInfo.AddActiveModelScene(modelSceneFrame, modelSceneID)
+---
+-- function C_ModelInfo.AddActiveModelScene()
+-- end
+
+---======================================================================
+--- C_ModelInfo.AddActiveModelSceneActor
+---======================================================================
+--- Arguments:
+--- @param modelSceneFrameActor table
+--- @param modelSceneActorID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.AddActiveModelSceneActor
+---
+--- Usage: C_ModelInfo.AddActiveModelSceneActor(modelSceneFrameActor, modelSceneActorID)
+---
+-- function C_ModelInfo.AddActiveModelSceneActor()
+-- end
+
+---======================================================================
+--- C_ModelInfo.ClearActiveModelScene
+---======================================================================
+--- Arguments:
+--- @param modelSceneFrame table
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.ClearActiveModelScene
+---
+--- Usage: C_ModelInfo.ClearActiveModelScene(modelSceneFrame)
+---
+-- function C_ModelInfo.ClearActiveModelScene()
+-- end
+
+---======================================================================
+--- C_ModelInfo.ClearActiveModelSceneActor
+---======================================================================
+--- Arguments:
+--- @param modelSceneFrameActor table
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.ClearActiveModelSceneActor
+---
+--- Usage: C_ModelInfo.ClearActiveModelSceneActor(modelSceneFrameActor)
+---
+-- function C_ModelInfo.ClearActiveModelSceneActor()
+-- end
+
+---======================================================================
+--- C_ModelInfo.GetModelSceneActorDisplayInfoByID
+---======================================================================
+--- Arguments:
+--- @param modelActorDisplayID number
+---
+--- Returns:
+--- @return UIModelSceneActorDisplayInfo actorDisplayInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.GetModelSceneActorDisplayInfoByID
+---
+--- Usage: actorDisplayInfo = C_ModelInfo.GetModelSceneActorDisplayInfoByID(modelActorDisplayID)
+---
+-- function C_ModelInfo.GetModelSceneActorDisplayInfoByID()
+-- end
+
+---======================================================================
+--- C_ModelInfo.GetModelSceneActorInfoByID
+---======================================================================
+--- Arguments:
+--- @param modelActorID number
+---
+--- Returns:
+--- @return UIModelSceneActorInfo actorInfo
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.GetModelSceneActorInfoByID
+---
+--- Usage: actorInfo = C_ModelInfo.GetModelSceneActorInfoByID(modelActorID)
+---
+-- function C_ModelInfo.GetModelSceneActorInfoByID()
+-- end
+
+---======================================================================
+--- C_ModelInfo.GetModelSceneCameraInfoByID
+---======================================================================
+--- Arguments:
+--- @param modelSceneCameraID number
+---
+--- Returns:
+--- @return UIModelSceneCameraInfo modelSceneCameraInfo
+---
+--- @since Patch 7.3.5 (2018-01-16): Added flags field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.GetModelSceneCameraInfoByID
+---
+--- Usage: modelSceneCameraInfo = C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID)
+---
+-- function C_ModelInfo.GetModelSceneCameraInfoByID()
+-- end
+
+---======================================================================
+--- C_ModelInfo.GetModelSceneInfoByID
+---======================================================================
+--- Arguments:
+--- @param modelSceneID number
+---
+--- Returns:
+--- @return Enum.ModelSceneType modelSceneType
+---
+--- @since Patch 10.0.5 (2023-01-24): Added flags return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ModelInfo.GetModelSceneInfoByID
+---
+--- Usage: modelSceneType, modelCameraIDs, modelActorsIDs, flags = C_ModelInfo.GetModelSceneInfoByID(modelSceneID)
+---
+-- function C_ModelInfo.GetModelSceneInfoByID()
+-- end

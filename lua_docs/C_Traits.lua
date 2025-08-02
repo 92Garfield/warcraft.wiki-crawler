@@ -1,0 +1,808 @@
+--[=[
+-- C_Traits API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 43
+--]=]
+
+--- @class C_Traits
+--- C_Traits namespace contains 43 functions
+local C_Traits = {}
+
+--[=[
+-- C_Traits Functions:
+-- - C_Traits.CanEditConfig
+-- - C_Traits.CanPurchaseRank
+-- - C_Traits.CanRefundRank
+-- - C_Traits.CascadeRepurchaseRanks
+-- - C_Traits.ClearCascadeRepurchaseHistory
+-- - C_Traits.CloseTraitSystemInteraction
+-- - C_Traits.CommitConfig
+-- - C_Traits.ConfigHasStagedChanges
+-- - C_Traits.GenerateImportString
+-- - C_Traits.GenerateInspectImportString
+-- - C_Traits.GetConditionInfo
+-- - C_Traits.GetConfigIDBySystemID
+-- - C_Traits.GetConfigIDByTreeID
+-- - C_Traits.GetConfigInfo
+-- - C_Traits.GetConfigsByType
+-- - C_Traits.GetDefinitionInfo
+-- - C_Traits.GetEntryInfo
+-- - C_Traits.GetLoadoutSerializationVersion
+-- - C_Traits.GetNodeCost
+-- - C_Traits.GetNodeInfo
+-- - C_Traits.GetStagedChanges
+-- - C_Traits.GetStagedChangesCost
+-- - C_Traits.GetSubTreeInfo
+-- - C_Traits.GetSystemIDByTreeID
+-- - C_Traits.GetTraitCurrencyInfo
+-- - C_Traits.GetTraitDescription
+-- - C_Traits.GetTraitSystemFlags
+-- - C_Traits.GetTraitSystemWidgetSetID
+-- - C_Traits.GetTreeCurrencyInfo
+-- - C_Traits.GetTreeHash
+-- - C_Traits.GetTreeInfo
+-- - C_Traits.GetTreeNodes
+-- - C_Traits.HasValidInspectData
+-- - C_Traits.IsReadyForCommit
+-- - C_Traits.PurchaseRank
+-- - C_Traits.RefundAllRanks
+-- - C_Traits.RefundRank
+-- - C_Traits.ResetTree
+-- - C_Traits.ResetTreeByCurrency
+-- - C_Traits.RollbackConfig
+-- - C_Traits.SetSelection
+-- - C_Traits.StageConfig
+-- - C_Traits.TalentTestUnlearnSpells
+--]=]
+
+---======================================================================
+--- C_Traits.CanEditConfig
+---======================================================================
+--- Returns whether the player can make changes to the specified talent config.
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean canEdit
+--- @return string errorMessage - If canEdit is false, this will be filled out with text explaining why the player can not make changes.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CanEditConfig
+---
+--- Usage: canEdit, errorMessage = C_Traits.CanEditConfig(configID)
+---
+-- function C_Traits.CanEditConfig()
+-- end
+
+---======================================================================
+--- C_Traits.CanPurchaseRank
+---======================================================================
+--- Checks whether a node entry is purchasable.
+---
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+--- @param nodeEntryID number
+---
+--- Returns:
+--- @return boolean canPurchase
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CanPurchaseRank
+---
+--- Usage: canPurchase = C_Traits.CanPurchaseRank(configID, nodeID, nodeEntryID)
+---
+-- function C_Traits.CanPurchaseRank()
+-- end
+
+---======================================================================
+--- C_Traits.CanRefundRank
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean canRefund
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CanRefundRank
+---
+--- Usage: canRefund = C_Traits.CanRefundRank(configID, nodeID)
+---
+-- function C_Traits.CanRefundRank()
+-- end
+
+---======================================================================
+--- C_Traits.CascadeRepurchaseRanks
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CascadeRepurchaseRanks
+---
+--- Usage: success = C_Traits.CascadeRepurchaseRanks(configID, nodeID)
+---
+-- function C_Traits.CascadeRepurchaseRanks()
+-- end
+
+---======================================================================
+--- C_Traits.ClearCascadeRepurchaseHistory
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.ClearCascadeRepurchaseHistory
+---
+--- Usage: C_Traits.ClearCascadeRepurchaseHistory(configID)
+---
+-- function C_Traits.ClearCascadeRepurchaseHistory()
+-- end
+
+---======================================================================
+--- C_Traits.CloseTraitSystemInteraction
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CloseTraitSystemInteraction
+---
+--- Usage: C_Traits.CloseTraitSystemInteraction()
+---
+-- function C_Traits.CloseTraitSystemInteraction()
+-- end
+
+---======================================================================
+--- C_Traits.CommitConfig
+---======================================================================
+--- Applies any pending changes to talents.
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.CommitConfig
+---
+--- Usage: success = C_Traits.CommitConfig(configID)
+---
+--- See also:
+--- - Dragonflight Talent System
+---
+-- function C_Traits.CommitConfig()
+-- end
+
+---======================================================================
+--- C_Traits.ConfigHasStagedChanges
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean hasChanges
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.ConfigHasStagedChanges
+---
+--- Usage: hasChanges = C_Traits.ConfigHasStagedChanges(configID)
+---
+-- function C_Traits.ConfigHasStagedChanges()
+-- end
+
+---======================================================================
+--- C_Traits.GenerateImportString
+---======================================================================
+--- Generate a talent loadout string for a given loadout
+---
+--- Arguments:
+--- @param configID number a talent loadout, e.g. from C_ClassTalents.GetConfigIDsBySpecID or simply C_ClassTalents.GetActiveConfigID.
+---
+--- Returns:
+--- @return string importString a talent loadout string, which can be used to import the loadout, can be sent to a friend, or used on external websites. An empty string is returned if the client can't find data for the loadout.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GenerateImportString
+---
+--- Usage: importString = C_Traits.GenerateImportString(configID)
+---
+-- function C_Traits.GenerateImportString()
+-- end
+
+---======================================================================
+--- C_Traits.GenerateInspectImportString
+---======================================================================
+--- Returns a Talent Build String for an inspected target
+---
+--- Arguments:
+--- @param target string : UnitId - For example "target"
+---
+--- Returns:
+--- @return string importString - the Talent Build String, or an empty string if inspect information is not available
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GenerateInspectImportString
+---
+--- Usage: importString = C_Traits.GenerateInspectImportString(target)
+---
+--- See also:
+--- - Dragonflight Talent System
+---
+-- function C_Traits.GenerateInspectImportString()
+-- end
+
+---======================================================================
+--- C_Traits.GetConditionInfo
+---======================================================================
+--- Returns conditionInfo applicable to the configID you enter
+---
+--- Arguments:
+--- @param configID number - For TalentTrees this will often be C_ClassTalents.GetActiveConfigID, this is -1 when inspecting a player. For professions, this will be C_ProfSpecs.GetConfigIDForSkillLine.
+--- @param condID number - trait conditionId as found in e.g. C_Traits.GetNodeInfo or C_Traits.GetEntryInfo
+---
+--- Returns:
+--- @return TraitCondInfo condInfo - returns nil if no info is found
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetConditionInfo
+---
+--- Usage: condInfo = C_Traits.GetConditionInfo(configID, condID)
+---
+-- function C_Traits.GetConditionInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetConfigIDBySystemID
+---======================================================================
+--- Arguments:
+--- @param systemID number - The systems are defined in TraitSystem.db2. E.g. Dragonriding is 1
+---
+--- Returns:
+--- @return number configID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigIDBySystemID
+---
+--- Usage: configID = C_Traits.GetConfigIDBySystemID(systemID)
+---
+-- function C_Traits.GetConfigIDBySystemID()
+-- end
+
+---======================================================================
+--- C_Traits.GetConfigIDByTreeID
+---======================================================================
+--- Used for "Generic Trait" trees, such as dragonflying talents. Not used for player talent trees.
+---
+--- Arguments:
+--- @param treeID number
+---
+--- Returns:
+--- @return number configID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigIDByTreeID
+---
+--- Usage: configID = C_Traits.GetConfigIDByTreeID(treeID)
+---
+-- function C_Traits.GetConfigIDByTreeID()
+-- end
+
+---======================================================================
+--- C_Traits.GetConfigInfo
+---======================================================================
+--- Arguments:
+--- @param configID number - For TalentTrees this will often be C_ClassTalents.GetActiveConfigID, this is -1 when inspecting a player. For professions, this will be C_ProfSpecs.GetConfigIDForSkillLine.
+---
+--- Returns:
+--- @return TraitConfigInfo configInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigInfo
+---
+--- Usage: configInfo = C_Traits.GetConfigInfo(configID)
+---
+-- function C_Traits.GetConfigInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetConfigsByType
+---======================================================================
+--- Arguments:
+--- @param configType Enum.TraitConfigType
+---
+--- Returns:
+--- @return number configIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigsByType
+---
+--- Usage: configIDs = C_Traits.GetConfigsByType(configType)
+---
+-- function C_Traits.GetConfigsByType()
+-- end
+
+---======================================================================
+--- C_Traits.GetDefinitionInfo
+---======================================================================
+--- Arguments:
+--- @param definitionID number
+---
+--- Returns:
+--- @return TraitDefinitionInfo definitionInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetDefinitionInfo
+---
+--- Usage: definitionInfo = C_Traits.GetDefinitionInfo(definitionID)
+---
+-- function C_Traits.GetDefinitionInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetEntryInfo
+---======================================================================
+--- Retrieves Node Entry information.
+---
+--- Arguments:
+--- @param configID number
+--- @param entryID number
+---
+--- Returns:
+--- @return TraitEntryInfo entryInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetEntryInfo
+---
+--- Usage: entryInfo = C_Traits.GetEntryInfo(configID, entryID)
+---
+-- function C_Traits.GetEntryInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetLoadoutSerializationVersion
+---======================================================================
+--- Returns the version of the Talent Build String format.
+---
+--- Returns:
+--- @return number serializationVersion
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetLoadoutSerializationVersion
+---
+--- Usage: serializationVersion = C_Traits.GetLoadoutSerializationVersion()
+---
+-- function C_Traits.GetLoadoutSerializationVersion()
+-- end
+
+---======================================================================
+--- C_Traits.GetNodeCost
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+---
+--- Returns:
+--- @return TraitCurrencyCost costs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetNodeCost
+---
+--- Usage: costs = C_Traits.GetNodeCost(configID, nodeID)
+---
+-- function C_Traits.GetNodeCost()
+-- end
+
+---======================================================================
+--- C_Traits.GetNodeInfo
+---======================================================================
+--- Returns NodeInfo applicable to the configID you enter.
+---
+--- Arguments:
+--- @param configID number - For TalentTrees this will often be C_ClassTalents.GetActiveConfigID, this is -1 when inspecting a player. For professions, this will be C_ProfSpecs.GetConfigIDForSkillLine. See also Constants.TraitConsts for a few special ConfigIDs.
+--- @param nodeID number - e.g. from C_Traits.GetTreeNodes
+---
+--- Returns:
+--- @return TraitNodeInfo nodeInfo ? - if the configID is not valid, returns nil. If information for a node cannot be retrieved for another reason, all fields are zeroed out. Most information relates to your current preview state, unless otherwise specified
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetNodeInfo
+---
+--- Usage: nodeInfo = C_Traits.GetNodeInfo(configID, nodeID)
+---
+-- function C_Traits.GetNodeInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetStagedChanges
+---======================================================================
+--- Returns IDs of Trait Nodes with pending changes, grouped by the type of change; Returns nothing if there are no pending changes
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return number nodeIDsWithPurchases []
+--- @return number nodeIDsWithRefunds []
+--- @return number nodeIDsWithSelectionSwaps [] - Selection nodes that had a previously committed selected entry, and now have a different selected entry pending
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChanges
+---
+--- Usage: nodeIDsWithPurchases, nodeIDsWithRefunds, nodeIDsWithSelectionSwaps = C_Traits.GetStagedChanges(configID)
+---
+-- function C_Traits.GetStagedChanges()
+-- end
+
+---======================================================================
+--- C_Traits.GetStagedChangesCost
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return TraitCurrencyCost costs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChangesCost
+---
+--- Usage: costs = C_Traits.GetStagedChangesCost(configID)
+---
+-- function C_Traits.GetStagedChangesCost()
+-- end
+
+---======================================================================
+--- C_Traits.GetSubTreeInfo
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param subTreeID number
+---
+--- Returns:
+--- @return TraitSubTreeInfo subTreeInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetSubTreeInfo
+---
+--- Usage: subTreeInfo = C_Traits.GetSubTreeInfo(configID, subTreeID)
+---
+-- function C_Traits.GetSubTreeInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetSystemIDByTreeID
+---======================================================================
+--- Arguments:
+--- @param treeID number
+---
+--- Returns:
+--- @return number systemID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetSystemIDByTreeID
+---
+--- Usage: systemID = C_Traits.GetSystemIDByTreeID(treeID)
+---
+-- function C_Traits.GetSystemIDByTreeID()
+-- end
+
+---======================================================================
+--- C_Traits.GetTraitCurrencyInfo
+---======================================================================
+--- Returns meta information about a TraitCurrency, use C_Traits.GetTreeCurrencyInfo if you're looking for TraitCurrency spent/available instead.
+---
+--- Arguments:
+--- @param traitCurrencyID number
+---
+--- Returns:
+--- @return number flags - any combination of bit flags of Enum.TraitCurrencyFlag
+--- @return Enum.TraitCurrencyFlag type - indicates how the TraitCurrency is sourced
+--- @return number currencyTypesID ? - CurrencyID, if non-empty, the TraitCurrency is directly linked to the specified Currency
+--- @return number icon ? - IconID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitCurrencyInfo
+---
+--- Usage: flags, type, currencyTypesID, icon = C_Traits.GetTraitCurrencyInfo(traitCurrencyID)
+---
+-- function C_Traits.GetTraitCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetTraitDescription
+---======================================================================
+--- Arguments:
+--- @param entryID number
+--- @param rank number
+---
+--- Returns:
+--- @return string description
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitDescription
+---
+--- Usage: description = C_Traits.GetTraitDescription(entryID, rank)
+---
+-- function C_Traits.GetTraitDescription()
+-- end
+
+---======================================================================
+--- C_Traits.GetTraitSystemFlags
+---======================================================================
+--- Returns flags for "Generic Trait" trees. Such as dragonriding talents. Not related to player talent trees.
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return number flags - See Enum.TraitSystemFlag
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitSystemFlags
+---
+--- Usage: flags = C_Traits.GetTraitSystemFlags(configID)
+---
+-- function C_Traits.GetTraitSystemFlags()
+-- end
+
+---======================================================================
+--- C_Traits.GetTraitSystemWidgetSetID
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return number uiWidgetSetID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitSystemWidgetSetID
+---
+--- Usage: uiWidgetSetID = C_Traits.GetTraitSystemWidgetSetID(configID)
+---
+-- function C_Traits.GetTraitSystemWidgetSetID()
+-- end
+
+---======================================================================
+--- C_Traits.GetTreeCurrencyInfo
+---======================================================================
+--- Returns the list of TraitCurrencies related to a TraitTree.
+---
+--- Arguments:
+--- @param configID number - For TalentTrees this will often be C_ClassTalents.GetActiveConfigID, this is -1 when inspecting a player. For professions, this will be C_ProfSpecs.GetConfigIDForSkillLine.
+--- @param treeID number - For TalentTrees a class specific TreeID, for professions C_ProfSpecs.GetSpecTabIDsForSkillLine.
+--- @param excludeStagedChanges boolean - If true, the committed value is returned; if false, the staged value is returned instead.
+---
+--- Returns:
+--- @return TreeCurrencyInfo treeCurrencyInfo [] - For TalentTrees, the first currency returned is for the class points, the second currency is spec points.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeCurrencyInfo
+---
+--- Usage: treeCurrencyInfo = C_Traits.GetTreeCurrencyInfo(configID, treeID, excludeStagedChanges)
+---
+-- function C_Traits.GetTreeCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetTreeHash
+---======================================================================
+--- Get a checksum of the specified tree's structure.
+---
+--- Arguments:
+--- @param treeID number
+---
+--- Returns:
+--- @return number result [] 16 numbers between 1 and 256
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeHash
+---
+--- Usage: result = C_Traits.GetTreeHash(treeID)
+---
+-- function C_Traits.GetTreeHash()
+-- end
+
+---======================================================================
+--- C_Traits.GetTreeInfo
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param treeID number
+---
+--- Returns:
+--- @return TraitTreeInfo treeInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeInfo
+---
+--- Usage: treeInfo = C_Traits.GetTreeInfo(configID, treeID)
+---
+-- function C_Traits.GetTreeInfo()
+-- end
+
+---======================================================================
+--- C_Traits.GetTreeNodes
+---======================================================================
+--- Returns a list of nodeIDs for a given treeID. For talent trees, this contains nodes for all specializations of the tree's class.
+---
+--- Arguments:
+--- @param treeID number - e.g. from C_Traits.GetConfigInfo
+---
+--- Returns:
+--- @return number nodeIDs [] - list of nodeIDs in ascending order, can be used in C_Traits.GetNodeInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeNodes
+---
+--- Usage: nodeIDs = C_Traits.GetTreeNodes(treeID)
+---
+-- function C_Traits.GetTreeNodes()
+-- end
+
+---======================================================================
+--- C_Traits.HasValidInspectData
+---======================================================================
+--- Returns:
+--- @return boolean hasValidInspectData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.HasValidInspectData
+---
+--- Usage: hasValidInspectData = C_Traits.HasValidInspectData()
+---
+-- function C_Traits.HasValidInspectData()
+-- end
+
+---======================================================================
+--- C_Traits.IsReadyForCommit
+---======================================================================
+--- Returns:
+--- @return boolean isReadyForCommit
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.IsReadyForCommit
+---
+--- Usage: isReadyForCommit = C_Traits.IsReadyForCommit()
+---
+-- function C_Traits.IsReadyForCommit()
+-- end
+
+---======================================================================
+--- C_Traits.PurchaseRank
+---======================================================================
+--- Attempt to purchase a rank. Changes are not applied until they are committed (through C_Traits.CommitConfig or C_ClassTalents.CommitConfig).
+---
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.PurchaseRank
+---
+--- Usage: success = C_Traits.PurchaseRank(configID, nodeID)
+---
+--- See also:
+--- - Dragonflight Talent System
+---
+-- function C_Traits.PurchaseRank()
+-- end
+
+---======================================================================
+--- C_Traits.RefundAllRanks
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.RefundAllRanks
+---
+--- Usage: success = C_Traits.RefundAllRanks(configID, nodeID)
+---
+-- function C_Traits.RefundAllRanks()
+-- end
+
+---======================================================================
+--- C_Traits.RefundRank
+---======================================================================
+--- Attempt to refund a rank. Changes are not applied until they are committed (through C_Traits.CommitConfig or C_ClassTalents.CommitConfig).
+---
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+--- @param clearEdges boolean ? if true, refunding the talent will refund all talents that no longer meet their requirements
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.RefundRank
+---
+--- Usage: success = C_Traits.RefundRank(configID, nodeID[, clearEdges])
+---
+--- See also:
+--- - Dragonflight Talent System
+---
+-- function C_Traits.RefundRank()
+-- end
+
+---======================================================================
+--- C_Traits.ResetTree
+---======================================================================
+--- Resets the tree, refunding any purchased traits where possible. The reset is not automatically saved, use C_Traits.CommitConfig for that.
+---
+--- Arguments:
+--- @param configID number
+--- @param treeID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.ResetTree
+---
+--- Usage: success = C_Traits.ResetTree(configID, treeID)
+---
+-- function C_Traits.ResetTree()
+-- end
+
+---======================================================================
+--- C_Traits.ResetTreeByCurrency
+---======================================================================
+--- Resets the tree, refunding any purchased traits where possible, but only if the trait costs the specified traitCurrencyID
+---
+--- Arguments:
+--- @param configID number
+--- @param treeID number
+--- @param traitCurrencyID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.ResetTreeByCurrency
+---
+--- Usage: success = C_Traits.ResetTreeByCurrency(configID, treeID, traitCurrencyID)
+---
+-- function C_Traits.ResetTreeByCurrency()
+-- end
+
+---======================================================================
+--- C_Traits.RollbackConfig
+---======================================================================
+--- Rolls back any pending changes to the trait config - reverting any unsaved changes.
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.RollbackConfig
+---
+--- Usage: success = C_Traits.RollbackConfig(configID)
+---
+-- function C_Traits.RollbackConfig()
+-- end
+
+---======================================================================
+--- C_Traits.SetSelection
+---======================================================================
+--- Attempt change the current selection for a selection node (aka choice node). Changes are not applied until they are committed (through C_Traits.CommitConfig or C_ClassTalents.CommitConfig).
+---
+--- Arguments:
+--- @param configID number
+--- @param nodeID number
+--- @param nodeEntryID number ? pass nil to unselect the node, effectively the equivalent of C_Traits.RefundRank.
+--- @param clearEdges boolean ? if true, unselecting the node will refund all talents that no longer meet their requirements
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.SetSelection
+---
+--- Usage: success = C_Traits.SetSelection(configID, nodeID [, nodeEntryID[, clearEdges]])
+---
+-- function C_Traits.SetSelection()
+-- end
+
+---======================================================================
+--- C_Traits.StageConfig
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.StageConfig
+---
+--- Usage: success = C_Traits.StageConfig(configID)
+---
+-- function C_Traits.StageConfig()
+-- end
+
+---======================================================================
+--- C_Traits.TalentTestUnlearnSpells
+---======================================================================
+--- #nopermission - UI_ERROR_MESSAGE: You do not have permission to perform that function
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Traits.TalentTestUnlearnSpells
+---
+--- Usage: C_Traits.TalentTestUnlearnSpells()
+---
+-- function C_Traits.TalentTestUnlearnSpells()
+-- end

@@ -1,0 +1,111 @@
+--[=[
+-- C_Ping API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_Ping
+--- C_Ping namespace contains 6 functions
+local C_Ping = {}
+
+--[=[
+-- C_Ping Functions:
+-- - C_Ping.GetContextualPingTypeForUnit
+-- - C_Ping.GetCooldownInfo
+-- - C_Ping.GetDefaultPingOptions
+-- - C_Ping.GetTextureKitForType
+-- - C_Ping.SendMacroPing
+-- - C_Ping.TogglePingListener
+--]=]
+
+---======================================================================
+--- C_Ping.GetContextualPingTypeForUnit
+---======================================================================
+--- Arguments:
+--- @param targetUnit string ? : WOWGUID
+---
+--- Returns:
+--- @return Enum.PingSubjectType type
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.GetContextualPingTypeForUnit
+---
+--- Usage: type = C_Ping.GetContextualPingTypeForUnit([targetUnit])
+---
+-- function C_Ping.GetContextualPingTypeForUnit()
+-- end
+
+---======================================================================
+--- C_Ping.GetCooldownInfo
+---======================================================================
+--- Returns:
+--- @return PingCooldownInfo cooldownInfo []
+---
+--- @since Patch 10.2.5 (2024-01-16): Moved to C_Ping namespace and no longer forbidden.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.GetCooldownInfo
+---
+--- Usage: cooldownInfo = C_Ping.GetCooldownInfo()
+---
+-- function C_Ping.GetCooldownInfo()
+-- end
+
+---======================================================================
+--- C_Ping.GetDefaultPingOptions
+---======================================================================
+--- Returns:
+--- @return PingTypeInfo pingTypes []
+---
+--- @since Patch 10.2.5 (2024-01-16): Moved to C_Ping namespace and no longer forbidden.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.GetDefaultPingOptions
+---
+--- Usage: pingTypes = C_Ping.GetDefaultPingOptions()
+---
+-- function C_Ping.GetDefaultPingOptions()
+-- end
+
+---======================================================================
+--- C_Ping.GetTextureKitForType
+---======================================================================
+--- Arguments:
+--- @param type Enum.PingSubjectType - The type of the Ping, e.g. 2 for "Assist" and 3 for "OnMyWay" Pings.
+---
+--- Returns:
+--- @return string uiTextureKitID : textureKit - Name of a texture kit for the Ping.
+---
+--- @since Patch 10.2.5 (2024-01-16): Moved to C_Ping namespace and no longer forbidden.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.GetTextureKitForType
+---
+--- Usage: uiTextureKitID = C_Ping.GetTextureKitForType(type)
+---
+-- function C_Ping.GetTextureKitForType()
+-- end
+
+---======================================================================
+--- C_Ping.SendMacroPing
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param type Enum.PingSubjectType ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.SendMacroPing
+---
+--- Usage: C_Ping.SendMacroPing([type [, targetToken]])
+---
+-- function C_Ping.SendMacroPing()
+-- end
+
+---======================================================================
+--- C_Ping.TogglePingListener
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param down boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Ping.TogglePingListener
+---
+--- Usage: C_Ping.TogglePingListener(down)
+---
+-- function C_Ping.TogglePingListener()
+-- end

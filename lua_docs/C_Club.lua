@@ -1,0 +1,1496 @@
+--[=[
+-- C_Club API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 83
+--]=]
+
+--- @class C_Club
+--- C_Club namespace contains 83 functions
+local C_Club = {}
+
+--[=[
+-- C_Club Functions:
+-- - C_Club.AcceptInvitation
+-- - C_Club.AddClubStreamChatChannel
+-- - C_Club.AdvanceStreamViewMarker
+-- - C_Club.AreMembersReady
+-- - C_Club.AssignMemberRole
+-- - C_Club.CanResolvePlayerLocationFromClubMessageData
+-- - C_Club.ClearAutoAdvanceStreamViewMarker
+-- - C_Club.ClearClubPresenceSubscription
+-- - C_Club.CompareBattleNetDisplayName
+-- - C_Club.CreateClub
+-- - C_Club.CreateStream
+-- - C_Club.CreateTicket
+-- - C_Club.DeclineInvitation
+-- - C_Club.DestroyClub
+-- - C_Club.DestroyMessage
+-- - C_Club.DestroyStream
+-- - C_Club.DestroyTicket
+-- - C_Club.DoesAnyCommunityHaveUnreadMessages
+-- - C_Club.DoesCommunityHaveMembersOfTheOppositeFaction
+-- - C_Club.EditClub
+-- - C_Club.EditMessage
+-- - C_Club.EditStream
+-- - C_Club.Flush
+-- - C_Club.FocusCommunityStreams
+-- - C_Club.FocusMembers
+-- - C_Club.FocusStream
+-- - C_Club.GetAssignableRoles
+-- - C_Club.GetAvatarIdList
+-- - C_Club.GetClubCapacity
+-- - C_Club.GetClubInfo
+-- - C_Club.GetClubLimits
+-- - C_Club.GetClubMembers
+-- - C_Club.GetClubPrivileges
+-- - C_Club.GetClubStreamNotificationSettings
+-- - C_Club.GetCommunityNameResultText
+-- - C_Club.GetGuildClubId
+-- - C_Club.GetInfoFromLastCommunityChatLine
+-- - C_Club.GetInvitationCandidates
+-- - C_Club.GetInvitationInfo
+-- - C_Club.GetInvitationsForClub
+-- - C_Club.GetInvitationsForSelf
+-- - C_Club.GetLastTicketResponse
+-- - C_Club.GetMemberInfo
+-- - C_Club.GetMemberInfoForSelf
+-- - C_Club.GetMessageInfo
+-- - C_Club.GetMessageRanges
+-- - C_Club.GetMessagesBefore
+-- - C_Club.GetMessagesInRange
+-- - C_Club.GetStreamInfo
+-- - C_Club.GetStreamViewMarker
+-- - C_Club.GetStreams
+-- - C_Club.GetSubscribedClubs
+-- - C_Club.GetTickets
+-- - C_Club.IsAccountMuted
+-- - C_Club.IsBeginningOfStream
+-- - C_Club.IsEnabled
+-- - C_Club.IsRestricted
+-- - C_Club.IsSubscribedToStream
+-- - C_Club.KickMember
+-- - C_Club.LeaveClub
+-- - C_Club.RedeemTicket
+-- - C_Club.RequestInvitationsForClub
+-- - C_Club.RequestMoreMessagesBefore
+-- - C_Club.RequestTicket
+-- - C_Club.RequestTickets
+-- - C_Club.RevokeInvitation
+-- - C_Club.SendBattleTagFriendRequest
+-- - C_Club.SendCharacterInvitation
+-- - C_Club.SendInvitation
+-- - C_Club.SendMessage
+-- - C_Club.SetAutoAdvanceStreamViewMarker
+-- - C_Club.SetAvatarTexture
+-- - C_Club.SetClubMemberNote
+-- - C_Club.SetClubPresenceSubscription
+-- - C_Club.SetClubStreamNotificationSettings
+-- - C_Club.SetCommunityID
+-- - C_Club.SetFavorite
+-- - C_Club.SetSocialQueueingEnabled
+-- - C_Club.ShouldAllowClubType
+-- - C_Club.UnfocusAllStreams
+-- - C_Club.UnfocusMembers
+-- - C_Club.UnfocusStream
+-- - C_Club.ValidateText
+--]=]
+
+---======================================================================
+--- C_Club.AcceptInvitation
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.AcceptInvitation
+---
+--- Usage: C_Club.AcceptInvitation(clubId)
+---
+-- function C_Club.AcceptInvitation()
+-- end
+
+---======================================================================
+--- C_Club.AddClubStreamChatChannel
+---======================================================================
+--- Adds a communities channel.
+---
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.1.0 (2018-12-11): C_Club.AddClubStreamToChatWindow was deprecated in favor of this function. You may need to call AddChatWindowChannel. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.AddClubStreamChatChannel
+---
+--- Usage: C_Club.AddClubStreamChatChannel(clubId, streamId)
+---
+-- function C_Club.AddClubStreamChatChannel()
+-- end
+
+---======================================================================
+--- C_Club.AdvanceStreamViewMarker
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.AdvanceStreamViewMarker
+---
+--- Usage: C_Club.AdvanceStreamViewMarker(clubId, streamId)
+---
+-- function C_Club.AdvanceStreamViewMarker()
+-- end
+
+---======================================================================
+--- C_Club.AreMembersReady
+---======================================================================
+--- Arguments:
+--- @param clubId string : ClubId
+---
+--- Returns:
+--- @return boolean membersReady
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.AreMembersReady
+---
+--- Usage: membersReady = C_Club.AreMembersReady(clubId)
+---
+-- function C_Club.AreMembersReady()
+-- end
+
+---======================================================================
+--- C_Club.AssignMemberRole
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+--- @param roleId  Enum.ClubRoleIdentifier
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.AssignMemberRole
+---
+--- Usage: C_Club.AssignMemberRole(clubId, memberId, roleId)
+---
+-- function C_Club.AssignMemberRole()
+-- end
+
+---======================================================================
+--- C_Club.CanResolvePlayerLocationFromClubMessageData
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param epoch number
+--- @param position number
+---
+--- Returns:
+--- @return boolean canResolve
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.CanResolvePlayerLocationFromClubMessageData
+---
+--- Usage: canResolve = C_Club.CanResolvePlayerLocationFromClubMessageData(clubId, streamId, epoch, position)
+---
+-- function C_Club.CanResolvePlayerLocationFromClubMessageData()
+-- end
+
+---======================================================================
+--- C_Club.ClearAutoAdvanceStreamViewMarker
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.ClearAutoAdvanceStreamViewMarker
+---
+--- Usage: C_Club.ClearAutoAdvanceStreamViewMarker()
+---
+-- function C_Club.ClearAutoAdvanceStreamViewMarker()
+-- end
+
+---======================================================================
+--- C_Club.ClearClubPresenceSubscription
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.ClearClubPresenceSubscription
+---
+--- Usage: C_Club.ClearClubPresenceSubscription()
+---
+-- function C_Club.ClearClubPresenceSubscription()
+-- end
+
+---======================================================================
+--- C_Club.CompareBattleNetDisplayName
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param lhsMemberId number
+--- @param rhsMemberId number
+---
+--- Returns:
+--- @return number comparison
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.CompareBattleNetDisplayName
+---
+--- Usage: comparison = C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId)
+---
+-- function C_Club.CompareBattleNetDisplayName()
+-- end
+
+---======================================================================
+--- C_Club.CreateClub
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param name string
+--- @param shortName string ?
+--- @param description string
+--- @param clubType Enum.ClubType - Valid types are BattleNet or Character
+---
+--- @since Patch 9.2.5 (2022-05-31): Added isCrossFaction argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.CreateClub
+---
+--- Usage: C_Club.CreateClub(name, shortName?, description, clubType, avatarId [, isCrossFaction])
+---
+-- function C_Club.CreateClub()
+-- end
+
+---======================================================================
+--- C_Club.CreateStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param name string
+--- @param subject string
+--- @param leadersAndModeratorsOnly boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.CreateStream
+---
+--- Usage: C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly)
+---
+-- function C_Club.CreateStream()
+-- end
+
+---======================================================================
+--- C_Club.CreateTicket
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param clubId string
+--- @param allowedRedeemCount number ? - Number of uses. nil means unlimited
+--- @param duration number ? - Duration in seconds. nil never expires
+--- @param defaultStreamId string ?
+--- @param isCrossFaction boolean ?
+---
+--- @since Patch 9.2.5 (2022-05-31): Added isCrossFaction argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.CreateTicket
+---
+--- Usage: C_Club.CreateTicket(clubId [, allowedRedeemCount, duration, defaultStreamId, isCrossFaction])
+---
+-- function C_Club.CreateTicket()
+-- end
+
+---======================================================================
+--- C_Club.DeclineInvitation
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DeclineInvitation
+---
+--- Usage: C_Club.DeclineInvitation(clubId)
+---
+-- function C_Club.DeclineInvitation()
+-- end
+
+---======================================================================
+--- C_Club.DestroyClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DestroyClub
+---
+--- Usage: C_Club.DestroyClub(clubId)
+---
+-- function C_Club.DestroyClub()
+-- end
+
+---======================================================================
+--- C_Club.DestroyMessage
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param messageId  structure - ClubMessageIdentifier
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DestroyMessage
+---
+--- Usage: C_Club.DestroyMessage(clubId, streamId, messageId)
+---
+-- function C_Club.DestroyMessage()
+-- end
+
+---======================================================================
+--- C_Club.DestroyStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DestroyStream
+---
+--- Usage: C_Club.DestroyStream(clubId, streamId)
+---
+-- function C_Club.DestroyStream()
+-- end
+
+---======================================================================
+--- C_Club.DestroyTicket
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param ticketId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DestroyTicket
+---
+--- Usage: C_Club.DestroyTicket(clubId, ticketId)
+---
+-- function C_Club.DestroyTicket()
+-- end
+
+---======================================================================
+--- C_Club.DoesAnyCommunityHaveUnreadMessages
+---======================================================================
+--- Returns:
+--- @return boolean hasUnreadMessages
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DoesAnyCommunityHaveUnreadMessages
+---
+--- Usage: hasUnreadMessages = C_Club.DoesAnyCommunityHaveUnreadMessages()
+---
+-- function C_Club.DoesAnyCommunityHaveUnreadMessages()
+-- end
+
+---======================================================================
+--- C_Club.DoesCommunityHaveMembersOfTheOppositeFaction
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return boolean hasMembersOfOppositeFaction
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.DoesCommunityHaveMembersOfTheOppositeFaction
+---
+--- Usage: hasMembersOfOppositeFaction = C_Club.DoesCommunityHaveMembersOfTheOppositeFaction(clubId)
+---
+-- function C_Club.DoesCommunityHaveMembersOfTheOppositeFaction()
+-- end
+
+---======================================================================
+--- C_Club.EditClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param name string ?
+--- @param shortName string ?
+--- @param description string ?
+--- @param avatarId number ?
+--- @param broadcast string ?
+--- @param crossFaction boolean ?
+---
+--- @since Patch 9.2.5 (2022-05-31): Added crossFaction argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.EditClub
+---
+--- Usage: C_Club.EditClub(clubId [, name [, shortName [, description [, avatarId [, broadcast [, crossFaction]]]]]])
+---
+-- function C_Club.EditClub()
+-- end
+
+---======================================================================
+--- C_Club.EditMessage
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param messageId ClubMessageIdentifier
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.EditMessage
+---
+--- Usage: C_Club.EditMessage(clubId, streamId, messageId, message)
+---
+-- function C_Club.EditMessage()
+-- end
+
+---======================================================================
+--- C_Club.EditStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param name string ?
+--- @param subject string ?
+--- @param leadersAndModeratorsOnly boolean ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.EditStream
+---
+--- Usage: C_Club.EditStream(clubId, streamId [, name [, subject [, leadersAndModeratorsOnly]]])
+---
+-- function C_Club.EditStream()
+-- end
+
+---======================================================================
+--- C_Club.Flush
+---======================================================================
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.Flush
+---
+--- Usage: C_Club.Flush()
+---
+-- function C_Club.Flush()
+-- end
+
+---======================================================================
+--- C_Club.FocusCommunityStreams
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.FocusCommunityStreams
+---
+--- Usage: C_Club.FocusCommunityStreams()
+---
+-- function C_Club.FocusCommunityStreams()
+-- end
+
+---======================================================================
+--- C_Club.FocusMembers
+---======================================================================
+--- Arguments:
+--- @param clubId string : ClubId
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.FocusMembers
+---
+--- Usage: C_Club.FocusMembers(clubId)
+---
+-- function C_Club.FocusMembers()
+-- end
+
+---======================================================================
+--- C_Club.FocusStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return boolean focused
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.FocusStream
+---
+--- Usage: focused = C_Club.FocusStream(clubId, streamId)
+---
+-- function C_Club.FocusStream()
+-- end
+
+---======================================================================
+--- C_Club.GetAssignableRoles
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+---
+--- Returns:
+--- @return  assignableRoles Enum.ClubRoleIdentifier[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetAssignableRoles
+---
+--- Usage: assignableRoles = C_Club.GetAssignableRoles(clubId, memberId)
+---
+-- function C_Club.GetAssignableRoles()
+-- end
+
+---======================================================================
+--- C_Club.GetAvatarIdList
+---======================================================================
+--- Arguments:
+--- @param clubType  Enum.ClubType
+---
+--- Returns:
+--- @return number avatarIds []?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetAvatarIdList
+---
+--- Usage: avatarIds = C_Club.GetAvatarIdList(clubType)
+---
+-- function C_Club.GetAvatarIdList()
+-- end
+
+---======================================================================
+--- C_Club.GetClubCapacity
+---======================================================================
+--- Returns:
+--- @return number capacity
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubCapacity
+---
+--- Usage: capacity = C_Club.GetClubCapacity()
+---
+-- function C_Club.GetClubCapacity()
+-- end
+
+---======================================================================
+--- C_Club.GetClubInfo
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return ClubInfo info ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubInfo
+---
+--- Usage: info = C_Club.GetClubInfo(clubId)
+---
+-- function C_Club.GetClubInfo()
+-- end
+
+---======================================================================
+--- C_Club.GetClubLimits
+---======================================================================
+--- Arguments:
+--- @param clubType  Enum.ClubType
+---
+--- Returns:
+--- @return  clubLimits structure - ClubLimits
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubLimits
+---
+--- Usage: clubLimits = C_Club.GetClubLimits(clubType)
+---
+-- function C_Club.GetClubLimits()
+-- end
+
+---======================================================================
+--- C_Club.GetClubMembers
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string ?
+---
+--- Returns:
+--- @return number members []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubMembers
+---
+--- Usage: members = C_Club.GetClubMembers(clubId [, streamId])
+---
+-- function C_Club.GetClubMembers()
+-- end
+
+---======================================================================
+--- C_Club.GetClubPrivileges
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  privilegeInfo structure - ClubPrivilegeInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubPrivileges
+---
+--- Usage: privilegeInfo = C_Club.GetClubPrivileges(clubId)
+---
+-- function C_Club.GetClubPrivileges()
+-- end
+
+---======================================================================
+--- C_Club.GetClubStreamNotificationSettings
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  settings structure - ClubStreamNotificationSetting[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetClubStreamNotificationSettings
+---
+--- Usage: settings = C_Club.GetClubStreamNotificationSettings(clubId)
+---
+-- function C_Club.GetClubStreamNotificationSettings()
+-- end
+
+---======================================================================
+--- C_Club.GetCommunityNameResultText
+---======================================================================
+--- Arguments:
+--- @param result Enum.ValidateNameResult
+---
+--- Returns:
+--- @return string errorCode ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetCommunityNameResultText
+---
+--- Usage: errorCode = C_Club.GetCommunityNameResultText(result)
+---
+-- function C_Club.GetCommunityNameResultText()
+-- end
+
+---======================================================================
+--- C_Club.GetGuildClubId
+---======================================================================
+--- Returns:
+--- @return string guildClubId ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetGuildClubId
+---
+--- Usage: guildClubId = C_Club.GetGuildClubId()
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Club.GetGuildClubId() -- 15554351
+--- Example 2:
+---   local club = C_Club.GetGuildClubId()
+---   local streams = C_Club.GetStreams(club)
+---   local guildStream = streams[1].streamId
+---   local ranges = C_Club.GetMessageRanges(club, guildStream)
+---   local oldest, newest = ranges[1].oldestMessageId, ranges[1].newestMessageId
+---   local messages = C_Club.GetMessagesInRange(club, guildStream, oldest, newest)
+---   for _, v in pairs(messages) do
+---   	local timestamp = date("%Y-%m-%d %H:%M:%S", v.messageId.epoch/1e6)
+---   	print(format("%s %s: |cffdda0dd%s|r", timestamp, v.author.name, v.content))
+---   end
+---
+-- function C_Club.GetGuildClubId()
+-- end
+
+---======================================================================
+--- C_Club.GetInfoFromLastCommunityChatLine
+---======================================================================
+--- Returns:
+--- @return  messageInfo structure - ClubMessageInfo
+--- @return string clubId
+--- @return string streamId
+--- @return  clubType Enum.ClubType
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetInfoFromLastCommunityChatLine
+---
+--- Usage: messageInfo, clubId, streamId, clubType = C_Club.GetInfoFromLastCommunityChatLine()
+---
+-- function C_Club.GetInfoFromLastCommunityChatLine()
+-- end
+
+---======================================================================
+--- C_Club.GetInvitationCandidates
+---======================================================================
+--- Returns a list of players that you can send a request to a Battle.net club. Returns an empty list for Character based clubs
+---
+--- Arguments:
+--- @param filter string ?
+--- @param maxResults number ?
+--- @param cursorPosition number ?
+--- @param allowFullMatch boolean ?
+--- @param clubId string
+---
+--- Returns:
+--- @return ClubInvitationCandidateInfo candidates []
+---
+--- @since Patch 8.1.0 (2018-12-11): Added allowFullMatch argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationCandidates
+---
+--- Usage: candidates = C_Club.GetInvitationCandidates(filter?, maxResults?, cursorPosition?, allowFullMatch?, clubId)
+---
+-- function C_Club.GetInvitationCandidates()
+-- end
+
+---======================================================================
+--- C_Club.GetInvitationInfo
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  invitation structure - ClubSelfInvitationInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationInfo
+---
+--- Usage: invitation = C_Club.GetInvitationInfo(clubId)
+---
+-- function C_Club.GetInvitationInfo()
+-- end
+
+---======================================================================
+--- C_Club.GetInvitationsForClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  invitations structure - ClubInvitationInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForClub
+---
+--- Usage: invitations = C_Club.GetInvitationsForClub(clubId)
+---
+-- function C_Club.GetInvitationsForClub()
+-- end
+
+---======================================================================
+--- C_Club.GetInvitationsForSelf
+---======================================================================
+--- Returns:
+--- @return  invitations structure - ClubSelfInvitationInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForSelf
+---
+--- Usage: invitations = C_Club.GetInvitationsForSelf()
+---
+-- function C_Club.GetInvitationsForSelf()
+-- end
+
+---======================================================================
+--- C_Club.GetLastTicketResponse
+---======================================================================
+--- Arguments:
+--- @param ticket string
+---
+--- Returns:
+--- @return  error Enum.ClubErrorType
+--- @return  info structure - ClubInfo (nilable)
+--- @return boolean showError
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetLastTicketResponse
+---
+--- Usage: error, info, showError = C_Club.GetLastTicketResponse(ticket)
+---
+-- function C_Club.GetLastTicketResponse()
+-- end
+
+---======================================================================
+--- C_Club.GetMemberInfo
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+---
+--- Returns:
+--- @return  info structure - ClubMemberInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMemberInfo
+---
+--- Usage: info = C_Club.GetMemberInfo(clubId, memberId)
+---
+-- function C_Club.GetMemberInfo()
+-- end
+
+---======================================================================
+--- C_Club.GetMemberInfoForSelf
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  info structure - ClubMemberInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMemberInfoForSelf
+---
+--- Usage: info = C_Club.GetMemberInfoForSelf(clubId)
+---
+-- function C_Club.GetMemberInfoForSelf()
+-- end
+
+---======================================================================
+--- C_Club.GetMessageInfo
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param messageId  structure - ClubMessageIdentifier
+---
+--- Returns:
+--- @return  message structure - ClubMessageInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageInfo
+---
+--- Usage: message = C_Club.GetMessageInfo(clubId, streamId, messageId)
+---
+-- function C_Club.GetMessageInfo()
+-- end
+
+---======================================================================
+--- C_Club.GetMessageRanges
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return  ranges structure - ClubMessageRange[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageRanges
+---
+--- Usage: ranges = C_Club.GetMessageRanges(clubId, streamId)
+---
+-- function C_Club.GetMessageRanges()
+-- end
+
+---======================================================================
+--- C_Club.GetMessagesBefore
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param newest  structure - ClubMessageIdentifier
+--- @param count number
+---
+--- Returns:
+--- @return  messages structure - ClubMessageInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesBefore
+---
+--- Usage: messages = C_Club.GetMessagesBefore(clubId, streamId, newest, count)
+---
+-- function C_Club.GetMessagesBefore()
+-- end
+
+---======================================================================
+--- C_Club.GetMessagesInRange
+---======================================================================
+--- Get downloaded messages in the given range.
+---
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param oldest ClubMessageIdentifier
+--- @param newest ClubMessageIdentifier
+---
+--- Returns:
+--- @return ClubMessageInfo messages []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesInRange
+---
+--- Usage: messages = C_Club.GetMessagesInRange(clubId, streamId, oldest, newest)
+---
+--- Examples:
+--- Example 1:
+---   local club = C_Club.GetGuildClubId()
+---   local streams = C_Club.GetStreams(club)
+---   local guildStream = streams[1].streamId
+---   local ranges = C_Club.GetMessageRanges(club, guildStream)
+---   local oldest, newest = ranges[1].oldestMessageId, ranges[1].newestMessageId
+---   local messages = C_Club.GetMessagesInRange(club, guildStream, oldest, newest)
+---   for _, v in pairs(messages) do
+---   	local timestamp = date("%Y-%m-%d %H:%M:%S", v.messageId.epoch/1e6)
+---   	print(format("%s %s: |cffdda0dd%s|r", timestamp, v.author.name, v.content))
+---   end
+---
+-- function C_Club.GetMessagesInRange()
+-- end
+
+---======================================================================
+--- C_Club.GetStreamInfo
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return  streamInfo structure - ClubStreamInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetStreamInfo
+---
+--- Usage: streamInfo = C_Club.GetStreamInfo(clubId, streamId)
+---
+-- function C_Club.GetStreamInfo()
+-- end
+
+---======================================================================
+--- C_Club.GetStreams
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  streams structure - ClubStreamInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetStreams
+---
+--- Usage: streams = C_Club.GetStreams(clubId)
+---
+--- Examples:
+--- Example 1:
+---   local club = C_Club.GetGuildClubId()
+---   local streams = C_Club.GetStreams(club)
+---   for _, v in pairs(streams) do
+---   	print(v.streamId, v.name)
+---   end
+---   
+---   -- 1, "Guild"
+---   -- 2, "Officer"
+--- Example 2:
+---   local club = C_Club.GetGuildClubId()
+---   local streams = C_Club.GetStreams(club)
+---   local guildStream = streams[1].streamId
+---   local ranges = C_Club.GetMessageRanges(club, guildStream)
+---   local oldest, newest = ranges[1].oldestMessageId, ranges[1].newestMessageId
+---   local messages = C_Club.GetMessagesInRange(club, guildStream, oldest, newest)
+---   for _, v in pairs(messages) do
+---   	local timestamp = date("%Y-%m-%d %H:%M:%S", v.messageId.epoch/1e6)
+---   	print(format("%s %s: |cffdda0dd%s|r", timestamp, v.author.name, v.content))
+---   end
+---
+-- function C_Club.GetStreams()
+-- end
+
+---======================================================================
+--- C_Club.GetStreamViewMarker
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return number lastReadTime ? - nil if stream view is at current
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetStreamViewMarker
+---
+--- Usage: lastReadTime = C_Club.GetStreamViewMarker(clubId, streamId)
+---
+-- function C_Club.GetStreamViewMarker()
+-- end
+
+---======================================================================
+--- C_Club.GetSubscribedClubs
+---======================================================================
+--- Returns:
+--- @return  clubs structure - ClubInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetSubscribedClubs
+---
+--- Usage: clubs = C_Club.GetSubscribedClubs()
+---
+-- function C_Club.GetSubscribedClubs()
+-- end
+
+---======================================================================
+--- C_Club.GetTickets
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  tickets structure - ClubTicketInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.GetTickets
+---
+--- Usage: tickets = C_Club.GetTickets(clubId)
+---
+-- function C_Club.GetTickets()
+-- end
+
+---======================================================================
+--- C_Club.IsAccountMuted
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return boolean accountMuted
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.IsAccountMuted
+---
+--- Usage: accountMuted = C_Club.IsAccountMuted(clubId)
+---
+-- function C_Club.IsAccountMuted()
+-- end
+
+---======================================================================
+--- C_Club.IsBeginningOfStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param messageId  structure - ClubMessageIdentifier
+---
+--- Returns:
+--- @return boolean isBeginningOfStream
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.IsBeginningOfStream
+---
+--- Usage: isBeginningOfStream = C_Club.IsBeginningOfStream(clubId, streamId, messageId)
+---
+-- function C_Club.IsBeginningOfStream()
+-- end
+
+---======================================================================
+--- C_Club.IsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean clubsEnabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.IsEnabled
+---
+--- Usage: clubsEnabled = C_Club.IsEnabled()
+---
+-- function C_Club.IsEnabled()
+-- end
+
+---======================================================================
+--- C_Club.IsRestricted
+---======================================================================
+--- Returns:
+--- @return  restrictionReason Enum.ClubRestrictionReason
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.IsRestricted
+---
+--- Usage: restrictionReason = C_Club.IsRestricted()
+---
+-- function C_Club.IsRestricted()
+-- end
+
+---======================================================================
+--- C_Club.IsSubscribedToStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return boolean subscribed
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.IsSubscribedToStream
+---
+--- Usage: subscribed = C_Club.IsSubscribedToStream(clubId, streamId)
+---
+-- function C_Club.IsSubscribedToStream()
+-- end
+
+---======================================================================
+--- C_Club.KickMember
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.KickMember
+---
+--- Usage: C_Club.KickMember(clubId, memberId)
+---
+-- function C_Club.KickMember()
+-- end
+
+---======================================================================
+--- C_Club.LeaveClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.LeaveClub
+---
+--- Usage: C_Club.LeaveClub(clubId)
+---
+-- function C_Club.LeaveClub()
+-- end
+
+---======================================================================
+--- C_Club.RedeemTicket
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param ticketId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RedeemTicket
+---
+--- Usage: C_Club.RedeemTicket(ticketId)
+---
+-- function C_Club.RedeemTicket()
+-- end
+
+---======================================================================
+--- C_Club.RequestInvitationsForClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RequestInvitationsForClub
+---
+--- Usage: C_Club.RequestInvitationsForClub(clubId)
+---
+-- function C_Club.RequestInvitationsForClub()
+-- end
+
+---======================================================================
+--- C_Club.RequestMoreMessagesBefore
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param messageId  structure - ClubMessageIdentifier (optional)
+---
+--- Returns:
+--- @return boolean alreadyHasMessages
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RequestMoreMessagesBefore
+---
+--- Usage: alreadyHasMessages = C_Club.RequestMoreMessagesBefore(clubId, streamId [, messageId, count])
+---
+-- function C_Club.RequestMoreMessagesBefore()
+-- end
+
+---======================================================================
+--- C_Club.RequestTicket
+---======================================================================
+--- Arguments:
+--- @param ticketId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RequestTicket
+---
+--- Usage: C_Club.RequestTicket(ticketId)
+---
+-- function C_Club.RequestTicket()
+-- end
+
+---======================================================================
+--- C_Club.RequestTickets
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RequestTickets
+---
+--- Usage: C_Club.RequestTickets(clubId)
+---
+-- function C_Club.RequestTickets()
+-- end
+
+---======================================================================
+--- C_Club.RevokeInvitation
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.RevokeInvitation
+---
+--- Usage: C_Club.RevokeInvitation(clubId, memberId)
+---
+-- function C_Club.RevokeInvitation()
+-- end
+
+---======================================================================
+--- C_Club.SendBattleTagFriendRequest
+---======================================================================
+--- Arguments:
+--- @param guildClubId string
+--- @param memberId number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SendBattleTagFriendRequest
+---
+--- Usage: C_Club.SendBattleTagFriendRequest(guildClubId, memberId)
+---
+-- function C_Club.SendBattleTagFriendRequest()
+-- end
+
+---======================================================================
+--- C_Club.SendCharacterInvitation
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param clubId string
+--- @param character string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SendCharacterInvitation
+---
+--- Usage: C_Club.SendCharacterInvitation(clubId, character)
+---
+-- function C_Club.SendCharacterInvitation()
+-- end
+
+---======================================================================
+--- C_Club.SendInvitation
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SendInvitation
+---
+--- Usage: C_Club.SendInvitation(clubId, memberId)
+---
+-- function C_Club.SendInvitation()
+-- end
+
+---======================================================================
+--- C_Club.SetClubPresenceSubscription
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetClubPresenceSubscription
+---
+--- Usage: C_Club.SetClubPresenceSubscription(clubId)
+---
+-- function C_Club.SetClubPresenceSubscription()
+-- end
+
+---======================================================================
+--- C_Club.SetClubStreamNotificationSettings
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param settings table
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetClubStreamNotificationSettings
+---
+--- Usage: C_Club.SetClubStreamNotificationSettings(clubId, settings)
+---
+-- function C_Club.SetClubStreamNotificationSettings()
+-- end
+
+---======================================================================
+--- C_Club.SetCommunityID
+---======================================================================
+--- Arguments:
+--- @param communityID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetCommunityID
+---
+--- Usage: C_Club.SetCommunityID(communityID)
+---
+-- function C_Club.SetCommunityID()
+-- end
+
+---======================================================================
+--- C_Club.SetFavorite
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param isFavorite boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetFavorite
+---
+--- Usage: C_Club.SetFavorite(clubId, isFavorite)
+---
+-- function C_Club.SetFavorite()
+-- end
+
+---======================================================================
+--- C_Club.SetSocialQueueingEnabled
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param enabled boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetSocialQueueingEnabled
+---
+--- Usage: C_Club.SetSocialQueueingEnabled(clubId, enabled)
+---
+-- function C_Club.SetSocialQueueingEnabled()
+-- end
+
+---======================================================================
+--- C_Club.ShouldAllowClubType
+---======================================================================
+--- Arguments:
+--- @param clubType  Enum.ClubType
+---
+--- Returns:
+--- @return boolean clubTypeIsAllowed
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.ShouldAllowClubType
+---
+--- Usage: clubTypeIsAllowed = C_Club.ShouldAllowClubType(clubType)
+---
+-- function C_Club.ShouldAllowClubType()
+-- end
+
+---======================================================================
+--- C_Club.UnfocusAllStreams
+---======================================================================
+--- Arguments:
+--- @param unsubscribe boolean
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusAllStreams
+---
+--- Usage: C_Club.UnfocusAllStreams(unsubscribe)
+---
+-- function C_Club.UnfocusAllStreams()
+-- end
+
+---======================================================================
+--- C_Club.UnfocusMembers
+---======================================================================
+--- Arguments:
+--- @param clubId string : ClubId
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusMembers
+---
+--- Usage: C_Club.UnfocusMembers(clubId)
+---
+-- function C_Club.UnfocusMembers()
+-- end
+
+---======================================================================
+--- C_Club.UnfocusStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusStream
+---
+--- Usage: C_Club.UnfocusStream(clubId, streamId)
+---
+-- function C_Club.UnfocusStream()
+-- end
+
+---======================================================================
+--- C_Club.ValidateText
+---======================================================================
+--- Arguments:
+--- @param clubType Enum.ClubType
+---
+--- Returns:
+--- @return Enum.ValidateNameResult result
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.ValidateText
+---
+--- Usage: result = C_Club.ValidateText(clubType, text, clubFieldType)
+---
+-- function C_Club.ValidateText()
+-- end
+
+---======================================================================
+--- C_Club.SendMessage
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+--- @param message string
+---
+--- @since Patch 8.1.0 (2018-12-11): Protected. May only be called in response to a hardware event.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SendMessage
+---
+--- Usage: C_Club.SendMessage(clubId, streamId, message)
+---
+-- function C_Club.SendMessage()
+-- end
+
+---======================================================================
+--- C_Club.SetAutoAdvanceStreamViewMarker
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetAutoAdvanceStreamViewMarker
+---
+--- Usage: C_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId)
+---
+-- function C_Club.SetAutoAdvanceStreamViewMarker()
+-- end
+
+---======================================================================
+--- C_Club.SetAvatarTexture
+---======================================================================
+--- Arguments:
+--- @param texture table
+--- @param avatarId number
+--- @param clubType  Enum.ClubType
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetAvatarTexture
+---
+--- Usage: C_Club.SetAvatarTexture(texture, avatarId, clubType)
+---
+-- function C_Club.SetAvatarTexture()
+-- end
+
+---======================================================================
+--- C_Club.SetClubMemberNote
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param clubId string
+--- @param memberId number
+--- @param note string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Club.SetClubMemberNote
+---
+--- Usage: C_Club.SetClubMemberNote(clubId, memberId, note)
+---
+-- function C_Club.SetClubMemberNote()
+-- end

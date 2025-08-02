@@ -1,0 +1,1695 @@
+--[=[
+-- C_QuestLog API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 89
+--]=]
+
+--- @class C_QuestLog
+--- C_QuestLog namespace contains 89 functions
+local C_QuestLog = {}
+
+--[=[
+-- C_QuestLog Functions:
+-- - C_QuestLog.AbandonQuest
+-- - C_QuestLog.AddQuestWatch
+-- - C_QuestLog.AddWorldQuestWatch
+-- - C_QuestLog.CanAbandonQuest
+-- - C_QuestLog.DoesQuestAwardReputationWithFaction
+-- - C_QuestLog.GetAbandonQuest
+-- - C_QuestLog.GetAbandonQuestItems
+-- - C_QuestLog.GetActiveThreatMaps
+-- - C_QuestLog.GetAllCompletedQuestIDs
+-- - C_QuestLog.GetBountiesForMapID
+-- - C_QuestLog.GetBountySetInfoForMapID
+-- - C_QuestLog.GetDistanceSqToQuest
+-- - C_QuestLog.GetHeaderIndexForQuest
+-- - C_QuestLog.GetInfo
+-- - C_QuestLog.GetLogIndexForQuestID
+-- - C_QuestLog.GetMapForQuestPOIs
+-- - C_QuestLog.GetMaxNumQuests
+-- - C_QuestLog.GetMaxNumQuestsCanAccept
+-- - C_QuestLog.GetNextWaypoint
+-- - C_QuestLog.GetNextWaypointForMap
+-- - C_QuestLog.GetNextWaypointText
+-- - C_QuestLog.GetNumQuestLogEntries
+-- - C_QuestLog.GetNumQuestObjectives
+-- - C_QuestLog.GetNumQuestWatches
+-- - C_QuestLog.GetNumWorldQuestWatches
+-- - C_QuestLog.GetQuestAdditionalHighlights
+-- - C_QuestLog.GetQuestDetailsTheme
+-- - C_QuestLog.GetQuestDifficultyLevel
+-- - C_QuestLog.GetQuestIDForLogIndex
+-- - C_QuestLog.GetQuestIDForQuestWatchIndex
+-- - C_QuestLog.GetQuestIDForWorldQuestWatchIndex
+-- - C_QuestLog.GetQuestLogMajorFactionReputationRewards
+-- - C_QuestLog.GetQuestLogPortraitGiver
+-- - C_QuestLog.GetQuestObjectives
+-- - C_QuestLog.GetQuestRewardCurrencies
+-- - C_QuestLog.GetQuestRewardCurrencyInfo
+-- - C_QuestLog.GetQuestTagInfo
+-- - C_QuestLog.GetQuestType
+-- - C_QuestLog.GetQuestWatchType
+-- - C_QuestLog.GetQuestsOnMap
+-- - C_QuestLog.GetRequiredMoney
+-- - C_QuestLog.GetSelectedQuest
+-- - C_QuestLog.GetSuggestedGroupSize
+-- - C_QuestLog.GetTimeAllowed
+-- - C_QuestLog.GetTitleForLogIndex
+-- - C_QuestLog.GetTitleForQuestID
+-- - C_QuestLog.GetZoneStoryInfo
+-- - C_QuestLog.HasActiveThreats
+-- - C_QuestLog.IsAccountQuest
+-- - C_QuestLog.IsComplete
+-- - C_QuestLog.IsFailed
+-- - C_QuestLog.IsImportantQuest
+-- - C_QuestLog.IsMetaQuest
+-- - C_QuestLog.IsOnMap
+-- - C_QuestLog.IsOnQuest
+-- - C_QuestLog.IsPushableQuest
+-- - C_QuestLog.IsQuestBounty
+-- - C_QuestLog.IsQuestCalling
+-- - C_QuestLog.IsQuestCriteriaForBounty
+-- - C_QuestLog.IsQuestDisabledForSession
+-- - C_QuestLog.IsQuestFlaggedCompleted
+-- - C_QuestLog.IsQuestFlaggedCompletedOnAccount
+-- - C_QuestLog.IsQuestFromContentPush
+-- - C_QuestLog.IsQuestInvasion
+-- - C_QuestLog.IsQuestReplayable
+-- - C_QuestLog.IsQuestReplayedRecently
+-- - C_QuestLog.IsQuestTask
+-- - C_QuestLog.IsQuestTrivial
+-- - C_QuestLog.IsRepeatableQuest
+-- - C_QuestLog.IsThreatQuest
+-- - C_QuestLog.IsUnitOnQuest
+-- - C_QuestLog.IsWorldQuest
+-- - C_QuestLog.QuestCanHaveWarModeBonus
+-- - C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer
+-- - C_QuestLog.QuestHasQuestSessionBonus
+-- - C_QuestLog.QuestHasWarModeBonus
+-- - C_QuestLog.QuestIgnoresAccountCompletedFiltering
+-- - C_QuestLog.ReadyForTurnIn
+-- - C_QuestLog.RemoveQuestWatch
+-- - C_QuestLog.RemoveWorldQuestWatch
+-- - C_QuestLog.RequestLoadQuestByID
+-- - C_QuestLog.SetAbandonQuest
+-- - C_QuestLog.SetMapForQuestPOIs
+-- - C_QuestLog.SetSelectedQuest
+-- - C_QuestLog.ShouldDisplayTimeRemaining
+-- - C_QuestLog.ShouldShowQuestRewards
+-- - C_QuestLog.SortQuestWatches
+-- - C_QuestLog.UnitIsRelatedToActiveQuest
+-- - C_QuestLog.UpdateCampaignHeaders
+--]=]
+
+---======================================================================
+--- C_QuestLog.AbandonQuest
+---======================================================================
+--- Abandons the quest specified by C_QuestLog.SetAbandonQuest.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.AbandonQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.AbandonQuest
+---
+--- Usage: C_QuestLog.AbandonQuest()
+---
+-- function C_QuestLog.AbandonQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.SetAbandonQuest
+---======================================================================
+--- Sets the selected quest to be abandoned.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.SetAbandonQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.SetAbandonQuest
+---
+--- Usage: C_QuestLog.SetAbandonQuest()
+---
+-- function C_QuestLog.SetAbandonQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.AddQuestWatch
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean wasWatched
+---
+--- @since Patch 11.0.0 (2024-07-23): Removed watchType argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddQuestWatch
+---
+--- Usage: wasWatched = C_QuestLog.AddQuestWatch(questID)
+---
+-- function C_QuestLog.AddQuestWatch()
+-- end
+
+---======================================================================
+--- C_QuestLog.AddWorldQuestWatch
+---======================================================================
+--- Tracks a world quest.
+---
+--- Arguments:
+--- @param questID number
+--- @param watchType Enum.QuestWatchType ?
+---
+--- Returns:
+--- @return boolean wasWatched
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddWorldQuestWatch
+---
+--- Usage: wasWatched = C_QuestLog.AddWorldQuestWatch(questID [, watchType])
+---
+-- function C_QuestLog.AddWorldQuestWatch()
+-- end
+
+---======================================================================
+--- C_QuestLog.CanAbandonQuest
+---======================================================================
+--- Returns whether the player can abandon a specific quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean canAbandon
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.CanAbandonQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.CanAbandonQuest
+---
+--- Usage: canAbandon = C_QuestLog.CanAbandonQuest(questID)
+---
+-- function C_QuestLog.CanAbandonQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.DoesQuestAwardReputationWithFaction
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param targetFactionID number
+---
+--- Returns:
+--- @return boolean awardsReputation
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.DoesQuestAwardReputationWithFaction
+---
+--- Usage: awardsReputation = C_QuestLog.DoesQuestAwardReputationWithFaction(questID, targetFactionID)
+---
+-- function C_QuestLog.DoesQuestAwardReputationWithFaction()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetAbandonQuest
+---======================================================================
+--- Returns the quest specified by C_QuestLog.SetAbandonQuest.
+---
+--- Returns:
+--- @return number questID
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetAbandonQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetAbandonQuest
+---
+--- Usage: questID = C_QuestLog.GetAbandonQuest()
+---
+-- function C_QuestLog.GetAbandonQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetAbandonQuestItems
+---======================================================================
+--- Returns:
+--- @return number itemIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetAbandonQuestItems
+---
+--- Usage: itemIDs = C_QuestLog.GetAbandonQuestItems()
+---
+-- function C_QuestLog.GetAbandonQuestItems()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetActiveThreatMaps
+---======================================================================
+--- Returns:
+--- @return number uiMapIDs [] : UiMapID
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetActiveThreatMaps
+---
+--- Usage: uiMapIDs = C_QuestLog.GetActiveThreatMaps()
+---
+-- function C_QuestLog.GetActiveThreatMaps()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetAllCompletedQuestIDs
+---======================================================================
+--- Returns all completed quests for the character.
+---
+--- Returns:
+--- @return number quests [] - The sorted quest IDs
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetAllCompletedQuestIDs() and returns quest IDs in a sorted array ({ QuestID1, QuestID2, ... })
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetAllCompletedQuestIDs
+---
+--- Usage: quests = C_QuestLog.GetAllCompletedQuestIDs()
+---
+--- Examples:
+--- Example 1:
+---   {
+---   	[1] = 56775, -- "Warming Up"
+---   	[2] = 58208, -- "Brace for Impact"
+---   	[3] = 58209, -- "Stand Your Ground"
+---   }
+--- Example 2:
+---   for _, id in pairs(C_QuestLog.GetAllCompletedQuestIDs()) do
+---   	local name = C_QuestLog.GetTitleForQuestID(id)
+---   	print(id, name)
+---   end
+---
+-- function C_QuestLog.GetAllCompletedQuestIDs()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetBountiesForMapID
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return BountyInfo bounties []?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetBountiesForMapID
+---
+--- Usage: bounties = C_QuestLog.GetBountiesForMapID(uiMapID)
+---
+-- function C_QuestLog.GetBountiesForMapID()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetBountySetInfoForMapID
+---======================================================================
+--- Returns the bounty set for a specified map ID.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return Enum.MapOverlayDisplayLocation displayLocation
+---
+--- @since Patch 10.0.2 (2022-11-15): Addedto isActivitySet return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetBountySetInfoForMapID
+---
+--- Usage: displayLocation, lockQuestID, bountySetID, isActivitySet = C_QuestLog.GetBountySetInfoForMapID(uiMapID)
+---
+-- function C_QuestLog.GetBountySetInfoForMapID()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetDistanceSqToQuest
+---======================================================================
+--- Returns the distance to a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number distanceSq
+--- @return boolean onContinent
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetDistanceSqToQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetDistanceSqToQuest
+---
+--- Usage: distanceSq, onContinent = C_QuestLog.GetDistanceSqToQuest(questID)
+---
+-- function C_QuestLog.GetDistanceSqToQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetHeaderIndexForQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number index ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetHeaderIndexForQuest
+---
+--- Usage: index = C_QuestLog.GetHeaderIndexForQuest(questID)
+---
+-- function C_QuestLog.GetHeaderIndexForQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetInfo
+---======================================================================
+--- Returns information about a quest in the player's quest log.
+---
+--- Arguments:
+--- @param questLogIndex number
+---
+--- Returns:
+--- @return QuestInfo info ?
+---
+--- @since Patch 11.0.2 (2024-08-13): Removed isLegendarySort field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetInfo
+---
+--- Usage: info = C_QuestLog.GetInfo(questLogIndex)
+---
+-- function C_QuestLog.GetInfo()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetLogIndexForQuestID
+---======================================================================
+--- Returns the quest log index for a quest ID.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number questLogIndex ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetLogIndexForQuestID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetLogIndexForQuestID
+---
+--- Usage: questLogIndex = C_QuestLog.GetLogIndexForQuestID(questID)
+---
+-- function C_QuestLog.GetLogIndexForQuestID()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetMapForQuestPOIs
+---======================================================================
+--- Returns:
+--- @return number uiMapID : UiMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetMapForQuestPOIs
+---
+--- Usage: uiMapID = C_QuestLog.GetMapForQuestPOIs()
+---
+-- function C_QuestLog.GetMapForQuestPOIs()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetMaxNumQuests
+---======================================================================
+--- This is the maximum number of quests a player can be on, including hidden quests, world quests, emissaries etc
+---
+--- Returns:
+--- @return number maxNumQuests
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetMaxNumQuests
+---
+--- Usage: maxNumQuests = C_QuestLog.GetMaxNumQuests()
+---
+-- function C_QuestLog.GetMaxNumQuests()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetMaxNumQuestsCanAccept
+---======================================================================
+--- This is the maximum number of standard quests a player can accept. These are quests that are normally visible in the quest log.
+---
+--- Returns:
+--- @return number maxNumQuestsCanAccept
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetMaxNumQuestsCanAccept
+---
+--- Usage: maxNumQuestsCanAccept = C_QuestLog.GetMaxNumQuestsCanAccept()
+---
+-- function C_QuestLog.GetMaxNumQuestsCanAccept()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNextWaypoint
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number mapID
+--- @return number x
+--- @return number y
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNextWaypoint
+---
+--- Usage: mapID, x, y = C_QuestLog.GetNextWaypoint(questID)
+---
+-- function C_QuestLog.GetNextWaypoint()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNextWaypointForMap
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number x
+--- @return number y
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNextWaypointForMap
+---
+--- Usage: x, y = C_QuestLog.GetNextWaypointForMap(questID, uiMapID)
+---
+-- function C_QuestLog.GetNextWaypointForMap()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNextWaypointText
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return string waypointText
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNextWaypointText
+---
+--- Usage: waypointText = C_QuestLog.GetNextWaypointText(questID)
+---
+-- function C_QuestLog.GetNextWaypointText()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNumQuestLogEntries
+---======================================================================
+--- Returns the number of entries in the quest log.
+---
+--- Returns:
+--- @return number numShownEntries - Number of entries, including headers and invisible content.
+--- @return number numQuests - Number of actual quests.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetNumQuestLogEntries()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNumQuestLogEntries
+---
+--- Usage: numShownEntries, numQuests = C_QuestLog.GetNumQuestLogEntries()
+---
+-- function C_QuestLog.GetNumQuestLogEntries()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNumQuestObjectives
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number leaderboardCount
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNumQuestObjectives
+---
+--- Usage: leaderboardCount = C_QuestLog.GetNumQuestObjectives(questID)
+---
+-- function C_QuestLog.GetNumQuestObjectives()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNumQuestWatches
+---======================================================================
+--- Returns the number of tracked quests.
+---
+--- Returns:
+--- @return number numQuestWatches
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNumQuestWatches
+---
+--- Usage: numQuestWatches = C_QuestLog.GetNumQuestWatches()
+---
+-- function C_QuestLog.GetNumQuestWatches()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetNumWorldQuestWatches
+---======================================================================
+--- Replaces `GetNumWorldQuestWatches`.
+---
+--- Returns:
+--- @return number numQuestWatches
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetNumWorldQuestWatches
+---
+--- Usage: numQuestWatches = C_QuestLog.GetNumWorldQuestWatches()
+---
+-- function C_QuestLog.GetNumWorldQuestWatches()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestAdditionalHighlights
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number uiMapID
+--- @return boolean worldQuests
+--- @return boolean worldQuestsElite
+--- @return boolean dungeons
+--- @return boolean treasures
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestAdditionalHighlights
+---
+--- Usage: uiMapID, worldQuests, worldQuestsElite, dungeons, treasures = C_QuestLog.GetQuestAdditionalHighlights(questID)
+---
+-- function C_QuestLog.GetQuestAdditionalHighlights()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestDetailsTheme
+---======================================================================
+--- Returns the visual QuestTheme associated with a given quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return QuestTheme theme ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added poiIcon field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestDetailsTheme
+---
+--- Usage: theme = C_QuestLog.GetQuestDetailsTheme(questID)
+---
+-- function C_QuestLog.GetQuestDetailsTheme()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestDifficultyLevel
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number level
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestDifficultyLevel
+---
+--- Usage: level = C_QuestLog.GetQuestDifficultyLevel(questID)
+---
+-- function C_QuestLog.GetQuestDifficultyLevel()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestIDForLogIndex
+---======================================================================
+--- Only returns a questID for actual quests, not headers
+---
+--- Arguments:
+--- @param questLogIndex number
+---
+--- Returns:
+--- @return number questID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestIDForLogIndex
+---
+--- Usage: questID = C_QuestLog.GetQuestIDForLogIndex(questLogIndex)
+---
+-- function C_QuestLog.GetQuestIDForLogIndex()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestIDForQuestWatchIndex
+---======================================================================
+--- Returns the quest ID represented by the given quest watch index.
+---
+--- Arguments:
+--- @param questWatchIndex number
+---
+--- Returns:
+--- @return number questID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestIDForQuestWatchIndex
+---
+--- Usage: questID = C_QuestLog.GetQuestIDForQuestWatchIndex(questWatchIndex)
+---
+-- function C_QuestLog.GetQuestIDForQuestWatchIndex()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestIDForWorldQuestWatchIndex
+---======================================================================
+--- Returns the quest ID represented by the given quest watch index.
+---
+--- Arguments:
+--- @param questWatchIndex number
+---
+--- Returns:
+--- @return number questID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestIDForWorldQuestWatchIndex
+---
+--- Usage: questID = C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex)
+---
+-- function C_QuestLog.GetQuestIDForWorldQuestWatchIndex()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestLogMajorFactionReputationRewards
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return QuestRewardReputationInfo reputationRewards []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestLogMajorFactionReputationRewards
+---
+--- Usage: reputationRewards = C_QuestLog.GetQuestLogMajorFactionReputationRewards(questID)
+---
+-- function C_QuestLog.GetQuestLogMajorFactionReputationRewards()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestLogPortraitGiver
+---======================================================================
+--- Arguments:
+--- @param questLogIndex number ?
+---
+--- Returns:
+--- @return number portraitGiver
+--- @return string portraitGiverText
+--- @return string portraitGiverName
+--- @return number portraitGiverMount
+--- @return number portraitGiverModelSceneID ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestLogPortraitGiver
+---
+--- Usage: portraitGiver, portraitGiverText, portraitGiverName, portraitGiverMount, portraitGiverModelSceneID = C_QuestLog.GetQuestLogPortraitGiver([questLogIndex])
+---
+-- function C_QuestLog.GetQuestLogPortraitGiver()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestObjectives
+---======================================================================
+--- Returns info for the objectives of a quest.
+---
+--- Arguments:
+--- @param questID number - Unique QuestID for the quest to be queried. Requires the quest to be in your quest log.
+---
+--- Returns:
+--- @return QuestObjectiveInfo objectives [] - can be an empty table for quests without objectives
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestObjectives
+---
+--- Usage: objectives = C_QuestLog.GetQuestObjectives(questID)
+---
+-- function C_QuestLog.GetQuestObjectives()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestRewardCurrencies
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return QuestRewardCurrencyInfo questRewardCurrencies []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestRewardCurrencies
+---
+--- Usage: questRewardCurrencies = C_QuestLog.GetQuestRewardCurrencies(questID)
+---
+-- function C_QuestLog.GetQuestRewardCurrencies()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestRewardCurrencyInfo
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param currencyIndex number
+--- @param isChoice boolean
+---
+--- Returns:
+--- @return QuestRewardCurrencyInfo questRewardCurrencyInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestRewardCurrencyInfo
+---
+--- Usage: questRewardCurrencyInfo = C_QuestLog.GetQuestRewardCurrencyInfo(questID, currencyIndex, isChoice)
+---
+-- function C_QuestLog.GetQuestRewardCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestsOnMap
+---======================================================================
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return QuestPOIMapInfo quests []
+---
+--- @since Patch 11.0.5 (2024-10-22): Replaced QuestOnMapInfo return struct  with QuestPOIMapInfo, added inProgress, numObjectives, mapID, isQuestStart, isDaily, isCombatAllyQuest, childDepth, questTagType, isMeta fields, removed type field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestsOnMap
+---
+--- Usage: quests = C_QuestLog.GetQuestsOnMap(uiMapID)
+---
+-- function C_QuestLog.GetQuestsOnMap()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestTagInfo
+---======================================================================
+--- Returns metadata for a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return QuestTagInfo info ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetQuestTagInfo() and returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestTagInfo
+---
+--- Usage: info = C_QuestLog.GetQuestTagInfo(questID)
+---
+-- function C_QuestLog.GetQuestTagInfo()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestType
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number questType
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestType
+---
+--- Usage: questType = C_QuestLog.GetQuestType(questID)
+---
+-- function C_QuestLog.GetQuestType()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetQuestWatchType
+---======================================================================
+--- Returns the watchType associated with a given quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return Enum.QuestWatchType watchType ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestWatchType
+---
+--- Usage: watchType = C_QuestLog.GetQuestWatchType(questID)
+---
+-- function C_QuestLog.GetQuestWatchType()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetRequiredMoney
+---======================================================================
+--- Returns the amount of money required for quest completion.
+---
+--- Arguments:
+--- @param questID number ? - Uses the selected quest if no questID is provided.
+---
+--- Returns:
+--- @return number requiredMoney
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetRequiredMoney
+---
+--- Usage: requiredMoney = C_QuestLog.GetRequiredMoney([questID])
+---
+-- function C_QuestLog.GetRequiredMoney()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetSelectedQuest
+---======================================================================
+--- Returns the quest specified by C_QuestLog.SetSelectedQuest.
+---
+--- Returns:
+--- @return number questID
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetSelectedQuest(()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetSelectedQuest
+---
+--- Usage: questID = C_QuestLog.GetSelectedQuest()
+---
+-- function C_QuestLog.GetSelectedQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.SetSelectedQuest
+---======================================================================
+--- Selects a quest in the quest log.
+---
+--- Arguments:
+--- @param questID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.SetSelectedQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.SetSelectedQuest
+---
+--- Usage: C_QuestLog.SetSelectedQuest(questID)
+---
+-- function C_QuestLog.SetSelectedQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetSuggestedGroupSize
+---======================================================================
+--- Returns the suggested number of players for a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number suggestedGroupSize
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetSuggestedGroupSize
+---
+--- Usage: suggestedGroupSize = C_QuestLog.GetSuggestedGroupSize(questID)
+---
+-- function C_QuestLog.GetSuggestedGroupSize()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetTimeAllowed
+---======================================================================
+--- Returns the time available to complete a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number totalTime
+--- @return number elapsedTime
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetTimeAllowed
+---
+--- Usage: totalTime, elapsedTime = C_QuestLog.GetTimeAllowed(questID)
+---
+--- See also:
+--- - GetQuestLogTimeLeft
+---
+-- function C_QuestLog.GetTimeAllowed()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetTitleForLogIndex
+---======================================================================
+--- Returns a valid title for anything that is in the quest log.
+---
+--- Arguments:
+--- @param questLogIndex number
+---
+--- Returns:
+--- @return string title ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetTitleForLogIndex
+---
+--- Usage: title = C_QuestLog.GetTitleForLogIndex(questLogIndex)
+---
+-- function C_QuestLog.GetTitleForLogIndex()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetTitleForQuestID
+---======================================================================
+--- Returns the name for a Quest ID.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return string title ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.GetTitleForQuestID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetTitleForQuestID
+---
+--- Usage: title = C_QuestLog.GetTitleForQuestID(questID)
+---
+--- Examples:
+--- Example 1:
+---   local questID = 29950 -- Li Li's Day Off
+---   
+---   QuestEventListener:AddCallback(questID, function()
+---   	local name = C_QuestLog.GetTitleForQuestID(questID)
+---   	print(name)
+---   end)
+---
+--- See also:
+--- - HaveQuestData
+---
+-- function C_QuestLog.GetTitleForQuestID()
+-- end
+
+---======================================================================
+--- C_QuestLog.GetZoneStoryInfo
+---======================================================================
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number achievementID
+--- @return number storyMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetZoneStoryInfo
+---
+--- Usage: achievementID, storyMapID = C_QuestLog.GetZoneStoryInfo(uiMapID)
+---
+-- function C_QuestLog.GetZoneStoryInfo()
+-- end
+
+---======================================================================
+--- C_QuestLog.HasActiveThreats
+---======================================================================
+--- Returns:
+--- @return boolean hasActiveThreats
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.HasActiveThreats
+---
+--- Usage: hasActiveThreats = C_QuestLog.HasActiveThreats()
+---
+-- function C_QuestLog.HasActiveThreats()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsAccountQuest
+---======================================================================
+--- Returns true if the specified quest is an account-wide quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isAccountQuest
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsAccountQuest
+---
+--- Usage: isAccountQuest = C_QuestLog.IsAccountQuest(questID)
+---
+-- function C_QuestLog.IsAccountQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsComplete
+---======================================================================
+--- Returns whether the supplied quest in the quest log is complete.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isComplete - Whether the quest is both in the quest log and is complete
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.IsComplete()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsComplete
+---
+--- Usage: isComplete = C_QuestLog.IsComplete(questID)
+---
+-- function C_QuestLog.IsComplete()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsFailed
+---======================================================================
+--- Returns true if the specified quest has been failed.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isFailed
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsFailed
+---
+--- Usage: isFailed = C_QuestLog.IsFailed(questID)
+---
+-- function C_QuestLog.IsFailed()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsImportantQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isImportant
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsImportantQuest
+---
+--- Usage: isImportant = C_QuestLog.IsImportantQuest(questID)
+---
+-- function C_QuestLog.IsImportantQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsMetaQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isMeta
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsMetaQuest
+---
+--- Usage: isMeta = C_QuestLog.IsMetaQuest(questID)
+---
+-- function C_QuestLog.IsMetaQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsOnMap
+---======================================================================
+--- Returns true if the specified quest is on the map, and whether or not it has any local PoIs.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean onMap
+--- @return boolean hasLocalPOI
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsOnMap
+---
+--- Usage: onMap, hasLocalPOI = C_QuestLog.IsOnMap(questID)
+---
+-- function C_QuestLog.IsOnMap()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsOnQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isOnQuest
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsOnQuest
+---
+--- Usage: isOnQuest = C_QuestLog.IsOnQuest(questID)
+---
+-- function C_QuestLog.IsOnQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsPushableQuest
+---======================================================================
+--- Returns true if the quest can be shared with other players.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isPushable
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.IsPushableQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsPushableQuest
+---
+--- Usage: isPushable = C_QuestLog.IsPushableQuest(questID)
+---
+-- function C_QuestLog.IsPushableQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestBounty
+---======================================================================
+--- Replaces `IsQuestBounty`.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isBounty
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestBounty
+---
+--- Usage: isBounty = C_QuestLog.IsQuestBounty(questID)
+---
+-- function C_QuestLog.IsQuestBounty()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestCalling
+---======================================================================
+--- Returns true if the specified quest is a calling quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isCalling
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestCalling
+---
+--- Usage: isCalling = C_QuestLog.IsQuestCalling(questID)
+---
+-- function C_QuestLog.IsQuestCalling()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestCriteriaForBounty
+---======================================================================
+--- Replaces `IsQuestCriteriaForBounty`.
+---
+--- Arguments:
+--- @param questID number
+--- @param bountyQuestID number
+---
+--- Returns:
+--- @return boolean isCriteriaForBounty
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestCriteriaForBounty
+---
+--- Usage: isCriteriaForBounty = C_QuestLog.IsQuestCriteriaForBounty(questID, bountyQuestID)
+---
+-- function C_QuestLog.IsQuestCriteriaForBounty()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestDisabledForSession
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isDisabled
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestDisabledForSession
+---
+--- Usage: isDisabled = C_QuestLog.IsQuestDisabledForSession(questID)
+---
+-- function C_QuestLog.IsQuestDisabledForSession()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestFlaggedCompleted
+---======================================================================
+--- Returns if a quest has been completed.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isCompleted - Returns true if completed; returns false if not completed or if the questID is invalid.
+---
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_QuestLog.IsQuestFlaggedCompleted(). The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFlaggedCompleted
+---
+--- Usage: isCompleted = C_QuestLog.IsQuestFlaggedCompleted(questID)
+---
+--- See also:
+--- - C_QuestLog.GetAllCompletedQuestIDs
+---
+-- function C_QuestLog.IsQuestFlaggedCompleted()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestFlaggedCompletedOnAccount
+---======================================================================
+--- Returns if a quest has been completed by any character on an account.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isCompletedOnAccount - Returns true if completed; returns false if not completed or if the questID is invalid.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFlaggedCompletedOnAccount
+---
+--- Usage: isCompletedOnAccount = C_QuestLog.IsQuestFlaggedCompletedOnAccount(questID)
+---
+--- See also:
+--- - C_QuestLog.IsAccountQuest
+--- - C_QuestLog.IsQuestFlaggedCompleted
+---
+-- function C_QuestLog.IsQuestFlaggedCompletedOnAccount()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestFromContentPush
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isFromContentPush
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFromContentPush
+---
+--- Usage: isFromContentPush = C_QuestLog.IsQuestFromContentPush(questID)
+---
+-- function C_QuestLog.IsQuestFromContentPush()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestInvasion
+---======================================================================
+--- Replaces `IsQuestInvasion`.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isInvasion
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestInvasion
+---
+--- Usage: isInvasion = C_QuestLog.IsQuestInvasion(questID)
+---
+-- function C_QuestLog.IsQuestInvasion()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestReplayable
+---======================================================================
+--- Identifies if a quest is eligible for replay with party members who have not yet completed it.
+---
+--- Arguments:
+--- @param questID number - Unique identifier for a quest, corresponding to the middle portion of a QuestString
+---
+--- Returns:
+--- @return boolean isReplayable
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestReplayable
+---
+--- Usage: isReplayable = C_QuestLog.IsQuestReplayable(questID)
+---
+-- function C_QuestLog.IsQuestReplayable()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestReplayedRecently
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean recentlyReplayed
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestReplayedRecently
+---
+--- Usage: recentlyReplayed = C_QuestLog.IsQuestReplayedRecently(questID)
+---
+-- function C_QuestLog.IsQuestReplayedRecently()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestTask
+---======================================================================
+--- Returns whether a given quest is a task (also known as bonus objectives or world quest).
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isTask
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.IsQuestTask()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestTask
+---
+--- Usage: isTask = C_QuestLog.IsQuestTask(questID)
+---
+-- function C_QuestLog.IsQuestTask()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsQuestTrivial
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isTrivial
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestTrivial
+---
+--- Usage: isTrivial = C_QuestLog.IsQuestTrivial(questID)
+---
+-- function C_QuestLog.IsQuestTrivial()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsRepeatableQuest
+---======================================================================
+--- Returns true if the specified quest is a repeatable quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isRepeatable
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsRepeatableQuest
+---
+--- Usage: isRepeatable = C_QuestLog.IsRepeatableQuest(questID)
+---
+-- function C_QuestLog.IsRepeatableQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsThreatQuest
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isThreat
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsThreatQuest
+---
+--- Usage: isThreat = C_QuestLog.IsThreatQuest(questID)
+---
+-- function C_QuestLog.IsThreatQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsUnitOnQuest
+---======================================================================
+--- Returns true if the unit is on the specified quest.
+---
+--- Arguments:
+--- @param unit string : UnitId
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isOnQuest
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.IsUnitOnQuest()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsUnitOnQuest
+---
+--- Usage: isOnQuest = C_QuestLog.IsUnitOnQuest(unit, questID)
+---
+-- function C_QuestLog.IsUnitOnQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.IsWorldQuest
+---======================================================================
+--- Returns true if the specified quest is a world quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isWorldQuest
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsWorldQuest
+---
+--- Usage: isWorldQuest = C_QuestLog.IsWorldQuest(questID)
+---
+-- function C_QuestLog.IsWorldQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.QuestCanHaveWarModeBonus
+---======================================================================
+--- Tests whether a quest is eligible for warmode bonuses (e.g. many world quests).
+---
+--- Arguments:
+--- @param questID number - Unique identifier for a quest, corresponding to the middle portion of a QuestString
+---
+--- Returns:
+--- @return boolean hasBonus - True if the quest offers increased rewards to players who maintained warmode during the entire period of completing the quest.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. (Build 33369, Feb 13 2020)
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestCanHaveWarModeBonus
+---
+--- Usage: hasBonus = C_QuestLog.QuestCanHaveWarModeBonus(questID)
+---
+-- function C_QuestLog.QuestCanHaveWarModeBonus()
+-- end
+
+---======================================================================
+--- C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean questContainsFirstTimeRepBonusForPlayer
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer
+---
+--- Usage: questContainsFirstTimeRepBonusForPlayer = C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer(questID)
+---
+-- function C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer()
+-- end
+
+---======================================================================
+--- C_QuestLog.QuestHasQuestSessionBonus
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean hasBonus
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestHasQuestSessionBonus
+---
+--- Usage: hasBonus = C_QuestLog.QuestHasQuestSessionBonus(questID)
+---
+-- function C_QuestLog.QuestHasQuestSessionBonus()
+-- end
+
+---======================================================================
+--- C_QuestLog.QuestHasWarModeBonus
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean hasBonus
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestHasWarModeBonus
+---
+--- Usage: hasBonus = C_QuestLog.QuestHasWarModeBonus(questID)
+---
+-- function C_QuestLog.QuestHasWarModeBonus()
+-- end
+
+---======================================================================
+--- C_QuestLog.QuestIgnoresAccountCompletedFiltering
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean questIgnoresAccountCompletedFiltering
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestIgnoresAccountCompletedFiltering
+---
+--- Usage: questIgnoresAccountCompletedFiltering = C_QuestLog.QuestIgnoresAccountCompletedFiltering(questID)
+---
+-- function C_QuestLog.QuestIgnoresAccountCompletedFiltering()
+-- end
+
+---======================================================================
+--- C_QuestLog.ReadyForTurnIn
+---======================================================================
+--- Returns true if all criteria for a given quest are complete.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean readyForTurnIn ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.ReadyForTurnIn
+---
+--- Usage: readyForTurnIn = C_QuestLog.ReadyForTurnIn(questID)
+---
+-- function C_QuestLog.ReadyForTurnIn()
+-- end
+
+---======================================================================
+--- C_QuestLog.RemoveQuestWatch
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean wasRemoved
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.RemoveQuestWatch()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.RemoveQuestWatch
+---
+--- Usage: wasRemoved = C_QuestLog.RemoveQuestWatch(questID)
+---
+-- function C_QuestLog.RemoveQuestWatch()
+-- end
+
+---======================================================================
+--- C_QuestLog.RemoveWorldQuestWatch
+---======================================================================
+--- Untracks a world quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean wasRemoved
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.RemoveWorldQuestWatch
+---
+--- Usage: wasRemoved = C_QuestLog.RemoveWorldQuestWatch(questID)
+---
+-- function C_QuestLog.RemoveWorldQuestWatch()
+-- end
+
+---======================================================================
+--- C_QuestLog.RequestLoadQuestByID
+---======================================================================
+--- Requests quest data from the server.
+---
+--- Arguments:
+--- @param questID number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.RequestLoadQuestByID
+---
+--- Usage: C_QuestLog.RequestLoadQuestByID(questID)
+---
+--- See also:
+--- - QuestEventListener
+---
+-- function C_QuestLog.RequestLoadQuestByID()
+-- end
+
+---======================================================================
+--- C_QuestLog.SetMapForQuestPOIs
+---======================================================================
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.SetMapForQuestPOIs
+---
+--- Usage: C_QuestLog.SetMapForQuestPOIs(uiMapID)
+---
+-- function C_QuestLog.SetMapForQuestPOIs()
+-- end
+
+---======================================================================
+--- C_QuestLog.ShouldDisplayTimeRemaining
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean displayTimeRemaining
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.ShouldDisplayTimeRemaining
+---
+--- Usage: displayTimeRemaining = C_QuestLog.ShouldDisplayTimeRemaining(questID)
+---
+-- function C_QuestLog.ShouldDisplayTimeRemaining()
+-- end
+
+---======================================================================
+--- C_QuestLog.ShouldShowQuestRewards
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean shouldShow
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.ShouldShowQuestRewards
+---
+--- Usage: shouldShow = C_QuestLog.ShouldShowQuestRewards(questID)
+---
+-- function C_QuestLog.ShouldShowQuestRewards()
+-- end
+
+---======================================================================
+--- C_QuestLog.SortQuestWatches
+---======================================================================
+--- Sorts watched quests by proximity to the player character.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_QuestLog.SortQuestWatches()
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.SortQuestWatches
+---
+--- Usage: C_QuestLog.SortQuestWatches()
+---
+-- function C_QuestLog.SortQuestWatches()
+-- end
+
+---======================================================================
+--- C_QuestLog.UnitIsRelatedToActiveQuest
+---======================================================================
+--- Arguments:
+--- @param unit string
+---
+--- Returns:
+--- @return boolean isRelatedToActiveQuest
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.UnitIsRelatedToActiveQuest
+---
+--- Usage: isRelatedToActiveQuest = C_QuestLog.UnitIsRelatedToActiveQuest(unit)
+---
+-- function C_QuestLog.UnitIsRelatedToActiveQuest()
+-- end
+
+---======================================================================
+--- C_QuestLog.UpdateCampaignHeaders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestLog.UpdateCampaignHeaders
+---
+--- Usage: C_QuestLog.UpdateCampaignHeaders()
+---
+-- function C_QuestLog.UpdateCampaignHeaders()
+-- end

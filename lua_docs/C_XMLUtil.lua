@@ -1,0 +1,57 @@
+--[=[
+-- C_XMLUtil API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_XMLUtil
+--- C_XMLUtil namespace contains 2 functions
+local C_XMLUtil = {}
+
+--[=[
+-- C_XMLUtil Functions:
+-- - C_XMLUtil.GetTemplateInfo
+-- - C_XMLUtil.GetTemplates
+--]=]
+
+---======================================================================
+--- C_XMLUtil.GetTemplateInfo
+---======================================================================
+--- Returns information about a defined XML template.
+---
+--- Arguments:
+--- @param name string - The name of the template to query.
+---
+--- Returns:
+--- @return XMLTemplateInfo info ? - Information about the queried template if found, or nil if the template does not exist.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_XMLUtil.GetTemplateInfo
+---
+--- Usage: info = C_XMLUtil.GetTemplateInfo(name)
+---
+-- function C_XMLUtil.GetTemplateInfo()
+-- end
+
+---======================================================================
+--- C_XMLUtil.GetTemplates
+---======================================================================
+--- Returns a list of all registered XML templates.
+---
+--- Returns:
+--- @return XMLTemplateListInfo templates [] - An array of tables for each registered XML template.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_XMLUtil.GetTemplates
+---
+--- Usage: templates = C_XMLUtil.GetTemplates()
+---
+--- Examples:
+--- Example 1:
+---   for _, template in ipairs(C_XMLUtil.GetTemplates()) do
+---       print(template.name, template.type)
+---   end
+---
+-- function C_XMLUtil.GetTemplates()
+-- end

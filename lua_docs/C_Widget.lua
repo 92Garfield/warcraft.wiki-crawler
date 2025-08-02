@@ -1,0 +1,72 @@
+--[=[
+-- C_Widget API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_Widget
+--- C_Widget namespace contains 2 functions
+local C_Widget = {}
+
+--[=[
+-- C_Widget Functions:
+-- - C_Widget.IsFrameWidget
+-- - C_Widget.IsWidget
+--]=]
+
+---======================================================================
+--- C_Widget.IsFrameWidget
+---======================================================================
+--- Returns true if the object is a Frame widget object or its derivatives.
+---
+--- Arguments:
+--- @param object Object ? - This will return false if omitted.
+---
+--- Returns:
+--- @return boolean isFrameWidget - Returns true for Frame objects and its derivatives.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Widget.IsFrameWidget
+---
+--- Usage: isFrameWidget = C_Widget.IsFrameWidget([object])
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Widget.IsFrameWidget(CreateFrame("Frame")) -- true
+---   /dump C_Widget.IsFrameWidget(CreateFrame("Button")) -- true
+---   
+---   /dump C_Widget.IsFrameWidget(CreateFrame("Frame"):CreateTexture()) -- false
+---   /dump C_Widget.IsFrameWidget(CreateFrame("Frame"):CreateFontString()) -- false
+---
+-- function C_Widget.IsFrameWidget()
+-- end
+
+---======================================================================
+--- C_Widget.IsWidget
+---======================================================================
+--- Returns true if the object is a widget object.
+---
+--- Arguments:
+--- @param object Object ? - This will return false if omitted.
+---
+--- Returns:
+--- @return boolean isWidget - Returns true for Frame, Texture and FontString objects.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Widget.IsWidget
+---
+--- Usage: isWidget = C_Widget.IsWidget([object])
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Widget.IsWidget(CreateFrame("Frame")) -- true
+---   /dump C_Widget.IsWidget(CreateFrame("Button")) -- true
+---   /dump C_Widget.IsWidget(CreateFrame("Frame"):CreateTexture()) -- true
+---   /dump C_Widget.IsWidget(CreateFrame("Frame"):CreateFontString()) -- true
+---   
+---   /dump C_Widget.IsWidget(CreateFrame("Frame"):CreateAnimationGroup()) -- false
+---   /dump C_Widget.IsWidget(CreateFrame("Frame"):CreateAnimationGroup():CreateAnimation()) -- false
+---   /dump C_Widget.IsWidget(CreateFont("")) -- false
+---   /dump C_Widget.IsWidget({}) -- false
+---
+-- function C_Widget.IsWidget()
+-- end

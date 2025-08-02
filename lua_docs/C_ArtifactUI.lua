@@ -1,0 +1,1130 @@
+--[=[
+-- C_ArtifactUI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 62
+--]=]
+
+--- @class C_ArtifactUI
+--- C_ArtifactUI namespace contains 62 functions
+local C_ArtifactUI = {}
+
+--[=[
+-- C_ArtifactUI Functions:
+-- - C_ArtifactUI.AddPower
+-- - C_ArtifactUI.ApplyCursorRelicToSlot
+-- - C_ArtifactUI.CanApplyArtifactRelic
+-- - C_ArtifactUI.CanApplyCursorRelicToSlot
+-- - C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot
+-- - C_ArtifactUI.CanApplyRelicItemIDToSlot
+-- - C_ArtifactUI.CheckRespecNPC
+-- - C_ArtifactUI.Clear
+-- - C_ArtifactUI.ClearForgeCamera
+-- - C_ArtifactUI.ConfirmRespec
+-- - C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted
+-- - C_ArtifactUI.GetAppearanceInfo
+-- - C_ArtifactUI.GetAppearanceInfoByID
+-- - C_ArtifactUI.GetAppearanceSetInfo
+-- - C_ArtifactUI.GetArtifactArtInfo
+-- - C_ArtifactUI.GetArtifactInfo
+-- - C_ArtifactUI.GetArtifactItemID
+-- - C_ArtifactUI.GetArtifactTier
+-- - C_ArtifactUI.GetArtifactXPRewardTargetInfo
+-- - C_ArtifactUI.GetCostForPointAtRank
+-- - C_ArtifactUI.GetEquippedArtifactArtInfo
+-- - C_ArtifactUI.GetEquippedArtifactInfo
+-- - C_ArtifactUI.GetEquippedArtifactItemID
+-- - C_ArtifactUI.GetEquippedArtifactNumRelicSlots
+-- - C_ArtifactUI.GetEquippedArtifactRelicInfo
+-- - C_ArtifactUI.GetEquippedRelicLockedReason
+-- - C_ArtifactUI.GetForgeRotation
+-- - C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic
+-- - C_ArtifactUI.GetMetaPowerInfo
+-- - C_ArtifactUI.GetNumAppearanceSets
+-- - C_ArtifactUI.GetNumObtainedArtifacts
+-- - C_ArtifactUI.GetNumRelicSlots
+-- - C_ArtifactUI.GetPointsRemaining
+-- - C_ArtifactUI.GetPowerHyperlink
+-- - C_ArtifactUI.GetPowerInfo
+-- - C_ArtifactUI.GetPowerLinks
+-- - C_ArtifactUI.GetPowers
+-- - C_ArtifactUI.GetPowersAffectedByRelic
+-- - C_ArtifactUI.GetPowersAffectedByRelicItemLink
+-- - C_ArtifactUI.GetPreviewAppearance
+-- - C_ArtifactUI.GetRelicInfo
+-- - C_ArtifactUI.GetRelicInfoByItemID
+-- - C_ArtifactUI.GetRelicLockedReason
+-- - C_ArtifactUI.GetRelicSlotType
+-- - C_ArtifactUI.GetRespecArtifactArtInfo
+-- - C_ArtifactUI.GetRespecArtifactInfo
+-- - C_ArtifactUI.GetRespecCost
+-- - C_ArtifactUI.GetTotalPowerCost
+-- - C_ArtifactUI.GetTotalPurchasedRanks
+-- - C_ArtifactUI.IsArtifactDisabled
+-- - C_ArtifactUI.IsArtifactItem
+-- - C_ArtifactUI.IsAtForge
+-- - C_ArtifactUI.IsEquippedArtifactDisabled
+-- - C_ArtifactUI.IsEquippedArtifactMaxed
+-- - C_ArtifactUI.IsMaxedByRulesOrEffect
+-- - C_ArtifactUI.IsPowerKnown
+-- - C_ArtifactUI.IsViewedArtifactEquipped
+-- - C_ArtifactUI.SetAppearance
+-- - C_ArtifactUI.SetForgeCamera
+-- - C_ArtifactUI.SetForgeRotation
+-- - C_ArtifactUI.SetPreviewAppearance
+-- - C_ArtifactUI.ShouldSuppressForgeRotation
+--]=]
+
+---======================================================================
+--- C_ArtifactUI.ApplyCursorRelicToSlot
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ApplyCursorRelicToSlot
+---
+--- Usage: C_ArtifactUI.ApplyCursorRelicToSlot(relicSlotIndex)
+---
+-- function C_ArtifactUI.ApplyCursorRelicToSlot()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.CanApplyArtifactRelic
+---======================================================================
+--- Arguments:
+--- @param relicItemID number
+--- @param onlyUnlocked boolean
+---
+--- Returns:
+--- @return boolean canApply
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyArtifactRelic
+---
+--- Usage: canApply = C_ArtifactUI.CanApplyArtifactRelic(relicItemID, onlyUnlocked)
+---
+-- function C_ArtifactUI.CanApplyArtifactRelic()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.CanApplyCursorRelicToSlot
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return boolean canApply
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyCursorRelicToSlot
+---
+--- Usage: canApply = C_ArtifactUI.CanApplyCursorRelicToSlot(relicSlotIndex)
+---
+-- function C_ArtifactUI.CanApplyCursorRelicToSlot()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot
+---======================================================================
+--- Arguments:
+--- @param relicItemID number
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return boolean canApply
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot
+---
+--- Usage: canApply = C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot(relicItemID, relicSlotIndex)
+---
+-- function C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.CanApplyRelicItemIDToSlot
+---======================================================================
+--- Arguments:
+--- @param relicItemID number
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return boolean canApply
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToSlot
+---
+--- Usage: canApply = C_ArtifactUI.CanApplyRelicItemIDToSlot(relicItemID, relicSlotIndex)
+---
+-- function C_ArtifactUI.CanApplyRelicItemIDToSlot()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.CheckRespecNPC
+---======================================================================
+--- Returns:
+--- @return boolean canRespec
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CheckRespecNPC
+---
+--- Usage: canRespec = C_ArtifactUI.CheckRespecNPC()
+---
+-- function C_ArtifactUI.CheckRespecNPC()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.Clear
+---======================================================================
+--- Clears data of the last opened artifact weapon.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.Clear
+---
+--- Usage: C_ArtifactUI.Clear()
+---
+-- function C_ArtifactUI.Clear()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.ClearForgeCamera
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ClearForgeCamera
+---
+--- Usage: C_ArtifactUI.ClearForgeCamera()
+---
+-- function C_ArtifactUI.ClearForgeCamera()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.ConfirmRespec
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ConfirmRespec
+---
+--- Usage: C_ArtifactUI.ConfirmRespec()
+---
+-- function C_ArtifactUI.ConfirmRespec()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted
+---======================================================================
+--- Returns:
+--- @return boolean hasAnyRelicsSlotted
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted
+---
+--- Usage: hasAnyRelicsSlotted = C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted()
+---
+-- function C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetAppearanceInfo
+---======================================================================
+--- Returns information about a selected artifact appearance.
+---
+--- Arguments:
+--- @param appearanceSetIndex number - Ranging from 1 to C_ArtifactUI.GetNumAppearanceSets()
+--- @param appearanceIndex number - Numeric index of the appearance in the specified setIndex, from 1 to 4 -- exception: Set 1 for both the Feral and the Guardian Druid Artifacts, which has 7 appearances total, due to racial basic tints: Troll/Zandalari is tint 1, Tauren/Highmountain is tint 2, Night Elf is tint 3, Worgen/Kul Tiran is tint 4, and 5 to 7 for the Pillar of Creation, Light's Heart, and Campaign Effort criteria that would otherwise be index 2 to 4. Querying racial tints other than the one for the current character's race returns nil.
+---
+--- Returns:
+--- @return number 1. artifactAppearanceID : ArtifactAppearanceID
+--- @return string 2. appearanceName - The name of the artifact weapon this appearance goes to
+--- @return number 3. displayIndex - The index of this appearance in its set, the same as the appearanceIndex that was entered
+--- @return boolean 4. unlocked - Whether this appearance has been unlocked
+--- @return string 5. failureDescription ? - The requirements for unlocking this appearance. Will return nil for the artifact's base appearance
+--- @return number 6. uiCameraID
+--- @return number 7. altHandCameraID ?
+--- @return number 8. swatchColorR - The red component of the appearance swatch button, between 0 and 1
+--- @return number 9. swatchColorG - The green component of the appearance swatch button, between 0 and 1
+--- @return number 10. swatchColorB - The red component of the appearance swatch button, between 0 and 1
+--- @return number 11. modelOpacity - The alpha level (opacity) of the weapon in the Artifact UI, defaulted to 0.5
+--- @return number 12. modelSaturation - The saturation level (brightness) of the weapon in the Artifact UI, defaulted to 0.5
+--- @return boolean 13. obtainable - Whether the artifact's animation is being suppressed, defaulted to false
+---
+--- @since Patch 8.0.1 (2018-07-17): Added obtainable return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceInfo
+---
+--- Usage: artifactAppearanceID, appearanceName, displayIndex, unlocked, failureDescription,
+ uiCameraID, altHandCameraID, swatchColorR, swatchColorG, swatchColorB, modelOpacity,
+ modelSaturation, obtainable
+    = C_ArtifactUI.GetAppearanceInfo(appearanceSetIndex, appearanceIndex)
+---
+-- function C_ArtifactUI.GetAppearanceInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetAppearanceInfoByID
+---======================================================================
+--- Returns information about a selected artifact appearance.
+---
+--- Arguments:
+--- @param artifactAppearanceID number : ArtifactAppearanceID
+---
+--- Returns:
+--- @return number 1. artifactAppearanceSetID - The appearance set this appearance belongs to (from C_ArtifactUI.GetAppearanceSetInfo)
+--- @return number 2. artifactAppearanceID : ArtifactAppearanceID
+--- @return string 3. appearanceName - The name of the artifact weapon this appearance goes to
+--- @return number 4. displayIndex - The index of this appearance in its set, the same as the appearanceIndex that was entered
+--- @return boolean 5. unlocked - Whether this appearance has been unlocked
+--- @return string 6. failureDescription ? - The requirements for unlocking this appearance. Will return nil for the artifact's base appearance
+--- @return number 7. uiCameraID
+--- @return number 8. altHandCameraID ?
+--- @return number 9. swatchColorR - The red component of the appearance swatch button, between 0 and 1
+--- @return number 10. swatchColorG - The green component of the appearance swatch button, between 0 and 1
+--- @return number 11. swatchColorB - The red component of the appearance swatch button, between 0 and 1
+--- @return number 12. modelOpacity - The alpha level (opacity) of the weapon in the Artifact UI, defaulted to 0.5
+--- @return number 13. modelSaturation - The saturation level (brightness) of the weapon in the Artifact UI, defaulted to 0.5
+--- @return boolean 14. obtainable - Whether the artifact's animation is being suppressed, defaulted to false
+---
+--- @since Patch 8.0.1 (2018-07-17): Added obtainable return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceInfoByID
+---
+--- Usage: artifactAppearanceSetID, artifactAppearanceID, appearanceName, displayIndex, unlocked,
+ failureDescription, uiCameraID, altHandCameraID, swatchColorR, swatchColorG, swatchColorB,
+ modelOpacity, modelSaturation, obtainable
+    = C_ArtifactUI.GetAppearanceInfoByID(artifactAppearanceID)
+---
+--- See also:
+--- - C_ArtifactUI.GetAppearanceInfo
+---
+-- function C_ArtifactUI.GetAppearanceInfoByID()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetAppearanceSetInfo
+---======================================================================
+--- Arguments:
+--- @param appearanceSetIndex number
+---
+--- Returns:
+--- @return number artifactAppearanceSetID
+--- @return string appearanceSetName
+--- @return string appearanceSetDescription
+--- @return number numAppearances
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceSetInfo
+---
+--- Usage: artifactAppearanceSetID, appearanceSetName, appearanceSetDescription, numAppearances = C_ArtifactUI.GetAppearanceSetInfo(appearanceSetIndex)
+---
+-- function C_ArtifactUI.GetAppearanceSetInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetArtifactArtInfo
+---======================================================================
+--- Returns:
+--- @return  artifactArtInfo structure - ArtifactArtInfo
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactArtInfo
+---
+--- Usage: artifactArtInfo = C_ArtifactUI.GetArtifactArtInfo()
+---
+-- function C_ArtifactUI.GetArtifactArtInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetArtifactInfo
+---======================================================================
+--- Returns information about the currently equipped artifact weapon.
+---
+--- Returns:
+--- @return number 1. itemID - Numeric ID of the main-hand weapon
+--- @return number 2. altItemID ? - Numeric ID of the off-hand weapon, or nil if there is none
+--- @return string 3. name - Name of the weapon
+--- @return number 4. icon : fileID - The fileID for the icon texture for the artifact
+--- @return number 5. xp - The artifact power available to this weapon
+--- @return number 6. pointsSpent - The number of ranks that have been purchased (not granted by relics)
+--- @return number 7. quality
+--- @return number 8. artifactAppearanceID - The currently active artifact appearanceID
+--- @return number 9. appearanceModID
+--- @return number 10. itemAppearanceID ? - The transmogrification appearanceID used on the main-hand weapon
+--- @return number 11. altItemAppearanceID ? - The transmogrification appearanceID used on the off-hand weapon
+--- @return boolean 12. altOnTop - Whether the off-hand item is displayed
+--- @return number 13. tier : ArtifactTiers
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactInfo
+---
+--- Usage: itemID, altItemID, name, icon, xp, pointsSpent, quality, artifactAppearanceID, appearanceModID, itemAppearanceID, altItemAppearanceID, altOnTop, tier = C_ArtifactUI.GetArtifactInfo()
+---
+-- function C_ArtifactUI.GetArtifactInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetArtifactItemID
+---======================================================================
+--- Returns:
+--- @return number itemID
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactItemID
+---
+--- Usage: itemID = C_ArtifactUI.GetArtifactItemID()
+---
+-- function C_ArtifactUI.GetArtifactItemID()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetArtifactTier
+---======================================================================
+--- Returns the tier number for your artifact at the forge.
+---
+--- Returns:
+--- @return number tier - the completed tier level of your artifact weapon while at the forge on the Vindicaar.
+---
+--- @since Patch 7.3.0 (2017-08-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactTier
+---
+--- Usage: tier = C_ArtifactUI.GetArtifactTier()
+---
+-- function C_ArtifactUI.GetArtifactTier()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetArtifactXPRewardTargetInfo
+---======================================================================
+--- Arguments:
+--- @param artifactCategoryID number
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactXPRewardTargetInfo
+---
+--- Usage: name, icon = C_ArtifactUI.GetArtifactXPRewardTargetInfo(artifactCategoryID)
+---
+-- function C_ArtifactUI.GetArtifactXPRewardTargetInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetCostForPointAtRank
+---======================================================================
+--- Arguments:
+--- @param rank number
+--- @param tier number
+---
+--- Returns:
+--- @return number cost
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetCostForPointAtRank
+---
+--- Usage: cost = C_ArtifactUI.GetCostForPointAtRank(rank, tier)
+---
+-- function C_ArtifactUI.GetCostForPointAtRank()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedArtifactArtInfo
+---======================================================================
+--- Returns:
+--- @return  artifactArtInfo structure - ArtifactArtInfo
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactArtInfo
+---
+--- Usage: artifactArtInfo = C_ArtifactUI.GetEquippedArtifactArtInfo()
+---
+-- function C_ArtifactUI.GetEquippedArtifactArtInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedArtifactInfo
+---======================================================================
+--- Returns:
+--- @return number itemID
+--- @return number altItemID ?
+--- @return string name
+--- @return number icon
+--- @return number xp
+--- @return number pointsSpent
+--- @return number quality
+--- @return number artifactAppearanceID
+--- @return number appearanceModID
+--- @return number itemAppearanceID ?
+--- @return number altItemAppearanceID ?
+--- @return boolean altOnTop
+--- @return number tier
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactInfo
+---
+--- Usage: itemID, altItemID, name, icon, xp, pointsSpent, quality, artifactAppearanceID, appearanceModID, itemAppearanceID, altItemAppearanceID, altOnTop, tier = C_ArtifactUI.GetEquippedArtifactInfo()
+---
+-- function C_ArtifactUI.GetEquippedArtifactInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedArtifactItemID
+---======================================================================
+--- Returns:
+--- @return number itemID
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactItemID
+---
+--- Usage: itemID = C_ArtifactUI.GetEquippedArtifactItemID()
+---
+-- function C_ArtifactUI.GetEquippedArtifactItemID()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedArtifactNumRelicSlots
+---======================================================================
+--- Arguments:
+--- @param onlyUnlocked boolean ? = false - If true then only the relic slots that are unlocked will be considered.
+---
+--- Returns:
+--- @return number numRelicSlots
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactNumRelicSlots
+---
+--- Usage: numRelicSlots = C_ArtifactUI.GetEquippedArtifactNumRelicSlots([onlyUnlocked])
+---
+-- function C_ArtifactUI.GetEquippedArtifactNumRelicSlots()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedArtifactRelicInfo
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+--- @return string slotTypeName - Matches the socket identifiers used in the socketing system.
+--- @return string link
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactRelicInfo
+---
+--- Usage: name, icon, slotTypeName, link = C_ArtifactUI.GetEquippedArtifactRelicInfo(relicSlotIndex)
+---
+-- function C_ArtifactUI.GetEquippedArtifactRelicInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetEquippedRelicLockedReason
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string lockedReason ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedRelicLockedReason
+---
+--- Usage: lockedReason = C_ArtifactUI.GetEquippedRelicLockedReason(relicSlotIndex)
+---
+-- function C_ArtifactUI.GetEquippedRelicLockedReason()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetForgeRotation
+---======================================================================
+--- Returns:
+--- @return number forgeRotationX
+--- @return number forgeRotationY
+--- @return number forgeRotationZ
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetForgeRotation
+---
+--- Usage: forgeRotationX, forgeRotationY, forgeRotationZ = C_ArtifactUI.GetForgeRotation()
+---
+-- function C_ArtifactUI.GetForgeRotation()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic
+---======================================================================
+--- Arguments:
+--- @param itemLinkOrID string
+---
+--- Returns:
+--- @return number itemIevelIncrease
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic
+---
+--- Usage: itemIevelIncrease = C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic(itemLinkOrID)
+---
+-- function C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetMetaPowerInfo
+---======================================================================
+--- (Variable returns: spellID1, powerCost1, currentRank1, spellID2, powerCost2, currentRank2, etc)
+---
+--- Returns:
+--- @return number spellID
+--- @return number powerCost
+--- @return number currentRank
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetMetaPowerInfo
+---
+--- Usage: spellID, powerCost, currentRank, ... = C_ArtifactUI.GetMetaPowerInfo()
+---
+-- function C_ArtifactUI.GetMetaPowerInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetNumAppearanceSets
+---======================================================================
+--- Returns:
+--- @return number numAppearanceSets
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumAppearanceSets
+---
+--- Usage: numAppearanceSets = C_ArtifactUI.GetNumAppearanceSets()
+---
+-- function C_ArtifactUI.GetNumAppearanceSets()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetNumObtainedArtifacts
+---======================================================================
+--- Returns:
+--- @return number numObtainedArtifacts
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumObtainedArtifacts
+---
+--- Usage: numObtainedArtifacts = C_ArtifactUI.GetNumObtainedArtifacts()
+---
+-- function C_ArtifactUI.GetNumObtainedArtifacts()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetNumRelicSlots
+---======================================================================
+--- Arguments:
+--- @param onlyUnlocked boolean ? = false - If true then only the relic slots that are unlocked will be considered.
+---
+--- Returns:
+--- @return number numRelicSlots
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumRelicSlots
+---
+--- Usage: numRelicSlots = C_ArtifactUI.GetNumRelicSlots([onlyUnlocked])
+---
+-- function C_ArtifactUI.GetNumRelicSlots()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPointsRemaining
+---======================================================================
+--- Returns:
+--- @return number pointsRemaining
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPointsRemaining
+---
+--- Usage: pointsRemaining = C_ArtifactUI.GetPointsRemaining()
+---
+-- function C_ArtifactUI.GetPointsRemaining()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowerHyperlink
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return string link
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerHyperlink
+---
+--- Usage: link = C_ArtifactUI.GetPowerHyperlink(powerID)
+---
+-- function C_ArtifactUI.GetPowerHyperlink()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowerInfo
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return  powerInfo structure - ArtifactPowerInfo
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerInfo
+---
+--- Usage: powerInfo = C_ArtifactUI.GetPowerInfo(powerID)
+---
+-- function C_ArtifactUI.GetPowerInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowerLinks
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return number linkingPowerID []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerLinks
+---
+--- Usage: linkingPowerID = C_ArtifactUI.GetPowerLinks(powerID)
+---
+-- function C_ArtifactUI.GetPowerLinks()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowers
+---======================================================================
+--- Returns:
+--- @return number powerID []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowers
+---
+--- Usage: powerID = C_ArtifactUI.GetPowers()
+---
+-- function C_ArtifactUI.GetPowers()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowersAffectedByRelic
+---======================================================================
+--- (variable returns: powerID1, powerID2, ...)
+---
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return number powerIDs
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelic
+---
+--- Usage: powerIDs, ... = C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex)
+              = C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo)
+---
+-- function C_ArtifactUI.GetPowersAffectedByRelic()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPowersAffectedByRelicItemLink
+---======================================================================
+--- (variable returns: powerID1, powerID2, ...)
+---
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return number powerIDs
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink
+---
+--- Usage: powerIDs, ... = C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex)
+              = C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo)
+---
+-- function C_ArtifactUI.GetPowersAffectedByRelicItemLink()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetPreviewAppearance
+---======================================================================
+--- Returns:
+--- @return number artifactAppearanceID ?
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPreviewAppearance
+---
+--- Usage: artifactAppearanceID = C_ArtifactUI.GetPreviewAppearance()
+---
+-- function C_ArtifactUI.GetPreviewAppearance()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRelicInfo
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+--- @return string slotTypeName - Matches the socket identifiers used in the socketing system.
+--- @return string link
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicInfo
+---
+--- Usage: name, icon, slotTypeName, link = C_ArtifactUI.GetRelicInfo(relicSlotIndex)
+                               = C_ArtifactUI.GetRelicInfoByItemID(itemID)
+---
+-- function C_ArtifactUI.GetRelicInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRelicInfoByItemID
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+--- @return string slotTypeName - Matches the socket identifiers used in the socketing system.
+--- @return string link
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicInfoByItemID
+---
+--- Usage: name, icon, slotTypeName, link = C_ArtifactUI.GetRelicInfo(relicSlotIndex)
+                               = C_ArtifactUI.GetRelicInfoByItemID(itemID)
+---
+-- function C_ArtifactUI.GetRelicInfoByItemID()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRelicLockedReason
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string lockedReason ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicLockedReason
+---
+--- Usage: lockedReason = C_ArtifactUI.GetRelicLockedReason(relicSlotIndex)
+---
+-- function C_ArtifactUI.GetRelicLockedReason()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRelicSlotType
+---======================================================================
+--- Arguments:
+--- @param relicSlotIndex number
+---
+--- Returns:
+--- @return string slotTypeName
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicSlotType
+---
+--- Usage: slotTypeName = C_ArtifactUI.GetRelicSlotType(relicSlotIndex)
+---
+-- function C_ArtifactUI.GetRelicSlotType()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRespecArtifactArtInfo
+---======================================================================
+--- Returns:
+--- @return  artifactArtInfo structure - ArtifactArtInfo
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecArtifactArtInfo
+---
+--- Usage: artifactArtInfo = C_ArtifactUI.GetRespecArtifactArtInfo()
+---
+-- function C_ArtifactUI.GetRespecArtifactArtInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRespecArtifactInfo
+---======================================================================
+--- Returns:
+--- @return number itemID
+--- @return number altItemID ?
+--- @return string name
+--- @return number icon
+--- @return number xp
+--- @return number pointsSpent
+--- @return number quality
+--- @return number artifactAppearanceID
+--- @return number appearanceModID
+--- @return number itemAppearanceID ?
+--- @return number altItemAppearanceID ?
+--- @return boolean altOnTop
+--- @return number tier
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecArtifactInfo
+---
+--- Usage: itemID, altItemID, name, icon, xp, pointsSpent, quality, artifactAppearanceID, appearanceModID, itemAppearanceID, altItemAppearanceID, altOnTop, tier = C_ArtifactUI.GetRespecArtifactInfo()
+---
+-- function C_ArtifactUI.GetRespecArtifactInfo()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetRespecCost
+---======================================================================
+--- Returns:
+--- @return number cost
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecCost
+---
+--- Usage: cost = C_ArtifactUI.GetRespecCost()
+---
+-- function C_ArtifactUI.GetRespecCost()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetTotalPowerCost
+---======================================================================
+--- Arguments:
+--- @param startingTrait number
+--- @param numTraits number
+--- @param artifactTier number
+---
+--- Returns:
+--- @return number totalArtifactPowerCost
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetTotalPowerCost
+---
+--- Usage: totalArtifactPowerCost = C_ArtifactUI.GetTotalPowerCost(startingTrait, numTraits, artifactTier)
+---
+-- function C_ArtifactUI.GetTotalPowerCost()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.GetTotalPurchasedRanks
+---======================================================================
+--- Returns the total number of ranks purchased for an artifact weapon.
+---
+--- Returns:
+--- @return number numPurchased - The number of purchased ranks on an artifact weapon.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetTotalPurchasedRanks
+---
+--- Usage: numPurchased = C_ArtifactUI.GetTotalPurchasedRanks()
+---
+-- function C_ArtifactUI.GetTotalPurchasedRanks()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsArtifactDisabled
+---======================================================================
+--- Returns:
+--- @return boolean artifactDisabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsArtifactDisabled
+---
+--- Usage: artifactDisabled = C_ArtifactUI.IsArtifactDisabled()
+---
+-- function C_ArtifactUI.IsArtifactDisabled()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsArtifactItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isArtifact
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsArtifactItem
+---
+--- Usage: isArtifact = C_ArtifactUI.IsArtifactItem(itemLocation)
+---
+-- function C_ArtifactUI.IsArtifactItem()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsAtForge
+---======================================================================
+--- Returns:
+--- @return boolean isAtForge
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsAtForge
+---
+--- Usage: isAtForge = C_ArtifactUI.IsAtForge()
+---
+-- function C_ArtifactUI.IsAtForge()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsEquippedArtifactDisabled
+---======================================================================
+--- Returns:
+--- @return boolean artifactDisabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsEquippedArtifactDisabled
+---
+--- Usage: artifactDisabled = C_ArtifactUI.IsEquippedArtifactDisabled()
+---
+-- function C_ArtifactUI.IsEquippedArtifactDisabled()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsEquippedArtifactMaxed
+---======================================================================
+--- Returns:
+--- @return boolean artifactMaxed
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsEquippedArtifactMaxed
+---
+--- Usage: artifactMaxed = C_ArtifactUI.IsEquippedArtifactMaxed()
+---
+-- function C_ArtifactUI.IsEquippedArtifactMaxed()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsMaxedByRulesOrEffect
+---======================================================================
+--- Returns:
+--- @return boolean isEffectivelyMaxed
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsMaxedByRulesOrEffect
+---
+--- Usage: isEffectivelyMaxed = C_ArtifactUI.IsMaxedByRulesOrEffect()
+---
+-- function C_ArtifactUI.IsMaxedByRulesOrEffect()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsPowerKnown
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return boolean known
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsPowerKnown
+---
+--- Usage: known = C_ArtifactUI.IsPowerKnown(powerID)
+---
+-- function C_ArtifactUI.IsPowerKnown()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.IsViewedArtifactEquipped
+---======================================================================
+--- Returns:
+--- @return boolean isViewedArtifactEquipped
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsViewedArtifactEquipped
+---
+--- Usage: isViewedArtifactEquipped = C_ArtifactUI.IsViewedArtifactEquipped()
+---
+-- function C_ArtifactUI.IsViewedArtifactEquipped()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.SetAppearance
+---======================================================================
+--- Arguments:
+--- @param artifactAppearanceID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetAppearance
+---
+--- Usage: C_ArtifactUI.SetAppearance(artifactAppearanceID)
+---
+-- function C_ArtifactUI.SetAppearance()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.SetForgeCamera
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetForgeCamera
+---
+--- Usage: C_ArtifactUI.SetForgeCamera()
+---
+-- function C_ArtifactUI.SetForgeCamera()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.SetForgeRotation
+---======================================================================
+--- Arguments:
+--- @param forgeRotationX number
+--- @param forgeRotationY number
+--- @param forgeRotationZ number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetForgeRotation
+---
+--- Usage: C_ArtifactUI.SetForgeRotation(forgeRotationX, forgeRotationY, forgeRotationZ)
+---
+-- function C_ArtifactUI.SetForgeRotation()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.SetPreviewAppearance
+---======================================================================
+--- Arguments:
+--- @param artifactAppearanceID number ? = 0
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetPreviewAppearance
+---
+--- Usage: C_ArtifactUI.SetPreviewAppearance([artifactAppearanceID])
+---
+-- function C_ArtifactUI.SetPreviewAppearance()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.ShouldSuppressForgeRotation
+---======================================================================
+--- Returns:
+--- @return boolean shouldSuppressForgeRotation
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ShouldSuppressForgeRotation
+---
+--- Usage: shouldSuppressForgeRotation = C_ArtifactUI.ShouldSuppressForgeRotation()
+---
+-- function C_ArtifactUI.ShouldSuppressForgeRotation()
+-- end
+
+---======================================================================
+--- C_ArtifactUI.AddPower
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.AddPower
+---
+--- Usage: success = C_ArtifactUI.AddPower(powerID)
+---
+-- function C_ArtifactUI.AddPower()
+-- end

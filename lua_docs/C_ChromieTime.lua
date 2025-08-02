@@ -1,0 +1,82 @@
+--[=[
+-- C_ChromieTime API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_ChromieTime
+--- C_ChromieTime namespace contains 4 functions
+local C_ChromieTime = {}
+
+--[=[
+-- C_ChromieTime Functions:
+-- - C_ChromieTime.CloseUI
+-- - C_ChromieTime.GetChromieTimeExpansionOption
+-- - C_ChromieTime.GetChromieTimeExpansionOptions
+-- - C_ChromieTime.SelectChromieTimeOption
+--]=]
+
+---======================================================================
+--- C_ChromieTime.CloseUI
+---======================================================================
+--- Closes the timewalking campaign selection UI, triggering the `CHROMIE_TIME_CLOSE` event.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChromieTime.CloseUI
+---
+--- Usage: C_ChromieTime.CloseUI()
+---
+-- function C_ChromieTime.CloseUI()
+-- end
+
+---======================================================================
+--- C_ChromieTime.GetChromieTimeExpansionOption
+---======================================================================
+--- Returns information about a Timewalking Campaign.
+---
+--- Arguments:
+--- @param expansionRecID number
+---
+--- Returns:
+--- @return ChromieTimeExpansionInfo info ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChromieTime.GetChromieTimeExpansionOption
+---
+--- Usage: info = C_ChromieTime.GetChromieTimeExpansionOption(expansionRecID)
+---
+-- function C_ChromieTime.GetChromieTimeExpansionOption()
+-- end
+
+---======================================================================
+--- C_ChromieTime.GetChromieTimeExpansionOptions
+---======================================================================
+--- Returns a table listing all available Timewalking Campaigns.
+---
+--- Returns:
+--- @return ChromieTimeExpansionInfo expansionOptions []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChromieTime.GetChromieTimeExpansionOptions
+---
+--- Usage: expansionOptions = C_ChromieTime.GetChromieTimeExpansionOptions()
+---
+-- function C_ChromieTime.GetChromieTimeExpansionOptions()
+-- end
+
+---======================================================================
+--- C_ChromieTime.SelectChromieTimeOption
+---======================================================================
+--- Requests that the player be assigned to a specified timewalking expansion campaign.
+---
+--- Arguments:
+--- @param chromieTimeExpansionInfoId number : UIChromieTimeExpansionInfo.ID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ChromieTime.SelectChromieTimeOption
+---
+--- Usage: C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId)
+---
+-- function C_ChromieTime.SelectChromieTimeOption()
+-- end

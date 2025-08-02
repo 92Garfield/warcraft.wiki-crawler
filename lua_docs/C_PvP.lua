@@ -1,0 +1,1618 @@
+--[=[
+-- C_PvP API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 99
+--]=]
+
+--- @class C_PvP
+--- C_PvP namespace contains 99 functions
+local C_PvP = {}
+
+--[=[
+-- C_PvP Functions:
+-- - C_PvP.ArePvpTalentsUnlocked
+-- - C_PvP.CanDisplayDamage
+-- - C_PvP.CanDisplayDeaths
+-- - C_PvP.CanDisplayHealing
+-- - C_PvP.CanDisplayHonorableKills
+-- - C_PvP.CanDisplayKillingBlows
+-- - C_PvP.CanPlayerUseRatedPVPUI
+-- - C_PvP.CanToggleWarMode
+-- - C_PvP.CanToggleWarModeInArea
+-- - C_PvP.DoesMatchOutcomeAffectRating
+-- - C_PvP.GetActiveBrawlInfo
+-- - C_PvP.GetActiveMatchBracket
+-- - C_PvP.GetActiveMatchDuration
+-- - C_PvP.GetActiveMatchState
+-- - C_PvP.GetActiveMatchWinner
+-- - C_PvP.GetArenaCrowdControlInfo
+-- - C_PvP.GetArenaRewards
+-- - C_PvP.GetArenaSkirmishRewards
+-- - C_PvP.GetAssignedSpecForBattlefieldQueue
+-- - C_PvP.GetAvailableBrawlInfo
+-- - C_PvP.GetBattlefieldFlagPosition
+-- - C_PvP.GetBattlefieldVehicleInfo
+-- - C_PvP.GetBattlefieldVehicles
+-- - C_PvP.GetBrawlRewards
+-- - C_PvP.GetBrawlSoloRBGMinItemLevel
+-- - C_PvP.GetCustomVictoryStatID
+-- - C_PvP.GetGlobalPvpScalingInfoForSpecID
+-- - C_PvP.GetHonorRewardInfo
+-- - C_PvP.GetLevelUpBattlegrounds
+-- - C_PvP.GetMatchPVPStatColumn
+-- - C_PvP.GetMatchPVPStatColumns
+-- - C_PvP.GetNextHonorLevelForReward
+-- - C_PvP.GetOutdoorPvPWaitTime
+-- - C_PvP.GetPVPActiveMatchPersonalRatedInfo
+-- - C_PvP.GetPVPActiveRatedMatchDeserterPenalty
+-- - C_PvP.GetPVPSeasonRewardAchievementID
+-- - C_PvP.GetPersonalRatedBGBlitzSpecStats
+-- - C_PvP.GetPersonalRatedSoloShuffleSpecStats
+-- - C_PvP.GetPostMatchCurrencyRewards
+-- - C_PvP.GetPostMatchItemRewards
+-- - C_PvP.GetPvpTalentsUnlockedLevel
+-- - C_PvP.GetPvpTierID
+-- - C_PvP.GetPvpTierInfo
+-- - C_PvP.GetRandomBGInfo
+-- - C_PvP.GetRandomBGRewards
+-- - C_PvP.GetRandomEpicBGInfo
+-- - C_PvP.GetRandomEpicBGRewards
+-- - C_PvP.GetRatedBGRewards
+-- - C_PvP.GetRatedSoloRBGMinItemLevel
+-- - C_PvP.GetRatedSoloRBGRewards
+-- - C_PvP.GetRatedSoloShuffleMinItemLevel
+-- - C_PvP.GetRatedSoloShuffleRewards
+-- - C_PvP.GetRewardItemLevelsByTierEnum
+-- - C_PvP.GetScoreInfo
+-- - C_PvP.GetScoreInfoByPlayerGuid
+-- - C_PvP.GetSeasonBestInfo
+-- - C_PvP.GetSkirmishInfo
+-- - C_PvP.GetSpecialEventBrawlInfo
+-- - C_PvP.GetTeamInfo
+-- - C_PvP.GetUIDisplaySeason
+-- - C_PvP.GetWarModeRewardBonus
+-- - C_PvP.GetWarModeRewardBonusDefault
+-- - C_PvP.GetWeeklyChestInfo
+-- - C_PvP.GetZonePVPInfo
+-- - C_PvP.HasArenaSkirmishWinToday
+-- - C_PvP.IsActiveBattlefield
+-- - C_PvP.IsActiveMatchRegistered
+-- - C_PvP.IsArena
+-- - C_PvP.IsBattleground
+-- - C_PvP.IsBattlegroundEnlistmentBonusActive
+-- - C_PvP.IsBrawlSoloRBG
+-- - C_PvP.IsBrawlSoloShuffle
+-- - C_PvP.IsInBrawl
+-- - C_PvP.IsInRatedMatchWithDeserterPenalty
+-- - C_PvP.IsMatchActive
+-- - C_PvP.IsMatchComplete
+-- - C_PvP.IsMatchConsideredArena
+-- - C_PvP.IsMatchFactional
+-- - C_PvP.IsPVPMap
+-- - C_PvP.IsRatedArena
+-- - C_PvP.IsRatedBattleground
+-- - C_PvP.IsRatedMap
+-- - C_PvP.IsRatedSoloRBG
+-- - C_PvP.IsRatedSoloShuffle
+-- - C_PvP.IsSoloRBG
+-- - C_PvP.IsSoloShuffle
+-- - C_PvP.IsSubZonePVPPOI
+-- - C_PvP.IsWarModeActive
+-- - C_PvP.IsWarModeDesired
+-- - C_PvP.IsWarModeFeatureEnabled
+-- - C_PvP.JoinBrawl
+-- - C_PvP.JoinRatedBGBlitz
+-- - C_PvP.RequestCrowdControlSpell
+-- - C_PvP.SetPVP
+-- - C_PvP.SetWarModeDesired
+-- - C_PvP.StartSoloRBGWarGameByName
+-- - C_PvP.StartSpectatorSoloRBGWarGame
+-- - C_PvP.TogglePVP
+-- - C_PvP.ToggleWarMode
+--]=]
+
+---======================================================================
+--- C_PvP.ArePvpTalentsUnlocked
+---======================================================================
+--- Returns:
+--- @return boolean arePvpTalentsUnlocked
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.ArePvpTalentsUnlocked
+---
+--- Usage: arePvpTalentsUnlocked = C_PvP.ArePvpTalentsUnlocked()
+---
+-- function C_PvP.ArePvpTalentsUnlocked()
+-- end
+
+---======================================================================
+--- C_PvP.CanDisplayDamage
+---======================================================================
+--- Returns:
+--- @return boolean canDisplay
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayDamage
+---
+--- Usage: canDisplay = C_PvP.CanDisplayDamage()
+---
+-- function C_PvP.CanDisplayDamage()
+-- end
+
+---======================================================================
+--- C_PvP.CanDisplayDeaths
+---======================================================================
+--- Returns:
+--- @return boolean canDisplay
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayDeaths
+---
+--- Usage: canDisplay = C_PvP.CanDisplayDeaths()
+---
+-- function C_PvP.CanDisplayDeaths()
+-- end
+
+---======================================================================
+--- C_PvP.CanDisplayHealing
+---======================================================================
+--- Returns:
+--- @return boolean canDisplay
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayHealing
+---
+--- Usage: canDisplay = C_PvP.CanDisplayHealing()
+---
+-- function C_PvP.CanDisplayHealing()
+-- end
+
+---======================================================================
+--- C_PvP.CanDisplayHonorableKills
+---======================================================================
+--- Returns:
+--- @return boolean canDisplay
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayHonorableKills
+---
+--- Usage: canDisplay = C_PvP.CanDisplayHonorableKills()
+---
+-- function C_PvP.CanDisplayHonorableKills()
+-- end
+
+---======================================================================
+--- C_PvP.CanDisplayKillingBlows
+---======================================================================
+--- Returns:
+--- @return boolean canDisplay
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayKillingBlows
+---
+--- Usage: canDisplay = C_PvP.CanDisplayKillingBlows()
+---
+-- function C_PvP.CanDisplayKillingBlows()
+-- end
+
+---======================================================================
+--- C_PvP.CanPlayerUseRatedPVPUI
+---======================================================================
+--- Returns true if the player is allowed to use the Rated PvP UI, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanPlayerUseRatedPVPUI
+---
+--- Usage: canUse, failureReason = C_PvP.CanPlayerUseRatedPVPUI()
+---
+-- function C_PvP.CanPlayerUseRatedPVPUI()
+-- end
+
+---======================================================================
+--- C_PvP.CanToggleWarMode
+---======================================================================
+--- Arguments:
+--- @param toggle boolean
+---
+--- Returns:
+--- @return boolean canTogglePvP
+---
+--- @since Patch 8.1.0 (2018-12-11): Added toggle argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanToggleWarMode
+---
+--- Usage: canTogglePvP = C_PvP.CanToggleWarMode(toggle)
+---
+-- function C_PvP.CanToggleWarMode()
+-- end
+
+---======================================================================
+--- C_PvP.CanToggleWarModeInArea
+---======================================================================
+--- Returns:
+--- @return boolean canTogglePvPInArea
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.CanToggleWarModeInArea
+---
+--- Usage: canTogglePvPInArea = C_PvP.CanToggleWarModeInArea()
+---
+-- function C_PvP.CanToggleWarModeInArea()
+-- end
+
+---======================================================================
+--- C_PvP.DoesMatchOutcomeAffectRating
+---======================================================================
+--- Returns:
+--- @return boolean doesAffect
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.DoesMatchOutcomeAffectRating
+---
+--- Usage: doesAffect = C_PvP.DoesMatchOutcomeAffectRating()
+---
+-- function C_PvP.DoesMatchOutcomeAffectRating()
+-- end
+
+---======================================================================
+--- C_PvP.GetActiveBrawlInfo
+---======================================================================
+--- Returns active brawl information.
+---
+--- Returns:
+--- @return PvpBrawlInfo brawlInfo ?
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveBrawlInfo
+---
+--- Usage: brawlInfo = C_PvP.GetActiveBrawlInfo()
+---
+-- function C_PvP.GetActiveBrawlInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetActiveMatchBracket
+---======================================================================
+--- Returns:
+--- @return number bracket
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchBracket
+---
+--- Usage: bracket = C_PvP.GetActiveMatchBracket()
+---
+-- function C_PvP.GetActiveMatchBracket()
+-- end
+
+---======================================================================
+--- C_PvP.GetActiveMatchDuration
+---======================================================================
+--- Returns:
+--- @return number seconds
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchDuration
+---
+--- Usage: seconds = C_PvP.GetActiveMatchDuration()
+---
+-- function C_PvP.GetActiveMatchDuration()
+-- end
+
+---======================================================================
+--- C_PvP.GetActiveMatchState
+---======================================================================
+--- Returns:
+--- @return Enum.PvPMatchState state
+---
+--- @since Patch 10.1.5 (2023-07-11): Removed Active enum.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchState
+---
+--- Usage: state = C_PvP.GetActiveMatchState()
+---
+-- function C_PvP.GetActiveMatchState()
+-- end
+
+---======================================================================
+--- C_PvP.GetActiveMatchWinner
+---======================================================================
+--- Returns:
+--- @return number winner
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchWinner
+---
+--- Usage: winner = C_PvP.GetActiveMatchWinner()
+---
+-- function C_PvP.GetActiveMatchWinner()
+-- end
+
+---======================================================================
+--- C_PvP.GetArenaCrowdControlInfo
+---======================================================================
+--- Arguments:
+--- @param playerToken string
+---
+--- Returns:
+--- @return number spellID
+--- @return number itemID - Only exists in cata/vanilla
+--- @return number startTime
+--- @return number duration
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaCrowdControlInfo
+---
+--- Usage: spellID, startTime, duration = C_PvP.GetArenaCrowdControlInfo(playerToken)
+---
+-- function C_PvP.GetArenaCrowdControlInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetArenaRewards
+---======================================================================
+--- Arguments:
+--- @param teamSize number
+---
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 7.2.0 (2017-03-28): Moved to C_PvP.GetArenaRewards()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetArenaRewards(teamSize)
+---
+-- function C_PvP.GetArenaRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetArenaSkirmishRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 7.2.0 (2017-03-28): Moved to C_PvP.GetArenaSkirmishRewards()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaSkirmishRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetArenaSkirmishRewards()
+---
+-- function C_PvP.GetArenaSkirmishRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetAssignedSpecForBattlefieldQueue
+---======================================================================
+--- Arguments:
+--- @param queueID number
+---
+--- Returns:
+--- @return number specializationID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue
+---
+--- Usage: specializationID = C_PvP.GetAssignedSpecForBattlefieldQueue(queueID)
+---
+-- function C_PvP.GetAssignedSpecForBattlefieldQueue()
+-- end
+
+---======================================================================
+--- C_PvP.GetAvailableBrawlInfo
+---======================================================================
+--- Returns:
+--- @return PvpBrawlInfo brawlInfo ?
+---
+--- @since Patch 8.1.5 (2019-03-12): Moved to C_PvP.GetAvailableBrawlInfo()[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetAvailableBrawlInfo
+---
+--- Usage: brawlInfo = C_PvP.GetAvailableBrawlInfo()
+---
+-- function C_PvP.GetAvailableBrawlInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetBattlefieldFlagPosition
+---======================================================================
+--- Arguments:
+--- @param flagIndex number
+--- @param uiMapId number
+---
+--- Returns:
+--- @return number uiPosx ?
+--- @return number uiPosy ?
+--- @return number flagTexture
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldFlagPosition
+---
+--- Usage: uiPosx, uiPosy, flagTexture = C_PvP.GetBattlefieldFlagPosition(flagIndex, uiMapId)
+---
+-- function C_PvP.GetBattlefieldFlagPosition()
+-- end
+
+---======================================================================
+--- C_PvP.GetBattlefieldVehicleInfo
+---======================================================================
+--- Returns battleground vehicle info.
+---
+--- Arguments:
+--- @param vehicleIndex number
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return BattlefieldVehicleInfo info
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_PvP.GetBattlefieldVehicleInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldVehicleInfo
+---
+--- Usage: info = C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID)
+---
+-- function C_PvP.GetBattlefieldVehicleInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetBattlefieldVehicles
+---======================================================================
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return BattlefieldVehicleInfo vehicles []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldVehicles
+---
+--- Usage: vehicles = C_PvP.GetBattlefieldVehicles(uiMapID)
+---
+-- function C_PvP.GetBattlefieldVehicles()
+-- end
+
+---======================================================================
+--- C_PvP.GetBrawlRewards
+---======================================================================
+--- Arguments:
+--- @param brawlType Enum.BrawlType
+---
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetBrawlRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus, hasWon = C_PvP.GetBrawlRewards(brawlType)
+---
+-- function C_PvP.GetBrawlRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetBrawlSoloRBGMinItemLevel
+---======================================================================
+--- Returns:
+--- @return number minItemLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetBrawlSoloRBGMinItemLevel
+---
+--- Usage: minItemLevel = C_PvP.GetBrawlSoloRBGMinItemLevel()
+---
+-- function C_PvP.GetBrawlSoloRBGMinItemLevel()
+-- end
+
+---======================================================================
+--- C_PvP.GetCustomVictoryStatID
+---======================================================================
+--- Returns:
+--- @return number statID
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetCustomVictoryStatID
+---
+--- Usage: statID = C_PvP.GetCustomVictoryStatID()
+---
+-- function C_PvP.GetCustomVictoryStatID()
+-- end
+
+---======================================================================
+--- C_PvP.GetGlobalPvpScalingInfoForSpecID
+---======================================================================
+--- Arguments:
+--- @param specializationID number
+---
+--- Returns:
+--- @return  pvpScalingData structure - PvpScalingData[]
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetGlobalPvpScalingInfoForSpecID
+---
+--- Usage: pvpScalingData = C_PvP.GetGlobalPvpScalingInfoForSpecID(specializationID)
+---
+-- function C_PvP.GetGlobalPvpScalingInfoForSpecID()
+-- end
+
+---======================================================================
+--- C_PvP.GetHonorRewardInfo
+---======================================================================
+--- Arguments:
+--- @param honorLevel number
+---
+--- Returns:
+--- @return  info structure - HonorRewardInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetHonorRewardInfo
+---
+--- Usage: info = C_PvP.GetHonorRewardInfo(honorLevel)
+---
+-- function C_PvP.GetHonorRewardInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetLevelUpBattlegrounds
+---======================================================================
+--- Returns info indicating the backgrounds available for leveling.
+---
+--- Arguments:
+--- @param level number
+---
+--- Returns:
+--- @return LevelUpBattlegroundInfo battlefields []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetLevelUpBattlegrounds
+---
+--- Usage: battlefields = C_PvP.GetLevelUpBattlegrounds(level)
+---
+-- function C_PvP.GetLevelUpBattlegrounds()
+-- end
+
+---======================================================================
+--- C_PvP.GetMatchPVPStatColumn
+---======================================================================
+--- Arguments:
+--- @param pvpStatID number
+---
+--- Returns:
+--- @return  info structure - MatchPVPStatColumn (nilable)
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetMatchPVPStatColumn
+---
+--- Usage: info = C_PvP.GetMatchPVPStatColumn(pvpStatID)
+---
+-- function C_PvP.GetMatchPVPStatColumn()
+-- end
+
+---======================================================================
+--- C_PvP.GetMatchPVPStatColumns
+---======================================================================
+--- Returns:
+--- @return  columns structure - MatchPVPStatColumn[]
+---
+--- @since Patch 8.2.5 (2019-09-24): Replaced with C_PvP.GetMatchPVPStatColumns(). The previous api is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetMatchPVPStatColumns
+---
+--- Usage: columns = C_PvP.GetMatchPVPStatColumns()
+---
+-- function C_PvP.GetMatchPVPStatColumns()
+-- end
+
+---======================================================================
+--- C_PvP.GetNextHonorLevelForReward
+---======================================================================
+--- Arguments:
+--- @param honorLevel number
+---
+--- Returns:
+--- @return number nextHonorLevelWithReward ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetNextHonorLevelForReward
+---
+--- Usage: nextHonorLevelWithReward = C_PvP.GetNextHonorLevelForReward(honorLevel)
+---
+-- function C_PvP.GetNextHonorLevelForReward()
+-- end
+
+---======================================================================
+--- C_PvP.GetOutdoorPvPWaitTime
+---======================================================================
+--- Returns the time until the next battle in a PvP zone like Wintergrasp and Tol Barad.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number pvpWaitTime - seconds until the battle starts.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_PvP.GetOutdoorPvPWaitTime.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetOutdoorPvPWaitTime
+---
+--- Usage: pvpWaitTime = C_PvP.GetOutdoorPvPWaitTime(uiMapID)
+---
+-- function C_PvP.GetOutdoorPvPWaitTime()
+-- end
+
+---======================================================================
+--- C_PvP.GetPersonalRatedBGBlitzSpecStats
+---======================================================================
+--- Returns:
+--- @return RatedBGBlitzSpecStats specStats ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPersonalRatedBGBlitzSpecStats
+---
+--- Usage: specStats = C_PvP.GetPersonalRatedBGBlitzSpecStats()
+---
+-- function C_PvP.GetPersonalRatedBGBlitzSpecStats()
+-- end
+
+---======================================================================
+--- C_PvP.GetPersonalRatedSoloShuffleSpecStats
+---======================================================================
+--- Returns:
+--- @return RatedSoloShuffleSpecStats specStats ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPersonalRatedSoloShuffleSpecStats
+---
+--- Usage: specStats = C_PvP.GetPersonalRatedSoloShuffleSpecStats()
+---
+-- function C_PvP.GetPersonalRatedSoloShuffleSpecStats()
+-- end
+
+---======================================================================
+--- C_PvP.GetPostMatchCurrencyRewards
+---======================================================================
+--- Returns:
+--- @return  rewards structure - PVPPostMatchCurrencyReward[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPostMatchCurrencyRewards
+---
+--- Usage: rewards = C_PvP.GetPostMatchCurrencyRewards()
+---
+-- function C_PvP.GetPostMatchCurrencyRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetPostMatchItemRewards
+---======================================================================
+--- Returns:
+--- @return PVPPostMatchItemReward rewards []
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPostMatchItemRewards
+---
+--- Usage: rewards = C_PvP.GetPostMatchItemRewards()
+---
+-- function C_PvP.GetPostMatchItemRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetPVPActiveMatchPersonalRatedInfo
+---======================================================================
+--- Returns:
+--- @return PVPPersonalRatedInfo info ?
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo
+---
+--- Usage: info = C_PvP.GetPVPActiveMatchPersonalRatedInfo()
+---
+-- function C_PvP.GetPVPActiveMatchPersonalRatedInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetPVPActiveRatedMatchDeserterPenalty
+---======================================================================
+--- Returns:
+--- @return RatedMatchDeserterPenalty deserterPenalty ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPActiveRatedMatchDeserterPenalty
+---
+--- Usage: deserterPenalty = C_PvP.GetPVPActiveRatedMatchDeserterPenalty()
+---
+-- function C_PvP.GetPVPActiveRatedMatchDeserterPenalty()
+-- end
+
+---======================================================================
+--- C_PvP.GetPVPSeasonRewardAchievementID
+---======================================================================
+--- Returns:
+--- @return number achievementID
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID
+---
+--- Usage: achievementID = C_PvP.GetPVPSeasonRewardAchievementID()
+---
+-- function C_PvP.GetPVPSeasonRewardAchievementID()
+-- end
+
+---======================================================================
+--- C_PvP.GetPvpTalentsUnlockedLevel
+---======================================================================
+--- Returns:
+--- @return number unlockLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTalentsUnlockedLevel
+---
+--- Usage: unlockLevel = C_PvP.GetPvpTalentsUnlockedLevel()
+---
+-- function C_PvP.GetPvpTalentsUnlockedLevel()
+-- end
+
+---======================================================================
+--- C_PvP.GetPvpTierID
+---======================================================================
+--- Arguments:
+--- @param tierEnum number
+--- @param bracketEnum number
+---
+--- Returns:
+--- @return number id ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTierID
+---
+--- Usage: id = C_PvP.GetPvpTierID(tierEnum, bracketEnum)
+---
+-- function C_PvP.GetPvpTierID()
+-- end
+
+---======================================================================
+--- C_PvP.GetPvpTierInfo
+---======================================================================
+--- Arguments:
+--- @param tierID number
+---
+--- Returns:
+--- @return  pvpTierInfo structure - PvpTierInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTierInfo
+---
+--- Usage: pvpTierInfo = C_PvP.GetPvpTierInfo(tierID)
+---
+-- function C_PvP.GetPvpTierInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetRandomBGInfo
+---======================================================================
+--- Returns:
+--- @return  info structure - RandomBGInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomBGInfo
+---
+--- Usage: info = C_PvP.GetRandomBGInfo()
+---
+-- function C_PvP.GetRandomBGInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetRandomBGRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 7.2.0 (2017-03-28): Moved to C_PvP.GetRandomBGRewards()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomBGRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetRandomBGRewards()
+---
+-- function C_PvP.GetRandomBGRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetRandomEpicBGInfo
+---======================================================================
+--- Returns:
+--- @return  info structure - RandomBGInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomEpicBGInfo
+---
+--- Usage: info = C_PvP.GetRandomEpicBGInfo()
+---
+-- function C_PvP.GetRandomEpicBGInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetRandomEpicBGRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomEpicBGRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetRandomEpicBGRewards()
+---
+-- function C_PvP.GetRandomEpicBGRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetRatedBGRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @since Patch 7.2.0 (2017-03-28): Moved to C_PvP.GetRatedBGRewards()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedBGRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetRatedBGRewards()
+---
+-- function C_PvP.GetRatedBGRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetRatedSoloRBGMinItemLevel
+---======================================================================
+--- Returns:
+--- @return number minItemLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloRBGMinItemLevel
+---
+--- Usage: minItemLevel = C_PvP.GetRatedSoloRBGMinItemLevel()
+---
+-- function C_PvP.GetRatedSoloRBGMinItemLevel()
+-- end
+
+---======================================================================
+--- C_PvP.GetRatedSoloRBGRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloRBGRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetRatedSoloRBGRewards()
+---
+-- function C_PvP.GetRatedSoloRBGRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetRatedSoloShuffleMinItemLevel
+---======================================================================
+--- Returns:
+--- @return number minItemLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel
+---
+--- Usage: minItemLevel = C_PvP.GetRatedSoloShuffleMinItemLevel()
+---
+-- function C_PvP.GetRatedSoloShuffleMinItemLevel()
+-- end
+
+---======================================================================
+--- C_PvP.GetRatedSoloShuffleRewards
+---======================================================================
+--- Returns:
+--- @return number honor
+--- @return number experience
+--- @return BattlefieldItemReward itemRewards []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloShuffleRewards
+---
+--- Usage: honor, experience, itemRewards, currencyRewards, roleShortageBonus = C_PvP.GetRatedSoloShuffleRewards()
+---
+-- function C_PvP.GetRatedSoloShuffleRewards()
+-- end
+
+---======================================================================
+--- C_PvP.GetRewardItemLevelsByTierEnum
+---======================================================================
+--- Arguments:
+--- @param pvpTierEnum number
+---
+--- Returns:
+--- @return number activityItemLevel
+--- @return number weeklyItemLevel
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetRewardItemLevelsByTierEnum
+---
+--- Usage: activityItemLevel, weeklyItemLevel = C_PvP.GetRewardItemLevelsByTierEnum(pvpTierEnum)
+---
+-- function C_PvP.GetRewardItemLevelsByTierEnum()
+-- end
+
+---======================================================================
+--- C_PvP.GetScoreInfo
+---======================================================================
+--- Returns PvP score info.
+---
+--- Arguments:
+--- @param offsetIndex number
+---
+--- Returns:
+--- @return PVPScoreInfo info ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added roleAssigned field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetScoreInfo
+---
+--- Usage: info = C_PvP.GetScoreInfo(offsetIndex)
+     = C_PvP.GetScoreInfoByPlayerGuid(guid)
+---
+-- function C_PvP.GetScoreInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetScoreInfoByPlayerGuid
+---======================================================================
+--- Returns PvP score info.
+---
+--- Arguments:
+--- @param offsetIndex number
+---
+--- Returns:
+--- @return PVPScoreInfo info ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added roleAssigned field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetScoreInfoByPlayerGuid
+---
+--- Usage: info = C_PvP.GetScoreInfo(offsetIndex)
+     = C_PvP.GetScoreInfoByPlayerGuid(guid)
+---
+-- function C_PvP.GetScoreInfoByPlayerGuid()
+-- end
+
+---======================================================================
+--- C_PvP.GetSeasonBestInfo
+---======================================================================
+--- Returns:
+--- @return number tierID
+--- @return number nextTierID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetSeasonBestInfo
+---
+--- Usage: tierID, nextTierID = C_PvP.GetSeasonBestInfo()
+---
+-- function C_PvP.GetSeasonBestInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetSkirmishInfo
+---======================================================================
+--- Arguments:
+--- @param pvpBracket number
+---
+--- Returns:
+--- @return BattlemasterListInfo battlemasterListInfo
+---
+--- @since Patch 11.1.7 (2025-06-17): Changed instanceType (number) field to matchmakingType (enum).
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetSkirmishInfo
+---
+--- Usage: battlemasterListInfo = C_PvP.GetSkirmishInfo(pvpBracket)
+---
+-- function C_PvP.GetSkirmishInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetSpecialEventBrawlInfo
+---======================================================================
+--- Returns:
+--- @return PvpBrawlInfo brawlInfo ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetSpecialEventBrawlInfo
+---
+--- Usage: brawlInfo = C_PvP.GetSpecialEventBrawlInfo()
+---
+-- function C_PvP.GetSpecialEventBrawlInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetTeamInfo
+---======================================================================
+--- Arguments:
+--- @param factionIndex number
+---
+--- Returns:
+--- @return  info structure - PVPTeamInfo (nilable)
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetTeamInfo
+---
+--- Usage: info = C_PvP.GetTeamInfo(factionIndex)
+---
+-- function C_PvP.GetTeamInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetUIDisplaySeason
+---======================================================================
+--- Returns:
+--- @return number uiDisplaySeason
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetUIDisplaySeason
+---
+--- Usage: uiDisplaySeason = C_PvP.GetUIDisplaySeason()
+---
+-- function C_PvP.GetUIDisplaySeason()
+-- end
+
+---======================================================================
+--- C_PvP.GetWarModeRewardBonus
+---======================================================================
+--- Returns:
+--- @return number rewardBonus
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetWarModeRewardBonus
+---
+--- Usage: rewardBonus = C_PvP.GetWarModeRewardBonus()
+---
+-- function C_PvP.GetWarModeRewardBonus()
+-- end
+
+---======================================================================
+--- C_PvP.GetWarModeRewardBonusDefault
+---======================================================================
+--- Returns:
+--- @return number defaultBonus
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetWarModeRewardBonusDefault
+---
+--- Usage: defaultBonus = C_PvP.GetWarModeRewardBonusDefault()
+---
+-- function C_PvP.GetWarModeRewardBonusDefault()
+-- end
+
+---======================================================================
+--- C_PvP.GetWeeklyChestInfo
+---======================================================================
+--- Returns:
+--- @return boolean rewardAchieved
+--- @return boolean lastWeekRewardAchieved
+--- @return boolean lastWeekRewardClaimed
+--- @return number pvpTierMaxFromWins
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetWeeklyChestInfo
+---
+--- Usage: rewardAchieved, lastWeekRewardAchieved, lastWeekRewardClaimed, pvpTierMaxFromWins = C_PvP.GetWeeklyChestInfo()
+---
+-- function C_PvP.GetWeeklyChestInfo()
+-- end
+
+---======================================================================
+--- C_PvP.GetZonePVPInfo
+---======================================================================
+--- Returns:
+--- @return string pvpType
+--- @return boolean isSubZonePvP
+--- @return string factionName ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.GetZonePVPInfo
+---
+--- Usage: pvpType, isSubZonePvP, factionName = C_PvP.GetZonePVPInfo()
+---
+-- function C_PvP.GetZonePVPInfo()
+-- end
+
+---======================================================================
+--- C_PvP.HasArenaSkirmishWinToday
+---======================================================================
+--- Returns:
+--- @return boolean hasArenaSkirmishWinToday
+---
+--- @since Patch 7.2.0 (2017-03-28): Added. Partially replaces GetArenaSkirmishRewards. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.HasArenaSkirmishWinToday
+---
+--- Usage: hasArenaSkirmishWinToday = C_PvP.HasArenaSkirmishWinToday()
+---
+-- function C_PvP.HasArenaSkirmishWinToday()
+-- end
+
+---======================================================================
+--- C_PvP.IsActiveBattlefield
+---======================================================================
+--- Returns whether you are currently in a battleground/battlefield.
+---
+--- Returns:
+--- @return boolean isActiveBattlefield - whether the player is in an active battlefield.
+---
+--- @since Patch 8.1.5 (2019-03-12): Moved to C_PvP.IsActiveBattlefield. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsActiveBattlefield
+---
+--- Usage: isActiveBattlefield = C_PvP.IsActiveBattlefield()
+---
+--- See also:
+--- - IsInInstance
+--- - UnitInBattleground
+---
+-- function C_PvP.IsActiveBattlefield()
+-- end
+
+---======================================================================
+--- C_PvP.IsActiveMatchRegistered
+---======================================================================
+--- Returns:
+--- @return boolean registered
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsActiveMatchRegistered
+---
+--- Usage: registered = C_PvP.IsActiveMatchRegistered()
+---
+-- function C_PvP.IsActiveMatchRegistered()
+-- end
+
+---======================================================================
+--- C_PvP.IsArena
+---======================================================================
+--- Returns:
+--- @return boolean isArena
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsArena
+---
+--- Usage: isArena = C_PvP.IsArena()
+---
+-- function C_PvP.IsArena()
+-- end
+
+---======================================================================
+--- C_PvP.IsBattleground
+---======================================================================
+--- Returns:
+--- @return boolean isBattleground
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsBattleground
+---
+--- Usage: isBattleground = C_PvP.IsBattleground()
+---
+-- function C_PvP.IsBattleground()
+-- end
+
+---======================================================================
+--- C_PvP.IsBattlegroundEnlistmentBonusActive
+---======================================================================
+--- Returns:
+--- @return boolean battlegroundActive
+--- @return boolean brawlActive
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsBattlegroundEnlistmentBonusActive
+---
+--- Usage: battlegroundActive, brawlActive = C_PvP.IsBattlegroundEnlistmentBonusActive()
+---
+-- function C_PvP.IsBattlegroundEnlistmentBonusActive()
+-- end
+
+---======================================================================
+--- C_PvP.IsBrawlSoloRBG
+---======================================================================
+--- Returns:
+--- @return boolean isBrawlSoloRBG
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsBrawlSoloRBG
+---
+--- Usage: isBrawlSoloRBG = C_PvP.IsBrawlSoloRBG()
+---
+-- function C_PvP.IsBrawlSoloRBG()
+-- end
+
+---======================================================================
+--- C_PvP.IsBrawlSoloShuffle
+---======================================================================
+--- Returns:
+--- @return boolean isBrawlSoloShuffle
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsBrawlSoloShuffle
+---
+--- Usage: isBrawlSoloShuffle = C_PvP.IsBrawlSoloShuffle()
+---
+-- function C_PvP.IsBrawlSoloShuffle()
+-- end
+
+---======================================================================
+--- C_PvP.IsInBrawl
+---======================================================================
+--- Returns:
+--- @return boolean isInBrawl
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsInBrawl
+---
+--- Usage: isInBrawl = C_PvP.IsInBrawl()
+---
+-- function C_PvP.IsInBrawl()
+-- end
+
+---======================================================================
+--- C_PvP.IsInRatedMatchWithDeserterPenalty
+---======================================================================
+--- Returns:
+--- @return boolean isInRatedMatchWithDeserterPenalty
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsInRatedMatchWithDeserterPenalty
+---
+--- Usage: isInRatedMatchWithDeserterPenalty = C_PvP.IsInRatedMatchWithDeserterPenalty()
+---
+-- function C_PvP.IsInRatedMatchWithDeserterPenalty()
+-- end
+
+---======================================================================
+--- C_PvP.IsMatchActive
+---======================================================================
+--- Returns:
+--- @return boolean isActive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchActive
+---
+--- Usage: isActive = C_PvP.IsMatchActive()
+---
+-- function C_PvP.IsMatchActive()
+-- end
+
+---======================================================================
+--- C_PvP.IsMatchComplete
+---======================================================================
+--- Returns:
+--- @return boolean isComplete
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchComplete
+---
+--- Usage: isComplete = C_PvP.IsMatchComplete()
+---
+-- function C_PvP.IsMatchComplete()
+-- end
+
+---======================================================================
+--- C_PvP.IsMatchConsideredArena
+---======================================================================
+--- Returns:
+--- @return boolean asArena
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchConsideredArena
+---
+--- Usage: asArena = C_PvP.IsMatchConsideredArena()
+---
+-- function C_PvP.IsMatchConsideredArena()
+-- end
+
+---======================================================================
+--- C_PvP.IsMatchFactional
+---======================================================================
+--- Returns:
+--- @return boolean isFactional
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchFactional
+---
+--- Usage: isFactional = C_PvP.IsMatchFactional()
+---
+-- function C_PvP.IsMatchFactional()
+-- end
+
+---======================================================================
+--- C_PvP.IsPVPMap
+---======================================================================
+--- Returns:
+--- @return boolean isPVPMap
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsPVPMap
+---
+--- Usage: isPVPMap = C_PvP.IsPVPMap()
+---
+-- function C_PvP.IsPVPMap()
+-- end
+
+---======================================================================
+--- C_PvP.IsRatedArena
+---======================================================================
+--- Returns:
+--- @return boolean isRatedArena
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedArena
+---
+--- Usage: isRatedArena = C_PvP.IsRatedArena()
+---
+-- function C_PvP.IsRatedArena()
+-- end
+
+---======================================================================
+--- C_PvP.IsRatedBattleground
+---======================================================================
+--- Returns:
+--- @return boolean isRatedBattleground
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_PvP.IsRatedBattleground. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedBattleground
+---
+--- Usage: isRatedBattleground = C_PvP.IsRatedBattleground()
+---
+-- function C_PvP.IsRatedBattleground()
+-- end
+
+---======================================================================
+--- C_PvP.IsRatedMap
+---======================================================================
+--- Returns if the map is a rated battleground or arena.
+---
+--- Returns:
+--- @return boolean isRatedMap
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_PvP.IsRatedMap. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedMap
+---
+--- Usage: isRatedMap = C_PvP.IsRatedMap()
+---
+-- function C_PvP.IsRatedMap()
+-- end
+
+---======================================================================
+--- C_PvP.IsRatedSoloRBG
+---======================================================================
+--- Returns:
+--- @return boolean isRatedSoloRBG
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloRBG
+---
+--- Usage: isRatedSoloRBG = C_PvP.IsRatedSoloRBG()
+---
+-- function C_PvP.IsRatedSoloRBG()
+-- end
+
+---======================================================================
+--- C_PvP.IsRatedSoloShuffle
+---======================================================================
+--- Returns:
+--- @return boolean isRatedSoloShuffle
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloShuffle
+---
+--- Usage: isRatedSoloShuffle = C_PvP.IsRatedSoloShuffle()
+---
+-- function C_PvP.IsRatedSoloShuffle()
+-- end
+
+---======================================================================
+--- C_PvP.IsSoloRBG
+---======================================================================
+--- Returns:
+--- @return boolean isSoloRBG
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsSoloRBG
+---
+--- Usage: isSoloRBG = C_PvP.IsSoloRBG()
+---
+-- function C_PvP.IsSoloRBG()
+-- end
+
+---======================================================================
+--- C_PvP.IsSoloShuffle
+---======================================================================
+--- Returns:
+--- @return boolean isSoloShuffle
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsSoloShuffle
+---
+--- Usage: isSoloShuffle = C_PvP.IsSoloShuffle()
+---
+-- function C_PvP.IsSoloShuffle()
+-- end
+
+---======================================================================
+--- C_PvP.IsSubZonePVPPOI
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsSubZonePVPPOI
+---
+--- Usage: result = C_PvP.IsSubZonePVPPOI()
+---
+-- function C_PvP.IsSubZonePVPPOI()
+-- end
+
+---======================================================================
+--- C_PvP.IsWarModeActive
+---======================================================================
+--- Returns:
+--- @return boolean warModeActive
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeActive
+---
+--- Usage: warModeActive = C_PvP.IsWarModeActive()
+---
+-- function C_PvP.IsWarModeActive()
+-- end
+
+---======================================================================
+--- C_PvP.IsWarModeDesired
+---======================================================================
+--- Indicates whether the player has opted into War Mode beginning with Battle for Azeroth, regardless if the player is in an outdoor zone where such PvP is actually possible.
+---
+--- Returns:
+--- @return boolean warModeDesired - True if the player has turned war mode on; false otherwise.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeDesired
+---
+--- Usage: warModeDesired = C_PvP.IsWarModeDesired()
+---
+--- Examples:
+--- Example 1:
+---   for i=1, 4                                  
+---   	local unit = "party"..i
+---   	if UnitExists(unit) then                   
+---   		if UnitInPhase(unit) then                
+---   			print(string.format("Party member %d: Currently in phase!", i))
+---   		else
+---   			if UnitIsWarModePhased(unit) then
+---   				if C_PvP.IsWarModeDesired() then    
+---   					print(string.format("Party member &d: %s",i, PARTY_PLAYER_WARMODE_DISABLED))
+---   				else
+---   					print(string.format("Party member &d: %s",i, PARTY_PLAYER_WARMODE_ENABLED))
+---   				end
+---   			else
+---   				print(string.format("Party member &d: %s",i, PARTY_PHASED_MESSAGE))
+---   			end
+---   		end
+---   	end
+---   end
+---
+--- See also:
+--- - GetPVPDesired
+---
+-- function C_PvP.IsWarModeDesired()
+-- end
+
+---======================================================================
+--- C_PvP.IsWarModeFeatureEnabled
+---======================================================================
+--- Returns:
+--- @return boolean warModeEnabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeFeatureEnabled
+---
+--- Usage: warModeEnabled = C_PvP.IsWarModeFeatureEnabled()
+---
+-- function C_PvP.IsWarModeFeatureEnabled()
+-- end
+
+---======================================================================
+--- C_PvP.JoinBrawl
+---======================================================================
+--- Arguments:
+--- @param isSpecialBrawl boolean ? = false
+---
+--- @since Patch 9.2.0 (2022-02-22): Added isSpecialBrawl return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.JoinBrawl
+---
+--- Usage: C_PvP.JoinBrawl([isSpecialBrawl])
+---
+-- function C_PvP.JoinBrawl()
+-- end
+
+---======================================================================
+--- C_PvP.JoinRatedBGBlitz
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.JoinRatedBGBlitz
+---
+--- Usage: C_PvP.JoinRatedBGBlitz()
+---
+-- function C_PvP.JoinRatedBGBlitz()
+-- end
+
+---======================================================================
+--- C_PvP.RequestCrowdControlSpell
+---======================================================================
+--- Arguments:
+--- @param playerToken string
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.RequestCrowdControlSpell
+---
+--- Usage: C_PvP.RequestCrowdControlSpell(playerToken)
+---
+-- function C_PvP.RequestCrowdControlSpell()
+-- end
+
+---======================================================================
+--- C_PvP.SetPVP
+---======================================================================
+--- Arguments:
+--- @param enablePVP boolean ? = false
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.SetPVP
+---
+--- Usage: C_PvP.SetPVP([enablePVP])
+---
+-- function C_PvP.SetPVP()
+-- end
+
+---======================================================================
+--- C_PvP.SetWarModeDesired
+---======================================================================
+--- Arguments:
+--- @param warModeDesired boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.SetWarModeDesired
+---
+--- Usage: C_PvP.SetWarModeDesired(warModeDesired)
+---
+-- function C_PvP.SetWarModeDesired()
+-- end
+
+---======================================================================
+--- C_PvP.StartSoloRBGWarGameByName
+---======================================================================
+--- Arguments:
+--- @param args string
+---
+--- Returns:
+--- @return number success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.StartSoloRBGWarGameByName
+---
+--- Usage: success = C_PvP.StartSoloRBGWarGameByName(args)
+---
+-- function C_PvP.StartSoloRBGWarGameByName()
+-- end
+
+---======================================================================
+--- C_PvP.StartSpectatorSoloRBGWarGame
+---======================================================================
+--- Arguments:
+--- @param opaqueID1 number
+--- @param opaqueID2 number
+--- @param specifiedMap string
+--- @param tournamentRules boolean
+---
+--- Returns:
+--- @return number success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.StartSpectatorSoloRBGWarGame
+---
+--- Usage: success = C_PvP.StartSpectatorSoloRBGWarGame(opaqueID1, opaqueID2, specifiedMap, tournamentRules)
+---
+-- function C_PvP.StartSpectatorSoloRBGWarGame()
+-- end
+
+---======================================================================
+--- C_PvP.TogglePVP
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.TogglePVP
+---
+--- Usage: C_PvP.TogglePVP()
+---
+-- function C_PvP.TogglePVP()
+-- end
+
+---======================================================================
+--- C_PvP.ToggleWarMode
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PvP.ToggleWarMode
+---
+--- Usage: C_PvP.ToggleWarMode()
+---
+-- function C_PvP.ToggleWarMode()
+-- end

@@ -1,0 +1,526 @@
+--[=[
+-- C_GuildInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 31
+--]=]
+
+--- @class C_GuildInfo
+--- C_GuildInfo namespace contains 31 functions
+local C_GuildInfo = {}
+
+--[=[
+-- C_GuildInfo Functions:
+-- - C_GuildInfo.AreGuildEventsEnabled
+-- - C_GuildInfo.CanEditOfficerNote
+-- - C_GuildInfo.CanSpeakInGuildChat
+-- - C_GuildInfo.CanViewOfficerNote
+-- - C_GuildInfo.Demote
+-- - C_GuildInfo.Disband
+-- - C_GuildInfo.GetGuildNewsInfo
+-- - C_GuildInfo.GetGuildRankOrder
+-- - C_GuildInfo.GetGuildTabardInfo
+-- - C_GuildInfo.GuildControlGetRankFlags
+-- - C_GuildInfo.GuildRoster
+-- - C_GuildInfo.Invite
+-- - C_GuildInfo.IsEncounterGuildNewsEnabled
+-- - C_GuildInfo.IsGuildOfficer
+-- - C_GuildInfo.IsGuildRankAssignmentAllowed
+-- - C_GuildInfo.IsGuildReputationEnabled
+-- - C_GuildInfo.Leave
+-- - C_GuildInfo.MemberExistsByName
+-- - C_GuildInfo.Promote
+-- - C_GuildInfo.QueryGuildMemberRecipes
+-- - C_GuildInfo.QueryGuildMembersForRecipe
+-- - C_GuildInfo.RemoveFromGuild
+-- - C_GuildInfo.RequestGuildRename
+-- - C_GuildInfo.RequestGuildRenameRefund
+-- - C_GuildInfo.RequestRenameNameCheck
+-- - C_GuildInfo.RequestRenameStatus
+-- - C_GuildInfo.SetGuildRankOrder
+-- - C_GuildInfo.SetLeader
+-- - C_GuildInfo.SetMOTD
+-- - C_GuildInfo.SetNote
+-- - C_GuildInfo.Uninvite
+--]=]
+
+---======================================================================
+--- C_GuildInfo.AreGuildEventsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.AreGuildEventsEnabled
+---
+--- Usage: enabled = C_GuildInfo.AreGuildEventsEnabled()
+---
+-- function C_GuildInfo.AreGuildEventsEnabled()
+-- end
+
+---======================================================================
+--- C_GuildInfo.CanEditOfficerNote
+---======================================================================
+--- Returns true if the player can edit guild officer notes.
+---
+--- Returns:
+--- @return boolean canEditOfficerNote
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_GuildInfo.CanEditOfficerNote()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanEditOfficerNote
+---
+--- Usage: canEditOfficerNote = C_GuildInfo.CanEditOfficerNote()
+---
+-- function C_GuildInfo.CanEditOfficerNote()
+-- end
+
+---======================================================================
+--- C_GuildInfo.CanSpeakInGuildChat
+---======================================================================
+--- Returns true if the player can use guild chat.
+---
+--- Returns:
+--- @return boolean canSpeakInGuildChat
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanSpeakInGuildChat
+---
+--- Usage: canSpeakInGuildChat = C_GuildInfo.CanSpeakInGuildChat()
+---
+-- function C_GuildInfo.CanSpeakInGuildChat()
+-- end
+
+---======================================================================
+--- C_GuildInfo.CanViewOfficerNote
+---======================================================================
+--- Returns true if the player can view guild officer notes.
+---
+--- Returns:
+--- @return boolean canViewOfficerNote
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_GuildInfo.CanViewOfficerNote()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanViewOfficerNote
+---
+--- Usage: canViewOfficerNote = C_GuildInfo.CanViewOfficerNote()
+---
+-- function C_GuildInfo.CanViewOfficerNote()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Demote
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Demote
+---
+--- Usage: C_GuildInfo.Demote(name)
+---
+-- function C_GuildInfo.Demote()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Disband
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Disband
+---
+--- Usage: C_GuildInfo.Disband()
+---
+-- function C_GuildInfo.Disband()
+-- end
+
+---======================================================================
+--- C_GuildInfo.GetGuildNewsInfo
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return  newsInfo structure - GuildNewsInfo
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_GuildInfo.GetGuildNewsInfo. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildNewsInfo
+---
+--- Usage: newsInfo = C_GuildInfo.GetGuildNewsInfo(index)
+---
+-- function C_GuildInfo.GetGuildNewsInfo()
+-- end
+
+---======================================================================
+--- C_GuildInfo.GetGuildRankOrder
+---======================================================================
+--- Returns the current rank of a guild member.
+---
+--- Arguments:
+--- @param guid string
+---
+--- Returns:
+--- @return number rankOrder - Starting at 1 (Guild Master)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildRankOrder
+---
+--- Usage: rankOrder = C_GuildInfo.GetGuildRankOrder(guid)
+---
+-- function C_GuildInfo.GetGuildRankOrder()
+-- end
+
+---======================================================================
+--- C_GuildInfo.GetGuildTabardInfo
+---======================================================================
+--- Arguments:
+--- @param unit string : UnitId
+---
+--- Returns:
+--- @return  tabardInfo structure - GuildTabardInfo (nilable)
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildTabardInfo
+---
+--- Usage: tabardInfo = C_GuildInfo.GetGuildTabardInfo(unit)
+---
+-- function C_GuildInfo.GetGuildTabardInfo()
+-- end
+
+---======================================================================
+--- C_GuildInfo.GuildControlGetRankFlags
+---======================================================================
+--- Returns the permission flags for a rank index.
+---
+--- Arguments:
+--- @param rankOrder number - Starting at 1 (Guild Master)
+---
+--- Returns:
+--- @return boolean permissions [] - table indices ranging from 1 to 21.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added. Replaces GuildControlGetRankFlags.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GuildControlGetRankFlags
+---
+--- Usage: permissions = C_GuildInfo.GuildControlGetRankFlags(rankOrder)
+---
+-- function C_GuildInfo.GuildControlGetRankFlags()
+-- end
+
+---======================================================================
+--- C_GuildInfo.GuildRoster
+---======================================================================
+--- Requests updated guild roster information from the server.
+---
+--- @since Patch 8.2.0 (2019-06-25): Moved to C_GuildInfo.GuildRoster()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GuildRoster
+---
+--- Usage: C_GuildInfo.GuildRoster()
+---
+--- See also:
+--- - GetGuildRosterInfo
+---
+-- function C_GuildInfo.GuildRoster()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Invite
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Invite
+---
+--- Usage: C_GuildInfo.Invite(name)
+---
+-- function C_GuildInfo.Invite()
+-- end
+
+---======================================================================
+--- C_GuildInfo.IsEncounterGuildNewsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsEncounterGuildNewsEnabled
+---
+--- Usage: enabled = C_GuildInfo.IsEncounterGuildNewsEnabled()
+---
+-- function C_GuildInfo.IsEncounterGuildNewsEnabled()
+-- end
+
+---======================================================================
+--- C_GuildInfo.IsGuildOfficer
+---======================================================================
+--- Returns:
+--- @return boolean isOfficer
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildOfficer
+---
+--- Usage: isOfficer = C_GuildInfo.IsGuildOfficer()
+---
+-- function C_GuildInfo.IsGuildOfficer()
+-- end
+
+---======================================================================
+--- C_GuildInfo.IsGuildRankAssignmentAllowed
+---======================================================================
+--- Arguments:
+--- @param guid string
+--- @param rankOrder number - Starting at 1 (Guild Master)
+---
+--- Returns:
+--- @return boolean isGuildRankAssignmentAllowed
+---
+--- @since Patch 8.1.0 (2018-12-11): Added isGuildRankAssignmentAllowed return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildRankAssignmentAllowed
+---
+--- Usage: isGuildRankAssignmentAllowed = C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder)
+---
+-- function C_GuildInfo.IsGuildRankAssignmentAllowed()
+-- end
+
+---======================================================================
+--- C_GuildInfo.IsGuildReputationEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildReputationEnabled
+---
+--- Usage: enabled = C_GuildInfo.IsGuildReputationEnabled()
+---
+-- function C_GuildInfo.IsGuildReputationEnabled()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Leave
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Leave
+---
+--- Usage: C_GuildInfo.Leave()
+---
+-- function C_GuildInfo.Leave()
+-- end
+
+---======================================================================
+--- C_GuildInfo.MemberExistsByName
+---======================================================================
+--- Arguments:
+--- @param name string
+---
+--- Returns:
+--- @return boolean exists
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.MemberExistsByName
+---
+--- Usage: exists = C_GuildInfo.MemberExistsByName(name)
+---
+-- function C_GuildInfo.MemberExistsByName()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Promote
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Promote
+---
+--- Usage: C_GuildInfo.Promote(name)
+---
+-- function C_GuildInfo.Promote()
+-- end
+
+---======================================================================
+--- C_GuildInfo.QueryGuildMemberRecipes
+---======================================================================
+--- Shows the guild member recipes for a profession.
+---
+--- Arguments:
+--- @param guildMemberGUID string
+--- @param skillLineID number - Tradeskill ID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.QueryGuildMemberRecipes
+---
+--- Usage: C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID)
+---
+--- See also:
+--- - GetGuildMemberRecipes
+---
+-- function C_GuildInfo.QueryGuildMemberRecipes()
+-- end
+
+---======================================================================
+--- C_GuildInfo.QueryGuildMembersForRecipe
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+--- @param recipeSpellID number
+--- @param recipeLevel number ?
+---
+--- Returns:
+--- @return number updatedRecipeSpellID
+---
+--- @since Patch 9.0.5 (2021-03-09): Moved to C_GuildInfo.QueryGuildMembersForRecipe()
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.QueryGuildMembersForRecipe
+---
+--- Usage: updatedRecipeSpellID = C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID [, recipeLevel])
+---
+-- function C_GuildInfo.QueryGuildMembersForRecipe()
+-- end
+
+---======================================================================
+--- C_GuildInfo.RemoveFromGuild
+---======================================================================
+--- Removes a member from the guild.
+---
+--- Arguments:
+--- @param guid string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RemoveFromGuild
+---
+--- Usage: C_GuildInfo.RemoveFromGuild(guid)
+---
+--- See also:
+--- - GuildUninvite
+---
+-- function C_GuildInfo.RemoveFromGuild()
+-- end
+
+---======================================================================
+--- C_GuildInfo.RequestGuildRename
+---======================================================================
+--- Arguments:
+--- @param desiredName string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestGuildRename
+---
+--- Usage: C_GuildInfo.RequestGuildRename(desiredName)
+---
+-- function C_GuildInfo.RequestGuildRename()
+-- end
+
+---======================================================================
+--- C_GuildInfo.RequestGuildRenameRefund
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestGuildRenameRefund
+---
+--- Usage: C_GuildInfo.RequestGuildRenameRefund()
+---
+-- function C_GuildInfo.RequestGuildRenameRefund()
+-- end
+
+---======================================================================
+--- C_GuildInfo.RequestRenameNameCheck
+---======================================================================
+--- Arguments:
+--- @param desiredName string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestRenameNameCheck
+---
+--- Usage: C_GuildInfo.RequestRenameNameCheck(desiredName)
+---
+-- function C_GuildInfo.RequestRenameNameCheck()
+-- end
+
+---======================================================================
+--- C_GuildInfo.RequestRenameStatus
+---======================================================================
+--- Returns:
+--- @return boolean ableToRequest
+---
+--- @since Patch 11.1.5 (2025-04-22): Added ableToRequest return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestRenameStatus
+---
+--- Usage: ableToRequest = C_GuildInfo.RequestRenameStatus()
+---
+-- function C_GuildInfo.RequestRenameStatus()
+-- end
+
+---======================================================================
+--- C_GuildInfo.SetGuildRankOrder
+---======================================================================
+--- Sets the guild rank for a member.
+---
+--- Arguments:
+--- @param guid string
+--- @param rankOrder number - Starting at 1 (Guild Master)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetGuildRankOrder
+---
+--- Usage: C_GuildInfo.SetGuildRankOrder(guid, rankOrder)
+---
+-- function C_GuildInfo.SetGuildRankOrder()
+-- end
+
+---======================================================================
+--- C_GuildInfo.SetLeader
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetLeader
+---
+--- Usage: C_GuildInfo.SetLeader(name)
+---
+-- function C_GuildInfo.SetLeader()
+-- end
+
+---======================================================================
+--- C_GuildInfo.SetMOTD
+---======================================================================
+--- Arguments:
+--- @param motd string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetMOTD
+---
+--- Usage: C_GuildInfo.SetMOTD(motd)
+---
+-- function C_GuildInfo.SetMOTD()
+-- end
+
+---======================================================================
+--- C_GuildInfo.SetNote
+---======================================================================
+--- Sets the guild note for a member.
+---
+--- Arguments:
+--- @param guid string
+--- @param note string
+--- @param isPublic boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetNote
+---
+--- Usage: C_GuildInfo.SetNote(guid, note, isPublic)
+---
+--- See also:
+--- - GuildRosterSetPublicNote
+---
+-- function C_GuildInfo.SetNote()
+-- end
+
+---======================================================================
+--- C_GuildInfo.Uninvite
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param name string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Uninvite
+---
+--- Usage: C_GuildInfo.Uninvite(name)
+---
+-- function C_GuildInfo.Uninvite()
+-- end

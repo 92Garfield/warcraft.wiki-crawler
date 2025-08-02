@@ -1,0 +1,748 @@
+--[=[
+-- C_UIWidgetManager API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 41
+--]=]
+
+--- @class C_UIWidgetManager
+--- C_UIWidgetManager namespace contains 41 functions
+local C_UIWidgetManager = {}
+
+--[=[
+-- C_UIWidgetManager Functions:
+-- - C_UIWidgetManager.GetAllWidgetsBySetID
+-- - C_UIWidgetManager.GetBelowMinimapWidgetSetID
+-- - C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetCaptureZoneVisualizationInfo
+-- - C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo
+-- - C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo
+-- - C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetItemDisplayVisualizationInfo
+-- - C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetObjectiveTrackerWidgetSetID
+-- - C_UIWidgetManager.GetPowerBarWidgetSetID
+-- - C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetSpacerVisualizationInfo
+-- - C_UIWidgetManager.GetSpellDisplayVisualizationInfo
+-- - C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetTextColumnRowVisualizationInfo
+-- - C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo
+-- - C_UIWidgetManager.GetTextureAndTextVisualizationInfo
+-- - C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo
+-- - C_UIWidgetManager.GetTopCenterWidgetSetID
+-- - C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo
+-- - C_UIWidgetManager.GetWidgetSetInfo
+-- - C_UIWidgetManager.GetZoneControlVisualizationInfo
+-- - C_UIWidgetManager.RegisterUnitForWidgetUpdates
+-- - C_UIWidgetManager.SetProcessingUnit
+-- - C_UIWidgetManager.SetProcessingUnitGuid
+-- - C_UIWidgetManager.UnregisterUnitForWidgetUpdates
+--]=]
+
+---======================================================================
+--- C_UIWidgetManager.GetAllWidgetsBySetID
+---======================================================================
+--- Returns all widgets for a widget set ID.
+---
+--- Arguments:
+--- @param setID number : UiWidgetSetID
+---
+--- Returns:
+--- @return UIWidgetInfo widgets []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetAllWidgetsBySetID
+---
+--- Usage: widgets = C_UIWidgetManager.GetAllWidgetsBySetID(setID)
+---
+--- Examples:
+--- Example 1:
+---   local topCenter = C_UIWidgetManager.GetTopCenterWidgetSetID()
+---   local widgets = C_UIWidgetManager.GetAllWidgetsBySetID(topCenter)
+---   for _, w in pairs(widgets) do
+---   	print(w.widgetType, w.widgetID)
+---   end
+---
+--- See also:
+--- - UPDATE_UI_WIDGET
+---
+-- function C_UIWidgetManager.GetAllWidgetsBySetID()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetBelowMinimapWidgetSetID
+---======================================================================
+--- Returns:
+--- @return number setID : UiWidgetSetID - Returns 2
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetBelowMinimapWidgetSetID
+---
+--- Usage: setID = C_UIWidgetManager.GetBelowMinimapWidgetSetID()
+---
+-- function C_UIWidgetManager.GetBelowMinimapWidgetSetID()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return BulletTextListWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number
+---
+--- Returns:
+--- @return ButtonHeaderWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return CaptureBarWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetCaptureZoneVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return CaptureZoneVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetCaptureZoneVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetCaptureZoneVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetCaptureZoneVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo
+---======================================================================
+--- The DiscreteProgressSteps UI Widget is used for the Eye of the Jailer display while in the Maw.
+---
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return DiscreteProgressStepsVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return DoubleIconAndTextWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return DoubleStateIconRowVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return DoubleStatusBarWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added fillMotionType field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return FillUpFramesWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return HorizontalCurrenciesWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return IconAndTextWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return IconTextAndBackgroundWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return IconTextAndCurrenciesWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetItemDisplayVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return ItemDisplayVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetItemDisplayVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetItemDisplayVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetItemDisplayVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return MapPinAnimationWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetObjectiveTrackerWidgetSetID
+---======================================================================
+--- Returns:
+--- @return number setID : UiWidgetSetID - Returns 240
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetObjectiveTrackerWidgetSetID
+---
+--- Usage: setID = C_UIWidgetManager.GetObjectiveTrackerWidgetSetID()
+---
+-- function C_UIWidgetManager.GetObjectiveTrackerWidgetSetID()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetPowerBarWidgetSetID
+---======================================================================
+--- Returns:
+--- @return number setID : UiWidgetSetID - Returns 283
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetPowerBarWidgetSetID
+---
+--- Usage: setID = C_UIWidgetManager.GetPowerBarWidgetSetID()
+---
+-- function C_UIWidgetManager.GetPowerBarWidgetSetID()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return ScenarioHeaderDelvesWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return ScenarioHeaderTimerWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetSpacerVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return SpacerVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetSpacerVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetSpacerVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetSpacerVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetSpellDisplayVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return SpellDisplayVisualizationInfo widgetInfo ?
+---
+--- @since Patch 11.0.2 (2024-08-13): Removed shownState, enabledState fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetSpellDisplayVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetSpellDisplayVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetSpellDisplayVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return StackedResourceTrackerWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return StatusBarWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 10.1.0 (2023-05-02): Added textEnabledState, textFontType, textSizeType  fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextColumnRowVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextColumnRowVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextColumnRowVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextColumnRowVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextColumnRowVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextureAndTextRowVisualizationInfo widgetInfo ?
+---
+--- @since Patch 10.0.2 (2022-11-15): Changed textSizeType field from UIWidgetTextSizeType to UIWidgetTextureAndTextSizeType.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextureAndTextVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextureAndTextVisualizationInfo widgetInfo ?
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureAndTextVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextureAndTextVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextureAndTextVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextureWithAnimationVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextWithStateWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, hAlign, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TextWithSubtextWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTopCenterWidgetSetID
+---======================================================================
+--- Returns the widget set ID for the top center part of the screen.
+---
+--- Returns:
+--- @return number setID : UiWidgetSetID - Returns 1
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTopCenterWidgetSetID
+---
+--- Usage: setID = C_UIWidgetManager.GetTopCenterWidgetSetID()
+---
+--- Examples:
+--- Example 1:
+---   local topCenter = C_UIWidgetManager.GetTopCenterWidgetSetID()
+---   local widgets = C_UIWidgetManager.GetAllWidgetsBySetID(topCenter)
+---   for _, w in pairs(widgets) do
+---   	print(w.widgetType, w.widgetID)
+---   end
+---
+-- function C_UIWidgetManager.GetTopCenterWidgetSetID()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return TugOfWarWidgetVisualizationInfo widgetInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return UnitPowerBarWidgetVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetWidgetSetInfo
+---======================================================================
+--- Arguments:
+--- @param widgetSetID number : UiWidgetSetID
+---
+--- Returns:
+--- @return UIWidgetSetInfo widgetSetInfo
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetWidgetSetInfo
+---
+--- Usage: widgetSetInfo = C_UIWidgetManager.GetWidgetSetInfo(widgetSetID)
+---
+-- function C_UIWidgetManager.GetWidgetSetInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.GetZoneControlVisualizationInfo
+---======================================================================
+--- Arguments:
+--- @param widgetID number - Returned from UPDATE_UI_WIDGET and C_UIWidgetManager.GetAllWidgetsBySetID()
+---
+--- Returns:
+--- @return ZoneControlVisualizationInfo widgetInfo ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added tooltipLoc, modelSceneLayer, scriptedAnimationEffectID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetZoneControlVisualizationInfo
+---
+--- Usage: widgetInfo = C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID)
+---
+-- function C_UIWidgetManager.GetZoneControlVisualizationInfo()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.RegisterUnitForWidgetUpdates
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param isGuid boolean ? = false
+---
+--- @since Patch 9.1.5 (2021-11-02): Added isGuid
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates
+---
+--- Usage: C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken [, isGuid])
+---
+-- function C_UIWidgetManager.RegisterUnitForWidgetUpdates()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.SetProcessingUnit
+---======================================================================
+--- Arguments:
+--- @param unit string ? : UnitId
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.SetProcessingUnit
+---
+--- Usage: C_UIWidgetManager.SetProcessingUnit([unit])
+---
+-- function C_UIWidgetManager.SetProcessingUnit()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.SetProcessingUnitGuid
+---======================================================================
+--- Arguments:
+--- @param unit string ? : UnitId
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.SetProcessingUnitGuid
+---
+--- Usage: C_UIWidgetManager.SetProcessingUnitGuid([unit])
+---
+-- function C_UIWidgetManager.SetProcessingUnitGuid()
+-- end
+
+---======================================================================
+--- C_UIWidgetManager.UnregisterUnitForWidgetUpdates
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitId
+--- @param isGuid boolean ? = false
+---
+--- @since Patch 9.1.5 (2021-11-02): Added isGuid
+--- @see https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates
+---
+--- Usage: C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken [, isGuid])
+---
+-- function C_UIWidgetManager.UnregisterUnitForWidgetUpdates()
+-- end

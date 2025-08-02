@@ -1,0 +1,468 @@
+--[=[
+-- C_Transmog API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 25
+--]=]
+
+--- @class C_Transmog
+--- C_Transmog namespace contains 25 functions
+local C_Transmog = {}
+
+--[=[
+-- C_Transmog Functions:
+-- - C_Transmog.ApplyAllPending
+-- - C_Transmog.CanHaveSecondaryAppearanceForSlotID
+-- - C_Transmog.CanTransmogItem
+-- - C_Transmog.CanTransmogItemWithItem
+-- - C_Transmog.ClearAllPending
+-- - C_Transmog.ClearPending
+-- - C_Transmog.Close
+-- - C_Transmog.ExtractTransmogIDList
+-- - C_Transmog.GetAllSetAppearancesByID
+-- - C_Transmog.GetApplyCost
+-- - C_Transmog.GetApplyWarnings
+-- - C_Transmog.GetBaseCategory
+-- - C_Transmog.GetCreatureDisplayIDForSource
+-- - C_Transmog.GetItemIDForSource
+-- - C_Transmog.GetPending
+-- - C_Transmog.GetSlotEffectiveCategory
+-- - C_Transmog.GetSlotForInventoryType
+-- - C_Transmog.GetSlotInfo
+-- - C_Transmog.GetSlotUseError
+-- - C_Transmog.GetSlotVisualInfo
+-- - C_Transmog.IsAtTransmogNPC
+-- - C_Transmog.IsSlotBeingCollapsed
+-- - C_Transmog.IsTransmogEnabled
+-- - C_Transmog.LoadOutfit
+-- - C_Transmog.SetPending
+--]=]
+
+---======================================================================
+--- C_Transmog.ApplyAllPending
+---======================================================================
+--- Confirms all pending transmogs.
+---
+--- Arguments:
+--- @param currentSpecOnly boolean
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 7.0.3 (2016-07-19): Moved from ApplyTransmogrifications to C_Transmog.ApplyAllPending.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.ApplyAllPending
+---
+--- Usage: success = C_Transmog.ApplyAllPending(currentSpecOnly)
+---
+-- function C_Transmog.ApplyAllPending()
+-- end
+
+---======================================================================
+--- C_Transmog.CanHaveSecondaryAppearanceForSlotID
+---======================================================================
+--- Arguments:
+--- @param slotID number
+---
+--- Returns:
+--- @return boolean canHaveSecondaryAppearance
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.CanHaveSecondaryAppearanceForSlotID
+---
+--- Usage: canHaveSecondaryAppearance = C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID)
+---
+-- function C_Transmog.CanHaveSecondaryAppearanceForSlotID()
+-- end
+
+---======================================================================
+--- C_Transmog.CanTransmogItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : Item ID, Link or name
+---
+--- Returns:
+--- @return boolean canBeTransmogged
+--- @return string selfFailureReason ?
+--- @return boolean canTransmogOthers
+--- @return string othersFailureReason ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added. Replaces C_Transmog.GetItemInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.CanTransmogItem
+---
+--- Usage: canBeTransmogged, selfFailureReason, canTransmogOthers, othersFailureReason = C_Transmog.CanTransmogItem(itemInfo)
+---
+--- See also:
+--- - C_Transmog.CanTransmogItemWithItem
+---
+-- function C_Transmog.CanTransmogItem()
+-- end
+
+---======================================================================
+--- C_Transmog.CanTransmogItemWithItem
+---======================================================================
+--- Returns whether an item can be transmogrified to look like another item.
+---
+--- Arguments:
+--- @param targetItem  String/Number : item name, item link, or item ID of the item that will change its appearance
+--- @param sourceItem  String/Number: item name, item link, or item ID of the item the appearance of which will be copied.
+---
+--- Returns:
+--- @return boolean canBeTransmogrified - true if targetItem can be transmogrified to look like sourceItem, false otherwise.
+--- @return  failReason String/nil - If the items cannot be transmogrified, a token indicating the cause:
+---
+--- @since Patch 7.0.3 (2016-07-19): Moved from CanTransmogrifyItemWithItem to C_Transmog.CanTransmogItemWithItem.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.CanTransmogItemWithItem
+---
+--- Usage: canBeTransmogrified, failReason = C_Transmog.CanTransmogItemWithItem(targetItem, sourceItem)
+---
+-- function C_Transmog.CanTransmogItemWithItem()
+-- end
+
+---======================================================================
+--- C_Transmog.ClearAllPending
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.ClearAllPending
+---
+--- Usage: C_Transmog.ClearAllPending()
+---
+-- function C_Transmog.ClearAllPending()
+-- end
+
+---======================================================================
+--- C_Transmog.ClearPending
+---======================================================================
+--- Clears an equipment slot of pending transmogs.
+---
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- @since Patch 9.0.1 (2020-10-13): Takes a TransmogLocationMixin.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.ClearPending
+---
+--- Usage: C_Transmog.ClearPending(transmogLocation)
+---
+-- function C_Transmog.ClearPending()
+-- end
+
+---======================================================================
+--- C_Transmog.Close
+---======================================================================
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.Close
+---
+--- Usage: C_Transmog.Close()
+---
+-- function C_Transmog.Close()
+-- end
+
+---======================================================================
+--- C_Transmog.ExtractTransmogIDList
+---======================================================================
+--- Arguments:
+--- @param input string
+---
+--- Returns:
+--- @return number transmogIDList []
+---
+--- @since Patch 9.1.5 (2021-11-02): Added (Build 41031, Nov 10 2021).
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.ExtractTransmogIDList
+---
+--- Usage: transmogIDList = C_Transmog.ExtractTransmogIDList(input)
+---
+-- function C_Transmog.ExtractTransmogIDList()
+-- end
+
+---======================================================================
+--- C_Transmog.GetAllSetAppearancesByID
+---======================================================================
+--- Arguments:
+--- @param setID number
+---
+--- Returns:
+--- @return TransmogSetItemInfo setItems []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetAllSetAppearancesByID
+---
+--- Usage: setItems = C_Transmog.GetAllSetAppearancesByID(setID)
+---
+-- function C_Transmog.GetAllSetAppearancesByID()
+-- end
+
+---======================================================================
+--- C_Transmog.GetApplyCost
+---======================================================================
+--- Returns:
+--- @return number cost ?
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetApplyCost
+---
+--- Usage: cost = C_Transmog.GetApplyCost()
+---
+-- function C_Transmog.GetApplyCost()
+-- end
+
+---======================================================================
+--- C_Transmog.GetApplyWarnings
+---======================================================================
+--- Returns:
+--- @return TransmogApplyWarningInfo warnings []
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetApplyWarnings
+---
+--- Usage: warnings = C_Transmog.GetApplyWarnings()
+---
+-- function C_Transmog.GetApplyWarnings()
+-- end
+
+---======================================================================
+--- C_Transmog.GetBaseCategory
+---======================================================================
+--- Arguments:
+--- @param transmogID number
+---
+--- Returns:
+--- @return number categoryID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetBaseCategory
+---
+--- Usage: categoryID = C_Transmog.GetBaseCategory(transmogID)
+---
+-- function C_Transmog.GetBaseCategory()
+-- end
+
+---======================================================================
+--- C_Transmog.GetCreatureDisplayIDForSource
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return number creatureDisplayID ? : CreatureDisplayID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetCreatureDisplayIDForSource
+---
+--- Usage: creatureDisplayID = C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID)
+---
+-- function C_Transmog.GetCreatureDisplayIDForSource()
+-- end
+
+---======================================================================
+--- C_Transmog.GetItemIDForSource
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return number itemID ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetItemIDForSource
+---
+--- Usage: itemID = C_Transmog.GetItemIDForSource(itemModifiedAppearanceID)
+---
+-- function C_Transmog.GetItemIDForSource()
+-- end
+
+---======================================================================
+--- C_Transmog.GetPending
+---======================================================================
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return TransmogPendingInfoMixin pendingInfo 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetPending
+---
+--- Usage: pendingInfo = C_Transmog.GetPending(transmogLocation)
+---
+-- function C_Transmog.GetPending()
+-- end
+
+---======================================================================
+--- C_Transmog.GetSlotEffectiveCategory
+---======================================================================
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.TransmogCollectionType categoryID
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotEffectiveCategory
+---
+--- Usage: categoryID = C_Transmog.GetSlotEffectiveCategory(transmogLocation)
+---
+-- function C_Transmog.GetSlotEffectiveCategory()
+-- end
+
+---======================================================================
+--- C_Transmog.GetSlotForInventoryType
+---======================================================================
+--- Returns the equipment slot for an inventory type.
+---
+--- Arguments:
+--- @param inventoryType number : Enum.InventoryType
+---
+--- Returns:
+--- @return number slot - The equipmentSlot for an inventory type.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotForInventoryType
+---
+--- Usage: slot = C_Transmog.GetSlotForInventoryType(inventoryType)
+---
+-- function C_Transmog.GetSlotForInventoryType()
+-- end
+
+---======================================================================
+--- C_Transmog.GetSlotInfo
+---======================================================================
+--- Returns info for a transmog slot.
+---
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isTransmogrified
+--- @return boolean hasPending - If the item is pending transmogrification
+--- @return boolean isPendingCollected
+--- @return boolean canTransmogrify
+--- @return number cannotTransmogrifyReason - The error reason index if canTransmogrify is false. See TRANSMOG_INVALID_CODES and TRANSMOGRIFY_INVALID
+--- @return boolean hasUndo - If the item is pending detransmogrification
+--- @return boolean isHideVisual - If the appearance hides the gear, e.g.  [Hidden Helm]
+--- @return number texture ? : FileID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added TransmogLocationMixin argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotInfo
+---
+--- Usage: isTransmogrified, hasPending, isPendingCollected, canTransmogrify, cannotTransmogrifyReason, hasUndo, isHideVisual, texture = C_Transmog.GetSlotInfo(transmogLocation)
+---
+-- function C_Transmog.GetSlotInfo()
+-- end
+
+---======================================================================
+--- C_Transmog.GetSlotUseError
+---======================================================================
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return number errorCode
+--- @return string errorString
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotUseError
+---
+--- Usage: errorCode, errorString = C_Transmog.GetSlotUseError(transmogLocation)
+---
+-- function C_Transmog.GetSlotUseError()
+-- end
+
+---======================================================================
+--- C_Transmog.GetSlotVisualInfo
+---======================================================================
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return number baseSourceID
+--- @return number baseVisualID
+--- @return number appliedSourceID
+--- @return number appliedVisualID
+--- @return number pendingSourceID
+--- @return number pendingVisualID
+--- @return boolean hasUndo
+--- @return boolean isHideVisual
+--- @return number itemSubclass
+---
+--- @since Patch 9.1.0 (2021-06-29): Removed pendingCategoryID, appliedCategoryID returns.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotVisualInfo
+---
+--- Usage: baseSourceID, baseVisualID, appliedSourceID, appliedVisualID, pendingSourceID, pendingVisualID, hasUndo, isHideVisual, itemSubclass = C_Transmog.GetSlotVisualInfo(transmogLocation)
+---
+-- function C_Transmog.GetSlotVisualInfo()
+-- end
+
+---======================================================================
+--- C_Transmog.IsAtTransmogNPC
+---======================================================================
+--- Returns:
+--- @return boolean isAtNPC
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.IsAtTransmogNPC
+---
+--- Usage: isAtNPC = C_Transmog.IsAtTransmogNPC()
+---
+-- function C_Transmog.IsAtTransmogNPC()
+-- end
+
+---======================================================================
+--- C_Transmog.IsSlotBeingCollapsed
+---======================================================================
+--- Returns true if the only pending for the location's slot is a ToggleOff for the secondary appearance.
+---
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isBeingCollapsed
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.IsSlotBeingCollapsed
+---
+--- Usage: isBeingCollapsed = C_Transmog.IsSlotBeingCollapsed(transmogLocation)
+---
+-- function C_Transmog.IsSlotBeingCollapsed()
+-- end
+
+---======================================================================
+--- C_Transmog.IsTransmogEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isTransmogEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.IsTransmogEnabled
+---
+--- Usage: isTransmogEnabled = C_Transmog.IsTransmogEnabled()
+---
+-- function C_Transmog.IsTransmogEnabled()
+-- end
+
+---======================================================================
+--- C_Transmog.LoadOutfit
+---======================================================================
+--- Arguments:
+--- @param outfitID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.LoadOutfit
+---
+--- Usage: C_Transmog.LoadOutfit(outfitID)
+---
+-- function C_Transmog.LoadOutfit()
+-- end
+
+---======================================================================
+--- C_Transmog.SetPending
+---======================================================================
+--- Applies a pending transmog choice to the given TransmogLocation slot.
+---
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+--- @param pendingInfo TransmogPendingInfoMixin 🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Replaced transmogID, categoryID arguments with pendingInfo
+--- @see https://warcraft.wiki.gg/wiki/API_C_Transmog.SetPending
+---
+--- Usage: C_Transmog.SetPending(transmogLocation, pendingInfo)
+---
+-- function C_Transmog.SetPending()
+-- end

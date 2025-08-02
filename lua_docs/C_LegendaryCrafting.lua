@@ -1,0 +1,369 @@
+--[=[
+-- C_LegendaryCrafting API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 20
+--]=]
+
+--- @class C_LegendaryCrafting
+--- C_LegendaryCrafting namespace contains 20 functions
+local C_LegendaryCrafting = {}
+
+--[=[
+-- C_LegendaryCrafting Functions:
+-- - C_LegendaryCrafting.CloseRuneforgeInteraction
+-- - C_LegendaryCrafting.CraftRuneforgeLegendary
+-- - C_LegendaryCrafting.GetRuneforgeItemPreviewInfo
+-- - C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo
+-- - C_LegendaryCrafting.GetRuneforgeLegendaryCost
+-- - C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID
+-- - C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies
+-- - C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost
+-- - C_LegendaryCrafting.GetRuneforgeModifierInfo
+-- - C_LegendaryCrafting.GetRuneforgeModifiers
+-- - C_LegendaryCrafting.GetRuneforgePowerInfo
+-- - C_LegendaryCrafting.GetRuneforgePowerSlots
+-- - C_LegendaryCrafting.GetRuneforgePowers
+-- - C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant
+-- - C_LegendaryCrafting.IsRuneforgeLegendary
+-- - C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel
+-- - C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary
+-- - C_LegendaryCrafting.IsValidRuneforgeBaseItem
+-- - C_LegendaryCrafting.MakeRuneforgeCraftDescription
+-- - C_LegendaryCrafting.UpgradeRuneforgeLegendary
+--]=]
+
+---======================================================================
+--- C_LegendaryCrafting.CloseRuneforgeInteraction
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.CloseRuneforgeInteraction
+---
+--- Usage: C_LegendaryCrafting.CloseRuneforgeInteraction()
+---
+-- function C_LegendaryCrafting.CloseRuneforgeInteraction()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.CraftRuneforgeLegendary
+---======================================================================
+--- Arguments:
+--- @param description RuneforgeLegendaryCraftDescription
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.CraftRuneforgeLegendary
+---
+--- Usage: C_LegendaryCrafting.CraftRuneforgeLegendary(description)
+---
+-- function C_LegendaryCrafting.CraftRuneforgeLegendary()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeItemPreviewInfo
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+--- @param runeforgePowerID number ?
+--- @param modifiers number []?
+---
+--- Returns:
+--- @return RuneforgeItemPreviewInfo info ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeItemPreviewInfo
+---
+--- Usage: info = C_LegendaryCrafting.GetRuneforgeItemPreviewInfo(baseItem [, runeforgePowerID, modifiers])
+---
+-- function C_LegendaryCrafting.GetRuneforgeItemPreviewInfo()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo
+---======================================================================
+--- Arguments:
+--- @param runeforgeLegendary ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return RuneforgeLegendaryComponentInfo componentInfo
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo
+---
+--- Usage: componentInfo = C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo(runeforgeLegendary)
+---
+-- function C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeLegendaryCost
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return CurrencyCost cost []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryCost
+---
+--- Usage: cost = C_LegendaryCrafting.GetRuneforgeLegendaryCost(baseItem)
+---
+-- function C_LegendaryCrafting.GetRuneforgeLegendaryCost()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID
+---======================================================================
+--- Returns:
+--- @return number spellID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID
+---
+--- Usage: spellID = C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID()
+---
+-- function C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies
+---======================================================================
+--- Returns:
+--- @return number currencies []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies
+---
+--- Usage: currencies = C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies()
+---
+-- function C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost
+---======================================================================
+--- Arguments:
+--- @param runeforgeLegendary ItemLocationMixin 🔗
+--- @param upgradeItem ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return CurrencyCost cost []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost
+---
+--- Usage: cost = C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost(runeforgeLegendary, upgradeItem)
+---
+-- function C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeModifierInfo
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+--- @param powerID number ?
+--- @param addedModifierIndex number
+--- @param modifiers number []
+---
+--- Returns:
+--- @return string name
+--- @return string description []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeModifierInfo
+---
+--- Usage: name, description = C_LegendaryCrafting.GetRuneforgeModifierInfo(baseItem, powerID?, addedModifierIndex, modifiers)
+---
+-- function C_LegendaryCrafting.GetRuneforgeModifierInfo()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgeModifiers
+---======================================================================
+--- Returns:
+--- @return number modifiedReagentItemIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeModifiers
+---
+--- Usage: modifiedReagentItemIDs = C_LegendaryCrafting.GetRuneforgeModifiers()
+---
+-- function C_LegendaryCrafting.GetRuneforgeModifiers()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgePowerInfo
+---======================================================================
+--- Arguments:
+--- @param runeforgePowerID number
+---
+--- Returns:
+--- @return RuneforgePower power
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowerInfo
+---
+--- Usage: power = C_LegendaryCrafting.GetRuneforgePowerInfo(runeforgePowerID)
+---
+-- function C_LegendaryCrafting.GetRuneforgePowerInfo()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgePowers
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin ?🔗
+--- @param filter Enum.RuneforgePowerFilter ?
+---
+--- Returns:
+--- @return number primaryRuneforgePowerIDs []
+--- @return number otherRuneforgePowerIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowers
+---
+--- Usage: primaryRuneforgePowerIDs, otherRuneforgePowerIDs = C_LegendaryCrafting.GetRuneforgePowers([baseItem, filter])
+---
+-- function C_LegendaryCrafting.GetRuneforgePowers()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant
+---======================================================================
+--- Arguments:
+--- @param classID number ? : ClassId
+--- @param specID number ? : SpecializationID
+--- @param covenantID number ?
+--- @param filter Enum.RuneforgePowerFilter ?
+---
+--- Returns:
+--- @return number runeforgePowerIDs []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant
+---
+--- Usage: runeforgePowerIDs = C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant([classID [, specID [, covenantID [, filter]]]])
+---
+-- function C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.GetRuneforgePowerSlots
+---======================================================================
+--- Arguments:
+--- @param runeforgePowerID number
+---
+--- Returns:
+--- @return string slotNames []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowerSlots
+---
+--- Usage: slotNames = C_LegendaryCrafting.GetRuneforgePowerSlots(runeforgePowerID)
+---
+-- function C_LegendaryCrafting.GetRuneforgePowerSlots()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.IsRuneforgeLegendary
+---======================================================================
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isRuneforgeLegendary
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsRuneforgeLegendary
+---
+--- Usage: isRuneforgeLegendary = C_LegendaryCrafting.IsRuneforgeLegendary(item)
+---
+-- function C_LegendaryCrafting.IsRuneforgeLegendary()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel
+---======================================================================
+--- Arguments:
+--- @param runeforgeLegendary ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isMaxLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel
+---
+--- Usage: isMaxLevel = C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel(runeforgeLegendary)
+---
+-- function C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary
+---======================================================================
+--- Arguments:
+--- @param runeforgeLegendary ItemLocationMixin 🔗
+--- @param upgradeItem ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary
+---
+--- Usage: isValid = C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary(runeforgeLegendary, upgradeItem)
+---
+-- function C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.IsValidRuneforgeBaseItem
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsValidRuneforgeBaseItem
+---
+--- Usage: isValid = C_LegendaryCrafting.IsValidRuneforgeBaseItem(baseItem)
+---
+-- function C_LegendaryCrafting.IsValidRuneforgeBaseItem()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.MakeRuneforgeCraftDescription
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+--- @param runeforgePowerID number
+--- @param modifiers number []
+---
+--- Returns:
+--- @return RuneforgeLegendaryCraftDescription description
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.MakeRuneforgeCraftDescription
+---
+--- Usage: description = C_LegendaryCrafting.MakeRuneforgeCraftDescription(baseItem, runeforgePowerID, modifiers)
+---
+-- function C_LegendaryCrafting.MakeRuneforgeCraftDescription()
+-- end
+
+---======================================================================
+--- C_LegendaryCrafting.UpgradeRuneforgeLegendary
+---======================================================================
+--- Arguments:
+--- @param runeforgeLegendary ItemLocationMixin 🔗
+--- @param upgradeItem ItemLocationMixin 🔗
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.UpgradeRuneforgeLegendary
+---
+--- Usage: C_LegendaryCrafting.UpgradeRuneforgeLegendary(runeforgeLegendary, upgradeItem)
+---
+-- function C_LegendaryCrafting.UpgradeRuneforgeLegendary()
+-- end

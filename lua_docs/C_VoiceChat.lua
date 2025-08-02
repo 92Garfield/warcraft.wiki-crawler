@@ -1,0 +1,1257 @@
+--[=[
+-- C_VoiceChat API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 79
+--]=]
+
+--- @class C_VoiceChat
+--- C_VoiceChat namespace contains 79 functions
+local C_VoiceChat = {}
+
+--[=[
+-- C_VoiceChat Functions:
+-- - C_VoiceChat.ActivateChannel
+-- - C_VoiceChat.ActivateChannelTranscription
+-- - C_VoiceChat.BeginLocalCapture
+-- - C_VoiceChat.CanAccessSettings
+-- - C_VoiceChat.CanPlayerUseVoiceChat
+-- - C_VoiceChat.CreateChannel
+-- - C_VoiceChat.DeactivateChannel
+-- - C_VoiceChat.DeactivateChannelTranscription
+-- - C_VoiceChat.EndLocalCapture
+-- - C_VoiceChat.GetActiveChannelID
+-- - C_VoiceChat.GetActiveChannelType
+-- - C_VoiceChat.GetAvailableInputDevices
+-- - C_VoiceChat.GetAvailableOutputDevices
+-- - C_VoiceChat.GetChannel
+-- - C_VoiceChat.GetChannelForChannelType
+-- - C_VoiceChat.GetChannelForCommunityStream
+-- - C_VoiceChat.GetCommunicationMode
+-- - C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode
+-- - C_VoiceChat.GetInputVolume
+-- - C_VoiceChat.GetJoinClubVoiceChannelError
+-- - C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo
+-- - C_VoiceChat.GetLocalPlayerMemberID
+-- - C_VoiceChat.GetMasterVolumeScale
+-- - C_VoiceChat.GetMemberGUID
+-- - C_VoiceChat.GetMemberID
+-- - C_VoiceChat.GetMemberInfo
+-- - C_VoiceChat.GetMemberName
+-- - C_VoiceChat.GetMemberVolume
+-- - C_VoiceChat.GetOutputVolume
+-- - C_VoiceChat.GetPTTButtonPressedState
+-- - C_VoiceChat.GetProcesses
+-- - C_VoiceChat.GetPushToTalkBinding
+-- - C_VoiceChat.GetRemoteTtsVoices
+-- - C_VoiceChat.GetTtsVoices
+-- - C_VoiceChat.GetVADSensitivity
+-- - C_VoiceChat.IsChannelJoinPending
+-- - C_VoiceChat.IsDeafened
+-- - C_VoiceChat.IsEnabled
+-- - C_VoiceChat.IsLoggedIn
+-- - C_VoiceChat.IsMemberLocalPlayer
+-- - C_VoiceChat.IsMemberMuted
+-- - C_VoiceChat.IsMemberMutedForAll
+-- - C_VoiceChat.IsMemberSilenced
+-- - C_VoiceChat.IsMuted
+-- - C_VoiceChat.IsParentalDisabled
+-- - C_VoiceChat.IsParentalMuted
+-- - C_VoiceChat.IsPlayerUsingVoice
+-- - C_VoiceChat.IsSilenced
+-- - C_VoiceChat.IsSpeakForMeActive
+-- - C_VoiceChat.IsSpeakForMeAllowed
+-- - C_VoiceChat.IsTranscribing
+-- - C_VoiceChat.IsTranscriptionAllowed
+-- - C_VoiceChat.IsVoiceChatConnected
+-- - C_VoiceChat.LeaveChannel
+-- - C_VoiceChat.Login
+-- - C_VoiceChat.Logout
+-- - C_VoiceChat.MarkChannelsDiscovered
+-- - C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel
+-- - C_VoiceChat.RequestJoinChannelByChannelType
+-- - C_VoiceChat.SetCommunicationMode
+-- - C_VoiceChat.SetDeafened
+-- - C_VoiceChat.SetInputDevice
+-- - C_VoiceChat.SetInputVolume
+-- - C_VoiceChat.SetMasterVolumeScale
+-- - C_VoiceChat.SetMemberMuted
+-- - C_VoiceChat.SetMemberVolume
+-- - C_VoiceChat.SetMuted
+-- - C_VoiceChat.SetOutputDevice
+-- - C_VoiceChat.SetOutputVolume
+-- - C_VoiceChat.SetPortraitTexture
+-- - C_VoiceChat.SetPushToTalkBinding
+-- - C_VoiceChat.SetVADSensitivity
+-- - C_VoiceChat.ShouldDiscoverChannels
+-- - C_VoiceChat.SpeakRemoteTextSample
+-- - C_VoiceChat.SpeakText
+-- - C_VoiceChat.StopSpeakingText
+-- - C_VoiceChat.ToggleDeafened
+-- - C_VoiceChat.ToggleMemberMuted
+-- - C_VoiceChat.ToggleMuted
+--]=]
+
+---======================================================================
+--- C_VoiceChat.ActivateChannel
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ActivateChannel
+---
+--- Usage: C_VoiceChat.ActivateChannel(channelID)
+---
+-- function C_VoiceChat.ActivateChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.BeginLocalCapture
+---======================================================================
+--- Arguments:
+--- @param listenToLocalUser boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.BeginLocalCapture
+---
+--- Usage: C_VoiceChat.BeginLocalCapture(listenToLocalUser)
+---
+-- function C_VoiceChat.BeginLocalCapture()
+-- end
+
+---======================================================================
+--- C_VoiceChat.CanAccessSettings
+---======================================================================
+--- Returns:
+--- @return boolean canAccess
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CanAccessSettings
+---
+--- Usage: canAccess = C_VoiceChat.CanAccessSettings()
+---
+-- function C_VoiceChat.CanAccessSettings()
+-- end
+
+---======================================================================
+--- C_VoiceChat.CanPlayerUseVoiceChat
+---======================================================================
+--- Returns:
+--- @return boolean canUseVoiceChat
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CanPlayerUseVoiceChat
+---
+--- Usage: canUseVoiceChat = C_VoiceChat.CanPlayerUseVoiceChat()
+---
+-- function C_VoiceChat.CanPlayerUseVoiceChat()
+-- end
+
+---======================================================================
+--- C_VoiceChat.CreateChannel
+---======================================================================
+--- Arguments:
+--- @param channelDisplayName string
+---
+--- Returns:
+--- @return  status Enum.VoiceChatStatusCode
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CreateChannel
+---
+--- Usage: status = C_VoiceChat.CreateChannel(channelDisplayName)
+---
+-- function C_VoiceChat.CreateChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.DeactivateChannel
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.DeactivateChannel
+---
+--- Usage: C_VoiceChat.DeactivateChannel(channelID)
+---
+-- function C_VoiceChat.DeactivateChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.EndLocalCapture
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.EndLocalCapture
+---
+--- Usage: C_VoiceChat.EndLocalCapture()
+---
+-- function C_VoiceChat.EndLocalCapture()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetActiveChannelID
+---======================================================================
+--- Returns:
+--- @return number channelID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetActiveChannelID
+---
+--- Usage: channelID = C_VoiceChat.GetActiveChannelID()
+---
+-- function C_VoiceChat.GetActiveChannelID()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetActiveChannelType
+---======================================================================
+--- Returns:
+--- @return  channelType unknown ChatChannelType (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetActiveChannelType
+---
+--- Usage: channelType = C_VoiceChat.GetActiveChannelType()
+---
+-- function C_VoiceChat.GetActiveChannelType()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetAvailableInputDevices
+---======================================================================
+--- Returns:
+--- @return  inputDevices structure - VoiceAudioDevice[] (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetAvailableInputDevices
+---
+--- Usage: inputDevices = C_VoiceChat.GetAvailableInputDevices()
+---
+-- function C_VoiceChat.GetAvailableInputDevices()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetAvailableOutputDevices
+---======================================================================
+--- Returns:
+--- @return  outputDevices structure - VoiceAudioDevice[] (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetAvailableOutputDevices
+---
+--- Usage: outputDevices = C_VoiceChat.GetAvailableOutputDevices()
+---
+-- function C_VoiceChat.GetAvailableOutputDevices()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetChannel
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- Returns:
+--- @return  channel structure - VoiceChatChannel (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannel
+---
+--- Usage: channel = C_VoiceChat.GetChannel(channelID)
+---
+-- function C_VoiceChat.GetChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetChannelForChannelType
+---======================================================================
+--- Arguments:
+--- @param channelType  Enum.ChatChannelType
+---
+--- Returns:
+--- @return  channel structure - VoiceChatChannel (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForChannelType
+---
+--- Usage: channel = C_VoiceChat.GetChannelForChannelType(channelType)
+---
+-- function C_VoiceChat.GetChannelForChannelType()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetChannelForCommunityStream
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- Returns:
+--- @return  channel structure - VoiceChatChannel (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForCommunityStream
+---
+--- Usage: channel = C_VoiceChat.GetChannelForCommunityStream(clubId, streamId)
+---
+-- function C_VoiceChat.GetChannelForCommunityStream()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetCommunicationMode
+---======================================================================
+--- Returns:
+--- @return  communicationMode Enum.CommunicationMode (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetCommunicationMode
+---
+--- Usage: communicationMode = C_VoiceChat.GetCommunicationMode()
+---
+-- function C_VoiceChat.GetCommunicationMode()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode
+---======================================================================
+--- Returns:
+--- @return Enum.VoiceChatStatusCode statusCode ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode
+---
+--- Usage: statusCode = C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode()
+---
+-- function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetInputVolume
+---======================================================================
+--- Returns:
+--- @return number volume ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetInputVolume
+---
+--- Usage: volume = C_VoiceChat.GetInputVolume()
+---
+-- function C_VoiceChat.GetInputVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetJoinClubVoiceChannelError
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return Enum.VoiceChannelErrorReason errorReason ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetJoinClubVoiceChannelError
+---
+--- Usage: errorReason = C_VoiceChat.GetJoinClubVoiceChannelError(clubId)
+---
+-- function C_VoiceChat.GetJoinClubVoiceChannelError()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo
+---======================================================================
+--- Returns:
+--- @return  memberInfo structure - VoiceChatMember (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo
+---
+--- Usage: memberInfo = C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo()
+---
+-- function C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetLocalPlayerMemberID
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- Returns:
+--- @return number memberID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetLocalPlayerMemberID
+---
+--- Usage: memberID = C_VoiceChat.GetLocalPlayerMemberID(channelID)
+---
+-- function C_VoiceChat.GetLocalPlayerMemberID()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMasterVolumeScale
+---======================================================================
+--- Returns:
+--- @return number scale
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMasterVolumeScale
+---
+--- Usage: scale = C_VoiceChat.GetMasterVolumeScale()
+---
+-- function C_VoiceChat.GetMasterVolumeScale()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMemberGUID
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return string memberGUID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberGUID
+---
+--- Usage: memberGUID = C_VoiceChat.GetMemberGUID(memberID, channelID)
+---
+-- function C_VoiceChat.GetMemberGUID()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMemberID
+---======================================================================
+--- Arguments:
+--- @param channelID number
+--- @param memberGUID string
+---
+--- Returns:
+--- @return number memberID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberID
+---
+--- Usage: memberID = C_VoiceChat.GetMemberID(channelID, memberGUID)
+---
+-- function C_VoiceChat.GetMemberID()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMemberInfo
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return  memberInfo structure - VoiceChatMember (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberInfo
+---
+--- Usage: memberInfo = C_VoiceChat.GetMemberInfo(memberID, channelID)
+---
+-- function C_VoiceChat.GetMemberInfo()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMemberName
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return string memberName ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberName
+---
+--- Usage: memberName = C_VoiceChat.GetMemberName(memberID, channelID)
+---
+-- function C_VoiceChat.GetMemberName()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetMemberVolume
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return number volume ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberVolume
+---
+--- Usage: volume = C_VoiceChat.GetMemberVolume(playerLocation)
+---
+-- function C_VoiceChat.GetMemberVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetOutputVolume
+---======================================================================
+--- Returns:
+--- @return number volume ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetOutputVolume
+---
+--- Usage: volume = C_VoiceChat.GetOutputVolume()
+---
+-- function C_VoiceChat.GetOutputVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetProcesses
+---======================================================================
+--- Returns:
+--- @return  processes structure - VoiceChatProcess[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetProcesses
+---
+--- Usage: processes = C_VoiceChat.GetProcesses()
+---
+-- function C_VoiceChat.GetProcesses()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetPTTButtonPressedState
+---======================================================================
+--- Returns:
+--- @return boolean isPressed ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetPTTButtonPressedState
+---
+--- Usage: isPressed = C_VoiceChat.GetPTTButtonPressedState()
+---
+-- function C_VoiceChat.GetPTTButtonPressedState()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetPushToTalkBinding
+---======================================================================
+--- Returns:
+--- @return string keys []?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetPushToTalkBinding
+---
+--- Usage: keys = C_VoiceChat.GetPushToTalkBinding()
+---
+-- function C_VoiceChat.GetPushToTalkBinding()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetVADSensitivity
+---======================================================================
+--- Returns:
+--- @return number sensitivity ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetVADSensitivity
+---
+--- Usage: sensitivity = C_VoiceChat.GetVADSensitivity()
+---
+-- function C_VoiceChat.GetVADSensitivity()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsChannelJoinPending
+---======================================================================
+--- Arguments:
+--- @param channelType  Enum.ChatChannelType
+--- @param clubId string ?
+--- @param streamId string ?
+---
+--- Returns:
+--- @return boolean isPending
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsChannelJoinPending
+---
+--- Usage: isPending = C_VoiceChat.IsChannelJoinPending(channelType [, clubId, streamId])
+---
+-- function C_VoiceChat.IsChannelJoinPending()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsDeafened
+---======================================================================
+--- Returns:
+--- @return boolean isDeafened ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsDeafened
+---
+--- Usage: isDeafened = C_VoiceChat.IsDeafened()
+---
+-- function C_VoiceChat.IsDeafened()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsEnabled
+---
+--- Usage: isEnabled = C_VoiceChat.IsEnabled()
+---
+-- function C_VoiceChat.IsEnabled()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsLoggedIn
+---======================================================================
+--- Returns:
+--- @return boolean isLoggedIn
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsLoggedIn
+---
+--- Usage: isLoggedIn = C_VoiceChat.IsLoggedIn()
+---
+-- function C_VoiceChat.IsLoggedIn()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsMemberLocalPlayer
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return boolean isLocalPlayer
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberLocalPlayer
+---
+--- Usage: isLocalPlayer = C_VoiceChat.IsMemberLocalPlayer(memberID, channelID)
+---
+-- function C_VoiceChat.IsMemberLocalPlayer()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsMemberMuted
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean mutedForMe ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberMuted
+---
+--- Usage: mutedForMe = C_VoiceChat.IsMemberMuted(playerLocation)
+---
+-- function C_VoiceChat.IsMemberMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsMemberMutedForAll
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return boolean mutedForAll ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberMutedForAll
+---
+--- Usage: mutedForAll = C_VoiceChat.IsMemberMutedForAll(memberID, channelID)
+---
+-- function C_VoiceChat.IsMemberMutedForAll()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsMemberSilenced
+---======================================================================
+--- Arguments:
+--- @param memberID number
+--- @param channelID number
+---
+--- Returns:
+--- @return boolean silenced ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberSilenced
+---
+--- Usage: silenced = C_VoiceChat.IsMemberSilenced(memberID, channelID)
+---
+-- function C_VoiceChat.IsMemberSilenced()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsMuted
+---======================================================================
+--- Returns:
+--- @return boolean isMuted ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMuted
+---
+--- Usage: isMuted = C_VoiceChat.IsMuted()
+---
+-- function C_VoiceChat.IsMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsParentalDisabled
+---======================================================================
+--- Returns:
+--- @return boolean isParentalDisabled
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsParentalDisabled
+---
+--- Usage: isParentalDisabled = C_VoiceChat.IsParentalDisabled()
+---
+-- function C_VoiceChat.IsParentalDisabled()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsParentalMuted
+---======================================================================
+--- Returns:
+--- @return boolean isParentalMuted
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsParentalMuted
+---
+--- Usage: isParentalMuted = C_VoiceChat.IsParentalMuted()
+---
+-- function C_VoiceChat.IsParentalMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsPlayerUsingVoice
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isUsingVoice
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsPlayerUsingVoice
+---
+--- Usage: isUsingVoice = C_VoiceChat.IsPlayerUsingVoice(playerLocation)
+---
+-- function C_VoiceChat.IsPlayerUsingVoice()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsSilenced
+---======================================================================
+--- Returns:
+--- @return boolean isSilenced ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSilenced
+---
+--- Usage: isSilenced = C_VoiceChat.IsSilenced()
+---
+-- function C_VoiceChat.IsSilenced()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsTranscribing
+---======================================================================
+--- Returns:
+--- @return boolean isTranscribing
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsTranscribing
+---
+--- Usage: isTranscribing = C_VoiceChat.IsTranscribing()
+---
+-- function C_VoiceChat.IsTranscribing()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsVoiceChatConnected
+---======================================================================
+--- Returns:
+--- @return boolean connected
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsVoiceChatConnected
+---
+--- Usage: connected = C_VoiceChat.IsVoiceChatConnected()
+---
+-- function C_VoiceChat.IsVoiceChatConnected()
+-- end
+
+---======================================================================
+--- C_VoiceChat.LeaveChannel
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.LeaveChannel
+---
+--- Usage: C_VoiceChat.LeaveChannel(channelID)
+---
+-- function C_VoiceChat.LeaveChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.Login
+---======================================================================
+--- Returns:
+--- @return  status Enum.VoiceChatStatusCode
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.Login
+---
+--- Usage: status = C_VoiceChat.Login()
+---
+-- function C_VoiceChat.Login()
+-- end
+
+---======================================================================
+--- C_VoiceChat.Logout
+---======================================================================
+--- Returns:
+--- @return  status Enum.VoiceChatStatusCode
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.Logout
+---
+--- Usage: status = C_VoiceChat.Logout()
+---
+-- function C_VoiceChat.Logout()
+-- end
+
+---======================================================================
+--- C_VoiceChat.MarkChannelsDiscovered
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.MarkChannelsDiscovered
+---
+--- Usage: C_VoiceChat.MarkChannelsDiscovered()
+---
+-- function C_VoiceChat.MarkChannelsDiscovered()
+-- end
+
+---======================================================================
+--- C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param streamId string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel
+---
+--- Usage: C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId)
+---
+-- function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel()
+-- end
+
+---======================================================================
+--- C_VoiceChat.RequestJoinChannelByChannelType
+---======================================================================
+--- Arguments:
+--- @param channelType Enum.ChatChannelType
+---
+--- @since Patch 8.2.0 (2019-06-25): Added autoActivate
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType
+---
+--- Usage: C_VoiceChat.RequestJoinChannelByChannelType(channelType [, autoActivate])
+---
+-- function C_VoiceChat.RequestJoinChannelByChannelType()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetCommunicationMode
+---======================================================================
+--- Arguments:
+--- @param communicationMode  Enum.CommunicationMode
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetCommunicationMode
+---
+--- Usage: C_VoiceChat.SetCommunicationMode(communicationMode)
+---
+-- function C_VoiceChat.SetCommunicationMode()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetDeafened
+---======================================================================
+--- Arguments:
+--- @param isDeafened boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetDeafened
+---
+--- Usage: C_VoiceChat.SetDeafened(isDeafened)
+---
+-- function C_VoiceChat.SetDeafened()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetInputDevice
+---======================================================================
+--- Arguments:
+--- @param deviceID string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetInputDevice
+---
+--- Usage: C_VoiceChat.SetInputDevice(deviceID)
+---
+-- function C_VoiceChat.SetInputDevice()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetInputVolume
+---======================================================================
+--- Arguments:
+--- @param volume number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetInputVolume
+---
+--- Usage: C_VoiceChat.SetInputVolume(volume)
+---
+-- function C_VoiceChat.SetInputVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetMasterVolumeScale
+---======================================================================
+--- Arguments:
+--- @param scale number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMasterVolumeScale
+---
+--- Usage: C_VoiceChat.SetMasterVolumeScale(scale)
+---
+-- function C_VoiceChat.SetMasterVolumeScale()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetMemberMuted
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+--- @param muted boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberMuted
+---
+--- Usage: C_VoiceChat.SetMemberMuted(playerLocation, muted)
+---
+-- function C_VoiceChat.SetMemberMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetMemberVolume
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+--- @param volume number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberVolume
+---
+--- Usage: C_VoiceChat.SetMemberVolume(playerLocation, volume)
+---
+-- function C_VoiceChat.SetMemberVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetMuted
+---======================================================================
+--- Arguments:
+--- @param isMuted boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMuted
+---
+--- Usage: C_VoiceChat.SetMuted(isMuted)
+---
+-- function C_VoiceChat.SetMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetOutputDevice
+---======================================================================
+--- Arguments:
+--- @param deviceID string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetOutputDevice
+---
+--- Usage: C_VoiceChat.SetOutputDevice(deviceID)
+---
+-- function C_VoiceChat.SetOutputDevice()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetOutputVolume
+---======================================================================
+--- Arguments:
+--- @param volume number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetOutputVolume
+---
+--- Usage: C_VoiceChat.SetOutputVolume(volume)
+---
+-- function C_VoiceChat.SetOutputVolume()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetPortraitTexture
+---======================================================================
+--- Arguments:
+--- @param textureObject table
+--- @param memberID number
+--- @param channelID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetPortraitTexture
+---
+--- Usage: C_VoiceChat.SetPortraitTexture(textureObject, memberID, channelID)
+---
+-- function C_VoiceChat.SetPortraitTexture()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetPushToTalkBinding
+---======================================================================
+--- Arguments:
+--- @param keys table
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetPushToTalkBinding
+---
+--- Usage: C_VoiceChat.SetPushToTalkBinding(keys)
+---
+-- function C_VoiceChat.SetPushToTalkBinding()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SetVADSensitivity
+---======================================================================
+--- Arguments:
+--- @param sensitivity number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetVADSensitivity
+---
+--- Usage: C_VoiceChat.SetVADSensitivity(sensitivity)
+---
+-- function C_VoiceChat.SetVADSensitivity()
+-- end
+
+---======================================================================
+--- C_VoiceChat.ShouldDiscoverChannels
+---======================================================================
+--- Returns:
+--- @return boolean shouldDiscoverChannels
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ShouldDiscoverChannels
+---
+--- Usage: shouldDiscoverChannels = C_VoiceChat.ShouldDiscoverChannels()
+---
+-- function C_VoiceChat.ShouldDiscoverChannels()
+-- end
+
+---======================================================================
+--- C_VoiceChat.ToggleDeafened
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleDeafened
+---
+--- Usage: C_VoiceChat.ToggleDeafened()
+---
+-- function C_VoiceChat.ToggleDeafened()
+-- end
+
+---======================================================================
+--- C_VoiceChat.ToggleMemberMuted
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMemberMuted
+---
+--- Usage: C_VoiceChat.ToggleMemberMuted(playerLocation)
+---
+-- function C_VoiceChat.ToggleMemberMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.ToggleMuted
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMuted
+---
+--- Usage: C_VoiceChat.ToggleMuted()
+---
+-- function C_VoiceChat.ToggleMuted()
+-- end
+
+---======================================================================
+--- C_VoiceChat.ActivateChannelTranscription
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ActivateChannelTranscription
+---
+--- Usage: C_VoiceChat.ActivateChannelTranscription(channelID)
+---
+-- function C_VoiceChat.ActivateChannelTranscription()
+-- end
+
+---======================================================================
+--- C_VoiceChat.DeactivateChannelTranscription
+---======================================================================
+--- Arguments:
+--- @param channelID number
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.DeactivateChannelTranscription
+---
+--- Usage: C_VoiceChat.DeactivateChannelTranscription(channelID)
+---
+-- function C_VoiceChat.DeactivateChannelTranscription()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetRemoteTtsVoices
+---======================================================================
+--- Returns:
+--- @return VoiceTtsVoiceType ttsVoices []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetRemoteTtsVoices
+---
+--- Usage: ttsVoices = C_VoiceChat.GetRemoteTtsVoices()
+---
+-- function C_VoiceChat.GetRemoteTtsVoices()
+-- end
+
+---======================================================================
+--- C_VoiceChat.GetTtsVoices
+---======================================================================
+--- Returns:
+--- @return VoiceTtsVoiceType ttsVoices []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetTtsVoices
+---
+--- Usage: ttsVoices = C_VoiceChat.GetTtsVoices()
+---
+-- function C_VoiceChat.GetTtsVoices()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsSpeakForMeActive
+---======================================================================
+--- Returns:
+--- @return boolean isActive
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSpeakForMeActive
+---
+--- Usage: isActive = C_VoiceChat.IsSpeakForMeActive()
+---
+-- function C_VoiceChat.IsSpeakForMeActive()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsSpeakForMeAllowed
+---======================================================================
+--- Returns:
+--- @return boolean isAllowed
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSpeakForMeAllowed
+---
+--- Usage: isAllowed = C_VoiceChat.IsSpeakForMeAllowed()
+---
+-- function C_VoiceChat.IsSpeakForMeAllowed()
+-- end
+
+---======================================================================
+--- C_VoiceChat.IsTranscriptionAllowed
+---======================================================================
+--- Returns:
+--- @return boolean isAllowed
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsTranscriptionAllowed
+---
+--- Usage: isAllowed = C_VoiceChat.IsTranscriptionAllowed()
+---
+-- function C_VoiceChat.IsTranscriptionAllowed()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SpeakRemoteTextSample
+---======================================================================
+--- Arguments:
+--- @param text string
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SpeakRemoteTextSample
+---
+--- Usage: C_VoiceChat.SpeakRemoteTextSample(text)
+---
+-- function C_VoiceChat.SpeakRemoteTextSample()
+-- end
+
+---======================================================================
+--- C_VoiceChat.SpeakText
+---======================================================================
+--- Reads text to speech.
+---
+--- Arguments:
+--- @param voiceID number - Voice IDs from .GetTtsVoices or .GetRemoteTtsVoices.
+--- @param text string - The message to speak.
+--- @param destination Enum.VoiceTtsDestination
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SpeakText
+---
+--- Usage: C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume)
+---
+--- Examples:
+--- Example 1:
+---   /run C_VoiceChat.SpeakText(0, "Hello world", Enum.VoiceTtsDestination.LocalPlayback, 0, 100)
+--- Example 2:
+---   /run C_VoiceChat.SpeakText(1, "Hello world", Enum.VoiceTtsDestination.LocalPlayback, -10, 100)
+---
+-- function C_VoiceChat.SpeakText()
+-- end
+
+---======================================================================
+--- C_VoiceChat.StopSpeakingText
+---======================================================================
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VoiceChat.StopSpeakingText
+---
+--- Usage: C_VoiceChat.StopSpeakingText()
+---
+-- function C_VoiceChat.StopSpeakingText()
+-- end

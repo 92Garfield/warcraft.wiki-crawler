@@ -1,0 +1,82 @@
+--[=[
+-- C_PartyPose API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_PartyPose
+--- C_PartyPose namespace contains 4 functions
+local C_PartyPose = {}
+
+--[=[
+-- C_PartyPose Functions:
+-- - C_PartyPose.ExtraAction
+-- - C_PartyPose.GetPartyPoseInfoByID
+-- - C_PartyPose.GetPartyPoseInfoByMapID
+-- - C_PartyPose.HasExtraAction
+--]=]
+
+---======================================================================
+--- C_PartyPose.GetPartyPoseInfoByMapID
+---======================================================================
+--- Returns party pose info for an Island Expedition or Warfront.
+---
+--- Arguments:
+--- @param mapID number
+---
+--- Returns:
+--- @return PartyPoseInfo info
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyPose.GetPartyPoseInfoByMapID
+---
+--- Usage: info = C_PartyPose.GetPartyPoseInfoByMapID(mapID)
+---
+-- function C_PartyPose.GetPartyPoseInfoByMapID()
+-- end
+
+---======================================================================
+--- C_PartyPose.ExtraAction
+---======================================================================
+--- Arguments:
+--- @param partyPoseID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyPose.ExtraAction
+---
+--- Usage: C_PartyPose.ExtraAction(partyPoseID)
+---
+-- function C_PartyPose.ExtraAction()
+-- end
+
+---======================================================================
+--- C_PartyPose.GetPartyPoseInfoByID
+---======================================================================
+--- Arguments:
+--- @param mapID number
+---
+--- Returns:
+--- @return PartyPoseInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyPose.GetPartyPoseInfoByID
+---
+--- Usage: info = C_PartyPose.GetPartyPoseInfoByID(mapID)
+---
+-- function C_PartyPose.GetPartyPoseInfoByID()
+-- end
+
+---======================================================================
+--- C_PartyPose.HasExtraAction
+---======================================================================
+--- Arguments:
+--- @param partyPoseID number
+---
+--- Returns:
+--- @return boolean hasExtraAction
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyPose.HasExtraAction
+---
+--- Usage: hasExtraAction = C_PartyPose.HasExtraAction(partyPoseID)
+---
+-- function C_PartyPose.HasExtraAction()
+-- end

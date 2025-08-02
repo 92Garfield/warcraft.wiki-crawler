@@ -1,0 +1,254 @@
+--[=[
+-- C_TaskQuest API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 13
+--]=]
+
+--- @class C_TaskQuest
+--- C_TaskQuest namespace contains 13 functions
+local C_TaskQuest = {}
+
+--[=[
+-- C_TaskQuest Functions:
+-- - C_TaskQuest.DoesMapShowTaskQuestObjectives
+-- - C_TaskQuest.GetQuestIconUIWidgetSet
+-- - C_TaskQuest.GetQuestInfoByQuestID
+-- - C_TaskQuest.GetQuestLocation
+-- - C_TaskQuest.GetQuestProgressBarInfo
+-- - C_TaskQuest.GetQuestTimeLeftMinutes
+-- - C_TaskQuest.GetQuestTimeLeftSeconds
+-- - C_TaskQuest.GetQuestTooltipUIWidgetSet
+-- - C_TaskQuest.GetQuestZoneID
+-- - C_TaskQuest.GetQuestsOnMap
+-- - C_TaskQuest.GetThreatQuests
+-- - C_TaskQuest.IsActive
+-- - C_TaskQuest.RequestPreloadRewardData
+--]=]
+
+---======================================================================
+--- C_TaskQuest.DoesMapShowTaskQuestObjectives
+---======================================================================
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return boolean showsTaskQuestObjectives
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.DoesMapShowTaskQuestObjectives
+---
+--- Usage: showsTaskQuestObjectives = C_TaskQuest.DoesMapShowTaskQuestObjectives(uiMapID)
+---
+-- function C_TaskQuest.DoesMapShowTaskQuestObjectives()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestIconUIWidgetSet
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number widgetSet
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestIconUIWidgetSet
+---
+--- Usage: widgetSet = C_TaskQuest.GetQuestIconUIWidgetSet(questID)
+---
+-- function C_TaskQuest.GetQuestIconUIWidgetSet()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestInfoByQuestID
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return string questTitle
+--- @return number factionID ? : FactionID
+--- @return boolean capped ?
+--- @return boolean displayAsObjective ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added displayAsObjective return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestInfoByQuestID
+---
+--- Usage: questTitle, factionID, capped, displayAsObjective = C_TaskQuest.GetQuestInfoByQuestID(questID)
+---
+-- function C_TaskQuest.GetQuestInfoByQuestID()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestLocation
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return number locationX
+--- @return number locationY
+---
+--- @since Patch 8.0.1 (2018-07-17): Replaced mapID, parentMapID arguments with questID, uiMapID
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestLocation
+---
+--- Usage: locationX, locationY = C_TaskQuest.GetQuestLocation(questID, uiMapID)
+---
+-- function C_TaskQuest.GetQuestLocation()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestProgressBarInfo
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number progress
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestProgressBarInfo
+---
+--- Usage: progress = C_TaskQuest.GetQuestProgressBarInfo(questID)
+---
+-- function C_TaskQuest.GetQuestProgressBarInfo()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestsOnMap
+---======================================================================
+--- Locates world quests, follower quests and bonus objectives on a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return QuestPOIMapInfo taskPOIs []
+---
+--- @since Patch 11.0.5 (2024-10-22): Replaced TaskPOIData return struct with QuestPOIMapInfo, Added questTagType, isMeta, isMapIndicatorQuest fields, Replaced questId with questID
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestsOnMap
+---
+--- Usage: taskPOIs = C_TaskQuest.GetQuestsOnMap(uiMapID)
+---
+--- See also:
+--- - C_QuestLine.GetAvailableQuestLines
+---
+-- function C_TaskQuest.GetQuestsOnMap()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestTimeLeftMinutes
+---======================================================================
+--- Returns the time left for a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number secondsLeft - time left in seconds.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestTimeLeftMinutes
+---
+--- Usage: secondsLeft = C_TaskQuest.GetQuestTimeLeftSeconds(questID)
+minutesLeft = C_TaskQuest.GetQuestTimeLeftMinutes(questID)
+---
+-- function C_TaskQuest.GetQuestTimeLeftMinutes()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestTimeLeftSeconds
+---======================================================================
+--- Returns the time left for a quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number secondsLeft - time left in seconds.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestTimeLeftSeconds
+---
+--- Usage: secondsLeft = C_TaskQuest.GetQuestTimeLeftSeconds(questID)
+minutesLeft = C_TaskQuest.GetQuestTimeLeftMinutes(questID)
+---
+-- function C_TaskQuest.GetQuestTimeLeftSeconds()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestTooltipUIWidgetSet
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number widgetSet
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestTooltipUIWidgetSet
+---
+--- Usage: widgetSet = C_TaskQuest.GetQuestTooltipUIWidgetSet(questID)
+---
+-- function C_TaskQuest.GetQuestTooltipUIWidgetSet()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetQuestZoneID
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return number uiMapID : UiMapID
+---
+--- @since Patch 8.0.1 (2018-07-17): Replaced mapID, zoneMapID return values with uiMapID
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestZoneID
+---
+--- Usage: uiMapID = C_TaskQuest.GetQuestZoneID(questID)
+---
+-- function C_TaskQuest.GetQuestZoneID()
+-- end
+
+---======================================================================
+--- C_TaskQuest.GetThreatQuests
+---======================================================================
+--- Returns:
+--- @return number quests []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetThreatQuests
+---
+--- Usage: quests = C_TaskQuest.GetThreatQuests()
+---
+-- function C_TaskQuest.GetThreatQuests()
+-- end
+
+---======================================================================
+--- C_TaskQuest.IsActive
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean active
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.IsActive
+---
+--- Usage: active = C_TaskQuest.IsActive(questID)
+---
+-- function C_TaskQuest.IsActive()
+-- end
+
+---======================================================================
+--- C_TaskQuest.RequestPreloadRewardData
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TaskQuest.RequestPreloadRewardData
+---
+--- Usage: C_TaskQuest.RequestPreloadRewardData(questID)
+---
+-- function C_TaskQuest.RequestPreloadRewardData()
+-- end

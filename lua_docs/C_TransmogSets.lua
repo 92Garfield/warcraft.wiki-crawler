@@ -1,0 +1,596 @@
+--[=[
+-- C_TransmogSets API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 35
+--]=]
+
+--- @class C_TransmogSets
+--- C_TransmogSets namespace contains 35 functions
+local C_TransmogSets = {}
+
+--[=[
+-- C_TransmogSets Functions:
+-- - C_TransmogSets.ClearLatestSource
+-- - C_TransmogSets.ClearNewSource
+-- - C_TransmogSets.ClearSetNewSourcesForSlot
+-- - C_TransmogSets.GetAllSets
+-- - C_TransmogSets.GetAllSourceIDs
+-- - C_TransmogSets.GetBaseSetID
+-- - C_TransmogSets.GetBaseSets
+-- - C_TransmogSets.GetBaseSetsFilter
+-- - C_TransmogSets.GetCameraIDs
+-- - C_TransmogSets.GetFilteredBaseSetsCounts
+-- - C_TransmogSets.GetFullBaseSetsCounts
+-- - C_TransmogSets.GetIsFavorite
+-- - C_TransmogSets.GetLatestSource
+-- - C_TransmogSets.GetSetInfo
+-- - C_TransmogSets.GetSetNewSources
+-- - C_TransmogSets.GetSetPrimaryAppearances
+-- - C_TransmogSets.GetSetsContainingSourceID
+-- - C_TransmogSets.GetSourceIDsForSlot
+-- - C_TransmogSets.GetSourcesForSlot
+-- - C_TransmogSets.GetTransmogSetsClassFilter
+-- - C_TransmogSets.GetUsableSets
+-- - C_TransmogSets.GetValidBaseSetsCountsForCharacter
+-- - C_TransmogSets.GetValidClassForSet
+-- - C_TransmogSets.GetVariantSets
+-- - C_TransmogSets.HasUsableSets
+-- - C_TransmogSets.IsBaseSetCollected
+-- - C_TransmogSets.IsNewSource
+-- - C_TransmogSets.IsSetVisible
+-- - C_TransmogSets.IsUsingDefaultBaseSetsFilters
+-- - C_TransmogSets.SetBaseSetsFilter
+-- - C_TransmogSets.SetDefaultBaseSetsFilters
+-- - C_TransmogSets.SetHasNewSources
+-- - C_TransmogSets.SetHasNewSourcesForSlot
+-- - C_TransmogSets.SetIsFavorite
+-- - C_TransmogSets.SetTransmogSetsClassFilter
+--]=]
+
+---======================================================================
+--- C_TransmogSets.ClearLatestSource
+---======================================================================
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.ClearLatestSource
+---
+--- Usage: C_TransmogSets.ClearLatestSource()
+---
+-- function C_TransmogSets.ClearLatestSource()
+-- end
+
+---======================================================================
+--- C_TransmogSets.ClearNewSource
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.ClearNewSource
+---
+--- Usage: C_TransmogSets.ClearNewSource(sourceID)
+---
+-- function C_TransmogSets.ClearNewSource()
+-- end
+
+---======================================================================
+--- C_TransmogSets.ClearSetNewSourcesForSlot
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+--- @param slot number
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.ClearSetNewSourcesForSlot
+---
+--- Usage: C_TransmogSets.ClearSetNewSourcesForSlot(transmogSetID, slot)
+---
+-- function C_TransmogSets.ClearSetNewSourcesForSlot()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetAllSets
+---======================================================================
+--- Returns all transmog sets
+---
+--- Returns:
+--- @return TransmogSetInfo sets []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetAllSets
+---
+--- Usage: sets = C_TransmogSets.GetAllSets()
+---
+-- function C_TransmogSets.GetAllSets()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetAllSourceIDs
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return number sources []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetAllSourceIDs
+---
+--- Usage: sources = C_TransmogSets.GetAllSourceIDs(transmogSetID)
+---
+-- function C_TransmogSets.GetAllSourceIDs()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetBaseSetID
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return number baseTransmogSetID
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetBaseSetID
+---
+--- Usage: baseTransmogSetID = C_TransmogSets.GetBaseSetID(transmogSetID)
+---
+-- function C_TransmogSets.GetBaseSetID()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetBaseSets
+---======================================================================
+--- Returns:
+--- @return TransmogSetInfo sets []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetBaseSets
+---
+--- Usage: sets = C_TransmogSets.GetBaseSets()
+---
+-- function C_TransmogSets.GetBaseSets()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetBaseSetsFilter
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return boolean isChecked
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetBaseSetsFilter
+---
+--- Usage: isChecked = C_TransmogSets.GetBaseSetsFilter(index)
+---
+-- function C_TransmogSets.GetBaseSetsFilter()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetCameraIDs
+---======================================================================
+--- Returns:
+--- @return number detailsCameraID ?
+--- @return number vendorCameraID ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetCameraIDs
+---
+--- Usage: detailsCameraID, vendorCameraID = C_TransmogSets.GetCameraIDs()
+---
+-- function C_TransmogSets.GetCameraIDs()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetFilteredBaseSetsCounts
+---======================================================================
+--- Returns:
+--- @return number numCollected
+--- @return number numTotal
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetFilteredBaseSetsCounts
+---
+--- Usage: numCollected, numTotal = C_TransmogSets.GetFilteredBaseSetsCounts()
+---
+-- function C_TransmogSets.GetFilteredBaseSetsCounts()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetFullBaseSetsCounts
+---======================================================================
+--- Returns:
+--- @return number numCollected
+--- @return number numTotal
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetFullBaseSetsCounts
+---
+--- Usage: numCollected, numTotal = C_TransmogSets.GetFullBaseSetsCounts()
+---
+-- function C_TransmogSets.GetFullBaseSetsCounts()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetIsFavorite
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return boolean isFavorite
+--- @return boolean isGroupFavorite
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetIsFavorite
+---
+--- Usage: isFavorite, isGroupFavorite = C_TransmogSets.GetIsFavorite(transmogSetID)
+---
+-- function C_TransmogSets.GetIsFavorite()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetLatestSource
+---======================================================================
+--- Returns:
+--- @return number sourceID
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetLatestSource
+---
+--- Usage: sourceID = C_TransmogSets.GetLatestSource()
+---
+-- function C_TransmogSets.GetLatestSource()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSetInfo
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number : TransmogSetID
+---
+--- Returns:
+--- @return TransmogSetInfo set
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSetInfo
+---
+--- Usage: set = C_TransmogSets.GetSetInfo(transmogSetID)
+---
+--- See also:
+--- - C_TransmogSets.GetSetSources
+---
+-- function C_TransmogSets.GetSetInfo()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSetNewSources
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return number sourceIDs []
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSetNewSources
+---
+--- Usage: sourceIDs = C_TransmogSets.GetSetNewSources(transmogSetID)
+---
+-- function C_TransmogSets.GetSetNewSources()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSetPrimaryAppearances
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number : TransmogSetID
+---
+--- Returns:
+--- @return TransmogSetPrimaryAppearanceInfo apppearances []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added. Replaces C_TransmogSets.GetSetSources()
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSetPrimaryAppearances
+---
+--- Usage: apppearances = C_TransmogSets.GetSetPrimaryAppearances(transmogSetID)
+---
+-- function C_TransmogSets.GetSetPrimaryAppearances()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSetsContainingSourceID
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return number setIDs []
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSetsContainingSourceID
+---
+--- Usage: setIDs = C_TransmogSets.GetSetsContainingSourceID(sourceID)
+---
+-- function C_TransmogSets.GetSetsContainingSourceID()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSourceIDsForSlot
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+--- @param slot number
+---
+--- Returns:
+--- @return number sources []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSourceIDsForSlot
+---
+--- Usage: sources = C_TransmogSets.GetSourceIDsForSlot(transmogSetID, slot)
+---
+-- function C_TransmogSets.GetSourceIDsForSlot()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetSourcesForSlot
+---======================================================================
+--- Returns sources for a transmog set's slot. Only returns valid data for the current class (proficiency).
+---
+--- Arguments:
+--- @param transmogSetID number
+--- @param slot number - InventorySlotId
+---
+--- Returns:
+--- @return  sources structure - AppearanceSourceInfo[]
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetSourcesForSlot
+---
+--- Usage: sources = C_TransmogSets.GetSourcesForSlot(transmogSetID, slot)
+---
+-- function C_TransmogSets.GetSourcesForSlot()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetTransmogSetsClassFilter
+---======================================================================
+--- Returns:
+--- @return number classID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetTransmogSetsClassFilter
+---
+--- Usage: classID = C_TransmogSets.GetTransmogSetsClassFilter()
+---
+-- function C_TransmogSets.GetTransmogSetsClassFilter()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetUsableSets
+---======================================================================
+--- Returns:
+--- @return TransmogSetInfo sets []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetUsableSets
+---
+--- Usage: sets = C_TransmogSets.GetUsableSets()
+---
+-- function C_TransmogSets.GetUsableSets()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetValidBaseSetsCountsForCharacter
+---======================================================================
+--- Returns:
+--- @return number numCollected
+--- @return number numTotal
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetValidBaseSetsCountsForCharacter
+---
+--- Usage: numCollected, numTotal = C_TransmogSets.GetValidBaseSetsCountsForCharacter()
+---
+-- function C_TransmogSets.GetValidBaseSetsCountsForCharacter()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetValidClassForSet
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return number classID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetValidClassForSet
+---
+--- Usage: classID = C_TransmogSets.GetValidClassForSet(transmogSetID)
+---
+-- function C_TransmogSets.GetValidClassForSet()
+-- end
+
+---======================================================================
+--- C_TransmogSets.GetVariantSets
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return TransmogSetInfo sets []
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetVariantSets
+---
+--- Usage: sets = C_TransmogSets.GetVariantSets(transmogSetID)
+---
+-- function C_TransmogSets.GetVariantSets()
+-- end
+
+---======================================================================
+--- C_TransmogSets.HasUsableSets
+---======================================================================
+--- Returns:
+--- @return boolean hasUsableSets
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.HasUsableSets
+---
+--- Usage: hasUsableSets = C_TransmogSets.HasUsableSets()
+---
+-- function C_TransmogSets.HasUsableSets()
+-- end
+
+---======================================================================
+--- C_TransmogSets.IsBaseSetCollected
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return boolean isCollected
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.IsBaseSetCollected
+---
+--- Usage: isCollected = C_TransmogSets.IsBaseSetCollected(transmogSetID)
+---
+-- function C_TransmogSets.IsBaseSetCollected()
+-- end
+
+---======================================================================
+--- C_TransmogSets.IsNewSource
+---======================================================================
+--- Arguments:
+--- @param sourceID number
+---
+--- Returns:
+--- @return boolean isNew
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.IsNewSource
+---
+--- Usage: isNew = C_TransmogSets.IsNewSource(sourceID)
+---
+-- function C_TransmogSets.IsNewSource()
+-- end
+
+---======================================================================
+--- C_TransmogSets.IsSetVisible
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return boolean isVisible
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.IsSetVisible
+---
+--- Usage: isVisible = C_TransmogSets.IsSetVisible(transmogSetID)
+---
+-- function C_TransmogSets.IsSetVisible()
+-- end
+
+---======================================================================
+--- C_TransmogSets.IsUsingDefaultBaseSetsFilters
+---======================================================================
+--- Returns:
+--- @return boolean isUsingDefaultBaseSetsFilters
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.IsUsingDefaultBaseSetsFilters
+---
+--- Usage: isUsingDefaultBaseSetsFilters = C_TransmogSets.IsUsingDefaultBaseSetsFilters()
+---
+-- function C_TransmogSets.IsUsingDefaultBaseSetsFilters()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetBaseSetsFilter
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param isChecked boolean
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetBaseSetsFilter
+---
+--- Usage: C_TransmogSets.SetBaseSetsFilter(index, isChecked)
+---
+-- function C_TransmogSets.SetBaseSetsFilter()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetDefaultBaseSetsFilters
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetDefaultBaseSetsFilters
+---
+--- Usage: C_TransmogSets.SetDefaultBaseSetsFilters()
+---
+-- function C_TransmogSets.SetDefaultBaseSetsFilters()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetHasNewSources
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return boolean hasNewSources
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetHasNewSources
+---
+--- Usage: hasNewSources = C_TransmogSets.SetHasNewSources(transmogSetID)
+              = C_TransmogSets.SetHasNewSourcesForSlot(transmogSetID, slot)
+---
+-- function C_TransmogSets.SetHasNewSources()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetHasNewSourcesForSlot
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+---
+--- Returns:
+--- @return boolean hasNewSources
+---
+--- @since Patch 7.2.5 (2017-06-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetHasNewSourcesForSlot
+---
+--- Usage: hasNewSources = C_TransmogSets.SetHasNewSources(transmogSetID)
+              = C_TransmogSets.SetHasNewSourcesForSlot(transmogSetID, slot)
+---
+-- function C_TransmogSets.SetHasNewSourcesForSlot()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetIsFavorite
+---======================================================================
+--- Arguments:
+--- @param transmogSetID number
+--- @param isFavorite boolean
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetIsFavorite
+---
+--- Usage: C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite)
+---
+-- function C_TransmogSets.SetIsFavorite()
+-- end
+
+---======================================================================
+--- C_TransmogSets.SetTransmogSetsClassFilter
+---======================================================================
+--- Arguments:
+--- @param classID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetTransmogSetsClassFilter
+---
+--- Usage: C_TransmogSets.SetTransmogSetsClassFilter(classID)
+---
+-- function C_TransmogSets.SetTransmogSetsClassFilter()
+-- end

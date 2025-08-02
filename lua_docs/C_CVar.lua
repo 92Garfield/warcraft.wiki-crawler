@@ -1,0 +1,216 @@
+--[=[
+-- C_CVar API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 9
+--]=]
+
+--- @class C_CVar
+--- C_CVar namespace contains 9 functions
+local C_CVar = {}
+
+--[=[
+-- C_CVar Functions:
+-- - C_CVar.GetCVar
+-- - C_CVar.GetCVarBitfield
+-- - C_CVar.GetCVarBool
+-- - C_CVar.GetCVarDefault
+-- - C_CVar.GetCVarInfo
+-- - C_CVar.RegisterCVar
+-- - C_CVar.ResetTestCVars
+-- - C_CVar.SetCVar
+-- - C_CVar.SetCVarBitfield
+--]=]
+
+---======================================================================
+--- C_CVar.GetCVar
+---======================================================================
+--- Returns the current value of a console variable.
+---
+--- Arguments:
+--- @param name string : CVar - name of the CVar to query the value of.
+---
+--- Returns:
+--- @return string value ? - current value of the CVar.
+---
+--- @since Patch 8.1.5 (2019-03-12): Namespaced to C_CVar.GetCVar().
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVar
+---
+--- Usage: value = C_CVar.GetCVar(name)
+      = GetCVar
+---
+--- See also:
+--- - C_CVar.SetCVar
+---
+-- function C_CVar.GetCVar()
+-- end
+
+---======================================================================
+--- C_CVar.GetCVarBitfield
+---======================================================================
+--- Returns the bitfield of a console variable.
+---
+--- Arguments:
+--- @param name string : CVar - name of the CVar.
+--- @param index number - Bitfield index.
+---
+--- Returns:
+--- @return boolean value ? - Value of the bitfield.
+---
+--- @since Patch 8.1.5 (2019-03-12): Namespaced to C_CVar.GetCVarBitfield().
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarBitfield
+---
+--- Usage: value = C_CVar.GetCVarBitfield(name, index)
+      = GetCVarBitfield
+---
+--- See also:
+--- - closedInfoFrames
+---
+-- function C_CVar.GetCVarBitfield()
+-- end
+
+---======================================================================
+--- C_CVar.GetCVarBool
+---======================================================================
+--- Returns the boolean value of a console variable.
+---
+--- Arguments:
+--- @param name string - Name of the CVar to query the value of.
+---
+--- Returns:
+--- @return boolean value ? - Compared to GetCVar, "1" would return as true, "0" would return as false
+---
+--- @since Patch 8.1.5 (2019-03-12): Namespaced to C_CVar.GetCVarBool().
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarBool
+---
+--- Usage: value = C_CVar.GetCVarBool(name)
+        GetCVarBool
+---
+-- function C_CVar.GetCVarBool()
+-- end
+
+---======================================================================
+--- C_CVar.GetCVarDefault
+---======================================================================
+--- Returns the default value of a console variable.
+---
+--- Arguments:
+--- @param name string - Name of the console variable to query.
+---
+--- Returns:
+--- @return string defaultValue ? - Default value of the console variable.
+---
+--- @since Patch 8.1.5 (2019-03-12): Namespaced to C_CVar.GetCVarDefault().
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarDefault
+---
+--- Usage: defaultValue = C_CVar.GetCVarDefault(name)
+             = GetCVarDefault
+---
+-- function C_CVar.GetCVarDefault()
+-- end
+
+---======================================================================
+--- C_CVar.GetCVarInfo
+---======================================================================
+--- Returns information on a console variable.
+---
+--- Arguments:
+--- @param name string - Name of the CVar to query the value of. Only accepts console variables (i.e. not console commands).
+---
+--- Returns:
+--- @return string value - Current value of the CVar.
+--- @return string defaultValue - Default value of the CVar.
+--- @return boolean isStoredServerAccount - If the CVar scope is set WoW account-wide. Stored on the server per CVar synchronizeConfig
+--- @return boolean isStoredServerCharacter - If the CVar scope is character-specific. Stored on the server per CVar synchronizeConfig
+--- @return boolean isLockedFromUser
+--- @return boolean isSecure - If the CVar cannot be set with SetCVar while in combat, which would fire ADDON_ACTION_BLOCKED. It's also not possible to set these via /console. Most nameplate cvars are secure.
+--- @return boolean isReadOnly - Returns true for portal, serverAlert, timingTestError. These CVars cannot be changed.
+---
+--- @since Patch 10.2.0 (2023-11-07): Moved to the C_CVar namespace. An alias from the old function name still exists but will be removed in a future patch.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarInfo
+---
+--- Usage: value, defaultValue, isStoredServerAccount, isStoredServerCharacter, isLockedFromUser, isSecure, isReadOnly = C_CVar.GetCVarInfo(name)
+---
+-- function C_CVar.GetCVarInfo()
+-- end
+
+---======================================================================
+--- C_CVar.RegisterCVar
+---======================================================================
+--- Temporarily registers a custom console variable.
+---
+--- Arguments:
+--- @param name string - Name of the custom CVar to set.
+--- @param value string |number? = "0" - Initial value of the CVar.
+---
+--- @since Patch 10.0.7 (2023-03-21): Registered CVars were written to disk, which conflicted with another issue, this was fixed in build 10.0.7.48838.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.RegisterCVar
+---
+--- Usage: C_CVar.RegisterCVar(name [, value])
+       RegisterCVar
+---
+-- function C_CVar.RegisterCVar()
+-- end
+
+---======================================================================
+--- C_CVar.ResetTestCVars
+---======================================================================
+--- Resets the ActionCam cvars.
+---
+--- @since Patch 8.1.5 (2019-03-12): Namespaced to C_CVar.ResetTestCVars().
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.ResetTestCVars
+---
+--- Usage: C_CVar.ResetTestCVars()
+       ResetTestCVars
+---
+-- function C_CVar.ResetTestCVars()
+-- end
+
+---======================================================================
+--- C_CVar.SetCVar
+---======================================================================
+--- Sets a console variable.
+---
+--- Arguments:
+--- @param name string : CVar - Name of the CVar.
+--- @param value string |number? = "0" - The new value of the CVar.
+---
+--- Returns:
+--- @return boolean success - Whether the CVar was successfully set. Returns nil if attempting to set a secure cvar in combat.
+---
+--- @since Patch 10.0.0 (2022-10-25): Removed scriptCVar argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.SetCVar
+---
+--- Usage: success = C_CVar.SetCVar(name [, value])
+        = SetCVar
+---
+--- See also:
+--- - C_CVar.GetCVar
+---
+-- function C_CVar.SetCVar()
+-- end
+
+---======================================================================
+--- C_CVar.SetCVarBitfield
+---======================================================================
+--- Sets the bitfield of a console variable.
+---
+--- Arguments:
+--- @param name string - Name of the CVar to set the bitfield of.
+--- @param index number - Bitfield index.
+--- @param value boolean - The new value of the bitfield.
+---
+--- Returns:
+--- @return boolean success - Whether the CVar was successfully set.
+---
+--- @since Patch 10.0.0 (2022-10-25): Removed scriptCVar argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CVar.SetCVarBitfield
+---
+--- Usage: success = C_CVar.SetCVarBitfield(name, index, value)
+        = SetCVarBitfield
+---
+--- See also:
+--- - closedInfoFrames
+---
+-- function C_CVar.SetCVarBitfield()
+-- end

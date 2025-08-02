@@ -1,0 +1,423 @@
+--[=[
+-- C_Reputation API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 26
+--]=]
+
+--- @class C_Reputation
+--- C_Reputation namespace contains 26 functions
+local C_Reputation = {}
+
+--[=[
+-- C_Reputation Functions:
+-- - C_Reputation.AreLegacyReputationsShown
+-- - C_Reputation.CollapseAllFactionHeaders
+-- - C_Reputation.CollapseFactionHeader
+-- - C_Reputation.ExpandAllFactionHeaders
+-- - C_Reputation.ExpandFactionHeader
+-- - C_Reputation.GetFactionDataByID
+-- - C_Reputation.GetFactionDataByIndex
+-- - C_Reputation.GetFactionParagonInfo
+-- - C_Reputation.GetGuildFactionData
+-- - C_Reputation.GetGuildRepExpirationTime
+-- - C_Reputation.GetNumFactions
+-- - C_Reputation.GetReputationSortType
+-- - C_Reputation.GetSelectedFaction
+-- - C_Reputation.GetWatchedFactionData
+-- - C_Reputation.IsAccountWideReputation
+-- - C_Reputation.IsFactionActive
+-- - C_Reputation.IsFactionParagon
+-- - C_Reputation.IsMajorFaction
+-- - C_Reputation.RequestFactionParagonPreloadRewardData
+-- - C_Reputation.SetFactionActive
+-- - C_Reputation.SetLegacyReputationsShown
+-- - C_Reputation.SetReputationSortType
+-- - C_Reputation.SetSelectedFaction
+-- - C_Reputation.SetWatchedFactionByID
+-- - C_Reputation.SetWatchedFactionByIndex
+-- - C_Reputation.ToggleFactionAtWar
+--]=]
+
+---======================================================================
+--- C_Reputation.AreLegacyReputationsShown
+---======================================================================
+--- Returns:
+--- @return boolean areLegacyReputationsShown
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.AreLegacyReputationsShown
+---
+--- Usage: areLegacyReputationsShown = C_Reputation.AreLegacyReputationsShown()
+---
+-- function C_Reputation.AreLegacyReputationsShown()
+-- end
+
+---======================================================================
+--- C_Reputation.CollapseAllFactionHeaders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.CollapseAllFactionHeaders
+---
+--- Usage: C_Reputation.CollapseAllFactionHeaders()
+---
+-- function C_Reputation.CollapseAllFactionHeaders()
+-- end
+
+---======================================================================
+--- C_Reputation.CollapseFactionHeader
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.CollapseFactionHeader
+---
+--- Usage: C_Reputation.CollapseFactionHeader(factionSortIndex)
+---
+-- function C_Reputation.CollapseFactionHeader()
+-- end
+
+---======================================================================
+--- C_Reputation.ExpandAllFactionHeaders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.ExpandAllFactionHeaders
+---
+--- Usage: C_Reputation.ExpandAllFactionHeaders()
+---
+-- function C_Reputation.ExpandAllFactionHeaders()
+-- end
+
+---======================================================================
+--- C_Reputation.ExpandFactionHeader
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.ExpandFactionHeader
+---
+--- Usage: C_Reputation.ExpandFactionHeader(factionSortIndex)
+---
+-- function C_Reputation.ExpandFactionHeader()
+-- end
+
+---======================================================================
+--- C_Reputation.GetFactionDataByID
+---======================================================================
+--- Arguments:
+--- @param factionID number
+---
+--- Returns:
+--- @return FactionData factionData ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetFactionDataByID
+---
+--- Usage: factionData = C_Reputation.GetFactionDataByID(factionID)
+---
+-- function C_Reputation.GetFactionDataByID()
+-- end
+
+---======================================================================
+--- C_Reputation.GetFactionDataByIndex
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- Returns:
+--- @return FactionData factionData ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetFactionDataByIndex
+---
+--- Usage: factionData = C_Reputation.GetFactionDataByIndex(factionSortIndex)
+---
+-- function C_Reputation.GetFactionDataByIndex()
+-- end
+
+---======================================================================
+--- C_Reputation.GetFactionParagonInfo
+---======================================================================
+--- Returns Paragon info on a faction.
+---
+--- Arguments:
+--- @param factionID number : FactionID
+---
+--- Returns:
+--- @return number currentValue - The amount of reputation you have earned in the current level of Paragon.
+--- @return number threshold - The amount of reputation until you gain the next Paragon level.
+--- @return number rewardQuestID - The ID of the quest once you attain a new Paragon level (or your first).
+--- @return boolean hasRewardPending - True if the player has attained a Paragon level but has not completed the reward quest.
+--- @return boolean tooLowLevelForParagon - True if the player level is too low to complete the Paragon reward quest.
+---
+--- @since Patch 7.3.5 (2018-01-16): Added tooLowLevelForParagon return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetFactionParagonInfo
+---
+--- Usage: currentValue, threshold, rewardQuestID, hasRewardPending, tooLowLevelForParagon = C_Reputation.GetFactionParagonInfo(factionID)
+---
+--- Examples:
+--- Example 1:
+---   local factionID = 2413
+---   local currentValue, threshold, rewardQuestID, hasRewardPending, tooLowLevelForParagon = C_Reputation.GetFactionParagonInfo(factionID)
+---   -- total iterations (= Rewards Earned)
+---   local level = ((math.floor(currentValue/threshold)*threshold)/10000) - (hasRewardPending and 1 or 0)
+---   local realValue = currentValue % threshold
+---   
+---   print("[",factionID, "]","current rep: ", realValue, " (", threshold, "), level: ", level)
+---
+-- function C_Reputation.GetFactionParagonInfo()
+-- end
+
+---======================================================================
+--- C_Reputation.GetGuildFactionData
+---======================================================================
+--- Returns:
+--- @return FactionData guildFactionData ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetGuildFactionData
+---
+--- Usage: guildFactionData = C_Reputation.GetGuildFactionData()
+---
+-- function C_Reputation.GetGuildFactionData()
+-- end
+
+---======================================================================
+--- C_Reputation.GetGuildRepExpirationTime
+---======================================================================
+--- Returns:
+--- @return number expirationTime ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetGuildRepExpirationTime
+---
+--- Usage: expirationTime = C_Reputation.GetGuildRepExpirationTime()
+---
+-- function C_Reputation.GetGuildRepExpirationTime()
+-- end
+
+---======================================================================
+--- C_Reputation.GetNumFactions
+---======================================================================
+--- Returns:
+--- @return number numFactions
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetNumFactions
+---
+--- Usage: numFactions = C_Reputation.GetNumFactions()
+---
+-- function C_Reputation.GetNumFactions()
+-- end
+
+---======================================================================
+--- C_Reputation.GetReputationSortType
+---======================================================================
+--- Returns:
+--- @return Enum.ReputationSortType sortType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetReputationSortType
+---
+--- Usage: sortType = C_Reputation.GetReputationSortType()
+---
+-- function C_Reputation.GetReputationSortType()
+-- end
+
+---======================================================================
+--- C_Reputation.GetSelectedFaction
+---======================================================================
+--- Returns:
+--- @return number selectedFactionSortIndex
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetSelectedFaction
+---
+--- Usage: selectedFactionSortIndex = C_Reputation.GetSelectedFaction()
+---
+-- function C_Reputation.GetSelectedFaction()
+-- end
+
+---======================================================================
+--- C_Reputation.GetWatchedFactionData
+---======================================================================
+--- Returns:
+--- @return FactionData watchedFactionData ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.GetWatchedFactionData
+---
+--- Usage: watchedFactionData = C_Reputation.GetWatchedFactionData()
+---
+--- See also:
+--- - #584
+---
+-- function C_Reputation.GetWatchedFactionData()
+-- end
+
+---======================================================================
+--- C_Reputation.IsAccountWideReputation
+---======================================================================
+--- Arguments:
+--- @param factionID number
+---
+--- Returns:
+--- @return boolean isAccountWide
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.IsAccountWideReputation
+---
+--- Usage: isAccountWide = C_Reputation.IsAccountWideReputation(factionID)
+---
+-- function C_Reputation.IsAccountWideReputation()
+-- end
+
+---======================================================================
+--- C_Reputation.IsFactionActive
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- Returns:
+--- @return boolean isActive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.IsFactionActive
+---
+--- Usage: isActive = C_Reputation.IsFactionActive(factionSortIndex)
+---
+-- function C_Reputation.IsFactionActive()
+-- end
+
+---======================================================================
+--- C_Reputation.IsFactionParagon
+---======================================================================
+--- Returns true if a faction is a paragon reputation.
+---
+--- Arguments:
+--- @param factionID number - The factionID from the 14th return of GetFactionInfo or the 6th return from GetWatchedFactionInfo.
+---
+--- Returns:
+--- @return boolean isParagon - true if the faction is Paragon level, false otherwise.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.IsFactionParagon
+---
+--- Usage: isParagon = C_Reputation.IsFactionParagon(factionID)
+---
+--- See also:
+--- - GetFactionInfo
+--- - GetWatchedFactionInfo
+--- - C_Reputation.GetFactionParagonInfo
+---
+-- function C_Reputation.IsFactionParagon()
+-- end
+
+---======================================================================
+--- C_Reputation.IsMajorFaction
+---======================================================================
+--- Arguments:
+--- @param factionID number
+---
+--- Returns:
+--- @return boolean isMajorFaction
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.IsMajorFaction
+---
+--- Usage: isMajorFaction = C_Reputation.IsMajorFaction(factionID)
+---
+-- function C_Reputation.IsMajorFaction()
+-- end
+
+---======================================================================
+--- C_Reputation.RequestFactionParagonPreloadRewardData
+---======================================================================
+--- Arguments:
+--- @param factionID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.RequestFactionParagonPreloadRewardData
+---
+--- Usage: C_Reputation.RequestFactionParagonPreloadRewardData(factionID)
+---
+-- function C_Reputation.RequestFactionParagonPreloadRewardData()
+-- end
+
+---======================================================================
+--- C_Reputation.SetFactionActive
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+--- @param setActive boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetFactionActive
+---
+--- Usage: C_Reputation.SetFactionActive(factionSortIndex, setActive)
+---
+-- function C_Reputation.SetFactionActive()
+-- end
+
+---======================================================================
+--- C_Reputation.SetLegacyReputationsShown
+---======================================================================
+--- Arguments:
+--- @param showLegacyReputations boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetLegacyReputationsShown
+---
+--- Usage: C_Reputation.SetLegacyReputationsShown(showLegacyReputations)
+---
+-- function C_Reputation.SetLegacyReputationsShown()
+-- end
+
+---======================================================================
+--- C_Reputation.SetReputationSortType
+---======================================================================
+--- Arguments:
+--- @param sortType Enum.ReputationSortType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetReputationSortType
+---
+--- Usage: C_Reputation.SetReputationSortType(sortType)
+---
+-- function C_Reputation.SetReputationSortType()
+-- end
+
+---======================================================================
+--- C_Reputation.SetSelectedFaction
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetSelectedFaction
+---
+--- Usage: C_Reputation.SetSelectedFaction(factionSortIndex)
+---
+-- function C_Reputation.SetSelectedFaction()
+-- end
+
+---======================================================================
+--- C_Reputation.SetWatchedFactionByID
+---======================================================================
+--- Arguments:
+--- @param factionID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetWatchedFactionByID
+---
+--- Usage: C_Reputation.SetWatchedFactionByID(factionID)
+---
+-- function C_Reputation.SetWatchedFactionByID()
+-- end
+
+---======================================================================
+--- C_Reputation.SetWatchedFactionByIndex
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.SetWatchedFactionByIndex
+---
+--- Usage: C_Reputation.SetWatchedFactionByIndex(factionSortIndex)
+---
+-- function C_Reputation.SetWatchedFactionByIndex()
+-- end
+
+---======================================================================
+--- C_Reputation.ToggleFactionAtWar
+---======================================================================
+--- Arguments:
+--- @param factionSortIndex number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Reputation.ToggleFactionAtWar
+---
+--- Usage: C_Reputation.ToggleFactionAtWar(factionSortIndex)
+---
+-- function C_Reputation.ToggleFactionAtWar()
+-- end

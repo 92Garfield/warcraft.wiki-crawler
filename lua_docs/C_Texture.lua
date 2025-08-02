@@ -1,0 +1,188 @@
+--[=[
+-- C_Texture API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_Texture
+--- C_Texture namespace contains 10 functions
+local C_Texture = {}
+
+--[=[
+-- C_Texture Functions:
+-- - C_Texture.ClearTitleIconTexture
+-- - C_Texture.GetAtlasElementID
+-- - C_Texture.GetAtlasElements
+-- - C_Texture.GetAtlasID
+-- - C_Texture.GetAtlasInfo
+-- - C_Texture.GetCraftingReagentQualityChatIcon
+-- - C_Texture.GetFilenameFromFileDataID
+-- - C_Texture.GetTitleIconTexture
+-- - C_Texture.IsTitleIconTextureReady
+-- - C_Texture.SetTitleIconTexture
+--]=]
+
+---======================================================================
+--- C_Texture.ClearTitleIconTexture
+---======================================================================
+--- Arguments:
+--- @param texture Texture🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.ClearTitleIconTexture
+---
+--- Usage: C_Texture.ClearTitleIconTexture(texture)
+---
+-- function C_Texture.ClearTitleIconTexture()
+-- end
+
+---======================================================================
+--- C_Texture.GetAtlasElementID
+---======================================================================
+--- Arguments:
+--- @param atlas string : textureAtlas
+---
+--- Returns:
+--- @return number elementID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasElementID
+---
+--- Usage: elementID = C_Texture.GetAtlasElementID(atlas)
+---
+-- function C_Texture.GetAtlasElementID()
+-- end
+
+---======================================================================
+--- C_Texture.GetAtlasElements
+---======================================================================
+--- Returns:
+--- @return string atlases [] : textureAtlas
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasElements
+---
+--- Usage: atlases = C_Texture.GetAtlasElements()
+---
+-- function C_Texture.GetAtlasElements()
+-- end
+
+---======================================================================
+--- C_Texture.GetAtlasID
+---======================================================================
+--- Arguments:
+--- @param atlas string : textureAtlas
+---
+--- Returns:
+--- @return number atlasID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasID
+---
+--- Usage: atlasID = C_Texture.GetAtlasID(atlas)
+---
+-- function C_Texture.GetAtlasID()
+-- end
+
+---======================================================================
+--- C_Texture.GetAtlasInfo
+---======================================================================
+--- Arguments:
+--- @param atlas string - Name of the atlas
+---
+--- Returns:
+--- @return AtlasInfo info
+---
+--- @since Patch 8.1.0 (2018-12-11): Changed to C_Texture.GetAtlasInfo() and returns structured data.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasInfo
+---
+--- Usage: info = C_Texture.GetAtlasInfo(atlas)
+---
+--- See also:
+--- - Texture:GetAtlas
+--- - Texture:SetAtlas
+--- - CreateAtlasMarkup
+--- - Helix/AtlasInfo.lua
+--- - UiTextureAtlasMember.db2
+--- - Texture Atlas Viewer
+---
+-- function C_Texture.GetAtlasInfo()
+-- end
+
+---======================================================================
+--- C_Texture.GetCraftingReagentQualityChatIcon
+---======================================================================
+--- Arguments:
+--- @param quality number
+---
+--- Returns:
+--- @return string textureMarkup
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetCraftingReagentQualityChatIcon
+---
+--- Usage: textureMarkup = C_Texture.GetCraftingReagentQualityChatIcon(quality)
+---
+-- function C_Texture.GetCraftingReagentQualityChatIcon()
+-- end
+
+---======================================================================
+--- C_Texture.GetFilenameFromFileDataID
+---======================================================================
+--- Returns a string representing a file ID.
+---
+--- Arguments:
+--- @param fileDataID number - The file ID to query.
+---
+--- Returns:
+--- @return string filename - A string of the form "FileData ID {fileDataID}".
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetFilenameFromFileDataID
+---
+--- Usage: filename = C_Texture.GetFilenameFromFileDataID(fileDataID)
+---
+-- function C_Texture.GetFilenameFromFileDataID()
+-- end
+
+---======================================================================
+--- C_Texture.GetTitleIconTexture
+---======================================================================
+--- Arguments:
+--- @param titleID string
+--- @param version Enum.TitleIconVersion
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.GetTitleIconTexture
+---
+--- Usage: C_Texture.GetTitleIconTexture(titleID, version, callback)
+---
+-- function C_Texture.GetTitleIconTexture()
+-- end
+
+---======================================================================
+--- C_Texture.IsTitleIconTextureReady
+---======================================================================
+--- Arguments:
+--- @param titleID string
+--- @param version Enum.TitleIconVersion
+---
+--- Returns:
+--- @return boolean ready
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.IsTitleIconTextureReady
+---
+--- Usage: ready = C_Texture.IsTitleIconTextureReady(titleID, version)
+---
+-- function C_Texture.IsTitleIconTextureReady()
+-- end
+
+---======================================================================
+--- C_Texture.SetTitleIconTexture
+---======================================================================
+--- Arguments:
+--- @param texture Texture🔗
+--- @param titleID string
+--- @param version Enum.TitleIconVersion
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Texture.SetTitleIconTexture
+---
+--- Usage: C_Texture.SetTitleIconTexture(texture, titleID, version)
+---
+-- function C_Texture.SetTitleIconTexture()
+-- end

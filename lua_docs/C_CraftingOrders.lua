@@ -1,0 +1,590 @@
+--[=[
+-- C_CraftingOrders API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 36
+--]=]
+
+--- @class C_CraftingOrders
+--- C_CraftingOrders namespace contains 36 functions
+local C_CraftingOrders = {}
+
+--[=[
+-- C_CraftingOrders Functions:
+-- - C_CraftingOrders.AreOrderNotesDisabled
+-- - C_CraftingOrders.CalculateCraftingOrderPostingFee
+-- - C_CraftingOrders.CanOrderSkillAbility
+-- - C_CraftingOrders.CancelOrder
+-- - C_CraftingOrders.ClaimOrder
+-- - C_CraftingOrders.CloseCrafterCraftingOrders
+-- - C_CraftingOrders.CloseCustomerCraftingOrders
+-- - C_CraftingOrders.FulfillOrder
+-- - C_CraftingOrders.GetClaimedOrder
+-- - C_CraftingOrders.GetCrafterBuckets
+-- - C_CraftingOrders.GetCrafterOrders
+-- - C_CraftingOrders.GetCraftingOrderTime
+-- - C_CraftingOrders.GetCustomerCategories
+-- - C_CraftingOrders.GetCustomerOptions
+-- - C_CraftingOrders.GetCustomerOrders
+-- - C_CraftingOrders.GetDefaultOrdersSkillLine
+-- - C_CraftingOrders.GetMyOrders
+-- - C_CraftingOrders.GetNumFavoriteCustomerOptions
+-- - C_CraftingOrders.GetOrderClaimInfo
+-- - C_CraftingOrders.GetPersonalOrdersInfo
+-- - C_CraftingOrders.HasFavoriteCustomerOptions
+-- - C_CraftingOrders.IsCustomerOptionFavorited
+-- - C_CraftingOrders.ListMyOrders
+-- - C_CraftingOrders.OpenCrafterCraftingOrders
+-- - C_CraftingOrders.OpenCustomerCraftingOrders
+-- - C_CraftingOrders.OrderCanBeRecrafted
+-- - C_CraftingOrders.ParseCustomerOptions
+-- - C_CraftingOrders.PlaceNewOrder
+-- - C_CraftingOrders.RejectOrder
+-- - C_CraftingOrders.ReleaseOrder
+-- - C_CraftingOrders.RequestCrafterOrders
+-- - C_CraftingOrders.RequestCustomerOrders
+-- - C_CraftingOrders.SetCustomerOptionFavorited
+-- - C_CraftingOrders.ShouldShowCraftingOrderTab
+-- - C_CraftingOrders.SkillLineHasOrders
+-- - C_CraftingOrders.UpdateIgnoreList
+--]=]
+
+---======================================================================
+--- C_CraftingOrders.AreOrderNotesDisabled
+---======================================================================
+--- Returns:
+--- @return boolean areNotesDisabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.AreOrderNotesDisabled
+---
+--- Usage: areNotesDisabled = C_CraftingOrders.AreOrderNotesDisabled()
+---
+-- function C_CraftingOrders.AreOrderNotesDisabled()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.CalculateCraftingOrderPostingFee
+---======================================================================
+--- Arguments:
+--- @param skillLineAbilityID number
+--- @param orderType Enum.CraftingOrderType
+---
+--- Returns:
+--- @return number deposit
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CalculateCraftingOrderPostingFee
+---
+--- Usage: deposit = C_CraftingOrders.CalculateCraftingOrderPostingFee(skillLineAbilityID, orderType, orderDuration)
+---
+-- function C_CraftingOrders.CalculateCraftingOrderPostingFee()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.CancelOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CancelOrder
+---
+--- Usage: C_CraftingOrders.CancelOrder(orderID)
+---
+-- function C_CraftingOrders.CancelOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.CanOrderSkillAbility
+---======================================================================
+--- Arguments:
+--- @param skillLineAbilityID number
+---
+--- Returns:
+--- @return boolean canOrder
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CanOrderSkillAbility
+---
+--- Usage: canOrder = C_CraftingOrders.CanOrderSkillAbility(skillLineAbilityID)
+---
+-- function C_CraftingOrders.CanOrderSkillAbility()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.ClaimOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+--- @param profession Enum.Profession
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ClaimOrder
+---
+--- Usage: C_CraftingOrders.ClaimOrder(orderID, profession)
+---
+-- function C_CraftingOrders.ClaimOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.CloseCrafterCraftingOrders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CloseCrafterCraftingOrders
+---
+--- Usage: C_CraftingOrders.CloseCrafterCraftingOrders()
+---
+-- function C_CraftingOrders.CloseCrafterCraftingOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.CloseCustomerCraftingOrders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CloseCustomerCraftingOrders
+---
+--- Usage: C_CraftingOrders.CloseCustomerCraftingOrders()
+---
+-- function C_CraftingOrders.CloseCustomerCraftingOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.FulfillOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+--- @param crafterNote string
+--- @param profession Enum.Profession
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.FulfillOrder
+---
+--- Usage: C_CraftingOrders.FulfillOrder(orderID, crafterNote, profession)
+---
+-- function C_CraftingOrders.FulfillOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetClaimedOrder
+---======================================================================
+--- Returns:
+--- @return CraftingOrderInfo order ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetClaimedOrder
+---
+--- Usage: order = C_CraftingOrders.GetClaimedOrder()
+---
+-- function C_CraftingOrders.GetClaimedOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCrafterBuckets
+---======================================================================
+--- Returns:
+--- @return CraftingOrderBucketInfo buckets []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCrafterBuckets
+---
+--- Usage: buckets = C_CraftingOrders.GetCrafterBuckets()
+---
+-- function C_CraftingOrders.GetCrafterBuckets()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCrafterOrders
+---======================================================================
+--- Returns:
+--- @return CraftingOrderInfo orders []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCrafterOrders
+---
+--- Usage: orders = C_CraftingOrders.GetCrafterOrders()
+---
+-- function C_CraftingOrders.GetCrafterOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCraftingOrderTime
+---======================================================================
+--- Returns:
+--- @return number time
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCraftingOrderTime
+---
+--- Usage: time = C_CraftingOrders.GetCraftingOrderTime()
+---
+-- function C_CraftingOrders.GetCraftingOrderTime()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCustomerCategories
+---======================================================================
+--- Returns:
+--- @return CraftingOrderCustomerCategory categories []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerCategories
+---
+--- Usage: categories = C_CraftingOrders.GetCustomerCategories()
+---
+-- function C_CraftingOrders.GetCustomerCategories()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCustomerOptions
+---======================================================================
+--- Arguments:
+--- @param params CraftingOrderCustomerSearchParams
+---
+--- Returns:
+--- @return CraftingOrderCustomerSearchResults results
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerOptions
+---
+--- Usage: results = C_CraftingOrders.GetCustomerOptions(params)
+---
+-- function C_CraftingOrders.GetCustomerOptions()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetCustomerOrders
+---======================================================================
+--- Returns:
+--- @return CraftingOrderInfo customerOrders []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerOrders
+---
+--- Usage: customerOrders = C_CraftingOrders.GetCustomerOrders()
+---
+-- function C_CraftingOrders.GetCustomerOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetDefaultOrdersSkillLine
+---======================================================================
+--- Returns:
+--- @return number skillLineID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetDefaultOrdersSkillLine
+---
+--- Usage: skillLineID = C_CraftingOrders.GetDefaultOrdersSkillLine()
+---
+-- function C_CraftingOrders.GetDefaultOrdersSkillLine()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetMyOrders
+---======================================================================
+--- Returns:
+--- @return CraftingOrderInfo myOrders []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetMyOrders
+---
+--- Usage: myOrders = C_CraftingOrders.GetMyOrders()
+---
+-- function C_CraftingOrders.GetMyOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetNumFavoriteCustomerOptions
+---======================================================================
+--- Returns:
+--- @return number numFavorites
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetNumFavoriteCustomerOptions
+---
+--- Usage: numFavorites = C_CraftingOrders.GetNumFavoriteCustomerOptions()
+---
+-- function C_CraftingOrders.GetNumFavoriteCustomerOptions()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetOrderClaimInfo
+---======================================================================
+--- Arguments:
+--- @param profession Enum.Profession
+---
+--- Returns:
+--- @return CraftingOrderClaimsRemainingInfo claimInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetOrderClaimInfo
+---
+--- Usage: claimInfo = C_CraftingOrders.GetOrderClaimInfo(profession)
+---
+-- function C_CraftingOrders.GetOrderClaimInfo()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.GetPersonalOrdersInfo
+---======================================================================
+--- Returns:
+--- @return CraftingOrderPersonalOrdersInfo infos []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetPersonalOrdersInfo
+---
+--- Usage: infos = C_CraftingOrders.GetPersonalOrdersInfo()
+---
+-- function C_CraftingOrders.GetPersonalOrdersInfo()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.HasFavoriteCustomerOptions
+---======================================================================
+--- Returns:
+--- @return boolean hasFavorites
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.HasFavoriteCustomerOptions
+---
+--- Usage: hasFavorites = C_CraftingOrders.HasFavoriteCustomerOptions()
+---
+-- function C_CraftingOrders.HasFavoriteCustomerOptions()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.IsCustomerOptionFavorited
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean favorited
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.IsCustomerOptionFavorited
+---
+--- Usage: favorited = C_CraftingOrders.IsCustomerOptionFavorited(recipeID)
+---
+-- function C_CraftingOrders.IsCustomerOptionFavorited()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.ListMyOrders
+---======================================================================
+--- Arguments:
+--- @param request CraftingOrderRequestMyOrdersInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ListMyOrders
+---
+--- Usage: C_CraftingOrders.ListMyOrders(request)
+---
+-- function C_CraftingOrders.ListMyOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.OpenCrafterCraftingOrders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OpenCrafterCraftingOrders
+---
+--- Usage: C_CraftingOrders.OpenCrafterCraftingOrders()
+---
+-- function C_CraftingOrders.OpenCrafterCraftingOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.OpenCustomerCraftingOrders
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OpenCustomerCraftingOrders
+---
+--- Usage: C_CraftingOrders.OpenCustomerCraftingOrders()
+---
+-- function C_CraftingOrders.OpenCustomerCraftingOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.OrderCanBeRecrafted
+---======================================================================
+--- Arguments:
+--- @param orderID number
+---
+--- Returns:
+--- @return boolean recraftable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OrderCanBeRecrafted
+---
+--- Usage: recraftable = C_CraftingOrders.OrderCanBeRecrafted(orderID)
+---
+-- function C_CraftingOrders.OrderCanBeRecrafted()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.ParseCustomerOptions
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ParseCustomerOptions
+---
+--- Usage: C_CraftingOrders.ParseCustomerOptions()
+---
+-- function C_CraftingOrders.ParseCustomerOptions()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.PlaceNewOrder
+---======================================================================
+--- Posts a public work order for  [Shock-Spring Coil] while providing all the materials.
+---
+--- Arguments:
+--- @param orderInfo NewCraftingOrderInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.PlaceNewOrder
+---
+--- Usage: C_CraftingOrders.PlaceNewOrder(orderInfo)
+---
+--- Examples:
+--- Example 1:
+---   local info = {
+---       skillLineAbilityID = 47446, -- Shock-Spring Coil
+---       orderType = Enum.CraftingOrderType.Public,
+---       orderDuration = Enum.CraftingOrderDuration.Short,
+---       tipAmount = 100,
+---       customerNotes = "",
+---       reagentItems = { -- leave this table empty to omit reagents
+---           {
+---               quantity = 2,
+---               itemID = 190315, -- Rousing Earth
+---               dataSlotIndex = 1,
+---           },
+---       },
+---       craftingReagentItems = { -- leave this table empty to omit reagents
+---           {
+---               quantity = 6,
+---               itemID = 198183, -- Handful of Serevite Bolts
+---               dataSlotIndex = 1,
+---           },
+---       },
+---   }
+---   
+---   C_CraftingOrders.PlaceNewOrder(info)
+---
+-- function C_CraftingOrders.PlaceNewOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.RejectOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+--- @param crafterNote string
+--- @param profession Enum.Profession
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RejectOrder
+---
+--- Usage: C_CraftingOrders.RejectOrder(orderID, crafterNote, profession)
+---
+-- function C_CraftingOrders.RejectOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.ReleaseOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+--- @param profession Enum.Profession
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ReleaseOrder
+---
+--- Usage: C_CraftingOrders.ReleaseOrder(orderID, profession)
+---
+-- function C_CraftingOrders.ReleaseOrder()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.RequestCrafterOrders
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Requests issued from dynamic scripts will result in no data being returned from subsequent calls to C_CraftingOrders.GetCrafterOrders.
+---
+--- Arguments:
+--- @param request CraftingOrderRequestInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RequestCrafterOrders
+---
+--- Usage: C_CraftingOrders.RequestCrafterOrders(request)
+---
+--- Examples:
+--- Example 1:
+---   if C_TradeSkillUI.IsNearProfessionSpellFocus(Enum.Profession.Engineering) then
+---   	local request = {
+---   		orderType = Enum.CraftingOrderType.Public,
+---   		searchFavorites = false,
+---   		initialNonPublicSearch = false,
+---   		primarySort = {
+---   			sortType = Enum.CraftingOrderSortType.ItemName,
+---   			reversed = false,
+---   		},
+---   		secondarySort = {
+---   			sortType = Enum.CraftingOrderSortType.MaxTip,
+---   			reversed = false,
+---   		},
+---   		forCrafter = true,
+---   		offset = 0,
+---   		profession = Enum.Profession.Engineering,
+---   		callback = C_FunctionContainers.CreateCallback(function(result, ...)
+---           	print(result, ...) -- 0, 0, false, false, 0, true
+---   			if result == Enum.CraftingOrderResult.Ok then
+---   				local orders = C_CraftingOrders.GetCrafterOrders()
+---   				-- do something with orders
+---   			end
+---   		end),
+---   	}
+---   	C_CraftingOrders.RequestCrafterOrders(request)
+---   else
+---   	print("Not at the Tinker's Workbench")
+---   end
+---
+-- function C_CraftingOrders.RequestCrafterOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.RequestCustomerOrders
+---======================================================================
+--- Arguments:
+--- @param request CraftingOrderRequestInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RequestCustomerOrders
+---
+--- Usage: C_CraftingOrders.RequestCustomerOrders(request)
+---
+-- function C_CraftingOrders.RequestCustomerOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.SetCustomerOptionFavorited
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param favorited boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.SetCustomerOptionFavorited
+---
+--- Usage: C_CraftingOrders.SetCustomerOptionFavorited(recipeID, favorited)
+---
+-- function C_CraftingOrders.SetCustomerOptionFavorited()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.ShouldShowCraftingOrderTab
+---======================================================================
+--- Returns:
+--- @return boolean showTab
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ShouldShowCraftingOrderTab
+---
+--- Usage: showTab = C_CraftingOrders.ShouldShowCraftingOrderTab()
+---
+-- function C_CraftingOrders.ShouldShowCraftingOrderTab()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.SkillLineHasOrders
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return boolean hasOrders
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.SkillLineHasOrders
+---
+--- Usage: hasOrders = C_CraftingOrders.SkillLineHasOrders(skillLineID)
+---
+-- function C_CraftingOrders.SkillLineHasOrders()
+-- end
+
+---======================================================================
+--- C_CraftingOrders.UpdateIgnoreList
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.UpdateIgnoreList
+---
+--- Usage: C_CraftingOrders.UpdateIgnoreList()
+---
+-- function C_CraftingOrders.UpdateIgnoreList()
+-- end

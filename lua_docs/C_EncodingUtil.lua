@@ -1,0 +1,242 @@
+--[=[
+-- C_EncodingUtil API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_EncodingUtil
+--- C_EncodingUtil namespace contains 10 functions
+local C_EncodingUtil = {}
+
+--[=[
+-- C_EncodingUtil Functions:
+-- - C_EncodingUtil.CompressString
+-- - C_EncodingUtil.DecodeBase64
+-- - C_EncodingUtil.DecodeHex
+-- - C_EncodingUtil.DecompressString
+-- - C_EncodingUtil.DeserializeCBOR
+-- - C_EncodingUtil.DeserializeJSON
+-- - C_EncodingUtil.EncodeBase64
+-- - C_EncodingUtil.EncodeHex
+-- - C_EncodingUtil.SerializeCBOR
+-- - C_EncodingUtil.SerializeJSON
+--]=]
+
+---======================================================================
+--- C_EncodingUtil.CompressString
+---======================================================================
+--- Compresses a supplied string.
+---
+--- Arguments:
+--- @param source stringView
+--- @param method Enum.CompressionMethod ? = Deflate
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.CompressString
+---
+--- Usage: output = C_EncodingUtil.CompressString(source [, method [, level]])
+---
+--- See also:
+--- - C_EncodingUtil.DecompressString
+---
+-- function C_EncodingUtil.CompressString()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.DecodeBase64
+---======================================================================
+--- Decodes a Base64 encoded string.
+---
+--- Arguments:
+--- @param source stringView
+--- @param variant Enum.Base64Variant ? = Standard
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.DecodeBase64
+---
+--- Usage: output = C_EncodingUtil.DecodeBase64(source [, variant])
+---
+--- See also:
+--- - C_EncodingUtil.EncodeBase64
+---
+-- function C_EncodingUtil.DecodeBase64()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.DecodeHex
+---======================================================================
+--- Decodes a Base16 (hexadecimal) encoded string.
+---
+--- Arguments:
+--- @param source string
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.DecodeHex
+---
+--- Usage: output = C_EncodingUtil.DecodeHex(source)
+---
+--- See also:
+--- - C_EncodingUtil.EncodeHex
+---
+-- function C_EncodingUtil.DecodeHex()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.DecompressString
+---======================================================================
+--- Decompresses a compressed string.
+---
+--- Arguments:
+--- @param source stringView
+--- @param method Enum.CompressionMethod
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.DecompressString
+---
+--- Usage: output = C_EncodingUtil.DecompressString(source, method)
+---
+--- See also:
+--- - C_EncodingUtil.CompressString
+---
+-- function C_EncodingUtil.DecompressString()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.DeserializeCBOR
+---======================================================================
+--- Deserializes a CBOR data string to a Lua value.
+---
+--- Arguments:
+--- @param source stringView
+---
+--- Returns:
+--- @return any value
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.DeserializeCBOR
+---
+--- Usage: value = C_EncodingUtil.DeserializeCBOR(source)
+---
+--- See also:
+--- - C_EncodingUtil.SerializeCBOR
+---
+-- function C_EncodingUtil.DeserializeCBOR()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.DeserializeJSON
+---======================================================================
+--- Deserializes a JSON data string to a Lua value.
+---
+--- Arguments:
+--- @param source string
+---
+--- Returns:
+--- @return any value
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.DeserializeJSON
+---
+--- Usage: value = C_EncodingUtil.DeserializeJSON(source)
+---
+--- See also:
+--- - C_EncodingUtil.SerializeJSON
+---
+-- function C_EncodingUtil.DeserializeJSON()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.EncodeBase64
+---======================================================================
+--- Converts a string to a Base64 encoded representation.
+---
+--- Arguments:
+--- @param source stringView
+--- @param variant Enum.Base64Variant ? = Standard
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.EncodeBase64
+---
+--- Usage: output = C_EncodingUtil.EncodeBase64(source [, variant])
+---
+--- See also:
+--- - C_EncodingUtil.DecodeBase64
+---
+-- function C_EncodingUtil.EncodeBase64()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.EncodeHex
+---======================================================================
+--- Converts a string to a Base16 (hexadecimal) encoded representation.
+---
+--- Arguments:
+--- @param source stringView
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.EncodeHex
+---
+--- Usage: output = C_EncodingUtil.EncodeHex(source)
+---
+--- See also:
+--- - C_EncodingUtil.DecodeHex
+---
+-- function C_EncodingUtil.EncodeHex()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.SerializeCBOR
+---======================================================================
+--- Serializes a Lua value to a CBOR data string.
+---
+--- Arguments:
+--- @param value any
+--- @param options CBORSerializationOptions ?
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.SerializeCBOR
+---
+--- Usage: output = C_EncodingUtil.SerializeCBOR([value [, options]])
+---
+--- See also:
+--- - C_EncodingUtil.DeserializeCBOR
+--- - C_EncodingUtil.SerializeJSON
+---
+-- function C_EncodingUtil.SerializeCBOR()
+-- end
+
+---======================================================================
+--- C_EncodingUtil.SerializeJSON
+---======================================================================
+--- Serializes a Lua value to a JSON data string.
+---
+--- Arguments:
+--- @param value any
+--- @param options JSONSerializationOptions ?
+---
+--- Returns:
+--- @return string output
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncodingUtil.SerializeJSON
+---
+--- Usage: output = C_EncodingUtil.SerializeJSON([value [, options]])
+---
+--- See also:
+--- - C_EncodingUtil.DeserializeJSON
+--- - C_EncodingUtil.SerializeCBOR
+---
+-- function C_EncodingUtil.SerializeJSON()
+-- end

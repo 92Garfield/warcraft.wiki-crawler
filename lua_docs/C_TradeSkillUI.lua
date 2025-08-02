@@ -1,0 +1,1697 @@
+--[=[
+-- C_TradeSkillUI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 97
+--]=]
+
+--- @class C_TradeSkillUI
+--- C_TradeSkillUI namespace contains 97 functions
+local C_TradeSkillUI = {}
+
+--[=[
+-- C_TradeSkillUI Functions:
+-- - C_TradeSkillUI.CanStoreEnchantInItem
+-- - C_TradeSkillUI.CancelProfessionRespec
+-- - C_TradeSkillUI.CheckRespecNPC
+-- - C_TradeSkillUI.CloseTradeSkill
+-- - C_TradeSkillUI.ConfirmProfessionRespec
+-- - C_TradeSkillUI.CraftEnchant
+-- - C_TradeSkillUI.CraftRecipe
+-- - C_TradeSkillUI.CraftSalvage
+-- - C_TradeSkillUI.DoesRecraftingRecipeAcceptItem
+-- - C_TradeSkillUI.GetAllProfessionTradeSkillLines
+-- - C_TradeSkillUI.GetAllRecipeIDs
+-- - C_TradeSkillUI.GetBaseProfessionInfo
+-- - C_TradeSkillUI.GetCategories
+-- - C_TradeSkillUI.GetCategoryInfo
+-- - C_TradeSkillUI.GetChildProfessionInfo
+-- - C_TradeSkillUI.GetChildProfessionInfos
+-- - C_TradeSkillUI.GetConcentrationCurrencyID
+-- - C_TradeSkillUI.GetCraftableCount
+-- - C_TradeSkillUI.GetCraftingOperationInfo
+-- - C_TradeSkillUI.GetCraftingOperationInfoForOrder
+-- - C_TradeSkillUI.GetCraftingReagentBonusText
+-- - C_TradeSkillUI.GetCraftingTargetItems
+-- - C_TradeSkillUI.GetEnchantItems
+-- - C_TradeSkillUI.GetFactionSpecificOutputItem
+-- - C_TradeSkillUI.GetGatheringOperationInfo
+-- - C_TradeSkillUI.GetHideUnownedFlags
+-- - C_TradeSkillUI.GetItemCraftedQualityByItemInfo
+-- - C_TradeSkillUI.GetItemReagentQualityByItemInfo
+-- - C_TradeSkillUI.GetItemSlotModifications
+-- - C_TradeSkillUI.GetItemSlotModificationsForOrder
+-- - C_TradeSkillUI.GetOriginalCraftRecipeID
+-- - C_TradeSkillUI.GetProfessionByInventorySlot
+-- - C_TradeSkillUI.GetProfessionChildSkillLineID
+-- - C_TradeSkillUI.GetProfessionForCursorItem
+-- - C_TradeSkillUI.GetProfessionInfoByRecipeID
+-- - C_TradeSkillUI.GetProfessionInfoBySkillLineID
+-- - C_TradeSkillUI.GetProfessionInventorySlots
+-- - C_TradeSkillUI.GetProfessionNameForSkillLineAbility
+-- - C_TradeSkillUI.GetProfessionSkillLineID
+-- - C_TradeSkillUI.GetProfessionSlots
+-- - C_TradeSkillUI.GetProfessionSpells
+-- - C_TradeSkillUI.GetQualitiesForRecipe
+-- - C_TradeSkillUI.GetReagentDifficultyText
+-- - C_TradeSkillUI.GetReagentRequirementItemIDs
+-- - C_TradeSkillUI.GetReagentSlotStatus
+-- - C_TradeSkillUI.GetRecipeDescription
+-- - C_TradeSkillUI.GetRecipeFixedReagentItemLink
+-- - C_TradeSkillUI.GetRecipeInfo
+-- - C_TradeSkillUI.GetRecipeInfoForSkillLineAbility
+-- - C_TradeSkillUI.GetRecipeItemLink
+-- - C_TradeSkillUI.GetRecipeOutputItemData
+-- - C_TradeSkillUI.GetRecipeQualityItemIDs
+-- - C_TradeSkillUI.GetRecipeQualityReagentItemLink
+-- - C_TradeSkillUI.GetRecipeRequirements
+-- - C_TradeSkillUI.GetRecipeSchematic
+-- - C_TradeSkillUI.GetRecipesTracked
+-- - C_TradeSkillUI.GetRecraftItems
+-- - C_TradeSkillUI.GetRecraftRemovalWarnings
+-- - C_TradeSkillUI.GetRemainingRecasts
+-- - C_TradeSkillUI.GetSalvagableItemIDs
+-- - C_TradeSkillUI.GetShowLearned
+-- - C_TradeSkillUI.GetShowUnlearned
+-- - C_TradeSkillUI.GetSkillLineForGear
+-- - C_TradeSkillUI.GetSourceTypeFilter
+-- - C_TradeSkillUI.GetTradeSkillDisplayName
+-- - C_TradeSkillUI.GetTradeSkillLineForRecipe
+-- - C_TradeSkillUI.GetTradeSkillListLink
+-- - C_TradeSkillUI.HasFavoriteOrderRecipes
+-- - C_TradeSkillUI.IsEnchantTargetValid
+-- - C_TradeSkillUI.IsGuildTradeSkillsEnabled
+-- - C_TradeSkillUI.IsNPCCrafting
+-- - C_TradeSkillUI.IsNearProfessionSpellFocus
+-- - C_TradeSkillUI.IsOriginalCraftRecipeLearned
+-- - C_TradeSkillUI.IsRecipeFirstCraft
+-- - C_TradeSkillUI.IsRecipeInBaseSkillLine
+-- - C_TradeSkillUI.IsRecipeInSkillLine
+-- - C_TradeSkillUI.IsRecipeProfessionLearned
+-- - C_TradeSkillUI.IsRecipeTracked
+-- - C_TradeSkillUI.IsRecraftItemEquipped
+-- - C_TradeSkillUI.IsRecraftReagentValid
+-- - C_TradeSkillUI.IsRuneforging
+-- - C_TradeSkillUI.IsTradeSkillGuild
+-- - C_TradeSkillUI.IsTradeSkillLinked
+-- - C_TradeSkillUI.IsTradeSkillReady
+-- - C_TradeSkillUI.OpenRecipe
+-- - C_TradeSkillUI.OpenTradeSkill
+-- - C_TradeSkillUI.RecraftLimitCategoryValid
+-- - C_TradeSkillUI.RecraftRecipe
+-- - C_TradeSkillUI.RecraftRecipeForOrder
+-- - C_TradeSkillUI.SetOnlyShowAvailableForOrders
+-- - C_TradeSkillUI.SetOnlyShowSkillUpRecipes
+-- - C_TradeSkillUI.SetProfessionChildSkillLineID
+-- - C_TradeSkillUI.SetRecipeItemNameFilter
+-- - C_TradeSkillUI.SetRecipeTracked
+-- - C_TradeSkillUI.SetShowLearned
+-- - C_TradeSkillUI.SetShowUnlearned
+-- - C_TradeSkillUI.SetSourceTypeFilter
+--]=]
+
+---======================================================================
+--- C_TradeSkillUI.CancelProfessionRespec
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CancelProfessionRespec
+---
+--- Usage: C_TradeSkillUI.CancelProfessionRespec()
+---
+-- function C_TradeSkillUI.CancelProfessionRespec()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CanStoreEnchantInItem
+---======================================================================
+--- Arguments:
+--- @param itemGUID string : WOWGUID
+---
+--- Returns:
+--- @return boolean canStore
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CanStoreEnchantInItem
+---
+--- Usage: canStore = C_TradeSkillUI.CanStoreEnchantInItem(itemGUID)
+---
+-- function C_TradeSkillUI.CanStoreEnchantInItem()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CheckRespecNPC
+---======================================================================
+--- Returns:
+--- @return boolean canInteract
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CheckRespecNPC
+---
+--- Usage: canInteract = C_TradeSkillUI.CheckRespecNPC()
+---
+-- function C_TradeSkillUI.CheckRespecNPC()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CloseTradeSkill
+---======================================================================
+--- Closes an open trade skill window.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CloseTradeSkill
+---
+--- Usage: CloseTradeSkill()
+---
+-- function C_TradeSkillUI.CloseTradeSkill()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.ConfirmProfessionRespec
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ConfirmProfessionRespec
+---
+--- Usage: C_TradeSkillUI.ConfirmProfessionRespec()
+---
+-- function C_TradeSkillUI.ConfirmProfessionRespec()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CraftEnchant
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param numCasts number ? = 1
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftEnchant
+---
+--- Usage: C_TradeSkillUI.CraftEnchant(recipeSpellID [, numCasts [, craftingReagents [, itemTarget [, applyConcentration]]]])
+---
+-- function C_TradeSkillUI.CraftEnchant()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CraftRecipe
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param recipeSpellID number - The ID of the tradeskill recipe.
+--- @param numCasts number ? = 1- The number of times to repeat the creation of the specified recipe.
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftRecipe
+---
+--- Usage: C_TradeSkillUI.CraftRecipe(recipeSpellID [, numCasts [, craftingReagents [, recipeLevel [, orderID [, applyConcentration]]]]])
+---
+-- function C_TradeSkillUI.CraftRecipe()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.CraftSalvage
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param numCasts number ? = 1 - This defaults to 1 if passed nil.
+--- @param itemTarget ItemLocation 🔗
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added craftingReagents, applyConcentration arguments.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftSalvage
+---
+--- Usage: C_TradeSkillUI.CraftSalvage(recipeSpellID, [numCasts], itemTarget [, craftingReagents [, applyConcentration]])
+---
+-- function C_TradeSkillUI.CraftSalvage()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.DoesRecraftingRecipeAcceptItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.DoesRecraftingRecipeAcceptItem
+---
+--- Usage: result = C_TradeSkillUI.DoesRecraftingRecipeAcceptItem(itemLocation, recipeID)
+---
+-- function C_TradeSkillUI.DoesRecraftingRecipeAcceptItem()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetAllProfessionTradeSkillLines
+---======================================================================
+--- Returns:
+--- @return number skillLineID []
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetAllProfessionTradeSkillLines
+---
+--- Usage: skillLineID = C_TradeSkillUI.GetAllProfessionTradeSkillLines()
+---
+-- function C_TradeSkillUI.GetAllProfessionTradeSkillLines()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetAllRecipeIDs
+---======================================================================
+--- Returns all recipes for the current profession.
+---
+--- Returns:
+--- @return number recipeIDs [] - The IDs of all the recipes for the current trade skill, or an empty table if the trade skill panel has yet to be opened.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetAllRecipeIDs
+---
+--- Usage: recipeIDs = C_TradeSkillUI.GetAllRecipeIDs()
+---
+--- Examples:
+--- Example 1:
+---   for _, id in pairs(C_TradeSkillUI.GetAllRecipeIDs()) do
+---   	local recipeInfo = C_TradeSkillUI.GetRecipeInfo(id)
+---   	print(recipeInfo.recipeID, recipeInfo.name)
+---   end
+---
+-- function C_TradeSkillUI.GetAllRecipeIDs()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetBaseProfessionInfo
+---======================================================================
+--- Returns the current profession displayed in the trade skill window.
+---
+--- Returns:
+--- @return ProfessionInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetBaseProfessionInfo
+---
+--- Usage: info = C_TradeSkillUI.GetBaseProfessionInfo()
+---
+-- function C_TradeSkillUI.GetBaseProfessionInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCategories
+---======================================================================
+--- Returns a table of category IDs for the currently opened trade skill.
+---
+--- Returns:
+--- @return number categoryIDs []
+---
+--- @since Patch 8.0.1 (2018-07-17): Changed to return a table (Build 26231).
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCategories
+---
+--- Usage: categoryIDs = C_TradeSkillUI.GetCategories()
+---
+--- Examples:
+--- Example 1:
+---   local categories = {C_TradeSkillUI.GetCategories()}
+---   
+---   for _, categoryID in pairs(categories) do
+---   	print(categoryID, C_TradeSkillUI.GetCategoryInfo(categoryID).name)
+---   end
+---
+--- See also:
+--- - C_TradeSkillUI.GetCategoryInfo
+--- - C_TradeSkillUI.IsEmptySkillLineCategory
+---
+-- function C_TradeSkillUI.GetCategories()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCategoryInfo
+---======================================================================
+--- Returns information for a tradeskill category.
+---
+--- Arguments:
+--- @param categoryID number - The ID of the tradeskill category to get information for.
+--- @param returnTable table - Optional. The table to return the information in.
+---
+--- Returns:
+--- @return table categoryInfo - A table containing information for the category:
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCategoryInfo
+---
+--- Usage: categoryInfo = C_TradeSkillUI.GetCategoryInfo(categoryID[, returnTable])
+---
+--- See also:
+--- - C_TradeSkillUI.GetRecipeInfo
+--- - C_TradeSkillUI.GetTradeSkillLine
+---
+-- function C_TradeSkillUI.GetCategoryInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetChildProfessionInfo
+---======================================================================
+--- Returns:
+--- @return ProfessionInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetChildProfessionInfo
+---
+--- Usage: info = C_TradeSkillUI.GetChildProfessionInfo()
+---
+-- function C_TradeSkillUI.GetChildProfessionInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetChildProfessionInfos
+---======================================================================
+--- Returns:
+--- @return ProfessionInfo infos []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetChildProfessionInfos
+---
+--- Usage: infos = C_TradeSkillUI.GetChildProfessionInfos()
+---
+-- function C_TradeSkillUI.GetChildProfessionInfos()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetConcentrationCurrencyID
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return number currencyType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetConcentrationCurrencyID
+---
+--- Usage: currencyType = C_TradeSkillUI.GetConcentrationCurrencyID(skillLineID)
+---
+-- function C_TradeSkillUI.GetConcentrationCurrencyID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCraftableCount
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param recipeLevel number ?
+---
+--- Returns:
+--- @return number numAvailable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftableCount
+---
+--- Usage: numAvailable = C_TradeSkillUI.GetCraftableCount(recipeSpellID [, recipeLevel])
+---
+-- function C_TradeSkillUI.GetCraftableCount()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCraftingOperationInfo
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param craftingReagents CraftingReagentInfo []
+---
+--- Returns:
+--- @return CraftingOperationInfo info ?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingOperationInfo
+---
+--- Usage: info = C_TradeSkillUI.GetCraftingOperationInfo(recipeID, craftingReagents, [allocationItemGUID], applyConcentration)
+---
+-- function C_TradeSkillUI.GetCraftingOperationInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCraftingOperationInfoForOrder
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param craftingReagents CraftingReagentInfo []
+---
+--- Returns:
+--- @return CraftingOperationInfo info ?
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingOperationInfoForOrder
+---
+--- Usage: info = C_TradeSkillUI.GetCraftingOperationInfoForOrder(recipeID, craftingReagents, orderID, applyConcentration)
+---
+-- function C_TradeSkillUI.GetCraftingOperationInfoForOrder()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCraftingReagentBonusText
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param craftingReagentIndex number
+--- @param craftingReagents CraftingReagentInfo []
+---
+--- Returns:
+--- @return string bonusText []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingReagentBonusText
+---
+--- Usage: bonusText = C_TradeSkillUI.GetCraftingReagentBonusText(recipeSpellID, craftingReagentIndex, craftingReagents [, allocationItemGUID])
+---
+-- function C_TradeSkillUI.GetCraftingReagentBonusText()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetCraftingTargetItems
+---======================================================================
+--- Arguments:
+--- @param itemIDs number []
+---
+--- Returns:
+--- @return CraftingTargetItem items []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingTargetItems
+---
+--- Usage: items = C_TradeSkillUI.GetCraftingTargetItems(itemIDs)
+---
+-- function C_TradeSkillUI.GetCraftingTargetItems()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetEnchantItems
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return string items [] : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetEnchantItems
+---
+--- Usage: items = C_TradeSkillUI.GetEnchantItems(recipeID)
+---
+-- function C_TradeSkillUI.GetEnchantItems()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetFactionSpecificOutputItem
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+---
+--- Returns:
+--- @return number itemID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetFactionSpecificOutputItem
+---
+--- Usage: itemID = C_TradeSkillUI.GetFactionSpecificOutputItem(recipeSpellID)
+---
+-- function C_TradeSkillUI.GetFactionSpecificOutputItem()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetGatheringOperationInfo
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return GatheringOperationInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetGatheringOperationInfo
+---
+--- Usage: info = C_TradeSkillUI.GetGatheringOperationInfo(recipeID)
+---
+-- function C_TradeSkillUI.GetGatheringOperationInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetHideUnownedFlags
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean cannotModifyHideUnowned
+--- @return boolean alwaysShowUnowned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetHideUnownedFlags
+---
+--- Usage: cannotModifyHideUnowned, alwaysShowUnowned = C_TradeSkillUI.GetHideUnownedFlags(recipeID)
+---
+-- function C_TradeSkillUI.GetHideUnownedFlags()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetItemCraftedQualityByItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return number quality ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetItemCraftedQualityByItemInfo
+---
+--- Usage: quality = C_TradeSkillUI.GetItemCraftedQualityByItemInfo(itemInfo)
+---
+-- function C_TradeSkillUI.GetItemCraftedQualityByItemInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetItemReagentQualityByItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return number quality ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetItemReagentQualityByItemInfo
+---
+--- Usage: quality = C_TradeSkillUI.GetItemReagentQualityByItemInfo(itemInfo)
+---
+-- function C_TradeSkillUI.GetItemReagentQualityByItemInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetItemSlotModifications
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return CraftingItemSlotModification slotMods []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetItemSlotModifications
+---
+--- Usage: slotMods = C_TradeSkillUI.GetItemSlotModifications(itemGUID)
+---
+-- function C_TradeSkillUI.GetItemSlotModifications()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetItemSlotModificationsForOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number
+---
+--- Returns:
+--- @return CraftingItemSlotModification slotMods []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetItemSlotModificationsForOrder
+---
+--- Usage: slotMods = C_TradeSkillUI.GetItemSlotModificationsForOrder(orderID)
+---
+-- function C_TradeSkillUI.GetItemSlotModificationsForOrder()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetOriginalCraftRecipeID
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return number recipeID ?
+--- @return number skillLineAbilityID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetOriginalCraftRecipeID
+---
+--- Usage: recipeID, skillLineAbilityID = C_TradeSkillUI.GetOriginalCraftRecipeID(itemGUID)
+---
+-- function C_TradeSkillUI.GetOriginalCraftRecipeID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionByInventorySlot
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return Enum.Profession profession ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionByInventorySlot
+---
+--- Usage: profession = C_TradeSkillUI.GetProfessionByInventorySlot(slot)
+---
+-- function C_TradeSkillUI.GetProfessionByInventorySlot()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionChildSkillLineID
+---======================================================================
+--- Returns:
+--- @return number skillLineID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionChildSkillLineID
+---
+--- Usage: skillLineID = C_TradeSkillUI.GetProfessionChildSkillLineID()
+---
+-- function C_TradeSkillUI.GetProfessionChildSkillLineID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionForCursorItem
+---======================================================================
+--- Returns:
+--- @return Enum.Profession profession ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionForCursorItem
+---
+--- Usage: profession = C_TradeSkillUI.GetProfessionForCursorItem()
+---
+-- function C_TradeSkillUI.GetProfessionForCursorItem()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionInfoByRecipeID
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return ProfessionInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionInfoByRecipeID
+---
+--- Usage: info = C_TradeSkillUI.GetProfessionInfoByRecipeID(recipeID)
+---
+-- function C_TradeSkillUI.GetProfessionInfoByRecipeID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionInfoBySkillLineID
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return ProfessionInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionInfoBySkillLineID
+---
+--- Usage: info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(skillLineID)
+---
+-- function C_TradeSkillUI.GetProfessionInfoBySkillLineID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionInventorySlots
+---======================================================================
+--- Returns:
+--- @return number invSlots [] : InventorySlots - The returned values needs to be offset by 1, so 19-24 should be 20-25.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionInventorySlots
+---
+--- Usage: invSlots = C_TradeSkillUI.GetProfessionInventorySlots()
+---
+-- function C_TradeSkillUI.GetProfessionInventorySlots()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionNameForSkillLineAbility
+---======================================================================
+--- Arguments:
+--- @param skillLineAbilityID number
+---
+--- Returns:
+--- @return string professionName
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionNameForSkillLineAbility
+---
+--- Usage: professionName = C_TradeSkillUI.GetProfessionNameForSkillLineAbility(skillLineAbilityID)
+---
+-- function C_TradeSkillUI.GetProfessionNameForSkillLineAbility()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionSkillLineID
+---======================================================================
+--- Arguments:
+--- @param profession Enum.Profession
+---
+--- Returns:
+--- @return number skillLineID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionSkillLineID
+---
+--- Usage: skillLineID = C_TradeSkillUI.GetProfessionSkillLineID(profession)
+---
+-- function C_TradeSkillUI.GetProfessionSkillLineID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionSlots
+---======================================================================
+--- Arguments:
+--- @param profession Enum.Profession
+---
+--- Returns:
+--- @return number slots []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionSlots
+---
+--- Usage: slots = C_TradeSkillUI.GetProfessionSlots(profession)
+---
+-- function C_TradeSkillUI.GetProfessionSlots()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetProfessionSpells
+---======================================================================
+--- Arguments:
+--- @param professionID number
+--- @param skillLineID number ?
+---
+--- Returns:
+--- @return number knownSpells []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionSpells
+---
+--- Usage: knownSpells = C_TradeSkillUI.GetProfessionSpells(professionID [, skillLineID])
+---
+-- function C_TradeSkillUI.GetProfessionSpells()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetQualitiesForRecipe
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return number qualityIDs []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetQualitiesForRecipe
+---
+--- Usage: qualityIDs = C_TradeSkillUI.GetQualitiesForRecipe(recipeID)
+---
+-- function C_TradeSkillUI.GetQualitiesForRecipe()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetReagentDifficultyText
+---======================================================================
+--- Arguments:
+--- @param craftingReagentIndex number
+--- @param craftingReagents CraftingReagentInfo []
+---
+--- Returns:
+--- @return string bonusText
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetReagentDifficultyText
+---
+--- Usage: bonusText = C_TradeSkillUI.GetReagentDifficultyText(craftingReagentIndex, craftingReagents)
+---
+-- function C_TradeSkillUI.GetReagentDifficultyText()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetReagentRequirementItemIDs
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return number itemIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetReagentRequirementItemIDs
+---
+--- Usage: itemIDs = C_TradeSkillUI.GetReagentRequirementItemIDs(itemID)
+---
+-- function C_TradeSkillUI.GetReagentRequirementItemIDs()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetReagentSlotStatus
+---======================================================================
+--- Arguments:
+--- @param mcrSlotID number
+--- @param recipeSpellID number
+--- @param skillLineAbilityID number
+---
+--- Returns:
+--- @return boolean locked
+--- @return string lockedReason
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetReagentSlotStatus
+---
+--- Usage: locked, lockedReason = C_TradeSkillUI.GetReagentSlotStatus(mcrSlotID, recipeSpellID, skillLineAbilityID)
+---
+-- function C_TradeSkillUI.GetReagentSlotStatus()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeDescription
+---======================================================================
+--- Returns the description for a recipe.
+---
+--- Arguments:
+--- @param recipeID number - Also doubles as a Spell ID.
+---
+--- Returns:
+--- @return string recipeDescription - For example, "Permanently enchant a two handed melee weapon to grant +25 Agility." Not readily available on function call, see SpellMixin:ContinueOnSpellLoad.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeDescription
+---
+--- Usage: recipeDescription = C_TradeSkillUI.GetTradeSkillDescription(recipeID)
+---
+-- function C_TradeSkillUI.GetRecipeDescription()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeFixedReagentItemLink
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param dataSlotIndex number
+---
+--- Returns:
+--- @return string link
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeFixedReagentItemLink
+---
+--- Usage: link = C_TradeSkillUI.GetRecipeFixedReagentItemLink(recipeID, dataSlotIndex)
+---
+-- function C_TradeSkillUI.GetRecipeFixedReagentItemLink()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeInfo
+---======================================================================
+--- Returns information for a recipe.
+---
+--- Arguments:
+--- @param recipeSpellID number
+--- @param recipeLevel number ?
+---
+--- Returns:
+--- @return TradeSkillRecipeInfo recipeInfo ?
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeInfo
+---
+--- Usage: recipeInfo = C_TradeSkillUI.GetRecipeInfo(recipeSpellID [, recipeLevel])
+---
+--- Examples:
+--- Example 1:
+---   for _, id in pairs(C_TradeSkillUI.GetAllRecipeIDs()) do
+---   	local recipeInfo = C_TradeSkillUI.GetRecipeInfo(id)
+---   	print(recipeInfo.recipeID, recipeInfo.name)
+---   end
+---
+-- function C_TradeSkillUI.GetRecipeInfo()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeInfoForSkillLineAbility
+---======================================================================
+--- Arguments:
+--- @param skillLineAbilityID number
+--- @param recipeLevel number ?
+---
+--- Returns:
+--- @return TradeSkillRecipeInfo recipeInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeInfoForSkillLineAbility
+---
+--- Usage: recipeInfo = C_TradeSkillUI.GetRecipeInfoForSkillLineAbility(skillLineAbilityID [, recipeLevel])
+---
+-- function C_TradeSkillUI.GetRecipeInfoForSkillLineAbility()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeItemLink
+---======================================================================
+--- Returns the result item link for a recipe.
+---
+--- Arguments:
+--- @param recipeId number
+---
+--- Returns:
+--- @return string itemLink : ItemLink
+---
+--- @since Patch 7.0.3 (2016-07-19): Moved from GetTradeSkillRecipeLink to C_TradeSkillUI.GetRecipeItemLink.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemLink
+---
+--- Usage: itemLink = C_TradeSkillUI.GetRecipeItemLink(recipeId)
+---
+--- See also:
+--- - C_TradeSkillUI.GetAllRecipeIDs
+---
+-- function C_TradeSkillUI.GetRecipeItemLink()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeOutputItemData
+---======================================================================
+--- Returns an icon, item link (if any) and item ID (if any) for the expected output of a recipe, given the supplied reagents.
+---
+--- Arguments:
+--- @param recipeSpellID number
+--- @param reagents CraftingReagentInfo []?
+---
+--- Returns:
+--- @return CraftingRecipeOutputInfo outputInfo
+---
+--- @since Patch 10.0.5 (2023-01-24): Added recraftOrderID argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeOutputItemData
+---
+--- Usage: outputInfo = C_TradeSkillUI.GetRecipeOutputItemData(recipeSpellID [, reagents [, allocationItemGUID [, overrideQualityID [, recraftOrderID]]]])
+---
+-- function C_TradeSkillUI.GetRecipeOutputItemData()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeQualityItemIDs
+---======================================================================
+--- Returns the qualityItemIDs of a recipe.
+---
+--- Arguments:
+--- @param recipeSpellID number
+---
+--- Returns:
+--- @return number qualityItemIDs []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeQualityItemIDs
+---
+--- Usage: qualityItemIDs = C_TradeSkillUI.GetRecipeQualityItemIDs(recipeSpellID)
+---
+-- function C_TradeSkillUI.GetRecipeQualityItemIDs()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeQualityReagentItemLink
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param dataSlotIndex number
+--- @param qualityIndex number
+---
+--- Returns:
+--- @return string link
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeQualityReagentItemLink
+---
+--- Usage: link = C_TradeSkillUI.GetRecipeQualityReagentItemLink(recipeID, dataSlotIndex, qualityIndex)
+---
+-- function C_TradeSkillUI.GetRecipeQualityReagentItemLink()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeRequirements
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return CraftingRecipeRequirement requirements []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeRequirements
+---
+--- Usage: requirements = C_TradeSkillUI.GetRecipeRequirements(recipeID)
+---
+-- function C_TradeSkillUI.GetRecipeRequirements()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipeSchematic
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param isRecraft boolean
+--- @param recipeLevel number ?
+---
+--- Returns:
+--- @return CraftingRecipeSchematic schematic
+---
+--- @since Patch 10.0.5 (2023-01-24): Removed hasGatheringOperationInfo field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeSchematic
+---
+--- Usage: schematic = C_TradeSkillUI.GetRecipeSchematic(recipeSpellID, isRecraft [, recipeLevel])
+---
+-- function C_TradeSkillUI.GetRecipeSchematic()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecipesTracked
+---======================================================================
+--- Arguments:
+--- @param isRecraft boolean
+---
+--- Returns:
+--- @return number recipeIDs []
+---
+--- @since Patch 10.0.5 (2023-01-24): Added isRecraft argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipesTracked
+---
+--- Usage: recipeIDs = C_TradeSkillUI.GetRecipesTracked(isRecraft)
+---
+-- function C_TradeSkillUI.GetRecipesTracked()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecraftItems
+---======================================================================
+--- Arguments:
+--- @param recipeID number ?
+---
+--- Returns:
+--- @return string items [] : WOWGUID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecraftItems
+---
+--- Usage: items = C_TradeSkillUI.GetRecraftItems([recipeID])
+---
+-- function C_TradeSkillUI.GetRecraftItems()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRecraftRemovalWarnings
+---======================================================================
+--- Arguments:
+--- @param itemGUID string : WOWGUID
+--- @param replacedItemIDs number []
+---
+--- Returns:
+--- @return string warnings []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecraftRemovalWarnings
+---
+--- Usage: warnings = C_TradeSkillUI.GetRecraftRemovalWarnings(itemGUID, replacedItemIDs)
+---
+-- function C_TradeSkillUI.GetRecraftRemovalWarnings()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetRemainingRecasts
+---======================================================================
+--- Returns:
+--- @return number remaining
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRemainingRecasts
+---
+--- Usage: remaining = C_TradeSkillUI.GetRemainingRecasts()
+---
+--- See also:
+--- - C_TradeSkillUI.IsRecipeFirstCraft
+---
+-- function C_TradeSkillUI.GetRemainingRecasts()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetSalvagableItemIDs
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return number itemIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetSalvagableItemIDs
+---
+--- Usage: itemIDs = C_TradeSkillUI.GetSalvagableItemIDs(recipeID)
+---
+-- function C_TradeSkillUI.GetSalvagableItemIDs()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetShowLearned
+---======================================================================
+--- Returns:
+--- @return boolean flag
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetShowLearned
+---
+--- Usage: flag = C_TradeSkillUI.GetShowLearned()
+---
+-- function C_TradeSkillUI.GetShowLearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetShowUnlearned
+---======================================================================
+--- Returns:
+--- @return boolean flag
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetShowUnlearned
+---
+--- Usage: flag = C_TradeSkillUI.GetShowUnlearned()
+---
+-- function C_TradeSkillUI.GetShowUnlearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetSkillLineForGear
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return number skillLineID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetSkillLineForGear
+---
+--- Usage: skillLineID = C_TradeSkillUI.GetSkillLineForGear(itemInfo)
+---
+-- function C_TradeSkillUI.GetSkillLineForGear()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetSourceTypeFilter
+---======================================================================
+--- Returns:
+--- @return number sourceTypeFilter
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetSourceTypeFilter
+---
+--- Usage: sourceTypeFilter = C_TradeSkillUI.GetSourceTypeFilter()
+---
+-- function C_TradeSkillUI.GetSourceTypeFilter()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetTradeSkillDisplayName
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return string professionDisplayName
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetTradeSkillDisplayName
+---
+--- Usage: professionDisplayName = C_TradeSkillUI.GetTradeSkillDisplayName(skillLineID)
+---
+-- function C_TradeSkillUI.GetTradeSkillDisplayName()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetTradeSkillLineForRecipe
+---======================================================================
+--- Get the associated profession information for a recipe.
+---
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return number tradeSkillID - skill line ID for profession where recipe comes from (including expansion)
+--- @return string skillLineName - profession name where recipe comes from (including expansion)
+--- @return number parentTradeSkillID - skill line ID for the profession (not expansion specific)
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetTradeSkillLineForRecipe
+---
+--- Usage: tradeSkillID, skillLineName, parentTradeSkillID = C_TradeSkillUI.GetTradeSkillLineForRecipe(recipeID)
+---
+-- function C_TradeSkillUI.GetTradeSkillLineForRecipe()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.GetTradeSkillListLink
+---======================================================================
+--- Returns a link for the currently displayed profession.
+---
+--- Returns:
+--- @return string link ? : tradeLink
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetTradeSkillListLink
+---
+--- Usage: link = C_TradeSkillUI.GetTradeSkillListLink()
+---
+-- function C_TradeSkillUI.GetTradeSkillListLink()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.HasFavoriteOrderRecipes
+---======================================================================
+--- Returns:
+--- @return boolean hasFavorites
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.HasFavoriteOrderRecipes
+---
+--- Usage: hasFavorites = C_TradeSkillUI.HasFavoriteOrderRecipes()
+---
+-- function C_TradeSkillUI.HasFavoriteOrderRecipes()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsEnchantTargetValid
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param itemGUID string : WOWGUID
+---
+--- Returns:
+--- @return boolean valid
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsEnchantTargetValid
+---
+--- Usage: valid = C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID)
+---
+-- function C_TradeSkillUI.IsEnchantTargetValid()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsGuildTradeSkillsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean enabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsGuildTradeSkillsEnabled
+---
+--- Usage: enabled = C_TradeSkillUI.IsGuildTradeSkillsEnabled()
+---
+-- function C_TradeSkillUI.IsGuildTradeSkillsEnabled()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsNearProfessionSpellFocus
+---======================================================================
+--- Arguments:
+--- @param profession Enum.Profession
+---
+--- Returns:
+--- @return boolean nearFocus
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsNearProfessionSpellFocus
+---
+--- Usage: nearFocus = C_TradeSkillUI.IsNearProfessionSpellFocus(profession)
+---
+-- function C_TradeSkillUI.IsNearProfessionSpellFocus()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsNPCCrafting
+---======================================================================
+--- Returns true if the trade skill window is displayed for an NPC.
+---
+--- Returns:
+--- @return boolean isNPCCrafting - true if the Trade Skill UI is open for crafting by an NPC, such as a Garrison follower.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsNPCCrafting
+---
+--- Usage: isNPCCrafting = C_TradeSkillUI.IsNPCCrafting()
+---
+--- See also:
+--- - C_TradeSkillUI.IsTradeSkillGuild
+--- - C_TradeSkillUI.IsTradeSkillLinked
+---
+-- function C_TradeSkillUI.IsNPCCrafting()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsOriginalCraftRecipeLearned
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return boolean learned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsOriginalCraftRecipeLearned
+---
+--- Usage: learned = C_TradeSkillUI.IsOriginalCraftRecipeLearned(itemGUID)
+---
+-- function C_TradeSkillUI.IsOriginalCraftRecipeLearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecipeFirstCraft
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeFirstCraft
+---
+--- Usage: result = C_TradeSkillUI.IsRecipeFirstCraft(recipeID)
+---
+-- function C_TradeSkillUI.IsRecipeFirstCraft()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecipeInBaseSkillLine
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeInBaseSkillLine
+---
+--- Usage: result = C_TradeSkillUI.IsRecipeInBaseSkillLine(recipeID)
+---
+-- function C_TradeSkillUI.IsRecipeInBaseSkillLine()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecipeInSkillLine
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param skillLineID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeInSkillLine
+---
+--- Usage: result = C_TradeSkillUI.IsRecipeInSkillLine(recipeID, skillLineID)
+---
+-- function C_TradeSkillUI.IsRecipeInSkillLine()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecipeProfessionLearned
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- Returns:
+--- @return boolean recipeProfessionLearned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeProfessionLearned
+---
+--- Usage: recipeProfessionLearned = C_TradeSkillUI.IsRecipeProfessionLearned(recipeID)
+---
+-- function C_TradeSkillUI.IsRecipeProfessionLearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecipeTracked
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param isRecraft boolean
+---
+--- Returns:
+--- @return boolean tracked
+---
+--- @since Patch 10.0.5 (2023-01-24): Added isRecraft argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeTracked
+---
+--- Usage: tracked = C_TradeSkillUI.IsRecipeTracked(recipeID, isRecraft)
+---
+-- function C_TradeSkillUI.IsRecipeTracked()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecraftItemEquipped
+---======================================================================
+--- Arguments:
+--- @param recraftItemGUID string
+---
+--- Returns:
+--- @return boolean isEquipped
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecraftItemEquipped
+---
+--- Usage: isEquipped = C_TradeSkillUI.IsRecraftItemEquipped(recraftItemGUID)
+---
+-- function C_TradeSkillUI.IsRecraftItemEquipped()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRecraftReagentValid
+---======================================================================
+--- Arguments:
+--- @param itemGUID string : WOWGUID
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean valid
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecraftReagentValid
+---
+--- Usage: valid = C_TradeSkillUI.IsRecraftReagentValid(itemGUID, itemID)
+---
+-- function C_TradeSkillUI.IsRecraftReagentValid()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsRuneforging
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRuneforging
+---
+--- Usage: result = C_TradeSkillUI.IsRuneforging()
+---
+-- function C_TradeSkillUI.IsRuneforging()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsTradeSkillGuild
+---======================================================================
+--- Checks if the Trade Skill UI is open for a profession in the guild.
+---
+--- Returns:
+--- @return boolean isGuild - true if the Trade Skill UI is open for a profession in the guild, false otherwise.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsTradeSkillGuild
+---
+--- Usage: isGuild = C_TradeSkillUI.IsTradeSkillGuild()
+---
+--- See also:
+--- - C_TradeSkillUI.IsNPCCrafting
+--- - C_TradeSkillUI.IsTradeSkillLinked
+---
+-- function C_TradeSkillUI.IsTradeSkillGuild()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsTradeSkillLinked
+---======================================================================
+--- Checks if the Trade Skill UI is open for a profession linked by another character.
+---
+--- Returns:
+--- @return boolean isLinked - true if the Trade Skill UI is open for a profession linked by another character, false otherwise.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added. Replaces IsTradeSkillLinked.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsTradeSkillLinked
+---
+--- Usage: isLinked = C_TradeSkillUI.IsTradeSkillLinked()
+---
+--- See also:
+--- - C_TradeSkillUI.IsNPCCrafting
+--- - C_TradeSkillUI.IsTradeSkillGuild
+---
+-- function C_TradeSkillUI.IsTradeSkillLinked()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.IsTradeSkillReady
+---======================================================================
+--- Checks if the Trade Skill UI is open for a profession.
+---
+--- Returns:
+--- @return boolean isReady - true if the Trade Skill UI is open  and loaded for a profession, false otherwise.
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsTradeSkillReady
+---
+--- Usage: isReady = C_TradeSkillUI.IsTradeSkillReady()
+---
+--- See also:
+--- - TRADE_SKILL_UPDATE
+---
+-- function C_TradeSkillUI.IsTradeSkillReady()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.OpenRecipe
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.OpenRecipe
+---
+--- Usage: C_TradeSkillUI.OpenRecipe(recipeID)
+---
+-- function C_TradeSkillUI.OpenRecipe()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.OpenTradeSkill
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param tradeSkillID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 7.0.3 (2016-07-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.OpenTradeSkill
+---
+--- Usage: success = C_TradeSkillUI.OpenTradeSkill(tradeSkillID)
+---
+-- function C_TradeSkillUI.OpenTradeSkill()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.RecraftLimitCategoryValid
+---======================================================================
+--- Arguments:
+--- @param reagentItemID number
+---
+--- Returns:
+--- @return boolean recraftValid
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.RecraftLimitCategoryValid
+---
+--- Usage: recraftValid = C_TradeSkillUI.RecraftLimitCategoryValid(reagentItemID)
+---
+-- function C_TradeSkillUI.RecraftLimitCategoryValid()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.RecraftRecipe
+---======================================================================
+--- Arguments:
+--- @param itemGUID string : WOWGUID
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.RecraftRecipe
+---
+--- Usage: result = C_TradeSkillUI.RecraftRecipe(itemGUID [, craftingReagents [, removedModifications [, applyConcentration]]])
+---
+-- function C_TradeSkillUI.RecraftRecipe()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.RecraftRecipeForOrder
+---======================================================================
+--- Arguments:
+--- @param orderID number : BigUInteger
+--- @param itemGUID string : WOWGUID
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 11.0.0 (2024-07-23): Added applyConcentration argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.RecraftRecipeForOrder
+---
+--- Usage: result = C_TradeSkillUI.RecraftRecipeForOrder(orderID, itemGUID [, craftingReagents [, removedModifications [, applyConcentration]]])
+---
+-- function C_TradeSkillUI.RecraftRecipeForOrder()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetOnlyShowAvailableForOrders
+---======================================================================
+--- Arguments:
+--- @param flag boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowAvailableForOrders
+---
+--- Usage: C_TradeSkillUI.SetOnlyShowAvailableForOrders(flag)
+---
+-- function C_TradeSkillUI.SetOnlyShowAvailableForOrders()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetOnlyShowSkillUpRecipes
+---======================================================================
+--- Arguments:
+--- @param flag boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowSkillUpRecipes
+---
+--- Usage: C_TradeSkillUI.SetOnlyShowSkillUpRecipes(flag)
+---
+-- function C_TradeSkillUI.SetOnlyShowSkillUpRecipes()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetProfessionChildSkillLineID
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetProfessionChildSkillLineID
+---
+--- Usage: C_TradeSkillUI.SetProfessionChildSkillLineID(skillLineID)
+---
+-- function C_TradeSkillUI.SetProfessionChildSkillLineID()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetRecipeItemNameFilter
+---======================================================================
+--- Arguments:
+--- @param text string ? - search text or nil to clear the search
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeItemNameFilter
+---
+--- Usage: C_TradeSkillUI.SetRecipeItemNameFilter(text)
+---
+-- function C_TradeSkillUI.SetRecipeItemNameFilter()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetRecipeTracked
+---======================================================================
+--- Arguments:
+--- @param recipeID number - the recipe SpellID. Any spell can be used, though only recipes will track ingredients
+--- @param tracked boolean
+--- @param isRecraft boolean
+---
+--- @since Patch 10.0.5 (2023-01-24): Added isRecraft argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeTracked
+---
+--- Usage: C_TradeSkillUI.SetRecipeTracked(recipeID, tracked, isRecraft)
+---
+-- function C_TradeSkillUI.SetRecipeTracked()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetShowLearned
+---======================================================================
+--- Arguments:
+--- @param flag boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetShowLearned
+---
+--- Usage: C_TradeSkillUI.SetShowLearned(flag)
+---
+-- function C_TradeSkillUI.SetShowLearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetShowUnlearned
+---======================================================================
+--- Arguments:
+--- @param flag boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetShowUnlearned
+---
+--- Usage: C_TradeSkillUI.SetShowUnlearned(flag)
+---
+-- function C_TradeSkillUI.SetShowUnlearned()
+-- end
+
+---======================================================================
+--- C_TradeSkillUI.SetSourceTypeFilter
+---======================================================================
+--- Arguments:
+--- @param sourceTypeFilter number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetSourceTypeFilter
+---
+--- Usage: C_TradeSkillUI.SetSourceTypeFilter(sourceTypeFilter)
+---
+-- function C_TradeSkillUI.SetSourceTypeFilter()
+-- end

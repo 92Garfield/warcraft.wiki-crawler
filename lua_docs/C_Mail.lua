@@ -1,0 +1,98 @@
+--[=[
+-- C_Mail API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_Mail
+--- C_Mail namespace contains 5 functions
+local C_Mail = {}
+
+--[=[
+-- C_Mail Functions:
+-- - C_Mail.CanCheckInbox
+-- - C_Mail.GetCraftingOrderMailInfo
+-- - C_Mail.HasInboxMoney
+-- - C_Mail.IsCommandPending
+-- - C_Mail.SetOpeningAll
+--]=]
+
+---======================================================================
+--- C_Mail.CanCheckInbox
+---======================================================================
+--- Returns:
+--- @return boolean canCheckInbox
+--- @return number secondsUntilAllowed
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Mail.CanCheckInbox
+---
+--- Usage: canCheckInbox, secondsUntilAllowed = C_Mail.CanCheckInbox()
+---
+-- function C_Mail.CanCheckInbox()
+-- end
+
+---======================================================================
+--- C_Mail.GetCraftingOrderMailInfo
+---======================================================================
+--- Arguments:
+--- @param inboxIndex number
+---
+--- Returns:
+--- @return CraftingOrderMailInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Mail.GetCraftingOrderMailInfo
+---
+--- Usage: info = C_Mail.GetCraftingOrderMailInfo(inboxIndex)
+---
+-- function C_Mail.GetCraftingOrderMailInfo()
+-- end
+
+---======================================================================
+--- C_Mail.HasInboxMoney
+---======================================================================
+--- Returns true if a mail has money attached.
+---
+--- Arguments:
+--- @param inboxIndex number
+---
+--- Returns:
+--- @return boolean inboxItemHasMoneyAttached
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Mail.HasInboxMoney
+---
+--- Usage: inboxItemHasMoneyAttached = C_Mail.HasInboxMoney(inboxIndex)
+---
+-- function C_Mail.HasInboxMoney()
+-- end
+
+---======================================================================
+--- C_Mail.IsCommandPending
+---======================================================================
+--- Returns true if the current mail command is still processing.
+---
+--- Returns:
+--- @return boolean isCommandPending
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Mail.IsCommandPending
+---
+--- Usage: isCommandPending = C_Mail.IsCommandPending()
+---
+-- function C_Mail.IsCommandPending()
+-- end
+
+---======================================================================
+--- C_Mail.SetOpeningAll
+---======================================================================
+--- Arguments:
+--- @param openingAll boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Mail.SetOpeningAll
+---
+--- Usage: C_Mail.SetOpeningAll(openingAll)
+---
+-- function C_Mail.SetOpeningAll()
+-- end

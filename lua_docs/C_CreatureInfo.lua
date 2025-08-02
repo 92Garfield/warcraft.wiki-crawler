@@ -1,0 +1,161 @@
+--[=[
+-- C_CreatureInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_CreatureInfo
+--- C_CreatureInfo namespace contains 7 functions
+local C_CreatureInfo = {}
+
+--[=[
+-- C_CreatureInfo Functions:
+-- - C_CreatureInfo.GetClassInfo
+-- - C_CreatureInfo.GetCreatureFamilyIDs
+-- - C_CreatureInfo.GetCreatureFamilyInfo
+-- - C_CreatureInfo.GetCreatureTypeIDs
+-- - C_CreatureInfo.GetCreatureTypeInfo
+-- - C_CreatureInfo.GetFactionInfo
+-- - C_CreatureInfo.GetRaceInfo
+--]=]
+
+---======================================================================
+--- C_CreatureInfo.GetClassInfo
+---======================================================================
+--- Returns info for a class by ID.
+---
+--- Arguments:
+--- @param classID number : ClassId - Ranging from 1 to the highest classID. For Retail, that's the same as GetNumClasses().
+---
+--- Returns:
+--- @return ClassInfo classInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetClassInfo
+---
+--- Usage: classInfo = C_CreatureInfo.GetClassInfo(classID)
+---
+-- function C_CreatureInfo.GetClassInfo()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetCreatureFamilyIDs
+---======================================================================
+--- Returns all creature family IDs.
+---
+--- Returns:
+--- @return number creatureFamilyIDs [] - An array of creature family IDs.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetCreatureFamilyIDs
+---
+--- Usage: creatureFamilyIDs = C_CreatureInfo.GetCreatureFamilyIDs()
+---
+-- function C_CreatureInfo.GetCreatureFamilyIDs()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetCreatureFamilyInfo
+---======================================================================
+--- Returns info for a creature family id.
+---
+--- Arguments:
+--- @param creatureFamilyID number
+---
+--- Returns:
+--- @return CreatureFamilyInfo creatureFamilyInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetCreatureFamilyInfo
+---
+--- Usage: creatureFamilyInfo = C_CreatureInfo.GetCreatureFamilyInfo(creatureFamilyID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_CreatureInfo.GetCreatureFamilyInfo(27)
+---   [1] = {
+---   	id = 27,
+---   	iconFile = 132202,
+---   	name = "Wind Serpent"
+---   }
+---
+-- function C_CreatureInfo.GetCreatureFamilyInfo()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetCreatureTypeIDs
+---======================================================================
+--- Returns all creature type IDs.
+---
+--- Returns:
+--- @return number creatureTypeIDs [] - An array of creature type IDs.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetCreatureTypeIDs
+---
+--- Usage: creatureTypeIDs = C_CreatureInfo.GetCreatureTypeIDs()
+---
+-- function C_CreatureInfo.GetCreatureTypeIDs()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetCreatureTypeInfo
+---======================================================================
+--- Returns info for a creature type id.
+---
+--- Arguments:
+--- @param creatureTypeID number
+---
+--- Returns:
+--- @return CreatureTypeInfo creatureTypeInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetCreatureTypeInfo
+---
+--- Usage: creatureTypeInfo = C_CreatureInfo.GetCreatureTypeInfo(creatureTypeID)
+---
+--- Examples:
+--- Example 1:
+---   -- /dump C_CreatureInfo.GetCreatureTypeInfo(8)
+---   [1] = {
+---   	id = 8,
+---   	name = "Critter"
+---   }
+---
+-- function C_CreatureInfo.GetCreatureTypeInfo()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetFactionInfo
+---======================================================================
+--- Returns the faction name for a race.
+---
+--- Arguments:
+--- @param raceID number
+---
+--- Returns:
+--- @return  factionInfo structure - FactionInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetFactionInfo
+---
+--- Usage: factionInfo = C_CreatureInfo.GetFactionInfo(raceID)
+---
+-- function C_CreatureInfo.GetFactionInfo()
+-- end
+
+---======================================================================
+--- C_CreatureInfo.GetRaceInfo
+---======================================================================
+--- Returns both localized and locale-independent race names.
+---
+--- Arguments:
+--- @param raceID number
+---
+--- Returns:
+--- @return  raceInfo structure - RaceInfo (nilable)
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CreatureInfo.GetRaceInfo
+---
+--- Usage: raceInfo = C_CreatureInfo.GetRaceInfo(raceID)
+---
+-- function C_CreatureInfo.GetRaceInfo()
+-- end

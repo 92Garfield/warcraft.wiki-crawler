@@ -1,0 +1,55 @@
+--[=[
+-- C_UserFeedback API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_UserFeedback
+--- C_UserFeedback namespace contains 2 functions
+local C_UserFeedback = {}
+
+--[=[
+-- C_UserFeedback Functions:
+-- - C_UserFeedback.SubmitBug
+-- - C_UserFeedback.SubmitSuggestion
+--]=]
+
+---======================================================================
+--- C_UserFeedback.SubmitBug
+---======================================================================
+--- Replaces `GMSubmitBug`.
+---
+--- Arguments:
+--- @param bugInfo string
+--- @param suppressNotification boolean ? = false
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UserFeedback.SubmitBug
+---
+--- Usage: success = C_UserFeedback.SubmitBug(bugInfo [, suppressNotification])
+---
+-- function C_UserFeedback.SubmitBug()
+-- end
+
+---======================================================================
+--- C_UserFeedback.SubmitSuggestion
+---======================================================================
+--- Replaces `GMSubmitSuggestion`.
+---
+--- Arguments:
+--- @param suggestion string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UserFeedback.SubmitSuggestion
+---
+--- Usage: success = C_UserFeedback.SubmitSuggestion(suggestion)
+---
+-- function C_UserFeedback.SubmitSuggestion()
+-- end

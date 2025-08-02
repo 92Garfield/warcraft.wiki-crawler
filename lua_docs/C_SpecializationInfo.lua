@@ -1,0 +1,470 @@
+--[=[
+-- C_SpecializationInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 25
+--]=]
+
+--- @class C_SpecializationInfo
+--- C_SpecializationInfo namespace contains 25 functions
+local C_SpecializationInfo = {}
+
+--[=[
+-- C_SpecializationInfo Functions:
+-- - C_SpecializationInfo.CanPlayerUsePVPTalentUI
+-- - C_SpecializationInfo.CanPlayerUseTalentSpecUI
+-- - C_SpecializationInfo.CanPlayerUseTalentUI
+-- - C_SpecializationInfo.GetActiveSpecGroup
+-- - C_SpecializationInfo.GetAllSelectedPvpTalentIDs
+-- - C_SpecializationInfo.GetClassIDFromSpecID
+-- - C_SpecializationInfo.GetInspectSelectedPvpTalent
+-- - C_SpecializationInfo.GetNumSpecializationsForClassID
+-- - C_SpecializationInfo.GetPvpTalentAlertStatus
+-- - C_SpecializationInfo.GetPvpTalentInfo
+-- - C_SpecializationInfo.GetPvpTalentSlotInfo
+-- - C_SpecializationInfo.GetPvpTalentSlotUnlockLevel
+-- - C_SpecializationInfo.GetPvpTalentUnlockLevel
+-- - C_SpecializationInfo.GetSpecIDs
+-- - C_SpecializationInfo.GetSpecialization
+-- - C_SpecializationInfo.GetSpecializationInfo
+-- - C_SpecializationInfo.GetSpecializationMasterySpells
+-- - C_SpecializationInfo.GetSpellsDisplay
+-- - C_SpecializationInfo.GetTalentInfo
+-- - C_SpecializationInfo.IsInitialized
+-- - C_SpecializationInfo.IsPvpTalentLocked
+-- - C_SpecializationInfo.MatchesCurrentSpecSet
+-- - C_SpecializationInfo.SetPetSpecialization
+-- - C_SpecializationInfo.SetPvpTalentLocked
+-- - C_SpecializationInfo.SetSpecialization
+--]=]
+
+---======================================================================
+--- C_SpecializationInfo.CanPlayerUsePVPTalentUI
+---======================================================================
+--- Returns true if the player is allowed to use the PvP talent UI, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.CanPlayerUsePVPTalentUI
+---
+--- Usage: canUse, failureReason = C_SpecializationInfo.CanPlayerUsePVPTalentUI()
+---
+-- function C_SpecializationInfo.CanPlayerUsePVPTalentUI()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.CanPlayerUseTalentSpecUI
+---======================================================================
+--- Returns true if the player is allowed to use the specialization UI, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.CanPlayerUseTalentSpecUI
+---
+--- Usage: canUse, failureReason = C_SpecializationInfo.CanPlayerUseTalentSpecUI()
+---
+-- function C_SpecializationInfo.CanPlayerUseTalentSpecUI()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.CanPlayerUseTalentUI
+---======================================================================
+--- Returns true if the player is allowed to use the talent UI, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean canUse
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.CanPlayerUseTalentUI
+---
+--- Usage: canUse, failureReason = C_SpecializationInfo.CanPlayerUseTalentUI()
+---
+-- function C_SpecializationInfo.CanPlayerUseTalentUI()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetActiveSpecGroup
+---======================================================================
+--- Arguments:
+--- @param isInspect boolean ?
+--- @param isPet boolean ?
+---
+--- Returns:
+--- @return number groupIndex
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetActiveSpecGroup
+---
+--- Usage: groupIndex = C_SpecializationInfo.GetActiveSpecGroup([isInspect [, isPet]])
+---
+-- function C_SpecializationInfo.GetActiveSpecGroup()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetAllSelectedPvpTalentIDs
+---======================================================================
+--- Returns:
+--- @return number selectedPvpTalentIDs [] - Usable by GetPvpTalentInfoByID()
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetAllSelectedPvpTalentIDs
+---
+--- Usage: selectedPvpTalentIDs = C_SpecializationInfo.GetAllSelectedPvpTalentIDs()
+---
+-- function C_SpecializationInfo.GetAllSelectedPvpTalentIDs()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetClassIDFromSpecID
+---======================================================================
+--- Arguments:
+--- @param specID number
+---
+--- Returns:
+--- @return number classID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetClassIDFromSpecID
+---
+--- Usage: classID = C_SpecializationInfo.GetClassIDFromSpecID(specID)
+---
+-- function C_SpecializationInfo.GetClassIDFromSpecID()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetInspectSelectedPvpTalent
+---======================================================================
+--- Arguments:
+--- @param inspectedUnit string
+--- @param talentIndex number
+---
+--- Returns:
+--- @return number selectedTalentID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetInspectSelectedPvpTalent
+---
+--- Usage: selectedTalentID = C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentIndex)
+---
+-- function C_SpecializationInfo.GetInspectSelectedPvpTalent()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetNumSpecializationsForClassID
+---======================================================================
+--- Arguments:
+--- @param classID number
+---
+--- Returns:
+--- @return number specCount
+---
+--- @since Patch 11.2.0 (2025-08-05): Changed specID argument to classID.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetNumSpecializationsForClassID
+---
+--- Usage: specCount = C_SpecializationInfo.GetNumSpecializationsForClassID(classID)
+---
+--- See also:
+--- - GetNumSpecializations
+---
+-- function C_SpecializationInfo.GetNumSpecializationsForClassID()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetPvpTalentAlertStatus
+---======================================================================
+--- Returns:
+--- @return boolean hasUnspentSlot
+--- @return boolean hasNewTalent
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentAlertStatus
+---
+--- Usage: hasUnspentSlot, hasNewTalent = C_SpecializationInfo.GetPvpTalentAlertStatus()
+---
+-- function C_SpecializationInfo.GetPvpTalentAlertStatus()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetPvpTalentInfo
+---======================================================================
+--- Arguments:
+--- @param talentID number
+---
+--- Returns:
+--- @return PvpTalentInfo talentInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentInfo
+---
+--- Usage: talentInfo = C_SpecializationInfo.GetPvpTalentInfo(talentID)
+---
+-- function C_SpecializationInfo.GetPvpTalentInfo()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetPvpTalentSlotInfo
+---======================================================================
+--- Arguments:
+--- @param talentIndex number
+---
+--- Returns:
+--- @return PvpTalentSlotInfo slotInfo ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Added level field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentSlotInfo
+---
+--- Usage: slotInfo = C_SpecializationInfo.GetPvpTalentSlotInfo(talentIndex)
+---
+-- function C_SpecializationInfo.GetPvpTalentSlotInfo()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetPvpTalentSlotUnlockLevel
+---======================================================================
+--- Arguments:
+--- @param talentIndex number
+---
+--- Returns:
+--- @return number requiredLevel ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentSlotUnlockLevel
+---
+--- Usage: requiredLevel = C_SpecializationInfo.GetPvpTalentSlotUnlockLevel(talentIndex)
+---
+-- function C_SpecializationInfo.GetPvpTalentSlotUnlockLevel()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetPvpTalentUnlockLevel
+---======================================================================
+--- Arguments:
+--- @param talentID number
+---
+--- Returns:
+--- @return number requiredLevel ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentUnlockLevel
+---
+--- Usage: requiredLevel = C_SpecializationInfo.GetPvpTalentUnlockLevel(talentID)
+---
+-- function C_SpecializationInfo.GetPvpTalentUnlockLevel()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetSpecialization
+---======================================================================
+--- Arguments:
+--- @param isInspect boolean ?
+--- @param isPet boolean ?
+--- @param specGroupIndex number ?
+---
+--- Returns:
+--- @return number specializationIndex
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecialization
+---
+--- Usage: specializationIndex = C_SpecializationInfo.GetSpecialization([isInspect [, isPet [, specGroupIndex]]])
+---
+-- function C_SpecializationInfo.GetSpecialization()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetSpecializationInfo
+---======================================================================
+--- Arguments:
+--- @param specializationIndex number
+--- @param isInspect boolean ? = false
+--- @param isPet boolean ? = false
+--- @param inspectTarget string ?
+--- @param sex number ?
+--- @param groupIndex number ?
+---
+--- Returns:
+--- @return number specId ? = 0
+--- @return string name ?
+--- @return string description ?
+--- @return number icon ? : fileID
+--- @return string role ?
+--- @return number primaryStat ?
+--- @return number pointsSpent ? = 0
+--- @return string background ?
+--- @return number previewPointsSpent ? = 0
+--- @return boolean isUnlocked ? = true
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecializationInfo
+---
+--- Usage: specId, name, description, icon, role, primaryStat, pointsSpent, background, previewPointsSpent, isUnlocked = C_SpecializationInfo.GetSpecializationInfo(specializationIndex [, isInspect [, isPet [, inspectTarget [, sex [, groupIndex]]]]])
+---
+-- function C_SpecializationInfo.GetSpecializationInfo()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetSpecializationMasterySpells
+---======================================================================
+--- Arguments:
+--- @param specializationIndex number
+--- @param isInspect boolean ?
+--- @param isPet boolean ?
+---
+--- Returns:
+--- @return number spellIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecializationMasterySpells
+---
+--- Usage: spellIDs = C_SpecializationInfo.GetSpecializationMasterySpells(specializationIndex [, isInspect [, isPet]])
+---
+-- function C_SpecializationInfo.GetSpecializationMasterySpells()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetSpecIDs
+---======================================================================
+--- Returns the list of SpecializationIDs that are part of a specSet.
+---
+--- Arguments:
+--- @param specSetID number
+---
+--- Returns:
+--- @return number specIDs []
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecIDs
+---
+--- Usage: specIDs = C_SpecializationInfo.GetSpecIDs(specSetID)
+---
+-- function C_SpecializationInfo.GetSpecIDs()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetSpellsDisplay
+---======================================================================
+--- Arguments:
+--- @param specializationID number
+---
+--- Returns:
+--- @return number spellID []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpellsDisplay
+---
+--- Usage: spellID = C_SpecializationInfo.GetSpellsDisplay(specializationID)
+---
+-- function C_SpecializationInfo.GetSpellsDisplay()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.GetTalentInfo
+---======================================================================
+--- Arguments:
+--- @param query TalentInfoQuery
+---
+--- Returns:
+--- @return TalentInfoResult result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetTalentInfo
+---
+--- Usage: result = C_SpecializationInfo.GetTalentInfo(query)
+---
+-- function C_SpecializationInfo.GetTalentInfo()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.IsInitialized
+---======================================================================
+--- Returns whether player talent specialization info has been initialized.
+---
+--- Returns:
+--- @return boolean isSpecializationDataInitialized
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.IsInitialized
+---
+--- Usage: isSpecializationDataInitialized = C_SpecializationInfo.IsInitialized()
+---
+-- function C_SpecializationInfo.IsInitialized()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.IsPvpTalentLocked
+---======================================================================
+--- Arguments:
+--- @param talentID number
+---
+--- Returns:
+--- @return boolean locked
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.IsPvpTalentLocked
+---
+--- Usage: locked = C_SpecializationInfo.IsPvpTalentLocked(talentID)
+---
+-- function C_SpecializationInfo.IsPvpTalentLocked()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.MatchesCurrentSpecSet
+---======================================================================
+--- Arguments:
+--- @param specSetID number
+---
+--- Returns:
+--- @return boolean matches
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.MatchesCurrentSpecSet
+---
+--- Usage: matches = C_SpecializationInfo.MatchesCurrentSpecSet(specSetID)
+---
+-- function C_SpecializationInfo.MatchesCurrentSpecSet()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.SetPetSpecialization
+---======================================================================
+--- Arguments:
+--- @param specIndex number
+--- @param petNumber number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetPetSpecialization
+---
+--- Usage: C_SpecializationInfo.SetPetSpecialization(specIndex [, petNumber])
+---
+-- function C_SpecializationInfo.SetPetSpecialization()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.SetPvpTalentLocked
+---======================================================================
+--- Arguments:
+--- @param talentID number
+--- @param locked boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetPvpTalentLocked
+---
+--- Usage: C_SpecializationInfo.SetPvpTalentLocked(talentID, locked)
+---
+-- function C_SpecializationInfo.SetPvpTalentLocked()
+-- end
+
+---======================================================================
+--- C_SpecializationInfo.SetSpecialization
+---======================================================================
+--- Arguments:
+--- @param specIndex number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetSpecialization
+---
+--- Usage: success = C_SpecializationInfo.SetSpecialization(specIndex)
+---
+-- function C_SpecializationInfo.SetSpecialization()
+-- end

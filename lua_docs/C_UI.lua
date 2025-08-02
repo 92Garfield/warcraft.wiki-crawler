@@ -1,0 +1,130 @@
+--[=[
+-- C_UI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_UI
+--- C_UI namespace contains 7 functions
+local C_UI = {}
+
+--[=[
+-- C_UI Functions:
+-- - C_UI.DoesAnyDisplayHaveNotch
+-- - C_UI.GetTopLeftNotchSafeRegion
+-- - C_UI.GetTopRightNotchSafeRegion
+-- - C_UI.GetUIParent
+-- - C_UI.GetWorldFrame
+-- - C_UI.Reload
+-- - C_UI.ShouldUIParentAvoidNotch
+--]=]
+
+---======================================================================
+--- C_UI.DoesAnyDisplayHaveNotch
+---======================================================================
+--- True if any display attached has a notch. This does not mean the current view intersects the notch.
+---
+--- Returns:
+--- @return boolean notchPresent
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.DoesAnyDisplayHaveNotch
+---
+--- Usage: notchPresent = C_UI.DoesAnyDisplayHaveNotch()
+---
+-- function C_UI.DoesAnyDisplayHaveNotch()
+-- end
+
+---======================================================================
+--- C_UI.GetTopLeftNotchSafeRegion
+---======================================================================
+--- Region of screen left of screen notch. Zeros if no notch.
+---
+--- Returns:
+--- @return number left
+--- @return number right
+--- @return number top
+--- @return number bottom
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.GetTopLeftNotchSafeRegion
+---
+--- Usage: left, right, top, bottom = C_UI.GetTopLeftNotchSafeRegion()
+---
+-- function C_UI.GetTopLeftNotchSafeRegion()
+-- end
+
+---======================================================================
+--- C_UI.GetTopRightNotchSafeRegion
+---======================================================================
+--- Region of screen right of screen notch. Zeros if no notch.
+---
+--- Returns:
+--- @return number left
+--- @return number right
+--- @return number top
+--- @return number bottom
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.GetTopRightNotchSafeRegion
+---
+--- Usage: left, right, top, bottom = C_UI.GetTopRightNotchSafeRegion()
+---
+-- function C_UI.GetTopRightNotchSafeRegion()
+-- end
+
+---======================================================================
+--- C_UI.GetUIParent
+---======================================================================
+--- Returns:
+--- @return Frame🔗 uiParent
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.GetUIParent
+---
+--- Usage: uiParent = C_UI.GetUIParent()
+---
+-- function C_UI.GetUIParent()
+-- end
+
+---======================================================================
+--- C_UI.GetWorldFrame
+---======================================================================
+--- Returns:
+--- @return Frame🔗 worldFrame
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.GetWorldFrame
+---
+--- Usage: worldFrame = C_UI.GetWorldFrame()
+---
+-- function C_UI.GetWorldFrame()
+-- end
+
+---======================================================================
+--- C_UI.Reload
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 7.2.5 (2017-06-13): Moved to C_UI.Reload. The previous alias is still available as a script wrapper. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.Reload
+---
+--- Usage: C_UI.Reload()
+---
+-- function C_UI.Reload()
+-- end
+
+---======================================================================
+--- C_UI.ShouldUIParentAvoidNotch
+---======================================================================
+--- UIParent will shift down to avoid notch if true. This does not mean there is a notch.
+---
+--- Returns:
+--- @return boolean willAvoidNotch
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UI.ShouldUIParentAvoidNotch
+---
+--- Usage: willAvoidNotch = C_UI.ShouldUIParentAvoidNotch()
+---
+-- function C_UI.ShouldUIParentAvoidNotch()
+-- end

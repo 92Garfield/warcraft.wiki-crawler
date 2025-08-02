@@ -1,0 +1,92 @@
+--[=[
+-- C_ToyBox API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_ToyBox
+--- C_ToyBox namespace contains 4 functions
+local C_ToyBox = {}
+
+--[=[
+-- C_ToyBox Functions:
+-- - C_ToyBox.GetNumToys
+-- - C_ToyBox.GetToyFromIndex
+-- - C_ToyBox.GetToyInfo
+-- - C_ToyBox.GetToyLink
+--]=]
+
+---======================================================================
+--- C_ToyBox.GetNumToys
+---======================================================================
+--- Returns the total amount of toys.
+---
+--- Returns:
+--- @return number numToys - The amount of toys in the game; this is not affected by the toy box filter.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetNumToys
+---
+--- Usage: numToys = C_ToyBox.GetNumToys()
+---
+-- function C_ToyBox.GetNumToys()
+-- end
+
+---======================================================================
+--- C_ToyBox.GetToyFromIndex
+---======================================================================
+--- Returns a toy by index.
+---
+--- Arguments:
+--- @param index number - Ranging from 1 to C_ToyBox.GetNumFilteredToys.
+---
+--- Returns:
+--- @return number itemID - The Item ID of the toy. Returns -1 if the index is invalid.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyFromIndex
+---
+--- Usage: itemID = C_ToyBox.GetToyFromIndex(index)
+---
+-- function C_ToyBox.GetToyFromIndex()
+-- end
+
+---======================================================================
+--- C_ToyBox.GetToyInfo
+---======================================================================
+--- Arguments:
+--- @param itemID number - The itemID returned from C_ToyBox.GetToyFromIndex(); possible values listed at ToyID.
+---
+--- Returns:
+--- @return number itemID - The Item ID of the toy.
+--- @return string toyName - The name of the toy.
+--- @return number icon - The icon texture (FileID).
+--- @return boolean isFavorite - Whether the toy is set to favorite.
+--- @return boolean hasFanfare - Shows a highlight for the toy.
+--- @return Enum.ItemQuality itemQuality 🔗
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyInfo
+---
+--- Usage: itemID, toyName, icon, isFavorite, hasFanfare, itemQuality = C_ToyBox.GetToyInfo(itemID)
+---
+-- function C_ToyBox.GetToyInfo()
+-- end
+
+---======================================================================
+--- C_ToyBox.GetToyLink
+---======================================================================
+--- Returns the item link for a toy.
+---
+--- Arguments:
+--- @param itemID number - Numeric ID of the item.
+---
+--- Returns:
+--- @return string itemLink ? - The toy's localized itemLink, or nil if that itemID is not a toy.
+---
+--- @since Patch 6.0.2 (2014-10-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyLink
+---
+--- Usage: itemLink = C_ToyBox.GetToyLink(itemID)
+---
+-- function C_ToyBox.GetToyLink()
+-- end

@@ -1,0 +1,264 @@
+--[=[
+-- C_PaperDollInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 15
+--]=]
+
+--- @class C_PaperDollInfo
+--- C_PaperDollInfo namespace contains 15 functions
+local C_PaperDollInfo = {}
+
+--[=[
+-- C_PaperDollInfo Functions:
+-- - C_PaperDollInfo.CanAutoEquipCursorItem
+-- - C_PaperDollInfo.CanCursorCanGoInSlot
+-- - C_PaperDollInfo.GetArmorEffectiveness
+-- - C_PaperDollInfo.GetArmorEffectivenessAgainstTarget
+-- - C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices
+-- - C_PaperDollInfo.GetInspectGuildInfo
+-- - C_PaperDollInfo.GetInspectItemLevel
+-- - C_PaperDollInfo.GetInspectRatedBGBlitzData
+-- - C_PaperDollInfo.GetInspectRatedBGData
+-- - C_PaperDollInfo.GetInspectRatedSoloShuffleData
+-- - C_PaperDollInfo.GetMinItemLevel
+-- - C_PaperDollInfo.GetStaggerPercentage
+-- - C_PaperDollInfo.IsInventorySlotEnabled
+-- - C_PaperDollInfo.OffhandHasShield
+-- - C_PaperDollInfo.OffhandHasWeapon
+--]=]
+
+---======================================================================
+--- C_PaperDollInfo.CanAutoEquipCursorItem
+---======================================================================
+--- Returns:
+--- @return boolean canAutoEquip
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.CanAutoEquipCursorItem
+---
+--- Usage: canAutoEquip = C_PaperDollInfo.CanAutoEquipCursorItem()
+---
+-- function C_PaperDollInfo.CanAutoEquipCursorItem()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.CanCursorCanGoInSlot
+---======================================================================
+--- Arguments:
+--- @param slotIndex number
+---
+--- Returns:
+--- @return boolean canOccupySlot
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.CanCursorCanGoInSlot
+---
+--- Usage: canOccupySlot = C_PaperDollInfo.CanCursorCanGoInSlot(slotIndex)
+---
+-- function C_PaperDollInfo.CanCursorCanGoInSlot()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetArmorEffectiveness
+---======================================================================
+--- Arguments:
+--- @param armor number
+--- @param attackerLevel number
+---
+--- Returns:
+--- @return number effectiveness
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetArmorEffectiveness
+---
+--- Usage: effectiveness = C_PaperDollInfo.GetArmorEffectiveness(armor, attackerLevel)
+---
+-- function C_PaperDollInfo.GetArmorEffectiveness()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetArmorEffectivenessAgainstTarget
+---======================================================================
+--- Arguments:
+--- @param armor number
+---
+--- Returns:
+--- @return number effectiveness ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetArmorEffectivenessAgainstTarget
+---
+--- Usage: effectiveness = C_PaperDollInfo.GetArmorEffectivenessAgainstTarget(armor)
+---
+-- function C_PaperDollInfo.GetArmorEffectivenessAgainstTarget()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices
+---======================================================================
+--- Arguments:
+--- @param unit string : UnitId
+--- @param equipmentSlotIndex number
+---
+--- Returns:
+--- @return number azeritePowerIDs []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices
+---
+--- Usage: azeritePowerIDs = C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSlotIndex)
+---
+-- function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectGuildInfo
+---======================================================================
+--- Arguments:
+--- @param unitString string
+---
+--- Returns:
+--- @return number achievementPoints
+--- @return number numMembers
+--- @return string guildName
+--- @return string realmName
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectGuildInfo
+---
+--- Usage: achievementPoints, numMembers, guildName, realmName = C_PaperDollInfo.GetInspectGuildInfo(unitString)
+---
+-- function C_PaperDollInfo.GetInspectGuildInfo()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectItemLevel
+---======================================================================
+--- Returns the average item level for the unit being inspected.
+---
+--- Arguments:
+--- @param unit string : UnitId
+---
+--- Returns:
+--- @return number equippedItemLevel
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectItemLevel
+---
+--- Usage: equippedItemLevel = C_PaperDollInfo.GetInspectItemLevel(unit)
+---
+-- function C_PaperDollInfo.GetInspectItemLevel()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectRatedBGBlitzData
+---======================================================================
+--- Returns:
+--- @return InspectPVPData ratedBGBlitzData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedBGBlitzData
+---
+--- Usage: ratedBGBlitzData = C_PaperDollInfo.GetInspectRatedBGBlitzData()
+---
+-- function C_PaperDollInfo.GetInspectRatedBGBlitzData()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectRatedBGData
+---======================================================================
+--- Returns:
+--- @return InspectRatedBGData ratedBGData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedBGData
+---
+--- Usage: ratedBGData = C_PaperDollInfo.GetInspectRatedBGData()
+---
+-- function C_PaperDollInfo.GetInspectRatedBGData()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetInspectRatedSoloShuffleData
+---======================================================================
+--- Returns:
+--- @return InspectPVPData ratedSoloShuffleData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedSoloShuffleData
+---
+--- Usage: ratedSoloShuffleData = C_PaperDollInfo.GetInspectRatedSoloShuffleData()
+---
+-- function C_PaperDollInfo.GetInspectRatedSoloShuffleData()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetMinItemLevel
+---======================================================================
+--- Returns:
+--- @return number minItemLevel ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetMinItemLevel
+---
+--- Usage: minItemLevel = C_PaperDollInfo.GetMinItemLevel()
+---
+-- function C_PaperDollInfo.GetMinItemLevel()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.GetStaggerPercentage
+---======================================================================
+--- Arguments:
+--- @param unit string : UnitId
+---
+--- Returns:
+--- @return number stagger
+--- @return number staggerAgainstTarget ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetStaggerPercentage
+---
+--- Usage: stagger, staggerAgainstTarget = C_PaperDollInfo.GetStaggerPercentage(unit)
+---
+-- function C_PaperDollInfo.GetStaggerPercentage()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.IsInventorySlotEnabled
+---======================================================================
+--- Arguments:
+--- @param slotName stringView
+---
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.IsInventorySlotEnabled
+---
+--- Usage: isEnabled = C_PaperDollInfo.IsInventorySlotEnabled(slotName)
+---
+-- function C_PaperDollInfo.IsInventorySlotEnabled()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.OffhandHasShield
+---======================================================================
+--- Returns:
+--- @return boolean offhandHasShield
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.OffhandHasShield
+---
+--- Usage: offhandHasShield = C_PaperDollInfo.OffhandHasShield()
+---
+-- function C_PaperDollInfo.OffhandHasShield()
+-- end
+
+---======================================================================
+--- C_PaperDollInfo.OffhandHasWeapon
+---======================================================================
+--- Returns:
+--- @return boolean offhandHasWeapon
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.OffhandHasWeapon
+---
+--- Usage: offhandHasWeapon = C_PaperDollInfo.OffhandHasWeapon()
+---
+-- function C_PaperDollInfo.OffhandHasWeapon()
+-- end

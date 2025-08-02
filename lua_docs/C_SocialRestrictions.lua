@@ -1,0 +1,133 @@
+--[=[
+-- C_SocialRestrictions API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_SocialRestrictions
+--- C_SocialRestrictions namespace contains 8 functions
+local C_SocialRestrictions = {}
+
+--[=[
+-- C_SocialRestrictions Functions:
+-- - C_SocialRestrictions.AcknowledgeRegionalChatDisabled
+-- - C_SocialRestrictions.CanReceiveChat
+-- - C_SocialRestrictions.CanSendChat
+-- - C_SocialRestrictions.IsChatDisabled
+-- - C_SocialRestrictions.IsMuted
+-- - C_SocialRestrictions.IsSilenced
+-- - C_SocialRestrictions.IsSquelched
+-- - C_SocialRestrictions.SetChatDisabled
+--]=]
+
+---======================================================================
+--- C_SocialRestrictions.AcknowledgeRegionalChatDisabled
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.AcknowledgeRegionalChatDisabled
+---
+--- Usage: C_SocialRestrictions.AcknowledgeRegionalChatDisabled()
+---
+-- function C_SocialRestrictions.AcknowledgeRegionalChatDisabled()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.CanReceiveChat
+---======================================================================
+--- Returns true if the player meets all conditions that allow them to receive chat messages.
+---
+--- Returns:
+--- @return boolean canReceiveChat
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanReceiveChat
+---
+--- Usage: canReceiveChat = C_SocialRestrictions.CanReceiveChat()
+---
+-- function C_SocialRestrictions.CanReceiveChat()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.CanSendChat
+---======================================================================
+--- Returns true if the player meets all conditions that allow them to send chat messages.
+---
+--- Returns:
+--- @return boolean canSendChat
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanSendChat
+---
+--- Usage: canSendChat = C_SocialRestrictions.CanSendChat()
+---
+-- function C_SocialRestrictions.CanSendChat()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.IsChatDisabled
+---======================================================================
+--- Returns:
+--- @return boolean disabled
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.IsChatDisabled
+---
+--- Usage: disabled = C_SocialRestrictions.IsChatDisabled()
+---
+-- function C_SocialRestrictions.IsChatDisabled()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.IsMuted
+---======================================================================
+--- Returns:
+--- @return boolean isMuted
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.IsMuted
+---
+--- Usage: isMuted = C_SocialRestrictions.IsMuted()
+---
+-- function C_SocialRestrictions.IsMuted()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.IsSilenced
+---======================================================================
+--- Returns:
+--- @return boolean isSilenced
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.IsSilenced
+---
+--- Usage: isSilenced = C_SocialRestrictions.IsSilenced()
+---
+-- function C_SocialRestrictions.IsSilenced()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.IsSquelched
+---======================================================================
+--- Returns:
+--- @return boolean isSquelched
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.IsSquelched
+---
+--- Usage: isSquelched = C_SocialRestrictions.IsSquelched()
+---
+-- function C_SocialRestrictions.IsSquelched()
+-- end
+
+---======================================================================
+--- C_SocialRestrictions.SetChatDisabled
+---======================================================================
+--- Arguments:
+--- @param disabled boolean
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.SetChatDisabled
+---
+--- Usage: C_SocialRestrictions.SetChatDisabled(disabled)
+---
+-- function C_SocialRestrictions.SetChatDisabled()
+-- end

@@ -1,0 +1,207 @@
+--[=[
+-- C_DateAndTime API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_DateAndTime
+--- C_DateAndTime namespace contains 10 functions
+local C_DateAndTime = {}
+
+--[=[
+-- C_DateAndTime Functions:
+-- - C_DateAndTime.AdjustTimeByDays
+-- - C_DateAndTime.AdjustTimeByMinutes
+-- - C_DateAndTime.AdjustTimeByMonths
+-- - C_DateAndTime.CompareCalendarTime
+-- - C_DateAndTime.GetCalendarTimeFromEpoch
+-- - C_DateAndTime.GetCurrentCalendarTime
+-- - C_DateAndTime.GetSecondsUntilDailyReset
+-- - C_DateAndTime.GetSecondsUntilWeeklyReset
+-- - C_DateAndTime.GetServerTimeLocal
+-- - C_DateAndTime.GetWeeklyResetStartTime
+--]=]
+
+---======================================================================
+--- C_DateAndTime.AdjustTimeByDays
+---======================================================================
+--- Returns the date after a specified amount of days.
+---
+--- Arguments:
+--- @param date CalendarTime
+--- @param days number
+---
+--- Returns:
+--- @return CalendarTime newDate
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.AdjustTimeByDays
+---
+--- Usage: newDate = C_DateAndTime.AdjustTimeByDays(date, days)
+        = C_DateAndTime.AdjustTimeByMinutes(date, minutes)
+---
+-- function C_DateAndTime.AdjustTimeByDays()
+-- end
+
+---======================================================================
+--- C_DateAndTime.AdjustTimeByMinutes
+---======================================================================
+--- Returns the date after a specified amount of days.
+---
+--- Arguments:
+--- @param date CalendarTime
+--- @param days number
+---
+--- Returns:
+--- @return CalendarTime newDate
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.AdjustTimeByMinutes
+---
+--- Usage: newDate = C_DateAndTime.AdjustTimeByDays(date, days)
+        = C_DateAndTime.AdjustTimeByMinutes(date, minutes)
+---
+-- function C_DateAndTime.AdjustTimeByMinutes()
+-- end
+
+---======================================================================
+--- C_DateAndTime.AdjustTimeByMonths
+---======================================================================
+--- Arguments:
+--- @param date CalendarTime
+--- @param months number
+---
+--- Returns:
+--- @return CalendarTime newDate
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.AdjustTimeByMonths
+---
+--- Usage: newDate = C_DateAndTime.AdjustTimeByMonths(date, months)
+---
+-- function C_DateAndTime.AdjustTimeByMonths()
+-- end
+
+---======================================================================
+--- C_DateAndTime.CompareCalendarTime
+---======================================================================
+--- Compares two dates with eachother.
+---
+--- Arguments:
+--- @param lhsCalendarTime CalendarTime - left-hand side time
+--- @param rhsCalendarTime CalendarTime - right-hand side time
+---
+--- Returns:
+--- @return  comparison -1 : rhsCalendarTime is at an earlier time
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.CompareCalendarTime
+---
+--- Usage: comparison = C_DateAndTime.CompareCalendarTime(lhsCalendarTime, rhsCalendarTime)
+---
+-- function C_DateAndTime.CompareCalendarTime()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetCalendarTimeFromEpoch
+---======================================================================
+--- Returns the date for a specified amount of time since the UNIX epoch for the OS time zone.
+---
+--- Arguments:
+--- @param epoch number - time in microseconds
+---
+--- Returns:
+--- @return CalendarTime date
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_DateAndTime.GetCalendarTimeFromEpoch(), the previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetCalendarTimeFromEpoch
+---
+--- Usage: date = C_DateAndTime.GetCalendarTimeFromEpoch(epoch)
+---
+-- function C_DateAndTime.GetCalendarTimeFromEpoch()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetCurrentCalendarTime
+---======================================================================
+--- Returns the realm's current date and time.
+---
+--- Returns:
+--- @return CalendarTime currentCalendarTime
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_DateAndTime.GetCurrentCalendarTime(). The previous alias is deprecated [1]. See ConvertToOldStyleDate() for changes with the old format.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetCurrentCalendarTime
+---
+--- Usage: currentCalendarTime = C_DateAndTime.GetCurrentCalendarTime()
+---
+--- Examples:
+--- Example 1:
+---   local d = C_DateAndTime.GetCurrentCalendarTime()
+---   local weekDay = CALENDAR_WEEKDAY_NAMES[d.weekday]
+---   local month = CALENDAR_FULLDATE_MONTH_NAMES[d.month]
+---   print(format("The time is %02d:%02d, %s, %d %s %d", d.hour, d.minute, weekDay, d.monthDay, month, d.year))
+---   -- The time is 07:55, Friday, 15 March 2019
+---
+-- function C_DateAndTime.GetCurrentCalendarTime()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetSecondsUntilDailyReset
+---======================================================================
+--- Returns:
+--- @return number seconds
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetSecondsUntilDailyReset
+---
+--- Usage: seconds = C_DateAndTime.GetSecondsUntilDailyReset()
+---
+-- function C_DateAndTime.GetSecondsUntilDailyReset()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetSecondsUntilWeeklyReset
+---======================================================================
+--- Returns the number of seconds until the weekly reset.
+---
+--- Returns:
+--- @return number seconds
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetSecondsUntilWeeklyReset
+---
+--- Usage: seconds = C_DateAndTime.GetSecondsUntilWeeklyReset()
+---
+-- function C_DateAndTime.GetSecondsUntilWeeklyReset()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetServerTimeLocal
+---======================================================================
+--- Returns the server's Unix time offset by the server's timezone.
+---
+--- Returns:
+--- @return number serverTimeLocal - Time in seconds since the epoch, only updates every 60 seconds.
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetServerTimeLocal
+---
+--- Usage: serverTimeLocal = C_DateAndTime.GetServerTimeLocal()
+---
+-- function C_DateAndTime.GetServerTimeLocal()
+-- end
+
+---======================================================================
+--- C_DateAndTime.GetWeeklyResetStartTime
+---======================================================================
+--- Returns the unix timestamp of the last weekly reset.
+---
+--- Returns:
+--- @return number seconds : time_t
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetWeeklyResetStartTime
+---
+--- Usage: seconds = C_DateAndTime.GetWeeklyResetStartTime()
+---
+-- function C_DateAndTime.GetWeeklyResetStartTime()
+-- end

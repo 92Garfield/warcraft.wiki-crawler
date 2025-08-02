@@ -1,0 +1,704 @@
+--[=[
+-- C_Soulbinds API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 39
+--]=]
+
+--- @class C_Soulbinds
+--- C_Soulbinds namespace contains 39 functions
+local C_Soulbinds = {}
+
+--[=[
+-- C_Soulbinds Functions:
+-- - C_Soulbinds.ActivateSoulbind
+-- - C_Soulbinds.CanActivateSoulbind
+-- - C_Soulbinds.CanModifySoulbind
+-- - C_Soulbinds.CanResetConduitsInSoulbind
+-- - C_Soulbinds.CanSwitchActiveSoulbindTreeBranch
+-- - C_Soulbinds.CloseUI
+-- - C_Soulbinds.CommitPendingConduitsInSoulbind
+-- - C_Soulbinds.FindNodeIDActuallyInstalled
+-- - C_Soulbinds.FindNodeIDAppearingInstalled
+-- - C_Soulbinds.FindNodeIDPendingInstall
+-- - C_Soulbinds.FindNodeIDPendingUninstall
+-- - C_Soulbinds.GetActiveSoulbindID
+-- - C_Soulbinds.GetConduitCollection
+-- - C_Soulbinds.GetConduitCollectionCount
+-- - C_Soulbinds.GetConduitCollectionData
+-- - C_Soulbinds.GetConduitCollectionDataAtCursor
+-- - C_Soulbinds.GetConduitCollectionDataByVirtualID
+-- - C_Soulbinds.GetConduitDisplayed
+-- - C_Soulbinds.GetConduitHyperlink
+-- - C_Soulbinds.GetConduitIDPendingInstall
+-- - C_Soulbinds.GetConduitQuality
+-- - C_Soulbinds.GetConduitRank
+-- - C_Soulbinds.GetConduitSpellID
+-- - C_Soulbinds.GetInstalledConduitID
+-- - C_Soulbinds.GetNode
+-- - C_Soulbinds.GetSoulbindData
+-- - C_Soulbinds.GetSpecsAssignedToSoulbind
+-- - C_Soulbinds.GetTree
+-- - C_Soulbinds.HasAnyInstalledConduitInSoulbind
+-- - C_Soulbinds.HasAnyPendingConduits
+-- - C_Soulbinds.HasPendingConduitsInSoulbind
+-- - C_Soulbinds.IsConduitInstalled
+-- - C_Soulbinds.IsConduitInstalledInSoulbind
+-- - C_Soulbinds.IsItemConduitByItemInfo
+-- - C_Soulbinds.IsNodePendingModify
+-- - C_Soulbinds.IsUnselectedConduitPendingInSoulbind
+-- - C_Soulbinds.ModifyNode
+-- - C_Soulbinds.SelectNode
+-- - C_Soulbinds.UnmodifyNode
+--]=]
+
+---======================================================================
+--- C_Soulbinds.ActivateSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.ActivateSoulbind
+---
+--- Usage: C_Soulbinds.ActivateSoulbind(soulbindID)
+---
+-- function C_Soulbinds.ActivateSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CanActivateSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return boolean result
+--- @return string errorDescription ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanActivateSoulbind
+---
+--- Usage: result, errorDescription = C_Soulbinds.CanActivateSoulbind(soulbindID)
+---
+-- function C_Soulbinds.CanActivateSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CanModifySoulbind
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanModifySoulbind
+---
+--- Usage: result = C_Soulbinds.CanModifySoulbind()
+---
+-- function C_Soulbinds.CanModifySoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CanResetConduitsInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return boolean result
+--- @return string errorDescription ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanResetConduitsInSoulbind
+---
+--- Usage: result, errorDescription = C_Soulbinds.CanResetConduitsInSoulbind(soulbindID)
+---
+-- function C_Soulbinds.CanResetConduitsInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CanSwitchActiveSoulbindTreeBranch
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanSwitchActiveSoulbindTreeBranch
+---
+--- Usage: result = C_Soulbinds.CanSwitchActiveSoulbindTreeBranch()
+---
+-- function C_Soulbinds.CanSwitchActiveSoulbindTreeBranch()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CloseUI
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CloseUI
+---
+--- Usage: C_Soulbinds.CloseUI()
+---
+-- function C_Soulbinds.CloseUI()
+-- end
+
+---======================================================================
+--- C_Soulbinds.CommitPendingConduitsInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CommitPendingConduitsInSoulbind
+---
+--- Usage: C_Soulbinds.CommitPendingConduitsInSoulbind(soulbindID)
+---
+-- function C_Soulbinds.CommitPendingConduitsInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.FindNodeIDActuallyInstalled
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDActuallyInstalled
+---
+--- Usage: nodeID = C_Soulbinds.FindNodeIDActuallyInstalled(soulbindID, conduitID)
+---
+-- function C_Soulbinds.FindNodeIDActuallyInstalled()
+-- end
+
+---======================================================================
+--- C_Soulbinds.FindNodeIDAppearingInstalled
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDAppearingInstalled
+---
+--- Usage: nodeID = C_Soulbinds.FindNodeIDAppearingInstalled(soulbindID, conduitID)
+---
+-- function C_Soulbinds.FindNodeIDAppearingInstalled()
+-- end
+
+---======================================================================
+--- C_Soulbinds.FindNodeIDPendingInstall
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDPendingInstall
+---
+--- Usage: nodeID = C_Soulbinds.FindNodeIDPendingInstall(soulbindID, conduitID)
+---
+-- function C_Soulbinds.FindNodeIDPendingInstall()
+-- end
+
+---======================================================================
+--- C_Soulbinds.FindNodeIDPendingUninstall
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return number nodeID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDPendingUninstall
+---
+--- Usage: nodeID = C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID)
+---
+-- function C_Soulbinds.FindNodeIDPendingUninstall()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetActiveSoulbindID
+---======================================================================
+--- Returns:
+--- @return number soulbindID : Soulbind.ID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetActiveSoulbindID
+---
+--- Usage: soulbindID = C_Soulbinds.GetActiveSoulbindID()
+---
+-- function C_Soulbinds.GetActiveSoulbindID()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitCollection
+---======================================================================
+--- Arguments:
+--- @param conduitType Enum.SoulbindConduitType
+---
+--- Returns:
+--- @return ConduitCollectionData collectionData []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollection
+---
+--- Usage: collectionData = C_Soulbinds.GetConduitCollection(conduitType)
+---
+-- function C_Soulbinds.GetConduitCollection()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitCollectionCount
+---======================================================================
+--- Returns:
+--- @return number count
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionCount
+---
+--- Usage: count = C_Soulbinds.GetConduitCollectionCount()
+---
+-- function C_Soulbinds.GetConduitCollectionCount()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitCollectionData
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return ConduitCollectionData collectionData ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added C_Soulbinds.GetConduitCollectionDataByVirtualID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionData
+---
+--- Usage: collectionData = C_Soulbinds.GetConduitCollectionData(conduitID)
+               = C_Soulbinds.GetConduitCollectionDataAtCursor()
+               = C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID)
+---
+-- function C_Soulbinds.GetConduitCollectionData()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitCollectionDataAtCursor
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return ConduitCollectionData collectionData ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added C_Soulbinds.GetConduitCollectionDataByVirtualID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionDataAtCursor
+---
+--- Usage: collectionData = C_Soulbinds.GetConduitCollectionData(conduitID)
+               = C_Soulbinds.GetConduitCollectionDataAtCursor()
+               = C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID)
+---
+-- function C_Soulbinds.GetConduitCollectionDataAtCursor()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitCollectionDataByVirtualID
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return ConduitCollectionData collectionData ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Added C_Soulbinds.GetConduitCollectionDataByVirtualID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionDataByVirtualID
+---
+--- Usage: collectionData = C_Soulbinds.GetConduitCollectionData(conduitID)
+               = C_Soulbinds.GetConduitCollectionDataAtCursor()
+               = C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID)
+---
+-- function C_Soulbinds.GetConduitCollectionDataByVirtualID()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitDisplayed
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return number conduitID : SoulbindConduit.ID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitDisplayed
+---
+--- Usage: conduitID = C_Soulbinds.GetConduitDisplayed(nodeID)
+---
+-- function C_Soulbinds.GetConduitDisplayed()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitHyperlink
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+--- @param rank number : SoulbindConduitRank.RankIndex - Returned from C_Soulbinds.GetConduitRank()
+---
+--- Returns:
+--- @return string link : conduitLink
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitHyperlink
+---
+--- Usage: link = C_Soulbinds.GetConduitHyperlink(conduitID, rank)
+---
+-- function C_Soulbinds.GetConduitHyperlink()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitIDPendingInstall
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return number conduitID : SoulbindConduit.ID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitIDPendingInstall
+---
+--- Usage: conduitID = C_Soulbinds.GetConduitIDPendingInstall(nodeID)
+---
+-- function C_Soulbinds.GetConduitIDPendingInstall()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitQuality
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+--- @param rank number : SoulbindConduitRank.RankIndex - Returned from C_Soulbinds.GetConduitRank()
+---
+--- Returns:
+--- @return number quality
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitQuality
+---
+--- Usage: quality = C_Soulbinds.GetConduitQuality(conduitID, rank)
+---
+-- function C_Soulbinds.GetConduitQuality()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitRank
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return number conduitRank : SoulbindConduitRank.RankIndex
+---
+--- @since Patch 9.1.0 (2021-06-29): Moved to C_Soulbinds.GetConduitRank()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitRank
+---
+--- Usage: conduitRank = C_Soulbinds.GetConduitRank(conduitID)
+---
+-- function C_Soulbinds.GetConduitRank()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetConduitSpellID
+---======================================================================
+--- Arguments:
+--- @param conduitID number : SoulbindConduit.ID
+--- @param conduitRank number : SoulbindConduitRank.RankIndex - Returned from C_Soulbinds.GetConduitRank()
+---
+--- Returns:
+--- @return number spellID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitSpellID
+---
+--- Usage: spellID = C_Soulbinds.GetConduitSpellID(conduitID, conduitRank)
+---
+-- function C_Soulbinds.GetConduitSpellID()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetInstalledConduitID
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return number conduitID : SoulbindConduit.ID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetInstalledConduitID
+---
+--- Usage: conduitID = C_Soulbinds.GetInstalledConduitID(nodeID)
+---
+-- function C_Soulbinds.GetInstalledConduitID()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetNode
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return SoulbindNode node
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetNode
+---
+--- Usage: node = C_Soulbinds.GetNode(nodeID)
+---
+-- function C_Soulbinds.GetNode()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetSoulbindData
+---======================================================================
+--- Prints soulbind data for Niya.
+---
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return SoulbindData data
+---
+--- @since Patch 9.0.5 (2021-03-09): Added playerConditionReason field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetSoulbindData
+---
+--- Usage: data = C_Soulbinds.GetSoulbindData(soulbindID)
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Soulbinds.GetSoulbindData(5)
+---
+-- function C_Soulbinds.GetSoulbindData()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetSpecsAssignedToSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number
+---
+--- Returns:
+--- @return number specIDs []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetSpecsAssignedToSoulbind
+---
+--- Usage: specIDs = C_Soulbinds.GetSpecsAssignedToSoulbind(soulbindID)
+---
+-- function C_Soulbinds.GetSpecsAssignedToSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.GetTree
+---======================================================================
+--- Arguments:
+--- @param treeID number
+---
+--- Returns:
+--- @return SoulbindTree tree
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetTree
+---
+--- Usage: tree = C_Soulbinds.GetTree(treeID)
+---
+-- function C_Soulbinds.GetTree()
+-- end
+
+---======================================================================
+--- C_Soulbinds.HasAnyInstalledConduitInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasAnyInstalledConduitInSoulbind
+---
+--- Usage: result = C_Soulbinds.HasAnyInstalledConduitInSoulbind(soulbindID)
+---
+-- function C_Soulbinds.HasAnyInstalledConduitInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.HasAnyPendingConduits
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasAnyPendingConduits
+---
+--- Usage: result = C_Soulbinds.HasAnyPendingConduits()
+---
+-- function C_Soulbinds.HasAnyPendingConduits()
+-- end
+
+---======================================================================
+--- C_Soulbinds.HasPendingConduitsInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasPendingConduitsInSoulbind
+---
+--- Usage: result = C_Soulbinds.HasPendingConduitsInSoulbind(soulbindID)
+---
+-- function C_Soulbinds.HasPendingConduitsInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.IsConduitInstalled
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsConduitInstalled
+---
+--- Usage: result = C_Soulbinds.IsConduitInstalled(nodeID)
+---
+-- function C_Soulbinds.IsConduitInstalled()
+-- end
+
+---======================================================================
+--- C_Soulbinds.IsConduitInstalledInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+--- @param conduitID number : SoulbindConduit.ID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsConduitInstalledInSoulbind
+---
+--- Usage: result = C_Soulbinds.IsConduitInstalledInSoulbind(soulbindID, conduitID)
+---
+-- function C_Soulbinds.IsConduitInstalledInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.IsItemConduitByItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : Item ID, Link or name
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsItemConduitByItemInfo
+---
+--- Usage: result = C_Soulbinds.IsItemConduitByItemInfo(itemInfo)
+---
+-- function C_Soulbinds.IsItemConduitByItemInfo()
+-- end
+
+---======================================================================
+--- C_Soulbinds.IsNodePendingModify
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsNodePendingModify
+---
+--- Usage: result = C_Soulbinds.IsNodePendingModify(nodeID)
+---
+-- function C_Soulbinds.IsNodePendingModify()
+-- end
+
+---======================================================================
+--- C_Soulbinds.IsUnselectedConduitPendingInSoulbind
+---======================================================================
+--- Arguments:
+--- @param soulbindID number : Soulbind.ID
+---
+--- Returns:
+--- @return boolean result
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsUnselectedConduitPendingInSoulbind
+---
+--- Usage: result = C_Soulbinds.IsUnselectedConduitPendingInSoulbind(soulbindID)
+---
+-- function C_Soulbinds.IsUnselectedConduitPendingInSoulbind()
+-- end
+
+---======================================================================
+--- C_Soulbinds.ModifyNode
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+--- @param conduitID number : SoulbindConduit.ID
+--- @param type Enum.SoulbindConduitTransactionType
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.ModifyNode
+---
+--- Usage: C_Soulbinds.ModifyNode(nodeID, conduitID, type)
+---
+-- function C_Soulbinds.ModifyNode()
+-- end
+
+---======================================================================
+--- C_Soulbinds.SelectNode
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.SelectNode
+---
+--- Usage: C_Soulbinds.SelectNode(nodeID)
+---
+-- function C_Soulbinds.SelectNode()
+-- end
+
+---======================================================================
+--- C_Soulbinds.UnmodifyNode
+---======================================================================
+--- Arguments:
+--- @param nodeID number
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Soulbinds.UnmodifyNode
+---
+--- Usage: C_Soulbinds.UnmodifyNode(nodeID)
+---
+-- function C_Soulbinds.UnmodifyNode()
+-- end

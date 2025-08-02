@@ -1,0 +1,74 @@
+--[=[
+-- C_AssistedCombat API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_AssistedCombat
+--- C_AssistedCombat namespace contains 4 functions
+local C_AssistedCombat = {}
+
+--[=[
+-- C_AssistedCombat Functions:
+-- - C_AssistedCombat.GetActionSpell
+-- - C_AssistedCombat.GetNextCastSpell
+-- - C_AssistedCombat.GetRotationSpells
+-- - C_AssistedCombat.IsAvailable
+--]=]
+
+---======================================================================
+--- C_AssistedCombat.GetActionSpell
+---======================================================================
+--- Returns:
+--- @return number spellID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.GetActionSpell
+---
+--- Usage: spellID = C_AssistedCombat.GetActionSpell()
+---
+-- function C_AssistedCombat.GetActionSpell()
+-- end
+
+---======================================================================
+--- C_AssistedCombat.GetNextCastSpell
+---======================================================================
+--- Arguments:
+--- @param checkForVisibleButton boolean ? = false
+---
+--- Returns:
+--- @return number spellID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.GetNextCastSpell
+---
+--- Usage: spellID = C_AssistedCombat.GetNextCastSpell([checkForVisibleButton])
+---
+-- function C_AssistedCombat.GetNextCastSpell()
+-- end
+
+---======================================================================
+--- C_AssistedCombat.GetRotationSpells
+---======================================================================
+--- Returns:
+--- @return number spellIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.GetRotationSpells
+---
+--- Usage: spellIDs = C_AssistedCombat.GetRotationSpells()
+---
+-- function C_AssistedCombat.GetRotationSpells()
+-- end
+
+---======================================================================
+--- C_AssistedCombat.IsAvailable
+---======================================================================
+--- Returns:
+--- @return boolean isAvailable
+--- @return string failureReason
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.IsAvailable
+---
+--- Usage: isAvailable, failureReason = C_AssistedCombat.IsAvailable()
+---
+-- function C_AssistedCombat.IsAvailable()
+-- end

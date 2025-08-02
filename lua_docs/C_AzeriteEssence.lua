@@ -1,0 +1,347 @@
+--[=[
+-- C_AzeriteEssence API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 21
+--]=]
+
+--- @class C_AzeriteEssence
+--- C_AzeriteEssence namespace contains 21 functions
+local C_AzeriteEssence = {}
+
+--[=[
+-- C_AzeriteEssence Functions:
+-- - C_AzeriteEssence.ActivateEssence
+-- - C_AzeriteEssence.CanActivateEssence
+-- - C_AzeriteEssence.CanDeactivateEssence
+-- - C_AzeriteEssence.CanOpenUI
+-- - C_AzeriteEssence.ClearPendingActivationEssence
+-- - C_AzeriteEssence.CloseForge
+-- - C_AzeriteEssence.GetEssenceHyperlink
+-- - C_AzeriteEssence.GetEssenceInfo
+-- - C_AzeriteEssence.GetEssences
+-- - C_AzeriteEssence.GetMilestoneEssence
+-- - C_AzeriteEssence.GetMilestoneInfo
+-- - C_AzeriteEssence.GetMilestoneSpell
+-- - C_AzeriteEssence.GetMilestones
+-- - C_AzeriteEssence.GetNumUnlockedEssences
+-- - C_AzeriteEssence.GetNumUsableEssences
+-- - C_AzeriteEssence.GetPendingActivationEssence
+-- - C_AzeriteEssence.HasNeverActivatedAnyEssences
+-- - C_AzeriteEssence.HasPendingActivationEssence
+-- - C_AzeriteEssence.IsAtForge
+-- - C_AzeriteEssence.SetPendingActivationEssence
+-- - C_AzeriteEssence.UnlockMilestone
+--]=]
+
+---======================================================================
+--- C_AzeriteEssence.ActivateEssence
+---======================================================================
+--- Arguments:
+--- @param essenceID number
+--- @param milestoneID number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.ActivateEssence
+---
+--- Usage: C_AzeriteEssence.ActivateEssence(essenceID, milestoneID)
+---
+-- function C_AzeriteEssence.ActivateEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.CanActivateEssence
+---======================================================================
+--- Arguments:
+--- @param essenceID number
+--- @param milestoneID number
+---
+--- Returns:
+--- @return boolean canActivate
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.CanActivateEssence
+---
+--- Usage: canActivate = C_AzeriteEssence.CanActivateEssence(essenceID, milestoneID)
+---
+-- function C_AzeriteEssence.CanActivateEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.CanDeactivateEssence
+---======================================================================
+--- Arguments:
+--- @param milestoneID number
+---
+--- Returns:
+--- @return boolean canDeactivate
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.CanDeactivateEssence
+---
+--- Usage: canDeactivate = C_AzeriteEssence.CanDeactivateEssence(milestoneID)
+---
+-- function C_AzeriteEssence.CanDeactivateEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.CanOpenUI
+---======================================================================
+--- Returns:
+--- @return boolean canOpen
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.CanOpenUI
+---
+--- Usage: canOpen = C_AzeriteEssence.CanOpenUI()
+---
+-- function C_AzeriteEssence.CanOpenUI()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.ClearPendingActivationEssence
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.ClearPendingActivationEssence
+---
+--- Usage: C_AzeriteEssence.ClearPendingActivationEssence()
+---
+-- function C_AzeriteEssence.ClearPendingActivationEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.CloseForge
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.CloseForge
+---
+--- Usage: C_AzeriteEssence.CloseForge()
+---
+-- function C_AzeriteEssence.CloseForge()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetEssenceHyperlink
+---======================================================================
+--- Arguments:
+--- @param essenceID number
+--- @param rank number
+---
+--- Returns:
+--- @return string link : azessenceLink
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetEssenceHyperlink
+---
+--- Usage: link = C_AzeriteEssence.GetEssenceHyperlink(essenceID, rank)
+---
+-- function C_AzeriteEssence.GetEssenceHyperlink()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetEssenceInfo
+---======================================================================
+--- Arguments:
+--- @param essenceID number : AzeriteEssence.db2
+---
+--- Returns:
+--- @return  info structure - AzeriteEssenceInfo
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetEssenceInfo
+---
+--- Usage: info = C_AzeriteEssence.GetEssenceInfo(essenceID)
+---
+-- function C_AzeriteEssence.GetEssenceInfo()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetEssences
+---======================================================================
+--- Returns:
+--- @return  essences structure - AzeriteEssenceInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetEssences
+---
+--- Usage: essences = C_AzeriteEssence.GetEssences()
+---
+-- function C_AzeriteEssence.GetEssences()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetMilestoneEssence
+---======================================================================
+--- Arguments:
+--- @param milestoneID number
+---
+--- Returns:
+--- @return number essenceID
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetMilestoneEssence
+---
+--- Usage: essenceID = C_AzeriteEssence.GetMilestoneEssence(milestoneID)
+---
+-- function C_AzeriteEssence.GetMilestoneEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetMilestoneInfo
+---======================================================================
+--- Arguments:
+--- @param milestoneID number
+---
+--- Returns:
+--- @return  info structure - AzeriteMilestoneInfo
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetMilestoneInfo
+---
+--- Usage: info = C_AzeriteEssence.GetMilestoneInfo(milestoneID)
+---
+-- function C_AzeriteEssence.GetMilestoneInfo()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetMilestones
+---======================================================================
+--- Returns:
+--- @return  milestones structure - AzeriteMilestoneInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetMilestones
+---
+--- Usage: milestones = C_AzeriteEssence.GetMilestones()
+---
+-- function C_AzeriteEssence.GetMilestones()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetMilestoneSpell
+---======================================================================
+--- Arguments:
+--- @param milestoneID number
+---
+--- Returns:
+--- @return number spellID
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetMilestoneSpell
+---
+--- Usage: spellID = C_AzeriteEssence.GetMilestoneSpell(milestoneID)
+---
+-- function C_AzeriteEssence.GetMilestoneSpell()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetNumUnlockedEssences
+---======================================================================
+--- Returns:
+--- @return number numUnlockedEssences
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetNumUnlockedEssences
+---
+--- Usage: numUnlockedEssences = C_AzeriteEssence.GetNumUnlockedEssences()
+---
+-- function C_AzeriteEssence.GetNumUnlockedEssences()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetNumUsableEssences
+---======================================================================
+--- Returns:
+--- @return number numUsableEssences
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. (Build 34601 May 29 2020)
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetNumUsableEssences
+---
+--- Usage: numUsableEssences = C_AzeriteEssence.GetNumUsableEssences()
+---
+-- function C_AzeriteEssence.GetNumUsableEssences()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.GetPendingActivationEssence
+---======================================================================
+--- Returns:
+--- @return number essenceID
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.GetPendingActivationEssence
+---
+--- Usage: essenceID = C_AzeriteEssence.GetPendingActivationEssence()
+---
+-- function C_AzeriteEssence.GetPendingActivationEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.HasNeverActivatedAnyEssences
+---======================================================================
+--- Returns:
+--- @return boolean hasNeverActivatedAnyEssences
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.HasNeverActivatedAnyEssences
+---
+--- Usage: hasNeverActivatedAnyEssences = C_AzeriteEssence.HasNeverActivatedAnyEssences()
+---
+-- function C_AzeriteEssence.HasNeverActivatedAnyEssences()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.HasPendingActivationEssence
+---======================================================================
+--- Returns:
+--- @return boolean hasEssence
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.HasPendingActivationEssence
+---
+--- Usage: hasEssence = C_AzeriteEssence.HasPendingActivationEssence()
+---
+-- function C_AzeriteEssence.HasPendingActivationEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.IsAtForge
+---======================================================================
+--- Returns:
+--- @return boolean isAtForge
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.IsAtForge
+---
+--- Usage: isAtForge = C_AzeriteEssence.IsAtForge()
+---
+-- function C_AzeriteEssence.IsAtForge()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.SetPendingActivationEssence
+---======================================================================
+--- Arguments:
+--- @param essenceID number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.SetPendingActivationEssence
+---
+--- Usage: C_AzeriteEssence.SetPendingActivationEssence(essenceID)
+---
+-- function C_AzeriteEssence.SetPendingActivationEssence()
+-- end
+
+---======================================================================
+--- C_AzeriteEssence.UnlockMilestone
+---======================================================================
+--- Arguments:
+--- @param milestoneID number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEssence.UnlockMilestone
+---
+--- Usage: C_AzeriteEssence.UnlockMilestone(milestoneID)
+---
+-- function C_AzeriteEssence.UnlockMilestone()
+-- end

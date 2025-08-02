@@ -1,0 +1,1440 @@
+--[=[
+-- C_TooltipInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 81
+--]=]
+
+--- @class C_TooltipInfo
+--- C_TooltipInfo namespace contains 81 functions
+local C_TooltipInfo = {}
+
+--[=[
+-- C_TooltipInfo Functions:
+-- - C_TooltipInfo.GetAchievementByID
+-- - C_TooltipInfo.GetAction
+-- - C_TooltipInfo.GetArtifactItem
+-- - C_TooltipInfo.GetArtifactPowerByID
+-- - C_TooltipInfo.GetAzeriteEssence
+-- - C_TooltipInfo.GetAzeriteEssenceSlot
+-- - C_TooltipInfo.GetAzeritePower
+-- - C_TooltipInfo.GetBackpackToken
+-- - C_TooltipInfo.GetBagItem
+-- - C_TooltipInfo.GetBagItemChild
+-- - C_TooltipInfo.GetBuybackItem
+-- - C_TooltipInfo.GetCompanionPet
+-- - C_TooltipInfo.GetConduit
+-- - C_TooltipInfo.GetCurrencyByID
+-- - C_TooltipInfo.GetCurrencyToken
+-- - C_TooltipInfo.GetEnhancedConduit
+-- - C_TooltipInfo.GetEquipmentSet
+-- - C_TooltipInfo.GetExistingSocketGem
+-- - C_TooltipInfo.GetGuildBankItem
+-- - C_TooltipInfo.GetHeirloomByItemID
+-- - C_TooltipInfo.GetHyperlink
+-- - C_TooltipInfo.GetInboxItem
+-- - C_TooltipInfo.GetInstanceLockEncountersComplete
+-- - C_TooltipInfo.GetInventoryItem
+-- - C_TooltipInfo.GetInventoryItemByID
+-- - C_TooltipInfo.GetItemByGUID
+-- - C_TooltipInfo.GetItemByID
+-- - C_TooltipInfo.GetItemByItemModifiedAppearanceID
+-- - C_TooltipInfo.GetItemInteractionItem
+-- - C_TooltipInfo.GetItemKey
+-- - C_TooltipInfo.GetLFGDungeonReward
+-- - C_TooltipInfo.GetLFGDungeonShortageReward
+-- - C_TooltipInfo.GetLootCurrency
+-- - C_TooltipInfo.GetLootItem
+-- - C_TooltipInfo.GetLootRollItem
+-- - C_TooltipInfo.GetMerchantCostItem
+-- - C_TooltipInfo.GetMerchantItem
+-- - C_TooltipInfo.GetMinimapMouseover
+-- - C_TooltipInfo.GetMountBySpellID
+-- - C_TooltipInfo.GetOwnedItemByID
+-- - C_TooltipInfo.GetPetAction
+-- - C_TooltipInfo.GetPossession
+-- - C_TooltipInfo.GetPvpBrawl
+-- - C_TooltipInfo.GetPvpTalent
+-- - C_TooltipInfo.GetQuestCurrency
+-- - C_TooltipInfo.GetQuestItem
+-- - C_TooltipInfo.GetQuestLogCurrency
+-- - C_TooltipInfo.GetQuestLogItem
+-- - C_TooltipInfo.GetQuestLogSpecialItem
+-- - C_TooltipInfo.GetQuestPartyProgress
+-- - C_TooltipInfo.GetRecipeRankInfo
+-- - C_TooltipInfo.GetRecipeReagentItem
+-- - C_TooltipInfo.GetRecipeResultItem
+-- - C_TooltipInfo.GetRecipeResultItemForOrder
+-- - C_TooltipInfo.GetRuneforgeResultItem
+-- - C_TooltipInfo.GetSendMailItem
+-- - C_TooltipInfo.GetShapeshift
+-- - C_TooltipInfo.GetSlottedKeystone
+-- - C_TooltipInfo.GetSocketGem
+-- - C_TooltipInfo.GetSocketedItem
+-- - C_TooltipInfo.GetSocketedRelic
+-- - C_TooltipInfo.GetSpellBookItem
+-- - C_TooltipInfo.GetSpellByID
+-- - C_TooltipInfo.GetTalent
+-- - C_TooltipInfo.GetTotem
+-- - C_TooltipInfo.GetToyByItemID
+-- - C_TooltipInfo.GetTradePlayerItem
+-- - C_TooltipInfo.GetTradeTargetItem
+-- - C_TooltipInfo.GetTrainerService
+-- - C_TooltipInfo.GetTraitEntry
+-- - C_TooltipInfo.GetTransmogrifyItem
+-- - C_TooltipInfo.GetUnit
+-- - C_TooltipInfo.GetUnitAura
+-- - C_TooltipInfo.GetUnitBuff
+-- - C_TooltipInfo.GetUnitBuffByAuraInstanceID
+-- - C_TooltipInfo.GetUnitDebuff
+-- - C_TooltipInfo.GetUnitDebuffByAuraInstanceID
+-- - C_TooltipInfo.GetUpgradeItem
+-- - C_TooltipInfo.GetWeeklyReward
+-- - C_TooltipInfo.GetWorldCursor
+-- - C_TooltipInfo.GetWorldLootObject
+--]=]
+
+---======================================================================
+--- C_TooltipInfo.GetAchievementByID
+---======================================================================
+--- Arguments:
+--- @param achievementID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAchievementByID
+---
+--- Usage: data = C_TooltipInfo.GetAchievementByID(achievementID)
+---
+-- function C_TooltipInfo.GetAchievementByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetAction
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAction
+---
+--- Usage: data = C_TooltipInfo.GetAction(actionID)
+---
+-- function C_TooltipInfo.GetAction()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetArtifactItem
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetArtifactItem
+---
+--- Usage: data = C_TooltipInfo.GetArtifactItem()
+---
+-- function C_TooltipInfo.GetArtifactItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetArtifactPowerByID
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetArtifactPowerByID
+---
+--- Usage: data = C_TooltipInfo.GetArtifactPowerByID(powerID)
+---
+-- function C_TooltipInfo.GetArtifactPowerByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetAzeriteEssence
+---======================================================================
+--- Arguments:
+--- @param essenceID number
+--- @param rank number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAzeriteEssence
+---
+--- Usage: data = C_TooltipInfo.GetAzeriteEssence(essenceID [, rank])
+---
+-- function C_TooltipInfo.GetAzeriteEssence()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetAzeriteEssenceSlot
+---======================================================================
+--- Arguments:
+--- @param slot Enum.AzeriteEssenceSlot
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAzeriteEssenceSlot
+---
+--- Usage: data = C_TooltipInfo.GetAzeriteEssenceSlot(slot)
+---
+-- function C_TooltipInfo.GetAzeriteEssenceSlot()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetAzeritePower
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param itemLevel number
+--- @param powerID number
+--- @param owningItemLink string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAzeritePower
+---
+--- Usage: data = C_TooltipInfo.GetAzeritePower(itemID, itemLevel, powerID [, owningItemLink])
+---
+-- function C_TooltipInfo.GetAzeritePower()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetBackpackToken
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBackpackToken
+---
+--- Usage: data = C_TooltipInfo.GetBackpackToken(index)
+---
+-- function C_TooltipInfo.GetBackpackToken()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetBagItem
+---======================================================================
+--- Arguments:
+--- @param bagIndex number
+--- @param slotIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBagItem
+---
+--- Usage: data = C_TooltipInfo.GetBagItem(bagIndex, slotIndex)
+---
+-- function C_TooltipInfo.GetBagItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetBagItemChild
+---======================================================================
+--- Arguments:
+--- @param bagIndex number
+--- @param slotIndex number
+--- @param equipSlotIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBagItemChild
+---
+--- Usage: data = C_TooltipInfo.GetBagItemChild(bagIndex, slotIndex, equipSlotIndex)
+---
+-- function C_TooltipInfo.GetBagItemChild()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetBuybackItem
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBuybackItem
+---
+--- Usage: data = C_TooltipInfo.GetBuybackItem(index)
+---
+-- function C_TooltipInfo.GetBuybackItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetCompanionPet
+---======================================================================
+--- Arguments:
+--- @param petGUID string
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetCompanionPet
+---
+--- Usage: data = C_TooltipInfo.GetCompanionPet(petGUID)
+---
+-- function C_TooltipInfo.GetCompanionPet()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetConduit
+---======================================================================
+--- Arguments:
+--- @param conduitID number
+--- @param conduitRank number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetConduit
+---
+--- Usage: data = C_TooltipInfo.GetConduit(conduitID, conduitRank)
+---
+-- function C_TooltipInfo.GetConduit()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetCurrencyByID
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+--- @param amount number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetCurrencyByID
+---
+--- Usage: data = C_TooltipInfo.GetCurrencyByID(currencyID [, amount])
+---
+-- function C_TooltipInfo.GetCurrencyByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetCurrencyToken
+---======================================================================
+--- Arguments:
+--- @param tokenIndex number - Index as shown in the currency tab.
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetCurrencyToken
+---
+--- Usage: data = C_TooltipInfo.GetCurrencyToken(tokenIndex)
+---
+-- function C_TooltipInfo.GetCurrencyToken()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetEnhancedConduit
+---======================================================================
+--- Arguments:
+--- @param conduitID number
+--- @param rank number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetEnhancedConduit
+---
+--- Usage: data = C_TooltipInfo.GetEnhancedConduit(conduitID, rank)
+---
+-- function C_TooltipInfo.GetEnhancedConduit()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetEquipmentSet
+---======================================================================
+--- Arguments:
+--- @param setID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetEquipmentSet
+---
+--- Usage: data = C_TooltipInfo.GetEquipmentSet(setID)
+---
+-- function C_TooltipInfo.GetEquipmentSet()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetExistingSocketGem
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param toDestroy boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetExistingSocketGem
+---
+--- Usage: data = C_TooltipInfo.GetExistingSocketGem(index [, toDestroy])
+---
+-- function C_TooltipInfo.GetExistingSocketGem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetGuildBankItem
+---======================================================================
+--- Arguments:
+--- @param tab number
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetGuildBankItem
+---
+--- Usage: data = C_TooltipInfo.GetGuildBankItem(tab, slot)
+---
+-- function C_TooltipInfo.GetGuildBankItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetHeirloomByItemID
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetHeirloomByItemID
+---
+--- Usage: data = C_TooltipInfo.GetHeirloomByItemID(itemID)
+---
+-- function C_TooltipInfo.GetHeirloomByItemID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetHyperlink
+---======================================================================
+--- Returns tooltip data for a given hyperlink.
+---
+--- Arguments:
+--- @param hyperlink string - Hyperlink : The hyperlink to query.
+--- @param optionalArg1 number ? - First optional argument for the given link. Refer to the Optional Arguments table below for details.
+--- @param optionalArg2 number ? - Second optional argument for the given link. Refer to the Optional Arguments table below for details.
+--- @param hideVendorPrice boolean ? - If true, omits vendor price information from the line text data.
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @since Patch 10.0.2 (2022-11-15): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetHyperlink
+---
+--- Usage: data = C_TooltipInfo.GetHyperlink(hyperlink [, optionalArg1 [, optionalArg2 [, hideVendorPrice]]])
+---
+-- function C_TooltipInfo.GetHyperlink()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetInboxItem
+---======================================================================
+--- Arguments:
+--- @param messageIndex number
+--- @param attachmentIndex number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetInboxItem
+---
+--- Usage: data = C_TooltipInfo.GetInboxItem(messageIndex [, attachmentIndex])
+---
+-- function C_TooltipInfo.GetInboxItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetInstanceLockEncountersComplete
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetInstanceLockEncountersComplete
+---
+--- Usage: data = C_TooltipInfo.GetInstanceLockEncountersComplete(index)
+---
+-- function C_TooltipInfo.GetInstanceLockEncountersComplete()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetInventoryItem
+---======================================================================
+--- Arguments:
+--- @param unit string
+--- @param slot number
+--- @param hideUselessStats boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetInventoryItem
+---
+--- Usage: data = C_TooltipInfo.GetInventoryItem(unit, slot [, hideUselessStats])
+---
+-- function C_TooltipInfo.GetInventoryItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetInventoryItemByID
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetInventoryItemByID
+---
+--- Usage: data = C_TooltipInfo.GetInventoryItemByID(itemID)
+---
+-- function C_TooltipInfo.GetInventoryItemByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetItemByGUID
+---======================================================================
+--- Arguments:
+--- @param guid string
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByGUID
+---
+--- Usage: data = C_TooltipInfo.GetItemByGUID(guid)
+---
+-- function C_TooltipInfo.GetItemByGUID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetItemByID
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param quality number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByID
+---
+--- Usage: data = C_TooltipInfo.GetItemByID(itemID [, quality])
+---
+-- function C_TooltipInfo.GetItemByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetItemByItemModifiedAppearanceID
+---======================================================================
+--- Arguments:
+--- @param itemModifiedAppearanceID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByItemModifiedAppearanceID
+---
+--- Usage: data = C_TooltipInfo.GetItemByItemModifiedAppearanceID(itemModifiedAppearanceID)
+---
+-- function C_TooltipInfo.GetItemByItemModifiedAppearanceID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetItemInteractionItem
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemInteractionItem
+---
+--- Usage: data = C_TooltipInfo.GetItemInteractionItem()
+---
+-- function C_TooltipInfo.GetItemInteractionItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetItemKey
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param itemLevel number
+--- @param itemSuffix number
+--- @param requiredLevel number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemKey
+---
+--- Usage: data = C_TooltipInfo.GetItemKey(itemID, itemLevel, itemSuffix [, requiredLevel])
+---
+-- function C_TooltipInfo.GetItemKey()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetLFGDungeonReward
+---======================================================================
+--- Arguments:
+--- @param dungeonID number
+--- @param lootIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetLFGDungeonReward
+---
+--- Usage: data = C_TooltipInfo.GetLFGDungeonReward(dungeonID, lootIndex)
+---
+-- function C_TooltipInfo.GetLFGDungeonReward()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetLFGDungeonShortageReward
+---======================================================================
+--- Arguments:
+--- @param dungeonID number
+--- @param shortageSeverity number
+--- @param lootIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetLFGDungeonShortageReward
+---
+--- Usage: data = C_TooltipInfo.GetLFGDungeonShortageReward(dungeonID, shortageSeverity, lootIndex)
+---
+-- function C_TooltipInfo.GetLFGDungeonShortageReward()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetLootCurrency
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetLootCurrency
+---
+--- Usage: data = C_TooltipInfo.GetLootCurrency(slot)
+---
+-- function C_TooltipInfo.GetLootCurrency()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetLootItem
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetLootItem
+---
+--- Usage: data = C_TooltipInfo.GetLootItem(slot)
+---
+-- function C_TooltipInfo.GetLootItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetLootRollItem
+---======================================================================
+--- Arguments:
+--- @param id number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetLootRollItem
+---
+--- Usage: data = C_TooltipInfo.GetLootRollItem(id)
+---
+-- function C_TooltipInfo.GetLootRollItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetMerchantCostItem
+---======================================================================
+--- Arguments:
+--- @param slot number
+--- @param costIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetMerchantCostItem
+---
+--- Usage: data = C_TooltipInfo.GetMerchantCostItem(slot, costIndex)
+---
+-- function C_TooltipInfo.GetMerchantCostItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetMerchantItem
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetMerchantItem
+---
+--- Usage: data = C_TooltipInfo.GetMerchantItem(slot)
+---
+-- function C_TooltipInfo.GetMerchantItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetMinimapMouseover
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetMinimapMouseover
+---
+--- Usage: data = C_TooltipInfo.GetMinimapMouseover()
+---
+-- function C_TooltipInfo.GetMinimapMouseover()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetMountBySpellID
+---======================================================================
+--- Arguments:
+--- @param spellID number
+--- @param checkIndoors boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetMountBySpellID
+---
+--- Usage: data = C_TooltipInfo.GetMountBySpellID(spellID [, checkIndoors])
+---
+-- function C_TooltipInfo.GetMountBySpellID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetOwnedItemByID
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetOwnedItemByID
+---
+--- Usage: data = C_TooltipInfo.GetOwnedItemByID(itemID)
+---
+-- function C_TooltipInfo.GetOwnedItemByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetPetAction
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetPetAction
+---
+--- Usage: data = C_TooltipInfo.GetPetAction(slot)
+---
+-- function C_TooltipInfo.GetPetAction()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetPossession
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetPossession
+---
+--- Usage: data = C_TooltipInfo.GetPossession(slot)
+---
+-- function C_TooltipInfo.GetPossession()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetPvpBrawl
+---======================================================================
+--- Arguments:
+--- @param isSpecial boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetPvpBrawl
+---
+--- Usage: data = C_TooltipInfo.GetPvpBrawl([isSpecial])
+---
+-- function C_TooltipInfo.GetPvpBrawl()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetPvpTalent
+---======================================================================
+--- Arguments:
+--- @param talentID number
+--- @param isInspect boolean ?
+--- @param groupIndex number ?
+--- @param talentIndex number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetPvpTalent
+---
+--- Usage: data = C_TooltipInfo.GetPvpTalent(talentID [, isInspect [, groupIndex [, talentIndex]]])
+---
+-- function C_TooltipInfo.GetPvpTalent()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestCurrency
+---======================================================================
+--- Arguments:
+--- @param type string
+--- @param currencyIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestCurrency
+---
+--- Usage: data = C_TooltipInfo.GetQuestCurrency(type, currencyIndex)
+---
+-- function C_TooltipInfo.GetQuestCurrency()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestItem
+---======================================================================
+--- Arguments:
+--- @param type string
+--- @param itemIndex number
+--- @param allowCollectionText boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestItem
+---
+--- Usage: data = C_TooltipInfo.GetQuestItem(type, itemIndex [, allowCollectionText])
+---
+-- function C_TooltipInfo.GetQuestItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestLogCurrency
+---======================================================================
+--- Arguments:
+--- @param type string
+--- @param currencyIndex number
+--- @param questID number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestLogCurrency
+---
+--- Usage: data = C_TooltipInfo.GetQuestLogCurrency(type, currencyIndex [, questID])
+---
+-- function C_TooltipInfo.GetQuestLogCurrency()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestLogItem
+---======================================================================
+--- Arguments:
+--- @param type string
+--- @param itemIndex number
+--- @param questID number ?
+--- @param allowCollectionText boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestLogItem
+---
+--- Usage: data = C_TooltipInfo.GetQuestLogItem(type, itemIndex [, questID, allowCollectionText])
+---
+-- function C_TooltipInfo.GetQuestLogItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestLogSpecialItem
+---======================================================================
+--- Arguments:
+--- @param questIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestLogSpecialItem
+---
+--- Usage: data = C_TooltipInfo.GetQuestLogSpecialItem(questIndex)
+---
+-- function C_TooltipInfo.GetQuestLogSpecialItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetQuestPartyProgress
+---======================================================================
+--- Arguments:
+--- @param questID number
+--- @param omitTitle boolean ?
+--- @param ignoreActivePlayer boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetQuestPartyProgress
+---
+--- Usage: data = C_TooltipInfo.GetQuestPartyProgress(questID [, omitTitle, ignoreActivePlayer])
+---
+-- function C_TooltipInfo.GetQuestPartyProgress()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetRecipeRankInfo
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param rank number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetRecipeRankInfo
+---
+--- Usage: data = C_TooltipInfo.GetRecipeRankInfo(recipeID, rank)
+---
+-- function C_TooltipInfo.GetRecipeRankInfo()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetRecipeReagentItem
+---======================================================================
+--- Arguments:
+--- @param recipeSpellID number
+--- @param dataSlotIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetRecipeReagentItem
+---
+--- Usage: data = C_TooltipInfo.GetRecipeReagentItem(recipeSpellID, dataSlotIndex)
+---
+-- function C_TooltipInfo.GetRecipeReagentItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetRecipeResultItem
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetRecipeResultItem
+---
+--- Usage: data = C_TooltipInfo.GetRecipeResultItem(recipeID [, craftingReagents [, recraftItemGUID [, recipeLevel [, overrideQualityID]]]])
+---
+-- function C_TooltipInfo.GetRecipeResultItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetRecipeResultItemForOrder
+---======================================================================
+--- Arguments:
+--- @param recipeID number
+--- @param craftingReagents CraftingReagentInfo []?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetRecipeResultItemForOrder
+---
+--- Usage: data = C_TooltipInfo.GetRecipeResultItemForOrder(recipeID [, craftingReagents [, orderID [, recipeLevel [, overrideQualityID]]]])
+---
+-- function C_TooltipInfo.GetRecipeResultItemForOrder()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetRuneforgeResultItem
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+--- @param itemLevel number
+--- @param powerID number ?
+--- @param modifiers number []?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetRuneforgeResultItem
+---
+--- Usage: data = C_TooltipInfo.GetRuneforgeResultItem(itemGUID, itemLevel [, powerID, modifiers])
+---
+-- function C_TooltipInfo.GetRuneforgeResultItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSendMailItem
+---======================================================================
+--- Arguments:
+--- @param attachmentIndex number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSendMailItem
+---
+--- Usage: data = C_TooltipInfo.GetSendMailItem([attachmentIndex])
+---
+-- function C_TooltipInfo.GetSendMailItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetShapeshift
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetShapeshift
+---
+--- Usage: data = C_TooltipInfo.GetShapeshift(slot)
+---
+-- function C_TooltipInfo.GetShapeshift()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSlottedKeystone
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSlottedKeystone
+---
+--- Usage: data = C_TooltipInfo.GetSlottedKeystone()
+---
+-- function C_TooltipInfo.GetSlottedKeystone()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSocketedItem
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSocketedItem
+---
+--- Usage: data = C_TooltipInfo.GetSocketedItem()
+---
+-- function C_TooltipInfo.GetSocketedItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSocketedRelic
+---======================================================================
+--- Arguments:
+--- @param slotIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSocketedRelic
+---
+--- Usage: data = C_TooltipInfo.GetSocketedRelic(slotIndex)
+---
+-- function C_TooltipInfo.GetSocketedRelic()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSocketGem
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSocketGem
+---
+--- Usage: data = C_TooltipInfo.GetSocketGem(index)
+---
+-- function C_TooltipInfo.GetSocketGem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSpellBookItem
+---======================================================================
+--- Arguments:
+--- @param spellBookItemSlotIndex number
+--- @param spellBookItemSpellBank Enum.SpellBookSpellBank
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSpellBookItem
+---
+--- Usage: data = C_TooltipInfo.GetSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank)
+---
+-- function C_TooltipInfo.GetSpellBookItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetSpellByID
+---======================================================================
+--- Arguments:
+--- @param spellID number
+--- @param isPet boolean ?
+--- @param showSubtext boolean ?
+--- @param dontOverride boolean ?
+--- @param difficultyID number ?
+--- @param isLink boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSpellByID
+---
+--- Usage: data = C_TooltipInfo.GetSpellByID(spellID [, isPet [, showSubtext [, dontOverride [, difficultyID [, isLink]]]]])
+---
+-- function C_TooltipInfo.GetSpellByID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTalent
+---======================================================================
+--- Arguments:
+--- @param talentID number
+--- @param isInspect boolean ?
+--- @param groupIndex number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTalent
+---
+--- Usage: data = C_TooltipInfo.GetTalent(talentID [, isInspect, groupIndex])
+---
+-- function C_TooltipInfo.GetTalent()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTotem
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTotem
+---
+--- Usage: data = C_TooltipInfo.GetTotem(slot)
+---
+-- function C_TooltipInfo.GetTotem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetToyByItemID
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetToyByItemID
+---
+--- Usage: data = C_TooltipInfo.GetToyByItemID(itemID)
+---
+-- function C_TooltipInfo.GetToyByItemID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTradePlayerItem
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTradePlayerItem
+---
+--- Usage: data = C_TooltipInfo.GetTradePlayerItem(slot)
+---
+-- function C_TooltipInfo.GetTradePlayerItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTradeTargetItem
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTradeTargetItem
+---
+--- Usage: data = C_TooltipInfo.GetTradeTargetItem(slot)
+---
+-- function C_TooltipInfo.GetTradeTargetItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTrainerService
+---======================================================================
+--- Arguments:
+--- @param serviceIndex number
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTrainerService
+---
+--- Usage: data = C_TooltipInfo.GetTrainerService(serviceIndex)
+---
+-- function C_TooltipInfo.GetTrainerService()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTraitEntry
+---======================================================================
+--- Arguments:
+--- @param entryID number
+--- @param rank number ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTraitEntry
+---
+--- Usage: data = C_TooltipInfo.GetTraitEntry(entryID [, rank])
+---
+-- function C_TooltipInfo.GetTraitEntry()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetTransmogrifyItem
+---======================================================================
+--- Arguments:
+--- @param transmogLocation TransmogLocationMixin 🔗
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTransmogrifyItem
+---
+--- Usage: data = C_TooltipInfo.GetTransmogrifyItem(transmogLocation)
+---
+-- function C_TooltipInfo.GetTransmogrifyItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnit
+---======================================================================
+--- Arguments:
+--- @param unit string
+--- @param hideStatus boolean ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnit
+---
+--- Usage: data = C_TooltipInfo.GetUnit(unit [, hideStatus])
+---
+-- function C_TooltipInfo.GetUnit()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnitAura
+---======================================================================
+--- Arguments:
+--- @param unitToken string
+--- @param index number
+--- @param filter string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitAura
+---
+--- Usage: data = C_TooltipInfo.GetUnitAura(unitToken, index [, filter])
+---
+-- function C_TooltipInfo.GetUnitAura()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnitBuff
+---======================================================================
+--- Arguments:
+--- @param unitToken string
+--- @param index number
+--- @param filter string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitBuff
+---
+--- Usage: data = C_TooltipInfo.GetUnitBuff(unitToken, index [, filter])
+---
+-- function C_TooltipInfo.GetUnitBuff()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnitBuffByAuraInstanceID
+---======================================================================
+--- Arguments:
+--- @param unitTokenString string
+--- @param auraInstanceID number
+--- @param filter string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitBuffByAuraInstanceID
+---
+--- Usage: data = C_TooltipInfo.GetUnitBuffByAuraInstanceID(unitTokenString, auraInstanceID [, filter])
+---
+-- function C_TooltipInfo.GetUnitBuffByAuraInstanceID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnitDebuff
+---======================================================================
+--- Arguments:
+--- @param unitToken string
+--- @param index number
+--- @param filter string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitDebuff
+---
+--- Usage: data = C_TooltipInfo.GetUnitDebuff(unitToken, index [, filter])
+---
+-- function C_TooltipInfo.GetUnitDebuff()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUnitDebuffByAuraInstanceID
+---======================================================================
+--- Arguments:
+--- @param unitTokenString string
+--- @param auraInstanceID number
+--- @param filter string ?
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitDebuffByAuraInstanceID
+---
+--- Usage: data = C_TooltipInfo.GetUnitDebuffByAuraInstanceID(unitTokenString, auraInstanceID [, filter])
+---
+-- function C_TooltipInfo.GetUnitDebuffByAuraInstanceID()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetUpgradeItem
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUpgradeItem
+---
+--- Usage: data = C_TooltipInfo.GetUpgradeItem()
+---
+-- function C_TooltipInfo.GetUpgradeItem()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetWeeklyReward
+---======================================================================
+--- Arguments:
+--- @param itemDBID string
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetWeeklyReward
+---
+--- Usage: data = C_TooltipInfo.GetWeeklyReward(itemDBID)
+---
+-- function C_TooltipInfo.GetWeeklyReward()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetWorldCursor
+---======================================================================
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetWorldCursor
+---
+--- Usage: data = C_TooltipInfo.GetWorldCursor()
+---
+-- function C_TooltipInfo.GetWorldCursor()
+-- end
+
+---======================================================================
+--- C_TooltipInfo.GetWorldLootObject
+---======================================================================
+--- Arguments:
+--- @param unitTokenString string
+---
+--- Returns:
+--- @return TooltipData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetWorldLootObject
+---
+--- Usage: data = C_TooltipInfo.GetWorldLootObject(unitTokenString)
+---
+-- function C_TooltipInfo.GetWorldLootObject()
+-- end

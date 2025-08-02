@@ -1,0 +1,94 @@
+--[=[
+-- C_LootHistory API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_LootHistory
+--- C_LootHistory namespace contains 5 functions
+local C_LootHistory = {}
+
+--[=[
+-- C_LootHistory Functions:
+-- - C_LootHistory.GetAllEncounterInfos
+-- - C_LootHistory.GetInfoForEncounter
+-- - C_LootHistory.GetLootHistoryTime
+-- - C_LootHistory.GetSortedDropsForEncounter
+-- - C_LootHistory.GetSortedInfoForDrop
+--]=]
+
+---======================================================================
+--- C_LootHistory.GetAllEncounterInfos
+---======================================================================
+--- Returns:
+--- @return EncounterLootInfo infos []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootHistory.GetAllEncounterInfos
+---
+--- Usage: infos = C_LootHistory.GetAllEncounterInfos()
+---
+-- function C_LootHistory.GetAllEncounterInfos()
+-- end
+
+---======================================================================
+--- C_LootHistory.GetInfoForEncounter
+---======================================================================
+--- Arguments:
+--- @param encounterID number
+---
+--- Returns:
+--- @return EncounterLootInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootHistory.GetInfoForEncounter
+---
+--- Usage: info = C_LootHistory.GetInfoForEncounter(encounterID)
+---
+-- function C_LootHistory.GetInfoForEncounter()
+-- end
+
+---======================================================================
+--- C_LootHistory.GetLootHistoryTime
+---======================================================================
+--- Returns:
+--- @return number time
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootHistory.GetLootHistoryTime
+---
+--- Usage: time = C_LootHistory.GetLootHistoryTime()
+---
+-- function C_LootHistory.GetLootHistoryTime()
+-- end
+
+---======================================================================
+--- C_LootHistory.GetSortedDropsForEncounter
+---======================================================================
+--- Arguments:
+--- @param encounterID number
+---
+--- Returns:
+--- @return EncounterLootDropInfo drops []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootHistory.GetSortedDropsForEncounter
+---
+--- Usage: drops = C_LootHistory.GetSortedDropsForEncounter(encounterID)
+---
+-- function C_LootHistory.GetSortedDropsForEncounter()
+-- end
+
+---======================================================================
+--- C_LootHistory.GetSortedInfoForDrop
+---======================================================================
+--- Arguments:
+--- @param encounterID number
+--- @param lootListID number
+---
+--- Returns:
+--- @return EncounterLootDropInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootHistory.GetSortedInfoForDrop
+---
+--- Usage: info = C_LootHistory.GetSortedInfoForDrop(encounterID, lootListID)
+---
+-- function C_LootHistory.GetSortedInfoForDrop()
+-- end

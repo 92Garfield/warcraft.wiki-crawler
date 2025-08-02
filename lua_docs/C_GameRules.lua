@@ -1,0 +1,250 @@
+--[=[
+-- C_GameRules API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 15
+--]=]
+
+--- @class C_GameRules
+--- C_GameRules namespace contains 15 functions
+local C_GameRules = {}
+
+--[=[
+-- C_GameRules Functions:
+-- - C_GameRules.AutoConnectToGameModeRealm
+-- - C_GameRules.DoesGameModeHavePromo
+-- - C_GameRules.GetActiveGameMode
+-- - C_GameRules.GetCurrentEventRealmQueues
+-- - C_GameRules.GetCurrentGameModeDisplayInfo
+-- - C_GameRules.GetCurrentGameModeRecordID
+-- - C_GameRules.GetDisplayedGameModeRecordIDAtIndex
+-- - C_GameRules.GetGameModeDisplayInfoByRecordID
+-- - C_GameRules.GetGameModeGlueScreenName
+-- - C_GameRules.GetGameModePromoGlobalString
+-- - C_GameRules.GetGameRuleAsFloat
+-- - C_GameRules.GetGameRuleAsFrameStrata
+-- - C_GameRules.GetNumDisplayedGameModes
+-- - C_GameRules.IsCharacterlessLoginActive
+-- - C_GameRules.IsGameRuleActive
+--]=]
+
+---======================================================================
+--- C_GameRules.AutoConnectToGameModeRealm
+---======================================================================
+--- Arguments:
+--- @param gameModeRecordID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.AutoConnectToGameModeRealm
+---
+--- Usage: C_GameRules.AutoConnectToGameModeRealm(gameModeRecordID)
+---
+-- function C_GameRules.AutoConnectToGameModeRealm()
+-- end
+
+---======================================================================
+--- C_GameRules.DoesGameModeHavePromo
+---======================================================================
+--- Arguments:
+--- @param gameModeRecordID number
+---
+--- Returns:
+--- @return boolean hasPromo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.DoesGameModeHavePromo
+---
+--- Usage: hasPromo = C_GameRules.DoesGameModeHavePromo(gameModeRecordID)
+---
+-- function C_GameRules.DoesGameModeHavePromo()
+-- end
+
+---======================================================================
+--- C_GameRules.GetActiveGameMode
+---======================================================================
+--- Returns:
+--- @return Enum.GameMode gameMode
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetActiveGameMode
+---
+--- Usage: gameMode = C_GameRules.GetActiveGameMode()
+---
+-- function C_GameRules.GetActiveGameMode()
+-- end
+
+---======================================================================
+--- C_GameRules.GetCurrentEventRealmQueues
+---======================================================================
+--- Returns:
+--- @return Enum.EventRealmQueues eventRealmQueues
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetCurrentEventRealmQueues
+---
+--- Usage: eventRealmQueues = C_GameRules.GetCurrentEventRealmQueues()
+---
+-- function C_GameRules.GetCurrentEventRealmQueues()
+-- end
+
+---======================================================================
+--- C_GameRules.GetCurrentGameModeDisplayInfo
+---======================================================================
+--- Returns:
+--- @return GameModeDisplayInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetCurrentGameModeDisplayInfo
+---
+--- Usage: info = C_GameRules.GetCurrentGameModeDisplayInfo()
+---
+-- function C_GameRules.GetCurrentGameModeDisplayInfo()
+-- end
+
+---======================================================================
+--- C_GameRules.GetCurrentGameModeRecordID
+---======================================================================
+--- Returns:
+--- @return number gameModeRecordID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetCurrentGameModeRecordID
+---
+--- Usage: gameModeRecordID = C_GameRules.GetCurrentGameModeRecordID()
+---
+-- function C_GameRules.GetCurrentGameModeRecordID()
+-- end
+
+---======================================================================
+--- C_GameRules.GetDisplayedGameModeRecordIDAtIndex
+---======================================================================
+--- Arguments:
+--- @param displayIndex number
+---
+--- Returns:
+--- @return number gameModeRecordID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetDisplayedGameModeRecordIDAtIndex
+---
+--- Usage: gameModeRecordID = C_GameRules.GetDisplayedGameModeRecordIDAtIndex(displayIndex)
+---
+-- function C_GameRules.GetDisplayedGameModeRecordIDAtIndex()
+-- end
+
+---======================================================================
+--- C_GameRules.GetGameModeDisplayInfoByRecordID
+---======================================================================
+--- Arguments:
+--- @param gameModeRecordID number
+---
+--- Returns:
+--- @return GameModeDisplayInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameModeDisplayInfoByRecordID
+---
+--- Usage: info = C_GameRules.GetGameModeDisplayInfoByRecordID(gameModeRecordID)
+---
+-- function C_GameRules.GetGameModeDisplayInfoByRecordID()
+-- end
+
+---======================================================================
+--- C_GameRules.GetGameModeGlueScreenName
+---======================================================================
+--- Returns:
+--- @return string screenName
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameModeGlueScreenName
+---
+--- Usage: screenName = C_GameRules.GetGameModeGlueScreenName()
+---
+-- function C_GameRules.GetGameModeGlueScreenName()
+-- end
+
+---======================================================================
+--- C_GameRules.GetGameModePromoGlobalString
+---======================================================================
+--- Arguments:
+--- @param gameModeRecordID number
+---
+--- Returns:
+--- @return string promoGlobalString
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameModePromoGlobalString
+---
+--- Usage: promoGlobalString = C_GameRules.GetGameModePromoGlobalString(gameModeRecordID)
+---
+-- function C_GameRules.GetGameModePromoGlobalString()
+-- end
+
+---======================================================================
+--- C_GameRules.GetGameRuleAsFloat
+---======================================================================
+--- Returns the numeric value specified in the Game Rule, multiplied by 0.1 for every decimal place requested
+---
+--- Arguments:
+--- @param gameRule Enum.GameRule
+--- @param decimalPlaces number ? = 0
+---
+--- Returns:
+--- @return number value
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameRuleAsFloat
+---
+--- Usage: value = C_GameRules.GetGameRuleAsFloat(gameRule [, decimalPlaces])
+---
+-- function C_GameRules.GetGameRuleAsFloat()
+-- end
+
+---======================================================================
+--- C_GameRules.GetGameRuleAsFrameStrata
+---======================================================================
+--- Returns the value specified in the Game Rule converted to a frame strata
+---
+--- Arguments:
+--- @param gameRule Enum.GameRule
+---
+--- Returns:
+--- @return string frameStrata
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameRuleAsFrameStrata
+---
+--- Usage: frameStrata = C_GameRules.GetGameRuleAsFrameStrata(gameRule)
+---
+-- function C_GameRules.GetGameRuleAsFrameStrata()
+-- end
+
+---======================================================================
+--- C_GameRules.GetNumDisplayedGameModes
+---======================================================================
+--- Returns:
+--- @return number numDisplayedGameModes
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.GetNumDisplayedGameModes
+---
+--- Usage: numDisplayedGameModes = C_GameRules.GetNumDisplayedGameModes()
+---
+-- function C_GameRules.GetNumDisplayedGameModes()
+-- end
+
+---======================================================================
+--- C_GameRules.IsCharacterlessLoginActive
+---======================================================================
+--- Returns:
+--- @return boolean active
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.IsCharacterlessLoginActive
+---
+--- Usage: active = C_GameRules.IsCharacterlessLoginActive()
+---
+-- function C_GameRules.IsCharacterlessLoginActive()
+-- end
+
+---======================================================================
+--- C_GameRules.IsGameRuleActive
+---======================================================================
+--- Arguments:
+--- @param gameRule Enum.GameRule
+---
+--- Returns:
+--- @return boolean isActive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_GameRules.IsGameRuleActive
+---
+--- Usage: isActive = C_GameRules.IsGameRuleActive(gameRule)
+---
+-- function C_GameRules.IsGameRuleActive()
+-- end

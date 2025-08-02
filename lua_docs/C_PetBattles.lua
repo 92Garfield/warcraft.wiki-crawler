@@ -1,0 +1,1389 @@
+--[=[
+-- C_PetBattles API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 56
+--]=]
+
+--- @class C_PetBattles
+--- C_PetBattles namespace contains 56 functions
+local C_PetBattles = {}
+
+--[=[
+-- C_PetBattles Functions:
+-- - C_PetBattles.AcceptPVPDuel
+-- - C_PetBattles.AcceptQueuedPVPMatch
+-- - C_PetBattles.CanAcceptQueuedPVPMatch
+-- - C_PetBattles.CanActivePetSwapOut
+-- - C_PetBattles.CanPetSwapIn
+-- - C_PetBattles.CancelPVPDuel
+-- - C_PetBattles.ChangePet
+-- - C_PetBattles.DeclineQueuedPVPMatch
+-- - C_PetBattles.ForfeitGame
+-- - C_PetBattles.GetAbilityEffectInfo
+-- - C_PetBattles.GetAbilityInfo
+-- - C_PetBattles.GetAbilityInfoByID
+-- - C_PetBattles.GetAbilityProcTurnIndex
+-- - C_PetBattles.GetAbilityState
+-- - C_PetBattles.GetAbilityStateModification
+-- - C_PetBattles.GetActivePet
+-- - C_PetBattles.GetAllEffectNames
+-- - C_PetBattles.GetAllStates
+-- - C_PetBattles.GetAttackModifier
+-- - C_PetBattles.GetAuraInfo
+-- - C_PetBattles.GetBattleState
+-- - C_PetBattles.GetBreedQuality
+-- - C_PetBattles.GetDisplayID
+-- - C_PetBattles.GetForfeitPenalty
+-- - C_PetBattles.GetHealth
+-- - C_PetBattles.GetIcon
+-- - C_PetBattles.GetLevel
+-- - C_PetBattles.GetMaxHealth
+-- - C_PetBattles.GetName
+-- - C_PetBattles.GetNumAuras
+-- - C_PetBattles.GetNumPets
+-- - C_PetBattles.GetPVPMatchmakingInfo
+-- - C_PetBattles.GetPetSpeciesID
+-- - C_PetBattles.GetPetType
+-- - C_PetBattles.GetPlayerTrapAbility
+-- - C_PetBattles.GetPower
+-- - C_PetBattles.GetSelectedAction
+-- - C_PetBattles.GetSpeed
+-- - C_PetBattles.GetStateValue
+-- - C_PetBattles.GetTurnTimeInfo
+-- - C_PetBattles.GetXP
+-- - C_PetBattles.IsInBattle
+-- - C_PetBattles.IsPlayerNPC
+-- - C_PetBattles.IsSkipAvailable
+-- - C_PetBattles.IsTrapAvailable
+-- - C_PetBattles.IsWaitingOnOpponent
+-- - C_PetBattles.IsWildBattle
+-- - C_PetBattles.SetPendingReportBattlePetTarget
+-- - C_PetBattles.SetPendingReportTargetFromUnit
+-- - C_PetBattles.ShouldShowPetSelect
+-- - C_PetBattles.SkipTurn
+-- - C_PetBattles.StartPVPDuel
+-- - C_PetBattles.StartPVPMatchmaking
+-- - C_PetBattles.StopPVPMatchmaking
+-- - C_PetBattles.UseAbility
+-- - C_PetBattles.UseTrap
+--]=]
+
+---======================================================================
+--- C_PetBattles.AcceptPVPDuel
+---======================================================================
+--- Accepts a pending PvP duel invitation.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.AcceptPVPDuel
+---
+--- Usage: C_PetBattles.AcceptPVPDuel()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.AcceptPVPDuel()
+-- end
+
+---======================================================================
+--- C_PetBattles.AcceptQueuedPVPMatch
+---======================================================================
+--- Accepts a pending PvP match from the queue.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.AcceptQueuedPVPMatch
+---
+--- Usage: C_PetBattles.AcceptQueuedPVPMatch()
+---
+--- See also:
+--- - C_PetBattles.DeclineQueuedPVPMatch
+--- - C_PetBattles.GetPVPMatchmakingInfo
+--- - C_PetBattles.StopPVPMatchmaking
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.AcceptQueuedPVPMatch()
+-- end
+
+---======================================================================
+--- C_PetBattles.CanAcceptQueuedPVPMatch
+---======================================================================
+--- Returns whether the player can currently accept the queued PvP pet battle match.
+---
+--- Returns:
+--- @return boolean canAccept - true if the player can currently accept the queued PvP pet battle match invitation, false otherwise.
+---
+--- @since Patch 5.3.0 (2013-05-21): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.CanAcceptQueuedPVPMatch
+---
+--- Usage: canAccept = C_PetBattles.CanAcceptQueuedPVPMatch()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.CanAcceptQueuedPVPMatch()
+-- end
+
+---======================================================================
+--- C_PetBattles.CanActivePetSwapOut
+---======================================================================
+--- Returns whether or not the active pet can be swapped out in the pet battle.
+---
+--- Returns:
+--- @return boolean usable - True if active pet can swap out, false otherwise
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.CanActivePetSwapOut
+---
+--- Usage: usable = C_PetBattles.CanActivePetSwapOut()
+---
+--- See also:
+--- - C_PetBattles.CanPetSwapIn
+--- - C_PetBattles.ChangePet
+--- - C_PetBattles.GetActivePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.CanActivePetSwapOut()
+-- end
+
+---======================================================================
+--- C_PetBattles.CanPetSwapIn
+---======================================================================
+--- Returns whether or not the pet can swap in to the active position.
+---
+--- Arguments:
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return boolean usable - True if the pet is able to swap in, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.CanPetSwapIn
+---
+--- Usage: usable = C_PetBattles.CanPetSwapIn(petIndex)
+---
+--- See also:
+--- - C_PetBattles.CanActivePetSwapOut
+--- - C_PetBattles.ChangePet
+--- - C_PetBattles.GetActivePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.CanPetSwapIn()
+-- end
+
+---======================================================================
+--- C_PetBattles.CancelPVPDuel
+---======================================================================
+--- Declines a pending PvP pet battle duel invitation.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.CancelPVPDuel
+---
+--- Usage: C_PetBattles.CancelPVPDuel()
+---
+--- See also:
+--- - C_PetBattles.StartPVPDuel
+--- - C_PetBattles.StopPVPMatchmaking
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.CancelPVPDuel()
+-- end
+
+---======================================================================
+--- C_PetBattles.ChangePet
+---======================================================================
+--- Changes the active pet out for a different pet in a pet battle.
+---
+--- Arguments:
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.ChangePet
+---
+--- Usage: C_PetBattles.ChangePet(petIndex)
+---
+--- See also:
+--- - C_PetBattles.CanActivePetSwapOut
+--- - C_PetBattles.CanPetSwapIn
+--- - C_PetBattles.GetActivePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.ChangePet()
+-- end
+
+---======================================================================
+--- C_PetBattles.DeclineQueuedPVPMatch
+---======================================================================
+--- Declines a pending PvP match from the queue.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.DeclineQueuedPVPMatch
+---
+--- Usage: C_PetBattles.DeclineQueuedPVPMatch()
+---
+--- See also:
+--- - C_PetBattles.AcceptQueuedPVPMatch
+--- - C_PetBattles.GetPVPMatchmakingInfo
+--- - C_PetBattles.StopPVPMatchmaking
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.DeclineQueuedPVPMatch()
+-- end
+
+---======================================================================
+--- C_PetBattles.ForfeitGame
+---======================================================================
+--- Forfeits the current Pet Battle immediately.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.ForfeitGame
+---
+--- Usage: C_PetBattles.ForfeitGame()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.ForfeitGame()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityEffectInfo
+---======================================================================
+--- Returns the effect info for a pet's ability.
+---
+--- Arguments:
+--- @param abilityID number - The ID of this ability.
+--- @param turnIndex number - The turn in question for this ability. This can be obtained from C_PetBattles.GetAbilityProcTurnIndex.
+--- @param effectIndex number - The effect in question for this ability. This can be obtained from the unparsed description for this ability with extensive string manipulation, but currently no ability has more than 7 effects, so loops work too.
+--- @param effectName string - One of the effect names from C_PetBattles.GetAllEffectNames.
+---
+--- Returns:
+--- @return number value - The information you requested for a specific element of a certain effect of a certain ability at a specific turn.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityEffectInfo
+---
+--- Usage: value = C_PetBattles.GetAbilityEffectInfo(abilityID, turnIndex, effectIndex, effectName)
+---
+--- See also:
+--- - C_PetBattles.GetAbilityProcTurnIndex
+--- - C_PetBattles.GetAllEffectNames
+--- - C_PetBattles.GetAbilityInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityEffectInfo()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityInfoByID
+---======================================================================
+--- Returns very detailed information about a specific ability.
+---
+--- Arguments:
+--- @param id number - ID of the ability.
+---
+--- Returns:
+--- @return number id - The ID of the ability returned back.
+--- @return string name - The name of the ability.
+--- @return string icon - The full path to the ability's icon.
+--- @return number maxCooldown - The normal cooldown period for the ability.
+--- @return string unparsedDescription - The ability's description in its pure and unparsed form.
+--- @return number numTurns - Duration of the ability. This is typically 1, but some abilities last multiple rounds.
+--- @return number petType - Returned values are 1-10, based on the battlePetTypeID⊞
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityInfoByID
+---
+--- Usage: id, name, icon, maxCooldown, unparsedDescription, numTurns, petType, noStrongWeakHints = C_PetBattles.GetAbilityInfoByID(id)
+---
+--- See also:
+--- - C_PetJournal.GetPetAbilityInfo
+--- - C_PetJournal.GetPetAbilityList
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityInfoByID()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityInfo
+---======================================================================
+--- Returns ability information for an ability in a slot on a pet that you own.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+--- @param abilityIndex number - Accepted values are 1-3, corresponding to the ability in the slot with that number.
+---
+--- Returns:
+--- @return number id - The ID of the ability returned back.
+--- @return string name - The name of the ability.
+--- @return string icon - The full path to the ability's icon.
+--- @return number maxCooldown - The normal cooldown period for the ability.
+--- @return string unparsedDescription - The ability's description in its pure and unparsed form.
+--- @return number numTurns - Duration of the ability. This is typically 1, but some abilities last multiple rounds.
+--- @return number petType - Returned values are 1-10, based on the pet's type.
+--- @return boolean noStrongWeakHints - True if the ability should not show Strong/Weak indicators, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityInfo
+---
+--- Usage: id, name, icon, maxCooldown, unparsedDescription, numTurns, petType, noStrongWeakHints = C_PetBattles.GetAbilityInfo(petOwner, petIndex, abilityIndex)
+---
+--- See also:
+--- - C_PetBattles.GetAbilityInfoByID
+--- - C_PetJournal.GetPetAbilityList
+--- - C_PetBattles.GetAbilityEffectInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityInfo()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityProcTurnIndex
+---======================================================================
+--- Returns the turn index for a specific ability and proc type.
+---
+--- Arguments:
+--- @param abilityID number - ID of the ability.
+--- @param procType number - Index corresponding to a proc type.
+---
+--- Returns:
+--- @return number turnIndex - Number of rounds that the ability has been in play.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityProcTurnIndex
+---
+--- Usage: turnIndex = C_PetBattles.GetAbilityProcTurnIndex(abilityID, procType)
+---
+--- See also:
+--- - C_PetBattles.GetAbilityEffectInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityProcTurnIndex()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityStateModification
+---======================================================================
+--- Returns the modification state for an ability.
+---
+--- Arguments:
+--- @param abilityID number - ID of the ability.
+--- @param stateID number - ID of a state for Pet Battles.
+---
+--- Returns:
+--- @return number abilityStateMod - The ability's modification state.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityStateModification
+---
+--- Usage: abilityStateMod = C_PetBattles.GetAbilityStateModification(abilityID, stateID)
+---
+--- See also:
+--- - C_PetBattles.GetAllStates
+--- - C_PetBattles.GetStateValue
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityStateModification()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAbilityState
+---======================================================================
+--- Returns information about a pet's ability's current state in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+--- @param actionIndex number - Accepted values are 1-3, corresponding to the ability buttons from left to right.
+---
+--- Returns:
+--- @return boolean isUsable - if ability can be used
+--- @return number currentCooldown - turns until ability can be used (if not usable due to cooldown)
+--- @return number currentLockdown - turns until ability can be used (if not usable due to lockdowns, such as Nevermore)
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityState
+---
+--- Usage: isUsable, currentCooldown, currentLockdown = C_PetBattles.GetAbilityState(petOwner, petIndex, actionIndex)
+---
+--- See also:
+--- - C_PetBattles.UseAbility
+--- - C_PetBattles.IsSkipAvailable
+--- - C_PetBattles.IsTrapAvailable
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAbilityState()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetActivePet
+---======================================================================
+--- Returns the index of the active pet for the specified owner in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+---
+--- Returns:
+--- @return number petIndex - Returned values are always 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetActivePet
+---
+--- Usage: petIndex = C_PetBattles.GetActivePet(petOwner)
+---
+--- See also:
+--- - C_PetBattles.ChangePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetActivePet()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAllEffectNames
+---======================================================================
+--- Returns all effect parameter names for Pet Battles.
+---
+--- Returns:
+--- @return string effect1, effect2, .. - Each return is the name of a different effect parameter for Pet Battles. These effect names can be passed to C_PetBattles.GetAbilityEffectInfo in order to return information about that effect.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllEffectNames
+---
+--- Usage: effect1, effect2, ... = C_PetBattles.GetAllEffectNames()
+---
+--- Examples:
+--- Example 1:
+---   /dump C_PetBattles.GetAbilityEffectInfo(1625, 1, 1, "variance")
+---   -- 60
+--- Example 2:
+---   local effectParamStrings = {C_PetBattles.GetAllEffectNames()}
+--- Example 3:
+---   "ability",
+---   "ability 1",
+---   "ability 2",
+---   "accuracy", -- Ability hit chance percentage (e.g. 0%, 25%, 35%, 50%, 85%, 100%, 150%)
+---   "asdf",
+---   "auraabilityid",
+---   "auraid",
+---   "basechancetosucceed",
+---   "bonusdamage",
+---   "bonuspoints",
+---   "bonusstate",
+---   "boost",
+---   "bypasspetpassives",
+---   "casterimmunestate",
+---   "casterstate",
+---   "casterstatevalue",
+---   "chainfailure",
+---   "chance",
+---   "changevalue",
+---   "cooldownmodification",
+---   "dontmiss",
+---   "duration",
+---   "duration2",
+---   "enablereverse",
+---   "evenmorepoints",
+---   "healthpercentage",
+---   "healthpercentthreshold",
+---   "healththreshold",
+---   "increasepertoss",
+---   "index",
+---   "int 1",
+---   "isperiodic",
+---   "lockduration",
+---   "maxallowed",
+---   "maxpoints",
+---   "modifier",
+---   "morepoints",
+---   "newduration",
+---   "none",
+---   "overrideindex",
+---   "percentage",
+---   "points",
+---   "pointsincreaseperuse",
+---   "pointsmax",
+---   "power", -- The base damage or healing of the ability (base power is before being taking level, quality, or breed - effectively a level 1, poor quality pet, with no breed bonuses)
+---   "reportfailsasimmune",
+---   "requiredcasterpettype",
+---   "requiredcasterstate",
+---   "requiredpettype",
+---   "requiredtargetpettype",
+---   "requiredtargetstate",
+---   "sdf",
+---   "slot",
+---   "state",
+---   "statechange",
+---   "statemax",
+---   "statemin",
+---   "statepoints",
+---   "statetomultiplyagainst",
+---   "statetotriggermaxpoints",
+---   "statevalue",
+---   "targetimmunestate",
+---   "targetstate",
+---   "targetstatevalue",
+---   "targetteststate",
+---   "targetteststatevalue",
+---   "threshold",
+---   "tickdownfirstround",
+---   "turnstoadvance",
+---   "unused",
+---   "variance", -- the variance to be applied to power. Base damage or healing will be power±(variance/200)
+---   "weatherstate"
+---
+--- See also:
+--- - C_PetBattles.GetAbilityEffectInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAllEffectNames()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAllStates
+---======================================================================
+--- Returns all state IDs.
+---
+--- Arguments:
+--- @param stateEnv table ? - If supplied, this table will be filled with all known state IDs.
+---
+--- Returns:
+--- @return table<string,number> stateIDs - A table with all state IDs. If stateEnv is supplied, the returned table will be the same table .
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllStates
+---
+--- Usage: stateIDs = C_PetBattles.GetAllStates([stateEnv])
+---
+--- See also:
+--- - C_PetBattles.GetAbilityStateModification
+--- - C_PetBattles.GetStateValue
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAllStates()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAttackModifier
+---======================================================================
+--- Returns the modifier for an attack launched by a pet against an enemy pet.
+---
+--- Arguments:
+--- @param petType number - Index of the pet's type. Accepted values are 1-10.
+--- @param enemyPetType number - Index of the enemy pet's type. Accepted values are 1-10.
+---
+--- Returns:
+--- @return number modifier - The multiplier that should be applied to an attack from petType launched against enemyPetType.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAttackModifier
+---
+--- Usage: modifier = C_PetBattles.GetAttackModifier(petType, enemyPetType)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAttackModifier()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetAuraInfo
+---======================================================================
+--- Returns information for an aura in a pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent.
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+--- @param auraIndex number - The number from an index of all active auras.
+---
+--- Returns:
+--- @return number auraID - The ability ID of the aura (all auras are abilities too).
+--- @return number instanceID - A unique identifier for this aura; used for differentiation purposes only.
+--- @return number turnsRemaining - The number of rounds left for the aura to remain active.
+--- @return boolean isBuff - True if the aura is displayed to the user, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAuraInfo
+---
+--- Usage: auraID, instanceID, turnsRemaining, isBuff = C_PetBattles.GetAuraInfo(petOwner, petIndex, auraIndex)
+---
+--- See also:
+--- - C_PetBattles.GetNumAuras
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetAuraInfo()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetBattleState
+---======================================================================
+--- Returns the current battle state for the pet battle.
+---
+--- Returns:
+--- @return number battleState - A value representing the state of the battle.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetBattleState
+---
+--- Usage: battleState = C_PetBattles.GetBattleState()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetBattleState()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetBreedQuality
+---======================================================================
+--- Returns the rarity of a specific pet in the current pet battle.
+---
+--- Arguments:
+--- @param petOwner Enum.BattlePetOwner
+---
+--- Returns:
+--- @return Enum.BattlePetBreedQuality quality
+---
+--- @since Patch 11.0.0 (2024-07-23): Changed return value to an enum
+The value was decremented by 1, it previously was 1: "Poor", 2: "Common", 3: "Uncommon", 4: "Rare", 5: "Epic", 6: "Legendary"
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetBreedQuality
+---
+--- Usage: quality = C_PetBattles.GetBreedQuality(petOwner, slot)
+---
+-- function C_PetBattles.GetBreedQuality()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetDisplayID
+---======================================================================
+--- Returns the current displayID of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number displayID - Display ID of the pet (model/skin combination)
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetDisplayID
+---
+--- Usage: displayID = C_PetBattles.GetDisplayID(petOwner, petIndex)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetDisplayID()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetForfeitPenalty
+---======================================================================
+--- Returns the percentage of current health your pets will lose if you forfeit the battle.
+---
+--- Returns:
+--- @return number forfeitPenalty - percentage of current health each pet in your team will lose, e.g. 10 meaning 10% of current health.
+---
+--- @since Patch 5.2.0 (2013-03-05): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetForfeitPenalty
+---
+--- Usage: forfeitPenalty = C_PetBattles.GetForfeitPenalty()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetForfeitPenalty()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetHealth
+---======================================================================
+--- Returns the current health of a specific pet in the current pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number health - Current health amount of the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetHealth
+---
+--- Usage: health = C_PetBattles.GetHealth(petOwner, petIndex)
+---
+--- See also:
+--- - C_PetBattles.GetMaxHealth
+--- - C_PetBattles.GetSpeed
+--- - C_PetBattles.GetPower
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetHealth()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetIcon
+---======================================================================
+--- Returns the current icon of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner Enum.BattlePetOwner
+---
+--- Returns:
+--- @return number iconFileID : fileID - Full path of the species' icon
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetIcon
+---
+--- Usage: iconFileID = C_PetBattles.GetIcon(petOwner, slot)
+---
+-- function C_PetBattles.GetIcon()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetLevel
+---======================================================================
+--- Returns the level of a specific pet in the current pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number level - Level of the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetLevel
+---
+--- Usage: level = C_PetBattles.GetLevel(petOwner, petIndex)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetLevel()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetMaxHealth
+---======================================================================
+--- Returns the maximum health of a specific pet in the current pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number maxHealth - Maximum health amount of the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetMaxHealth
+---
+--- Usage: maxHealth = C_PetBattles.GetMaxHealth(petOwner, petIndex)
+---
+--- See also:
+--- - C_PetBattles.GetHealth
+--- - C_PetBattles.GetSpeed
+--- - C_PetBattles.GetPower
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetMaxHealth()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetName
+---======================================================================
+--- Returns the name(s) of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner Enum.BattlePetOwner
+---
+--- Returns:
+--- @return string customName - Name of the pet. If the pet has a custom name, it will be returned here. If not, it returns the species name here as well as in the second return.
+--- @return string speciesName - Name of the pet's Species.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetName
+---
+--- Usage: customName, speciesName = C_PetBattles.GetName(petOwner, slot)
+---
+-- function C_PetBattles.GetName()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetNumAuras
+---======================================================================
+--- Returns the number of active auras affecting the current pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent.
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number numAuras - Amount of active auras affecting the pet.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetNumAuras
+---
+--- Usage: numAuras = C_PetBattles.GetNumAuras(petOwner, petIndex)
+---
+--- See also:
+--- - C_PetBattles.GetAuraInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetNumAuras()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetNumPets
+---======================================================================
+--- Returns the number of pets that the specified owner has in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number
+---
+--- Returns:
+--- @return number numPets - Amount of pets that the current owner has in the pet battle (always 1-3).
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetNumPets
+---
+--- Usage: numPets = C_PetBattles.GetNumPets(petOwner)
+---
+-- function C_PetBattles.GetNumPets()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetPVPMatchmakingInfo
+---======================================================================
+--- Returns status information about the current PvP pet battle matchmaking queue.
+---
+--- Returns:
+--- @return string queueState - Either "proposal", "queued", "suspended", or nil.
+--- @return number estimatedTime - The current estimated wait time in seconds, rounded to the nearest second.
+--- @return number queuedTime - The time that the queue started at, in the same format as GetTime().
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetPVPMatchmakingInfo
+---
+--- Usage: queueState, estimatedTime, queuedTime = C_PetBattles.GetPVPMatchmakingInfo()
+---
+--- See also:
+--- - C_PetBattles.AcceptQueuedPVPMatch
+--- - C_PetBattles.DeclineQueuedPVPMatch
+--- - C_PetBattles.StartPVPMatchmaking
+--- - C_PetBattles.StopPVPMatchmaking
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetPVPMatchmakingInfo()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetPetSpeciesID
+---======================================================================
+--- Returns the species ID of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number speciesID - Species ID of the pet
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetPetSpeciesID
+---
+--- Usage: speciesID = C_PetBattles.GetPetSpeciesID(petOwner, petIndex)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetPetSpeciesID()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetPetType
+---======================================================================
+--- Returns the current pet type of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number petType - Returned values are 1-10.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetPetType
+---
+--- Usage: petType = C_PetBattles.GetPetType(petOwner, petIndex)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetPetType()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetPlayerTrapAbility
+---======================================================================
+--- Returns the ability ID for the best trap available to the player in the pet battle.
+---
+--- Returns:
+--- @return number trapAbilityID - Ability ID of the best trap you have available.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetPlayerTrapAbility
+---
+--- Usage: trapAbilityID = C_PetBattles.GetPlayerTrapAbility()
+---
+--- See also:
+--- - C_PetBattles.IsTrapAvailable
+--- - C_PetBattles.UseTrap
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetPlayerTrapAbility()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetPower
+---======================================================================
+--- Returns the current Power of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number power - Current amount of Power that the pet has
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetPower
+---
+--- Usage: power = C_PetBattles.GetPower(petOwner, petIndex)
+---
+--- See also:
+--- - C_PetBattles.GetSpeed
+--- - C_PetBattles.GetMaxHealth
+--- - C_PetBattles.GetHealth
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetPower()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetSelectedAction
+---======================================================================
+--- Returns the selected action of a specific pet in the pet battle.
+---
+--- Returns:
+--- @return number selectedActionType - 2: Ability, 3: Switch Pet, 4: Trap, 5: Skip turn
+--- @return number selectedActionIndex - Returned values are 1-3, corresponding to the ability buttons from left to right.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetSelectedAction
+---
+--- Usage: selectedActionType, selectedActionIndex = C_PetBattles.GetSelectedAction()
+---
+--- See also:
+--- - C_PetBattles.SkipTurn
+--- - C_PetBattles.UseTrap
+--- - C_PetBattles.ChangePet
+--- - C_PetBattles.SkipTurn
+---
+-- function C_PetBattles.GetSelectedAction()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetSpeed
+---======================================================================
+--- Returns the current Speed of a specific pet in the pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number speed - Current amount of Speed that the pet has
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetSpeed
+---
+--- Usage: speed = C_PetBattles.GetSpeed(petOwner, petIndex)
+---
+--- See also:
+--- - C_PetBattles.GetPower
+--- - C_PetBattles.GetMaxHealth
+--- - C_PetBattles.GetHealth
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetSpeed()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetStateValue
+---======================================================================
+--- Returns the value of a specific state for a specific pet in a pet battle.
+---
+--- Arguments:
+--- @param petOwner number - Accepted values are actually 0 through 2, unlike all (?) other Pet Battle functions.
+--- @param petIndex number - Accepted values are actually 0 through 3, unlike all (?) other Pet Battle functions.
+--- @param stateID number - The ID of a Pet Battle's specific State.
+---
+--- Returns:
+--- @return number stateValue - The value of the given state for the given pet.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetStateValue
+---
+--- Usage: stateValue = C_PetBattles.GetStateValue(petOwner, petIndex, stateID)
+---
+--- See also:
+--- - C_PetBattles.GetAllStates
+--- - C_PetBattles.GetAbilityStateModification
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetStateValue()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetTurnTimeInfo
+---======================================================================
+--- Returns the remaining time and total time for your current turn in a PvP pet battle.
+---
+--- Returns:
+--- @return number timeRemaining - Time in seconds remaining before you are forced to pass your turn
+--- @return number turnTime - Total time in seconds allotted for you to choose an ability
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetTurnTimeInfo
+---
+--- Usage: timeRemaining, turnTime = C_PetBattles.GetTurnTimeInfo()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetTurnTimeInfo()
+-- end
+
+---======================================================================
+--- C_PetBattles.GetXP
+---======================================================================
+--- Returns the experience values of a specific pet in the current pet battle.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent
+--- @param petIndex number - Accepted values are 1-3, but the order is based on the initial order. Which pet is currently active is irrelevant to the index, if it was your 3rd pet when you entered battle, it will always be 3 on the index.
+---
+--- Returns:
+--- @return number xp - Current experience progress towards the next level of the pet
+--- @return number maxXp - Total amount of experience required for the pet's current level to increase
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetXP
+---
+--- Usage: xp, maxXp = C_PetBattles.GetXP(petOwner, petIndex)
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.GetXP()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsInBattle
+---======================================================================
+--- Returns whether or not there is a pet battle in progress.
+---
+--- Returns:
+--- @return boolean inBattle - True if in a pet battle, false if not
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsInBattle
+---
+--- Usage: inBattle = C_PetBattles.IsInBattle()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsInBattle()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsPlayerNPC
+---======================================================================
+--- Returns whether or not a pet battle team is controlled by an NPC.
+---
+--- Arguments:
+--- @param petOwner number - 1: Current player, 2: Opponent.
+---
+--- Returns:
+--- @return boolean isNPC - false if the pet owner is a player, true otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsPlayerNPC
+---
+--- Usage: isNPC = C_PetBattles.IsPlayerNPC(petOwner)
+---
+--- See also:
+--- - C_PetBattles.IsWildBattle
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsPlayerNPC()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsSkipAvailable
+---======================================================================
+--- Returns whether or not you can skip your turn at the current time.
+---
+--- Returns:
+--- @return boolean usable - True if you can skip your turn, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsSkipAvailable
+---
+--- Usage: usable = C_PetBattles.IsSkipAvailable()
+---
+--- See also:
+--- - C_PetBattles.SkipTurn
+--- - C_PetBattles.UseTrap
+--- - C_PetBattles.UseAbility
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsSkipAvailable()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsTrapAvailable
+---======================================================================
+--- Returns whether or not you can use a trap at this time.
+---
+--- Returns:
+--- @return boolean usable - True if you can use a trap, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsTrapAvailable
+---
+--- Usage: usable = C_PetBattles.IsTrapAvailable()
+---
+--- See also:
+--- - C_PetBattles.UseTrap
+--- - C_PetBattles.SkipTurn
+--- - C_PetBattles.UseAbility
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsTrapAvailable()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsWaitingOnOpponent
+---======================================================================
+--- Returns whether or not you are waiting on your opponent to decide a course of action in a PvP pet battle.
+---
+--- Returns:
+--- @return boolean isWaiting - True if you are waiting on your opponent to choose an action, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsWaitingOnOpponent
+---
+--- Usage: isWaiting = C_PetBattles.IsWaitingOnOpponent()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsWaitingOnOpponent()
+-- end
+
+---======================================================================
+--- C_PetBattles.IsWildBattle
+---======================================================================
+--- Returns whether or not there is a wild pet battle in progress.
+---
+--- Returns:
+--- @return boolean inWildBattle - True if in a wild pet battle, false if not in a wild pet battle or not in a pet battle at all
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.IsWildBattle
+---
+--- Usage: inWildBattle = C_PetBattles.IsWildBattle()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.IsWildBattle()
+-- end
+
+---======================================================================
+--- C_PetBattles.SetPendingReportBattlePetTarget
+---======================================================================
+--- Starts the process of reporting one of your opponent's battle pets for having a bad name.
+---
+--- Arguments:
+--- @param petIndex number - Accepted values are 1-3, but the order is based off of the initial order. Which pet is currently active is irrelevant to the index, if it was its 3rd pet when it entered battle, it will always be 3 on the index.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.SetPendingReportBattlePetTarget
+---
+--- Usage: C_PetBattles.SetPendingReportBattlePetTarget(petIndex)
+---
+--- See also:
+--- - C_PetBattles.SetPendingReportTargetFromUnit
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.SetPendingReportBattlePetTarget()
+-- end
+
+---======================================================================
+--- C_PetBattles.SetPendingReportTargetFromUnit
+---======================================================================
+--- Starts the process of reporting the specified battle pet for having a bad name.
+---
+--- Arguments:
+--- @param unit string : UnitToken
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.SetPendingReportTargetFromUnit
+---
+--- Usage: C_PetBattles.SetPendingReportTargetFromUnit(unit)
+---
+--- See also:
+--- - C_PetBattles.SetPendingReportBattlePetTarget
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.SetPendingReportTargetFromUnit()
+-- end
+
+---======================================================================
+--- C_PetBattles.ShouldShowPetSelect
+---======================================================================
+--- Returns whether or not the UI should show the pet select screen.
+---
+--- Returns:
+--- @return boolean shouldShow - True if the pet selection frame should be shown, false otherwise.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.ShouldShowPetSelect
+---
+--- Usage: shouldShow = C_PetBattles.ShouldShowPetSelect()
+---
+--- See also:
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.ShouldShowPetSelect()
+-- end
+
+---======================================================================
+--- C_PetBattles.SkipTurn
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.SkipTurn
+---
+--- Usage: C_PetBattles.SkipTurn()
+---
+--- See also:
+--- - C_PetBattles.IsSkipAvailable
+--- - C_PetBattles.UseTrap
+--- - C_PetBattles.UseAbility
+--- - C_PetBattles.ChangePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.SkipTurn()
+-- end
+
+---======================================================================
+--- C_PetBattles.StartPVPDuel
+---======================================================================
+--- Challenges the targeted player to a PvP pet battle duel.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.StartPVPDuel
+---
+--- Usage: C_PetBattles.StartPVPDuel()
+---
+--- See also:
+--- - C_PetBattles.CancelPVPDuel
+--- - C_PetBattles.StartPVPMatchmaking
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.StartPVPDuel()
+-- end
+
+---======================================================================
+--- C_PetBattles.StartPVPMatchmaking
+---======================================================================
+--- Adds the current player to the PvP matchmaking queue.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.StartPVPMatchmaking
+---
+--- Usage: C_PetBattles.StartPVPMatchmaking()
+---
+--- See also:
+--- - C_PetBattles.AcceptQueuedPVPMatch
+--- - C_PetBattles.GetPVPMatchmakingInfo
+--- - C_PetBattles.StartPVPDuel
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.StartPVPMatchmaking()
+-- end
+
+---======================================================================
+--- C_PetBattles.StopPVPMatchmaking
+---======================================================================
+--- Removes the current player from the PvP matchmaking queue.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.StopPVPMatchmaking
+---
+--- Usage: C_PetBattles.StopPVPMatchmaking()
+---
+--- See also:
+--- - C_PetBattles.DeclineQueuedPVPMatch
+--- - C_PetBattles.GetPVPMatchmakingInfo
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.StopPVPMatchmaking()
+-- end
+
+---======================================================================
+--- C_PetBattles.UseAbility
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param actionIndex number - Accepted values are 1-3, corresponding to the ability buttons from left to right.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.UseAbility
+---
+--- Usage: C_PetBattles.UseAbility(actionIndex)
+---
+--- See also:
+--- - C_PetBattles.GetAbilityState
+--- - C_PetBattles.UseTrap
+--- - C_PetBattles.SkipTurn
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.UseAbility()
+-- end
+
+---======================================================================
+--- C_PetBattles.UseTrap
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetBattles.UseTrap
+---
+--- Usage: C_PetBattles.UseTrap()
+---
+--- See also:
+--- - C_PetBattles.IsTrapAvailable
+--- - C_PetBattles.SkipTurn
+--- - C_PetBattles.UseAbility
+--- - C_PetBattles.ChangePet
+--- - Pet Battle Functions
+---
+-- function C_PetBattles.UseTrap()
+-- end

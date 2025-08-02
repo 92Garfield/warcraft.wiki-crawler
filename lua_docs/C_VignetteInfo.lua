@@ -1,0 +1,122 @@
+--[=[
+-- C_VignetteInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_VignetteInfo
+--- C_VignetteInfo namespace contains 6 functions
+local C_VignetteInfo = {}
+
+--[=[
+-- C_VignetteInfo Functions:
+-- - C_VignetteInfo.FindBestUniqueVignette
+-- - C_VignetteInfo.GetHealthPercent
+-- - C_VignetteInfo.GetRecommendedGroupSize
+-- - C_VignetteInfo.GetVignetteInfo
+-- - C_VignetteInfo.GetVignettePosition
+-- - C_VignetteInfo.GetVignettes
+--]=]
+
+---======================================================================
+--- C_VignetteInfo.FindBestUniqueVignette
+---======================================================================
+--- Arguments:
+--- @param vignetteGUIDs string [] : WOWGUID
+---
+--- Returns:
+--- @return number bestUniqueVignetteIndex ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.FindBestUniqueVignette
+---
+--- Usage: bestUniqueVignetteIndex = C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs)
+---
+-- function C_VignetteInfo.FindBestUniqueVignette()
+-- end
+
+---======================================================================
+--- C_VignetteInfo.GetHealthPercent
+---======================================================================
+--- Arguments:
+--- @param vignetteGUID string : WOWGUID
+---
+--- Returns:
+--- @return number healthPct ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetHealthPercent
+---
+--- Usage: healthPct = C_VignetteInfo.GetHealthPercent(vignetteGUID)
+---
+-- function C_VignetteInfo.GetHealthPercent()
+-- end
+
+---======================================================================
+--- C_VignetteInfo.GetRecommendedGroupSize
+---======================================================================
+--- Arguments:
+--- @param vignetteGUID string : WOWGUID
+---
+--- Returns:
+--- @return number minGroupSize
+--- @return number maxGroupSize
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetRecommendedGroupSize
+---
+--- Usage: minGroupSize, maxGroupSize = C_VignetteInfo.GetRecommendedGroupSize(vignetteGUID)
+---
+-- function C_VignetteInfo.GetRecommendedGroupSize()
+-- end
+
+---======================================================================
+--- C_VignetteInfo.GetVignetteInfo
+---======================================================================
+--- Returns vignette info.
+---
+--- Arguments:
+--- @param vignetteGUID string : WOWGUID
+---
+--- Returns:
+--- @return VignetteInfo vignetteInfo ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetVignetteInfo
+---
+--- Usage: vignetteInfo = C_VignetteInfo.GetVignetteInfo(vignetteGUID)
+---
+-- function C_VignetteInfo.GetVignetteInfo()
+-- end
+
+---======================================================================
+--- C_VignetteInfo.GetVignettePosition
+---======================================================================
+--- Arguments:
+--- @param vignetteGUID string : WOWGUID
+--- @param uiMapID number
+---
+--- Returns:
+--- @return table vignettePosition : vector2
+--- @return number vignetteFacing ?
+---
+--- @since Patch 10.1.0 (2023-05-02): Added vignetteFacing return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetVignettePosition
+---
+--- Usage: vignettePosition, vignetteFacing = C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID)
+---
+-- function C_VignetteInfo.GetVignettePosition()
+-- end
+
+---======================================================================
+--- C_VignetteInfo.GetVignettes
+---======================================================================
+--- Returns:
+--- @return string vignetteGUIDs [] : WOWGUID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetVignettes
+---
+--- Usage: vignetteGUIDs = C_VignetteInfo.GetVignettes()
+---
+-- function C_VignetteInfo.GetVignettes()
+-- end

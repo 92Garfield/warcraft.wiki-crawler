@@ -1,0 +1,2102 @@
+--[=[
+-- C_AuctionHouse API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 85
+--]=]
+
+--- @class C_AuctionHouse
+--- C_AuctionHouse namespace contains 85 functions
+local C_AuctionHouse = {}
+
+--[=[
+-- C_AuctionHouse Functions:
+-- - C_AuctionHouse.CalculateCommodityDeposit
+-- - C_AuctionHouse.CalculateItemDeposit
+-- - C_AuctionHouse.CanCancelAuction
+-- - C_AuctionHouse.CancelAuction
+-- - C_AuctionHouse.CancelCommoditiesPurchase
+-- - C_AuctionHouse.CancelSell
+-- - C_AuctionHouse.CloseAuctionHouse
+-- - C_AuctionHouse.ConfirmCommoditiesPurchase
+-- - C_AuctionHouse.ConfirmPostCommodity
+-- - C_AuctionHouse.ConfirmPostItem
+-- - C_AuctionHouse.FavoritesAreAvailable
+-- - C_AuctionHouse.GetAuctionInfoByID
+-- - C_AuctionHouse.GetAuctionItemSubClasses
+-- - C_AuctionHouse.GetAvailablePostCount
+-- - C_AuctionHouse.GetBidInfo
+-- - C_AuctionHouse.GetBidType
+-- - C_AuctionHouse.GetBids
+-- - C_AuctionHouse.GetBrowseResults
+-- - C_AuctionHouse.GetCancelCost
+-- - C_AuctionHouse.GetCommoditySearchResultInfo
+-- - C_AuctionHouse.GetCommoditySearchResultsQuantity
+-- - C_AuctionHouse.GetExtraBrowseInfo
+-- - C_AuctionHouse.GetFilterGroups
+-- - C_AuctionHouse.GetItemCommodityStatus
+-- - C_AuctionHouse.GetItemKeyFromItem
+-- - C_AuctionHouse.GetItemKeyInfo
+-- - C_AuctionHouse.GetItemKeyRequiredLevel
+-- - C_AuctionHouse.GetItemSearchResultInfo
+-- - C_AuctionHouse.GetItemSearchResultsQuantity
+-- - C_AuctionHouse.GetMaxBidItemBid
+-- - C_AuctionHouse.GetMaxBidItemBuyout
+-- - C_AuctionHouse.GetMaxCommoditySearchResultPrice
+-- - C_AuctionHouse.GetMaxItemSearchResultBid
+-- - C_AuctionHouse.GetMaxItemSearchResultBuyout
+-- - C_AuctionHouse.GetMaxOwnedAuctionBid
+-- - C_AuctionHouse.GetMaxOwnedAuctionBuyout
+-- - C_AuctionHouse.GetNumBidTypes
+-- - C_AuctionHouse.GetNumBids
+-- - C_AuctionHouse.GetNumCommoditySearchResults
+-- - C_AuctionHouse.GetNumItemSearchResults
+-- - C_AuctionHouse.GetNumOwnedAuctionTypes
+-- - C_AuctionHouse.GetNumOwnedAuctions
+-- - C_AuctionHouse.GetNumReplicateItems
+-- - C_AuctionHouse.GetOwnedAuctionInfo
+-- - C_AuctionHouse.GetOwnedAuctionType
+-- - C_AuctionHouse.GetOwnedAuctions
+-- - C_AuctionHouse.GetQuoteDurationRemaining
+-- - C_AuctionHouse.GetReplicateItemBattlePetInfo
+-- - C_AuctionHouse.GetReplicateItemInfo
+-- - C_AuctionHouse.GetReplicateItemLink
+-- - C_AuctionHouse.GetReplicateItemTimeLeft
+-- - C_AuctionHouse.GetTimeLeftBandInfo
+-- - C_AuctionHouse.HasFavorites
+-- - C_AuctionHouse.HasFullBidResults
+-- - C_AuctionHouse.HasFullBrowseResults
+-- - C_AuctionHouse.HasFullCommoditySearchResults
+-- - C_AuctionHouse.HasFullItemSearchResults
+-- - C_AuctionHouse.HasFullOwnedAuctionResults
+-- - C_AuctionHouse.HasMaxFavorites
+-- - C_AuctionHouse.HasSearchResults
+-- - C_AuctionHouse.IsFavoriteItem
+-- - C_AuctionHouse.IsSellItemValid
+-- - C_AuctionHouse.IsThrottledMessageSystemReady
+-- - C_AuctionHouse.MakeItemKey
+-- - C_AuctionHouse.PlaceBid
+-- - C_AuctionHouse.PostCommodity
+-- - C_AuctionHouse.PostItem
+-- - C_AuctionHouse.QueryBids
+-- - C_AuctionHouse.QueryOwnedAuctions
+-- - C_AuctionHouse.RefreshCommoditySearchResults
+-- - C_AuctionHouse.RefreshItemSearchResults
+-- - C_AuctionHouse.ReplicateItems
+-- - C_AuctionHouse.RequestMoreBrowseResults
+-- - C_AuctionHouse.RequestMoreCommoditySearchResults
+-- - C_AuctionHouse.RequestMoreItemSearchResults
+-- - C_AuctionHouse.RequestOwnedAuctionBidderInfo
+-- - C_AuctionHouse.SearchForFavorites
+-- - C_AuctionHouse.SearchForItemKeys
+-- - C_AuctionHouse.SendBrowseQuery
+-- - C_AuctionHouse.SendSearchQuery
+-- - C_AuctionHouse.SendSellSearchQuery
+-- - C_AuctionHouse.SetFavoriteItem
+-- - C_AuctionHouse.ShouldAutoPopulatePrice
+-- - C_AuctionHouse.StartCommoditiesPurchase
+-- - C_AuctionHouse.SupportsCopperValues
+--]=]
+
+---======================================================================
+--- C_AuctionHouse.CalculateCommodityDeposit
+---======================================================================
+--- Returns required deposit for posting a commodity and quantity.
+---
+--- Arguments:
+--- @param itemID number
+--- @param duration number - 1 for 12 hours, 2 for 24 hours, 3 for 48 hours
+--- @param quantity number - number of items to auction
+---
+--- Returns:
+--- @return number depositCost ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CalculateCommodityDeposit
+---
+--- Usage: depositCost = C_AuctionHouse.CalculateCommodityDeposit(itemID, duration, quantity)
+---
+-- function C_AuctionHouse.CalculateCommodityDeposit()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CalculateItemDeposit
+---======================================================================
+--- Returns required deposit for posting a specific item and quantity.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param duration number - 1 for 12 hours, 2 for 24 hours, 3 for 48 hours
+--- @param quantity number - quantity of items to auction
+---
+--- Returns:
+--- @return number depositCost ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CalculateItemDeposit
+---
+--- Usage: depositCost = C_AuctionHouse.CalculateItemDeposit(item, duration, quantity)
+---
+-- function C_AuctionHouse.CalculateItemDeposit()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CanCancelAuction
+---======================================================================
+--- Returns if the auction can be cancelled. If it can't, load it with QueryOwnedAuctions.
+---
+--- Arguments:
+--- @param ownedAuctionID number
+---
+--- Returns:
+--- @return boolean canCancelAuction
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CanCancelAuction
+---
+--- Usage: canCancelAuction = C_AuctionHouse.CanCancelAuction(ownedAuctionID)
+---
+-- function C_AuctionHouse.CanCancelAuction()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.QueryOwnedAuctions
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Otherwise it will brick the AH.
+---
+--- Arguments:
+--- @param sorts AuctionHouseSortType []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.QueryOwnedAuctions
+---
+--- Usage: C_AuctionHouse.QueryOwnedAuctions(sorts)
+---
+--- Examples:
+--- Example 1:
+---   local btn = CreateFrame("Button", nil, UIParent, "UIPanelButtonTemplate")
+---   btn:SetPoint("CENTER")
+---   btn:SetSize(120, 40)
+---   btn:SetText("Example")
+---   btn:SetScript("OnClick", function(self, button)
+---   	local sorts = {
+---   		{sortOrder = Enum.AuctionHouseSortOrder.TimeRemaining, reverseSort = false},
+---   	}
+---   	C_AuctionHouse.QueryOwnedAuctions(sorts)
+---   end)
+---
+-- function C_AuctionHouse.QueryOwnedAuctions()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CancelAuction
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param ownedAuctionID number
+---
+--- @since Patch 9.1.5 (2021-11-02): Protected when called from a (macro) script.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CancelAuction
+---
+--- Usage: C_AuctionHouse.CancelAuction(ownedAuctionID)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.CancelAuction(AuctionHouseFrame.AuctionsFrame.selectedAuctionID)
+---   end
+--- Example 2:
+---   /run if not CA then local f=CreateFrame("Button","CA",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.AuctionsFrame.CancelAuctionButton)end
+---   /click CA LeftButton 1
+---   /click StaticPopup1Button1
+---
+--- See also:
+--- - https://www.curseforge.com/wow/addons/magic-button/
+---
+-- function C_AuctionHouse.CancelAuction()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CancelCommoditiesPurchase
+---======================================================================
+--- Abort an incomplete commodity purchase to avoid it conflicting with another purchase.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CancelCommoditiesPurchase
+---
+--- Usage: C_AuctionHouse.CancelCommoditiesPurchase()
+---
+-- function C_AuctionHouse.CancelCommoditiesPurchase()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CancelSell
+---======================================================================
+--- Stop posting auctions for an non-commodity item.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CancelSell
+---
+--- Usage: C_AuctionHouse.CancelSell()
+---
+-- function C_AuctionHouse.CancelSell()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.CloseAuctionHouse
+---======================================================================
+--- Close the auction house window.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CloseAuctionHouse
+---
+--- Usage: C_AuctionHouse.CloseAuctionHouse()
+---
+-- function C_AuctionHouse.CloseAuctionHouse()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.ConfirmCommoditiesPurchase
+---======================================================================
+--- Completes a commodity item purchase.
+---
+--- Arguments:
+--- @param itemID number
+--- @param quantity number
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ConfirmCommoditiesPurchase
+---
+--- Usage: C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.StartCommoditiesPurchase(2592, 3)
+---   	C_Timer.After(.5, function() C_AuctionHouse.ConfirmCommoditiesPurchase(2592, 3) end)
+---   end
+--- Example 2:
+---   local item = {}
+---   
+---   function TestPurchaseCommodity(itemID, quantity)
+---   	C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity)
+---   	item.itemID = itemID
+---   	item.quantity = quantity
+---   end
+---   
+---   local function OnEvent(self, event)
+---   	if next(item) then
+---   		C_AuctionHouse.ConfirmCommoditiesPurchase(item.itemID, item.quantity)
+---   		wipe(item)
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("AUCTION_HOUSE_THROTTLED_SYSTEM_READY")
+---   f:SetScript("OnEvent", OnEvent)
+---   
+---   -- /run TestPurchaseCommodity(2592, 2)
+--- Example 3:
+---   /run if not AHBuyC then local f=CreateFrame("Button","AHBuyC",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.CommoditiesBuyFrame.BuyDisplay.BuyButton)end
+---
+-- function C_AuctionHouse.ConfirmCommoditiesPurchase()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.ConfirmPostCommodity
+---======================================================================
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param duration number
+--- @param quantity number
+--- @param unitPrice number
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ConfirmPostCommodity
+---
+--- Usage: C_AuctionHouse.ConfirmPostCommodity(item, duration, quantity, unitPrice)
+---
+-- function C_AuctionHouse.ConfirmPostCommodity()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.ConfirmPostItem
+---======================================================================
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param duration number
+--- @param quantity number
+--- @param bid number ?
+--- @param buyout number ?
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ConfirmPostItem
+---
+--- Usage: C_AuctionHouse.ConfirmPostItem(item, duration, quantity [, bid [, buyout]])
+---
+-- function C_AuctionHouse.ConfirmPostItem()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.FavoritesAreAvailable
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return boolean favoritesAreAvailable
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.FavoritesAreAvailable
+---
+--- Usage: favoritesAreAvailable = C_AuctionHouse.FavoritesAreAvailable()
+---
+-- function C_AuctionHouse.FavoritesAreAvailable()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetAuctionInfoByID
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param auctionID number
+---
+--- Returns:
+--- @return AuctionInfo priceInfo ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetAuctionInfoByID
+---
+--- Usage: priceInfo = C_AuctionHouse.GetAuctionInfoByID(auctionID)
+---
+-- function C_AuctionHouse.GetAuctionInfoByID()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetAuctionItemSubClasses
+---======================================================================
+--- Prints all subclass IDs for the Consumables category.
+---
+--- Arguments:
+--- @param classID number - Item classID
+---
+--- Returns:
+--- @return number subClasses []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added, replaces GetAuctionItemSubClasses()
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetAuctionItemSubClasses
+---
+--- Usage: subClasses = C_AuctionHouse.GetAuctionItemSubClasses(classID)
+---
+--- Examples:
+--- Example 1:
+---   local classID = LE_ITEM_CLASS_CONSUMABLE
+---   for _, subClassID in pairs(C_AuctionHouse.GetAuctionItemSubClasses(classID)) do
+---   	print(subClassID, (GetItemSubClassInfo(classID, subClassID)))
+---   end
+---
+--- See also:
+--- - GetItemClassInfo
+--- - GetItemSubClassInfo
+---
+-- function C_AuctionHouse.GetAuctionItemSubClasses()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetAvailablePostCount
+---======================================================================
+--- Returns the available quantity of an item for posting.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number listCount
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetAvailablePostCount
+---
+--- Usage: listCount = C_AuctionHouse.GetAvailablePostCount(item)
+---
+-- function C_AuctionHouse.GetAvailablePostCount()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetBidInfo
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param bidIndex number
+---
+--- Returns:
+--- @return BidInfo bid ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added minBid field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetBidInfo
+---
+--- Usage: bid = C_AuctionHouse.GetBidInfo(bidIndex)
+---
+-- function C_AuctionHouse.GetBidInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetBids
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return BidInfo bids []
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetBids
+---
+--- Usage: bids = C_AuctionHouse.GetBids()
+---
+-- function C_AuctionHouse.GetBids()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetBidType
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param bidTypeIndex number
+---
+--- Returns:
+--- @return ItemKey typeItemKey ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetBidType
+---
+--- Usage: typeItemKey = C_AuctionHouse.GetBidType(bidTypeIndex)
+---
+-- function C_AuctionHouse.GetBidType()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetBrowseResults
+---======================================================================
+--- Returns the currently loaded summary results resulting from SendBrowseQuery.
+---
+--- Returns:
+--- @return BrowseResultInfo browseResults []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetBrowseResults
+---
+--- Usage: browseResults = C_AuctionHouse.GetBrowseResults()
+---
+-- function C_AuctionHouse.GetBrowseResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SendBrowseQuery
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Otherwise it will brick the AH.
+---
+--- Arguments:
+--- @param query AuctionHouseBrowseQuery
+---
+--- @since Patch 8.3.0 (2020-01-14): Added, replacing QueryAuctionItems().
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SendBrowseQuery
+---
+--- Usage: C_AuctionHouse.SendBrowseQuery(query)
+---
+--- Examples:
+--- Example 1:
+---   local btn = CreateFrame("Button", nil, UIParent, "UIPanelButtonTemplate")
+---   btn:SetPoint("CENTER")
+---   btn:SetSize(120, 40)
+---   btn:SetText("Example")
+---   btn:SetScript("OnClick", function(self, button)
+---   	local query = {
+---   		searchString = "",
+---   		sorts = {
+---   			{sortOrder = Enum.AuctionHouseSortOrder.Price, reverseSort = false},
+---   			{sortOrder = Enum.AuctionHouseSortOrder.Name, reverseSort = false},
+---   		},
+---   		filters = {
+---   			Enum.AuctionHouseFilter.PoorQuality,
+---   			Enum.AuctionHouseFilter.CommonQuality,
+---   			Enum.AuctionHouseFilter.UncommonQuality,
+---   			Enum.AuctionHouseFilter.RareQuality,
+---   			Enum.AuctionHouseFilter.EpicQuality,
+---   		},
+---   	}
+---   	C_AuctionHouse.SendBrowseQuery(query)
+---   end)
+---
+--- See also:
+--- - C_AuctionHouse.SendSearchQuery
+--- - C_AuctionHouse.ReplicateItems
+---
+-- function C_AuctionHouse.SendBrowseQuery()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetCancelCost
+---======================================================================
+--- Returns the cost for cancelling a specific owned auction. This is non-zero if it has a bid.
+---
+--- Arguments:
+--- @param ownedAuctionID number
+---
+--- Returns:
+--- @return number cancelCost
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetCancelCost
+---
+--- Usage: cancelCost = C_AuctionHouse.GetCancelCost(ownedAuctionID)
+---
+-- function C_AuctionHouse.GetCancelCost()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetCommoditySearchResultInfo
+---======================================================================
+--- Returns search results for a commodity item.
+---
+--- Arguments:
+--- @param itemID number
+--- @param commoditySearchResultIndex number
+---
+--- Returns:
+--- @return CommoditySearchResultInfo result ?
+---
+--- @since Patch 9.0.5 (2021-03-09): Added totalNumberOfOwners field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetCommoditySearchResultInfo
+---
+--- Usage: result = C_AuctionHouse.GetCommoditySearchResultInfo(itemID, commoditySearchResultIndex)
+---
+--- Examples:
+--- Example 1:
+---   local test_item = 5956 -- Blacksmith Hammer
+---   local test_commodity = 152579 -- Storm Silver Ore
+---   
+---   local btn = CreateFrame("Button", nil, UIParent, "UIPanelButtonTemplate")
+---   btn:SetPoint("CENTER")
+---   btn:SetSize(120, 40)
+---   btn:SetText("Example")
+---   btn:SetScript("OnClick", function(self, button)
+---   	local itemKey = C_AuctionHouse.MakeItemKey(test_commodity)
+---   	C_AuctionHouse.SendSearchQuery(itemKey, {}, false)
+---   end)
+---   
+---   local f = CreateFrame("Frame")
+---   
+---   function f:ITEM_SEARCH_RESULTS_UPDATED(event, itemKey)
+---   	for i = 1, C_AuctionHouse.GetNumItemSearchResults(itemKey) do
+---   		local result = C_AuctionHouse.GetItemSearchResultInfo(itemKey, i)
+---   		print(event, itemKey.itemID, i, result.auctionID, result.buyoutAmount)
+---   	end
+---   end
+---   
+---   function f:COMMODITY_SEARCH_RESULTS_UPDATED(event, itemID)
+---   	for i = 1, C_AuctionHouse.GetNumCommoditySearchResults(itemID) do
+---   		local result = C_AuctionHouse.GetCommoditySearchResultInfo(itemID, i)
+---   		print(event, itemID, i, result.quantity, result.auctionID, result.unitPrice)
+---   	end
+---   end
+---   
+---   function f:OnEvent(event, ...)
+---   	self[event](self, event, ...)
+---   end
+---   
+---   f:RegisterEvent("ITEM_SEARCH_RESULTS_UPDATED")
+---   f:RegisterEvent("COMMODITY_SEARCH_RESULTS_UPDATED")
+---   f:SetScript("OnEvent", f.OnEvent)
+---
+-- function C_AuctionHouse.GetCommoditySearchResultInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetCommoditySearchResultsQuantity
+---======================================================================
+--- Returns how many of the commodity is on sale.
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return number totalQuantity
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetCommoditySearchResultsQuantity
+---
+--- Usage: totalQuantity = C_AuctionHouse.GetCommoditySearchResultsQuantity(itemID)
+---
+-- function C_AuctionHouse.GetCommoditySearchResultsQuantity()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetExtraBrowseInfo
+---======================================================================
+--- Returns the level (from 1-120, BfA levels) that some items would be crafted at.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number extraInfo
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetExtraBrowseInfo
+---
+--- Usage: extraInfo = C_AuctionHouse.GetExtraBrowseInfo(itemKey)
+---
+-- function C_AuctionHouse.GetExtraBrowseInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetFilterGroups
+---======================================================================
+--- Returns groups of filters for use in the Filter dropdown in the Buy tab.
+---
+--- Returns:
+--- @return AuctionHouseFilterGroup filterGroups []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetFilterGroups
+---
+--- Usage: filterGroups = C_AuctionHouse.GetFilterGroups()
+---
+-- function C_AuctionHouse.GetFilterGroups()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemCommodityStatus
+---======================================================================
+--- Returns if the item is a commodity, item or neither.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.ItemCommodityStatus isCommodity
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemCommodityStatus
+---
+--- Usage: isCommodity = C_AuctionHouse.GetItemCommodityStatus(item)
+---
+-- function C_AuctionHouse.GetItemCommodityStatus()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemKeyFromItem
+---======================================================================
+--- Returns an auction house item key from an item location.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return ItemKey itemKey
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemKeyFromItem
+---
+--- Usage: itemKey = C_AuctionHouse.GetItemKeyFromItem(item)
+---
+-- function C_AuctionHouse.GetItemKeyFromItem()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemKeyInfo
+---======================================================================
+--- Returns more details about an item from its item key, including its name.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return ItemKeyInfo itemKeyInfo ?
+---
+--- @since Hotfix (2020-02-27): Added appearanceLink return value[1]  (Build: 33528)
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemKeyInfo
+---
+--- Usage: itemKeyInfo = C_AuctionHouse.GetItemKeyInfo(itemKey [, restrictQualityToFilter])
+---
+-- function C_AuctionHouse.GetItemKeyInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemKeyRequiredLevel
+---======================================================================
+--- Returns the required level to use an item found on the auction house.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number requiredLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemKeyRequiredLevel
+---
+--- Usage: requiredLevel = C_AuctionHouse.GetItemKeyRequiredLevel(itemKey)
+---
+-- function C_AuctionHouse.GetItemKeyRequiredLevel()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemSearchResultInfo
+---======================================================================
+--- Returns search results for an item.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return ItemSearchResultInfo result ?
+---
+--- @since Patch 9.0.5 (2021-03-09): Added totalNumberOfOwners field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemSearchResultInfo
+---
+--- Usage: result = C_AuctionHouse.GetItemSearchResultInfo(itemKey, itemSearchResultIndex)
+---
+--- Examples:
+--- Example 1:
+---   local test_item = 5956 -- Blacksmith Hammer
+---   local test_commodity = 152579 -- Storm Silver Ore
+---   
+---   local btn = CreateFrame("Button", nil, UIParent, "UIPanelButtonTemplate")
+---   btn:SetPoint("CENTER")
+---   btn:SetSize(120, 40)
+---   btn:SetText("Example")
+---   btn:SetScript("OnClick", function(self, button)
+---   	local itemKey = C_AuctionHouse.MakeItemKey(test_commodity)
+---   	C_AuctionHouse.SendSearchQuery(itemKey, {}, false)
+---   end)
+---   
+---   local f = CreateFrame("Frame")
+---   
+---   function f:ITEM_SEARCH_RESULTS_UPDATED(event, itemKey)
+---   	for i = 1, C_AuctionHouse.GetNumItemSearchResults(itemKey) do
+---   		local result = C_AuctionHouse.GetItemSearchResultInfo(itemKey, i)
+---   		print(event, itemKey.itemID, i, result.auctionID, result.buyoutAmount)
+---   	end
+---   end
+---   
+---   function f:COMMODITY_SEARCH_RESULTS_UPDATED(event, itemID)
+---   	for i = 1, C_AuctionHouse.GetNumCommoditySearchResults(itemID) do
+---   		local result = C_AuctionHouse.GetCommoditySearchResultInfo(itemID, i)
+---   		print(event, itemID, i, result.quantity, result.auctionID, result.unitPrice)
+---   	end
+---   end
+---   
+---   function f:OnEvent(event, ...)
+---   	self[event](self, event, ...)
+---   end
+---   
+---   f:RegisterEvent("ITEM_SEARCH_RESULTS_UPDATED")
+---   f:RegisterEvent("COMMODITY_SEARCH_RESULTS_UPDATED")
+---   f:SetScript("OnEvent", f.OnEvent)
+---
+-- function C_AuctionHouse.GetItemSearchResultInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetItemSearchResultsQuantity
+---======================================================================
+--- Returns how many of the item is available on the auction house.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number totalQuantity
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemSearchResultsQuantity
+---
+--- Usage: totalQuantity = C_AuctionHouse.GetItemSearchResultsQuantity(itemKey)
+---
+-- function C_AuctionHouse.GetItemSearchResultsQuantity()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxBidItemBid
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number maxBid ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxBidItemBid
+---
+--- Usage: maxBid = C_AuctionHouse.GetMaxBidItemBid()
+---
+-- function C_AuctionHouse.GetMaxBidItemBid()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxBidItemBuyout
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number maxBuyout ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxBidItemBuyout
+---
+--- Usage: maxBuyout = C_AuctionHouse.GetMaxBidItemBuyout()
+---
+-- function C_AuctionHouse.GetMaxBidItemBuyout()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxCommoditySearchResultPrice
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return number maxUnitPrice ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxCommoditySearchResultPrice
+---
+--- Usage: maxUnitPrice = C_AuctionHouse.GetMaxCommoditySearchResultPrice(itemID)
+---
+-- function C_AuctionHouse.GetMaxCommoditySearchResultPrice()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxItemSearchResultBuyout
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number maxBuyout ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxItemSearchResultBuyout
+---
+--- Usage: maxBuyout = C_AuctionHouse.GetMaxItemSearchResultBuyout(itemKey)
+---
+-- function C_AuctionHouse.GetMaxItemSearchResultBuyout()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxOwnedAuctionBid
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number maxBid ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxOwnedAuctionBid
+---
+--- Usage: maxBid = C_AuctionHouse.GetMaxOwnedAuctionBid()
+---
+-- function C_AuctionHouse.GetMaxOwnedAuctionBid()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumBidTypes
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number numBidTypes
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumBidTypes
+---
+--- Usage: numBidTypes = C_AuctionHouse.GetNumBidTypes()
+---
+-- function C_AuctionHouse.GetNumBidTypes()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumCommoditySearchResults
+---======================================================================
+--- Returns the number of commodity results, the different prices.
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return number numSearchResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumCommoditySearchResults
+---
+--- Usage: numSearchResults = C_AuctionHouse.GetNumCommoditySearchResults(itemID)
+---
+-- function C_AuctionHouse.GetNumCommoditySearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumItemSearchResults
+---======================================================================
+--- Returns the number of item results, the different auctions.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number numItemSearchResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumItemSearchResults
+---
+--- Usage: numItemSearchResults = C_AuctionHouse.GetNumItemSearchResults(itemKey)
+---
+-- function C_AuctionHouse.GetNumItemSearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumOwnedAuctions
+---======================================================================
+--- Returns the number of auctions the player has active on the auction house.
+---
+--- Returns:
+--- @return number numOwnedAuctions
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumOwnedAuctions
+---
+--- Usage: numOwnedAuctions = C_AuctionHouse.GetNumOwnedAuctions()
+---
+-- function C_AuctionHouse.GetNumOwnedAuctions()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumOwnedAuctionTypes
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number numOwnedAuctionTypes
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumOwnedAuctionTypes
+---
+--- Usage: numOwnedAuctionTypes = C_AuctionHouse.GetNumOwnedAuctionTypes()
+---
+-- function C_AuctionHouse.GetNumOwnedAuctionTypes()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumReplicateItems
+---======================================================================
+--- Returns the amount of auctions.
+---
+--- Returns:
+--- @return number numReplicateItems
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. Replaces GetNumAuctionItems(). [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumReplicateItems
+---
+--- Usage: numReplicateItems = C_AuctionHouse.GetNumReplicateItems()
+---
+-- function C_AuctionHouse.GetNumReplicateItems()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetOwnedAuctionInfo
+---======================================================================
+--- Returns information for one of the player's active auctions.
+---
+--- Arguments:
+--- @param ownedAuctionIndex number
+---
+--- Returns:
+--- @return OwnedAuctionInfo ownedAuction ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetOwnedAuctionInfo
+---
+--- Usage: ownedAuction = C_AuctionHouse.GetOwnedAuctionInfo(ownedAuctionIndex)
+---
+-- function C_AuctionHouse.GetOwnedAuctionInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetOwnedAuctions
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return OwnedAuctionInfo ownedAuctions []
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetOwnedAuctions
+---
+--- Usage: ownedAuctions = C_AuctionHouse.GetOwnedAuctions()
+---
+-- function C_AuctionHouse.GetOwnedAuctions()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetOwnedAuctionType
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param ownedAuctionTypeIndex number
+---
+--- Returns:
+--- @return ItemKey typeItemKey ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetOwnedAuctionType
+---
+--- Usage: typeItemKey = C_AuctionHouse.GetOwnedAuctionType(ownedAuctionTypeIndex)
+---
+-- function C_AuctionHouse.GetOwnedAuctionType()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetQuoteDurationRemaining
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number quoteDurationSeconds
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetQuoteDurationRemaining
+---
+--- Usage: quoteDurationSeconds = C_AuctionHouse.GetQuoteDurationRemaining()
+---
+-- function C_AuctionHouse.GetQuoteDurationRemaining()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetReplicateItemBattlePetInfo
+---======================================================================
+--- Returns display info for a battle pet from a ReplicateItems result.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return number creatureID
+--- @return number displayID
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. Replaces GetAuctionItemBattlePetInfo(). [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetReplicateItemBattlePetInfo
+---
+--- Usage: creatureID, displayID = C_AuctionHouse.GetReplicateItemBattlePetInfo(index)
+---
+-- function C_AuctionHouse.GetReplicateItemBattlePetInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.ReplicateItems
+---======================================================================
+--- Queries all auctions listed on the Auction House.
+---
+--- @since Patch 9.0.2 (2020-11-17): Hotfixed owner and ownerFullName to always return nil (except for your own auctions) as that seemed to be the cause of disconnects.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ReplicateItems
+---
+--- Usage: C_AuctionHouse.ReplicateItems()
+---
+--- Examples:
+--- Example 1:
+---   local initialQuery
+---   local auctions = {}
+---    
+---   local function ScanAuctions()
+---   	local beginTime = debugprofilestop()
+---   	local continuables = {}
+---   	wipe(auctions)
+---   	for i = 0, C_AuctionHouse.GetNumReplicateItems()-1 do
+---   		auctions[i] = {C_AuctionHouse.GetReplicateItemInfo(i)}
+---   		if not auctions[i][18] then -- hasAllInfo
+---   			local item = Item:CreateFromItemID(auctions[i][17]) -- itemID
+---   			continuables[item] = true
+---   
+---   			item:ContinueOnItemLoad(function()
+---   				auctions[i] = {C_AuctionHouse.GetReplicateItemInfo(i)}
+---   				continuables[item] = nil
+---   				if not next(continuables) then
+---   					print(format("Scanned %d auctions in %d milliseconds", #auctions+1, debugprofilestop()-beginTime))
+---   					-- do something with `auctions` or fire some callback
+---   				end
+---   			end)
+---   		end
+---   	end
+---   end
+---   
+---   local function OnEvent(self, event)
+---   	if event == "AUCTION_HOUSE_SHOW" then
+---   		C_AuctionHouse.ReplicateItems()
+---   		initialQuery = true
+---   	elseif event == "REPLICATE_ITEM_LIST_UPDATE" then
+---   		if initialQuery then
+---   			ScanAuctions()
+---   			initialQuery = false
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("AUCTION_HOUSE_SHOW")
+---   f:RegisterEvent("REPLICATE_ITEM_LIST_UPDATE")
+---   f:SetScript("OnEvent", OnEvent)
+---
+--- See also:
+--- - C_AuctionHouse.SendSearchQuery
+---
+-- function C_AuctionHouse.ReplicateItems()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetReplicateItemInfo
+---======================================================================
+--- Returns information about the specified auction.
+---
+--- Arguments:
+--- @param index number - index, ranging from 0 up to C_AuctionHouse.GetNumReplicateItems()-1
+---
+--- Returns:
+--- @return string 1. name ?
+--- @return number 2. texture ?
+--- @return number 3. count
+--- @return number 4. qualityID
+--- @return boolean 5. usable ?
+--- @return number 6. level
+--- @return string 7. levelType ?
+--- @return number 8. minBid
+--- @return number 9. minIncrement
+--- @return number 10. buyoutPrice
+--- @return number 11. bidAmount
+--- @return string 12. highBidder ?
+--- @return string 13. bidderFullName ?
+--- @return string 14. owner ? - Always returns nil, except for your own auctions.
+--- @return string 15. ownerFullName ? - Always returns nil
+--- @return number 16. saleStatus
+--- @return number 17. itemID
+--- @return boolean 18. hasAllInfo ?
+---
+--- @since Patch 9.0.2 (2020-11-17): Hotfixed owner and ownerFullName to always return nil (except for your own auctions) as that seemed to be the cause of disconnects.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetReplicateItemInfo
+---
+--- Usage: name, texture, count, qualityID, usable, level, levelType, minBid, minIncrement, buyoutPrice, bidAmount, highBidder, bidderFullName, owner, ownerFullName, saleStatus, itemID, hasAllInfo = C_AuctionHouse.GetReplicateItemInfo(index)
+---
+--- Examples:
+--- Example 1:
+---   "", nil, 4, -1, false, 2766221440, nil, 0, 0, 40000, 0, nil, nil, nil, nil, 0, 36901, false
+---   "Goldclover", 134211, 4, 1, true, 1, "REQ_LEVEL_ABBR", 0, 0, 40000, 0, nil, nil, "Rialini", "Rialini-Ahn'Qiraj", 0, 36901, true
+--- Example 2:
+---   local initialQuery
+---   local auctions = {}
+---    
+---   local function ScanAuctions()
+---   	local beginTime = debugprofilestop()
+---   	local continuables = {}
+---   	wipe(auctions)
+---   	for i = 0, C_AuctionHouse.GetNumReplicateItems()-1 do
+---   		auctions[i] = {C_AuctionHouse.GetReplicateItemInfo(i)}
+---   		if not auctions[i][18] then -- hasAllInfo
+---   			local item = Item:CreateFromItemID(auctions[i][17]) -- itemID
+---   			continuables[item] = true
+---   
+---   			item:ContinueOnItemLoad(function()
+---   				auctions[i] = {C_AuctionHouse.GetReplicateItemInfo(i)}
+---   				continuables[item] = nil
+---   				if not next(continuables) then
+---   					print(format("Scanned %d auctions in %d milliseconds", #auctions+1, debugprofilestop()-beginTime))
+---   					-- do something with `auctions` or fire some callback
+---   				end
+---   			end)
+---   		end
+---   	end
+---   end
+---   
+---   local function OnEvent(self, event)
+---   	if event == "AUCTION_HOUSE_SHOW" then
+---   		C_AuctionHouse.ReplicateItems()
+---   		initialQuery = true
+---   	elseif event == "REPLICATE_ITEM_LIST_UPDATE" then
+---   		if initialQuery then
+---   			ScanAuctions()
+---   			initialQuery = false
+---   		end
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("AUCTION_HOUSE_SHOW")
+---   f:RegisterEvent("REPLICATE_ITEM_LIST_UPDATE")
+---   f:SetScript("OnEvent", OnEvent)
+---
+--- See also:
+--- - C_AuctionHouse.ReplicateItems
+--- - REPLICATE_ITEM_LIST_UPDATE
+---
+-- function C_AuctionHouse.GetReplicateItemInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetReplicateItemLink
+---======================================================================
+--- Returns the item link (if loaded) for an item from a ReplicateItems result.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return string itemLink ?  - ItemLink
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. Replaces GetAuctionItemLink(). [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetReplicateItemLink
+---
+--- Usage: itemLink = C_AuctionHouse.GetReplicateItemLink(index)
+---
+-- function C_AuctionHouse.GetReplicateItemLink()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetReplicateItemTimeLeft
+---======================================================================
+--- Returns the time left for an auction.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return number timeLeft
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. Replaces GetAuctionItemTimeLeft(). [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetReplicateItemTimeLeft
+---
+--- Usage: timeLeft = C_AuctionHouse.GetReplicateItemTimeLeft(index)
+---
+-- function C_AuctionHouse.GetReplicateItemTimeLeft()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetTimeLeftBandInfo
+---======================================================================
+--- Identifies the breakpoints for describing an auction's remaining duration using time-left bands.
+---
+--- Arguments:
+--- @param timeLeftBand Enum.AuctionHouseTimeLeftBand
+---
+--- Returns:
+--- @return number timeLeftMinSeconds - Minimum duration for auctions in this band.
+--- @return number timeLeftMaxSeconds - Maximum duration for auctions in this band.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetTimeLeftBandInfo
+---
+--- Usage: timeLeftMinSeconds, timeLeftMaxSeconds = C_AuctionHouse.GetTimeLeftBandInfo(timeLeftBand)
+---
+-- function C_AuctionHouse.GetTimeLeftBandInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFavorites
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return boolean hasFavorites
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFavorites
+---
+--- Usage: hasFavorites = C_AuctionHouse.HasFavorites()
+---
+-- function C_AuctionHouse.HasFavorites()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFullBidResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return boolean hasFullBidResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFullBidResults
+---
+--- Usage: hasFullBidResults = C_AuctionHouse.HasFullBidResults()
+---
+-- function C_AuctionHouse.HasFullBidResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFullBrowseResults
+---======================================================================
+--- Returns if the last group of summary results (groups of 500) is available.
+---
+--- Returns:
+--- @return boolean hasFullBrowseResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFullBrowseResults
+---
+--- Usage: hasFullBrowseResults = C_AuctionHouse.HasFullBrowseResults()
+---
+-- function C_AuctionHouse.HasFullBrowseResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFullOwnedAuctionResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return boolean hasFullOwnedAuctionResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFullOwnedAuctionResults
+---
+--- Usage: hasFullOwnedAuctionResults = C_AuctionHouse.HasFullOwnedAuctionResults()
+---
+-- function C_AuctionHouse.HasFullOwnedAuctionResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasMaxFavorites
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return boolean hasMaxFavorites
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasMaxFavorites
+---
+--- Usage: hasMaxFavorites = C_AuctionHouse.HasMaxFavorites()
+---
+-- function C_AuctionHouse.HasMaxFavorites()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasSearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return boolean hasSearchResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasSearchResults
+---
+--- Usage: hasSearchResults = C_AuctionHouse.HasSearchResults(itemKey)
+---
+-- function C_AuctionHouse.HasSearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.IsFavoriteItem
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return boolean isFavorite
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.IsFavoriteItem
+---
+--- Usage: isFavorite = C_AuctionHouse.IsFavoriteItem(itemKey)
+---
+-- function C_AuctionHouse.IsFavoriteItem()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.IsSellItemValid
+---======================================================================
+--- Returns true if an item from your bag can be posted on the auction house.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param displayError boolean ? = true
+---
+--- Returns:
+--- @return boolean valid
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.IsSellItemValid
+---
+--- Usage: valid = C_AuctionHouse.IsSellItemValid(item [, displayError])
+---
+-- function C_AuctionHouse.IsSellItemValid()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.IsThrottledMessageSystemReady
+---======================================================================
+--- Returns if the next query will be throttled, either delayed or cancelled.
+---
+--- Returns:
+--- @return boolean canSendThrottledMessage
+---
+--- @since Patch 8.3.0 (2020-01-14): Added. (Build 33237, Feb 3 2020)
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.IsThrottledMessageSystemReady
+---
+--- Usage: canSendThrottledMessage = C_AuctionHouse.IsThrottledMessageSystemReady()
+---
+-- function C_AuctionHouse.IsThrottledMessageSystemReady()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.MakeItemKey
+---======================================================================
+--- Returns an auction house item key.
+---
+--- Arguments:
+--- @param itemID number
+--- @param itemLevel number ? = 0
+--- @param itemSuffix number ? = 0
+--- @param battlePetSpeciesID number ? = 0 : BattlePetSpeciesID
+---
+--- Returns:
+--- @return ItemKey itemKey
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.MakeItemKey
+---
+--- Usage: itemKey = C_AuctionHouse.MakeItemKey(itemID [, itemLevel [, itemSuffix [, battlePetSpeciesID]]])
+---
+-- function C_AuctionHouse.MakeItemKey()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.PlaceBid
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param auctionID number
+--- @param bidAmount number - Amount in copper, only accepts gold and silently fails for non-zero copper counts.
+---
+--- @since Patch 9.1.5 (2021-11-02): Protected when called from a (macro) script.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.PlaceBid
+---
+--- Usage: C_AuctionHouse.PlaceBid(auctionID, bidAmount)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	local buyFrame = AuctionHouseFrame.ItemBuyFrame
+---   	C_AuctionHouse.PlaceBid(buyFrame.auctionID, buyFrame.BuyoutFrame.price)
+---   end
+--- Example 2:
+---   /run if not B then local f=CreateFrame("Button","B",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.ItemBuyFrame.BuyoutFrame.BuyoutButton)end
+---   /click B LeftButton 1
+---   /click StaticPopup1Button1
+---
+--- See also:
+--- - C_AuctionHouse.StartCommoditiesPurchase
+--- - https://www.curseforge.com/wow/addons/magic-button/
+---
+-- function C_AuctionHouse.PlaceBid()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.PostCommodity
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param duration number
+---
+--- Returns:
+--- @return  needsConfirmation boolean
+---
+--- @since Patch 9.2.5 (2022-05-31): Added needsConfirmation return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.PostCommodity
+---
+--- Usage: needsConfirmation = C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.PostCommodity(ItemLocation:CreateFromBagAndSlot(0, 1), 3, 14, 2700)
+---   end
+--- Example 2:
+---   /run if not AHPostC then local f=CreateFrame("Button","AHPostC",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.CommoditiesSellFrame.PostButton)end
+---   /click AHPostC LeftButton 1
+---
+--- See also:
+--- - C_AuctionHouse.PostItem
+--- - https://www.curseforge.com/wow/addons/magic-button/
+---
+-- function C_AuctionHouse.PostCommodity()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.PostItem
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param item ItemLocationMixin 🔗
+--- @param duration number
+---
+--- Returns:
+--- @return  needsConfirmation boolean
+---
+--- @since Patch 9.2.5 (2022-05-31): Added needsConfirmation return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.PostItem
+---
+--- Usage: needsConfirmation = C_AuctionHouse.PostItem(item, duration, quantity [, bid [, buyout]])
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.PostItem(ItemLocation:CreateFromBagAndSlot(0, 1), 3, 1, nil, 4200)
+---   end
+--- Example 2:
+---   /run if not AHPost then local f=CreateFrame("Button","AHPost",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.ItemSellFrame.PostButton)end
+---   /click AHPost LeftButton 1
+---
+--- See also:
+--- - C_AuctionHouse.PostCommodity
+--- - https://www.curseforge.com/wow/addons/magic-button/
+---
+-- function C_AuctionHouse.PostItem()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.QueryBids
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param sorts AuctionHouseSortType []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.QueryBids
+---
+--- Usage: C_AuctionHouse.QueryBids(sorts, auctionIDs)
+---
+-- function C_AuctionHouse.QueryBids()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RefreshCommoditySearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemID number
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RefreshCommoditySearchResults
+---
+--- Usage: C_AuctionHouse.RefreshCommoditySearchResults(itemID)
+---
+-- function C_AuctionHouse.RefreshCommoditySearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RefreshItemSearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- @since Patch 9.1.0 (2021-06-29): Added minLevelFilter, maxLevelFilter arguments.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RefreshItemSearchResults
+---
+--- Usage: C_AuctionHouse.RefreshItemSearchResults(itemKey [, minLevelFilter, maxLevelFilter])
+---
+-- function C_AuctionHouse.RefreshItemSearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RequestMoreBrowseResults
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestMoreBrowseResults
+---
+--- Usage: C_AuctionHouse.RequestMoreBrowseResults()
+---
+-- function C_AuctionHouse.RequestMoreBrowseResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RequestMoreCommoditySearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean hasFullResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestMoreCommoditySearchResults
+---
+--- Usage: hasFullResults = C_AuctionHouse.RequestMoreCommoditySearchResults(itemID)
+---
+-- function C_AuctionHouse.RequestMoreCommoditySearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RequestMoreItemSearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return boolean hasFullResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestMoreItemSearchResults
+---
+--- Usage: hasFullResults = C_AuctionHouse.RequestMoreItemSearchResults(itemKey)
+---
+-- function C_AuctionHouse.RequestMoreItemSearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.RequestOwnedAuctionBidderInfo
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param auctionID number
+---
+--- Returns:
+--- @return string bidderName
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestOwnedAuctionBidderInfo
+---
+--- Usage: bidderName = C_AuctionHouse.RequestOwnedAuctionBidderInfo(auctionID)
+---
+-- function C_AuctionHouse.RequestOwnedAuctionBidderInfo()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SearchForFavorites
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Otherwise it will brick the AH.
+---
+--- Arguments:
+--- @param sorts AuctionHouseSortType []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SearchForFavorites
+---
+--- Usage: C_AuctionHouse.SearchForFavorites(sorts)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.SearchForFavorites({})
+---   end
+--- Example 2:
+---   local sorts = {
+---   	{sortOrder = Enum.AuctionHouseSortOrder.Price, reverseSort = false},
+---   	{sortOrder = Enum.AuctionHouseSortOrder.Name, reverseSort = true},
+---   }
+---   
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.SearchForFavorites(sorts)
+---   end
+---
+-- function C_AuctionHouse.SearchForFavorites()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SearchForItemKeys
+---======================================================================
+--- Queries the auction house for summary results of up to 100 specific items.
+---
+--- Arguments:
+--- @param itemKeys ItemKey []
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SearchForItemKeys
+---
+--- Usage: C_AuctionHouse.SearchForItemKeys(itemKeys, sorts)
+---
+-- function C_AuctionHouse.SearchForItemKeys()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SendSearchQuery
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Otherwise it will brick the AH.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- @since Patch 9.1.0 (2021-06-29): Added minLevelFilter, maxLevelFilter arguments.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SendSearchQuery
+---
+--- Usage: C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems [, minLevelFilter [, maxLevelFilter]])
+---
+--- Examples:
+--- Example 1:
+---   local test_item = 5956 -- Blacksmith Hammer
+---   local test_commodity = 152579 -- Storm Silver Ore
+---   
+---   local btn = CreateFrame("Button", nil, UIParent, "UIPanelButtonTemplate")
+---   btn:SetPoint("CENTER")
+---   btn:SetSize(120, 40)
+---   btn:SetText("Example")
+---   btn:SetScript("OnClick", function(self, button)
+---   	local itemKey = C_AuctionHouse.MakeItemKey(test_commodity)
+---   	C_AuctionHouse.SendSearchQuery(itemKey, {}, false)
+---   end)
+---   
+---   local f = CreateFrame("Frame")
+---   
+---   function f:ITEM_SEARCH_RESULTS_UPDATED(event, itemKey)
+---   	for i = 1, C_AuctionHouse.GetNumItemSearchResults(itemKey) do
+---   		local result = C_AuctionHouse.GetItemSearchResultInfo(itemKey, i)
+---   		print(event, itemKey.itemID, i, result.auctionID, result.buyoutAmount)
+---   	end
+---   end
+---   
+---   function f:COMMODITY_SEARCH_RESULTS_UPDATED(event, itemID)
+---   	for i = 1, C_AuctionHouse.GetNumCommoditySearchResults(itemID) do
+---   		local result = C_AuctionHouse.GetCommoditySearchResultInfo(itemID, i)
+---   		print(event, itemID, i, result.quantity, result.auctionID, result.unitPrice)
+---   	end
+---   end
+---   
+---   function f:OnEvent(event, ...)
+---   	self[event](self, event, ...)
+---   end
+---   
+---   f:RegisterEvent("ITEM_SEARCH_RESULTS_UPDATED")
+---   f:RegisterEvent("COMMODITY_SEARCH_RESULTS_UPDATED")
+---   f:SetScript("OnEvent", f.OnEvent)
+--- Example 2:
+---   local sorts = {
+---   	{sortOrder = Enum.AuctionHouseSortOrder.Price, reverseSort = false},
+---   	{sortOrder = Enum.AuctionHouseSortOrder.Level, reverseSort = true},
+---   }
+---   
+---   C_AuctionHouse.SendSearchQuery(itemKey, sorts, false)
+---
+-- function C_AuctionHouse.SendSearchQuery()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SendSellSearchQuery
+---======================================================================
+--- #noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.Otherwise it will brick the AH.
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SendSellSearchQuery
+---
+--- Usage: C_AuctionHouse.SendSellSearchQuery(itemKey, sorts, separateOwnerItems)
+---
+--- See also:
+--- - C_AuctionHouse.SendSearchQuery
+---
+-- function C_AuctionHouse.SendSellSearchQuery()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SetFavoriteItem
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SetFavoriteItem
+---
+--- Usage: C_AuctionHouse.SetFavoriteItem(itemKey, setFavorite)
+---
+-- function C_AuctionHouse.SetFavoriteItem()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.ShouldAutoPopulatePrice
+---======================================================================
+--- Returns:
+--- @return boolean shouldAutoPopulatePrice
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ShouldAutoPopulatePrice
+---
+--- Usage: shouldAutoPopulatePrice = C_AuctionHouse.ShouldAutoPopulatePrice()
+---
+-- function C_AuctionHouse.ShouldAutoPopulatePrice()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.StartCommoditiesPurchase
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#noscript - This cannot be called directly from /run and /script (RunScript) and loadstring, e.g. WowLua and WeakAuras.
+---
+--- Arguments:
+--- @param itemID number
+--- @param quantity number
+---
+--- @since Patch 9.1.5 (2021-11-02): Protected when called from a (macro) script.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.StartCommoditiesPurchase
+---
+--- Usage: C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity)
+---
+--- Examples:
+--- Example 1:
+---   function Example() -- /run Example()
+---   	C_AuctionHouse.StartCommoditiesPurchase(2592, 3)
+---   	C_Timer.After(.5, function() C_AuctionHouse.ConfirmCommoditiesPurchase(2592, 3) end)
+---   end
+--- Example 2:
+---   local item = {}
+---   
+---   function TestPurchaseCommodity(itemID, quantity)
+---   	C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity)
+---   	item.itemID = itemID
+---   	item.quantity = quantity
+---   end
+---   
+---   local function OnEvent(self, event)
+---   	if next(item) then
+---   		C_AuctionHouse.ConfirmCommoditiesPurchase(item.itemID, item.quantity)
+---   		wipe(item)
+---   	end
+---   end
+---   
+---   local f = CreateFrame("Frame")
+---   f:RegisterEvent("AUCTION_HOUSE_THROTTLED_SYSTEM_READY")
+---   f:SetScript("OnEvent", OnEvent)
+---   
+---   -- /run TestPurchaseCommodity(2592, 2)
+--- Example 3:
+---   /run if not AHBuyC then local f=CreateFrame("Button","AHBuyC",nil,"SecureActionButtonTemplate")f:SetAttribute("type","click")f:SetAttribute("clickbutton",AuctionHouseFrame.CommoditiesBuyFrame.BuyDisplay.BuyButton)end
+---
+--- See also:
+--- - https://www.curseforge.com/wow/addons/magic-button/
+---
+-- function C_AuctionHouse.StartCommoditiesPurchase()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.SupportsCopperValues
+---======================================================================
+--- Returns:
+--- @return boolean supportsCopperValues
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SupportsCopperValues
+---
+--- Usage: supportsCopperValues = C_AuctionHouse.SupportsCopperValues()
+---
+-- function C_AuctionHouse.SupportsCopperValues()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxItemSearchResultBid
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return number maxBid ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxItemSearchResultBid
+---
+--- Usage: maxBid = C_AuctionHouse.GetMaxItemSearchResultBid(itemKey)
+---
+-- function C_AuctionHouse.GetMaxItemSearchResultBid()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetMaxOwnedAuctionBuyout
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number maxBuyout ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetMaxOwnedAuctionBuyout
+---
+--- Usage: maxBuyout = C_AuctionHouse.GetMaxOwnedAuctionBuyout()
+---
+-- function C_AuctionHouse.GetMaxOwnedAuctionBuyout()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.GetNumBids
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Returns:
+--- @return number numBids
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetNumBids
+---
+--- Usage: numBids = C_AuctionHouse.GetNumBids()
+---
+-- function C_AuctionHouse.GetNumBids()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFullCommoditySearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean hasFullResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFullCommoditySearchResults
+---
+--- Usage: hasFullResults = C_AuctionHouse.HasFullCommoditySearchResults(itemID)
+---
+-- function C_AuctionHouse.HasFullCommoditySearchResults()
+-- end
+
+---======================================================================
+--- C_AuctionHouse.HasFullItemSearchResults
+---======================================================================
+--- Searches are split into 4 sections:
+				- Summary (does queries by name and item key)
+				- Search (including SellSearch) that returns per-auction results for use when buying or selling
+				- Owned (similar to Search, but for auctions you've posted)
+---
+--- Arguments:
+--- @param itemKey ItemKey
+---
+--- Returns:
+--- @return boolean hasFullResults
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.HasFullItemSearchResults
+---
+--- Usage: hasFullResults = C_AuctionHouse.HasFullItemSearchResults(itemKey)
+---
+-- function C_AuctionHouse.HasFullItemSearchResults()
+-- end

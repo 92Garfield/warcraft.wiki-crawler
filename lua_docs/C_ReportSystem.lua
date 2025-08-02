@@ -1,0 +1,166 @@
+--[=[
+-- C_ReportSystem API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 9
+--]=]
+
+--- @class C_ReportSystem
+--- C_ReportSystem namespace contains 9 functions
+local C_ReportSystem = {}
+
+--[=[
+-- C_ReportSystem Functions:
+-- - C_ReportSystem.CanReportPlayer
+-- - C_ReportSystem.CanReportPlayerForLanguage
+-- - C_ReportSystem.GetMajorCategoriesForReportType
+-- - C_ReportSystem.GetMajorCategoryString
+-- - C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory
+-- - C_ReportSystem.GetMinorCategoryString
+-- - C_ReportSystem.ReportServerLag
+-- - C_ReportSystem.ReportStuckInCombat
+-- - C_ReportSystem.SendReport
+--]=]
+
+---======================================================================
+--- C_ReportSystem.CanReportPlayer
+---======================================================================
+--- Returns if a player can be reported.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean canReport
+---
+--- @since Patch 8.1.5 (2019-03-12): Replaces C_ChatInfo.CanReportPlayer() which is deprecated[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.CanReportPlayer
+---
+--- Usage: canReport = C_ReportSystem.CanReportPlayer(playerLocation)
+---
+-- function C_ReportSystem.CanReportPlayer()
+-- end
+
+---======================================================================
+--- C_ReportSystem.CanReportPlayerForLanguage
+---======================================================================
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean canReport
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.CanReportPlayerForLanguage
+---
+--- Usage: canReport = C_ReportSystem.CanReportPlayerForLanguage(playerLocation)
+---
+-- function C_ReportSystem.CanReportPlayerForLanguage()
+-- end
+
+---======================================================================
+--- C_ReportSystem.GetMajorCategoriesForReportType
+---======================================================================
+--- Arguments:
+--- @param reportType Enum.ReportType
+---
+--- Returns:
+--- @return Enum.ReportMajorCategory majorCategories []
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMajorCategoriesForReportType
+---
+--- Usage: majorCategories = C_ReportSystem.GetMajorCategoriesForReportType(reportType)
+---
+-- function C_ReportSystem.GetMajorCategoriesForReportType()
+-- end
+
+---======================================================================
+--- C_ReportSystem.GetMajorCategoryString
+---======================================================================
+--- Arguments:
+--- @param majorCategory Enum.ReportMajorCategory
+---
+--- Returns:
+--- @return string majorCategoryString
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMajorCategoryString
+---
+--- Usage: majorCategoryString = C_ReportSystem.GetMajorCategoryString(majorCategory)
+---
+-- function C_ReportSystem.GetMajorCategoryString()
+-- end
+
+---======================================================================
+--- C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory
+---======================================================================
+--- Arguments:
+--- @param reportType Enum.ReportType
+---
+--- Returns:
+--- @return Enum.ReportMinorCategory minorCategories []
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory
+---
+--- Usage: minorCategories = C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory(reportType, majorCategory)
+---
+-- function C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory()
+-- end
+
+---======================================================================
+--- C_ReportSystem.GetMinorCategoryString
+---======================================================================
+--- Arguments:
+--- @param minorCategory Enum.ReportMinorCategory
+---
+--- Returns:
+--- @return string minorCategoryString
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMinorCategoryString
+---
+--- Usage: minorCategoryString = C_ReportSystem.GetMinorCategoryString(minorCategory)
+---
+-- function C_ReportSystem.GetMinorCategoryString()
+-- end
+
+---======================================================================
+--- C_ReportSystem.ReportServerLag
+---======================================================================
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_ReportSystem.ReportServerLag()
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.ReportServerLag
+---
+--- Usage: C_ReportSystem.ReportServerLag()
+---
+-- function C_ReportSystem.ReportServerLag()
+-- end
+
+---======================================================================
+--- C_ReportSystem.ReportStuckInCombat
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.ReportStuckInCombat
+---
+--- Usage: C_ReportSystem.ReportStuckInCombat()
+---
+-- function C_ReportSystem.ReportStuckInCombat()
+-- end
+
+---======================================================================
+--- C_ReportSystem.SendReport
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param reportInfo  ReportInfoMixin
+--- @param playerLocation PlayerLocationMixin ?🔗
+---
+--- @since Patch 9.2.5 (2022-05-31): Added. Replaces C_ReportSystem.SendReportPlayer()
+--- @see https://warcraft.wiki.gg/wiki/API_C_ReportSystem.SendReport
+---
+--- Usage: C_ReportSystem.SendReport(reportInfo [, playerLocation])
+---
+-- function C_ReportSystem.SendReport()
+-- end

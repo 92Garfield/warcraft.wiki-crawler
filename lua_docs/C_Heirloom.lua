@@ -1,0 +1,77 @@
+--[=[
+-- C_Heirloom API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_Heirloom
+--- C_Heirloom namespace contains 3 functions
+local C_Heirloom = {}
+
+--[=[
+-- C_Heirloom Functions:
+-- - C_Heirloom.CanHeirloomUpgradeFromPending
+-- - C_Heirloom.GetHeirloomInfo
+-- - C_Heirloom.GetHeirloomItemIDs
+--]=]
+
+---======================================================================
+--- C_Heirloom.CanHeirloomUpgradeFromPending
+---======================================================================
+--- Returns true if an heirloom can be upgraded by using an upgrade item
+---
+--- Arguments:
+--- @param itemID number - a heirloom itemID
+---
+--- Returns:
+--- @return boolean canUpgrade
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending
+---
+--- Usage: canUpgrade = C_Heirloom.CanHeirloomUpgradeFromPending(itemID)
+---
+-- function C_Heirloom.CanHeirloomUpgradeFromPending()
+-- end
+
+---======================================================================
+--- C_Heirloom.GetHeirloomInfo
+---======================================================================
+--- Returns information about a heirloom by itemID
+---
+--- Arguments:
+--- @param itemID number - a heirloom itemID
+---
+--- Returns:
+--- @return string name - false if not a heirloom item
+--- @return string itemEquipLoc
+--- @return boolean isPvP
+--- @return string itemTexture
+--- @return number upgradeLevel
+--- @return number source - heirloom source index
+--- @return boolean searchFiltered
+--- @return number effectiveLevel
+--- @return number minLevel
+--- @return number maxLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomInfo
+---
+--- Usage: name, itemEquipLoc, isPvP, itemTexture, upgradeLevel, source, searchFiltered, effectiveLevel, minLevel, maxLevel = C_Heirloom.GetHeirloomInfo(itemID)
+---
+-- function C_Heirloom.GetHeirloomInfo()
+-- end
+
+---======================================================================
+--- C_Heirloom.GetHeirloomItemIDs
+---======================================================================
+--- Returns the heirloom item IDs for all classes.
+---
+--- Returns:
+--- @return number itemIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomItemIDs
+---
+--- Usage: itemIDs = C_Heirloom.GetHeirloomItemIDs()
+---
+-- function C_Heirloom.GetHeirloomItemIDs()
+-- end

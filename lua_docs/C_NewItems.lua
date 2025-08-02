@@ -1,0 +1,78 @@
+--[=[
+-- C_NewItems API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_NewItems
+--- C_NewItems namespace contains 3 functions
+local C_NewItems = {}
+
+--[=[
+-- C_NewItems Functions:
+-- - C_NewItems.ClearAll
+-- - C_NewItems.IsNewItem
+-- - C_NewItems.RemoveNewItem
+--]=]
+
+---======================================================================
+--- C_NewItems.ClearAll
+---======================================================================
+--- Clears the new item flag on all items in the player's inventory.
+---
+--- @since Patch 5.4.0 (2013-09-10): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_NewItems.ClearAll
+---
+--- Usage: C_NewItems.ClearAll()
+---
+--- See also:
+--- - C_NewItems.IsNewItem
+--- - C_NewItems.RemoveNewItem
+---
+-- function C_NewItems.ClearAll()
+-- end
+
+---======================================================================
+--- C_NewItems.IsNewItem
+---======================================================================
+--- Returns true if the item in the inventory slot is flagged as new.
+---
+--- Arguments:
+--- @param containerIndex number - BagID of the container.
+--- @param slotIndex number - ID of the inventory slot within the container.
+---
+--- Returns:
+--- @return boolean isNew - Returns true if the inventory slot holds a newly-acquired item; otherwise false (empty slot or a non-new item).
+---
+--- @since Patch 5.4.0 (2013-09-10): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_NewItems.IsNewItem
+---
+--- Usage: isNew = C_NewItems.IsNewItem(containerIndex, slotIndex)
+---
+--- See also:
+--- - C_NewItems.RemoveNewItem
+--- - IsBattlePayItem
+---
+-- function C_NewItems.IsNewItem()
+-- end
+
+---======================================================================
+--- C_NewItems.RemoveNewItem
+---======================================================================
+--- Clears the "new item" flag.
+---
+--- Arguments:
+--- @param containerIndex number : bagID - container slot id.
+--- @param slotIndex number - slot within the bag to clear the "new item" flag for.
+---
+--- @since Patch 5.4.0 (2013-09-10): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_NewItems.RemoveNewItem
+---
+--- Usage: C_NewItems.RemoveNewItem(containerIndex, slotIndex)
+---
+--- See also:
+--- - C_NewItems.ClearAll
+---
+-- function C_NewItems.RemoveNewItem()
+-- end

@@ -1,0 +1,123 @@
+--[=[
+-- C_PlayerInteractionManager API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_PlayerInteractionManager
+--- C_PlayerInteractionManager namespace contains 7 functions
+local C_PlayerInteractionManager = {}
+
+--[=[
+-- C_PlayerInteractionManager Functions:
+-- - C_PlayerInteractionManager.ClearInteraction
+-- - C_PlayerInteractionManager.ConfirmationInteraction
+-- - C_PlayerInteractionManager.InteractUnit
+-- - C_PlayerInteractionManager.IsInteractingWithNpcOfType
+-- - C_PlayerInteractionManager.IsReplacingUnit
+-- - C_PlayerInteractionManager.IsValidNPCInteraction
+-- - C_PlayerInteractionManager.ReopenInteraction
+--]=]
+
+---======================================================================
+--- C_PlayerInteractionManager.ClearInteraction
+---======================================================================
+--- Arguments:
+--- @param type Enum.PlayerInteractionType ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.ClearInteraction
+---
+--- Usage: C_PlayerInteractionManager.ClearInteraction([type])
+---
+-- function C_PlayerInteractionManager.ClearInteraction()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.ConfirmationInteraction
+---======================================================================
+--- Arguments:
+--- @param type Enum.PlayerInteractionType ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.ConfirmationInteraction
+---
+--- Usage: C_PlayerInteractionManager.ConfirmationInteraction([type])
+---
+-- function C_PlayerInteractionManager.ConfirmationInteraction()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.InteractUnit
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param unit string
+--- @param exactMatch boolean ? = false
+--- @param looseTargeting boolean ? = true
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 10.0.7 (2023-03-21): Added looseTargeting argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.InteractUnit
+---
+--- Usage: success = C_PlayerInteractionManager.InteractUnit(unit [, exactMatch, looseTargeting])
+---
+-- function C_PlayerInteractionManager.InteractUnit()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.IsInteractingWithNpcOfType
+---======================================================================
+--- Arguments:
+--- @param type Enum.PlayerInteractionType
+---
+--- Returns:
+--- @return boolean interacting
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.IsInteractingWithNpcOfType
+---
+--- Usage: interacting = C_PlayerInteractionManager.IsInteractingWithNpcOfType(type)
+---
+-- function C_PlayerInteractionManager.IsInteractingWithNpcOfType()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.IsReplacingUnit
+---======================================================================
+--- Returns:
+--- @return boolean replacing
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.IsReplacingUnit
+---
+--- Usage: replacing = C_PlayerInteractionManager.IsReplacingUnit()
+---
+-- function C_PlayerInteractionManager.IsReplacingUnit()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.IsValidNPCInteraction
+---======================================================================
+--- Arguments:
+--- @param type Enum.PlayerInteractionType
+---
+--- Returns:
+--- @return boolean isValidInteraction
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.IsValidNPCInteraction
+---
+--- Usage: isValidInteraction = C_PlayerInteractionManager.IsValidNPCInteraction(type)
+---
+-- function C_PlayerInteractionManager.IsValidNPCInteraction()
+-- end
+
+---======================================================================
+--- C_PlayerInteractionManager.ReopenInteraction
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInteractionManager.ReopenInteraction
+---
+--- Usage: C_PlayerInteractionManager.ReopenInteraction()
+---
+-- function C_PlayerInteractionManager.ReopenInteraction()
+-- end

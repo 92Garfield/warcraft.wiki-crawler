@@ -1,0 +1,206 @@
+--[=[
+-- C_StableInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 13
+--]=]
+
+--- @class C_StableInfo
+--- C_StableInfo namespace contains 13 functions
+local C_StableInfo = {}
+
+--[=[
+-- C_StableInfo Functions:
+-- - C_StableInfo.ClosePetStables
+-- - C_StableInfo.GetActivePetList
+-- - C_StableInfo.GetAvailablePetSpecInfos
+-- - C_StableInfo.GetNumActivePets
+-- - C_StableInfo.GetNumStablePets
+-- - C_StableInfo.GetStablePetFoodTypes
+-- - C_StableInfo.GetStablePetInfo
+-- - C_StableInfo.GetStabledPetList
+-- - C_StableInfo.IsAtStableMaster
+-- - C_StableInfo.IsPetFavorite
+-- - C_StableInfo.PickupStablePet
+-- - C_StableInfo.SetPetFavorite
+-- - C_StableInfo.SetPetSlot
+--]=]
+
+---======================================================================
+--- C_StableInfo.ClosePetStables
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.ClosePetStables
+---
+--- Usage: C_StableInfo.ClosePetStables()
+---
+-- function C_StableInfo.ClosePetStables()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetActivePetList
+---======================================================================
+--- Returns:
+--- @return PetInfo activePets []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetActivePetList
+---
+--- Usage: activePets = C_StableInfo.GetActivePetList()
+---
+-- function C_StableInfo.GetActivePetList()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetAvailablePetSpecInfos
+---======================================================================
+--- Returns:
+--- @return PetSpecInfo petSpecInfos []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetAvailablePetSpecInfos
+---
+--- Usage: petSpecInfos = C_StableInfo.GetAvailablePetSpecInfos()
+---
+-- function C_StableInfo.GetAvailablePetSpecInfos()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetNumActivePets
+---======================================================================
+--- Returns:
+--- @return number numActivePets
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetNumActivePets
+---
+--- Usage: numActivePets = C_StableInfo.GetNumActivePets()
+---
+-- function C_StableInfo.GetNumActivePets()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetNumStablePets
+---======================================================================
+--- Returns:
+--- @return number numStablePets
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetNumStablePets
+---
+--- Usage: numStablePets = C_StableInfo.GetNumStablePets()
+---
+-- function C_StableInfo.GetNumStablePets()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetStabledPetList
+---======================================================================
+--- Returns:
+--- @return PetInfo stabledPets []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetStabledPetList
+---
+--- Usage: stabledPets = C_StableInfo.GetStabledPetList()
+---
+-- function C_StableInfo.GetStabledPetList()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetStablePetFoodTypes
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return string foodTypes []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetStablePetFoodTypes
+---
+--- Usage: foodTypes = C_StableInfo.GetStablePetFoodTypes(index)
+---
+-- function C_StableInfo.GetStablePetFoodTypes()
+-- end
+
+---======================================================================
+--- C_StableInfo.GetStablePetInfo
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return PetInfo petInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetStablePetInfo
+---
+--- Usage: petInfo = C_StableInfo.GetStablePetInfo(index)
+---
+-- function C_StableInfo.GetStablePetInfo()
+-- end
+
+---======================================================================
+--- C_StableInfo.IsAtStableMaster
+---======================================================================
+--- Returns:
+--- @return boolean isAtStableMaster
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.IsAtStableMaster
+---
+--- Usage: isAtStableMaster = C_StableInfo.IsAtStableMaster()
+---
+-- function C_StableInfo.IsAtStableMaster()
+-- end
+
+---======================================================================
+--- C_StableInfo.IsPetFavorite
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return boolean isFavorite
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.IsPetFavorite
+---
+--- Usage: isFavorite = C_StableInfo.IsPetFavorite(slot)
+---
+-- function C_StableInfo.IsPetFavorite()
+-- end
+
+---======================================================================
+--- C_StableInfo.PickupStablePet
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.PickupStablePet
+---
+--- Usage: C_StableInfo.PickupStablePet(index)
+---
+-- function C_StableInfo.PickupStablePet()
+-- end
+
+---======================================================================
+--- C_StableInfo.SetPetFavorite
+---======================================================================
+--- Arguments:
+--- @param slot number
+--- @param isFavorite boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.SetPetFavorite
+---
+--- Usage: C_StableInfo.SetPetFavorite(slot, isFavorite)
+---
+-- function C_StableInfo.SetPetFavorite()
+-- end
+
+---======================================================================
+--- C_StableInfo.SetPetSlot
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param slot number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_StableInfo.SetPetSlot
+---
+--- Usage: C_StableInfo.SetPetSlot(index, slot)
+---
+-- function C_StableInfo.SetPetSlot()
+-- end

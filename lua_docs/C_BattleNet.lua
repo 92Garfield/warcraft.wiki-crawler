@@ -1,0 +1,253 @@
+--[=[
+-- C_BattleNet API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_BattleNet
+--- C_BattleNet namespace contains 7 functions
+local C_BattleNet = {}
+
+--[=[
+-- C_BattleNet Functions:
+-- - C_BattleNet.GetAccountInfoByGUID
+-- - C_BattleNet.GetAccountInfoByID
+-- - C_BattleNet.GetFriendAccountInfo
+-- - C_BattleNet.GetFriendGameAccountInfo
+-- - C_BattleNet.GetFriendNumGameAccounts
+-- - C_BattleNet.GetGameAccountInfoByGUID
+-- - C_BattleNet.GetGameAccountInfoByID
+--]=]
+
+---======================================================================
+--- C_BattleNet.GetFriendAccountInfo
+---======================================================================
+--- Returns information about a Battle.net friend account.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param wowAccountGUID string ? : BNetAccountGUID
+---
+--- Returns:
+--- @return BNetAccountInfo accountInfo ?
+---
+--- @since Patch 11.0.5 (2024-10-22): Removed isWowMobile field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendAccountInfo
+---
+--- Usage: accountInfo = C_BattleNet.GetFriendAccountInfo(friendIndex [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByID(id [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	local acc = C_BattleNet.GetFriendAccountInfo(i)
+---   	local game = acc.gameAccountInfo
+---   	print(acc.bnetAccountID, acc.accountName, game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 1, "|Kq2|k", 5, true, "BSAp"
+---   -- 2, "|Kq1|k", nil, false, ""
+---
+-- function C_BattleNet.GetFriendAccountInfo()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetAccountInfoByID
+---======================================================================
+--- Returns information about a Battle.net friend account.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param wowAccountGUID string ? : BNetAccountGUID
+---
+--- Returns:
+--- @return BNetAccountInfo accountInfo ?
+---
+--- @since Patch 11.0.5 (2024-10-22): Removed isWowMobile field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByID
+---
+--- Usage: accountInfo = C_BattleNet.GetFriendAccountInfo(friendIndex [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByID(id [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	local acc = C_BattleNet.GetFriendAccountInfo(i)
+---   	local game = acc.gameAccountInfo
+---   	print(acc.bnetAccountID, acc.accountName, game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 1, "|Kq2|k", 5, true, "BSAp"
+---   -- 2, "|Kq1|k", nil, false, ""
+---
+-- function C_BattleNet.GetAccountInfoByID()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetAccountInfoByGUID
+---======================================================================
+--- Returns information about a Battle.net friend account.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param wowAccountGUID string ? : BNetAccountGUID
+---
+--- Returns:
+--- @return BNetAccountInfo accountInfo ?
+---
+--- @since Patch 11.0.5 (2024-10-22): Removed isWowMobile field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByGUID
+---
+--- Usage: accountInfo = C_BattleNet.GetFriendAccountInfo(friendIndex [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByID(id [, wowAccountGUID])
+            = C_BattleNet.GetAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	local acc = C_BattleNet.GetFriendAccountInfo(i)
+---   	local game = acc.gameAccountInfo
+---   	print(acc.bnetAccountID, acc.accountName, game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 1, "|Kq2|k", 5, true, "BSAp"
+---   -- 2, "|Kq1|k", nil, false, ""
+---
+-- function C_BattleNet.GetAccountInfoByGUID()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetFriendGameAccountInfo
+---======================================================================
+--- Returns information on the game the Battle.net friend is playing.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param accountIndex number - Index ranging from 1 to C_BattleNet.GetFriendNumGameAccounts()
+---
+--- Returns:
+--- @return BNetGameAccountInfo gameAccountInfo ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Changed to C_BattleNet.GetFriendGameAccountInfo and C_BattleNet.GetGameAccountInfoByID().[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendGameAccountInfo
+---
+--- Usage: gameAccountInfo = C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex)
+                = C_BattleNet.GetGameAccountInfoByID(id)
+                = C_BattleNet.GetGameAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	for j = 1, C_BattleNet.GetFriendNumGameAccounts(i) do
+---   		local game = C_BattleNet.GetFriendGameAccountInfo(i, j)
+---   		print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   	end
+---   end
+---   -- 5, true, "BSAp"
+--- Example 2:
+---   for i = 1, BNGetNumFriends() do
+---   	local game = C_BattleNet.GetFriendAccountInfo(i).gameAccountInfo
+---   	print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 5, true, "BSAp"
+---   -- nil, false, ""
+---
+-- function C_BattleNet.GetFriendGameAccountInfo()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetGameAccountInfoByID
+---======================================================================
+--- Returns information on the game the Battle.net friend is playing.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param accountIndex number - Index ranging from 1 to C_BattleNet.GetFriendNumGameAccounts()
+---
+--- Returns:
+--- @return BNetGameAccountInfo gameAccountInfo ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Changed to C_BattleNet.GetFriendGameAccountInfo and C_BattleNet.GetGameAccountInfoByID().[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByID
+---
+--- Usage: gameAccountInfo = C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex)
+                = C_BattleNet.GetGameAccountInfoByID(id)
+                = C_BattleNet.GetGameAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	for j = 1, C_BattleNet.GetFriendNumGameAccounts(i) do
+---   		local game = C_BattleNet.GetFriendGameAccountInfo(i, j)
+---   		print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   	end
+---   end
+---   -- 5, true, "BSAp"
+--- Example 2:
+---   for i = 1, BNGetNumFriends() do
+---   	local game = C_BattleNet.GetFriendAccountInfo(i).gameAccountInfo
+---   	print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 5, true, "BSAp"
+---   -- nil, false, ""
+---
+-- function C_BattleNet.GetGameAccountInfoByID()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetGameAccountInfoByGUID
+---======================================================================
+--- Returns information on the game the Battle.net friend is playing.
+---
+--- Arguments:
+--- @param friendIndex number - Index ranging from 1 to BNGetNumFriends()
+--- @param accountIndex number - Index ranging from 1 to C_BattleNet.GetFriendNumGameAccounts()
+---
+--- Returns:
+--- @return BNetGameAccountInfo gameAccountInfo ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Changed to C_BattleNet.GetFriendGameAccountInfo and C_BattleNet.GetGameAccountInfoByID().[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByGUID
+---
+--- Usage: gameAccountInfo = C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex)
+                = C_BattleNet.GetGameAccountInfoByID(id)
+                = C_BattleNet.GetGameAccountInfoByGUID(guid)
+---
+--- Examples:
+--- Example 1:
+---   for i = 1, BNGetNumFriends() do
+---   	for j = 1, C_BattleNet.GetFriendNumGameAccounts(i) do
+---   		local game = C_BattleNet.GetFriendGameAccountInfo(i, j)
+---   		print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   	end
+---   end
+---   -- 5, true, "BSAp"
+--- Example 2:
+---   for i = 1, BNGetNumFriends() do
+---   	local game = C_BattleNet.GetFriendAccountInfo(i).gameAccountInfo
+---   	print(game.gameAccountID, game.isOnline, game.clientProgram)
+---   end
+---   -- 5, true, "BSAp"
+---   -- nil, false, ""
+---
+-- function C_BattleNet.GetGameAccountInfoByGUID()
+-- end
+
+---======================================================================
+--- C_BattleNet.GetFriendNumGameAccounts
+---======================================================================
+--- Returns the number of game accounts for the Battle.net friend.
+---
+--- Arguments:
+--- @param friendIndex number - The Battle.net friend's index on the friends list ranging from 1 to BNGetNumFriends()
+---
+--- Returns:
+--- @return number numGameAccounts - The number of accounts or 0 if friend is not online.
+---
+--- @since Patch 8.2.5 (2019-09-24): Changed to C_BattleNet.GetFriendNumGameAccounts()
+--- @see https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendNumGameAccounts
+---
+--- Usage: numGameAccounts = C_BattleNet.GetFriendNumGameAccounts(friendIndex)
+---
+-- function C_BattleNet.GetFriendNumGameAccounts()
+-- end

@@ -1,0 +1,113 @@
+--[=[
+-- C_IslandsQueue API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_IslandsQueue
+--- C_IslandsQueue namespace contains 6 functions
+local C_IslandsQueue = {}
+
+--[=[
+-- C_IslandsQueue Functions:
+-- - C_IslandsQueue.CloseIslandsQueueScreen
+-- - C_IslandsQueue.GetIslandDifficultyInfo
+-- - C_IslandsQueue.GetIslandsMaxGroupSize
+-- - C_IslandsQueue.GetIslandsWeeklyQuestID
+-- - C_IslandsQueue.QueueForIsland
+-- - C_IslandsQueue.RequestPreloadRewardData
+--]=]
+
+---======================================================================
+--- C_IslandsQueue.CloseIslandsQueueScreen
+---======================================================================
+--- Closes the islands queue screen.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.CloseIslandsQueueScreen
+---
+--- Usage: C_IslandsQueue.CloseIslandsQueueScreen()
+---
+-- function C_IslandsQueue.CloseIslandsQueueScreen()
+-- end
+
+---======================================================================
+--- C_IslandsQueue.GetIslandDifficultyInfo
+---======================================================================
+--- Returns the island expedition modes.
+---
+--- Returns:
+--- @return  islandDifficultyInfo structure - IslandsQueueDifficultyInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.GetIslandDifficultyInfo
+---
+--- Usage: islandDifficultyInfo = C_IslandsQueue.GetIslandDifficultyInfo()
+---
+-- function C_IslandsQueue.GetIslandDifficultyInfo()
+-- end
+
+---======================================================================
+--- C_IslandsQueue.GetIslandsMaxGroupSize
+---======================================================================
+--- Returns the max group size for expeditions.
+---
+--- Returns:
+--- @return number maxGroupSize - Returns 3.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.GetIslandsMaxGroupSize
+---
+--- Usage: maxGroupSize = C_IslandsQueue.GetIslandsMaxGroupSize()
+---
+-- function C_IslandsQueue.GetIslandsMaxGroupSize()
+-- end
+
+---======================================================================
+--- C_IslandsQueue.GetIslandsWeeklyQuestID
+---======================================================================
+--- Returns the weekly island quest.
+---
+--- Returns:
+--- @return number questID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.GetIslandsWeeklyQuestID
+---
+--- Usage: questID = C_IslandsQueue.GetIslandsWeeklyQuestID()
+---
+-- function C_IslandsQueue.GetIslandsWeeklyQuestID()
+-- end
+
+---======================================================================
+--- C_IslandsQueue.QueueForIsland
+---======================================================================
+--- Queues for an island expedition.
+---
+--- Arguments:
+--- @param difficultyID number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.QueueForIsland
+---
+--- Usage: C_IslandsQueue.QueueForIsland(difficultyID)
+---
+-- function C_IslandsQueue.QueueForIsland()
+-- end
+
+---======================================================================
+--- C_IslandsQueue.RequestPreloadRewardData
+---======================================================================
+--- Preloads reward data for a quest id.
+---
+--- Arguments:
+--- @param questId number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_IslandsQueue.RequestPreloadRewardData
+---
+--- Usage: C_IslandsQueue.RequestPreloadRewardData(questId)
+---
+-- function C_IslandsQueue.RequestPreloadRewardData()
+-- end

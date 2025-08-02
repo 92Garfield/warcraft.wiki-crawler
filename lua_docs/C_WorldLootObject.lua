@@ -1,0 +1,150 @@
+--[=[
+-- C_WorldLootObject API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_WorldLootObject
+--- C_WorldLootObject namespace contains 8 functions
+local C_WorldLootObject = {}
+
+--[=[
+-- C_WorldLootObject Functions:
+-- - C_WorldLootObject.DoesSlotMatchInventoryType
+-- - C_WorldLootObject.GetWorldLootObjectDistanceSquared
+-- - C_WorldLootObject.GetWorldLootObjectInfo
+-- - C_WorldLootObject.GetWorldLootObjectInfoByGUID
+-- - C_WorldLootObject.IsWorldLootObject
+-- - C_WorldLootObject.IsWorldLootObjectByGUID
+-- - C_WorldLootObject.IsWorldLootObjectInRange
+-- - C_WorldLootObject.OnWorldLootObjectClick
+--]=]
+
+---======================================================================
+--- C_WorldLootObject.DoesSlotMatchInventoryType
+---======================================================================
+--- Arguments:
+--- @param slot number
+--- @param inventoryType Enum.InventoryType 🔗
+---
+--- Returns:
+--- @return boolean matches
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.DoesSlotMatchInventoryType
+---
+--- Usage: matches = C_WorldLootObject.DoesSlotMatchInventoryType(slot, inventoryType)
+---
+-- function C_WorldLootObject.DoesSlotMatchInventoryType()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.GetWorldLootObjectDistanceSquared
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+---
+--- Returns:
+--- @return number distanceSquared ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.GetWorldLootObjectDistanceSquared
+---
+--- Usage: distanceSquared = C_WorldLootObject.GetWorldLootObjectDistanceSquared(unitToken)
+---
+-- function C_WorldLootObject.GetWorldLootObjectDistanceSquared()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.GetWorldLootObjectInfo
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+---
+--- Returns:
+--- @return WorldLootObjectInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.GetWorldLootObjectInfo
+---
+--- Usage: info = C_WorldLootObject.GetWorldLootObjectInfo(unitToken)
+---
+-- function C_WorldLootObject.GetWorldLootObjectInfo()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.GetWorldLootObjectInfoByGUID
+---======================================================================
+--- Arguments:
+--- @param objectGUID string : WOWGUID
+---
+--- Returns:
+--- @return WorldLootObjectInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.GetWorldLootObjectInfoByGUID
+---
+--- Usage: info = C_WorldLootObject.GetWorldLootObjectInfoByGUID(objectGUID)
+---
+-- function C_WorldLootObject.GetWorldLootObjectInfoByGUID()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.IsWorldLootObject
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+---
+--- Returns:
+--- @return boolean isWorldLootObject
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObject
+---
+--- Usage: isWorldLootObject = C_WorldLootObject.IsWorldLootObject(unitToken)
+---
+-- function C_WorldLootObject.IsWorldLootObject()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.IsWorldLootObjectByGUID
+---======================================================================
+--- Arguments:
+--- @param guid string : WOWGUID
+---
+--- Returns:
+--- @return boolean isWorldLootObject
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObjectByGUID
+---
+--- Usage: isWorldLootObject = C_WorldLootObject.IsWorldLootObjectByGUID(guid)
+---
+-- function C_WorldLootObject.IsWorldLootObjectByGUID()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.IsWorldLootObjectInRange
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+---
+--- Returns:
+--- @return boolean isWorldLootObjectInRange
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObjectInRange
+---
+--- Usage: isWorldLootObjectInRange = C_WorldLootObject.IsWorldLootObjectInRange(unitToken)
+---
+-- function C_WorldLootObject.IsWorldLootObjectInRange()
+-- end
+
+---======================================================================
+--- C_WorldLootObject.OnWorldLootObjectClick
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param isLeftClick boolean
+---
+--- @since Patch 11.0.7 (2024-12-17): Added isLeftClick argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.OnWorldLootObjectClick
+---
+--- Usage: C_WorldLootObject.OnWorldLootObjectClick(unitToken, isLeftClick)
+---
+-- function C_WorldLootObject.OnWorldLootObjectClick()
+-- end

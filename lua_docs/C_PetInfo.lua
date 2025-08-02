@@ -1,0 +1,98 @@
+--[=[
+-- C_PetInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_PetInfo
+--- C_PetInfo namespace contains 5 functions
+local C_PetInfo = {}
+
+--[=[
+-- C_PetInfo Functions:
+-- - C_PetInfo.GetPetTamersForMap
+-- - C_PetInfo.GetSpellForPetAction
+-- - C_PetInfo.IsPetActionPassive
+-- - C_PetInfo.PetAbandon
+-- - C_PetInfo.PetRename
+--]=]
+
+---======================================================================
+--- C_PetInfo.GetPetTamersForMap
+---======================================================================
+--- Returns the pet tamers on a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return PetTamerMapInfo petTamers []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetInfo.GetPetTamersForMap
+---
+--- Usage: petTamers = C_PetInfo.GetPetTamersForMap(uiMapID)
+---
+-- function C_PetInfo.GetPetTamersForMap()
+-- end
+
+---======================================================================
+--- C_PetInfo.GetSpellForPetAction
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return number spellID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetInfo.GetSpellForPetAction
+---
+--- Usage: spellID = C_PetInfo.GetSpellForPetAction(actionID)
+---
+-- function C_PetInfo.GetSpellForPetAction()
+-- end
+
+---======================================================================
+--- C_PetInfo.IsPetActionPassive
+---======================================================================
+--- Arguments:
+--- @param actionID number
+---
+--- Returns:
+--- @return boolean isPassive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetInfo.IsPetActionPassive
+---
+--- Usage: isPassive = C_PetInfo.IsPetActionPassive(actionID)
+---
+-- function C_PetInfo.IsPetActionPassive()
+-- end
+
+---======================================================================
+--- C_PetInfo.PetAbandon
+---======================================================================
+--- Arguments:
+--- @param petNumber number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetInfo.PetAbandon
+---
+--- Usage: C_PetInfo.PetAbandon([petNumber])
+---
+-- function C_PetInfo.PetAbandon()
+-- end
+
+---======================================================================
+--- C_PetInfo.PetRename
+---======================================================================
+--- Arguments:
+--- @param name string
+--- @param petNumber number ?
+--- @param declensions string []?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PetInfo.PetRename
+---
+--- Usage: C_PetInfo.PetRename(name [, petNumber, declensions])
+---
+-- function C_PetInfo.PetRename()
+-- end

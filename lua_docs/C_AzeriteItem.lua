@@ -1,0 +1,188 @@
+--[=[
+-- C_AzeriteItem API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_AzeriteItem
+--- C_AzeriteItem namespace contains 10 functions
+local C_AzeriteItem = {}
+
+--[=[
+-- C_AzeriteItem Functions:
+-- - C_AzeriteItem.FindActiveAzeriteItem
+-- - C_AzeriteItem.GetAzeriteItemXPInfo
+-- - C_AzeriteItem.GetPowerLevel
+-- - C_AzeriteItem.GetUnlimitedPowerLevel
+-- - C_AzeriteItem.HasActiveAzeriteItem
+-- - C_AzeriteItem.IsAzeriteItem
+-- - C_AzeriteItem.IsAzeriteItemAtMaxLevel
+-- - C_AzeriteItem.IsAzeriteItemByID
+-- - C_AzeriteItem.IsAzeriteItemEnabled
+-- - C_AzeriteItem.IsUnlimitedLevelingUnlocked
+--]=]
+
+---======================================================================
+--- C_AzeriteItem.FindActiveAzeriteItem
+---======================================================================
+--- Returns an ItemLocationMixin🔗 describing the location of the  [Heart of Azeroth].
+---
+--- Returns:
+--- @return ItemLocationMixin activeAzeriteItemLocation 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.FindActiveAzeriteItem
+---
+--- Usage: activeAzeriteItemLocation = C_AzeriteItem.FindActiveAzeriteItem()
+---
+-- function C_AzeriteItem.FindActiveAzeriteItem()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.GetAzeriteItemXPInfo
+---======================================================================
+--- Arguments:
+--- @param azeriteItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number xp
+--- @return number totalLevelXP
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.GetAzeriteItemXPInfo
+---
+--- Usage: xp, totalLevelXP = C_AzeriteItem.GetAzeriteItemXPInfo(azeriteItemLocation)
+---
+-- function C_AzeriteItem.GetAzeriteItemXPInfo()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.GetPowerLevel
+---======================================================================
+--- Arguments:
+--- @param azeriteItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number powerLevel
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.GetPowerLevel
+---
+--- Usage: powerLevel = C_AzeriteItem.GetPowerLevel(azeriteItemLocation)
+---
+-- function C_AzeriteItem.GetPowerLevel()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.GetUnlimitedPowerLevel
+---======================================================================
+--- Arguments:
+--- @param azeriteItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number powerLevel
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.GetUnlimitedPowerLevel
+---
+--- Usage: powerLevel = C_AzeriteItem.GetUnlimitedPowerLevel(azeriteItemLocation)
+---
+-- function C_AzeriteItem.GetUnlimitedPowerLevel()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.HasActiveAzeriteItem
+---======================================================================
+--- Returns true if the  [Heart of Azeroth] is either equipped or in the player's (non-bank) bags.
+---
+--- Returns:
+--- @return boolean hasActiveAzeriteItem
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.HasActiveAzeriteItem
+---
+--- Usage: hasActiveAzeriteItem = C_AzeriteItem.HasActiveAzeriteItem()
+---
+-- function C_AzeriteItem.HasActiveAzeriteItem()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.IsAzeriteItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isAzeriteItem
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.IsAzeriteItem
+---
+--- Usage: isAzeriteItem = C_AzeriteItem.IsAzeriteItem(itemLocation)
+              = C_AzeriteItem.IsAzeriteItemByID(itemInfo)
+---
+-- function C_AzeriteItem.IsAzeriteItem()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.IsAzeriteItemAtMaxLevel
+---======================================================================
+--- Returns:
+--- @return boolean isAtMax
+---
+--- @since Patch 8.2.0 (2019-06-25): Added isAtMax return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.IsAzeriteItemAtMaxLevel
+---
+--- Usage: isAtMax = C_AzeriteItem.IsAzeriteItemAtMaxLevel()
+---
+-- function C_AzeriteItem.IsAzeriteItemAtMaxLevel()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.IsAzeriteItemByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isAzeriteItem
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.IsAzeriteItemByID
+---
+--- Usage: isAzeriteItem = C_AzeriteItem.IsAzeriteItem(itemLocation)
+              = C_AzeriteItem.IsAzeriteItemByID(itemInfo)
+---
+-- function C_AzeriteItem.IsAzeriteItemByID()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.IsAzeriteItemEnabled
+---======================================================================
+--- Arguments:
+--- @param azeriteItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.IsAzeriteItemEnabled
+---
+--- Usage: isEnabled = C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation)
+---
+-- function C_AzeriteItem.IsAzeriteItemEnabled()
+-- end
+
+---======================================================================
+--- C_AzeriteItem.IsUnlimitedLevelingUnlocked
+---======================================================================
+--- Returns:
+--- @return boolean isUnlimitedLevelingUnlocked
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteItem.IsUnlimitedLevelingUnlocked
+---
+--- Usage: isUnlimitedLevelingUnlocked = C_AzeriteItem.IsUnlimitedLevelingUnlocked()
+---
+-- function C_AzeriteItem.IsUnlimitedLevelingUnlocked()
+-- end

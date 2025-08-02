@@ -1,0 +1,275 @@
+--[=[
+-- C_QuestSession API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 14
+--]=]
+
+--- @class C_QuestSession
+--- C_QuestSession namespace contains 14 functions
+local C_QuestSession = {}
+
+--[=[
+-- C_QuestSession Functions:
+-- - C_QuestSession.CanStart
+-- - C_QuestSession.CanStop
+-- - C_QuestSession.Exists
+-- - C_QuestSession.GetAvailableSessionCommand
+-- - C_QuestSession.GetPendingCommand
+-- - C_QuestSession.GetProposedMaxLevelForSession
+-- - C_QuestSession.GetSessionBeginDetails
+-- - C_QuestSession.GetSuperTrackedQuest
+-- - C_QuestSession.HasJoined
+-- - C_QuestSession.HasPendingCommand
+-- - C_QuestSession.RequestSessionStart
+-- - C_QuestSession.RequestSessionStop
+-- - C_QuestSession.SendSessionBeginResponse
+-- - C_QuestSession.SetQuestIsSuperTracked
+--]=]
+
+---======================================================================
+--- C_QuestSession.CanStart
+---======================================================================
+--- Indicates the player may request starting Party Sync.
+---
+--- Returns:
+--- @return boolean allowed - True if the player is in a party that has not yet begun to activate Party Sync.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.CanStart
+---
+--- Usage: allowed = C_QuestSession.CanStart()
+---
+--- See also:
+--- - C_QuestSession.CanStop
+--- - C_QuestSession.RequestSessionStart
+---
+-- function C_QuestSession.CanStart()
+-- end
+
+---======================================================================
+--- C_QuestSession.CanStop
+---======================================================================
+--- Indicates the player may request stopping Party Sync.
+---
+--- Returns:
+--- @return boolean allowed - True if the player is in a party with Party Sync but may end it.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.CanStop
+---
+--- Usage: allowed = C_QuestSession.CanStop()
+---
+--- See also:
+--- - C_QuestSession.CanStart
+--- - C_QuestSession.RequestSessionStop
+---
+-- function C_QuestSession.CanStop()
+-- end
+
+---======================================================================
+--- C_QuestSession.Exists
+---======================================================================
+--- Indiciates Party Sync is active or requested by a party member.
+---
+--- Returns:
+--- @return boolean exists - True if Party Sync is active or there is a pending request to activate it; false otherwise.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.Exists
+---
+--- Usage: exists = C_QuestSession.Exists()
+---
+--- See also:
+--- - C_QuestSession.HasJoined
+---
+-- function C_QuestSession.Exists()
+-- end
+
+---======================================================================
+--- C_QuestSession.GetAvailableSessionCommand
+---======================================================================
+--- Returns:
+--- @return  command Enum.QuestSessionCommand
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.GetAvailableSessionCommand
+---
+--- Usage: command = C_QuestSession.GetAvailableSessionCommand()
+---
+-- function C_QuestSession.GetAvailableSessionCommand()
+-- end
+
+---======================================================================
+--- C_QuestSession.GetPendingCommand
+---======================================================================
+--- Returns:
+--- @return Enum command
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.GetPendingCommand
+---
+--- Usage: hasPendingCommand = C_QuestSession.HasPendingCommand()
+---
+--- See also:
+--- - C_QuestSession.HasPendingCommand
+---
+-- function C_QuestSession.GetPendingCommand()
+-- end
+
+---======================================================================
+--- C_QuestSession.GetProposedMaxLevelForSession
+---======================================================================
+--- Returns:
+--- @return number proposedMaxLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.GetProposedMaxLevelForSession
+---
+--- Usage: proposedMaxLevel = C_QuestSession.GetProposedMaxLevelForSession()
+---
+-- function C_QuestSession.GetProposedMaxLevelForSession()
+-- end
+
+---======================================================================
+--- C_QuestSession.GetSessionBeginDetails
+---======================================================================
+--- Identifies the party member requesting Party Sync.
+---
+--- Returns:
+--- @return  details QuestSessionPlayerDetails?Returns nil if there is no pending request from another party member.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.GetSessionBeginDetails
+---
+--- Usage: details = C_QuestSession.GetSessionBeginDetails()
+---
+--- See also:
+--- - C_QuestSession.SendSessionBeginResponse
+---
+-- function C_QuestSession.GetSessionBeginDetails()
+-- end
+
+---======================================================================
+--- C_QuestSession.GetSuperTrackedQuest
+---======================================================================
+--- Returns:
+--- @return number questID ? - QuestID
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.GetSuperTrackedQuest
+---
+--- Usage: questID = C_QuestSession.GetSuperTrackedQuest()
+---
+--- See also:
+--- - C_QuestSession.SetQuestIsSuperTracked
+---
+-- function C_QuestSession.GetSuperTrackedQuest()
+-- end
+
+---======================================================================
+--- C_QuestSession.HasJoined
+---======================================================================
+--- Indiciates Party Sync is active.
+---
+--- Returns:
+--- @return boolean hasJoined - True if Party Sync is active; false otherwise.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.HasJoined
+---
+--- Usage: hasJoined = C_QuestSession.HasJoined()
+---
+--- See also:
+--- - C_QuestSession.Exists
+---
+-- function C_QuestSession.HasJoined()
+-- end
+
+---======================================================================
+--- C_QuestSession.HasPendingCommand
+---======================================================================
+--- Returns:
+--- @return boolean hasPendingCommand
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.HasPendingCommand
+---
+--- Usage: hasPendingCommand = C_QuestSession.HasPendingCommand()
+---
+--- See also:
+--- - C_QuestSession.GetPendingCommand
+---
+-- function C_QuestSession.HasPendingCommand()
+-- end
+
+---======================================================================
+--- C_QuestSession.RequestSessionStart
+---======================================================================
+--- Requests party members to begin Party Sync if permissible.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.RequestSessionStart
+---
+--- Usage: C_QuestSession.RequestSessionStart()
+---
+--- See also:
+--- - C_QuestSession.CanStart
+--- - C_QuestSession.RequestSessionStop
+---
+-- function C_QuestSession.RequestSessionStart()
+-- end
+
+---======================================================================
+--- C_QuestSession.RequestSessionStop
+---======================================================================
+--- Stops Party Sync if permissible.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.RequestSessionStop
+---
+--- Usage: C_QuestSession.RequestSessionStop()
+---
+--- See also:
+--- - C_QuestSession.CanStop
+--- - C_QuestSession.RequestSessionStart
+---
+-- function C_QuestSession.RequestSessionStop()
+-- end
+
+---======================================================================
+--- C_QuestSession.SendSessionBeginResponse
+---======================================================================
+--- Consents to activating Party Sync following a request by another party member.
+---
+--- Arguments:
+--- @param beginSession boolean - True to agree with starting Party Sync, or false to reject it.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.SendSessionBeginResponse
+---
+--- Usage: C_QuestSession.SendSessionBeginResponse(beginSession)
+---
+--- See also:
+--- - C_QuestSession.GetSessionBeginDetails
+---
+-- function C_QuestSession.SendSessionBeginResponse()
+-- end
+
+---======================================================================
+--- C_QuestSession.SetQuestIsSuperTracked
+---======================================================================
+--- Arguments:
+--- @param questID number - QuestID
+--- @param superTrack boolean
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_QuestSession.SetQuestIsSuperTracked
+---
+--- Usage: C_QuestSession.SetQuestIsSuperTracked(questID, superTrack)
+---
+--- See also:
+--- - C_QuestSession.GetSuperTrackedQuest
+---
+-- function C_QuestSession.SetQuestIsSuperTracked()
+-- end

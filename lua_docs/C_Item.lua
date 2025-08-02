@@ -1,0 +1,2109 @@
+--[=[
+-- C_Item API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 114
+--]=]
+
+--- @class C_Item
+--- C_Item namespace contains 114 functions
+local C_Item = {}
+
+--[=[
+-- C_Item Functions:
+-- - C_Item.ActionBindsItem
+-- - C_Item.BindEnchant
+-- - C_Item.CanBeRefunded
+-- - C_Item.CanItemTransmogAppearance
+-- - C_Item.CanScrapItem
+-- - C_Item.CanViewItemPowers
+-- - C_Item.ConfirmBindOnUse
+-- - C_Item.ConfirmNoRefundOnUse
+-- - C_Item.ConfirmOnUse
+-- - C_Item.DoesItemContainSpec
+-- - C_Item.DoesItemExist
+-- - C_Item.DoesItemExistByID
+-- - C_Item.DoesItemMatchBonusTreeReplacement
+-- - C_Item.DoesItemMatchTargetEnchantingSpell
+-- - C_Item.DoesItemMatchTrackJump
+-- - C_Item.DropItemOnUnit
+-- - C_Item.EndBoundTradeable
+-- - C_Item.EndRefund
+-- - C_Item.EquipItemByName
+-- - C_Item.GetAppliedItemTransmogInfo
+-- - C_Item.GetBaseItemTransmogInfo
+-- - C_Item.GetCurrentItemLevel
+-- - C_Item.GetCurrentItemTransmogInfo
+-- - C_Item.GetDelvePreviewItemLink
+-- - C_Item.GetDelvePreviewItemQuality
+-- - C_Item.GetDetailedItemLevelInfo
+-- - C_Item.GetFirstTriggeredSpellForItem
+-- - C_Item.GetItemChildInfo
+-- - C_Item.GetItemClassInfo
+-- - C_Item.GetItemConversionOutputIcon
+-- - C_Item.GetItemCooldown
+-- - C_Item.GetItemCount
+-- - C_Item.GetItemCreationContext
+-- - C_Item.GetItemFamily
+-- - C_Item.GetItemGUID
+-- - C_Item.GetItemGem
+-- - C_Item.GetItemGemID
+-- - C_Item.GetItemID
+-- - C_Item.GetItemIDByGUID
+-- - C_Item.GetItemIDForItemInfo
+-- - C_Item.GetItemIcon
+-- - C_Item.GetItemIconByID
+-- - C_Item.GetItemInfo
+-- - C_Item.GetItemInfoInstant
+-- - C_Item.GetItemInventorySlotInfo
+-- - C_Item.GetItemInventorySlotKey
+-- - C_Item.GetItemInventoryType
+-- - C_Item.GetItemInventoryTypeByID
+-- - C_Item.GetItemLearnTransmogSet
+-- - C_Item.GetItemLink
+-- - C_Item.GetItemLinkByGUID
+-- - C_Item.GetItemLocation
+-- - C_Item.GetItemMaxStackSize
+-- - C_Item.GetItemMaxStackSizeByID
+-- - C_Item.GetItemName
+-- - C_Item.GetItemNameByID
+-- - C_Item.GetItemNumAddedSockets
+-- - C_Item.GetItemNumSockets
+-- - C_Item.GetItemQuality
+-- - C_Item.GetItemQualityByID
+-- - C_Item.GetItemQualityColor
+-- - C_Item.GetItemSetInfo
+-- - C_Item.GetItemSpecInfo
+-- - C_Item.GetItemSpell
+-- - C_Item.GetItemStatDelta
+-- - C_Item.GetItemStats
+-- - C_Item.GetItemSubClassInfo
+-- - C_Item.GetItemUniqueness
+-- - C_Item.GetItemUniquenessByID
+-- - C_Item.GetItemUpgradeInfo
+-- - C_Item.GetLimitedCurrencyItemInfo
+-- - C_Item.GetSetBonusesForSpecializationByItemID
+-- - C_Item.GetStackCount
+-- - C_Item.IsAnimaItemByID
+-- - C_Item.IsArtifactPowerItem
+-- - C_Item.IsBound
+-- - C_Item.IsBoundToAccountUntilEquip
+-- - C_Item.IsConsumableItem
+-- - C_Item.IsCorruptedItem
+-- - C_Item.IsCosmeticItem
+-- - C_Item.IsCurioItem
+-- - C_Item.IsCurrentItem
+-- - C_Item.IsDressableItemByID
+-- - C_Item.IsEquippableItem
+-- - C_Item.IsEquippedItem
+-- - C_Item.IsEquippedItemType
+-- - C_Item.IsHarmfulItem
+-- - C_Item.IsHelpfulItem
+-- - C_Item.IsItemBindToAccountUntilEquip
+-- - C_Item.IsItemConduit
+-- - C_Item.IsItemConvertibleAndValidForPlayer
+-- - C_Item.IsItemCorrupted
+-- - C_Item.IsItemCorruptionRelated
+-- - C_Item.IsItemCorruptionResistant
+-- - C_Item.IsItemDataCached
+-- - C_Item.IsItemDataCachedByID
+-- - C_Item.IsItemGUIDInInventory
+-- - C_Item.IsItemInRange
+-- - C_Item.IsItemKeystoneByID
+-- - C_Item.IsItemSpecificToPlayerClass
+-- - C_Item.IsLocked
+-- - C_Item.IsUsableItem
+-- - C_Item.ItemHasRange
+-- - C_Item.LockItem
+-- - C_Item.LockItemByGUID
+-- - C_Item.PickupItem
+-- - C_Item.ReplaceEnchant
+-- - C_Item.ReplaceTradeEnchant
+-- - C_Item.ReplaceTradeskillEnchant
+-- - C_Item.RequestLoadItemData
+-- - C_Item.RequestLoadItemDataByID
+-- - C_Item.UnlockItem
+-- - C_Item.UnlockItemByGUID
+-- - C_Item.UseItemByName
+--]=]
+
+---======================================================================
+--- C_Item.IsEquippedItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsEquippedItem
+---
+--- Usage: result = C_Item.IsEquippedItem(itemInfo)
+---
+-- function C_Item.IsEquippedItem()
+-- end
+
+---======================================================================
+--- C_Item.IsEquippedItemType
+---======================================================================
+--- Arguments:
+--- @param type string
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsEquippedItemType
+---
+--- Usage: result = C_Item.IsEquippedItemType(type)
+---
+-- function C_Item.IsEquippedItemType()
+-- end
+
+---======================================================================
+--- C_Item.IsHarmfulItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsHarmfulItem
+---
+--- Usage: result = C_Item.IsHarmfulItem(itemInfo)
+---
+-- function C_Item.IsHarmfulItem()
+-- end
+
+---======================================================================
+--- C_Item.IsHelpfulItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsHelpfulItem
+---
+--- Usage: result = C_Item.IsHelpfulItem(itemInfo)
+---
+-- function C_Item.IsHelpfulItem()
+-- end
+
+---======================================================================
+--- C_Item.IsItemBindToAccountUntilEquip
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean isItemBindToAccountUntilEquip
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemBindToAccountUntilEquip
+---
+--- Usage: isItemBindToAccountUntilEquip = C_Item.IsItemBindToAccountUntilEquip(itemInfo)
+---
+-- function C_Item.IsItemBindToAccountUntilEquip()
+-- end
+
+---======================================================================
+--- C_Item.IsItemConduit
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isConduit
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConduit
+---
+--- Usage: isConduit = C_Item.IsItemConduit(itemLoc)
+---
+-- function C_Item.IsItemConduit()
+-- end
+
+---======================================================================
+--- C_Item.IsItemConvertibleAndValidForPlayer
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isItemConvertibleAndValidForPlayer
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConvertibleAndValidForPlayer
+---
+--- Usage: isItemConvertibleAndValidForPlayer = C_Item.IsItemConvertibleAndValidForPlayer(itemLoc)
+---
+-- function C_Item.IsItemConvertibleAndValidForPlayer()
+-- end
+
+---======================================================================
+--- C_Item.IsItemCorrupted
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isCorrupted
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorrupted
+---
+--- Usage: isCorrupted = C_Item.IsItemCorrupted(itemLoc)
+---
+-- function C_Item.IsItemCorrupted()
+-- end
+
+---======================================================================
+--- C_Item.IsItemCorruptionRelated
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isCorruptionRelated
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionRelated
+---
+--- Usage: isCorruptionRelated = C_Item.IsItemCorruptionRelated(itemLoc)
+---
+-- function C_Item.IsItemCorruptionRelated()
+-- end
+
+---======================================================================
+--- C_Item.IsItemCorruptionResistant
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isCorruptionResistant
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionResistant
+---
+--- Usage: isCorruptionResistant = C_Item.IsItemCorruptionResistant(itemLoc)
+---
+-- function C_Item.IsItemCorruptionResistant()
+-- end
+
+---======================================================================
+--- C_Item.IsItemDataCached
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isCached
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemDataCached
+---
+--- Usage: isCached = C_Item.IsItemDataCached(itemLocation)
+         = C_Item.IsItemDataCachedByID(itemInfo)
+---
+-- function C_Item.IsItemDataCached()
+-- end
+
+---======================================================================
+--- C_Item.IsItemDataCachedByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isCached
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemDataCachedByID
+---
+--- Usage: isCached = C_Item.IsItemDataCached(itemLocation)
+         = C_Item.IsItemDataCachedByID(itemInfo)
+---
+-- function C_Item.IsItemDataCachedByID()
+-- end
+
+---======================================================================
+--- C_Item.IsItemGUIDInInventory
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return boolean valid
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemGUIDInInventory
+---
+--- Usage: valid = C_Item.IsItemGUIDInInventory(itemGUID)
+---
+-- function C_Item.IsItemGUIDInInventory()
+-- end
+
+---======================================================================
+--- C_Item.IsItemInRange
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param targetToken string
+---
+--- Returns:
+--- @return boolean result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemInRange
+---
+--- Usage: result = C_Item.IsItemInRange(itemInfo, targetToken)
+---
+-- function C_Item.IsItemInRange()
+-- end
+
+---======================================================================
+--- C_Item.IsItemKeystoneByID
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : Item ID, Link or name
+---
+--- Returns:
+--- @return boolean isKeystone
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemKeystoneByID
+---
+--- Usage: isKeystone = C_Item.IsItemKeystoneByID(itemInfo)
+---
+-- function C_Item.IsItemKeystoneByID()
+-- end
+
+---======================================================================
+--- C_Item.IsItemSpecificToPlayerClass
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return boolean isItemSpecificToPlayerClass
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsItemSpecificToPlayerClass
+---
+--- Usage: isItemSpecificToPlayerClass = C_Item.IsItemSpecificToPlayerClass(itemInfo)
+---
+-- function C_Item.IsItemSpecificToPlayerClass()
+-- end
+
+---======================================================================
+--- C_Item.IsLocked
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isLocked
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsLocked
+---
+--- Usage: isLocked = C_Item.IsLocked(itemLocation)
+---
+-- function C_Item.IsLocked()
+-- end
+
+---======================================================================
+--- C_Item.IsUsableItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean usable
+--- @return boolean noMana
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsUsableItem
+---
+--- Usage: usable, noMana = C_Item.IsUsableItem(itemInfo)
+---
+-- function C_Item.IsUsableItem()
+-- end
+
+---======================================================================
+--- C_Item.ItemHasRange
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ItemHasRange
+---
+--- Usage: result = C_Item.ItemHasRange(itemInfo)
+---
+-- function C_Item.ItemHasRange()
+-- end
+
+---======================================================================
+--- C_Item.LockItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.LockItem
+---
+--- Usage: C_Item.LockItem(itemLocation)
+C_Item.LockItemByGUID(itemGUID)
+---
+-- function C_Item.LockItem()
+-- end
+
+---======================================================================
+--- C_Item.LockItemByGUID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.LockItemByGUID
+---
+--- Usage: C_Item.LockItem(itemLocation)
+C_Item.LockItemByGUID(itemGUID)
+---
+-- function C_Item.LockItemByGUID()
+-- end
+
+---======================================================================
+--- C_Item.PickupItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.PickupItem
+---
+--- Usage: C_Item.PickupItem(itemInfo)
+---
+-- function C_Item.PickupItem()
+-- end
+
+---======================================================================
+--- C_Item.ReplaceEnchant
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceEnchant
+---
+--- Usage: C_Item.ReplaceEnchant()
+---
+-- function C_Item.ReplaceEnchant()
+-- end
+
+---======================================================================
+--- C_Item.ReplaceTradeEnchant
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceTradeEnchant
+---
+--- Usage: C_Item.ReplaceTradeEnchant()
+---
+-- function C_Item.ReplaceTradeEnchant()
+-- end
+
+---======================================================================
+--- C_Item.ReplaceTradeskillEnchant
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ReplaceTradeskillEnchant
+---
+--- Usage: C_Item.ReplaceTradeskillEnchant()
+---
+-- function C_Item.ReplaceTradeskillEnchant()
+-- end
+
+---======================================================================
+--- C_Item.RequestLoadItemData
+---======================================================================
+--- Requests item data and fires ITEM_DATA_LOAD_RESULT.
+---
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemData
+---
+--- Usage: C_Item.RequestLoadItemData(itemLocation)
+C_Item.RequestLoadItemDataByID(itemInfo)
+---
+-- function C_Item.RequestLoadItemData()
+-- end
+
+---======================================================================
+--- C_Item.RequestLoadItemDataByID
+---======================================================================
+--- Requests item data and fires ITEM_DATA_LOAD_RESULT.
+---
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemDataByID
+---
+--- Usage: C_Item.RequestLoadItemData(itemLocation)
+C_Item.RequestLoadItemDataByID(itemInfo)
+---
+-- function C_Item.RequestLoadItemDataByID()
+-- end
+
+---======================================================================
+--- C_Item.UnlockItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.3.0 (2020-01-14): Added C_Item.UnlockItemByGUID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItem
+---
+--- Usage: C_Item.UnlockItem(itemLocation)
+C_Item.UnlockItemByGUID(itemGUID)
+---
+-- function C_Item.UnlockItem()
+-- end
+
+---======================================================================
+--- C_Item.UnlockItemByGUID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.3.0 (2020-01-14): Added C_Item.UnlockItemByGUID()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItemByGUID
+---
+--- Usage: C_Item.UnlockItem(itemLocation)
+C_Item.UnlockItemByGUID(itemGUID)
+---
+-- function C_Item.UnlockItemByGUID()
+-- end
+
+---======================================================================
+--- C_Item.UseItemByName
+---======================================================================
+--- #protected - This can only be called from secure code.Use the "item" action type of SecureActionButtonTemplate or the /use slash command.
+---
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param target string ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.UseItemByName
+---
+--- Usage: C_Item.UseItemByName(itemInfo [, target])
+---
+-- function C_Item.UseItemByName()
+-- end
+
+---======================================================================
+--- C_Item.ActionBindsItem
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ActionBindsItem
+---
+--- Usage: C_Item.ActionBindsItem()
+---
+-- function C_Item.ActionBindsItem()
+-- end
+
+---======================================================================
+--- C_Item.BindEnchant
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.BindEnchant
+---
+--- Usage: C_Item.BindEnchant()
+---
+-- function C_Item.BindEnchant()
+-- end
+
+---======================================================================
+--- C_Item.CanBeRefunded
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocation 🔗
+---
+--- Returns:
+--- @return boolean canBeRefunded
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.CanBeRefunded
+---
+--- Usage: canBeRefunded = C_Item.CanBeRefunded(itemLocation)
+---
+-- function C_Item.CanBeRefunded()
+-- end
+
+---======================================================================
+--- C_Item.CanItemTransmogAppearance
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean canTransmog
+--- @return number errorCode
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.CanItemTransmogAppearance
+---
+--- Usage: canTransmog, errorCode = C_Item.CanItemTransmogAppearance(itemLoc)
+---
+-- function C_Item.CanItemTransmogAppearance()
+-- end
+
+---======================================================================
+--- C_Item.CanScrapItem
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean canBeScrapped
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.CanScrapItem
+---
+--- Usage: canBeScrapped = C_Item.CanScrapItem(itemLoc)
+---
+-- function C_Item.CanScrapItem()
+-- end
+
+---======================================================================
+--- C_Item.CanViewItemPowers
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isItemViewable
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.CanViewItemPowers
+---
+--- Usage: isItemViewable = C_Item.CanViewItemPowers(itemLoc)
+---
+-- function C_Item.CanViewItemPowers()
+-- end
+
+---======================================================================
+--- C_Item.ConfirmBindOnUse
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ConfirmBindOnUse
+---
+--- Usage: C_Item.ConfirmBindOnUse()
+---
+-- function C_Item.ConfirmBindOnUse()
+-- end
+
+---======================================================================
+--- C_Item.ConfirmNoRefundOnUse
+---======================================================================
+--- When a user purchases a refundable item from a vendor with an on-use effect (such as a toy or cosmetic) and attempts to use that item, the game will pop up a StaticPopup dialog informing the user that the item would no longer be refundable. If the user clicks the Okay button to continue using the item, this function confirms the use and dismisses the dialog.
+---
+--- @since Patch 11.0.5 (2024-10-22): Briefly marked as Protected, then reverted shortly after.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ConfirmNoRefundOnUse
+---
+--- Usage: C_Item.ConfirmNoRefundOnUse()
+---
+-- function C_Item.ConfirmNoRefundOnUse()
+-- end
+
+---======================================================================
+--- C_Item.ConfirmOnUse
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.ConfirmOnUse
+---
+--- Usage: C_Item.ConfirmOnUse()
+---
+-- function C_Item.ConfirmOnUse()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemContainSpec
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param classID number
+--- @param specID number ? = 0
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemContainSpec
+---
+--- Usage: result = C_Item.DoesItemContainSpec(itemInfo, classID [, specID])
+---
+-- function C_Item.DoesItemContainSpec()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemExist
+---======================================================================
+--- Arguments:
+--- @param emptiableItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean itemExists
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemExist
+---
+--- Usage: itemExists = C_Item.DoesItemExist(emptiableItemLocation)
+           = C_Item.DoesItemExistByID(itemInfo)
+---
+--- See also:
+--- - WoWUIBugs #449
+---
+-- function C_Item.DoesItemExist()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemExistByID
+---======================================================================
+--- Arguments:
+--- @param emptiableItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean itemExists
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemExistByID
+---
+--- Usage: itemExists = C_Item.DoesItemExist(emptiableItemLocation)
+           = C_Item.DoesItemExistByID(itemInfo)
+---
+--- See also:
+--- - WoWUIBugs #449
+---
+-- function C_Item.DoesItemExistByID()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemMatchBonusTreeReplacement
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean matchesBonusTree
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchBonusTreeReplacement
+---
+--- Usage: matchesBonusTree = C_Item.DoesItemMatchBonusTreeReplacement(itemLoc)
+---
+-- function C_Item.DoesItemMatchBonusTreeReplacement()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemMatchTargetEnchantingSpell
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocation 🔗
+---
+--- Returns:
+--- @return boolean matchesTargetEnchantingSpell
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTargetEnchantingSpell
+---
+--- Usage: matchesTargetEnchantingSpell = C_Item.DoesItemMatchTargetEnchantingSpell(itemLoc)
+---
+-- function C_Item.DoesItemMatchTargetEnchantingSpell()
+-- end
+
+---======================================================================
+--- C_Item.DoesItemMatchTrackJump
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocation 🔗
+---
+--- Returns:
+--- @return boolean matchesTrackJump
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTrackJump
+---
+--- Usage: matchesTrackJump = C_Item.DoesItemMatchTrackJump(itemLoc)
+---
+-- function C_Item.DoesItemMatchTrackJump()
+-- end
+
+---======================================================================
+--- C_Item.DropItemOnUnit
+---======================================================================
+--- Arguments:
+--- @param unitGUID string : UnitToken
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.DropItemOnUnit
+---
+--- Usage: C_Item.DropItemOnUnit(unitGUID)
+---
+-- function C_Item.DropItemOnUnit()
+-- end
+
+---======================================================================
+--- C_Item.EndBoundTradeable
+---======================================================================
+--- Arguments:
+--- @param type string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.EndBoundTradeable
+---
+--- Usage: C_Item.EndBoundTradeable(type)
+---
+-- function C_Item.EndBoundTradeable()
+-- end
+
+---======================================================================
+--- C_Item.EndRefund
+---======================================================================
+--- Arguments:
+--- @param type number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.EndRefund
+---
+--- Usage: C_Item.EndRefund(type)
+---
+-- function C_Item.EndRefund()
+-- end
+
+---======================================================================
+--- C_Item.EquipItemByName
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param dstSlot number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.EquipItemByName
+---
+--- Usage: C_Item.EquipItemByName(itemInfo [, dstSlot])
+---
+-- function C_Item.EquipItemByName()
+-- end
+
+---======================================================================
+--- C_Item.GetAppliedItemTransmogInfo
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return ItemTransmogInfoMixin info ?🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetAppliedItemTransmogInfo
+---
+--- Usage: info = C_Item.GetAppliedItemTransmogInfo(itemLoc)
+---
+-- function C_Item.GetAppliedItemTransmogInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetBaseItemTransmogInfo
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return ItemTransmogInfoMixin info ?🔗
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetBaseItemTransmogInfo
+---
+--- Usage: info = C_Item.GetBaseItemTransmogInfo(itemLoc)
+---
+-- function C_Item.GetBaseItemTransmogInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetCurrentItemLevel
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number currentItemLevel ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetCurrentItemLevel
+---
+--- Usage: currentItemLevel = C_Item.GetCurrentItemLevel(itemLocation)
+---
+-- function C_Item.GetCurrentItemLevel()
+-- end
+
+---======================================================================
+--- C_Item.GetCurrentItemTransmogInfo
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return ItemTransmogInfoMixin info ?🔗
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetCurrentItemTransmogInfo
+---
+--- Usage: info = C_Item.GetCurrentItemTransmogInfo(itemLoc)
+---
+-- function C_Item.GetCurrentItemTransmogInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetDelvePreviewItemLink
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param context Enum.ItemCreationContext 🔗
+---
+--- Returns:
+--- @return string itemLink ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetDelvePreviewItemLink
+---
+--- Usage: itemLink = C_Item.GetDelvePreviewItemLink(itemID, context)
+---
+-- function C_Item.GetDelvePreviewItemLink()
+-- end
+
+---======================================================================
+--- C_Item.GetDelvePreviewItemQuality
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param context Enum.ItemCreationContext 🔗
+---
+--- Returns:
+--- @return Enum.ItemQuality itemQuality 🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetDelvePreviewItemQuality
+---
+--- Usage: itemQuality = C_Item.GetDelvePreviewItemQuality(itemID, context)
+---
+-- function C_Item.GetDelvePreviewItemQuality()
+-- end
+
+---======================================================================
+--- C_Item.GetDetailedItemLevelInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number actualItemLevel
+--- @return boolean previewLevel
+--- @return number sparseItemLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetDetailedItemLevelInfo
+---
+--- Usage: actualItemLevel, previewLevel, sparseItemLevel = C_Item.GetDetailedItemLevelInfo(itemInfo)
+---
+-- function C_Item.GetDetailedItemLevelInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetFirstTriggeredSpellForItem
+---======================================================================
+--- Arguments:
+--- @param itemID number
+--- @param itemQuality number
+---
+--- Returns:
+--- @return number spellID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetFirstTriggeredSpellForItem
+---
+--- Usage: spellID = C_Item.GetFirstTriggeredSpellForItem(itemID, itemQuality)
+---
+-- function C_Item.GetFirstTriggeredSpellForItem()
+-- end
+
+---======================================================================
+--- C_Item.GetItemChildInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param slotID number ?
+---
+--- Returns:
+--- @return number result []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemChildInfo
+---
+--- Usage: result = C_Item.GetItemChildInfo(itemInfo [, slotID])
+---
+-- function C_Item.GetItemChildInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemClassInfo
+---======================================================================
+--- Arguments:
+--- @param itemClassID number
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemClassInfo
+---
+--- Usage: result = C_Item.GetItemClassInfo(itemClassID)
+---
+-- function C_Item.GetItemClassInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemConversionOutputIcon
+---======================================================================
+--- Arguments:
+--- @param itemLoc ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number icon ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemConversionOutputIcon
+---
+--- Usage: icon = C_Item.GetItemConversionOutputIcon(itemLoc)
+---
+-- function C_Item.GetItemConversionOutputIcon()
+-- end
+
+---======================================================================
+--- C_Item.GetItemCooldown
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number startTimeSeconds
+--- @return number durationSeconds
+--- @return boolean enableCooldownTimer
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemCooldown
+---
+--- Usage: startTimeSeconds, durationSeconds, enableCooldownTimer = C_Item.GetItemCooldown(itemInfo)
+---
+-- function C_Item.GetItemCooldown()
+-- end
+
+---======================================================================
+--- C_Item.GetItemCount
+---======================================================================
+--- Returns the number (or available charges) of an item in the inventory.
+---
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param includeBank boolean ? = false
+--- @param includeUses boolean ? = false
+--- @param includeReagentBank boolean ? = false
+--- @param includeAccountBank boolean ? = false
+---
+--- Returns:
+--- @return number count
+---
+--- @since Patch 11.0.0 (2024-07-23): Added includeAccountBank parameter.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemCount
+---
+--- Usage: count = C_Item.GetItemCount(itemInfo [, includeBank [, includeUses [, includeReagentBank [, includeAccountBank]]]])
+---
+-- function C_Item.GetItemCount()
+-- end
+
+---======================================================================
+--- C_Item.GetItemCreationContext
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number itemID
+--- @return string creationContext
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemCreationContext
+---
+--- Usage: itemID, creationContext = C_Item.GetItemCreationContext(itemInfo)
+---
+-- function C_Item.GetItemCreationContext()
+-- end
+
+---======================================================================
+--- C_Item.GetItemFamily
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemFamily
+---
+--- Usage: result = C_Item.GetItemFamily(itemInfo)
+---
+-- function C_Item.GetItemFamily()
+-- end
+
+---======================================================================
+--- C_Item.GetItemGem
+---======================================================================
+--- Arguments:
+--- @param hyperlink string
+--- @param index number
+---
+--- Returns:
+--- @return string gemName
+--- @return string gemLink
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemGem
+---
+--- Usage: gemName, gemLink = C_Item.GetItemGem(hyperlink, index)
+---
+-- function C_Item.GetItemGem()
+-- end
+
+---======================================================================
+--- C_Item.GetItemGemID
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+--- @param index number
+---
+--- Returns:
+--- @return number gemID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemGemID
+---
+--- Usage: gemID = C_Item.GetItemGemID(itemInfo, index)
+---
+-- function C_Item.GetItemGemID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemGUID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return string itemGUID : ItemGUID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemGUID
+---
+--- Usage: itemGuid = C_Item.GetItemGUID(itemLocation)
+---
+-- function C_Item.GetItemGUID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemIcon
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number icon ? : fileID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemIcon
+---
+--- Usage: icon = C_Item.GetItemIcon(itemLocation)
+     = C_Item.GetItemIconByID(itemInfo)
+---
+-- function C_Item.GetItemIcon()
+-- end
+
+---======================================================================
+--- C_Item.GetItemIconByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number icon ? : fileID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemIconByID
+---
+--- Usage: icon = C_Item.GetItemIcon(itemLocation)
+     = C_Item.GetItemIconByID(itemInfo)
+---
+-- function C_Item.GetItemIconByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number itemID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemID
+---
+--- Usage: itemID = C_Item.GetItemID(itemLocation)
+---
+-- function C_Item.GetItemID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemIDByGUID
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return number itemID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemIDByGUID
+---
+--- Usage: itemID = C_Item.GetItemIDByGUID(itemGUID)
+---
+-- function C_Item.GetItemIDByGUID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemIDForItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number itemID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemIDForItemInfo
+---
+--- Usage: itemID = C_Item.GetItemIDForItemInfo(itemInfo)
+---
+-- function C_Item.GetItemIDForItemInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInfo
+---======================================================================
+--- Returns info for an item.
+---
+--- Arguments:
+--- @param item number |string : ItemInfo - Item ID, Link or name
+Accepts any valid item ID but returns nil if the item is not cached yet.
+Accepts an item link, or minimally in item:%d format.
+Accepts a localized item name but this requires the item to be or have been in the player's inventory (bags/bank) for that session.
+---
+--- Returns:
+--- @return string 1. itemName - The localized name of the item.
+--- @return string 2. itemLink : ItemLink - The localized link of the item.
+--- @return number 3. itemQuality : Enum.ItemQuality - The quality of the item, e.g. 2 for Uncommon and 3 for Rare quality items.
+--- @return number 4. itemLevel - The base item level, not including upgrades. See GetDetailedItemLevelInfo() for getting the actual item level.
+--- @return number 5. itemMinLevel - The minimum level required to use the item, or 0 if there is no level requirement.
+--- @return string 6. itemType : ItemType - The localized type name of the item: Armor, Weapon, Quest, etc.
+--- @return string 7. itemSubType : ItemType - The localized sub-type name of the item: Bows, Guns, Staves, etc.
+--- @return number 8. itemStackCount - The max amount of an item per stack, e.g. 200 for Runecloth.
+--- @return string 9. itemEquipLoc : ItemEquipLoc - The inventory equipment location in which the item may be equipped e.g. "INVTYPE_HEAD", or an empty string if it cannot be equipped.
+--- @return number 10. itemTexture : FileID - The texture for the item icon.
+--- @return number 11. sellPrice - The vendor price in copper, or 0 for items that cannot be sold.
+--- @return number 12. classID : ItemType - The numeric ID of itemType
+--- @return number 13. subclassID : ItemType - The numeric ID of itemSubType
+--- @return number 14. bindType : Enum.ItemBind - When the item becomes soulbound, e.g. 1 for Bind on Pickup items.
+--- @return number 15. expansionID : LE_EXPANSION - The related Expansion, e.g. 8 for Shadowlands. On Classic this appears to be always 254.
+--- @return number 16. setID ? : ItemSetID - For example 761 for  [Red Winter Hat] (itemID 21524).
+--- @return boolean 17. isCraftingReagent - Whether the item can be used as a crafting reagent.
+---
+--- @since Patch 10.2.6 (2024-03-19): Namespaced to C_Item.GetItemInfo.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInfo
+---
+--- Usage: itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expansionID, setID, isCraftingReagent = C_Item.GetItemInfo(itemInfo)
+---
+--- Examples:
+--- Example 1:
+---   [1] = "Silk Cloth", -- itemName
+---   [2] = "|cffffffff|Hitem:4306::::::::53:258:::::::|h[Silk Cloth]|h|r", -- itemLink
+---   [3] = 1,            -- itemQuality: Enum.ItemQuality.Common
+---   [4] = 13,           -- itemLevel 
+---   [5] = 0,            -- itemMinLevel 
+---   [6] = "Tradeskill", -- itemType 
+---   [7] = "Cloth",      -- itemSubType 
+---   [8] = 200,          -- itemStackCount 
+---   [9] = "",           -- itemEquipLoc
+---   [10] = 132905,      -- itemTexture 
+---   [11] = 150,         -- sellPrice
+---   [12] = 7,           -- classID: LE_ITEM_CLASS_TRADEGOODS
+---   [13] = 5,           -- subclassID 
+---   [14] = 0,           -- bindType: Enum.ItemBind.None
+---   [15] = 0,           -- expansionID: LE_EXPANSION_CLASSIC
+---   [16] = nil,         -- setID
+---   [17] = true         -- isCraftingReagent
+--- Example 2:
+---   local item = Item:CreateFromItemID(21524)
+---   
+---   item:ContinueOnItemLoad(function()
+---   	local name = item:GetItemName() 
+---   	local icon = item:GetItemIcon()
+---   	print(name, icon) -- "Red Winter Hat", 133169
+---   end)
+---
+--- See also:
+--- - GetItemInfoInstant
+---
+-- function C_Item.GetItemInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInfoInstant
+---======================================================================
+--- Returns readily available info for an item.
+---
+--- Arguments:
+--- @param item number |string : Item ID, Link or name
+Accepts any valid item ID.
+Accepts an item link, or minimally in item:%d format.
+Accepts a localized item name but this requires the item to be or have been in the player's inventory (bags/bank) for that session.
+---
+--- Returns:
+--- @return number itemID - ID of the item.
+--- @return string itemType : ItemType - The localized type name of the item: Armor, Weapon, Quest, etc.
+--- @return string itemSubType : ItemType - The localized sub-type name of the item: Bows, Guns, Staves, etc.
+--- @return string itemEquipLoc : ItemEquipLoc - The inventory equipment location in which the item may be equipped e.g. "INVTYPE_HEAD", or an empty string if it cannot be equipped.
+--- @return number icon : fileID - The texture for the item icon.
+--- @return number classID : ItemType - The numeric ID of itemType
+--- @return number subClassID : ItemType - The numeric ID of itemSubType
+---
+--- @since Patch 10.2.6 (2024-03-19): Namespaced to C_Item.GetItemInfoInstant.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInfoInstant
+---
+--- Usage: itemID, itemType, itemSubType, itemEquipLoc, icon, classID, subClassID = C_Item.GetItemInfoInstant(itemInfo)
+---
+--- Examples:
+--- Example 1:
+---   /dump GetItemInfoInstant(4306)
+---   
+---   [1] = 4306,         -- itemID
+---   [2] = "Tradeskill", -- itemType
+---   [3] = "Cloth",      -- itemSubType
+---   [4] = "",           -- itemEquipLoc
+---   [5] = 132905,       -- icon
+---   [6] = 7,            -- classID
+---   [7] = 5             -- subclassID
+---
+-- function C_Item.GetItemInfoInstant()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInventorySlotInfo
+---======================================================================
+--- Arguments:
+--- @param inventorySlot Enum.InventoryType 🔗
+---
+--- Returns:
+--- @return string result - Seems to return the name of an inventorySlot type, e.g. C_Item.GetItemInventorySlotInfo(1) returns "Head"
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventorySlotInfo
+---
+--- Usage: result = C_Item.GetItemInventorySlotInfo(inventorySlot)
+---
+-- function C_Item.GetItemInventorySlotInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInventorySlotKey
+---======================================================================
+--- Arguments:
+--- @param inventorySlot Enum.InventoryType 🔗
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventorySlotKey
+---
+--- Usage: result = C_Item.GetItemInventorySlotKey(inventorySlot)
+---
+-- function C_Item.GetItemInventorySlotKey()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInventoryType
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.InventoryType inventoryType ?🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventoryType
+---
+--- Usage: inventoryType = C_Item.GetItemInventoryType(itemLocation)
+              = C_Item.GetItemInventoryTypeByID(itemInfo)
+---
+-- function C_Item.GetItemInventoryType()
+-- end
+
+---======================================================================
+--- C_Item.GetItemInventoryTypeByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.InventoryType inventoryType ?🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventoryTypeByID
+---
+--- Usage: inventoryType = C_Item.GetItemInventoryType(itemLocation)
+              = C_Item.GetItemInventoryTypeByID(itemInfo)
+---
+-- function C_Item.GetItemInventoryTypeByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemLearnTransmogSet
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number setID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLearnTransmogSet
+---
+--- Usage: setID = C_Item.GetItemLearnTransmogSet(itemInfo)
+---
+-- function C_Item.GetItemLearnTransmogSet()
+-- end
+
+---======================================================================
+--- C_Item.GetItemLink
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return string itemLink ? : ItemLink
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLink
+---
+--- Usage: itemLink = C_Item.GetItemLink(itemLocation)
+---
+-- function C_Item.GetItemLink()
+-- end
+
+---======================================================================
+--- C_Item.GetItemLinkByGUID
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return string itemLink ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLinkByGUID
+---
+--- Usage: itemLink = C_Item.GetItemLinkByGUID(itemGUID)
+---
+-- function C_Item.GetItemLinkByGUID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemLocation
+---======================================================================
+--- Arguments:
+--- @param itemGUID string
+---
+--- Returns:
+--- @return ItemLocationMixin itemLocation ?🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLocation
+---
+--- Usage: itemLocation = C_Item.GetItemLocation(itemGUID)
+---
+-- function C_Item.GetItemLocation()
+-- end
+
+---======================================================================
+--- C_Item.GetItemMaxStackSize
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number stackSize ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemMaxStackSize
+---
+--- Usage: stackSize = C_Item.GetItemMaxStackSize(itemLocation)
+---
+-- function C_Item.GetItemMaxStackSize()
+-- end
+
+---======================================================================
+--- C_Item.GetItemMaxStackSizeByID
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return number stackSize ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemMaxStackSizeByID
+---
+--- Usage: stackSize = C_Item.GetItemMaxStackSizeByID(itemInfo)
+---
+-- function C_Item.GetItemMaxStackSizeByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemName
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return string itemName ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemName
+---
+--- Usage: itemName = C_Item.GetItemName(itemLocation)
+         = C_Item.GetItemNameByID(itemInfo)
+---
+-- function C_Item.GetItemName()
+-- end
+
+---======================================================================
+--- C_Item.GetItemNameByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return string itemName ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemNameByID
+---
+--- Usage: itemName = C_Item.GetItemName(itemLocation)
+         = C_Item.GetItemNameByID(itemInfo)
+---
+-- function C_Item.GetItemNameByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemNumAddedSockets
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number socketCount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemNumAddedSockets
+---
+--- Usage: socketCount = C_Item.GetItemNumAddedSockets(itemInfo)
+---
+-- function C_Item.GetItemNumAddedSockets()
+-- end
+
+---======================================================================
+--- C_Item.GetItemNumSockets
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number socketCount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemNumSockets
+---
+--- Usage: socketCount = C_Item.GetItemNumSockets(itemInfo)
+---
+-- function C_Item.GetItemNumSockets()
+-- end
+
+---======================================================================
+--- C_Item.GetItemQuality
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.ItemQuality itemQuality ?🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQuality
+---
+--- Usage: itemQuality = C_Item.GetItemQuality(itemLocation)
+            = C_Item.GetItemQualityByID(itemInfo)
+---
+--- See also:
+--- - GetItemQualityColor
+---
+-- function C_Item.GetItemQuality()
+-- end
+
+---======================================================================
+--- C_Item.GetItemQualityByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return Enum.ItemQuality itemQuality ?🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQualityByID
+---
+--- Usage: itemQuality = C_Item.GetItemQuality(itemLocation)
+            = C_Item.GetItemQualityByID(itemInfo)
+---
+--- See also:
+--- - GetItemQualityColor
+---
+-- function C_Item.GetItemQualityByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemQualityColor
+---======================================================================
+--- Arguments:
+--- @param quality Enum.ItemQuality 🔗
+---
+--- Returns:
+--- @return number colorRGBR
+--- @return number colorRGBG
+--- @return number colorRGBB
+--- @return string qualityString
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQualityColor
+---
+--- Usage: colorRGBR, colorRGBG, colorRGBB, qualityString = C_Item.GetItemQualityColor(quality)
+---
+-- function C_Item.GetItemQualityColor()
+-- end
+
+---======================================================================
+--- C_Item.GetItemSetInfo
+---======================================================================
+--- Arguments:
+--- @param setID number
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemSetInfo
+---
+--- Usage: result = C_Item.GetItemSetInfo(setID)
+---
+-- function C_Item.GetItemSetInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemSpecInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number specTable []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemSpecInfo
+---
+--- Usage: specTable = C_Item.GetItemSpecInfo(itemInfo)
+---
+-- function C_Item.GetItemSpecInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemSpell
+---======================================================================
+--- Returns the spell effect for an item.
+---
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo : Item ID, Link or name
+---
+--- Returns:
+--- @return string spellName - The name of the spell.
+--- @return number spellID - The spell's unique identifier.
+---
+--- @since Patch 10.2.6 (2024-03-19): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemSpell
+---
+--- Usage: spellName, spellID = C_Item.GetItemSpell(itemInfo)
+---
+-- function C_Item.GetItemSpell()
+-- end
+
+---======================================================================
+--- C_Item.GetItemStatDelta
+---======================================================================
+--- Arguments:
+--- @param itemLink1 string
+--- @param itemLink2 string
+---
+--- Returns:
+--- @return table statTable - A table whose keys are also globalstrings.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemStatDelta
+---
+--- Usage: statTable = C_Item.GetItemStatDelta(itemLink1, itemLink2)
+---
+-- function C_Item.GetItemStatDelta()
+-- end
+
+---======================================================================
+--- C_Item.GetItemStats
+---======================================================================
+--- Returns a table of stats for an item.
+---
+--- Arguments:
+--- @param itemLink string - Only accepts an item link, minimally in item:%d format.
+---
+--- Returns:
+--- @return table statTable - A table whose keys are also globalstrings.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemStats
+---
+--- Usage: statTable = C_Item.GetItemStats(itemLink)
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Item.GetItemStats("|cff0070dd|Hitem:137487::::::::70:257::54:6:6652:8812:9302:7756:3268:8766:1:28:628:::::|h[Strand of the Stars]|h|r")
+---   
+---   [1]={
+---   	ITEM_MOD_VERSATILITY=508,
+---   	ITEM_MOD_MASTERY_RATING_SHORT=428,
+---   	ITEM_MOD_STAMINA_SHORT=653,
+---   }
+--- Example 2:
+---   /dump C_Item.GetItemStats("item:137487")
+---   
+---   [1]={
+---       ITEM_MOD_VERSATILITY=10,
+---       ITEM_MOD_MASTERY_RATING_SHORT=8,
+---       ITEM_MOD_STAMINA_SHORT=5
+---   }
+--- Example 3:
+---   local stats = C_Item.GetItemStats("|cffa335ee|Hitem:202542::::::::70:257::4:7:6652:9415:9229:9411:9315:1465:8767::::::|h[Mask of the Furnace Seraph]|h|r")
+---   
+---   for k, v in pairs(stats) do
+---   	print(format("%s: %d", _G[k], v))
+---   end
+---   
+---   -- Armor: 225
+---   -- Intellect: 441
+---   -- Stamina: 1478
+---   -- Critical Strike: 225
+---   -- Haste: 500
+---
+-- function C_Item.GetItemStats()
+-- end
+
+---======================================================================
+--- C_Item.GetItemSubClassInfo
+---======================================================================
+--- Arguments:
+--- @param itemClassID number
+--- @param itemSubClassID number
+---
+--- Returns:
+--- @return string subClassName
+--- @return boolean subClassUsesInvType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemSubClassInfo
+---
+--- Usage: subClassName, subClassUsesInvType = C_Item.GetItemSubClassInfo(itemClassID, itemSubClassID)
+---
+-- function C_Item.GetItemSubClassInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetItemUniqueness
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return number limitCategory
+--- @return number limitMax
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemUniqueness
+---
+--- Usage: limitCategory, limitMax = C_Item.GetItemUniqueness(itemInfo)
+---
+-- function C_Item.GetItemUniqueness()
+-- end
+
+---======================================================================
+--- C_Item.GetItemUniquenessByID
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return boolean isUnique
+--- @return string limitCategoryName ?
+--- @return number limitCategoryCount ?
+--- @return number limitCategoryID ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemUniquenessByID
+---
+--- Usage: isUnique, limitCategoryName, limitCategoryCount, limitCategoryID = C_Item.GetItemUniquenessByID(itemInfo)
+---
+-- function C_Item.GetItemUniquenessByID()
+-- end
+
+---======================================================================
+--- C_Item.GetItemUpgradeInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return ItemUpgradeInfo itemUpgradeInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetItemUpgradeInfo
+---
+--- Usage: itemUpgradeInfo = C_Item.GetItemUpgradeInfo(itemInfo)
+---
+-- function C_Item.GetItemUpgradeInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetLimitedCurrencyItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return string name
+--- @return number icon
+--- @return number quantity
+--- @return number maxQuantity
+--- @return number totalEarned
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetLimitedCurrencyItemInfo
+---
+--- Usage: name, icon, quantity, maxQuantity, totalEarned = C_Item.GetLimitedCurrencyItemInfo(itemInfo)
+---
+-- function C_Item.GetLimitedCurrencyItemInfo()
+-- end
+
+---======================================================================
+--- C_Item.GetSetBonusesForSpecializationByItemID
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param itemID number
+---
+--- Returns:
+--- @return number itemSetSpellIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetSetBonusesForSpecializationByItemID
+---
+--- Usage: itemSetSpellIDs = C_Item.GetSetBonusesForSpecializationByItemID(specID, itemID)
+---
+-- function C_Item.GetSetBonusesForSpecializationByItemID()
+-- end
+
+---======================================================================
+--- C_Item.GetStackCount
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return number stackCount
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.GetStackCount
+---
+--- Usage: stackCount = C_Item.GetStackCount(itemLocation)
+---
+-- function C_Item.GetStackCount()
+-- end
+
+---======================================================================
+--- C_Item.IsAnimaItemByID
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : Item ID, Link or name
+---
+--- Returns:
+--- @return boolean isAnimaItem
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsAnimaItemByID
+---
+--- Usage: isAnimaItem = C_Item.IsAnimaItemByID(itemInfo)
+---
+-- function C_Item.IsAnimaItemByID()
+-- end
+
+---======================================================================
+--- C_Item.IsArtifactPowerItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsArtifactPowerItem
+---
+--- Usage: result = C_Item.IsArtifactPowerItem(itemInfo)
+---
+-- function C_Item.IsArtifactPowerItem()
+-- end
+
+---======================================================================
+--- C_Item.IsBound
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isBound - Whether or not the item is soul- or accountbound.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsBound
+---
+--- Usage: isBound = C_Item.IsBound(itemLocation)
+---
+-- function C_Item.IsBound()
+-- end
+
+---======================================================================
+--- C_Item.IsBoundToAccountUntilEquip
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocation 🔗
+---
+--- Returns:
+--- @return boolean isBoundToAccountUntilEquip
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsBoundToAccountUntilEquip
+---
+--- Usage: isBoundToAccountUntilEquip = C_Item.IsBoundToAccountUntilEquip(itemLocation)
+---
+-- function C_Item.IsBoundToAccountUntilEquip()
+-- end
+
+---======================================================================
+--- C_Item.IsConsumableItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsConsumableItem
+---
+--- Usage: result = C_Item.IsConsumableItem(itemInfo)
+---
+-- function C_Item.IsConsumableItem()
+-- end
+
+---======================================================================
+--- C_Item.IsCorruptedItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsCorruptedItem
+---
+--- Usage: result = C_Item.IsCorruptedItem(itemInfo)
+---
+-- function C_Item.IsCorruptedItem()
+-- end
+
+---======================================================================
+--- C_Item.IsCosmeticItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsCosmeticItem
+---
+--- Usage: result = C_Item.IsCosmeticItem(itemInfo)
+---
+-- function C_Item.IsCosmeticItem()
+-- end
+
+---======================================================================
+--- C_Item.IsCurioItem
+---======================================================================
+--- Returns whether the item is a consumable curio that can be applied to a delves companion.
+---
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsCurioItem
+---
+--- Usage: result = C_Item.IsCurioItem(itemInfo)
+---
+-- function C_Item.IsCurioItem()
+-- end
+
+---======================================================================
+--- C_Item.IsCurrentItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsCurrentItem
+---
+--- Usage: result = C_Item.IsCurrentItem(itemInfo)
+---
+-- function C_Item.IsCurrentItem()
+-- end
+
+---======================================================================
+--- C_Item.IsDressableItemByID
+---======================================================================
+--- Returns true if the item is an Armor or Weapon type and false for all other items (Necklace, Trinkets, Rings, Consumables, etc.).
+---
+--- Arguments:
+--- @param itemInfo string
+---
+--- Returns:
+--- @return boolean isDressableItem
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsDressableItemByID
+---
+--- Usage: isDressableItem = C_Item.IsDressableItemByID(itemInfo)
+---
+-- function C_Item.IsDressableItemByID()
+-- end
+
+---======================================================================
+--- C_Item.IsEquippableItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo
+---
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Item.IsEquippableItem
+---
+--- Usage: result = C_Item.IsEquippableItem(itemInfo)
+---
+-- function C_Item.IsEquippableItem()
+-- end

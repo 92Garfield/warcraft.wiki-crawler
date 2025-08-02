@@ -1,0 +1,65 @@
+--[=[
+-- C_Macro API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_Macro
+--- C_Macro namespace contains 3 functions
+local C_Macro = {}
+
+--[=[
+-- C_Macro Functions:
+-- - C_Macro.GetMacroName
+-- - C_Macro.GetSelectedMacroIcon
+-- - C_Macro.RunMacroText
+--]=]
+
+---======================================================================
+--- C_Macro.GetMacroName
+---======================================================================
+--- Arguments:
+--- @param macroId number
+---
+--- Returns:
+--- @return string name ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Macro.GetMacroName
+---
+--- Usage: name = C_Macro.GetMacroName(macroId)
+---
+-- function C_Macro.GetMacroName()
+-- end
+
+---======================================================================
+--- C_Macro.GetSelectedMacroIcon
+---======================================================================
+--- Arguments:
+--- @param macroId number
+---
+--- Returns:
+--- @return number textureNum : fileID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Macro.GetSelectedMacroIcon
+---
+--- Usage: textureNum = C_Macro.GetSelectedMacroIcon(macroId)
+---
+-- function C_Macro.GetSelectedMacroIcon()
+-- end
+
+---======================================================================
+--- C_Macro.RunMacroText
+---======================================================================
+--- #protected - This can only be called from secure code.Use the "macro" action type of SecureActionButtonTemplate.
+---
+--- Arguments:
+--- @param text string
+--- @param button string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Macro.RunMacroText
+---
+--- Usage: C_Macro.RunMacroText(text, button)
+---
+-- function C_Macro.RunMacroText()
+-- end

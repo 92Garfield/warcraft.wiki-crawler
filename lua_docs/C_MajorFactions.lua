@@ -1,0 +1,182 @@
+--[=[
+-- C_MajorFactions API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_MajorFactions
+--- C_MajorFactions namespace contains 10 functions
+local C_MajorFactions = {}
+
+--[=[
+-- C_MajorFactions Functions:
+-- - C_MajorFactions.GetCurrentRenownLevel
+-- - C_MajorFactions.GetMajorFactionData
+-- - C_MajorFactions.GetMajorFactionIDs
+-- - C_MajorFactions.GetMajorFactionRenownInfo
+-- - C_MajorFactions.GetRenownLevels
+-- - C_MajorFactions.GetRenownNPCFactionID
+-- - C_MajorFactions.GetRenownRewardsForLevel
+-- - C_MajorFactions.HasMaximumRenown
+-- - C_MajorFactions.IsMajorFactionHiddenFromExpansionPage
+-- - C_MajorFactions.IsWeeklyRenownCapped
+--]=]
+
+---======================================================================
+--- C_MajorFactions.GetCurrentRenownLevel
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return number level
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetCurrentRenownLevel
+---
+--- Usage: level = C_MajorFactions.GetCurrentRenownLevel(majorFactionID)
+---
+-- function C_MajorFactions.GetCurrentRenownLevel()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetMajorFactionData
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return MajorFactionData data ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionData
+---
+--- Usage: data = C_MajorFactions.GetMajorFactionData(majorFactionID)
+---
+-- function C_MajorFactions.GetMajorFactionData()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetMajorFactionIDs
+---======================================================================
+--- Arguments:
+--- @param expansionID number ?
+---
+--- Returns:
+--- @return number majorFactionIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionIDs
+---
+--- Usage: majorFactionIDs = C_MajorFactions.GetMajorFactionIDs([expansionID])
+---
+-- function C_MajorFactions.GetMajorFactionIDs()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetMajorFactionRenownInfo
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return MajorFactionRenownInfo data ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionRenownInfo
+---
+--- Usage: data = C_MajorFactions.GetMajorFactionRenownInfo(majorFactionID)
+---
+-- function C_MajorFactions.GetMajorFactionRenownInfo()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetRenownLevels
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return MajorFactionRenownLevelInfo levels []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownLevels
+---
+--- Usage: levels = C_MajorFactions.GetRenownLevels(majorFactionID)
+---
+-- function C_MajorFactions.GetRenownLevels()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetRenownNPCFactionID
+---======================================================================
+--- Returns:
+--- @return number renownNPCFactionID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownNPCFactionID
+---
+--- Usage: renownNPCFactionID = C_MajorFactions.GetRenownNPCFactionID()
+---
+-- function C_MajorFactions.GetRenownNPCFactionID()
+-- end
+
+---======================================================================
+--- C_MajorFactions.GetRenownRewardsForLevel
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+--- @param renownLevel number
+---
+--- Returns:
+--- @return MajorFactionRenownRewardInfo rewards []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownRewardsForLevel
+---
+--- Usage: rewards = C_MajorFactions.GetRenownRewardsForLevel(majorFactionID, renownLevel)
+---
+-- function C_MajorFactions.GetRenownRewardsForLevel()
+-- end
+
+---======================================================================
+--- C_MajorFactions.HasMaximumRenown
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return boolean hasMaxRenown
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.HasMaximumRenown
+---
+--- Usage: hasMaxRenown = C_MajorFactions.HasMaximumRenown(majorFactionID)
+---
+-- function C_MajorFactions.HasMaximumRenown()
+-- end
+
+---======================================================================
+--- C_MajorFactions.IsMajorFactionHiddenFromExpansionPage
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return boolean isHidden
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsMajorFactionHiddenFromExpansionPage
+---
+--- Usage: isHidden = C_MajorFactions.IsMajorFactionHiddenFromExpansionPage(majorFactionID)
+---
+-- function C_MajorFactions.IsMajorFactionHiddenFromExpansionPage()
+-- end
+
+---======================================================================
+--- C_MajorFactions.IsWeeklyRenownCapped
+---======================================================================
+--- Arguments:
+--- @param majorFactionID number
+---
+--- Returns:
+--- @return boolean isWeeklyCapped
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsWeeklyRenownCapped
+---
+--- Usage: isWeeklyCapped = C_MajorFactions.IsWeeklyRenownCapped(majorFactionID)
+---
+-- function C_MajorFactions.IsWeeklyRenownCapped()
+-- end

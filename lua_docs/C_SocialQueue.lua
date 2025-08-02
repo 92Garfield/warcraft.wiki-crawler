@@ -1,0 +1,167 @@
+--[=[
+-- C_SocialQueue API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_SocialQueue
+--- C_SocialQueue namespace contains 8 functions
+local C_SocialQueue = {}
+
+--[=[
+-- C_SocialQueue Functions:
+-- - C_SocialQueue.GetAllGroups
+-- - C_SocialQueue.GetConfig
+-- - C_SocialQueue.GetGroupForPlayer
+-- - C_SocialQueue.GetGroupInfo
+-- - C_SocialQueue.GetGroupMembers
+-- - C_SocialQueue.GetGroupQueues
+-- - C_SocialQueue.RequestToJoin
+-- - C_SocialQueue.SignalToastDisplayed
+--]=]
+
+---======================================================================
+--- C_SocialQueue.GetAllGroups
+---======================================================================
+--- Arguments:
+--- @param allowNonJoinable boolean ? = false
+--- @param allowNonQueuedGroups boolean ? = false
+---
+--- Returns:
+--- @return string groupGUIDs []
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetAllGroups
+---
+--- Usage: groupGUIDs = C_SocialQueue.GetAllGroups([allowNonJoinable, allowNonQueuedGroups])
+---
+-- function C_SocialQueue.GetAllGroups()
+-- end
+
+---======================================================================
+--- C_SocialQueue.GetConfig
+---======================================================================
+--- Returns:
+--- @return  config structure - SocialQueueConfig
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetConfig
+---
+--- Usage: config = C_SocialQueue.GetConfig()
+---
+-- function C_SocialQueue.GetConfig()
+-- end
+
+---======================================================================
+--- C_SocialQueue.GetGroupForPlayer
+---======================================================================
+--- Arguments:
+--- @param playerGUID string
+---
+--- Returns:
+--- @return string groupGUID
+--- @return boolean isSoloQueueParty
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupForPlayer
+---
+--- Usage: groupGUID, isSoloQueueParty = C_SocialQueue.GetGroupForPlayer(playerGUID)
+---
+-- function C_SocialQueue.GetGroupForPlayer()
+-- end
+
+---======================================================================
+--- C_SocialQueue.GetGroupInfo
+---======================================================================
+--- Retrieves information about a group in social queue.
+---
+--- Arguments:
+--- @param groupGUID string - a string containing the hexadecimal representation of the player's GUID
+---
+--- Returns:
+--- @return boolean canJoin
+--- @return number numQueues
+--- @return boolean needTank
+--- @return boolean needHealer
+--- @return boolean needDamage
+--- @return boolean isSoloQueueParty
+--- @return boolean questSessionActive
+--- @return string leaderGUID
+---
+--- @since Patch 8.2.5 (2019-09-24): Added questSessionActive return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupInfo
+---
+--- Usage: canJoin, numQueues, needTank, needHealer, needDamage, isSoloQueueParty, questSessionActive, leaderGUID = C_SocialQueue.GetGroupInfo(groupGUID)
+---
+-- function C_SocialQueue.GetGroupInfo()
+-- end
+
+---======================================================================
+--- C_SocialQueue.GetGroupMembers
+---======================================================================
+--- Arguments:
+--- @param groupGUID string
+---
+--- Returns:
+--- @return  groupMembers structure - SocialQueuePlayerInfo[]
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupMembers
+---
+--- Usage: groupMembers = C_SocialQueue.GetGroupMembers(groupGUID)
+---
+-- function C_SocialQueue.GetGroupMembers()
+-- end
+
+---======================================================================
+--- C_SocialQueue.GetGroupQueues
+---======================================================================
+--- Arguments:
+--- @param groupGUID string
+---
+--- Returns:
+--- @return  queues structure - SocialQueueGroupQueueInfo[]
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupQueues
+---
+--- Usage: queues = C_SocialQueue.GetGroupQueues(groupGUID)
+---
+-- function C_SocialQueue.GetGroupQueues()
+-- end
+
+---======================================================================
+--- C_SocialQueue.RequestToJoin
+---======================================================================
+--- Arguments:
+--- @param groupGUID string
+--- @param applyAsTank boolean ? = false
+--- @param applyAsHealer boolean ? = false
+--- @param applyAsDamage boolean ? = false
+---
+--- Returns:
+--- @return boolean requestSuccessful
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.RequestToJoin
+---
+--- Usage: requestSuccessful = C_SocialQueue.RequestToJoin(groupGUID [, applyAsTank [, applyAsHealer [, applyAsDamage]]])
+---
+-- function C_SocialQueue.RequestToJoin()
+-- end
+
+---======================================================================
+--- C_SocialQueue.SignalToastDisplayed
+---======================================================================
+--- Arguments:
+--- @param groupGUID string
+--- @param priority number
+---
+--- @since Patch 7.1.0 (2016-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_SocialQueue.SignalToastDisplayed
+---
+--- Usage: C_SocialQueue.SignalToastDisplayed(groupGUID, priority)
+---
+-- function C_SocialQueue.SignalToastDisplayed()
+-- end

@@ -1,0 +1,51 @@
+--[=[
+-- C_LootJournal API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_LootJournal
+--- C_LootJournal namespace contains 2 functions
+local C_LootJournal = {}
+
+--[=[
+-- C_LootJournal Functions:
+-- - C_LootJournal.GetItemSetItems
+-- - C_LootJournal.GetItemSets
+--]=]
+
+---======================================================================
+--- C_LootJournal.GetItemSetItems
+---======================================================================
+--- Arguments:
+--- @param setID number
+---
+--- Returns:
+--- @return LootJournalItemInfo items []
+---
+--- @since Patch 9.2.0 (2022-02-22): Readded.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootJournal.GetItemSetItems
+---
+--- Usage: items = C_LootJournal.GetItemSetItems(setID)
+---
+-- function C_LootJournal.GetItemSetItems()
+-- end
+
+---======================================================================
+--- C_LootJournal.GetItemSets
+---======================================================================
+--- Arguments:
+--- @param classID number ?
+--- @param specID number ?
+---
+--- Returns:
+--- @return LootJournalItemSetInfo itemSets []
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_LootJournal.GetItemSets
+---
+--- Usage: itemSets = C_LootJournal.GetItemSets([classID, specID])
+---
+-- function C_LootJournal.GetItemSets()
+-- end

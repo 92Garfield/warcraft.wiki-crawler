@@ -1,0 +1,117 @@
+--[=[
+-- C_PlayerChoice API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 7
+--]=]
+
+--- @class C_PlayerChoice
+--- C_PlayerChoice namespace contains 7 functions
+local C_PlayerChoice = {}
+
+--[=[
+-- C_PlayerChoice Functions:
+-- - C_PlayerChoice.GetCurrentPlayerChoiceInfo
+-- - C_PlayerChoice.GetNumRerolls
+-- - C_PlayerChoice.GetRemainingTime
+-- - C_PlayerChoice.IsWaitingForPlayerChoiceResponse
+-- - C_PlayerChoice.OnUIClosed
+-- - C_PlayerChoice.RequestRerollPlayerChoice
+-- - C_PlayerChoice.SendPlayerChoiceResponse
+--]=]
+
+---======================================================================
+--- C_PlayerChoice.GetCurrentPlayerChoiceInfo
+---======================================================================
+--- Returns:
+--- @return PlayerChoiceInfo choiceInfo
+---
+--- @since Patch 11.1.5 (2025-04-22): Removed rarityColor field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo
+---
+--- Usage: choiceInfo = C_PlayerChoice.GetCurrentPlayerChoiceInfo()
+---
+-- function C_PlayerChoice.GetCurrentPlayerChoiceInfo()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.GetNumRerolls
+---======================================================================
+--- Returns:
+--- @return number numRerolls
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetNumRerolls
+---
+--- Usage: numRerolls = C_PlayerChoice.GetNumRerolls()
+---
+-- function C_PlayerChoice.GetNumRerolls()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.GetRemainingTime
+---======================================================================
+--- Returns:
+--- @return number remainingTime ?
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetRemainingTime
+---
+--- Usage: remainingTime = C_PlayerChoice.GetRemainingTime()
+---
+-- function C_PlayerChoice.GetRemainingTime()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.IsWaitingForPlayerChoiceResponse
+---======================================================================
+--- Returns true if the player has an outstanding player choice that requires a response.
+---
+--- Returns:
+--- @return boolean isWaitingForResponse
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse
+---
+--- Usage: isWaitingForResponse = C_PlayerChoice.IsWaitingForPlayerChoiceResponse()
+---
+-- function C_PlayerChoice.IsWaitingForPlayerChoiceResponse()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.OnUIClosed
+---======================================================================
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.OnUIClosed
+---
+--- Usage: C_PlayerChoice.OnUIClosed()
+---
+-- function C_PlayerChoice.OnUIClosed()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.RequestRerollPlayerChoice
+---======================================================================
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.RequestRerollPlayerChoice
+---
+--- Usage: C_PlayerChoice.RequestRerollPlayerChoice()
+---
+-- function C_PlayerChoice.RequestRerollPlayerChoice()
+-- end
+
+---======================================================================
+--- C_PlayerChoice.SendPlayerChoiceResponse
+---======================================================================
+--- Selects a quest option to pursue.
+---
+--- Arguments:
+--- @param responseID number - Response ID of the option the player wishes to pursue from C_PlayerChoice.GetCurrentPlayerChoiceInfo()
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.SendPlayerChoiceResponse
+---
+--- Usage: C_PlayerChoice.SendPlayerChoiceResponse(responseID)
+---
+-- function C_PlayerChoice.SendPlayerChoiceResponse()
+-- end

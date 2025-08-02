@@ -1,0 +1,449 @@
+--[=[
+-- C_AddOns API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 25
+--]=]
+
+--- @class C_AddOns
+--- C_AddOns namespace contains 25 functions
+local C_AddOns = {}
+
+--[=[
+-- C_AddOns Functions:
+-- - C_AddOns.DisableAddOn
+-- - C_AddOns.DisableAllAddOns
+-- - C_AddOns.DoesAddOnExist
+-- - C_AddOns.DoesAddOnHaveLoadError
+-- - C_AddOns.EnableAddOn
+-- - C_AddOns.EnableAllAddOns
+-- - C_AddOns.GetAddOnDependencies
+-- - C_AddOns.GetAddOnEnableState
+-- - C_AddOns.GetAddOnInfo
+-- - C_AddOns.GetAddOnInterfaceVersion
+-- - C_AddOns.GetAddOnLocalTable
+-- - C_AddOns.GetAddOnMetadata
+-- - C_AddOns.GetAddOnOptionalDependencies
+-- - C_AddOns.GetNumAddOns
+-- - C_AddOns.GetScriptsDisallowedForBeta
+-- - C_AddOns.IsAddOnDefaultEnabled
+-- - C_AddOns.IsAddOnLoadOnDemand
+-- - C_AddOns.IsAddOnLoadable
+-- - C_AddOns.IsAddOnLoaded
+-- - C_AddOns.IsAddonVersionCheckEnabled
+-- - C_AddOns.LoadAddOn
+-- - C_AddOns.ResetAddOns
+-- - C_AddOns.ResetDisabledAddOns
+-- - C_AddOns.SaveAddOns
+-- - C_AddOns.SetAddonVersionCheck
+--]=]
+
+---======================================================================
+--- C_AddOns.DisableAddOn
+---======================================================================
+--- Sets an addon to be disabled.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be disabled, or an index from 1 to C_AddOns.GetNumAddOns. Blizzard addons cannot be disabled.
+--- @param character string ? - The name or GUID of the character, excluding the realm name. If omitted, disables the addon for all characters.
+---
+--- @since Hotfix (2024-05-16): This function can no longer be used to disable secure Blizzard addons.  (Build: 10.2.7.54736)
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.DisableAddOn
+---
+--- Usage: C_AddOns.DisableAddOn(name [, character])
+---
+--- Examples:
+--- Example 1:
+---   C_AddOns.DisableAddOn("HelloWorld")
+--- Example 2:
+---   C_AddOns.DisableAddOn("HelloWorld", UnitName("player"))
+---
+-- function C_AddOns.DisableAddOn()
+-- end
+
+---======================================================================
+--- C_AddOns.DisableAllAddOns
+---======================================================================
+--- Sets all addons to be disabled.
+---
+--- Arguments:
+--- @param character string ? - The name or GUID of the character, excluding the realm name. If omitted, disables all addons for all characters.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.DisableAllAddOns
+---
+--- Usage: C_AddOns.DisableAllAddOns([character])
+---
+-- function C_AddOns.DisableAllAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.DoesAddOnExist
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon
+---
+--- Returns:
+--- @return boolean exists
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.DoesAddOnExist
+---
+--- Usage: exists = C_AddOns.DoesAddOnExist(name)
+---
+-- function C_AddOns.DoesAddOnExist()
+-- end
+
+---======================================================================
+--- C_AddOns.DoesAddOnHaveLoadError
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon
+---
+--- Returns:
+--- @return boolean hadError
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.DoesAddOnHaveLoadError
+---
+--- Usage: hadError = C_AddOns.DoesAddOnHaveLoadError(name)
+---
+-- function C_AddOns.DoesAddOnHaveLoadError()
+-- end
+
+---======================================================================
+--- C_AddOns.EnableAddOn
+---======================================================================
+--- Sets an addon to be enabled.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be enabled, or an index from 1 to C_AddOns.GetNumAddOns. Blizzard addons can only be enabled by name.
+--- @param character string ? - The name or GUID of the character, excluding the realm name. If omitted, enables the addon for all characters.
+---
+--- @since Patch 10.2.0 (2023-11-07): Namespaced to C_AddOns. This now defaults to all characters instead of the current character if the character param is omitted.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.EnableAddOn
+---
+--- Usage: C_AddOns.EnableAddOn(name [, character])
+---
+--- Examples:
+--- Example 1:
+---   C_AddOns.EnableAddOn("HelloWorld")
+--- Example 2:
+---   C_AddOns.EnableAddOn("HelloWorld", UnitName("player"))
+---
+-- function C_AddOns.EnableAddOn()
+-- end
+
+---======================================================================
+--- C_AddOns.EnableAllAddOns
+---======================================================================
+--- Sets all addons to be enabled.
+---
+--- Arguments:
+--- @param character string ? - The name or GUID of the character, excluding the realm name. If omitted, enables all addons for all characters.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.EnableAllAddOns
+---
+--- Usage: C_AddOns.EnableAllAddOns([character])
+---
+-- function C_AddOns.EnableAllAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnDependencies
+---======================================================================
+--- Returns a list of TOC dependencies.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return string dep1, ... ? - A list of addon names that are a dependency.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnDependencies
+---
+--- Usage: dep1, ... = C_AddOns.GetAddOnDependencies(name)
+---
+-- function C_AddOns.GetAddOnDependencies()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnEnableState
+---======================================================================
+--- Queries the enabled state of an addon, optionally for a specific character.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+--- @param character string ? - The name or GUID of the character to check against, or omitted/nil for all characters
+---
+--- Returns:
+--- @return Enum.AddOnEnableState state - The enabled state of the addon.
+---
+--- @since Patch 10.2.0 (2023-11-07): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnEnableState
+---
+--- Usage: state = C_AddOns.GetAddOnEnableState(name [, character])
+---
+-- function C_AddOns.GetAddOnEnableState()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnInfo
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return string name - The name of the AddOn (the folder name).
+--- @return string title - The localized title of the AddOn as listed in the .toc file.
+--- @return string notes - The localized notes about the AddOn from its .toc file.
+--- @return boolean loadable - Indicates if the AddOn is loaded or eligible to be loaded on this or another character, true if it is, false if it is not.
+--- @return string reason - The reason why the AddOn cannot be loaded. This is nil if the addon is loadable, otherwise it contains a string token indicating the reason that can be localized by prepending "ADDON_".
+--- @return string security - Indicates the security status of the AddOn. This is currently "INSECURE" for all user provided addons, "SECURE_PROTECTED" for guarded Blizzard addons, and "SECURE" for all other Blizzard AddOns.
+--- @return boolean updateAvailable - Not currently used.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnInfo
+---
+--- Usage: name, title, notes, loadable, reason, security, updateAvailable = C_AddOns.GetAddOnInfo(name)
+---
+-- function C_AddOns.GetAddOnInfo()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnInterfaceVersion
+---======================================================================
+--- Returns the value of the Interface directive in an addon TOC file.
+---
+--- Arguments:
+--- @param name number |string : uiAddon
+---
+--- Returns:
+--- @return number interfaceVersion
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnInterfaceVersion
+---
+--- Usage: interfaceVersion = C_AddOns.GetAddOnInterfaceVersion(name)
+---
+-- function C_AddOns.GetAddOnInterfaceVersion()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnLocalTable
+---======================================================================
+--- Returns the addon table (passed as the second argument of ... to files) for any addon that opts in through setting AllowAddOnTableAccess: 1 in the toc file. Insecure code cannot query addon tables from Blizzard addons.
+---
+--- Arguments:
+--- @param name number |string : uiAddon
+---
+--- Returns:
+--- @return table table : LuaValueVariant
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnLocalTable
+---
+--- Usage: table = C_AddOns.GetAddOnLocalTable(name)
+---
+-- function C_AddOns.GetAddOnLocalTable()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnMetadata
+---======================================================================
+--- Returns the TOC metadata of an addon.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name or index of the addon, case insensitive.
+--- @param variable string - Variable name, case insensitive. May be Title, Notes, Author, Version, or anything starting with X-
+---
+--- Returns:
+--- @return string value ? - The value of the variable, nil if not defined.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnMetadata
+---
+--- Usage: value = C_AddOns.GetAddOnMetadata(name, variable)
+---
+-- function C_AddOns.GetAddOnMetadata()
+-- end
+
+---======================================================================
+--- C_AddOns.GetAddOnOptionalDependencies
+---======================================================================
+--- Returns a list of optional TOC dependencies.
+---
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return string dep1, ... ? - A list of addon names that are an optional dependency.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnOptionalDependencies
+---
+--- Usage: dep1, ... = C_AddOns.GetAddOnOptionalDependencies(name)
+---
+-- function C_AddOns.GetAddOnOptionalDependencies()
+-- end
+
+---======================================================================
+--- C_AddOns.GetNumAddOns
+---======================================================================
+--- Returns the number of AddOns.
+---
+--- Returns:
+--- @return number numAddOns - The number of user installed addons. Blizzard addons are not counted.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetNumAddOns
+---
+--- Usage: numAddOns = C_AddOns.GetNumAddOns()
+---
+-- function C_AddOns.GetNumAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.GetScriptsDisallowedForBeta
+---======================================================================
+--- Returns:
+--- @return boolean disallowed
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.GetScriptsDisallowedForBeta
+---
+--- Usage: disallowed = C_AddOns.GetScriptsDisallowedForBeta()
+---
+-- function C_AddOns.GetScriptsDisallowedForBeta()
+-- end
+
+---======================================================================
+--- C_AddOns.IsAddOnDefaultEnabled
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon
+---
+--- Returns:
+--- @return boolean defaultEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnDefaultEnabled
+---
+--- Usage: defaultEnabled = C_AddOns.IsAddOnDefaultEnabled(name)
+---
+-- function C_AddOns.IsAddOnDefaultEnabled()
+-- end
+
+---======================================================================
+--- C_AddOns.IsAddOnLoadable
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+--- @param character string ? - The name or GUID of the character to check against, or omitted/nil for all characters
+--- @param demandLoaded boolean ? = false
+---
+--- Returns:
+--- @return boolean loadable
+--- @return string reason
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoadable
+---
+--- Usage: loadable, reason = C_AddOns.IsAddOnLoadable(name [, character [, demandLoaded]])
+---
+-- function C_AddOns.IsAddOnLoadable()
+-- end
+
+---======================================================================
+--- C_AddOns.IsAddOnLoaded
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return boolean loadedOrLoading
+--- @return boolean loaded
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoaded
+---
+--- Usage: loadedOrLoading, loaded = C_AddOns.IsAddOnLoaded(name)
+---
+-- function C_AddOns.IsAddOnLoaded()
+-- end
+
+---======================================================================
+--- C_AddOns.IsAddOnLoadOnDemand
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return boolean loadOnDemand
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoadOnDemand
+---
+--- Usage: loadOnDemand = C_AddOns.IsAddOnLoadOnDemand(name)
+---
+-- function C_AddOns.IsAddOnLoadOnDemand()
+-- end
+
+---======================================================================
+--- C_AddOns.IsAddonVersionCheckEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddonVersionCheckEnabled
+---
+--- Usage: isEnabled = C_AddOns.IsAddonVersionCheckEnabled()
+---
+-- function C_AddOns.IsAddonVersionCheckEnabled()
+-- end
+
+---======================================================================
+--- C_AddOns.LoadAddOn
+---======================================================================
+--- Arguments:
+--- @param name number |string : uiAddon - The name of the addon to be queried, or an index from 1 to C_AddOns.GetNumAddOns. The state of Blizzard addons can only be queried by name.
+---
+--- Returns:
+--- @return boolean loaded ? - true if the addon was loaded successfully, or if it has already been loaded.
+--- @return string value ? - Locale-independent reason why the addon could not be loaded e.g. "DISABLED", otherwise returns nil if the addon was loaded.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.LoadAddOn
+---
+--- Usage: loaded, value = C_AddOns.LoadAddOn(name)
+---
+-- function C_AddOns.LoadAddOn()
+-- end
+
+---======================================================================
+--- C_AddOns.ResetAddOns
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.ResetAddOns
+---
+--- Usage: C_AddOns.ResetAddOns()
+---
+-- function C_AddOns.ResetAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.ResetDisabledAddOns
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.ResetDisabledAddOns
+---
+--- Usage: C_AddOns.ResetDisabledAddOns()
+---
+-- function C_AddOns.ResetDisabledAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.SaveAddOns
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.SaveAddOns
+---
+--- Usage: C_AddOns.SaveAddOns()
+---
+-- function C_AddOns.SaveAddOns()
+-- end
+
+---======================================================================
+--- C_AddOns.SetAddonVersionCheck
+---======================================================================
+--- Arguments:
+--- @param enabled boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AddOns.SetAddonVersionCheck
+---
+--- Usage: C_AddOns.SetAddonVersionCheck(enabled)
+---
+-- function C_AddOns.SetAddonVersionCheck()
+-- end

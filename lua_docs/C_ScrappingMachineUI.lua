@@ -1,0 +1,167 @@
+--[=[
+-- C_ScrappingMachineUI API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 11
+--]=]
+
+--- @class C_ScrappingMachineUI
+--- C_ScrappingMachineUI namespace contains 11 functions
+local C_ScrappingMachineUI = {}
+
+--[=[
+-- C_ScrappingMachineUI Functions:
+-- - C_ScrappingMachineUI.CloseScrappingMachine
+-- - C_ScrappingMachineUI.DropPendingScrapItemFromCursor
+-- - C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex
+-- - C_ScrappingMachineUI.GetScrapSpellID
+-- - C_ScrappingMachineUI.GetScrappingMachineName
+-- - C_ScrappingMachineUI.HasScrappableItems
+-- - C_ScrappingMachineUI.RemoveAllScrapItems
+-- - C_ScrappingMachineUI.RemoveCurrentScrappingItem
+-- - C_ScrappingMachineUI.RemoveItemToScrap
+-- - C_ScrappingMachineUI.ScrapItems
+-- - C_ScrappingMachineUI.ValidateScrappingList
+--]=]
+
+---======================================================================
+--- C_ScrappingMachineUI.ValidateScrappingList
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.ValidateScrappingList
+---
+--- Usage: C_ScrappingMachineUI.ValidateScrappingList()
+---
+-- function C_ScrappingMachineUI.ValidateScrappingList()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.CloseScrappingMachine
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.CloseScrappingMachine
+---
+--- Usage: C_ScrappingMachineUI.CloseScrappingMachine()
+---
+-- function C_ScrappingMachineUI.CloseScrappingMachine()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.DropPendingScrapItemFromCursor
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.DropPendingScrapItemFromCursor
+---
+--- Usage: C_ScrappingMachineUI.DropPendingScrapItemFromCursor(index)
+---
+-- function C_ScrappingMachineUI.DropPendingScrapItemFromCursor()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return ItemLocationMixin itemLoc 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex
+---
+--- Usage: itemLoc = C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex(index)
+---
+-- function C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.GetScrapSpellID
+---======================================================================
+--- Returns:
+--- @return number spellID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.GetScrapSpellID
+---
+--- Usage: spellID = C_ScrappingMachineUI.GetScrapSpellID()
+---
+-- function C_ScrappingMachineUI.GetScrapSpellID()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.GetScrappingMachineName
+---======================================================================
+--- Returns:
+--- @return string name
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.GetScrappingMachineName
+---
+--- Usage: name = C_ScrappingMachineUI.GetScrappingMachineName()
+---
+-- function C_ScrappingMachineUI.GetScrappingMachineName()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.HasScrappableItems
+---======================================================================
+--- Returns:
+--- @return boolean hasScrappableItems
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.HasScrappableItems
+---
+--- Usage: hasScrappableItems = C_ScrappingMachineUI.HasScrappableItems()
+---
+-- function C_ScrappingMachineUI.HasScrappableItems()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.RemoveAllScrapItems
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.RemoveAllScrapItems
+---
+--- Usage: C_ScrappingMachineUI.RemoveAllScrapItems()
+---
+-- function C_ScrappingMachineUI.RemoveAllScrapItems()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.RemoveCurrentScrappingItem
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.RemoveCurrentScrappingItem
+---
+--- Usage: C_ScrappingMachineUI.RemoveCurrentScrappingItem()
+---
+-- function C_ScrappingMachineUI.RemoveCurrentScrappingItem()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.RemoveItemToScrap
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.RemoveItemToScrap
+---
+--- Usage: C_ScrappingMachineUI.RemoveItemToScrap(index)
+---
+-- function C_ScrappingMachineUI.RemoveItemToScrap()
+-- end
+
+---======================================================================
+--- C_ScrappingMachineUI.ScrapItems
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.ScrapItems
+---
+--- Usage: C_ScrappingMachineUI.ScrapItems()
+---
+-- function C_ScrappingMachineUI.ScrapItems()
+-- end

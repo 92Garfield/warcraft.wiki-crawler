@@ -1,0 +1,900 @@
+--[=[
+-- C_Spell API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 48
+--]=]
+
+--- @class C_Spell
+--- C_Spell namespace contains 48 functions
+local C_Spell = {}
+
+--[=[
+-- C_Spell Functions:
+-- - C_Spell.CancelSpellByID
+-- - C_Spell.DoesSpellExist
+-- - C_Spell.EnableSpellRangeCheck
+-- - C_Spell.GetBaseSpell
+-- - C_Spell.GetDeadlyDebuffInfo
+-- - C_Spell.GetMawPowerBorderAtlasBySpellID
+-- - C_Spell.GetMawPowerLinkBySpellID
+-- - C_Spell.GetOverrideSpell
+-- - C_Spell.GetSchoolString
+-- - C_Spell.GetSpellAutoCast
+-- - C_Spell.GetSpellCastCount
+-- - C_Spell.GetSpellCharges
+-- - C_Spell.GetSpellCooldown
+-- - C_Spell.GetSpellDescription
+-- - C_Spell.GetSpellIDForSpellIdentifier
+-- - C_Spell.GetSpellInfo
+-- - C_Spell.GetSpellLevelLearned
+-- - C_Spell.GetSpellLink
+-- - C_Spell.GetSpellLossOfControlCooldown
+-- - C_Spell.GetSpellName
+-- - C_Spell.GetSpellPowerCost
+-- - C_Spell.GetSpellQueueWindow
+-- - C_Spell.GetSpellSkillLineAbilityRank
+-- - C_Spell.GetSpellSubtext
+-- - C_Spell.GetSpellTexture
+-- - C_Spell.GetSpellTradeSkillLink
+-- - C_Spell.IsAutoAttackSpell
+-- - C_Spell.IsAutoRepeatSpell
+-- - C_Spell.IsClassTalentSpell
+-- - C_Spell.IsCurrentSpell
+-- - C_Spell.IsPressHoldReleaseSpell
+-- - C_Spell.IsPvPTalentSpell
+-- - C_Spell.IsRangedAutoAttackSpell
+-- - C_Spell.IsSpellDataCached
+-- - C_Spell.IsSpellDisabled
+-- - C_Spell.IsSpellHarmful
+-- - C_Spell.IsSpellHelpful
+-- - C_Spell.IsSpellInRange
+-- - C_Spell.IsSpellPassive
+-- - C_Spell.IsSpellUsable
+-- - C_Spell.PickupSpell
+-- - C_Spell.RequestLoadSpellData
+-- - C_Spell.SetSpellAutoCastEnabled
+-- - C_Spell.SpellHasRange
+-- - C_Spell.TargetSpellIsEnchanting
+-- - C_Spell.TargetSpellJumpsUpgradeTrack
+-- - C_Spell.TargetSpellReplacesBonusTree
+-- - C_Spell.ToggleSpellAutoCast
+--]=]
+
+---======================================================================
+--- C_Spell.CancelSpellByID
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.CancelSpellByID
+---
+--- Usage: C_Spell.CancelSpellByID(spellID)
+---
+-- function C_Spell.CancelSpellByID()
+-- end
+
+---======================================================================
+--- C_Spell.DoesSpellExist
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier -  Using name will always check for an override on that spell
+---
+--- Returns:
+--- @return boolean spellExists
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.DoesSpellExist
+---
+--- Usage: spellExists = C_Spell.DoesSpellExist(spellIdentifier)
+---
+-- function C_Spell.DoesSpellExist()
+-- end
+
+---======================================================================
+--- C_Spell.EnableSpellRangeCheck
+---======================================================================
+--- Used in conjunction with SpellRangeCheckUpdate to inform the UI when a spell goes in or out of range with the current target.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param enable boolean - True if changes in range for the spell should dispatch SpellRangeCheckUpdate. False if the spell no longer needs the event.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.EnableSpellRangeCheck
+---
+--- Usage: C_Spell.EnableSpellRangeCheck(spellIdentifier, enable)
+---
+-- function C_Spell.EnableSpellRangeCheck()
+-- end
+
+---======================================================================
+--- C_Spell.GetBaseSpell
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param spec number ? = 0 - Which Class Specialization to consider, as overrides may vary by Spec; Defaults to player's current Spec
+---
+--- Returns:
+--- @return number baseSpellID - Returns the spellID passed in if there is no override
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetBaseSpell
+---
+--- Usage: baseSpellID = C_Spell.GetBaseSpell(spellIdentifier [, spec])
+---
+-- function C_Spell.GetBaseSpell()
+-- end
+
+---======================================================================
+--- C_Spell.GetDeadlyDebuffInfo
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return DeadlyDebuffInfo deadlyDebuffInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetDeadlyDebuffInfo
+---
+--- Usage: deadlyDebuffInfo = C_Spell.GetDeadlyDebuffInfo(spellIdentifier)
+---
+-- function C_Spell.GetDeadlyDebuffInfo()
+-- end
+
+---======================================================================
+--- C_Spell.GetMawPowerBorderAtlasBySpellID
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return string rarityBorderAtlas : AtlasID
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetMawPowerBorderAtlasBySpellID
+---
+--- Usage: rarityBorderAtlas = C_Spell.GetMawPowerBorderAtlasBySpellID(spellID)
+---
+-- function C_Spell.GetMawPowerBorderAtlasBySpellID()
+-- end
+
+---======================================================================
+--- C_Spell.GetMawPowerLinkBySpellID
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return string link
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetMawPowerLinkBySpellID
+---
+--- Usage: link = C_Spell.GetMawPowerLinkBySpellID(spellID)
+---
+-- function C_Spell.GetMawPowerLinkBySpellID()
+-- end
+
+---======================================================================
+--- C_Spell.GetOverrideSpell
+---======================================================================
+--- Returns the ID for the override spell.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param spec number ? = 0 - Which Class Specialization to consider, as overrides may vary by Spec; Defaults to player's current Spec
+--- @param onlyKnown boolean ? = true
+--- @param ignoreOverrideSpellID number ? = 0
+---
+--- Returns:
+--- @return number overrideSpellID - Returns the spellID for the active version of the spell
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetOverrideSpell
+---
+--- Usage: overrideSpellID = C_Spell.GetOverrideSpell(spellIdentifier [, spec [, onlyKnown [, ignoreOverrideSpellID]]])
+---
+-- function C_Spell.GetOverrideSpell()
+-- end
+
+---======================================================================
+--- C_Spell.GetSchoolString
+---======================================================================
+--- Arguments:
+--- @param schoolMask number
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSchoolString
+---
+--- Usage: result = C_Spell.GetSchoolString(schoolMask)
+---
+-- function C_Spell.GetSchoolString()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellAutoCast
+---======================================================================
+--- Returns nil if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean autoCastAllowed
+--- @return boolean autoCastEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellAutoCast
+---
+--- Usage: autoCastAllowed, autoCastEnabled = C_Spell.GetSpellAutoCast(spellIdentifier)
+---
+-- function C_Spell.GetSpellAutoCast()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellCastCount
+---======================================================================
+--- Returns number of times a spell can be cast, typically based on availability of things like required reagent items; Returns 0 if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return number castCount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCastCount
+---
+--- Usage: castCount = C_Spell.GetSpellCastCount(spellIdentifier)
+---
+-- function C_Spell.GetSpellCastCount()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellCharges
+---======================================================================
+--- Returns a table of info about the charges of a charge-accumulating spell; May return nil if spell is not found or is not charge-based
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return SpellChargeInfo chargeInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCharges
+---
+--- Usage: chargeInfo = C_Spell.GetSpellCharges(spellIdentifier)
+---
+-- function C_Spell.GetSpellCharges()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellCooldown
+---======================================================================
+--- Returns the cooldown info of a spell.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier - Spell ID, name, name(subtext), or link
+---
+--- Returns:
+--- @return SpellCooldownInfo spellCooldownInfo ? - Returns nil if spell is not found
+---
+--- @since Patch 11.0.0 (2024-07-23): Added, replacement for GetSpellCooldown.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown
+---
+--- Usage: spellCooldownInfo = C_Spell.GetSpellCooldown(spellIdentifier)
+---
+-- function C_Spell.GetSpellCooldown()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellDescription
+---======================================================================
+--- Returns nil if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return string description - May be empty if spell's data isn't loaded yet; Listen for SPELL_TEXT_UPDATE event, or use SpellMixin to load asynchronously
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellDescription
+---
+--- Usage: description = C_Spell.GetSpellDescription(spellIdentifier)
+---
+-- function C_Spell.GetSpellDescription()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellIDForSpellIdentifier
+---======================================================================
+--- Returns the spell ID for a given SpellIdentifier.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier - Using name will always check for an override on that spell; If passed a spell ID, will return same id as was passed
+---
+--- Returns:
+--- @return number spellID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellIDForSpellIdentifier
+---
+--- Usage: spellID = C_Spell.GetSpellIDForSpellIdentifier(spellIdentifier)
+---
+-- function C_Spell.GetSpellIDForSpellIdentifier()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellInfo
+---======================================================================
+--- Some spell data - such as subtext and description - are load on demand. You can use SpellMixin:ContinueOnSpellLoad() to asynchronously query the data.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier - Using name will always check for an override on that spell; If passed a spell ID, will return same id as was passed.
+---
+--- Returns:
+--- @return SpellInfo spellInfo ? - Returns nil if spell is not found
+---
+--- @since Patch 11.0.0 (2024-07-23): Added; returns a structured table. Replacement for GetSpellInfo and C_SpellBook.GetSpellInfo.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellInfo
+---
+--- Usage: spellInfo = C_Spell.GetSpellInfo(spellIdentifier)
+---
+--- Examples:
+--- Example 1:
+---   /dump C_Spell.GetSpellInfo(2061) -- [1]={castTime=1317, name="Flash Heal", minRange=0, originalIconID=135907, iconID=135907, maxRange=40, spellID=2061}
+--- Example 2:
+---   local spell = Spell:CreateFromSpellID(139)
+---   
+---   spell:ContinueOnSpellLoad(function()
+---   	local name = spell:GetSpellName()
+---   	local desc = spell:GetSpellDescription()
+---   	print(name, desc) -- "Renew", "Fill the target with faith in the light, healing for 295 over 15 sec."
+---   end)
+---
+-- function C_Spell.GetSpellInfo()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellLevelLearned
+---======================================================================
+--- Returns the level the spell is learned at; May return a different value if the player is currently Level Linked with another player
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return number levelLearned
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLevelLearned
+---
+--- Usage: levelLearned = C_Spell.GetSpellLevelLearned(spellIdentifier)
+---
+-- function C_Spell.GetSpellLevelLearned()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellLink
+---======================================================================
+--- Returns the hyperlink for a spell.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param glyphID number ?
+---
+--- Returns:
+--- @return string spellLink : spellLink - Returns nil if spell is not found
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLink
+---
+--- Usage: spellLink = C_Spell.GetSpellLink(spellIdentifier [, glyphID])
+---
+-- function C_Spell.GetSpellLink()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellLossOfControlCooldown
+---======================================================================
+--- Returns nil if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return number startTime
+--- @return number duration
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLossOfControlCooldown
+---
+--- Usage: startTime, duration = C_Spell.GetSpellLossOfControlCooldown(spellIdentifier)
+---
+-- function C_Spell.GetSpellLossOfControlCooldown()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellName
+---======================================================================
+--- Returns nil if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return string name
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellName
+---
+--- Usage: name = C_Spell.GetSpellName(spellIdentifier)
+---
+-- function C_Spell.GetSpellName()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellPowerCost
+---======================================================================
+--- Returns a table containing one or more SpellPowerCostInfos, one for each power type this spell costs
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return SpellPowerCostInfo powerCosts []? - May return nil if spell is not found or has no resource costs
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellPowerCost
+---
+--- Usage: powerCosts = C_Spell.GetSpellPowerCost(spellIdentifier)
+---
+-- function C_Spell.GetSpellPowerCost()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellQueueWindow
+---======================================================================
+--- Returns:
+--- @return number result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellQueueWindow
+---
+--- Usage: result = C_Spell.GetSpellQueueWindow()
+---
+-- function C_Spell.GetSpellQueueWindow()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellSkillLineAbilityRank
+---======================================================================
+--- Returns the rank of a spell that corresponds to an ability within a ranked SkillLine (ex: a crafting Recipe); Returns nil if spell is not found, or isn't part of a ranked SkillLine
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return number rank
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellSkillLineAbilityRank
+---
+--- Usage: rank = C_Spell.GetSpellSkillLineAbilityRank(spellIdentifier)
+---
+-- function C_Spell.GetSpellSkillLineAbilityRank()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellSubtext
+---======================================================================
+--- Returns nil if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return string subtext - May be empty if spell's data isn't loaded yet; Listen for SPELL_TEXT_UPDATE event, or use SpellMixin to load asynchronously
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellSubtext
+---
+--- Usage: subtext = C_Spell.GetSpellSubtext(spellIdentifier)
+---
+-- function C_Spell.GetSpellSubtext()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellTexture
+---======================================================================
+--- Returns nothing if spell is not found
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return number iconID : fileID
+--- @return number originalIconID : fileID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellTexture
+---
+--- Usage: iconID, originalIconID = C_Spell.GetSpellTexture(spellIdentifier)
+---
+-- function C_Spell.GetSpellTexture()
+-- end
+
+---======================================================================
+--- C_Spell.GetSpellTradeSkillLink
+---======================================================================
+--- Returns nil if spell is not associated with a trade skill
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return string spellLink
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellTradeSkillLink
+---
+--- Usage: spellLink = C_Spell.GetSpellTradeSkillLink(spellIdentifier)
+---
+-- function C_Spell.GetSpellTradeSkillLink()
+-- end
+
+---======================================================================
+--- C_Spell.IsAutoAttackSpell
+---======================================================================
+--- Returns true if the spell is the player's melee Auto Attack spell
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isAutoAttack
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsAutoAttackSpell
+---
+--- Usage: isAutoAttack = C_Spell.IsAutoAttackSpell(spellIdentifier)
+---
+-- function C_Spell.IsAutoAttackSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsAutoRepeatSpell
+---======================================================================
+--- Returns true if the spell is an auto repeat player spell
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isAutoRepeat
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsAutoRepeatSpell
+---
+--- Usage: isAutoRepeat = C_Spell.IsAutoRepeatSpell(spellIdentifier)
+---
+-- function C_Spell.IsAutoRepeatSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsClassTalentSpell
+---======================================================================
+--- Returns true if the spell comes from a Class Talent
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isAutoRepeat
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsClassTalentSpell
+---
+--- Usage: isAutoRepeat = C_Spell.IsClassTalentSpell(spellIdentifier)
+---
+-- function C_Spell.IsClassTalentSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsCurrentSpell
+---======================================================================
+--- Returns true if the spell is currently being cast or is queued to be cast
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isCurrentSpell
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsCurrentSpell
+---
+--- Usage: isCurrentSpell = C_Spell.IsCurrentSpell(spellIdentifier)
+---
+-- function C_Spell.IsCurrentSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsPressHoldReleaseSpell
+---======================================================================
+--- Returns true if the spell is an 'empower' type spell that is cast by pressing and holding, with the on-release cast typically being affected by time held
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isPressHoldRelease
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsPressHoldReleaseSpell
+---
+--- Usage: isPressHoldRelease = C_Spell.IsPressHoldReleaseSpell(spellIdentifier)
+---
+-- function C_Spell.IsPressHoldReleaseSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsPvPTalentSpell
+---======================================================================
+--- Returns true if the spell comes from a PvP Talent
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isAutoRepeat
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsPvPTalentSpell
+---
+--- Usage: isAutoRepeat = C_Spell.IsPvPTalentSpell(spellIdentifier)
+---
+-- function C_Spell.IsPvPTalentSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsRangedAutoAttackSpell
+---======================================================================
+--- Returns true if the spell is the player's ranged Auto Attack spell (ex: Shoot, Auto Shot, etc)
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isRangedAutoAttack
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsRangedAutoAttackSpell
+---
+--- Usage: isRangedAutoAttack = C_Spell.IsRangedAutoAttackSpell(spellIdentifier)
+---
+-- function C_Spell.IsRangedAutoAttackSpell()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellDataCached
+---======================================================================
+--- Returns true if data for the spell has already been loaded and cached this session
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isCached
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellDataCached
+---
+--- Usage: isCached = C_Spell.IsSpellDataCached(spellIdentifier)
+---
+-- function C_Spell.IsSpellDataCached()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellDisabled
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean disabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellDisabled
+---
+--- Usage: disabled = C_Spell.IsSpellDisabled(spellIdentifier)
+---
+-- function C_Spell.IsSpellDisabled()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellHarmful
+---======================================================================
+--- Returns true if the spell can be cast on hostile targets
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isHarmful
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellHarmful
+---
+--- Usage: isHarmful = C_Spell.IsSpellHarmful(spellIdentifier)
+---
+-- function C_Spell.IsSpellHarmful()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellHelpful
+---======================================================================
+--- Returns true if the spell can be cast on the player or other friendly targets
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isHelpful
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellHelpful
+---
+--- Usage: isHelpful = C_Spell.IsSpellHelpful(spellIdentifier)
+---
+-- function C_Spell.IsSpellHelpful()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellInRange
+---======================================================================
+--- Returns true if the current target is within range of the spell; False if out of range; Nil if range check was invalid
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param targetUnit string ? : UnitToken - Optional specific target; If not supplied, player's current target (if any) will be used
+---
+--- Returns:
+--- @return boolean inRange ? - May be nil if the range check was invalid, ie due to unknown/invalid spell, missing/invalid target, etc
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellInRange
+---
+--- Usage: inRange = C_Spell.IsSpellInRange(spellIdentifier [, targetUnit])
+---
+-- function C_Spell.IsSpellInRange()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellPassive
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean isPassive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellPassive
+---
+--- Usage: isPassive = C_Spell.IsSpellPassive(spellIdentifier)
+---
+-- function C_Spell.IsSpellPassive()
+-- end
+
+---======================================================================
+--- C_Spell.IsSpellUsable
+---======================================================================
+--- Returns whether the spell is currently castable.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier - Spell ID, name, name(subtext), or link
+---
+--- Returns:
+--- @return boolean isUsable - True if the spell is usable, false otherwise
+--- @return boolean insufficientPower - True if spell is specifically unusable due to insufficient power (i.e. MANA, RAGE, etc)
+---
+--- @since Patch 11.0.0 (2024-07-23): Added, replacement for IsUsableSpell.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellUsable
+---
+--- Usage: isUsable, insufficientPower = C_Spell.IsSpellUsable(spellIdentifier)
+---
+-- function C_Spell.IsSpellUsable()
+-- end
+
+---======================================================================
+--- C_Spell.PickupSpell
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.PickupSpell
+---
+--- Usage: C_Spell.PickupSpell(spellIdentifier)
+---
+-- function C_Spell.PickupSpell()
+-- end
+
+---======================================================================
+--- C_Spell.RequestLoadSpellData
+---======================================================================
+--- Requests spell data and fires SPELL_DATA_LOAD_RESULT.
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.RequestLoadSpellData
+---
+--- Usage: C_Spell.RequestLoadSpellData(spellIdentifier)
+---
+--- See also:
+--- - SpellMixin
+---
+-- function C_Spell.RequestLoadSpellData()
+-- end
+
+---======================================================================
+--- C_Spell.SetSpellAutoCastEnabled
+---======================================================================
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+--- @param enabled boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.SetSpellAutoCastEnabled
+---
+--- Usage: C_Spell.SetSpellAutoCastEnabled(spellIdentifier, enabled)
+---
+-- function C_Spell.SetSpellAutoCastEnabled()
+-- end
+
+---======================================================================
+--- C_Spell.SpellHasRange
+---======================================================================
+--- Returns true if the spell has a min and/or max range greater than 0
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- Returns:
+--- @return boolean hasRange
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.SpellHasRange
+---
+--- Usage: hasRange = C_Spell.SpellHasRange(spellIdentifier)
+---
+-- function C_Spell.SpellHasRange()
+-- end
+
+---======================================================================
+--- C_Spell.TargetSpellIsEnchanting
+---======================================================================
+--- Returns:
+--- @return boolean isEnchanting
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.TargetSpellIsEnchanting
+---
+--- Usage: isEnchanting = C_Spell.TargetSpellIsEnchanting()
+---
+-- function C_Spell.TargetSpellIsEnchanting()
+-- end
+
+---======================================================================
+--- C_Spell.TargetSpellJumpsUpgradeTrack
+---======================================================================
+--- Returns:
+--- @return boolean jumpsUpgradeTrack
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.TargetSpellJumpsUpgradeTrack
+---
+--- Usage: jumpsUpgradeTrack = C_Spell.TargetSpellJumpsUpgradeTrack()
+---
+-- function C_Spell.TargetSpellJumpsUpgradeTrack()
+-- end
+
+---======================================================================
+--- C_Spell.TargetSpellReplacesBonusTree
+---======================================================================
+--- Returns:
+--- @return boolean result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.TargetSpellReplacesBonusTree
+---
+--- Usage: result = C_Spell.TargetSpellReplacesBonusTree()
+---
+-- function C_Spell.TargetSpellReplacesBonusTree()
+-- end
+
+---======================================================================
+--- C_Spell.ToggleSpellAutoCast
+---======================================================================
+--- Toggles whether spell's autoCast is enabled
+---
+--- Arguments:
+--- @param spellIdentifier number |string : SpellIdentifier
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Spell.ToggleSpellAutoCast
+---
+--- Usage: C_Spell.ToggleSpellAutoCast(spellIdentifier)
+---
+-- function C_Spell.ToggleSpellAutoCast()
+-- end

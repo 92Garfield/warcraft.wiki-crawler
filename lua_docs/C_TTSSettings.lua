@@ -1,0 +1,316 @@
+--[=[
+-- C_TTSSettings API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 19
+--]=]
+
+--- @class C_TTSSettings
+--- C_TTSSettings namespace contains 19 functions
+local C_TTSSettings = {}
+
+--[=[
+-- C_TTSSettings Functions:
+-- - C_TTSSettings.GetChannelEnabled
+-- - C_TTSSettings.GetCharacterSettingsSaved
+-- - C_TTSSettings.GetChatTypeEnabled
+-- - C_TTSSettings.GetSetting
+-- - C_TTSSettings.GetSpeechRate
+-- - C_TTSSettings.GetSpeechVolume
+-- - C_TTSSettings.GetVoiceOptionID
+-- - C_TTSSettings.GetVoiceOptionName
+-- - C_TTSSettings.MarkCharacterSettingsSaved
+-- - C_TTSSettings.SetChannelEnabled
+-- - C_TTSSettings.SetChannelKeyEnabled
+-- - C_TTSSettings.SetChatTypeEnabled
+-- - C_TTSSettings.SetDefaultSettings
+-- - C_TTSSettings.SetSetting
+-- - C_TTSSettings.SetSpeechRate
+-- - C_TTSSettings.SetSpeechVolume
+-- - C_TTSSettings.SetVoiceOption
+-- - C_TTSSettings.SetVoiceOptionName
+-- - C_TTSSettings.ShouldOverrideMessage
+--]=]
+
+---======================================================================
+--- C_TTSSettings.GetChannelEnabled
+---======================================================================
+--- Arguments:
+--- @param channelInfo ChatChannelInfo
+---
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetChannelEnabled
+---
+--- Usage: enabled = C_TTSSettings.GetChannelEnabled(channelInfo)
+---
+-- function C_TTSSettings.GetChannelEnabled()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetCharacterSettingsSaved
+---======================================================================
+--- Returns:
+--- @return boolean settingsBeenSaved
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetCharacterSettingsSaved
+---
+--- Usage: settingsBeenSaved = C_TTSSettings.GetCharacterSettingsSaved()
+---
+-- function C_TTSSettings.GetCharacterSettingsSaved()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetChatTypeEnabled
+---======================================================================
+--- Arguments:
+--- @param chatName string
+---
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetChatTypeEnabled
+---
+--- Usage: enabled = C_TTSSettings.GetChatTypeEnabled(chatName)
+---
+-- function C_TTSSettings.GetChatTypeEnabled()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetSetting
+---======================================================================
+--- Arguments:
+--- @param setting Enum.TtsBoolSetting
+---
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSetting
+---
+--- Usage: enabled = C_TTSSettings.GetSetting(setting)
+---
+-- function C_TTSSettings.GetSetting()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetSpeechRate
+---======================================================================
+--- Returns:
+--- @return number rate
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSpeechRate
+---
+--- Usage: rate = C_TTSSettings.GetSpeechRate()
+---
+-- function C_TTSSettings.GetSpeechRate()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetSpeechVolume
+---======================================================================
+--- Returns:
+--- @return number volume
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSpeechVolume
+---
+--- Usage: volume = C_TTSSettings.GetSpeechVolume()
+---
+-- function C_TTSSettings.GetSpeechVolume()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetVoiceOptionID
+---======================================================================
+--- Get the user's preferred text to speech voices.
+---
+--- Arguments:
+--- @param voiceType Enum.TtsVoiceType
+---
+--- Returns:
+--- @return number voiceID - Used with C_VoiceChat.SpeakText().
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetVoiceOptionID
+---
+--- Usage: voiceID = C_TTSSettings.GetVoiceOptionID(voiceType)
+---
+-- function C_TTSSettings.GetVoiceOptionID()
+-- end
+
+---======================================================================
+--- C_TTSSettings.GetVoiceOptionName
+---======================================================================
+--- Arguments:
+--- @param voiceType Enum.TtsVoiceType
+---
+--- Returns:
+--- @return string voiceName
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetVoiceOptionName
+---
+--- Usage: voiceName = C_TTSSettings.GetVoiceOptionName(voiceType)
+---
+-- function C_TTSSettings.GetVoiceOptionName()
+-- end
+
+---======================================================================
+--- C_TTSSettings.MarkCharacterSettingsSaved
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.MarkCharacterSettingsSaved
+---
+--- Usage: C_TTSSettings.MarkCharacterSettingsSaved()
+---
+-- function C_TTSSettings.MarkCharacterSettingsSaved()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetChannelEnabled
+---======================================================================
+--- Arguments:
+--- @param channelInfo ChatChannelInfo
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChannelEnabled
+---
+--- Usage: C_TTSSettings.SetChannelEnabled(channelInfo [, newVal])
+---
+-- function C_TTSSettings.SetChannelEnabled()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetChannelKeyEnabled
+---======================================================================
+--- Arguments:
+--- @param channelKey string
+--- @param newVal boolean ? = false
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChannelKeyEnabled
+---
+--- Usage: C_TTSSettings.SetChannelKeyEnabled(channelKey [, newVal])
+---
+-- function C_TTSSettings.SetChannelKeyEnabled()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetChatTypeEnabled
+---======================================================================
+--- Arguments:
+--- @param chatName string
+--- @param newVal boolean ? = false
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChatTypeEnabled
+---
+--- Usage: C_TTSSettings.SetChatTypeEnabled(chatName [, newVal])
+---
+-- function C_TTSSettings.SetChatTypeEnabled()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetDefaultSettings
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetDefaultSettings
+---
+--- Usage: C_TTSSettings.SetDefaultSettings()
+---
+-- function C_TTSSettings.SetDefaultSettings()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetSetting
+---======================================================================
+--- Arguments:
+--- @param setting Enum.TtsBoolSetting
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSetting
+---
+--- Usage: C_TTSSettings.SetSetting(setting [, newVal])
+---
+-- function C_TTSSettings.SetSetting()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetSpeechRate
+---======================================================================
+--- Arguments:
+--- @param newVal number
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSpeechRate
+---
+--- Usage: C_TTSSettings.SetSpeechRate(newVal)
+---
+-- function C_TTSSettings.SetSpeechRate()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetSpeechVolume
+---======================================================================
+--- Arguments:
+--- @param newVal number
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSpeechVolume
+---
+--- Usage: C_TTSSettings.SetSpeechVolume(newVal)
+---
+-- function C_TTSSettings.SetSpeechVolume()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetVoiceOption
+---======================================================================
+--- Arguments:
+--- @param voiceType Enum.TtsVoiceType
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetVoiceOption
+---
+--- Usage: C_TTSSettings.SetVoiceOption(voiceType, voiceID)
+---
+-- function C_TTSSettings.SetVoiceOption()
+-- end
+
+---======================================================================
+--- C_TTSSettings.SetVoiceOptionName
+---======================================================================
+--- Arguments:
+--- @param voiceType Enum.TtsVoiceType
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetVoiceOptionName
+---
+--- Usage: C_TTSSettings.SetVoiceOptionName(voiceType, voiceName)
+---
+-- function C_TTSSettings.SetVoiceOptionName()
+-- end
+
+---======================================================================
+--- C_TTSSettings.ShouldOverrideMessage
+---======================================================================
+--- Arguments:
+--- @param language number
+--- @param messageText string
+---
+--- Returns:
+--- @return boolean overrideMessage
+---
+--- @since Patch 10.0.7 (2023-03-21): Added messageText argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_TTSSettings.ShouldOverrideMessage
+---
+--- Usage: overrideMessage = C_TTSSettings.ShouldOverrideMessage(language, messageText)
+---
+-- function C_TTSSettings.ShouldOverrideMessage()
+-- end

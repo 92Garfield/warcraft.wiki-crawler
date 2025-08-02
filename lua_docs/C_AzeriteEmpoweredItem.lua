@@ -1,0 +1,337 @@
+--[=[
+-- C_AzeriteEmpoweredItem API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 18
+--]=]
+
+--- @class C_AzeriteEmpoweredItem
+--- C_AzeriteEmpoweredItem namespace contains 18 functions
+local C_AzeriteEmpoweredItem = {}
+
+--[=[
+-- C_AzeriteEmpoweredItem Functions:
+-- - C_AzeriteEmpoweredItem.CanSelectPower
+-- - C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec
+-- - C_AzeriteEmpoweredItem.GetAllTierInfo
+-- - C_AzeriteEmpoweredItem.GetAllTierInfoByItemID
+-- - C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost
+-- - C_AzeriteEmpoweredItem.GetPowerInfo
+-- - C_AzeriteEmpoweredItem.GetPowerText
+-- - C_AzeriteEmpoweredItem.GetSpecsForPower
+-- - C_AzeriteEmpoweredItem.HasAnyUnselectedPowers
+-- - C_AzeriteEmpoweredItem.HasBeenViewed
+-- - C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem
+-- - C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID
+-- - C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable
+-- - C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped
+-- - C_AzeriteEmpoweredItem.IsPowerAvailableForSpec
+-- - C_AzeriteEmpoweredItem.IsPowerSelected
+-- - C_AzeriteEmpoweredItem.SelectPower
+-- - C_AzeriteEmpoweredItem.SetHasBeenViewed
+--]=]
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.CanSelectPower
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+--- @param powerID number
+---
+--- Returns:
+--- @return boolean canSelect
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.CanSelectPower
+---
+--- Usage: canSelect = C_AzeriteEmpoweredItem.CanSelectPower(azeriteEmpoweredItemLocation, powerID)
+---
+-- function C_AzeriteEmpoweredItem.CanSelectPower()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec
+---
+--- Usage: C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec(azeriteEmpoweredItemLocation)
+---
+-- function C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetAllTierInfo
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return  tierInfo structure - AzeriteEmpoweredItemTierInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetAllTierInfo
+---
+--- Usage: tierInfo = C_AzeriteEmpoweredItem.GetAllTierInfo(azeriteEmpoweredItemLocation)
+         = C_AzeriteEmpoweredItem.GetAllTierInfoByItemID(itemInfo [, classID])
+---
+-- function C_AzeriteEmpoweredItem.GetAllTierInfo()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetAllTierInfoByItemID
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return  tierInfo structure - AzeriteEmpoweredItemTierInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetAllTierInfoByItemID
+---
+--- Usage: tierInfo = C_AzeriteEmpoweredItem.GetAllTierInfo(azeriteEmpoweredItemLocation)
+         = C_AzeriteEmpoweredItem.GetAllTierInfoByItemID(itemInfo [, classID])
+---
+-- function C_AzeriteEmpoweredItem.GetAllTierInfoByItemID()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost
+---======================================================================
+--- Returns:
+--- @return number cost
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost
+---
+--- Usage: cost = C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost()
+---
+-- function C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetPowerInfo
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return  powerInfo structure - AzeriteEmpoweredItemPowerInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetPowerInfo
+---
+--- Usage: powerInfo = C_AzeriteEmpoweredItem.GetPowerInfo(powerID)
+---
+-- function C_AzeriteEmpoweredItem.GetPowerInfo()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetPowerText
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+--- @param powerID number
+--- @param level  Enum.AzeritePowerLevel
+---
+--- Returns:
+--- @return  powerText structure - AzeriteEmpoweredItemPowerText
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetPowerText
+---
+--- Usage: powerText = C_AzeriteEmpoweredItem.GetPowerText(azeriteEmpoweredItemLocation, powerID, level)
+---
+-- function C_AzeriteEmpoweredItem.GetPowerText()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.GetSpecsForPower
+---======================================================================
+--- Arguments:
+--- @param powerID number
+---
+--- Returns:
+--- @return  specInfo structure - AzeriteSpecInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetSpecsForPower
+---
+--- Usage: specInfo = C_AzeriteEmpoweredItem.GetSpecsForPower(powerID)
+---
+-- function C_AzeriteEmpoweredItem.GetSpecsForPower()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.HasAnyUnselectedPowers
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean hasAnyUnselectedPowers
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.HasAnyUnselectedPowers
+---
+--- Usage: hasAnyUnselectedPowers = C_AzeriteEmpoweredItem.HasAnyUnselectedPowers(azeriteEmpoweredItemLocation)
+---
+-- function C_AzeriteEmpoweredItem.HasAnyUnselectedPowers()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.HasBeenViewed
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean hasBeenViewed
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.HasBeenViewed
+---
+--- Usage: hasBeenViewed = C_AzeriteEmpoweredItem.HasBeenViewed(azeriteEmpoweredItemLocation)
+---
+-- function C_AzeriteEmpoweredItem.HasBeenViewed()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isAzeriteEmpoweredItem
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem
+---
+--- Usage: isAzeriteEmpoweredItem = C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem(itemLocation)
+                       = C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID(itemInfo)
+---
+-- function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID
+---======================================================================
+--- Arguments:
+--- @param itemLocation ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isAzeriteEmpoweredItem
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID
+---
+--- Usage: isAzeriteEmpoweredItem = C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem(itemLocation)
+                       = C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID(itemInfo)
+---
+-- function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable
+---======================================================================
+--- Arguments:
+--- @param itemInfo string
+--- @param classID number ? - Specify a class ID to determine if its displayable for that class, otherwise uses the player's class if left nil
+---
+--- Returns:
+--- @return boolean isAzeritePreviewSourceDisplayable
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable
+---
+--- Usage: isAzeritePreviewSourceDisplayable = C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable(itemInfo [, classID])
+---
+-- function C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped
+---======================================================================
+--- Returns:
+--- @return boolean isHeartOfAzerothEquipped
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped
+---
+--- Usage: isHeartOfAzerothEquipped = C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped()
+---
+-- function C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsPowerAvailableForSpec
+---======================================================================
+--- Arguments:
+--- @param powerID number
+--- @param specID number
+---
+--- Returns:
+--- @return boolean isPowerAvailableForSpec
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsPowerAvailableForSpec
+---
+--- Usage: isPowerAvailableForSpec = C_AzeriteEmpoweredItem.IsPowerAvailableForSpec(powerID, specID)
+---
+-- function C_AzeriteEmpoweredItem.IsPowerAvailableForSpec()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.IsPowerSelected
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+--- @param powerID number
+---
+--- Returns:
+--- @return boolean isSelected
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsPowerSelected
+---
+--- Usage: isSelected = C_AzeriteEmpoweredItem.IsPowerSelected(azeriteEmpoweredItemLocation, powerID)
+---
+-- function C_AzeriteEmpoweredItem.IsPowerSelected()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.SelectPower
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+--- @param powerID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.SelectPower
+---
+--- Usage: success = C_AzeriteEmpoweredItem.SelectPower(azeriteEmpoweredItemLocation, powerID)
+---
+-- function C_AzeriteEmpoweredItem.SelectPower()
+-- end
+
+---======================================================================
+--- C_AzeriteEmpoweredItem.SetHasBeenViewed
+---======================================================================
+--- Arguments:
+--- @param azeriteEmpoweredItemLocation ItemLocationMixin 🔗
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.SetHasBeenViewed
+---
+--- Usage: C_AzeriteEmpoweredItem.SetHasBeenViewed(azeriteEmpoweredItemLocation)
+---
+-- function C_AzeriteEmpoweredItem.SetHasBeenViewed()
+-- end

@@ -1,0 +1,398 @@
+--[=[
+-- C_EncounterJournal API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 19
+--]=]
+
+--- @class C_EncounterJournal
+--- C_EncounterJournal namespace contains 19 functions
+local C_EncounterJournal = {}
+
+--[=[
+-- C_EncounterJournal Functions:
+-- - C_EncounterJournal.GetDungeonEntrancesForMap
+-- - C_EncounterJournal.GetEncounterJournalLink
+-- - C_EncounterJournal.GetEncountersOnMap
+-- - C_EncounterJournal.GetInstanceForGameMap
+-- - C_EncounterJournal.GetLootInfo
+-- - C_EncounterJournal.GetLootInfoByIndex
+-- - C_EncounterJournal.GetSectionIconFlags
+-- - C_EncounterJournal.GetSectionInfo
+-- - C_EncounterJournal.GetSlotFilter
+-- - C_EncounterJournal.InitalizeSelectedTier
+-- - C_EncounterJournal.InstanceHasLoot
+-- - C_EncounterJournal.IsEncounterComplete
+-- - C_EncounterJournal.OnClose
+-- - C_EncounterJournal.OnOpen
+-- - C_EncounterJournal.ResetSlotFilter
+-- - C_EncounterJournal.SetPreviewMythicPlusLevel
+-- - C_EncounterJournal.SetPreviewPvpTier
+-- - C_EncounterJournal.SetSlotFilter
+-- - C_EncounterJournal.SetTab
+--]=]
+
+---======================================================================
+--- C_EncounterJournal.GetDungeonEntrancesForMap
+---======================================================================
+--- Returns the instance entrances for a map. Contrary to what the name implies, this includes raid instances.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return  dungeonEntrances structure - DungeonEntranceMapInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap
+---
+--- Usage: dungeonEntrances = C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID)
+---
+-- function C_EncounterJournal.GetDungeonEntrancesForMap()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetEncounterJournalLink
+---======================================================================
+--- Arguments:
+--- @param linkType Enum.JournalLinkTypes
+---
+--- Returns:
+--- @return string link
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetEncounterJournalLink
+---
+--- Usage: link = C_EncounterJournal.GetEncounterJournalLink(linkType, ID, displayText, difficultyID)
+---
+-- function C_EncounterJournal.GetEncounterJournalLink()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetEncountersOnMap
+---======================================================================
+--- Returns boss pin locations for an instance map.
+---
+--- Arguments:
+--- @param uiMapID number
+---
+--- Returns:
+--- @return  encounters structure - EncounterJournalMapEncounterInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added. Replaces C_EncounterJournal.GetCurrentMapEncounters.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetEncountersOnMap
+---
+--- Usage: encounters = C_EncounterJournal.GetEncountersOnMap(uiMapID)
+---
+-- function C_EncounterJournal.GetEncountersOnMap()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetInstanceForGameMap
+---======================================================================
+--- GameMap as opposed to UIMap since we use a mapID not a uiMapID.
+---
+--- Arguments:
+--- @param mapID number
+---
+--- Returns:
+--- @return number journalInstanceID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetInstanceForGameMap
+---
+--- Usage: journalInstanceID = C_EncounterJournal.GetInstanceForGameMap(mapID)
+---
+-- function C_EncounterJournal.GetInstanceForGameMap()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetLootInfo
+---======================================================================
+--- Returns info for loot items available from an encounter.
+---
+--- Arguments:
+--- @param id number
+---
+--- Returns:
+--- @return EncounterJournalItemInfo itemInfo
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_EncounterJournal.GetLootInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetLootInfo
+---
+--- Usage: itemInfo = C_EncounterJournal.GetLootInfo(id)
+         = C_EncounterJournal.GetLootInfoByIndex(index [, encounterIndex])
+---
+-- function C_EncounterJournal.GetLootInfo()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetLootInfoByIndex
+---======================================================================
+--- Returns info for loot items available from an encounter.
+---
+--- Arguments:
+--- @param id number
+---
+--- Returns:
+--- @return EncounterJournalItemInfo itemInfo
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_EncounterJournal.GetLootInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetLootInfoByIndex
+---
+--- Usage: itemInfo = C_EncounterJournal.GetLootInfo(id)
+         = C_EncounterJournal.GetLootInfoByIndex(index [, encounterIndex])
+---
+-- function C_EncounterJournal.GetLootInfoByIndex()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetSectionIconFlags
+---======================================================================
+--- Returns the icon flags for a section, such as Magic Effect and Heroic Difficulty
+---
+--- Arguments:
+--- @param sectionID number : JournalEncounterSection.ID
+---
+--- Returns:
+--- @return  iconFlags For convenience there is EncounterJournal_SetFlagIcon() which sets the texture coords for interface/encounterjournal/ui-ej-icons.blp
+---
+--- @since Patch 7.3.5 (2018-01-16): Added, this functionality was separated from C_EncounterJournal.GetSectionInfo.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSectionIconFlags
+---
+--- Usage: iconFlags = C_EncounterJournal.GetSectionIconFlags(sectionID)
+---
+--- Examples:
+--- Example 1:
+---   -- local copy since Blizzard_EncounterJournal is LoadOnDemand
+---   local function EncounterJournal_SetFlagIcon(texture, index)
+---   	local iconSize = 32
+---   	local columns = 256/iconSize
+---   	local rows = 64/iconSize
+---   	local l = mod(index, columns) / columns
+---   	local r = l + (1/columns)
+---   	local t = floor(index/columns) / rows
+---   	local b = t + (1/rows)
+---   	texture:SetTexCoord(l, r, t, b)
+---   end
+---   
+---   local f = CreateFrame("Frame", nil, UIParent)
+---   f:SetPoint("CENTER")
+---   f:SetSize(32, 32)
+---   
+---   local tex = f:CreateTexture()
+---   tex:SetAllPoints(f)
+---   tex:SetTexture("Interface/EncounterJournal/UI-EJ-Icons")
+---   
+---   local function SetEncounterJournalIcon(sectionID)
+---   	local iconFlags = C_EncounterJournal.GetSectionIconFlags(sectionID)
+---   	if iconFlags then
+---   		for _, flag in pairs(iconFlags) do
+---   			print(flag, _G["ENCOUNTER_JOURNAL_SECTION_FLAG"..flag])
+---   			EncounterJournal_SetFlagIcon(tex, flag)
+---   		end
+---   	end
+---   end
+---   
+---   -- Vanessa VanCleef: sectionID 2065 [Powder Explosion]
+---   SetEncounterJournalIcon(2065)
+---
+-- function C_EncounterJournal.GetSectionIconFlags()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetSectionInfo
+---======================================================================
+--- Returns information about an entry in the Abilities section of the Encounter Journal.
+---
+--- Arguments:
+--- @param sectionID number : JournalEncounterSection.ID
+---
+--- Returns:
+--- @return EncounterJournalSectionInfo info
+---
+--- @since Patch 8.0.1 (2018-07-17): Added spellID field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSectionInfo
+---
+--- Usage: info = C_EncounterJournal.GetSectionInfo(sectionID)
+---
+--- Examples:
+--- Example 1:
+---   function PrintAllEncounterSections(encounterID, difficultyID)
+---   	EJ_SetDifficulty(difficultyID)
+---   	local stack, encounter, _, _, curSectionID = {}, EJ_GetEncounterInfo(encounterID)
+---   	print(encounter.." abilities:")
+---   	
+---   	repeat
+---   		local info = C_EncounterJournal.GetSectionInfo(curSectionID)
+---   		if not info.filteredByDifficulty then
+---   			print(("  "):rep(info.headerType)..info.link.. ": "..info.description)
+---   		end
+---   		table.insert(stack, info.siblingSectionID)
+---   		if not info.filteredByDifficulty then
+---   			table.insert(stack, info.firstChildSectionID)
+---   		end
+---   		curSectionID = table.remove(stack)
+---   	until not curSectionID
+---   end
+---   
+---   -- Print everything in 25-man Normal Madness of Deathwing:
+---   PrintAllEncounterSections(333, 4)
+---
+--- See also:
+--- - C_EncounterJournal.GetSectionIconFlags
+---
+-- function C_EncounterJournal.GetSectionInfo()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.GetSlotFilter
+---======================================================================
+--- Returns the current item slot filter for loot items.
+---
+--- Returns:
+--- @return Enum.ItemSlotFilterType filter
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_EncounterJournal.GetSlotFilter()
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSlotFilter
+---
+--- Usage: filter = C_EncounterJournal.GetSlotFilter()
+---
+-- function C_EncounterJournal.GetSlotFilter()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.InitalizeSelectedTier
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.InitalizeSelectedTier
+---
+--- Usage: C_EncounterJournal.InitalizeSelectedTier()
+---
+-- function C_EncounterJournal.InitalizeSelectedTier()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.InstanceHasLoot
+---======================================================================
+--- Returns whether an instance has a loot table in the journal.
+---
+--- Arguments:
+--- @param journalInstanceID number ? : JournalInstance.ID - If omitted, defaults to the currently selected instance from EJ_SelectInstance()
+---
+--- Returns:
+--- @return boolean hasLoot
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.InstanceHasLoot
+---
+--- Usage: hasLoot = C_EncounterJournal.InstanceHasLoot([journalInstanceID])
+---
+-- function C_EncounterJournal.InstanceHasLoot()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.IsEncounterComplete
+---======================================================================
+--- Returns if a boss encounter has been completed.
+---
+--- Arguments:
+--- @param journalEncounterID number
+---
+--- Returns:
+--- @return boolean isEncounterComplete
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.IsEncounterComplete
+---
+--- Usage: isEncounterComplete = C_EncounterJournal.IsEncounterComplete(journalEncounterID)
+---
+-- function C_EncounterJournal.IsEncounterComplete()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.OnClose
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.OnClose
+---
+--- Usage: C_EncounterJournal.OnClose()
+---
+-- function C_EncounterJournal.OnClose()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.OnOpen
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.OnOpen
+---
+--- Usage: C_EncounterJournal.OnOpen()
+---
+-- function C_EncounterJournal.OnOpen()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.ResetSlotFilter
+---======================================================================
+--- Resets the item slot filter for loot items.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_EncounterJournal.ResetSlotFilter()
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.ResetSlotFilter
+---
+--- Usage: C_EncounterJournal.ResetSlotFilter()
+---
+-- function C_EncounterJournal.ResetSlotFilter()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.SetPreviewMythicPlusLevel
+---======================================================================
+--- Arguments:
+--- @param level number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetPreviewMythicPlusLevel
+---
+--- Usage: C_EncounterJournal.SetPreviewMythicPlusLevel(level)
+---
+-- function C_EncounterJournal.SetPreviewMythicPlusLevel()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.SetPreviewPvpTier
+---======================================================================
+--- Arguments:
+--- @param tier number
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetPreviewPvpTier
+---
+--- Usage: C_EncounterJournal.SetPreviewPvpTier(tier)
+---
+-- function C_EncounterJournal.SetPreviewPvpTier()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.SetSlotFilter
+---======================================================================
+--- Sets the item slot filter for loot items.
+---
+--- Arguments:
+--- @param filterSlot Enum.ItemSlotFilterType
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_EncounterJournal.SetSlotFilter()
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetSlotFilter
+---
+--- Usage: C_EncounterJournal.SetSlotFilter(filterSlot)
+---
+-- function C_EncounterJournal.SetSlotFilter()
+-- end
+
+---======================================================================
+--- C_EncounterJournal.SetTab
+---======================================================================
+--- Arguments:
+--- @param tabIdx number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetTab
+---
+--- Usage: C_EncounterJournal.SetTab(tabIdx)
+---
+-- function C_EncounterJournal.SetTab()
+-- end

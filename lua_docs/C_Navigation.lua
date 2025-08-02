@@ -1,0 +1,113 @@
+--[=[
+-- C_Navigation API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 6
+--]=]
+
+--- @class C_Navigation
+--- C_Navigation namespace contains 6 functions
+local C_Navigation = {}
+
+--[=[
+-- C_Navigation Functions:
+-- - C_Navigation.GetDistance
+-- - C_Navigation.GetFrame
+-- - C_Navigation.GetNearestPartyMemberToken
+-- - C_Navigation.GetTargetState
+-- - C_Navigation.HasValidScreenPosition
+-- - C_Navigation.WasClampedToScreen
+--]=]
+
+---======================================================================
+--- C_Navigation.GetDistance
+---======================================================================
+--- Returns the distance in yards from the players current location to the tracked location.
+---
+--- Returns:
+--- @return number distance
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.GetDistance
+---
+--- Usage: distance = C_Navigation.GetDistance()
+---
+-- function C_Navigation.GetDistance()
+-- end
+
+---======================================================================
+--- C_Navigation.GetFrame
+---======================================================================
+--- Returns the UI frame positioned in the world for displaying the tracked location, if one has been created.
+---
+--- Returns:
+--- @return  frame Unknown?}}
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.GetFrame
+---
+--- Usage: frame = C_Navigation.GetFrame()
+---
+-- function C_Navigation.GetFrame()
+-- end
+
+---======================================================================
+--- C_Navigation.GetNearestPartyMemberToken
+---======================================================================
+--- Returns:
+--- @return string unitToken
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.GetNearestPartyMemberToken
+---
+--- Usage: unitToken = C_Navigation.GetNearestPartyMemberToken()
+---
+-- function C_Navigation.GetNearestPartyMemberToken()
+-- end
+
+---======================================================================
+--- C_Navigation.GetTargetState
+---======================================================================
+--- Returns state information about the currently tracked location, such as its occlusion status.
+---
+--- Returns:
+--- @return Enum.NavigationState state
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.GetTargetState
+---
+--- Usage: state = C_Navigation.GetTargetState()
+---
+-- function C_Navigation.GetTargetState()
+-- end
+
+---======================================================================
+--- C_Navigation.HasValidScreenPosition
+---======================================================================
+--- Returns true if the currently tracked location can be represented by any screen position. This can presumably return false a tracked location weren't valid for the current map, or if the player is possibly too close to a tracked location.
+---
+--- Returns:
+--- @return boolean hasValidScreenPosition
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.HasValidScreenPosition
+---
+--- Usage: hasValidScreenPosition = C_Navigation.HasValidScreenPosition()
+---
+-- function C_Navigation.HasValidScreenPosition()
+-- end
+
+---======================================================================
+--- C_Navigation.WasClampedToScreen
+---======================================================================
+--- Returns true if the navigation frame position was clamped due to having been located off-screen. This can indicate that the player may not be facing towards the tracked location.
+---
+--- Returns:
+--- @return boolean wasClamped
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Navigation.WasClampedToScreen
+---
+--- Usage: wasClamped = C_Navigation.WasClampedToScreen()
+---
+-- function C_Navigation.WasClampedToScreen()
+-- end

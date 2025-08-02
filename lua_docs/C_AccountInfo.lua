@@ -1,0 +1,74 @@
+--[=[
+-- C_AccountInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 3
+--]=]
+
+--- @class C_AccountInfo
+--- C_AccountInfo namespace contains 3 functions
+local C_AccountInfo = {}
+
+--[=[
+-- C_AccountInfo Functions:
+-- - C_AccountInfo.GetIDFromBattleNetAccountGUID
+-- - C_AccountInfo.IsGUIDBattleNetAccountType
+-- - C_AccountInfo.IsGUIDRelatedToLocalAccount
+--]=]
+
+---======================================================================
+--- C_AccountInfo.GetIDFromBattleNetAccountGUID
+---======================================================================
+--- Converts a battle.net account GUID to battle.net ID.
+---
+--- Arguments:
+--- @param battleNetAccountGUID string : WOWGUID
+---
+--- Returns:
+--- @return number battleNetAccountID
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountInfo.GetIDFromBattleNetAccountGUID
+---
+--- Usage: battleNetAccountID = C_AccountInfo.GetIDFromBattleNetAccountGUID(battleNetAccountGUID)
+---
+-- function C_AccountInfo.GetIDFromBattleNetAccountGUID()
+-- end
+
+---======================================================================
+--- C_AccountInfo.IsGUIDBattleNetAccountType
+---======================================================================
+--- Returns whether a GUID is a batle.net account type.
+---
+--- Arguments:
+--- @param guid string : WOWGUID
+---
+--- Returns:
+--- @return boolean isBNet
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountInfo.IsGUIDBattleNetAccountType
+---
+--- Usage: isBNet = C_AccountInfo.IsGUIDBattleNetAccountType(guid)
+---
+-- function C_AccountInfo.IsGUIDBattleNetAccountType()
+-- end
+
+---======================================================================
+--- C_AccountInfo.IsGUIDRelatedToLocalAccount
+---======================================================================
+--- Returns whether a GUID is related to the local (self) account.
+---
+--- Arguments:
+--- @param guid string : WOWGUID
+---
+--- Returns:
+--- @return boolean isLocalUser
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountInfo.IsGUIDRelatedToLocalAccount
+---
+--- Usage: isLocalUser = C_AccountInfo.IsGUIDRelatedToLocalAccount(guid)
+---
+-- function C_AccountInfo.IsGUIDRelatedToLocalAccount()
+-- end

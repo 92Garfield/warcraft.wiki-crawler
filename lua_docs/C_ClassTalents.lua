@@ -1,0 +1,492 @@
+--[=[
+-- C_ClassTalents API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 27
+--]=]
+
+--- @class C_ClassTalents
+--- C_ClassTalents namespace contains 27 functions
+local C_ClassTalents = {}
+
+--[=[
+-- C_ClassTalents Functions:
+-- - C_ClassTalents.CanChangeTalents
+-- - C_ClassTalents.CanCreateNewConfig
+-- - C_ClassTalents.CanEditTalents
+-- - C_ClassTalents.CommitConfig
+-- - C_ClassTalents.DeleteConfig
+-- - C_ClassTalents.GetActiveConfigID
+-- - C_ClassTalents.GetActiveHeroTalentSpec
+-- - C_ClassTalents.GetConfigIDsBySpecID
+-- - C_ClassTalents.GetHasStarterBuild
+-- - C_ClassTalents.GetHeroTalentSpecsForClassSpec
+-- - C_ClassTalents.GetLastSelectedSavedConfigID
+-- - C_ClassTalents.GetNextStarterBuildPurchase
+-- - C_ClassTalents.GetStarterBuildActive
+-- - C_ClassTalents.GetTraitTreeForSpec
+-- - C_ClassTalents.HasUnspentHeroTalentPoints
+-- - C_ClassTalents.HasUnspentTalentPoints
+-- - C_ClassTalents.ImportLoadout
+-- - C_ClassTalents.InitializeViewLoadout
+-- - C_ClassTalents.IsConfigPopulated
+-- - C_ClassTalents.LoadConfig
+-- - C_ClassTalents.RenameConfig
+-- - C_ClassTalents.RequestNewConfig
+-- - C_ClassTalents.SaveConfig
+-- - C_ClassTalents.SetStarterBuildActive
+-- - C_ClassTalents.SetUsesSharedActionBars
+-- - C_ClassTalents.UpdateLastSelectedSavedConfigID
+-- - C_ClassTalents.ViewLoadout
+--]=]
+
+---======================================================================
+--- C_ClassTalents.CanChangeTalents
+---======================================================================
+--- Returns true only if the player has staged changes and can commit their talents in their current state.
+---
+--- Returns:
+--- @return boolean canChange
+--- @return boolean canAdd
+--- @return string changeError ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanChangeTalents
+---
+--- Usage: canChange, canAdd, changeError = C_ClassTalents.CanChangeTalents()
+---
+-- function C_ClassTalents.CanChangeTalents()
+-- end
+
+---======================================================================
+--- C_ClassTalents.CanCreateNewConfig
+---======================================================================
+--- Returns:
+--- @return boolean canCreate
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanCreateNewConfig
+---
+--- Usage: canCreate = C_ClassTalents.CanCreateNewConfig()
+---
+-- function C_ClassTalents.CanCreateNewConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.CanEditTalents
+---======================================================================
+--- Returns true if the player could switch talents if they staged a proper loadout.
+---
+--- Returns:
+--- @return boolean canEdit
+--- @return string changeError
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanEditTalents
+---
+--- Usage: canEdit, changeError = C_ClassTalents.CanEditTalents()
+---
+-- function C_ClassTalents.CanEditTalents()
+-- end
+
+---======================================================================
+--- C_ClassTalents.CommitConfig
+---======================================================================
+--- Applies any pending changes to the specified loadout configID
+---
+--- Arguments:
+--- @param savedConfigID number ? This should be a loadout configID, from C_ClassTalents.GetLastSelectedSavedConfigID or C_ClassTalents.GetConfigIDsBySpecID. Not the ActiveConfigID from C_ClassTalents.GetActiveConfigID.
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CommitConfig
+---
+--- Usage: success = C_ClassTalents.CommitConfig([savedConfigID])
+---
+--- See also:
+--- - Dragonflight Talent System
+---
+-- function C_ClassTalents.CommitConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.DeleteConfig
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.DeleteConfig
+---
+--- Usage: success = C_ClassTalents.DeleteConfig(configID)
+---
+-- function C_ClassTalents.DeleteConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetActiveConfigID
+---======================================================================
+--- Returns the configID used for your currently selected specialization. Not to be confused with a talent loadout's configID
+---
+--- Returns:
+--- @return number activeConfigID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetActiveConfigID
+---
+--- Usage: activeConfigID = C_ClassTalents.GetActiveConfigID()
+---
+-- function C_ClassTalents.GetActiveConfigID()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetActiveHeroTalentSpec
+---======================================================================
+--- Returns the SubTreeID of the player's active Hero Talent Specialization SubTree.
+---
+--- Returns:
+--- @return number heroSpecID ? - SubTreeID of the player's active Hero Talent Specialization or nil if no Specialization is active.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetActiveHeroTalentSpec
+---
+--- Usage: heroSpecID = C_ClassTalents.GetActiveHeroTalentSpec()
+---
+-- function C_ClassTalents.GetActiveHeroTalentSpec()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetConfigIDsBySpecID
+---======================================================================
+--- Returns a list of talent loadouts for a given spec
+---
+--- Arguments:
+--- @param specID number ? - SpecializationID e.g. PlayerUtil.GetCurrentSpecID(), defaults to current spec
+---
+--- Returns:
+--- @return number configIDs [] - list of loadout configIDs
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetConfigIDsBySpecID
+---
+--- Usage: configIDs = C_ClassTalents.GetConfigIDsBySpecID([specID])
+---
+--- See also:
+--- - C_ClassTalents.GetLastSelectedSavedConfigID
+--- - C_ClassTalents.LoadConfig
+--- - C_Traits.GetConfigInfo
+---
+-- function C_ClassTalents.GetConfigIDsBySpecID()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetHasStarterBuild
+---======================================================================
+--- Returns:
+--- @return boolean hasStarterBuild
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetHasStarterBuild
+---
+--- Usage: hasStarterBuild = C_ClassTalents.GetHasStarterBuild()
+---
+-- function C_ClassTalents.GetHasStarterBuild()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetHeroTalentSpecsForClassSpec
+---======================================================================
+--- Returns the SubTreeIDs of the Hero Talent Specializations available to a Class Specialization and config; Returns nothing if none available
+---
+--- Arguments:
+--- @param configID number ? - If not supplied, defaults to the player's active config
+--- @param classSpecID number ? - SpecializationID e.g. PlayerUtil.GetCurrentSpecID(), defaults to current spec
+---
+--- Returns:
+--- @return number subTreeIDs []? - SubTreeIDs of each Hero Talent Specialization
+--- @return number requiredPlayerLevel ? - The player level at which one of the Hero Talent Specializations can be activated
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetHeroTalentSpecsForClassSpec
+---
+--- Usage: subTreeIDs, requiredPlayerLevel = C_ClassTalents.GetHeroTalentSpecsForClassSpec([configID [, classSpecID]])
+---
+-- function C_ClassTalents.GetHeroTalentSpecsForClassSpec()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetLastSelectedSavedConfigID
+---======================================================================
+--- Returns the value stored using C_ClassTalents.UpdateLastSelectedSavedConfigID.
+---
+--- Arguments:
+--- @param specID number - SpecializationID e.g. PlayerUtil.GetCurrentSpecID()
+---
+--- Returns:
+--- @return number configID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetLastSelectedSavedConfigID
+---
+--- Usage: configID = C_ClassTalents.GetLastSelectedSavedConfigID(specID)
+---
+--- See also:
+--- - C_ClassTalents.UpdateLastSelectedSavedConfigID
+--- - C_Traits.GetConfigInfo
+--- - C_ClassTalents.GetConfigIDsBySpecID
+---
+-- function C_ClassTalents.GetLastSelectedSavedConfigID()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetNextStarterBuildPurchase
+---======================================================================
+--- Returns:
+--- @return number nodeID ?
+--- @return number entryID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetNextStarterBuildPurchase
+---
+--- Usage: nodeID, entryID = C_ClassTalents.GetNextStarterBuildPurchase()
+---
+-- function C_ClassTalents.GetNextStarterBuildPurchase()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetStarterBuildActive
+---======================================================================
+--- Returns:
+--- @return boolean isActive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetStarterBuildActive
+---
+--- Usage: isActive = C_ClassTalents.GetStarterBuildActive()
+---
+-- function C_ClassTalents.GetStarterBuildActive()
+-- end
+
+---======================================================================
+--- C_ClassTalents.GetTraitTreeForSpec
+---======================================================================
+--- Arguments:
+--- @param specID number - SpecializationID e.g. PlayerUtil.GetCurrentSpecID()
+---
+--- Returns:
+--- @return number treeID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetTraitTreeForSpec
+---
+--- Usage: treeID = C_ClassTalents.GetTraitTreeForSpec(specID)
+---
+-- function C_ClassTalents.GetTraitTreeForSpec()
+-- end
+
+---======================================================================
+--- C_ClassTalents.HasUnspentHeroTalentPoints
+---======================================================================
+--- Returns whether the player has any unspent talent points in their active hero talent tree. If hasUnspentPoints is true, numHeroPoints will be greater than zero.
+---
+--- Returns:
+--- @return boolean hasUnspentPoints
+--- @return number numHeroPoints
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentHeroTalentPoints
+---
+--- Usage: hasUnspentPoints, numHeroPoints = C_ClassTalents.HasUnspentHeroTalentPoints()
+---
+-- function C_ClassTalents.HasUnspentHeroTalentPoints()
+-- end
+
+---======================================================================
+--- C_ClassTalents.HasUnspentTalentPoints
+---======================================================================
+--- Returns whether the player has any unspent talent points in their class or spec talent trees.
+---
+--- Returns:
+--- @return boolean hasUnspentPoints
+--- @return number numClassPoints
+--- @return number numSpecPoints
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentTalentPoints
+---
+--- Usage: hasUnspentPoints, numClassPoints, numSpecPoints = C_ClassTalents.HasUnspentTalentPoints()
+---
+-- function C_ClassTalents.HasUnspentTalentPoints()
+-- end
+
+---======================================================================
+--- C_ClassTalents.ImportLoadout
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param entries ImportLoadoutEntryInfo []
+---
+--- Returns:
+--- @return boolean success
+--- @return string importError
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.ImportLoadout
+---
+--- Usage: success, importError = C_ClassTalents.ImportLoadout(configID, entries, name)
+---
+-- function C_ClassTalents.ImportLoadout()
+-- end
+
+---======================================================================
+--- C_ClassTalents.InitializeViewLoadout
+---======================================================================
+--- Prepares the Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID configID, with spec and level information.
+---
+--- Arguments:
+--- @param specID number - SpecializationID e.g. PlayerUtil.GetCurrentSpecID()
+--- @param level number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.InitializeViewLoadout
+---
+--- Usage: C_ClassTalents.InitializeViewLoadout(specID, level)
+---
+-- function C_ClassTalents.InitializeViewLoadout()
+-- end
+
+---======================================================================
+--- C_ClassTalents.IsConfigPopulated
+---======================================================================
+--- New configs may or may not be populated and ready to load immediately after creation. Avoid calling for configs intentionally created empty.
+---
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean isPopulated
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.IsConfigPopulated
+---
+--- Usage: isPopulated = C_ClassTalents.IsConfigPopulated(configID)
+---
+-- function C_ClassTalents.IsConfigPopulated()
+-- end
+
+---======================================================================
+--- C_ClassTalents.LoadConfig
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param autoApply boolean
+---
+--- Returns:
+--- @return Enum.LoadConfigResult result
+---
+--- @since Patch 10.0.5 (2023-01-24): Added changeError, newLearnedNodeIDs returns.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.LoadConfig
+---
+--- Usage: result, changeError, newLearnedNodeIDs = C_ClassTalents.LoadConfig(configID, autoApply)
+---
+-- function C_ClassTalents.LoadConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.RenameConfig
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param name string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.RenameConfig
+---
+--- Usage: success = C_ClassTalents.RenameConfig(configID, name)
+---
+-- function C_ClassTalents.RenameConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.RequestNewConfig
+---======================================================================
+--- Arguments:
+--- @param name string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.RequestNewConfig
+---
+--- Usage: success = C_ClassTalents.RequestNewConfig(name)
+---
+-- function C_ClassTalents.RequestNewConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.SaveConfig
+---======================================================================
+--- Arguments:
+--- @param configID number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SaveConfig
+---
+--- Usage: success = C_ClassTalents.SaveConfig(configID)
+---
+-- function C_ClassTalents.SaveConfig()
+-- end
+
+---======================================================================
+--- C_ClassTalents.SetStarterBuildActive
+---======================================================================
+--- Switches your active talent loadout to the Starter Build, which is a Blizzard defined talent build, meant to be good enough for most content.
+---
+--- Arguments:
+--- @param active boolean
+---
+--- Returns:
+--- @return Enum.LoadConfigResult result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SetStarterBuildActive
+---
+--- Usage: result = C_ClassTalents.SetStarterBuildActive(active)
+---
+-- function C_ClassTalents.SetStarterBuildActive()
+-- end
+
+---======================================================================
+--- C_ClassTalents.SetUsesSharedActionBars
+---======================================================================
+--- Arguments:
+--- @param configID number
+--- @param usesShared boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.SetUsesSharedActionBars
+---
+--- Usage: C_ClassTalents.SetUsesSharedActionBars(configID, usesShared)
+---
+-- function C_ClassTalents.SetUsesSharedActionBars()
+-- end
+
+---======================================================================
+--- C_ClassTalents.UpdateLastSelectedSavedConfigID
+---======================================================================
+--- Arguments:
+--- @param specID number
+--- @param configID number ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.UpdateLastSelectedSavedConfigID
+---
+--- Usage: C_ClassTalents.UpdateLastSelectedSavedConfigID(specID [, configID])
+---
+-- function C_ClassTalents.UpdateLastSelectedSavedConfigID()
+-- end
+
+---======================================================================
+--- C_ClassTalents.ViewLoadout
+---======================================================================
+--- Applies loadout information to a previously initialized Constants.TraitConsts.VIEW_TRAIT_CONFIG_ID configID
+---
+--- Arguments:
+--- @param entries ImportLoadoutEntryInfo [] - should be used with the same data format as C_ClassTalents.ImportLoadout
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClassTalents.ViewLoadout
+---
+--- Usage: success = C_ClassTalents.ViewLoadout(entries)
+---
+-- function C_ClassTalents.ViewLoadout()
+-- end

@@ -1,0 +1,177 @@
+--[=[
+-- C_EventScheduler API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 10
+--]=]
+
+--- @class C_EventScheduler
+--- C_EventScheduler namespace contains 10 functions
+local C_EventScheduler = {}
+
+--[=[
+-- C_EventScheduler Functions:
+-- - C_EventScheduler.ClearReminder
+-- - C_EventScheduler.GetActiveContinentName
+-- - C_EventScheduler.GetEventUiMapID
+-- - C_EventScheduler.GetEventZoneName
+-- - C_EventScheduler.GetOngoingEvents
+-- - C_EventScheduler.GetScheduledEvents
+-- - C_EventScheduler.HasData
+-- - C_EventScheduler.HasSavedReminders
+-- - C_EventScheduler.RequestEvents
+-- - C_EventScheduler.SetReminder
+--]=]
+
+---======================================================================
+--- C_EventScheduler.ClearReminder
+---======================================================================
+--- Clears reminder on a scheduled event. Must use endTime to identify which specific instance in the case of repeating ones.
+---
+--- Arguments:
+--- @param eventKey string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.ClearReminder
+---
+--- Usage: C_EventScheduler.ClearReminder(eventKey)
+---
+-- function C_EventScheduler.ClearReminder()
+-- end
+
+---======================================================================
+--- C_EventScheduler.GetActiveContinentName
+---======================================================================
+--- Returns the name of the continent with current events
+---
+--- Returns:
+--- @return string name
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.GetActiveContinentName
+---
+--- Usage: name = C_EventScheduler.GetActiveContinentName()
+---
+-- function C_EventScheduler.GetActiveContinentName()
+-- end
+
+---======================================================================
+--- C_EventScheduler.GetEventUiMapID
+---======================================================================
+--- Will try to figure out a UiMap for an areaPOI.
+---
+--- Arguments:
+--- @param areaPoiID number
+---
+--- Returns:
+--- @return number uiMapID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.GetEventUiMapID
+---
+--- Usage: uiMapID = C_EventScheduler.GetEventUiMapID(areaPoiID)
+---
+-- function C_EventScheduler.GetEventUiMapID()
+-- end
+
+---======================================================================
+--- C_EventScheduler.GetEventZoneName
+---======================================================================
+--- Will try to figure out a map zone name for an areaPOI
+---
+--- Arguments:
+--- @param areaPoiID number
+---
+--- Returns:
+--- @return string name ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.GetEventZoneName
+---
+--- Usage: name = C_EventScheduler.GetEventZoneName(areaPoiID)
+---
+-- function C_EventScheduler.GetEventZoneName()
+-- end
+
+---======================================================================
+--- C_EventScheduler.GetOngoingEvents
+---======================================================================
+--- Will request data from the server on a throttle
+---
+--- Returns:
+--- @return OngoingEventInfo events []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.GetOngoingEvents
+---
+--- Usage: events = C_EventScheduler.GetOngoingEvents()
+---
+-- function C_EventScheduler.GetOngoingEvents()
+-- end
+
+---======================================================================
+--- C_EventScheduler.GetScheduledEvents
+---======================================================================
+--- Will request data from the server on a throttle
+---
+--- Returns:
+--- @return ScheduledEventInfo events []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.GetScheduledEvents
+---
+--- Usage: events = C_EventScheduler.GetScheduledEvents()
+---
+-- function C_EventScheduler.GetScheduledEvents()
+-- end
+
+---======================================================================
+--- C_EventScheduler.HasData
+---======================================================================
+--- True if the server sent a list, even if the list had 0 events.
+---
+--- Returns:
+--- @return boolean hasData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.HasData
+---
+--- Usage: hasData = C_EventScheduler.HasData()
+---
+-- function C_EventScheduler.HasData()
+-- end
+
+---======================================================================
+--- C_EventScheduler.HasSavedReminders
+---======================================================================
+--- Returns whether there are any event reminders saved. Can include reminders that have expired since set and haven't gotten removed yet. Has to be called after cvars are loaded.
+---
+--- Returns:
+--- @return boolean hasSavedReminders
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.HasSavedReminders
+---
+--- Usage: hasSavedReminders = C_EventScheduler.HasSavedReminders()
+---
+-- function C_EventScheduler.HasSavedReminders()
+-- end
+
+---======================================================================
+--- C_EventScheduler.RequestEvents
+---======================================================================
+--- Requests events from the server, subject to throttle
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.RequestEvents
+---
+--- Usage: C_EventScheduler.RequestEvents()
+---
+-- function C_EventScheduler.RequestEvents()
+-- end
+
+---======================================================================
+--- C_EventScheduler.SetReminder
+---======================================================================
+--- Sets reminder on a scheduled event. Must use endTime to identify which specific instance in the case of repeating ones.
+---
+--- Arguments:
+--- @param eventKey string
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EventScheduler.SetReminder
+---
+--- Usage: C_EventScheduler.SetReminder(eventKey)
+---
+-- function C_EventScheduler.SetReminder()
+-- end

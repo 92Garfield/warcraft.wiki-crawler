@@ -1,0 +1,96 @@
+--[=[
+-- C_ToyBoxInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_ToyBoxInfo
+--- C_ToyBoxInfo namespace contains 5 functions
+local C_ToyBoxInfo = {}
+
+--[=[
+-- C_ToyBoxInfo Functions:
+-- - C_ToyBoxInfo.ClearFanfare
+-- - C_ToyBoxInfo.IsToySourceValid
+-- - C_ToyBoxInfo.IsUsingDefaultFilters
+-- - C_ToyBoxInfo.NeedsFanfare
+-- - C_ToyBoxInfo.SetDefaultFilters
+--]=]
+
+---======================================================================
+--- C_ToyBoxInfo.ClearFanfare
+---======================================================================
+--- Clears a fanfare for a toy.
+---
+--- Arguments:
+--- @param itemID number
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBoxInfo.ClearFanfare
+---
+--- Usage: C_ToyBoxInfo.ClearFanfare(itemID)
+---
+-- function C_ToyBoxInfo.ClearFanfare()
+-- end
+
+---======================================================================
+--- C_ToyBoxInfo.IsToySourceValid
+---======================================================================
+--- Arguments:
+--- @param source number
+---
+--- Returns:
+--- @return boolean isToySourceValid
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBoxInfo.IsToySourceValid
+---
+--- Usage: isToySourceValid = C_ToyBoxInfo.IsToySourceValid(source)
+---
+-- function C_ToyBoxInfo.IsToySourceValid()
+-- end
+
+---======================================================================
+--- C_ToyBoxInfo.IsUsingDefaultFilters
+---======================================================================
+--- Returns:
+--- @return boolean isUsingDefaultFilters
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBoxInfo.IsUsingDefaultFilters
+---
+--- Usage: isUsingDefaultFilters = C_ToyBoxInfo.IsUsingDefaultFilters()
+---
+-- function C_ToyBoxInfo.IsUsingDefaultFilters()
+-- end
+
+---======================================================================
+--- C_ToyBoxInfo.NeedsFanfare
+---======================================================================
+--- Returns whether a toy needs a fanfare.
+---
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean needsFanfare
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBoxInfo.NeedsFanfare
+---
+--- Usage: needsFanfare = C_ToyBoxInfo.NeedsFanfare(itemID)
+---
+-- function C_ToyBoxInfo.NeedsFanfare()
+-- end
+
+---======================================================================
+--- C_ToyBoxInfo.SetDefaultFilters
+---======================================================================
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ToyBoxInfo.SetDefaultFilters
+---
+--- Usage: C_ToyBoxInfo.SetDefaultFilters()
+---
+-- function C_ToyBoxInfo.SetDefaultFilters()
+-- end

@@ -1,0 +1,206 @@
+--[=[
+-- C_NamePlate API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 12
+--]=]
+
+--- @class C_NamePlate
+--- C_NamePlate namespace contains 12 functions
+local C_NamePlate = {}
+
+--[=[
+-- C_NamePlate Functions:
+-- - C_NamePlate.GetNamePlateForUnit
+-- - C_NamePlate.GetNamePlates
+-- - C_NamePlate.SetNamePlateEnemyClickThrough
+-- - C_NamePlate.SetNamePlateEnemyPreferredClickInsets
+-- - C_NamePlate.SetNamePlateEnemySize
+-- - C_NamePlate.SetNamePlateFriendlyClickThrough
+-- - C_NamePlate.SetNamePlateFriendlyPreferredClickInsets
+-- - C_NamePlate.SetNamePlateFriendlySize
+-- - C_NamePlate.SetNamePlateSelfClickThrough
+-- - C_NamePlate.SetNamePlateSelfPreferredClickInsets
+-- - C_NamePlate.SetNamePlateSelfSize
+-- - C_NamePlate.SetTargetClampingInsets
+--]=]
+
+---======================================================================
+--- C_NamePlate.GetNamePlateForUnit
+---======================================================================
+--- Returns the nameplate for a unit.
+---
+--- Arguments:
+--- @param unit string : UnitToken
+--- @param isSecure boolean ? - If protected nameplates for friendly units while in instanced areas should be returned.
+---
+--- Returns:
+--- @return Nameplate nameplate ? : Frame|NamePlateBaseMixin
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit
+---
+--- Usage: nameplate = C_NamePlate.GetNamePlateForUnit(unit [, isSecure])
+---
+-- function C_NamePlate.GetNamePlateForUnit()
+-- end
+
+---======================================================================
+--- C_NamePlate.GetNamePlates
+---======================================================================
+--- Returns the currently visible nameplates.
+---
+--- Arguments:
+--- @param isSecure boolean ? - Whether protected nameplates for friendly units while in instanced areas should be returned.
+---
+--- Returns:
+--- @return Nameplate nameplates [] : Frame|NamePlateBaseMixin
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlates
+---
+--- Usage: nameplates = C_NamePlate.GetNamePlates([isSecure])
+---
+-- function C_NamePlate.GetNamePlates()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateEnemyClickThrough
+---======================================================================
+--- Arguments:
+--- @param clickthrough boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemyClickThrough
+---
+--- Usage: C_NamePlate.SetNamePlateEnemyClickThrough(clickthrough)
+---
+-- function C_NamePlate.SetNamePlateEnemyClickThrough()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateEnemyPreferredClickInsets
+---======================================================================
+--- Arguments:
+--- @param left number
+--- @param right number
+--- @param top number
+--- @param bottom number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemyPreferredClickInsets
+---
+--- Usage: C_NamePlate.SetNamePlateEnemyPreferredClickInsets(left, right, top, bottom)
+---
+-- function C_NamePlate.SetNamePlateEnemyPreferredClickInsets()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateEnemySize
+---======================================================================
+--- Arguments:
+--- @param width number
+--- @param height number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemySize
+---
+--- Usage: C_NamePlate.SetNamePlateEnemySize(width, height)
+---
+-- function C_NamePlate.SetNamePlateEnemySize()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateFriendlyClickThrough
+---======================================================================
+--- Arguments:
+--- @param clickthrough boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlyClickThrough
+---
+--- Usage: C_NamePlate.SetNamePlateFriendlyClickThrough(clickthrough)
+---
+-- function C_NamePlate.SetNamePlateFriendlyClickThrough()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateFriendlyPreferredClickInsets
+---======================================================================
+--- Arguments:
+--- @param left number
+--- @param right number
+--- @param top number
+--- @param bottom number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlyPreferredClickInsets
+---
+--- Usage: C_NamePlate.SetNamePlateFriendlyPreferredClickInsets(left, right, top, bottom)
+---
+-- function C_NamePlate.SetNamePlateFriendlyPreferredClickInsets()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateFriendlySize
+---======================================================================
+--- Arguments:
+--- @param width number
+--- @param height number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlySize
+---
+--- Usage: C_NamePlate.SetNamePlateFriendlySize(width, height)
+---
+-- function C_NamePlate.SetNamePlateFriendlySize()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateSelfClickThrough
+---======================================================================
+--- Arguments:
+--- @param clickthrough boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfClickThrough
+---
+--- Usage: C_NamePlate.SetNamePlateSelfClickThrough(clickthrough)
+---
+-- function C_NamePlate.SetNamePlateSelfClickThrough()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateSelfPreferredClickInsets
+---======================================================================
+--- Arguments:
+--- @param left number
+--- @param right number
+--- @param top number
+--- @param bottom number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfPreferredClickInsets
+---
+--- Usage: C_NamePlate.SetNamePlateSelfPreferredClickInsets(left, right, top, bottom)
+---
+-- function C_NamePlate.SetNamePlateSelfPreferredClickInsets()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetNamePlateSelfSize
+---======================================================================
+--- Arguments:
+--- @param width number
+--- @param height number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfSize
+---
+--- Usage: C_NamePlate.SetNamePlateSelfSize(width, height)
+---
+-- function C_NamePlate.SetNamePlateSelfSize()
+-- end
+
+---======================================================================
+--- C_NamePlate.SetTargetClampingInsets
+---======================================================================
+--- Arguments:
+--- @param verticalInset number - The clamping inset from the top and bottom of the screen.
+--- @param unk number - Unknown
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetTargetClampingInsets
+---
+--- Usage: C_NamePlate.SetTargetClampingInsets(verticalInset, unk)
+---
+-- function C_NamePlate.SetTargetClampingInsets()
+-- end

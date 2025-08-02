@@ -1,0 +1,474 @@
+--[=[
+-- C_BarberShop API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 29
+--]=]
+
+--- @class C_BarberShop
+--- C_BarberShop namespace contains 29 functions
+local C_BarberShop = {}
+
+--[=[
+-- C_BarberShop Functions:
+-- - C_BarberShop.ApplyCustomizationChoices
+-- - C_BarberShop.Cancel
+-- - C_BarberShop.ClearPreviewChoices
+-- - C_BarberShop.GetAvailableCustomizations
+-- - C_BarberShop.GetCurrentCameraZoom
+-- - C_BarberShop.GetCurrentCharacterData
+-- - C_BarberShop.GetCurrentCost
+-- - C_BarberShop.GetViewingChrModel
+-- - C_BarberShop.HasAlteredForm
+-- - C_BarberShop.HasAnyChanges
+-- - C_BarberShop.HasCustomizationFeature
+-- - C_BarberShop.IsViewingAlteredForm
+-- - C_BarberShop.MarkCustomizationChoiceAsSeen
+-- - C_BarberShop.MarkCustomizationOptionAsSeen
+-- - C_BarberShop.PreviewCustomizationChoice
+-- - C_BarberShop.RandomizeCustomizationChoices
+-- - C_BarberShop.ResetCameraRotation
+-- - C_BarberShop.ResetCustomizationChoices
+-- - C_BarberShop.RotateCamera
+-- - C_BarberShop.SaveSeenChoices
+-- - C_BarberShop.SetCameraDistanceOffset
+-- - C_BarberShop.SetCameraZoomLevel
+-- - C_BarberShop.SetCustomizationChoice
+-- - C_BarberShop.SetModelDressState
+-- - C_BarberShop.SetSelectedSex
+-- - C_BarberShop.SetViewingAlteredForm
+-- - C_BarberShop.SetViewingChrModel
+-- - C_BarberShop.SetViewingShapeshiftForm
+-- - C_BarberShop.ZoomCamera
+--]=]
+
+---======================================================================
+--- C_BarberShop.ApplyCustomizationChoices
+---======================================================================
+--- Submits chosen barber shop customizations to the server for application.
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.ApplyCustomizationChoices
+---
+--- Usage: success = C_BarberShop.ApplyCustomizationChoices()
+---
+-- function C_BarberShop.ApplyCustomizationChoices()
+-- end
+
+---======================================================================
+--- C_BarberShop.Cancel
+---======================================================================
+--- Dismisses the barber shop UI, cancelling all customizations.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.Cancel
+---
+--- Usage: C_BarberShop.Cancel()
+---
+-- function C_BarberShop.Cancel()
+-- end
+
+---======================================================================
+--- C_BarberShop.ClearPreviewChoices
+---======================================================================
+--- Clears all actively previewed customization choices on the character.
+---
+--- Arguments:
+--- @param clearSavedChoices boolean ? = false
+---
+--- @since Patch 9.1.0 (2021-06-29): Added clearSavedChoices argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.ClearPreviewChoices
+---
+--- Usage: C_BarberShop.ClearPreviewChoices([clearSavedChoices])
+---
+-- function C_BarberShop.ClearPreviewChoices()
+-- end
+
+---======================================================================
+--- C_BarberShop.GetAvailableCustomizations
+---======================================================================
+--- Returns:
+--- @return CharCustomizationCategory categories []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetAvailableCustomizations
+---
+--- Usage: categories = C_BarberShop.GetAvailableCustomizations()
+---
+-- function C_BarberShop.GetAvailableCustomizations()
+-- end
+
+---======================================================================
+--- C_BarberShop.GetCurrentCameraZoom
+---======================================================================
+--- Returns the current camera zoom level.
+---
+--- Returns:
+--- @return number zoomLevel
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCameraZoom
+---
+--- Usage: zoomLevel = C_BarberShop.GetCurrentCameraZoom()
+---
+-- function C_BarberShop.GetCurrentCameraZoom()
+-- end
+
+---======================================================================
+--- C_BarberShop.GetCurrentCharacterData
+---======================================================================
+--- Returns:
+--- @return PlayerInfoCharacterData characterData
+---
+--- @since Patch 10.0.5 (2023-01-24): Replaced BarberShopCharacterData with PlayerInfoCharacterData.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCharacterData
+---
+--- Usage: characterData = C_BarberShop.GetCurrentCharacterData()
+---
+-- function C_BarberShop.GetCurrentCharacterData()
+-- end
+
+---======================================================================
+--- C_BarberShop.GetCurrentCost
+---======================================================================
+--- Returns the cost of the currently selected customizations.
+---
+--- Returns:
+--- @return number cost
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCurrentCost
+---
+--- Usage: cost = C_BarberShop.GetCurrentCost()
+---
+-- function C_BarberShop.GetCurrentCost()
+-- end
+
+---======================================================================
+--- C_BarberShop.GetViewingChrModel
+---======================================================================
+--- Returns:
+--- @return number chrModelID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetViewingChrModel
+---
+--- Usage: chrModelID = C_BarberShop.GetViewingChrModel()
+---
+-- function C_BarberShop.GetViewingChrModel()
+-- end
+
+---======================================================================
+--- C_BarberShop.HasAlteredForm
+---======================================================================
+--- Returns:
+--- @return boolean hasAlteredForm
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAlteredForm
+---
+--- Usage: hasAlteredForm = C_BarberShop.HasAlteredForm()
+---
+-- function C_BarberShop.HasAlteredForm()
+-- end
+
+---======================================================================
+--- C_BarberShop.HasAnyChanges
+---======================================================================
+--- Returns:
+--- @return boolean hasChanges
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAnyChanges
+---
+--- Usage: hasChanges = C_BarberShop.HasAnyChanges()
+---
+-- function C_BarberShop.HasAnyChanges()
+-- end
+
+---======================================================================
+--- C_BarberShop.HasCustomizationFeature
+---======================================================================
+--- Arguments:
+--- @param featureMask Enum.ChrModelFeatureFlags
+---
+--- Returns:
+--- @return boolean hasCustomizationFeature
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasCustomizationFeature
+---
+--- Usage: hasCustomizationFeature = C_BarberShop.HasCustomizationFeature(featureMask)
+---
+-- function C_BarberShop.HasCustomizationFeature()
+-- end
+
+---======================================================================
+--- C_BarberShop.IsViewingAlteredForm
+---======================================================================
+--- Returns true if the player is currently customizing an alternate form.
+---
+--- Returns:
+--- @return boolean isViewingAlteredForm
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.IsViewingAlteredForm
+---
+--- Usage: isViewingAlteredForm = C_BarberShop.IsViewingAlteredForm()
+---
+-- function C_BarberShop.IsViewingAlteredForm()
+-- end
+
+---======================================================================
+--- C_BarberShop.MarkCustomizationChoiceAsSeen
+---======================================================================
+--- Arguments:
+--- @param choiceID number
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.MarkCustomizationChoiceAsSeen
+---
+--- Usage: C_BarberShop.MarkCustomizationChoiceAsSeen(choiceID)
+---
+-- function C_BarberShop.MarkCustomizationChoiceAsSeen()
+-- end
+
+---======================================================================
+--- C_BarberShop.MarkCustomizationOptionAsSeen
+---======================================================================
+--- Arguments:
+--- @param optionID number
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.MarkCustomizationOptionAsSeen
+---
+--- Usage: C_BarberShop.MarkCustomizationOptionAsSeen(optionID)
+---
+-- function C_BarberShop.MarkCustomizationOptionAsSeen()
+-- end
+
+---======================================================================
+--- C_BarberShop.PreviewCustomizationChoice
+---======================================================================
+--- Previews a customization choice on the character without selecting it.
+---
+--- Arguments:
+--- @param optionID number
+--- @param choiceID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.PreviewCustomizationChoice
+---
+--- Usage: C_BarberShop.PreviewCustomizationChoice(optionID, choiceID)
+---
+-- function C_BarberShop.PreviewCustomizationChoice()
+-- end
+
+---======================================================================
+--- C_BarberShop.RandomizeCustomizationChoices
+---======================================================================
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.RandomizeCustomizationChoices
+---
+--- Usage: C_BarberShop.RandomizeCustomizationChoices()
+---
+-- function C_BarberShop.RandomizeCustomizationChoices()
+-- end
+
+---======================================================================
+--- C_BarberShop.ResetCameraRotation
+---======================================================================
+--- Resets the camera rotation.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.ResetCameraRotation
+---
+--- Usage: C_BarberShop.ResetCameraRotation()
+---
+-- function C_BarberShop.ResetCameraRotation()
+-- end
+
+---======================================================================
+--- C_BarberShop.ResetCustomizationChoices
+---======================================================================
+--- Resets all selected customization choices.
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.ResetCustomizationChoices
+---
+--- Usage: C_BarberShop.ResetCustomizationChoices()
+---
+-- function C_BarberShop.ResetCustomizationChoices()
+-- end
+
+---======================================================================
+--- C_BarberShop.RotateCamera
+---======================================================================
+--- Rotates the camera by the specified number of degrees.
+---
+--- Arguments:
+--- @param diffDegrees number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.RotateCamera
+---
+--- Usage: C_BarberShop.RotateCamera(diffDegrees)
+---
+-- function C_BarberShop.RotateCamera()
+-- end
+
+---======================================================================
+--- C_BarberShop.SaveSeenChoices
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SaveSeenChoices
+---
+--- Usage: C_BarberShop.SaveSeenChoices()
+---
+-- function C_BarberShop.SaveSeenChoices()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetCameraDistanceOffset
+---======================================================================
+--- Sets the distance offset of the camera.
+---
+--- Arguments:
+--- @param offset number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCameraDistanceOffset
+---
+--- Usage: C_BarberShop.SetCameraDistanceOffset(offset)
+---
+-- function C_BarberShop.SetCameraDistanceOffset()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetCameraZoomLevel
+---======================================================================
+--- Sets the zoom level of the camera.
+---
+--- Arguments:
+--- @param zoomLevel number
+--- @param keepCustomZoom boolean ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCameraZoomLevel
+---
+--- Usage: C_BarberShop.SetCameraZoomLevel(zoomLevel [, keepCustomZoom])
+---
+-- function C_BarberShop.SetCameraZoomLevel()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetCustomizationChoice
+---======================================================================
+--- Selects a customization choice.
+---
+--- Arguments:
+--- @param optionID number
+--- @param choiceID number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetCustomizationChoice
+---
+--- Usage: C_BarberShop.SetCustomizationChoice(optionID, choiceID)
+---
+-- function C_BarberShop.SetCustomizationChoice()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetModelDressState
+---======================================================================
+--- Controls whether or not the character should be dressed.
+---
+--- Arguments:
+--- @param dressedState boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetModelDressState
+---
+--- Usage: C_BarberShop.SetModelDressState(dressedState)
+---
+-- function C_BarberShop.SetModelDressState()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetSelectedSex
+---======================================================================
+--- Changes the selected gender of the character.
+---
+--- Arguments:
+--- @param sex Enum.UnitSex
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetSelectedSex
+---
+--- Usage: C_BarberShop.SetSelectedSex(sex)
+---
+-- function C_BarberShop.SetSelectedSex()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetViewingAlteredForm
+---======================================================================
+--- Controls whether the alternate form for a character is being customized.
+---
+--- Arguments:
+--- @param isViewingAlteredForm boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingAlteredForm
+---
+--- Usage: C_BarberShop.SetViewingAlteredForm(isViewingAlteredForm)
+---
+-- function C_BarberShop.SetViewingAlteredForm()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetViewingChrModel
+---======================================================================
+--- Arguments:
+--- @param chrModelID number ?
+--- @param spellShapeshiftFormID number ?
+---
+--- @since Patch 11.1.0 (2025-02-25): Added spellShapeshiftFormID argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingChrModel
+---
+--- Usage: C_BarberShop.SetViewingChrModel([chrModelID [, spellShapeshiftFormID]])
+---
+-- function C_BarberShop.SetViewingChrModel()
+-- end
+
+---======================================================================
+--- C_BarberShop.SetViewingShapeshiftForm
+---======================================================================
+--- Changes the shapeshift form being customized. Set to nil to revert to customizing the characters' normal form.
+---
+--- Arguments:
+--- @param shapeshiftFormID number ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingShapeshiftForm
+---
+--- Usage: C_BarberShop.SetViewingShapeshiftForm([shapeshiftFormID])
+---
+-- function C_BarberShop.SetViewingShapeshiftForm()
+-- end
+
+---======================================================================
+--- C_BarberShop.ZoomCamera
+---======================================================================
+--- Zooms the camera by a specifed amount.
+---
+--- Arguments:
+--- @param zoomAmount number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BarberShop.ZoomCamera
+---
+--- Usage: C_BarberShop.ZoomCamera(zoomAmount)
+---
+-- function C_BarberShop.ZoomCamera()
+-- end

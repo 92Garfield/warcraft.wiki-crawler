@@ -1,0 +1,229 @@
+--[=[
+-- C_BlackMarket API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 8
+--]=]
+
+--- @class C_BlackMarket
+--- C_BlackMarket namespace contains 8 functions
+local C_BlackMarket = {}
+
+--[=[
+-- C_BlackMarket Functions:
+-- - C_BlackMarket.Close
+-- - C_BlackMarket.GetHotItem
+-- - C_BlackMarket.GetItemInfoByID
+-- - C_BlackMarket.GetItemInfoByIndex
+-- - C_BlackMarket.GetNumItems
+-- - C_BlackMarket.IsViewOnly
+-- - C_BlackMarket.ItemPlaceBid
+-- - C_BlackMarket.RequestItems
+--]=]
+
+---======================================================================
+--- C_BlackMarket.Close
+---======================================================================
+--- Closes the Black Market window.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close
+---
+--- Usage: C_BlackMarket.Close()
+---
+-- function C_BlackMarket.Close()
+-- end
+
+---======================================================================
+--- C_BlackMarket.GetHotItem
+---======================================================================
+--- Returns info for a Black Market auction.
+---
+--- Arguments:
+--- @param marketID number - black market auction ID.
+---
+--- Returns:
+--- @return string name - item name; nil if no such auction exists.
+--- @return string texture - icon texture path.
+--- @return number quantity - amount of the item included in the auction.
+--- @return string itemType - item type, e.g. "Quest", "Mail", or "Companion Pet"
+--- @return boolean usable
+--- @return number level - item level requirement.
+--- @return string levelType - e.g. "REQ_LEVEL_ABBR"
+--- @return string sellerName - localized name of the NPC "selling" the item.
+--- @return number minBid - minimum amount of copper you can bid for this item.
+--- @return number minIncrement - minimum amount of copper you must increase the current bid by.
+--- @return number currBid - the maximum current bid in copper.
+--- @return boolean youHaveHighBid - true if your bid on this item is currently the highest bid, false otherwise.
+--- @return number numBids - number of bids made on this item.
+--- @return number timeLeft - token indicating remaining auction duration, 0 for completed auctions, larger values indicate larger remaining durations. For a localized text version, use _G["AUCTION_TIME_LEFT" .. timeLeft].
+--- @return string link - Chat link of the item being auctioned.
+--- @return number marketID - Black Market auction ID of this auction.
+--- @return number quality
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetHotItem
+---
+--- Usage: name, texture, quantity, itemType, usable, level, levelType, sellerName, minBid, minIncrement, currBid, youHaveHighBid, numBids, timeLeft, link, marketID, quality
+  = C_BlackMarket.GetItemInfoByID(marketID)
+  = C_BlackMarket.GetItemInfoByIndex(index)
+  = C_BlackMarket.GetHotItem()
+---
+-- function C_BlackMarket.GetHotItem()
+-- end
+
+---======================================================================
+--- C_BlackMarket.GetItemInfoByID
+---======================================================================
+--- Returns info for a Black Market auction.
+---
+--- Arguments:
+--- @param marketID number - black market auction ID.
+---
+--- Returns:
+--- @return string name - item name; nil if no such auction exists.
+--- @return string texture - icon texture path.
+--- @return number quantity - amount of the item included in the auction.
+--- @return string itemType - item type, e.g. "Quest", "Mail", or "Companion Pet"
+--- @return boolean usable
+--- @return number level - item level requirement.
+--- @return string levelType - e.g. "REQ_LEVEL_ABBR"
+--- @return string sellerName - localized name of the NPC "selling" the item.
+--- @return number minBid - minimum amount of copper you can bid for this item.
+--- @return number minIncrement - minimum amount of copper you must increase the current bid by.
+--- @return number currBid - the maximum current bid in copper.
+--- @return boolean youHaveHighBid - true if your bid on this item is currently the highest bid, false otherwise.
+--- @return number numBids - number of bids made on this item.
+--- @return number timeLeft - token indicating remaining auction duration, 0 for completed auctions, larger values indicate larger remaining durations. For a localized text version, use _G["AUCTION_TIME_LEFT" .. timeLeft].
+--- @return string link - Chat link of the item being auctioned.
+--- @return number marketID - Black Market auction ID of this auction.
+--- @return number quality
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByID
+---
+--- Usage: name, texture, quantity, itemType, usable, level, levelType, sellerName, minBid, minIncrement, currBid, youHaveHighBid, numBids, timeLeft, link, marketID, quality
+  = C_BlackMarket.GetItemInfoByID(marketID)
+  = C_BlackMarket.GetItemInfoByIndex(index)
+  = C_BlackMarket.GetHotItem()
+---
+-- function C_BlackMarket.GetItemInfoByID()
+-- end
+
+---======================================================================
+--- C_BlackMarket.GetItemInfoByIndex
+---======================================================================
+--- Returns info for a Black Market auction.
+---
+--- Arguments:
+--- @param marketID number - black market auction ID.
+---
+--- Returns:
+--- @return string name - item name; nil if no such auction exists.
+--- @return string texture - icon texture path.
+--- @return number quantity - amount of the item included in the auction.
+--- @return string itemType - item type, e.g. "Quest", "Mail", or "Companion Pet"
+--- @return boolean usable
+--- @return number level - item level requirement.
+--- @return string levelType - e.g. "REQ_LEVEL_ABBR"
+--- @return string sellerName - localized name of the NPC "selling" the item.
+--- @return number minBid - minimum amount of copper you can bid for this item.
+--- @return number minIncrement - minimum amount of copper you must increase the current bid by.
+--- @return number currBid - the maximum current bid in copper.
+--- @return boolean youHaveHighBid - true if your bid on this item is currently the highest bid, false otherwise.
+--- @return number numBids - number of bids made on this item.
+--- @return number timeLeft - token indicating remaining auction duration, 0 for completed auctions, larger values indicate larger remaining durations. For a localized text version, use _G["AUCTION_TIME_LEFT" .. timeLeft].
+--- @return string link - Chat link of the item being auctioned.
+--- @return number marketID - Black Market auction ID of this auction.
+--- @return number quality
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByIndex
+---
+--- Usage: name, texture, quantity, itemType, usable, level, levelType, sellerName, minBid, minIncrement, currBid, youHaveHighBid, numBids, timeLeft, link, marketID, quality
+  = C_BlackMarket.GetItemInfoByID(marketID)
+  = C_BlackMarket.GetItemInfoByIndex(index)
+  = C_BlackMarket.GetHotItem()
+---
+-- function C_BlackMarket.GetItemInfoByIndex()
+-- end
+
+---======================================================================
+--- C_BlackMarket.GetNumItems
+---======================================================================
+--- Returns the number of auctions on the Black Market Auction House.
+---
+--- Returns:
+--- @return number numItems - number of auctions on the black market.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetNumItems
+---
+--- Usage: numItems = C_BlackMarket.GetNumItems()
+---
+--- See also:
+--- - C_BlackMarket.GetItemInfoByIndex
+---
+-- function C_BlackMarket.GetNumItems()
+-- end
+
+---======================================================================
+--- C_BlackMarket.IsViewOnly
+---======================================================================
+--- Returns whether the black market is only viewable and bids are disabled.
+---
+--- Returns:
+--- @return boolean viewOnly
+---
+--- @since Patch 6.2.0 (2015-06-23): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.IsViewOnly
+---
+--- Usage: viewOnly = C_BlackMarket.IsViewOnly()
+---
+--- See also:
+--- - Blizzard API Documentation
+---
+-- function C_BlackMarket.IsViewOnly()
+-- end
+
+---======================================================================
+--- C_BlackMarket.ItemPlaceBid
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- Arguments:
+--- @param marketID number - black market auction ID (not line index!) to bid on.
+--- @param bid number - bid amount, in copper.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.ItemPlaceBid
+---
+--- Usage: C_BlackMarket.ItemPlaceBid(marketID, bid)
+---
+--- Examples:
+--- Example 1:
+---   local hotMarketID = select(15, C_BlackMarket.GetHotItem())
+---   local allYourGold = GetMoney()
+---   C_BlackMarket.ItemPlaceBid(hotMarketID, allYourGold)
+---
+--- See also:
+--- - C_BlackMarket.GetItemInfoByID
+---
+-- function C_BlackMarket.ItemPlaceBid()
+-- end
+
+---======================================================================
+--- C_BlackMarket.RequestItems
+---======================================================================
+--- Requests updated black market auction information from the server.
+---
+--- @since Patch 5.0.4 (2012-08-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_BlackMarket.RequestItems
+---
+--- Usage: C_BlackMarket.RequestItems()
+---
+--- See also:
+--- - C_BlackMarket.GetItemInfoByIndex
+---
+-- function C_BlackMarket.RequestItems()
+-- end

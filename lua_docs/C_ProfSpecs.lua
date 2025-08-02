@@ -1,0 +1,464 @@
+--[=[
+-- C_ProfSpecs API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 27
+--]=]
+
+--- @class C_ProfSpecs
+--- C_ProfSpecs namespace contains 27 functions
+local C_ProfSpecs = {}
+
+--[=[
+-- C_ProfSpecs Functions:
+-- - C_ProfSpecs.CanRefundPath
+-- - C_ProfSpecs.CanUnlockTab
+-- - C_ProfSpecs.GetChildrenForPath
+-- - C_ProfSpecs.GetConfigIDForSkillLine
+-- - C_ProfSpecs.GetCurrencyInfoForSkillLine
+-- - C_ProfSpecs.GetDefaultSpecSkillLine
+-- - C_ProfSpecs.GetDescriptionForPath
+-- - C_ProfSpecs.GetDescriptionForPerk
+-- - C_ProfSpecs.GetEntryIDForPerk
+-- - C_ProfSpecs.GetNewSpecReminderProfName
+-- - C_ProfSpecs.GetPerksForPath
+-- - C_ProfSpecs.GetRootPathForTab
+-- - C_ProfSpecs.GetSourceTextForPath
+-- - C_ProfSpecs.GetSpecTabIDsForSkillLine
+-- - C_ProfSpecs.GetSpecTabInfo
+-- - C_ProfSpecs.GetSpendCurrencyForPath
+-- - C_ProfSpecs.GetSpendEntryForPath
+-- - C_ProfSpecs.GetStateForPath
+-- - C_ProfSpecs.GetStateForPerk
+-- - C_ProfSpecs.GetStateForTab
+-- - C_ProfSpecs.GetTabInfo
+-- - C_ProfSpecs.GetUnlockEntryForPath
+-- - C_ProfSpecs.GetUnlockRankForPerk
+-- - C_ProfSpecs.ShouldShowPointsReminder
+-- - C_ProfSpecs.ShouldShowPointsReminderForSkillLine
+-- - C_ProfSpecs.ShouldShowSpecTab
+-- - C_ProfSpecs.SkillLineHasSpecialization
+--]=]
+
+---======================================================================
+--- C_ProfSpecs.CanRefundPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+--- @param configID number
+---
+--- Returns:
+--- @return boolean canRefund
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.CanRefundPath
+---
+--- Usage: canRefund = C_ProfSpecs.CanRefundPath(pathID, configID)
+---
+-- function C_ProfSpecs.CanRefundPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.CanUnlockTab
+---======================================================================
+--- Arguments:
+--- @param tabTreeID number
+--- @param configID number
+---
+--- Returns:
+--- @return boolean canUnlock
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.CanUnlockTab
+---
+--- Usage: canUnlock = C_ProfSpecs.CanUnlockTab(tabTreeID, configID)
+---
+-- function C_ProfSpecs.CanUnlockTab()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetChildrenForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return number childIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetChildrenForPath
+---
+--- Usage: childIDs = C_ProfSpecs.GetChildrenForPath(pathID)
+---
+-- function C_ProfSpecs.GetChildrenForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetConfigIDForSkillLine
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return number configID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetConfigIDForSkillLine
+---
+--- Usage: configID = C_ProfSpecs.GetConfigIDForSkillLine(skillLineID)
+---
+-- function C_ProfSpecs.GetConfigIDForSkillLine()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetCurrencyInfoForSkillLine
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return SpecializationCurrencyInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetCurrencyInfoForSkillLine
+---
+--- Usage: info = C_ProfSpecs.GetCurrencyInfoForSkillLine(skillLineID)
+---
+-- function C_ProfSpecs.GetCurrencyInfoForSkillLine()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetDefaultSpecSkillLine
+---======================================================================
+--- Returns:
+--- @return number defaultSpecSkillLine ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetDefaultSpecSkillLine
+---
+--- Usage: defaultSpecSkillLine = C_ProfSpecs.GetDefaultSpecSkillLine()
+---
+-- function C_ProfSpecs.GetDefaultSpecSkillLine()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetDescriptionForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return string description
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetDescriptionForPath
+---
+--- Usage: description = C_ProfSpecs.GetDescriptionForPath(pathID)
+---
+-- function C_ProfSpecs.GetDescriptionForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetDescriptionForPerk
+---======================================================================
+--- Arguments:
+--- @param perkID number
+---
+--- Returns:
+--- @return string description
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetDescriptionForPerk
+---
+--- Usage: description = C_ProfSpecs.GetDescriptionForPerk(perkID)
+---
+-- function C_ProfSpecs.GetDescriptionForPerk()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetEntryIDForPerk
+---======================================================================
+--- Arguments:
+--- @param perkID number
+---
+--- Returns:
+--- @return number entryID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetEntryIDForPerk
+---
+--- Usage: entryID = C_ProfSpecs.GetEntryIDForPerk(perkID)
+---
+-- function C_ProfSpecs.GetEntryIDForPerk()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetNewSpecReminderProfName
+---======================================================================
+--- Returns:
+--- @return string profName ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetNewSpecReminderProfName
+---
+--- Usage: profName = C_ProfSpecs.GetNewSpecReminderProfName()
+---
+-- function C_ProfSpecs.GetNewSpecReminderProfName()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetPerksForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return SpecPerkInfo perkInfos []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetPerksForPath
+---
+--- Usage: perkInfos = C_ProfSpecs.GetPerksForPath(pathID)
+---
+-- function C_ProfSpecs.GetPerksForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetRootPathForTab
+---======================================================================
+--- Arguments:
+--- @param tabTreeID number
+---
+--- Returns:
+--- @return number rootPathID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetRootPathForTab
+---
+--- Usage: rootPathID = C_ProfSpecs.GetRootPathForTab(tabTreeID)
+---
+-- function C_ProfSpecs.GetRootPathForTab()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetSourceTextForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+--- @param configID number
+---
+--- Returns:
+--- @return string sourceText
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetSourceTextForPath
+---
+--- Usage: sourceText = C_ProfSpecs.GetSourceTextForPath(pathID, configID)
+---
+-- function C_ProfSpecs.GetSourceTextForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetSpecTabIDsForSkillLine
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return number specTabIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetSpecTabIDsForSkillLine
+---
+--- Usage: specTabIDs = C_ProfSpecs.GetSpecTabIDsForSkillLine(skillLineID)
+---
+-- function C_ProfSpecs.GetSpecTabIDsForSkillLine()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetSpecTabInfo
+---======================================================================
+--- Returns:
+--- @return SpecializationTabInfo specTabInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetSpecTabInfo
+---
+--- Usage: specTabInfo = C_ProfSpecs.GetSpecTabInfo()
+---
+-- function C_ProfSpecs.GetSpecTabInfo()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetSpendCurrencyForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return number currencyID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetSpendCurrencyForPath
+---
+--- Usage: currencyID = C_ProfSpecs.GetSpendCurrencyForPath(pathID)
+---
+-- function C_ProfSpecs.GetSpendCurrencyForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetSpendEntryForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return number entryID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetSpendEntryForPath
+---
+--- Usage: entryID = C_ProfSpecs.GetSpendEntryForPath(pathID)
+---
+-- function C_ProfSpecs.GetSpendEntryForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetStateForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+--- @param configID number
+---
+--- Returns:
+--- @return Enum.ProfessionsSpecPathState state
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetStateForPath
+---
+--- Usage: state = C_ProfSpecs.GetStateForPath(pathID, configID)
+---
+-- function C_ProfSpecs.GetStateForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetStateForPerk
+---======================================================================
+--- Arguments:
+--- @param perkID number
+--- @param configID number
+---
+--- Returns:
+--- @return Enum.ProfessionsSpecPerkState state
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetStateForPerk
+---
+--- Usage: state = C_ProfSpecs.GetStateForPerk(perkID, configID)
+---
+-- function C_ProfSpecs.GetStateForPerk()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetStateForTab
+---======================================================================
+--- Arguments:
+--- @param tabTreeID number
+--- @param configID number
+---
+--- Returns:
+--- @return Enum.ProfessionsSpecTabState tabInfo
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetStateForTab
+---
+--- Usage: tabInfo = C_ProfSpecs.GetStateForTab(tabTreeID, configID)
+---
+-- function C_ProfSpecs.GetStateForTab()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetTabInfo
+---======================================================================
+--- Arguments:
+--- @param tabTreeID number
+---
+--- Returns:
+--- @return ProfTabInfo tabInfo ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetTabInfo
+---
+--- Usage: tabInfo = C_ProfSpecs.GetTabInfo(tabTreeID)
+---
+-- function C_ProfSpecs.GetTabInfo()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetUnlockEntryForPath
+---======================================================================
+--- Arguments:
+--- @param pathID number
+---
+--- Returns:
+--- @return number entryID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetUnlockEntryForPath
+---
+--- Usage: entryID = C_ProfSpecs.GetUnlockEntryForPath(pathID)
+---
+-- function C_ProfSpecs.GetUnlockEntryForPath()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.GetUnlockRankForPerk
+---======================================================================
+--- Arguments:
+--- @param perkID number
+---
+--- Returns:
+--- @return number unlockRank ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.GetUnlockRankForPerk
+---
+--- Usage: unlockRank = C_ProfSpecs.GetUnlockRankForPerk(perkID)
+---
+-- function C_ProfSpecs.GetUnlockRankForPerk()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.ShouldShowPointsReminder
+---======================================================================
+--- Returns:
+--- @return boolean showReminder
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.ShouldShowPointsReminder
+---
+--- Usage: showReminder = C_ProfSpecs.ShouldShowPointsReminder()
+---
+-- function C_ProfSpecs.ShouldShowPointsReminder()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.ShouldShowPointsReminderForSkillLine
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return boolean showReminder
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.ShouldShowPointsReminderForSkillLine
+---
+--- Usage: showReminder = C_ProfSpecs.ShouldShowPointsReminderForSkillLine(skillLineID)
+---
+-- function C_ProfSpecs.ShouldShowPointsReminderForSkillLine()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.ShouldShowSpecTab
+---======================================================================
+--- Returns:
+--- @return boolean showSpecTab
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.ShouldShowSpecTab
+---
+--- Usage: showSpecTab = C_ProfSpecs.ShouldShowSpecTab()
+---
+-- function C_ProfSpecs.ShouldShowSpecTab()
+-- end
+
+---======================================================================
+--- C_ProfSpecs.SkillLineHasSpecialization
+---======================================================================
+--- Arguments:
+--- @param skillLineID number
+---
+--- Returns:
+--- @return boolean hasSpecialization
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ProfSpecs.SkillLineHasSpecialization
+---
+--- Usage: hasSpecialization = C_ProfSpecs.SkillLineHasSpecialization(skillLineID)
+---
+-- function C_ProfSpecs.SkillLineHasSpecialization()
+-- end

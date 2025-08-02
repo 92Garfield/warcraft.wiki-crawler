@@ -1,0 +1,55 @@
+--[=[
+-- C_MapExplorationInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 2
+--]=]
+
+--- @class C_MapExplorationInfo
+--- C_MapExplorationInfo namespace contains 2 functions
+local C_MapExplorationInfo = {}
+
+--[=[
+-- C_MapExplorationInfo Functions:
+-- - C_MapExplorationInfo.GetExploredAreaIDsAtPosition
+-- - C_MapExplorationInfo.GetExploredMapTextures
+--]=]
+
+---======================================================================
+--- C_MapExplorationInfo.GetExploredAreaIDsAtPosition
+---======================================================================
+--- Returns the explored areas for the location on a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+--- @param normalizedPosition Vector2DMixin 🔗
+---
+--- Returns:
+--- @return number areaID []? - AreaTable.db2
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MapExplorationInfo.GetExploredAreaIDsAtPosition
+---
+--- Usage: areaID = C_MapExplorationInfo.GetExploredAreaIDsAtPosition(uiMapID, normalizedPosition)
+---
+-- function C_MapExplorationInfo.GetExploredAreaIDsAtPosition()
+-- end
+
+---======================================================================
+--- C_MapExplorationInfo.GetExploredMapTextures
+---======================================================================
+--- Returns explored map textures for a map.
+---
+--- Arguments:
+--- @param uiMapID number : UiMapID
+---
+--- Returns:
+--- @return UiMapExplorationInfo overlayInfo []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_MapExplorationInfo.GetExploredMapTextures
+---
+--- Usage: overlayInfo = C_MapExplorationInfo.GetExploredMapTextures(uiMapID)
+---
+-- function C_MapExplorationInfo.GetExploredMapTextures()
+-- end

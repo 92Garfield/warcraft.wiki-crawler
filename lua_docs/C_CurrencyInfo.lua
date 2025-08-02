@@ -1,0 +1,734 @@
+--[=[
+-- C_CurrencyInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 42
+--]=]
+
+--- @class C_CurrencyInfo
+--- C_CurrencyInfo namespace contains 42 functions
+local C_CurrencyInfo = {}
+
+--[=[
+-- C_CurrencyInfo Functions:
+-- - C_CurrencyInfo.CanTransferCurrency
+-- - C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData
+-- - C_CurrencyInfo.DoesWarModeBonusApply
+-- - C_CurrencyInfo.ExpandCurrencyList
+-- - C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters
+-- - C_CurrencyInfo.FetchCurrencyTransferTransactions
+-- - C_CurrencyInfo.GetAzeriteCurrencyID
+-- - C_CurrencyInfo.GetBackpackCurrencyInfo
+-- - C_CurrencyInfo.GetBasicCurrencyInfo
+-- - C_CurrencyInfo.GetCoinIcon
+-- - C_CurrencyInfo.GetCoinText
+-- - C_CurrencyInfo.GetCoinTextureString
+-- - C_CurrencyInfo.GetCostToTransferCurrency
+-- - C_CurrencyInfo.GetCurrencyContainerInfo
+-- - C_CurrencyInfo.GetCurrencyDescription
+-- - C_CurrencyInfo.GetCurrencyFilter
+-- - C_CurrencyInfo.GetCurrencyIDFromLink
+-- - C_CurrencyInfo.GetCurrencyInfo
+-- - C_CurrencyInfo.GetCurrencyInfoFromLink
+-- - C_CurrencyInfo.GetCurrencyLink
+-- - C_CurrencyInfo.GetCurrencyListInfo
+-- - C_CurrencyInfo.GetCurrencyListLink
+-- - C_CurrencyInfo.GetCurrencyListSize
+-- - C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID
+-- - C_CurrencyInfo.GetFactionGrantedByCurrency
+-- - C_CurrencyInfo.GetMaxTransferableAmountFromQuantity
+-- - C_CurrencyInfo.GetWarResourcesCurrencyID
+-- - C_CurrencyInfo.IsAccountCharacterCurrencyDataReady
+-- - C_CurrencyInfo.IsAccountTransferableCurrency
+-- - C_CurrencyInfo.IsAccountWideCurrency
+-- - C_CurrencyInfo.IsCurrencyContainer
+-- - C_CurrencyInfo.IsCurrencyTransferInProgress
+-- - C_CurrencyInfo.IsCurrencyTransferTransactionDataReady
+-- - C_CurrencyInfo.PickupCurrency
+-- - C_CurrencyInfo.PlayerHasMaxQuantity
+-- - C_CurrencyInfo.PlayerHasMaxWeeklyQuantity
+-- - C_CurrencyInfo.RequestCurrencyDataForAccountCharacters
+-- - C_CurrencyInfo.RequestCurrencyFromAccountCharacter
+-- - C_CurrencyInfo.SetCurrencyBackpack
+-- - C_CurrencyInfo.SetCurrencyBackpackByID
+-- - C_CurrencyInfo.SetCurrencyFilter
+-- - C_CurrencyInfo.SetCurrencyUnused
+--]=]
+
+---======================================================================
+--- C_CurrencyInfo.CanTransferCurrency
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return boolean canTransferCurrency
+--- @return Enum.AccountCurrencyTransferResult failureReason ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.CanTransferCurrency
+---
+--- Usage: canTransferCurrency, failureReason = C_CurrencyInfo.CanTransferCurrency(currencyID)
+---
+-- function C_CurrencyInfo.CanTransferCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData
+---======================================================================
+--- Returns:
+--- @return boolean doesCurrentFilterRequireAccountCurrencyData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData
+---
+--- Usage: doesCurrentFilterRequireAccountCurrencyData = C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData()
+---
+-- function C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.DoesWarModeBonusApply
+---======================================================================
+--- Arguments:
+--- @param currencyID number : CurrencyID
+---
+--- Returns:
+--- @return boolean warModeApplies ?
+--- @return boolean limitOncePerTooltip ?
+---
+--- @since Patch 8.2.0 (2019-06-25): Added limitOncePerTooltip return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.DoesWarModeBonusApply
+---
+--- Usage: warModeApplies, limitOncePerTooltip = C_CurrencyInfo.DoesWarModeBonusApply(currencyID)
+---
+-- function C_CurrencyInfo.DoesWarModeBonusApply()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.ExpandCurrencyList
+---======================================================================
+--- Expands/collapses a currency list header.
+---
+--- Arguments:
+--- @param index number
+--- @param expand boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.ExpandCurrencyList()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.ExpandCurrencyList
+---
+--- Usage: C_CurrencyInfo.ExpandCurrencyList(index, expand)
+---
+-- function C_CurrencyInfo.ExpandCurrencyList()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return CharacterCurrencyData accountCurrencyData []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters
+---
+--- Usage: accountCurrencyData = C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters(currencyID)
+---
+-- function C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.FetchCurrencyTransferTransactions
+---======================================================================
+--- Returns:
+--- @return CurrencyTransferTransaction currencyTransferTransactions []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.FetchCurrencyTransferTransactions
+---
+--- Usage: currencyTransferTransactions = C_CurrencyInfo.FetchCurrencyTransferTransactions()
+---
+-- function C_CurrencyInfo.FetchCurrencyTransferTransactions()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetAzeriteCurrencyID
+---======================================================================
+--- Returns:
+--- @return number azeriteCurrencyID - Returns 553.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetAzeriteCurrencyID
+---
+--- Usage: azeriteCurrencyID = C_CurrencyInfo.GetAzeriteCurrencyID()
+---
+-- function C_CurrencyInfo.GetAzeriteCurrencyID()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetBackpackCurrencyInfo
+---======================================================================
+--- Returns info for a tracked currency in the backpack.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return BackpackCurrencyInfo info
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetBackpackCurrencyInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetBackpackCurrencyInfo
+---
+--- Usage: info = C_CurrencyInfo.GetBackpackCurrencyInfo(index)
+---
+-- function C_CurrencyInfo.GetBackpackCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetBasicCurrencyInfo
+---======================================================================
+--- Arguments:
+--- @param currencyType number
+--- @param quantity number ?
+---
+--- Returns:
+--- @return  info structure - CurrencyDisplayInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetBasicCurrencyInfo
+---
+--- Usage: info = C_CurrencyInfo.GetBasicCurrencyInfo(currencyType [, quantity])
+---
+-- function C_CurrencyInfo.GetBasicCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCoinIcon
+---======================================================================
+--- Arguments:
+--- @param amount number : WOWMONEY
+---
+--- Returns:
+--- @return number result : fileID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinIcon
+---
+--- Usage: result = C_CurrencyInfo.GetCoinIcon(amount)
+---
+-- function C_CurrencyInfo.GetCoinIcon()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCoinText
+---======================================================================
+--- Arguments:
+--- @param amount number : WOWMONEY
+--- @param separator string ? = ,
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinText
+---
+--- Usage: result = C_CurrencyInfo.GetCoinText(amount [, separator])
+---
+-- function C_CurrencyInfo.GetCoinText()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCoinTextureString
+---======================================================================
+--- Arguments:
+--- @param amount number : WOWMONEY
+--- @param fontHeight number ? = 14
+---
+--- Returns:
+--- @return string result
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinTextureString
+---
+--- Usage: result = C_CurrencyInfo.GetCoinTextureString(amount [, fontHeight])
+---
+-- function C_CurrencyInfo.GetCoinTextureString()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCostToTransferCurrency
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+--- @param quantity number
+---
+--- Returns:
+--- @return number totalQuantityConsumed ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCostToTransferCurrency
+---
+--- Usage: totalQuantityConsumed = C_CurrencyInfo.GetCostToTransferCurrency(currencyID, quantity)
+---
+-- function C_CurrencyInfo.GetCostToTransferCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyContainerInfo
+---======================================================================
+--- Arguments:
+--- @param currencyType number : CurrencyID
+--- @param quantity number
+---
+--- Returns:
+--- @return CurrencyDisplayInfo info
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyContainerInfo
+---
+--- Usage: info = C_CurrencyInfo.GetCurrencyContainerInfo(currencyType, quantity)
+---
+-- function C_CurrencyInfo.GetCurrencyContainerInfo()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyDescription
+---======================================================================
+--- Arguments:
+--- @param type number
+---
+--- Returns:
+--- @return string description
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyDescription
+---
+--- Usage: description = C_CurrencyInfo.GetCurrencyDescription(type)
+---
+-- function C_CurrencyInfo.GetCurrencyDescription()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyFilter
+---======================================================================
+--- Returns:
+--- @return Enum.CurrencyFilterType filterType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyFilter
+---
+--- Usage: filterType = C_CurrencyInfo.GetCurrencyFilter()
+---
+-- function C_CurrencyInfo.GetCurrencyFilter()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyIDFromLink
+---======================================================================
+--- Converts currency links to IDs.
+---
+--- Arguments:
+--- @param currencyLink string : currencyLink
+---
+--- Returns:
+--- @return number currencyID : CurrencyID
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyIDFromLink
+---
+--- Usage: currencyID = C_CurrencyInfo.GetCurrencyIDFromLink(currencyLink)
+---
+-- function C_CurrencyInfo.GetCurrencyIDFromLink()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyInfo
+---======================================================================
+--- Returns info for a currency by ID.
+---
+--- Arguments:
+--- @param type number : CurrencyID
+---
+--- Returns:
+--- @return CurrencyInfo info
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyInfo() and returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyInfo
+---
+--- Usage: info = C_CurrencyInfo.GetCurrencyInfo(type)
+     = C_CurrencyInfo.GetCurrencyInfoFromLink(link)
+---
+-- function C_CurrencyInfo.GetCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyInfoFromLink
+---======================================================================
+--- Returns info for a currency by ID.
+---
+--- Arguments:
+--- @param type number : CurrencyID
+---
+--- Returns:
+--- @return CurrencyInfo info
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyInfo() and returns structured data.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyInfoFromLink
+---
+--- Usage: info = C_CurrencyInfo.GetCurrencyInfo(type)
+     = C_CurrencyInfo.GetCurrencyInfoFromLink(link)
+---
+-- function C_CurrencyInfo.GetCurrencyInfoFromLink()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyLink
+---======================================================================
+--- Returns a currency link.
+---
+--- Arguments:
+--- @param type number : CurrencyID
+--- @param amount number ?
+---
+--- Returns:
+--- @return string link : currencyLink
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyLink()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyLink
+---
+--- Usage: link = C_CurrencyInfo.GetCurrencyLink(type [, amount])
+---
+-- function C_CurrencyInfo.GetCurrencyLink()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyListInfo
+---======================================================================
+--- Returns info for a currency in the currency tab.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return CurrencyInfo info
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyListInfo()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyListInfo
+---
+--- Usage: info = C_CurrencyInfo.GetCurrencyListInfo(index)
+---
+-- function C_CurrencyInfo.GetCurrencyListInfo()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyListLink
+---======================================================================
+--- Get the currencyLink for the specified currency list index.
+---
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return string link : currencyLink
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyListLink()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyListLink
+---
+--- Usage: link = C_CurrencyInfo.GetCurrencyListLink(index)
+---
+-- function C_CurrencyInfo.GetCurrencyListLink()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetCurrencyListSize
+---======================================================================
+--- Returns the amount of currencies and headers in the currency tab.
+---
+--- Returns:
+--- @return number currencyListSize
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.GetCurrencyListSize()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyListSize
+---
+--- Usage: currencyListSize = C_CurrencyInfo.GetCurrencyListSize()
+---
+-- function C_CurrencyInfo.GetCurrencyListSize()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID
+---======================================================================
+--- Returns:
+--- @return number dragonIslesSuppliesCurrencyID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID
+---
+--- Usage: dragonIslesSuppliesCurrencyID = C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID()
+---
+-- function C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetFactionGrantedByCurrency
+---======================================================================
+--- Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
+---
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return number factionID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetFactionGrantedByCurrency
+---
+--- Usage: factionID = C_CurrencyInfo.GetFactionGrantedByCurrency(currencyID)
+---
+-- function C_CurrencyInfo.GetFactionGrantedByCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetMaxTransferableAmountFromQuantity
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+--- @param requestedQuantity number
+---
+--- Returns:
+--- @return number maxTransferableAmount ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetMaxTransferableAmountFromQuantity
+---
+--- Usage: maxTransferableAmount = C_CurrencyInfo.GetMaxTransferableAmountFromQuantity(currencyID, requestedQuantity)
+---
+-- function C_CurrencyInfo.GetMaxTransferableAmountFromQuantity()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.GetWarResourcesCurrencyID
+---======================================================================
+--- Returns:
+--- @return number warResourceCurrencyID - Returns 1560.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetWarResourcesCurrencyID
+---
+--- Usage: warResourceCurrencyID = C_CurrencyInfo.GetWarResourcesCurrencyID()
+---
+-- function C_CurrencyInfo.GetWarResourcesCurrencyID()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsAccountCharacterCurrencyDataReady
+---======================================================================
+--- Returns:
+--- @return boolean isReady
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsAccountCharacterCurrencyDataReady
+---
+--- Usage: isReady = C_CurrencyInfo.IsAccountCharacterCurrencyDataReady()
+---
+-- function C_CurrencyInfo.IsAccountCharacterCurrencyDataReady()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsAccountTransferableCurrency
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return boolean isAccountTransferableCurrency
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsAccountTransferableCurrency
+---
+--- Usage: isAccountTransferableCurrency = C_CurrencyInfo.IsAccountTransferableCurrency(currencyID)
+---
+-- function C_CurrencyInfo.IsAccountTransferableCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsAccountWideCurrency
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return boolean isAccountWideCurrency
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsAccountWideCurrency
+---
+--- Usage: isAccountWideCurrency = C_CurrencyInfo.IsAccountWideCurrency(currencyID)
+---
+-- function C_CurrencyInfo.IsAccountWideCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsCurrencyContainer
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+--- @param quantity number
+---
+--- Returns:
+--- @return boolean isCurrencyContainer
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsCurrencyContainer
+---
+--- Usage: isCurrencyContainer = C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity)
+---
+-- function C_CurrencyInfo.IsCurrencyContainer()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsCurrencyTransferInProgress
+---======================================================================
+--- Returns:
+--- @return boolean currencyTransferInProgress
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsCurrencyTransferInProgress
+---
+--- Usage: currencyTransferInProgress = C_CurrencyInfo.IsCurrencyTransferInProgress()
+---
+-- function C_CurrencyInfo.IsCurrencyTransferInProgress()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.IsCurrencyTransferTransactionDataReady
+---======================================================================
+--- Returns:
+--- @return boolean isReady
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsCurrencyTransferTransactionDataReady
+---
+--- Usage: isReady = C_CurrencyInfo.IsCurrencyTransferTransactionDataReady()
+---
+-- function C_CurrencyInfo.IsCurrencyTransferTransactionDataReady()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.PickupCurrency
+---======================================================================
+--- Picks up a currency to the cursor.
+---
+--- Arguments:
+--- @param type number
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.PickupCurrency
+---
+--- Usage: C_CurrencyInfo.PickupCurrency(type)
+---
+-- function C_CurrencyInfo.PickupCurrency()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.PlayerHasMaxQuantity
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return boolean hasMaxQuantity
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.PlayerHasMaxQuantity
+---
+--- Usage: hasMaxQuantity = C_CurrencyInfo.PlayerHasMaxQuantity(currencyID)
+---
+-- function C_CurrencyInfo.PlayerHasMaxQuantity()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.PlayerHasMaxWeeklyQuantity
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return boolean hasMaxWeeklyQuantity
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.PlayerHasMaxWeeklyQuantity
+---
+--- Usage: hasMaxWeeklyQuantity = C_CurrencyInfo.PlayerHasMaxWeeklyQuantity(currencyID)
+---
+-- function C_CurrencyInfo.PlayerHasMaxWeeklyQuantity()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.RequestCurrencyDataForAccountCharacters
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.RequestCurrencyDataForAccountCharacters
+---
+--- Usage: C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
+---
+-- function C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.RequestCurrencyFromAccountCharacter
+---======================================================================
+--- Arguments:
+--- @param sourceCharacterGUID string : WOWGUID
+--- @param currencyID number
+--- @param quantity number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.RequestCurrencyFromAccountCharacter
+---
+--- Usage: C_CurrencyInfo.RequestCurrencyFromAccountCharacter(sourceCharacterGUID, currencyID, quantity)
+---
+-- function C_CurrencyInfo.RequestCurrencyFromAccountCharacter()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.SetCurrencyBackpack
+---======================================================================
+--- Tracks a currency in the backpack.
+---
+--- Arguments:
+--- @param index number
+--- @param backpack boolean - Pass true to track; false to clear tracking.
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.SetCurrencyBackpack()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyBackpack
+---
+--- Usage: C_CurrencyInfo.SetCurrencyBackpack(index, backpack)
+---
+-- function C_CurrencyInfo.SetCurrencyBackpack()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.SetCurrencyBackpackByID
+---======================================================================
+--- Arguments:
+--- @param currencyType number
+--- @param backpack boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyBackpackByID
+---
+--- Usage: C_CurrencyInfo.SetCurrencyBackpackByID(currencyType, backpack)
+---
+-- function C_CurrencyInfo.SetCurrencyBackpackByID()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.SetCurrencyFilter
+---======================================================================
+--- Arguments:
+--- @param filterType Enum.CurrencyFilterType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyFilter
+---
+--- Usage: C_CurrencyInfo.SetCurrencyFilter(filterType)
+---
+-- function C_CurrencyInfo.SetCurrencyFilter()
+-- end
+
+---======================================================================
+--- C_CurrencyInfo.SetCurrencyUnused
+---======================================================================
+--- Marks a currency as unused in the currency tab.
+---
+--- Arguments:
+--- @param index number
+--- @param unused boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_CurrencyInfo.SetCurrencyUnused()
+--- @see https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyUnused
+---
+--- Usage: C_CurrencyInfo.SetCurrencyUnused(index, unused)
+---
+-- function C_CurrencyInfo.SetCurrencyUnused()
+-- end

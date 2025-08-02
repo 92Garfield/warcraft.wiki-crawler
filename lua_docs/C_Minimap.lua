@@ -1,0 +1,383 @@
+--[=[
+-- C_Minimap API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 24
+--]=]
+
+--- @class C_Minimap
+--- C_Minimap namespace contains 24 functions
+local C_Minimap = {}
+
+--[=[
+-- C_Minimap Functions:
+-- - C_Minimap.CanTrackBattlePets
+-- - C_Minimap.ClearAllTracking
+-- - C_Minimap.ClearMinimapInsetInfo
+-- - C_Minimap.GetDefaultTrackingValue
+-- - C_Minimap.GetDrawGroundTextures
+-- - C_Minimap.GetNumQuestPOIWorldEffects
+-- - C_Minimap.GetNumTrackingTypes
+-- - C_Minimap.GetObjectIconTextureCoords
+-- - C_Minimap.GetPOITextureCoords
+-- - C_Minimap.GetTrackingFilter
+-- - C_Minimap.GetTrackingInfo
+-- - C_Minimap.GetUiMapID
+-- - C_Minimap.GetViewRadius
+-- - C_Minimap.IsFilteredOut
+-- - C_Minimap.IsInsideQuestBlob
+-- - C_Minimap.IsRotateMinimapIgnored
+-- - C_Minimap.IsTrackingAccountCompletedQuests
+-- - C_Minimap.IsTrackingBattlePets
+-- - C_Minimap.IsTrackingHiddenQuests
+-- - C_Minimap.SetDrawGroundTextures
+-- - C_Minimap.SetIgnoreRotateMinimap
+-- - C_Minimap.SetMinimapInsetInfo
+-- - C_Minimap.SetTracking
+-- - C_Minimap.ShouldUseHybridMinimap
+--]=]
+
+---======================================================================
+--- C_Minimap.CanTrackBattlePets
+---======================================================================
+--- Returns:
+--- @return boolean CanTrackBattlePets
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.CanTrackBattlePets
+---
+--- Usage: CanTrackBattlePets = C_Minimap.CanTrackBattlePets()
+---
+-- function C_Minimap.CanTrackBattlePets()
+-- end
+
+---======================================================================
+--- C_Minimap.ClearAllTracking
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearAllTracking
+---
+--- Usage: C_Minimap.ClearAllTracking()
+---
+-- function C_Minimap.ClearAllTracking()
+-- end
+
+---======================================================================
+--- C_Minimap.ClearMinimapInsetInfo
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearMinimapInsetInfo
+---
+--- Usage: C_Minimap.ClearMinimapInsetInfo()
+---
+-- function C_Minimap.ClearMinimapInsetInfo()
+-- end
+
+---======================================================================
+--- C_Minimap.GetDefaultTrackingValue
+---======================================================================
+--- Arguments:
+--- @param filterType Enum.MinimapTrackingFilter
+---
+--- Returns:
+--- @return boolean defaultValue
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetDefaultTrackingValue
+---
+--- Usage: defaultValue = C_Minimap.GetDefaultTrackingValue(filterType)
+---
+-- function C_Minimap.GetDefaultTrackingValue()
+-- end
+
+---======================================================================
+--- C_Minimap.GetDrawGroundTextures
+---======================================================================
+--- Returns:
+--- @return boolean draw
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetDrawGroundTextures
+---
+--- Usage: draw = C_Minimap.GetDrawGroundTextures()
+---
+-- function C_Minimap.GetDrawGroundTextures()
+-- end
+
+---======================================================================
+--- C_Minimap.GetNumQuestPOIWorldEffects
+---======================================================================
+--- Returns:
+--- @return number worldEffectCount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetNumQuestPOIWorldEffects
+---
+--- Usage: worldEffectCount = C_Minimap.GetNumQuestPOIWorldEffects()
+---
+-- function C_Minimap.GetNumQuestPOIWorldEffects()
+-- end
+
+---======================================================================
+--- C_Minimap.GetNumTrackingTypes
+---======================================================================
+--- Returns:
+--- @return number numTrackingTypes
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetNumTrackingTypes
+---
+--- Usage: numTrackingTypes = C_Minimap.GetNumTrackingTypes()
+---
+-- function C_Minimap.GetNumTrackingTypes()
+-- end
+
+---======================================================================
+--- C_Minimap.GetObjectIconTextureCoords
+---======================================================================
+--- Arguments:
+--- @param index number ?
+---
+--- Returns:
+--- @return number textureCoordsX
+--- @return number textureCoordsY
+--- @return number textureCoordsZ
+--- @return number textureCoordsW
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetObjectIconTextureCoords
+---
+--- Usage: textureCoordsX, textureCoordsY, textureCoordsZ, textureCoordsW = C_Minimap.GetObjectIconTextureCoords([index])
+---
+-- function C_Minimap.GetObjectIconTextureCoords()
+-- end
+
+---======================================================================
+--- C_Minimap.GetPOITextureCoords
+---======================================================================
+--- Arguments:
+--- @param index number ?
+---
+--- Returns:
+--- @return number textureCoordsX
+--- @return number textureCoordsY
+--- @return number textureCoordsZ
+--- @return number textureCoordsW
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetPOITextureCoords
+---
+--- Usage: textureCoordsX, textureCoordsY, textureCoordsZ, textureCoordsW = C_Minimap.GetPOITextureCoords([index])
+---
+-- function C_Minimap.GetPOITextureCoords()
+-- end
+
+---======================================================================
+--- C_Minimap.GetTrackingFilter
+---======================================================================
+--- Arguments:
+--- @param spellIndex number
+---
+--- Returns:
+--- @return MinimapScriptTrackingFilter trackingType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetTrackingFilter
+---
+--- Usage: trackingType = C_Minimap.GetTrackingFilter(spellIndex)
+---
+-- function C_Minimap.GetTrackingFilter()
+-- end
+
+---======================================================================
+--- C_Minimap.GetTrackingInfo
+---======================================================================
+--- Arguments:
+--- @param spellIndex number
+---
+--- Returns:
+--- @return MinimapScriptTrackingInfo trackingInfo ?
+---
+--- @since Patch 11.0.0 (2024-07-23): Returns a structured table.
+The old signature was name, textureFileID, active, type, subType, spellID = C_Minimap.GetTrackingInfo(spellIndex)
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetTrackingInfo
+---
+--- Usage: trackingInfo = C_Minimap.GetTrackingInfo(spellIndex)
+---
+-- function C_Minimap.GetTrackingInfo()
+-- end
+
+---======================================================================
+--- C_Minimap.GetUiMapID
+---======================================================================
+--- Returns:
+--- @return number uiMapID ? : UiMapID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetUiMapID
+---
+--- Usage: uiMapID = C_Minimap.GetUiMapID()
+---
+-- function C_Minimap.GetUiMapID()
+-- end
+
+---======================================================================
+--- C_Minimap.GetViewRadius
+---======================================================================
+--- Returns:
+--- @return number yards
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.GetViewRadius
+---
+--- Usage: yards = C_Minimap.GetViewRadius()
+---
+-- function C_Minimap.GetViewRadius()
+-- end
+
+---======================================================================
+--- C_Minimap.IsFilteredOut
+---======================================================================
+--- Arguments:
+--- @param filterType Enum.MinimapTrackingFilter
+---
+--- Returns:
+--- @return boolean isFiltered
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsFilteredOut
+---
+--- Usage: isFiltered = C_Minimap.IsFilteredOut(filterType)
+---
+-- function C_Minimap.IsFilteredOut()
+-- end
+
+---======================================================================
+--- C_Minimap.IsInsideQuestBlob
+---======================================================================
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return boolean isInside
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsInsideQuestBlob
+---
+--- Usage: isInside = C_Minimap.IsInsideQuestBlob(questID)
+---
+-- function C_Minimap.IsInsideQuestBlob()
+-- end
+
+---======================================================================
+--- C_Minimap.IsRotateMinimapIgnored
+---======================================================================
+--- Returns:
+--- @return boolean isIgnored
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsRotateMinimapIgnored
+---
+--- Usage: isIgnored = C_Minimap.IsRotateMinimapIgnored()
+---
+-- function C_Minimap.IsRotateMinimapIgnored()
+-- end
+
+---======================================================================
+--- C_Minimap.IsTrackingAccountCompletedQuests
+---======================================================================
+--- Returns:
+--- @return boolean IsTrackingAccountCompletedQuests
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsTrackingAccountCompletedQuests
+---
+--- Usage: IsTrackingAccountCompletedQuests = C_Minimap.IsTrackingAccountCompletedQuests()
+---
+-- function C_Minimap.IsTrackingAccountCompletedQuests()
+-- end
+
+---======================================================================
+--- C_Minimap.IsTrackingBattlePets
+---======================================================================
+--- Returns:
+--- @return boolean isTrackingBattlePets
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsTrackingBattlePets
+---
+--- Usage: isTrackingBattlePets = C_Minimap.IsTrackingBattlePets()
+---
+-- function C_Minimap.IsTrackingBattlePets()
+-- end
+
+---======================================================================
+--- C_Minimap.IsTrackingHiddenQuests
+---======================================================================
+--- Returns:
+--- @return boolean isTrackingHiddenQuests
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.IsTrackingHiddenQuests
+---
+--- Usage: isTrackingHiddenQuests = C_Minimap.IsTrackingHiddenQuests()
+---
+-- function C_Minimap.IsTrackingHiddenQuests()
+-- end
+
+---======================================================================
+--- C_Minimap.SetDrawGroundTextures
+---======================================================================
+--- Arguments:
+--- @param draw boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.SetDrawGroundTextures
+---
+--- Usage: C_Minimap.SetDrawGroundTextures(draw)
+---
+-- function C_Minimap.SetDrawGroundTextures()
+-- end
+
+---======================================================================
+--- C_Minimap.SetIgnoreRotateMinimap
+---======================================================================
+--- Arguments:
+--- @param ignore boolean
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.SetIgnoreRotateMinimap
+---
+--- Usage: C_Minimap.SetIgnoreRotateMinimap(ignore)
+---
+-- function C_Minimap.SetIgnoreRotateMinimap()
+-- end
+
+---======================================================================
+--- C_Minimap.SetMinimapInsetInfo
+---======================================================================
+--- Arguments:
+--- @param minAngle number
+--- @param maxAngle number
+--- @param scalar number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.SetMinimapInsetInfo
+---
+--- Usage: C_Minimap.SetMinimapInsetInfo(minAngle, maxAngle, scalar)
+---
+-- function C_Minimap.SetMinimapInsetInfo()
+-- end
+
+---======================================================================
+--- C_Minimap.SetTracking
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param on boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.SetTracking
+---
+--- Usage: C_Minimap.SetTracking(index, on)
+---
+-- function C_Minimap.SetTracking()
+-- end
+
+---======================================================================
+--- C_Minimap.ShouldUseHybridMinimap
+---======================================================================
+--- Returns:
+--- @return boolean shouldUse
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Minimap.ShouldUseHybridMinimap
+---
+--- Usage: shouldUse = C_Minimap.ShouldUseHybridMinimap()
+---
+-- function C_Minimap.ShouldUseHybridMinimap()
+-- end

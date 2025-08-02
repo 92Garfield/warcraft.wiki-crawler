@@ -1,0 +1,1471 @@
+--[=[
+-- C_Calendar API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 90
+--]=]
+
+--- @class C_Calendar
+--- C_Calendar namespace contains 90 functions
+local C_Calendar = {}
+
+--[=[
+-- C_Calendar Functions:
+-- - C_Calendar.AddEvent
+-- - C_Calendar.AreNamesReady
+-- - C_Calendar.CanAddEvent
+-- - C_Calendar.CanSendInvite
+-- - C_Calendar.CloseEvent
+-- - C_Calendar.ContextMenuEventCanComplain
+-- - C_Calendar.ContextMenuEventCanEdit
+-- - C_Calendar.ContextMenuEventCanRemove
+-- - C_Calendar.ContextMenuEventClipboard
+-- - C_Calendar.ContextMenuEventCopy
+-- - C_Calendar.ContextMenuEventGetCalendarType
+-- - C_Calendar.ContextMenuEventPaste
+-- - C_Calendar.ContextMenuEventRemove
+-- - C_Calendar.ContextMenuEventSignUp
+-- - C_Calendar.ContextMenuGetEventIndex
+-- - C_Calendar.ContextMenuInviteAvailable
+-- - C_Calendar.ContextMenuInviteDecline
+-- - C_Calendar.ContextMenuInviteRemove
+-- - C_Calendar.ContextMenuInviteTentative
+-- - C_Calendar.ContextMenuSelectEvent
+-- - C_Calendar.CreateCommunitySignUpEvent
+-- - C_Calendar.CreateGuildAnnouncementEvent
+-- - C_Calendar.CreateGuildSignUpEvent
+-- - C_Calendar.CreatePlayerEvent
+-- - C_Calendar.EventAvailable
+-- - C_Calendar.EventCanEdit
+-- - C_Calendar.EventClearAutoApprove
+-- - C_Calendar.EventClearLocked
+-- - C_Calendar.EventClearModerator
+-- - C_Calendar.EventDecline
+-- - C_Calendar.EventGetCalendarType
+-- - C_Calendar.EventGetClubId
+-- - C_Calendar.EventGetInvite
+-- - C_Calendar.EventGetInviteResponseTime
+-- - C_Calendar.EventGetInviteSortCriterion
+-- - C_Calendar.EventGetSelectedInvite
+-- - C_Calendar.EventGetStatusOptions
+-- - C_Calendar.EventGetTextures
+-- - C_Calendar.EventGetTypes
+-- - C_Calendar.EventGetTypesDisplayOrdered
+-- - C_Calendar.EventHasPendingInvite
+-- - C_Calendar.EventHaveSettingsChanged
+-- - C_Calendar.EventInvite
+-- - C_Calendar.EventRemoveInvite
+-- - C_Calendar.EventRemoveInviteByGuid
+-- - C_Calendar.EventSelectInvite
+-- - C_Calendar.EventSetAutoApprove
+-- - C_Calendar.EventSetClubId
+-- - C_Calendar.EventSetDate
+-- - C_Calendar.EventSetDescription
+-- - C_Calendar.EventSetInviteStatus
+-- - C_Calendar.EventSetLocked
+-- - C_Calendar.EventSetModerator
+-- - C_Calendar.EventSetTextureID
+-- - C_Calendar.EventSetTime
+-- - C_Calendar.EventSetTitle
+-- - C_Calendar.EventSetType
+-- - C_Calendar.EventSignUp
+-- - C_Calendar.EventSortInvites
+-- - C_Calendar.EventTentative
+-- - C_Calendar.GetClubCalendarEvents
+-- - C_Calendar.GetDayEvent
+-- - C_Calendar.GetDefaultGuildFilter
+-- - C_Calendar.GetEventIndex
+-- - C_Calendar.GetEventIndexInfo
+-- - C_Calendar.GetEventInfo
+-- - C_Calendar.GetFirstPendingInvite
+-- - C_Calendar.GetGuildEventInfo
+-- - C_Calendar.GetGuildEventSelectionInfo
+-- - C_Calendar.GetHolidayInfo
+-- - C_Calendar.GetMaxCreateDate
+-- - C_Calendar.GetMinDate
+-- - C_Calendar.GetMonthInfo
+-- - C_Calendar.GetNextClubId
+-- - C_Calendar.GetNumDayEvents
+-- - C_Calendar.GetNumGuildEvents
+-- - C_Calendar.GetNumInvites
+-- - C_Calendar.GetNumPendingInvites
+-- - C_Calendar.GetRaidInfo
+-- - C_Calendar.IsActionPending
+-- - C_Calendar.IsEventOpen
+-- - C_Calendar.MassInviteCommunity
+-- - C_Calendar.MassInviteGuild
+-- - C_Calendar.OpenCalendar
+-- - C_Calendar.OpenEvent
+-- - C_Calendar.RemoveEvent
+-- - C_Calendar.SetAbsMonth
+-- - C_Calendar.SetMonth
+-- - C_Calendar.SetNextClubId
+-- - C_Calendar.UpdateEvent
+--]=]
+
+---======================================================================
+--- C_Calendar.AddEvent
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.#nofreetrial - This is not available to Free Trial / non-subscriber accounts.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.AddEvent.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.AddEvent
+---
+--- Usage: C_Calendar.AddEvent()
+---
+--- Examples:
+--- Example 1:
+---   C_Calendar.CreatePlayerEvent()
+---   
+---   local d = C_DateAndTime.GetCurrentCalendarTime()
+---   C_Calendar.EventSetDate(d.month, d.monthDay+1, d.year)
+---   C_Calendar.EventSetTime(d.hour, d.minute)
+---   C_Calendar.EventSetTitle("hello")
+---   
+---   C_Calendar.AddEvent()
+---
+-- function C_Calendar.AddEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.AreNamesReady
+---======================================================================
+--- Returns:
+--- @return boolean ready
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.AreNamesReady
+---
+--- Usage: ready = C_Calendar.AreNamesReady()
+---
+-- function C_Calendar.AreNamesReady()
+-- end
+
+---======================================================================
+--- C_Calendar.CanAddEvent
+---======================================================================
+--- Returns whether the player can add an event.
+---
+--- Returns:
+--- @return boolean canAddEvent
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CanAddEvent
+---
+--- Usage: canAddEvent = C_Calendar.CanAddEvent()
+---
+-- function C_Calendar.CanAddEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.CanSendInvite
+---======================================================================
+--- Returns whether the player can send invites.
+---
+--- Returns:
+--- @return boolean canSendInvite
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CanSendInvite
+---
+--- Usage: canSendInvite = C_Calendar.CanSendInvite()
+---
+-- function C_Calendar.CanSendInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.CloseEvent
+---======================================================================
+--- Closes the selected event without saving it.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CloseEvent
+---
+--- Usage: C_Calendar.CloseEvent()
+---
+-- function C_Calendar.CloseEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventCanComplain
+---======================================================================
+--- Returns whether the player can report the event as spam.
+---
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+--- @param eventIndex number
+---
+--- Returns:
+--- @return boolean canComplain
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanComplain
+---
+--- Usage: canComplain = C_Calendar.ContextMenuEventCanComplain(offsetMonths, monthDay, eventIndex)
+---
+-- function C_Calendar.ContextMenuEventCanComplain()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventCanEdit
+---======================================================================
+--- Returns whether the player can edit the event.
+---
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+--- @param eventIndex number
+---
+--- Returns:
+--- @return boolean canEdit
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanEdit
+---
+--- Usage: canEdit = C_Calendar.ContextMenuEventCanEdit(offsetMonths, monthDay, eventIndex)
+---
+-- function C_Calendar.ContextMenuEventCanEdit()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventCanRemove
+---======================================================================
+--- Returns whether the player can remove the event.
+---
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+--- @param eventIndex number
+---
+--- Returns:
+--- @return boolean canRemove
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCanRemove
+---
+--- Usage: canRemove = C_Calendar.ContextMenuEventCanRemove(offsetMonths, monthDay, eventIndex)
+---
+-- function C_Calendar.ContextMenuEventCanRemove()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventClipboard
+---======================================================================
+--- Returns:
+--- @return boolean exists
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventClipboard
+---
+--- Usage: exists = C_Calendar.ContextMenuEventClipboard()
+---
+-- function C_Calendar.ContextMenuEventClipboard()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventCopy
+---======================================================================
+--- Copies the event to the clipboard.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventCopy
+---
+--- Usage: C_Calendar.ContextMenuEventCopy()
+---
+-- function C_Calendar.ContextMenuEventCopy()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventGetCalendarType
+---======================================================================
+--- Returns:
+--- @return string calendarType ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventGetCalendarType
+---
+--- Usage: calendarType = C_Calendar.ContextMenuEventGetCalendarType()
+---
+-- function C_Calendar.ContextMenuEventGetCalendarType()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventPaste
+---======================================================================
+--- Pastes the clipboard event to the date.
+---
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventPaste
+---
+--- Usage: C_Calendar.ContextMenuEventPaste(offsetMonths, monthDay)
+---
+-- function C_Calendar.ContextMenuEventPaste()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventRemove
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventRemove
+---
+--- Usage: C_Calendar.ContextMenuEventRemove()
+---
+-- function C_Calendar.ContextMenuEventRemove()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuEventSignUp
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuEventSignUp
+---
+--- Usage: C_Calendar.ContextMenuEventSignUp()
+---
+-- function C_Calendar.ContextMenuEventSignUp()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuGetEventIndex
+---======================================================================
+--- Returns:
+--- @return  info structure - CalendarEventIndexInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuGetEventIndex
+---
+--- Usage: info = C_Calendar.ContextMenuGetEventIndex()
+---
+-- function C_Calendar.ContextMenuGetEventIndex()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuInviteAvailable
+---======================================================================
+--- Accepts the invitation to the event.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteAvailable
+---
+--- Usage: C_Calendar.ContextMenuInviteAvailable()
+---
+-- function C_Calendar.ContextMenuInviteAvailable()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuInviteDecline
+---======================================================================
+--- Declines the invitation to the event.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteDecline
+---
+--- Usage: C_Calendar.ContextMenuInviteDecline()
+---
+-- function C_Calendar.ContextMenuInviteDecline()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuInviteRemove
+---======================================================================
+--- Removes the event from the calendar.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteRemove
+---
+--- Usage: C_Calendar.ContextMenuInviteRemove()
+---
+-- function C_Calendar.ContextMenuInviteRemove()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuInviteTentative
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuInviteTentative
+---
+--- Usage: C_Calendar.ContextMenuInviteTentative()
+---
+-- function C_Calendar.ContextMenuInviteTentative()
+-- end
+
+---======================================================================
+--- C_Calendar.ContextMenuSelectEvent
+---======================================================================
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+--- @param eventIndex number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.ContextMenuSelectEvent
+---
+--- Usage: C_Calendar.ContextMenuSelectEvent(offsetMonths, monthDay, eventIndex)
+---
+-- function C_Calendar.ContextMenuSelectEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.CreateCommunitySignUpEvent
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateCommunitySignUpEvent
+---
+--- Usage: C_Calendar.CreateCommunitySignUpEvent()
+---
+-- function C_Calendar.CreateCommunitySignUpEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.CreateGuildAnnouncementEvent
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateGuildAnnouncementEvent
+---
+--- Usage: C_Calendar.CreateGuildAnnouncementEvent()
+---
+-- function C_Calendar.CreateGuildAnnouncementEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.CreateGuildSignUpEvent
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CreateGuildSignUpEvent
+---
+--- Usage: C_Calendar.CreateGuildSignUpEvent()
+---
+-- function C_Calendar.CreateGuildSignUpEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.CreatePlayerEvent
+---======================================================================
+--- Creates a new calendar event candidate for the player.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.CreatePlayerEvent.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.CreatePlayerEvent
+---
+--- Usage: C_Calendar.CreatePlayerEvent()
+---
+-- function C_Calendar.CreatePlayerEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.EventAvailable
+---======================================================================
+--- Accepts the invitation to the currently open event.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventAvailable
+---
+--- Usage: C_Calendar.EventAvailable()
+---
+-- function C_Calendar.EventAvailable()
+-- end
+
+---======================================================================
+--- C_Calendar.EventCanEdit
+---======================================================================
+--- Returns whether the event can be edited.
+---
+--- Returns:
+--- @return boolean canEdit
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventCanEdit
+---
+--- Usage: canEdit = C_Calendar.EventCanEdit()
+---
+-- function C_Calendar.EventCanEdit()
+-- end
+
+---======================================================================
+--- C_Calendar.EventClearAutoApprove
+---======================================================================
+--- Turns off automatic confirmations.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearAutoApprove
+---
+--- Usage: C_Calendar.EventClearAutoApprove()
+---
+-- function C_Calendar.EventClearAutoApprove()
+-- end
+
+---======================================================================
+--- C_Calendar.EventClearLocked
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearLocked
+---
+--- Usage: C_Calendar.EventClearLocked()
+---
+-- function C_Calendar.EventClearLocked()
+-- end
+
+---======================================================================
+--- C_Calendar.EventClearModerator
+---======================================================================
+--- Arguments:
+--- @param inviteIndex number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventClearModerator
+---
+--- Usage: C_Calendar.EventClearModerator(inviteIndex)
+---
+-- function C_Calendar.EventClearModerator()
+-- end
+
+---======================================================================
+--- C_Calendar.EventDecline
+---======================================================================
+--- Declines the invitation to the currently open event.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventDecline
+---
+--- Usage: C_Calendar.EventDecline()
+---
+-- function C_Calendar.EventDecline()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetCalendarType
+---======================================================================
+--- Returns:
+--- @return string calendarType ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetCalendarType
+---
+--- Usage: calendarType = C_Calendar.EventGetCalendarType()
+---
+-- function C_Calendar.EventGetCalendarType()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetClubId
+---======================================================================
+--- Returns:
+--- @return string info ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetClubId
+---
+--- Usage: info = C_Calendar.EventGetClubId()
+---
+-- function C_Calendar.EventGetClubId()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetInvite
+---======================================================================
+--- Returns status information for an invitee for the currently opened event.
+---
+--- Arguments:
+--- @param eventIndex number - Ranging from 1 to C_Calendar.GetNumInvites()
+---
+--- Returns:
+--- @return CalendarEventInviteInfo info
+---
+--- @since Patch 8.2.5 (2019-09-24): Added classID, guid fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInvite
+---
+--- Usage: info = C_Calendar.EventGetInvite(eventIndex)
+---
+-- function C_Calendar.EventGetInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetInviteResponseTime
+---======================================================================
+--- Arguments:
+--- @param eventIndex number
+---
+--- Returns:
+--- @return  time Structure - CalendarTime
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInviteResponseTime
+---
+--- Usage: time = C_Calendar.EventGetInviteResponseTime(eventIndex)
+---
+-- function C_Calendar.EventGetInviteResponseTime()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetInviteSortCriterion
+---======================================================================
+--- Returns:
+--- @return string criterion
+--- @return boolean reverse
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetInviteSortCriterion
+---
+--- Usage: criterion, reverse = C_Calendar.EventGetInviteSortCriterion()
+---
+-- function C_Calendar.EventGetInviteSortCriterion()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetSelectedInvite
+---======================================================================
+--- Returns:
+--- @return number inviteIndex ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetSelectedInvite
+---
+--- Usage: inviteIndex = C_Calendar.EventGetSelectedInvite()
+---
+-- function C_Calendar.EventGetSelectedInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetStatusOptions
+---======================================================================
+--- Arguments:
+--- @param eventIndex number
+---
+--- Returns:
+--- @return CalendarEventStatusOption options []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added status field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetStatusOptions
+---
+--- Usage: options = C_Calendar.EventGetStatusOptions(eventIndex)
+---
+-- function C_Calendar.EventGetStatusOptions()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetTextures
+---======================================================================
+--- Arguments:
+--- @param eventType  enum - CalendarEventType
+---
+--- Returns:
+--- @return  textures structure - CalendarEventTextureInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTextures
+---
+--- Usage: textures = C_Calendar.EventGetTextures(eventType)
+---
+-- function C_Calendar.EventGetTextures()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetTypes
+---======================================================================
+--- Returns:
+--- @return string types [] - See also Enum.CalendarEventType
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTypes
+---
+--- Usage: types = C_Calendar.EventGetTypes()
+---
+-- function C_Calendar.EventGetTypes()
+-- end
+
+---======================================================================
+--- C_Calendar.EventGetTypesDisplayOrdered
+---======================================================================
+--- Returns:
+--- @return  infos structure - CalendarEventTypeDisplayInfo[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTypesDisplayOrdered
+---
+--- Usage: infos = C_Calendar.EventGetTypesDisplayOrdered()
+---
+-- function C_Calendar.EventGetTypesDisplayOrdered()
+-- end
+
+---======================================================================
+--- C_Calendar.EventHasPendingInvite
+---======================================================================
+--- Returns whether the player has an unanswered invitation to the currently selected event.
+---
+--- Returns:
+--- @return boolean hasPendingInvite
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventHasPendingInvite
+---
+--- Usage: hasPendingInvite = C_Calendar.EventHasPendingInvite()
+---
+-- function C_Calendar.EventHasPendingInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventHaveSettingsChanged
+---======================================================================
+--- Returns whether the currently opened event has been modified.
+---
+--- Returns:
+--- @return boolean haveSettingsChanged
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventHaveSettingsChanged
+---
+--- Usage: haveSettingsChanged = C_Calendar.EventHaveSettingsChanged()
+---
+-- function C_Calendar.EventHaveSettingsChanged()
+-- end
+
+---======================================================================
+--- C_Calendar.EventInvite
+---======================================================================
+--- Invites a player to the currently selected event.
+---
+--- Arguments:
+--- @param name string
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.EventInvite.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventInvite
+---
+--- Usage: C_Calendar.EventInvite(name)
+---
+-- function C_Calendar.EventInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventRemoveInvite
+---======================================================================
+--- Arguments:
+--- @param inviteIndex number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added C_Calendar.EventRemoveInviteByGuid()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventRemoveInvite
+---
+--- Usage: C_Calendar.EventRemoveInvite(inviteIndex)
+C_Calendar.EventRemoveInviteByGuid(guid)
+---
+-- function C_Calendar.EventRemoveInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventRemoveInviteByGuid
+---======================================================================
+--- Arguments:
+--- @param inviteIndex number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added C_Calendar.EventRemoveInviteByGuid()
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventRemoveInviteByGuid
+---
+--- Usage: C_Calendar.EventRemoveInvite(inviteIndex)
+C_Calendar.EventRemoveInviteByGuid(guid)
+---
+-- function C_Calendar.EventRemoveInviteByGuid()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSelectInvite
+---======================================================================
+--- Arguments:
+--- @param inviteIndex number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSelectInvite
+---
+--- Usage: C_Calendar.EventSelectInvite(inviteIndex)
+---
+-- function C_Calendar.EventSelectInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetAutoApprove
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetAutoApprove
+---
+--- Usage: C_Calendar.EventSetAutoApprove()
+---
+-- function C_Calendar.EventSetAutoApprove()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetClubId
+---======================================================================
+--- Arguments:
+--- @param clubId string ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetClubId
+---
+--- Usage: C_Calendar.EventSetClubId([clubId])
+---
+-- function C_Calendar.EventSetClubId()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetDate
+---======================================================================
+--- Sets the date for the currently opened event.
+---
+--- Arguments:
+--- @param month number - 2 digits [1-12].
+--- @param monthDay number - 2 digits [1-31].
+--- @param year number - 4 digits (2019).
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.EventSetDate.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetDate
+---
+--- Usage: C_Calendar.EventSetDate(month, monthDay, year)
+---
+-- function C_Calendar.EventSetDate()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetDescription
+---======================================================================
+--- Arguments:
+--- @param description string
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetDescription
+---
+--- Usage: C_Calendar.EventSetDescription(description)
+---
+-- function C_Calendar.EventSetDescription()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetInviteStatus
+---======================================================================
+--- Sets the invitation status of a player to the current event.
+---
+--- Arguments:
+--- @param eventIndex number
+--- @param status Enum.CalendarStatus
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetInviteStatus
+---
+--- Usage: C_Calendar.EventSetInviteStatus(eventIndex, status)
+---
+-- function C_Calendar.EventSetInviteStatus()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetLocked
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetLocked
+---
+--- Usage: C_Calendar.EventSetLocked()
+---
+-- function C_Calendar.EventSetLocked()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetModerator
+---======================================================================
+--- Arguments:
+--- @param inviteIndex number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetModerator
+---
+--- Usage: C_Calendar.EventSetModerator(inviteIndex)
+---
+-- function C_Calendar.EventSetModerator()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetTextureID
+---======================================================================
+--- Arguments:
+--- @param textureIndex number - NOT a FileDataID, but an index relating to the returned table of API_C_Calendar.EventGetTextures. You cannot set a custom texture, or even one outside the chosen event type. Therefore, this function currently only has an effect when using the types Raid and Dungeon.
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTextureID
+---
+--- Usage: C_Calendar.EventSetTextureID(textureIndex)
+---
+-- function C_Calendar.EventSetTextureID()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetTime
+---======================================================================
+--- Sets the time for the currently opened event.
+---
+--- Arguments:
+--- @param hour number
+--- @param minute number
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.EventSetTime.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTime
+---
+--- Usage: C_Calendar.EventSetTime(hour, minute)
+---
+-- function C_Calendar.EventSetTime()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetTitle
+---======================================================================
+--- Sets the title for the currently opened event.
+---
+--- Arguments:
+--- @param title string
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.EventSetTitle.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetTitle
+---
+--- Usage: C_Calendar.EventSetTitle(title)
+---
+-- function C_Calendar.EventSetTitle()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSetType
+---======================================================================
+--- Sets the event type for the current calendar event.
+---
+--- Arguments:
+--- @param typeIndex  enum - CalendarEventType
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.EventSetType.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetType
+---
+--- Usage: C_Calendar.EventSetType(typeIndex)
+---
+-- function C_Calendar.EventSetType()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSignUp
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSignUp
+---
+--- Usage: C_Calendar.EventSignUp()
+---
+-- function C_Calendar.EventSignUp()
+-- end
+
+---======================================================================
+--- C_Calendar.EventSortInvites
+---======================================================================
+--- Arguments:
+--- @param criterion string
+--- @param reverse boolean
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSortInvites
+---
+--- Usage: C_Calendar.EventSortInvites(criterion, reverse)
+---
+-- function C_Calendar.EventSortInvites()
+-- end
+
+---======================================================================
+--- C_Calendar.EventTentative
+---======================================================================
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.EventTentative
+---
+--- Usage: C_Calendar.EventTentative()
+---
+-- function C_Calendar.EventTentative()
+-- end
+
+---======================================================================
+--- C_Calendar.GetClubCalendarEvents
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param startTime CalendarTime
+--- @param endTime CalendarTime
+---
+--- Returns:
+--- @return CalendarDayEvent events []
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetClubCalendarEvents
+---
+--- Usage: events = C_Calendar.GetClubCalendarEvents(clubId, startTime, endTime)
+---
+-- function C_Calendar.GetClubCalendarEvents()
+-- end
+
+---======================================================================
+--- C_Calendar.GetDayEvent
+---======================================================================
+--- Retrieve information about the specified calendar event.
+---
+--- Arguments:
+--- @param monthOffset number - the number of months to offset from today.
+--- @param monthDay number - the desired day of the month the event exists on.
+--- @param index number -  the index of the desired event, from 1 through C_Calendar.GetNumDayEvents.
+---
+--- Returns:
+--- @return CalendarDayEvent event
+---
+--- @since Patch 7.2.0 (2017-03-28): Returns structured data and moved to C_Calendar.GetDayEvent()[3]
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetDayEvent
+---
+--- Usage: event = C_Calendar.GetDayEvent(monthOffset, monthDay, index)
+---
+-- function C_Calendar.GetDayEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.GetDefaultGuildFilter
+---======================================================================
+--- Returns:
+--- @return  info structure - CalendarGuildFilterInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetDefaultGuildFilter
+---
+--- Usage: info = C_Calendar.GetDefaultGuildFilter()
+---
+-- function C_Calendar.GetDefaultGuildFilter()
+-- end
+
+---======================================================================
+--- C_Calendar.GetEventIndex
+---======================================================================
+--- Returns:
+--- @return  info structure - CalendarEventIndexInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventIndex
+---
+--- Usage: info = C_Calendar.GetEventIndex()
+---
+-- function C_Calendar.GetEventIndex()
+-- end
+
+---======================================================================
+--- C_Calendar.GetEventIndexInfo
+---======================================================================
+--- Arguments:
+--- @param eventID string
+--- @param monthOffset number ?
+--- @param monthDay number ?
+---
+--- Returns:
+--- @return  eventIndexInfo structure - CalendarEventIndexInfo (nilable)
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventIndexInfo
+---
+--- Usage: eventIndexInfo = C_Calendar.GetEventIndexInfo(eventID [, monthOffset, monthDay])
+---
+-- function C_Calendar.GetEventIndexInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetEventInfo
+---======================================================================
+--- Returns info for a calendar event.
+---
+--- Returns:
+--- @return CalendarEventInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetEventInfo
+---
+--- Usage: info = C_Calendar.GetEventInfo()
+---
+-- function C_Calendar.GetEventInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetFirstPendingInvite
+---======================================================================
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+---
+--- Returns:
+--- @return number firstPendingInvite ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetFirstPendingInvite
+---
+--- Usage: firstPendingInvite = C_Calendar.GetFirstPendingInvite(offsetMonths, monthDay)
+---
+-- function C_Calendar.GetFirstPendingInvite()
+-- end
+
+---======================================================================
+--- C_Calendar.GetGuildEventInfo
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return CalendarGuildEventInfo info
+---
+--- @since Patch 8.1.5 (2019-03-12): Added eventID, year, inviteStatus, clubID fields.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetGuildEventInfo
+---
+--- Usage: info = C_Calendar.GetGuildEventInfo(index)
+---
+-- function C_Calendar.GetGuildEventInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetGuildEventSelectionInfo
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return  info structure - CalendarEventIndexInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetGuildEventSelectionInfo
+---
+--- Usage: info = C_Calendar.GetGuildEventSelectionInfo(index)
+---
+-- function C_Calendar.GetGuildEventSelectionInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetHolidayInfo
+---======================================================================
+--- Returns seasonal holiday info.
+---
+--- Arguments:
+--- @param monthOffset number - The offset from the current month (only accepts 0 or 1).
+--- @param monthDay number - The day of the month.
+--- @param index number
+---
+--- Returns:
+--- @return CalendarHolidayInfo event
+---
+--- @since Patch 7.2.0 (2017-03-28): Returns structured data and moved to C_Calendar.GetHolidayInfo()[1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetHolidayInfo
+---
+--- Usage: event = C_Calendar.GetHolidayInfo(monthOffset, monthDay, index)
+---
+-- function C_Calendar.GetHolidayInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetMaxCreateDate
+---======================================================================
+--- Returns the last day supported by the Calendar API.
+---
+--- Returns:
+--- @return  maxCreateDate structure - CalendarTime
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMaxCreateDate
+---
+--- Usage: maxCreateDate = C_Calendar.GetMaxCreateDate()
+---
+-- function C_Calendar.GetMaxCreateDate()
+-- end
+
+---======================================================================
+--- C_Calendar.GetMinDate
+---======================================================================
+--- Returns the first day supported by the Calendar API.
+---
+--- Returns:
+--- @return  minDate structure - CalendarTime
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.GetMinDate.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMinDate
+---
+--- Usage: minDate = C_Calendar.GetMinDate()
+---
+-- function C_Calendar.GetMinDate()
+-- end
+
+---======================================================================
+--- C_Calendar.GetMonthInfo
+---======================================================================
+--- Returns information about the calendar month by offset.
+---
+--- Arguments:
+--- @param offsetMonths number ? = 0 - Offset in months from the currently selected Calendar month, positive numbers indicating future months.
+---
+--- Returns:
+--- @return  monthInfo structure - CalendarMonthInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.GetMonthInfo.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetMonthInfo
+---
+--- Usage: monthInfo = C_Calendar.GetMonthInfo([offsetMonths])
+---
+-- function C_Calendar.GetMonthInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.GetNextClubId
+---======================================================================
+--- Returns:
+--- @return string clubId ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNextClubId
+---
+--- Usage: clubId = C_Calendar.GetNextClubId()
+---
+-- function C_Calendar.GetNextClubId()
+-- end
+
+---======================================================================
+--- C_Calendar.GetNumDayEvents
+---======================================================================
+--- Returns the number of events for a given day/month offset.
+---
+--- Arguments:
+--- @param offsetMonths number - The number of months to advance from today.
+--- @param monthDay number - The day of the given month.
+---
+--- Returns:
+--- @return number numDayEvents - The number of events on the day in question.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.GetNumDayEvents.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumDayEvents
+---
+--- Usage: numDayEvents = C_Calendar.GetNumDayEvents(offsetMonths, monthDay)
+---
+-- function C_Calendar.GetNumDayEvents()
+-- end
+
+---======================================================================
+--- C_Calendar.GetNumGuildEvents
+---======================================================================
+--- Returns:
+--- @return number numGuildEvents
+---
+--- @since Patch 8.0.1 (2018-07-17): Added. Possible the same functionality as GetNumGuildEvents.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumGuildEvents
+---
+--- Usage: numGuildEvents = C_Calendar.GetNumGuildEvents()
+---
+-- function C_Calendar.GetNumGuildEvents()
+-- end
+
+---======================================================================
+--- C_Calendar.GetNumInvites
+---======================================================================
+--- Returns the number of invitees for the currently opened event.
+---
+--- Returns:
+--- @return number num
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.GetNumInvites.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumInvites
+---
+--- Usage: num = C_Calendar.GetNumInvites()
+---
+-- function C_Calendar.GetNumInvites()
+-- end
+
+---======================================================================
+--- C_Calendar.GetNumPendingInvites
+---======================================================================
+--- Returns:
+--- @return number num
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetNumPendingInvites
+---
+--- Usage: num = C_Calendar.GetNumPendingInvites()
+---
+-- function C_Calendar.GetNumPendingInvites()
+-- end
+
+---======================================================================
+--- C_Calendar.GetRaidInfo
+---======================================================================
+--- Arguments:
+--- @param offsetMonths number
+--- @param monthDay number
+--- @param eventIndex number
+---
+--- Returns:
+--- @return  info structure - CalendarRaidInfo
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.GetRaidInfo
+---
+--- Usage: info = C_Calendar.GetRaidInfo(offsetMonths, monthDay, eventIndex)
+---
+-- function C_Calendar.GetRaidInfo()
+-- end
+
+---======================================================================
+--- C_Calendar.IsActionPending
+---======================================================================
+--- Returns:
+--- @return boolean actionPending
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.IsActionPending
+---
+--- Usage: actionPending = C_Calendar.IsActionPending()
+---
+-- function C_Calendar.IsActionPending()
+-- end
+
+---======================================================================
+--- C_Calendar.IsEventOpen
+---======================================================================
+--- Returns:
+--- @return boolean isOpen
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.IsEventOpen
+---
+--- Usage: isOpen = C_Calendar.IsEventOpen()
+---
+-- function C_Calendar.IsEventOpen()
+-- end
+
+---======================================================================
+--- C_Calendar.MassInviteCommunity
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param minLevel number
+--- @param maxLevel number
+--- @param maxRankOrder number ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added clubId argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.MassInviteCommunity
+---
+--- Usage: C_Calendar.MassInviteCommunity(clubId, minLevel, maxLevel [, maxRankOrder])
+---
+-- function C_Calendar.MassInviteCommunity()
+-- end
+
+---======================================================================
+--- C_Calendar.MassInviteGuild
+---======================================================================
+--- Arguments:
+--- @param minLevel number
+--- @param maxLevel number
+--- @param maxRankOrder number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.MassInviteGuild
+---
+--- Usage: C_Calendar.MassInviteGuild(minLevel, maxLevel, maxRankOrder)
+---
+-- function C_Calendar.MassInviteGuild()
+-- end
+
+---======================================================================
+--- C_Calendar.OpenCalendar
+---======================================================================
+--- Requests calendar information from the server. Does not open the calendar frame.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.OpenCalendar.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.OpenCalendar
+---
+--- Usage: C_Calendar.OpenCalendar()
+---
+-- function C_Calendar.OpenCalendar()
+-- end
+
+---======================================================================
+--- C_Calendar.OpenEvent
+---======================================================================
+--- Establishes an event for future calendar API calls
+---
+--- Arguments:
+--- @param offsetMonths number - The number of months to offset from today.
+--- @param monthDay number - The day of the month on which the desired event is scheduled (1 - 31).
+--- @param index number - Ranging from 1 through C_Calendar.GetNumDayEvents(offsetMonths, monthDay).
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.1.5 (2019-03-12): Added success return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.OpenEvent
+---
+--- Usage: success = C_Calendar.OpenEvent(offsetMonths, monthDay, index)
+---
+-- function C_Calendar.OpenEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.RemoveEvent
+---======================================================================
+--- Removes the selected event from the calendar (invitees only).
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.RemoveEvent
+---
+--- Usage: C_Calendar.RemoveEvent()
+---
+-- function C_Calendar.RemoveEvent()
+-- end
+
+---======================================================================
+--- C_Calendar.SetAbsMonth
+---======================================================================
+--- Sets the reference month and year for functions which use a month offset.
+---
+--- Arguments:
+--- @param month number
+--- @param year number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.SetAbsMonth
+---
+--- Usage: C_Calendar.SetAbsMonth(month, year)
+---
+-- function C_Calendar.SetAbsMonth()
+-- end
+
+---======================================================================
+--- C_Calendar.SetMonth
+---======================================================================
+--- Arguments:
+--- @param offsetMonths number
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.SetMonth
+---
+--- Usage: C_Calendar.SetMonth(offsetMonths)
+---
+-- function C_Calendar.SetMonth()
+-- end
+
+---======================================================================
+--- C_Calendar.SetNextClubId
+---======================================================================
+--- Arguments:
+--- @param clubId string ?
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.SetNextClubId
+---
+--- Usage: C_Calendar.SetNextClubId([clubId])
+---
+-- function C_Calendar.SetNextClubId()
+-- end
+
+---======================================================================
+--- C_Calendar.UpdateEvent
+---======================================================================
+--- #hwevent - This requires a hardware event i.e. keyboard/mouse input.
+---
+--- @since Patch 8.0.1 (2018-07-17): Moved to C_Calendar.UpdateEvent.
+--- @see https://warcraft.wiki.gg/wiki/API_C_Calendar.UpdateEvent
+---
+--- Usage: C_Calendar.UpdateEvent()
+---
+-- function C_Calendar.UpdateEvent()
+-- end

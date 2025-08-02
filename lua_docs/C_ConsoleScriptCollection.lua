@@ -1,0 +1,82 @@
+--[=[
+-- C_ConsoleScriptCollection API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 4
+--]=]
+
+--- @class C_ConsoleScriptCollection
+--- C_ConsoleScriptCollection namespace contains 4 functions
+local C_ConsoleScriptCollection = {}
+
+--[=[
+-- C_ConsoleScriptCollection Functions:
+-- - C_ConsoleScriptCollection.GetCollectionDataByID
+-- - C_ConsoleScriptCollection.GetCollectionDataByTag
+-- - C_ConsoleScriptCollection.GetElements
+-- - C_ConsoleScriptCollection.GetScriptData
+--]=]
+
+---======================================================================
+--- C_ConsoleScriptCollection.GetCollectionDataByID
+---======================================================================
+--- Arguments:
+--- @param collectionID number
+---
+--- Returns:
+--- @return ConsoleScriptCollectionData data ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByID
+---
+--- Usage: data = C_ConsoleScriptCollection.GetCollectionDataByID(collectionID)
+---
+-- function C_ConsoleScriptCollection.GetCollectionDataByID()
+-- end
+
+---======================================================================
+--- C_ConsoleScriptCollection.GetCollectionDataByTag
+---======================================================================
+--- Arguments:
+--- @param collectionTag string
+---
+--- Returns:
+--- @return ConsoleScriptCollectionData data ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByTag
+---
+--- Usage: data = C_ConsoleScriptCollection.GetCollectionDataByTag(collectionTag)
+---
+-- function C_ConsoleScriptCollection.GetCollectionDataByTag()
+-- end
+
+---======================================================================
+--- C_ConsoleScriptCollection.GetElements
+---======================================================================
+--- Arguments:
+--- @param collectionID number
+---
+--- Returns:
+--- @return ConsoleScriptCollectionElementData elementIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetElements
+---
+--- Usage: elementIDs = C_ConsoleScriptCollection.GetElements(collectionID)
+---
+-- function C_ConsoleScriptCollection.GetElements()
+-- end
+
+---======================================================================
+--- C_ConsoleScriptCollection.GetScriptData
+---======================================================================
+--- Arguments:
+--- @param consoleScriptID number
+---
+--- Returns:
+--- @return ConsoleScriptData data
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetScriptData
+---
+--- Usage: data = C_ConsoleScriptCollection.GetScriptData(consoleScriptID)
+---
+-- function C_ConsoleScriptCollection.GetScriptData()
+-- end

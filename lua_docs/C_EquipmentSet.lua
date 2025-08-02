@@ -1,0 +1,429 @@
+--[=[
+-- C_EquipmentSet API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 23
+--]=]
+
+--- @class C_EquipmentSet
+--- C_EquipmentSet namespace contains 23 functions
+local C_EquipmentSet = {}
+
+--[=[
+-- C_EquipmentSet Functions:
+-- - C_EquipmentSet.AssignSpecToEquipmentSet
+-- - C_EquipmentSet.CanUseEquipmentSets
+-- - C_EquipmentSet.ClearIgnoredSlotsForSave
+-- - C_EquipmentSet.CreateEquipmentSet
+-- - C_EquipmentSet.DeleteEquipmentSet
+-- - C_EquipmentSet.EquipmentSetContainsLockedItems
+-- - C_EquipmentSet.GetEquipmentSetAssignedSpec
+-- - C_EquipmentSet.GetEquipmentSetForSpec
+-- - C_EquipmentSet.GetEquipmentSetID
+-- - C_EquipmentSet.GetEquipmentSetIDs
+-- - C_EquipmentSet.GetEquipmentSetInfo
+-- - C_EquipmentSet.GetIgnoredSlots
+-- - C_EquipmentSet.GetItemIDs
+-- - C_EquipmentSet.GetItemLocations
+-- - C_EquipmentSet.GetNumEquipmentSets
+-- - C_EquipmentSet.IgnoreSlotForSave
+-- - C_EquipmentSet.IsSlotIgnoredForSave
+-- - C_EquipmentSet.ModifyEquipmentSet
+-- - C_EquipmentSet.PickupEquipmentSet
+-- - C_EquipmentSet.SaveEquipmentSet
+-- - C_EquipmentSet.UnassignEquipmentSetSpec
+-- - C_EquipmentSet.UnignoreSlotForSave
+-- - C_EquipmentSet.UseEquipmentSet
+--]=]
+
+---======================================================================
+--- C_EquipmentSet.AssignSpecToEquipmentSet
+---======================================================================
+--- Assigns an equipment set to a specialization.
+---
+--- Arguments:
+--- @param equipmentSetID number
+--- @param specIndex number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.AssignSpecToEquipmentSet
+---
+--- Usage: C_EquipmentSet.AssignSpecToEquipmentSet(equipmentSetID, specIndex)
+---
+-- function C_EquipmentSet.AssignSpecToEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.CanUseEquipmentSets
+---======================================================================
+--- Returns whether any equipment sets can be used.
+---
+--- Returns:
+--- @return boolean canUseEquipmentSets
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.CanUseEquipmentSets
+---
+--- Usage: canUseEquipmentSets = C_EquipmentSet.CanUseEquipmentSets()
+---
+-- function C_EquipmentSet.CanUseEquipmentSets()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.ClearIgnoredSlotsForSave
+---======================================================================
+--- Clears ignored slots for saving.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.ClearIgnoredSlotsForSave
+---
+--- Usage: C_EquipmentSet.ClearIgnoredSlotsForSave()
+---
+-- function C_EquipmentSet.ClearIgnoredSlotsForSave()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.CreateEquipmentSet
+---======================================================================
+--- Creates an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetName string
+--- @param icon string ?
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.CreateEquipmentSet
+---
+--- Usage: C_EquipmentSet.CreateEquipmentSet(equipmentSetName [, icon])
+---
+-- function C_EquipmentSet.CreateEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.DeleteEquipmentSet
+---======================================================================
+--- Deletes an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.DeleteEquipmentSet
+---
+--- Usage: C_EquipmentSet.DeleteEquipmentSet(equipmentSetID)
+---
+-- function C_EquipmentSet.DeleteEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.EquipmentSetContainsLockedItems
+---======================================================================
+--- Returns whether an equipment set has locked items
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- Returns:
+--- @return boolean hasLockedItems
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.EquipmentSetContainsLockedItems
+---
+--- Usage: hasLockedItems = C_EquipmentSet.EquipmentSetContainsLockedItems(equipmentSetID)
+---
+-- function C_EquipmentSet.EquipmentSetContainsLockedItems()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetEquipmentSetAssignedSpec
+---======================================================================
+--- Returns the specialization assigned to an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- Returns:
+--- @return number specIndex
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetEquipmentSetAssignedSpec
+---
+--- Usage: specIndex = C_EquipmentSet.GetEquipmentSetAssignedSpec(equipmentSetID)
+---
+-- function C_EquipmentSet.GetEquipmentSetAssignedSpec()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetEquipmentSetForSpec
+---======================================================================
+--- Returns the equipment set currently assigned to a specific specialization.
+---
+--- Arguments:
+--- @param specIndex number
+---
+--- Returns:
+--- @return number equipmentSetID
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetEquipmentSetForSpec
+---
+--- Usage: equipmentSetID = C_EquipmentSet.GetEquipmentSetForSpec(specIndex)
+---
+-- function C_EquipmentSet.GetEquipmentSetForSpec()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetEquipmentSetID
+---======================================================================
+--- Returns the set ID of an equipment set with the specified name.
+---
+--- Arguments:
+--- @param equipmentSetName string - equipment set name to query
+---
+--- Returns:
+--- @return number equipmentSetID - set ID of an equipment set with the specified name, or nil if no sets with the specified name are currently saved.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetEquipmentSetID
+---
+--- Usage: equipmentSetID = C_EquipmentSet.GetEquipmentSetID(equipmentSetName)
+---
+-- function C_EquipmentSet.GetEquipmentSetID()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetEquipmentSetIDs
+---======================================================================
+--- Returns an array containing all currently saved equipment set IDs.
+---
+--- Returns:
+--- @return number equipmentSetIDs [] - An array of equipment set IDs of the currently available equipment sets.
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetEquipmentSetIDs
+---
+--- Usage: equipmentSetIDs = C_EquipmentSet.GetEquipmentSetIDs()
+---
+-- function C_EquipmentSet.GetEquipmentSetIDs()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetEquipmentSetInfo
+---======================================================================
+--- Returns information about a saved equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number - equipment set ID to query information about.
+---
+--- Returns:
+--- @return string name - name of the equipment set.
+--- @return number iconFileID - icon texture selected for the equipment set.
+--- @return number setID - equipment set ID.
+--- @return boolean isEquipped - true if all non-ignored slots in the set are currently equipped.
+--- @return number numItems - number of items included in the set.
+--- @return number numEquipped - number of items in the set currently equipped.
+--- @return number numInInventory - number of items in the set currently in the player's bags/bank, if bank is available.
+--- @return number numLost - number of items in the set that are not currently available to the player.
+--- @return number numIgnored - number of inventory slots ignored by the set.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetEquipmentSetInfo
+---
+--- Usage: name, iconFileID, setID, isEquipped, numItems, numEquipped, numInInventory, numLost, numIgnored = C_EquipmentSet.GetEquipmentSetInfo(equipmentSetID)
+---
+-- function C_EquipmentSet.GetEquipmentSetInfo()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetIgnoredSlots
+---======================================================================
+--- Returns ignored slots of an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- Returns:
+--- @return boolean slotIgnored [] - indexed by InventorySlotId
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetIgnoredSlots
+---
+--- Usage: slotIgnored = C_EquipmentSet.GetIgnoredSlots(equipmentSetID)
+---
+-- function C_EquipmentSet.GetIgnoredSlots()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetItemIDs
+---======================================================================
+--- Returns the item IDs of an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number - Appears to return valid info for indices [0, 2, 4, ...]
+---
+--- Returns:
+--- @return table itemIDs - a table of numbers indexed by InventorySlotId
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetItemIDs
+---
+--- Usage: itemIDs = C_EquipmentSet.GetItemIDs(equipmentSetID)
+---
+-- function C_EquipmentSet.GetItemIDs()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetItemLocations
+---======================================================================
+--- Returns the location of all items in an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- Returns:
+--- @return number locations [] - indexed by InventorySlotId
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetItemLocations
+---
+--- Usage: locations = C_EquipmentSet.GetItemLocations(equipmentSetID)
+---
+-- function C_EquipmentSet.GetItemLocations()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.GetNumEquipmentSets
+---======================================================================
+--- Returns the number of saved equipment sets.
+---
+--- Returns:
+--- @return number numEquipmentSets - number of saved sets for the current character.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.GetNumEquipmentSets
+---
+--- Usage: numEquipmentSets = C_EquipmentSet.GetNumEquipmentSets()
+---
+-- function C_EquipmentSet.GetNumEquipmentSets()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.IgnoreSlotForSave
+---======================================================================
+--- Ignores an equipment slot for saving.
+---
+--- Arguments:
+--- @param slot number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.IgnoreSlotForSave
+---
+--- Usage: C_EquipmentSet.IgnoreSlotForSave(slot)
+---
+-- function C_EquipmentSet.IgnoreSlotForSave()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.IsSlotIgnoredForSave
+---======================================================================
+--- Returns whether a slot is ignored for saving.
+---
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return boolean isSlotIgnored
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.IsSlotIgnoredForSave
+---
+--- Usage: isSlotIgnored = C_EquipmentSet.IsSlotIgnoredForSave(slot)
+---
+-- function C_EquipmentSet.IsSlotIgnoredForSave()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.ModifyEquipmentSet
+---======================================================================
+--- Modifies an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number
+--- @param newName string
+--- @param newIcon string ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.ModifyEquipmentSet
+---
+--- Usage: C_EquipmentSet.ModifyEquipmentSet(equipmentSetID, newName [, newIcon])
+---
+-- function C_EquipmentSet.ModifyEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.PickupEquipmentSet
+---======================================================================
+--- Picks up an equipment set, placing it on the cursor.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.PickupEquipmentSet
+---
+--- Usage: C_EquipmentSet.PickupEquipmentSet(equipmentSetID)
+---
+-- function C_EquipmentSet.PickupEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.SaveEquipmentSet
+---======================================================================
+--- Saves your currently equipped items into an equipment set.
+---
+--- Arguments:
+--- @param equipmentSetID number - can be retrieved from an existing equipment set by name with C_EquipmentSet.GetEquipmentSetID.
+--- @param icon  Accepts both texture names and file IDs, e.g. "INV_Ammo_Snowball", 655708 or "655708"
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.SaveEquipmentSet
+---
+--- Usage: C_EquipmentSet.SaveEquipmentSet(equipmentSetID [, icon])
+---
+-- function C_EquipmentSet.SaveEquipmentSet()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.UnassignEquipmentSetSpec
+---======================================================================
+--- Unassigns an equipment set from a specialization.
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.UnassignEquipmentSetSpec
+---
+--- Usage: C_EquipmentSet.UnassignEquipmentSetSpec(equipmentSetID)
+---
+-- function C_EquipmentSet.UnassignEquipmentSetSpec()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.UnignoreSlotForSave
+---======================================================================
+--- Unignores a slot for saving.
+---
+--- Arguments:
+--- @param slot number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.UnignoreSlotForSave
+---
+--- Usage: C_EquipmentSet.UnignoreSlotForSave(slot)
+---
+-- function C_EquipmentSet.UnignoreSlotForSave()
+-- end
+
+---======================================================================
+--- C_EquipmentSet.UseEquipmentSet
+---======================================================================
+--- #nocombat - This cannot be called while in combat.Restricted since patch 3.3
+---
+--- Arguments:
+--- @param equipmentSetID number
+---
+--- Returns:
+--- @return boolean setWasEquipped - true if the set was equipped, nil otherwise. Failure conditions include invalid arguments, and engaging in combat.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_EquipmentSet.UseEquipmentSet
+---
+--- Usage: setWasEquipped = C_EquipmentSet.UseEquipmentSet(equipmentSetID)
+---
+-- function C_EquipmentSet.UseEquipmentSet()
+-- end

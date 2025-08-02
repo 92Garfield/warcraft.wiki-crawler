@@ -1,0 +1,378 @@
+--[=[
+-- C_Bank API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 23
+--]=]
+
+--- @class C_Bank
+--- C_Bank namespace contains 23 functions
+local C_Bank = {}
+
+--[=[
+-- C_Bank Functions:
+-- - C_Bank.AreAnyBankTypesViewable
+-- - C_Bank.AutoDepositItemsIntoBank
+-- - C_Bank.CanDepositMoney
+-- - C_Bank.CanPurchaseBankTab
+-- - C_Bank.CanUseBank
+-- - C_Bank.CanViewBank
+-- - C_Bank.CanWithdrawMoney
+-- - C_Bank.CloseBankFrame
+-- - C_Bank.DepositMoney
+-- - C_Bank.DoesBankTypeSupportAutoDeposit
+-- - C_Bank.DoesBankTypeSupportMoneyTransfer
+-- - C_Bank.FetchBankLockedReason
+-- - C_Bank.FetchDepositedMoney
+-- - C_Bank.FetchNextPurchasableBankTabData
+-- - C_Bank.FetchNumPurchasedBankTabs
+-- - C_Bank.FetchPurchasedBankTabData
+-- - C_Bank.FetchPurchasedBankTabIDs
+-- - C_Bank.FetchViewableBankTypes
+-- - C_Bank.HasMaxBankTabs
+-- - C_Bank.IsItemAllowedInBankType
+-- - C_Bank.PurchaseBankTab
+-- - C_Bank.UpdateBankTabSettings
+-- - C_Bank.WithdrawMoney
+--]=]
+
+---======================================================================
+--- C_Bank.AreAnyBankTypesViewable
+---======================================================================
+--- Returns:
+--- @return boolean areAnyBankTypesViewable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.AreAnyBankTypesViewable
+---
+--- Usage: areAnyBankTypesViewable = C_Bank.AreAnyBankTypesViewable()
+---
+-- function C_Bank.AreAnyBankTypesViewable()
+-- end
+
+---======================================================================
+--- C_Bank.AutoDepositItemsIntoBank
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.AutoDepositItemsIntoBank
+---
+--- Usage: C_Bank.AutoDepositItemsIntoBank(bankType)
+---
+-- function C_Bank.AutoDepositItemsIntoBank()
+-- end
+
+---======================================================================
+--- C_Bank.CanDepositMoney
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean canDepositMoney
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CanDepositMoney
+---
+--- Usage: canDepositMoney = C_Bank.CanDepositMoney(bankType)
+---
+-- function C_Bank.CanDepositMoney()
+-- end
+
+---======================================================================
+--- C_Bank.CanPurchaseBankTab
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean canPurchaseBankTab
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CanPurchaseBankTab
+---
+--- Usage: canPurchaseBankTab = C_Bank.CanPurchaseBankTab(bankType)
+---
+-- function C_Bank.CanPurchaseBankTab()
+-- end
+
+---======================================================================
+--- C_Bank.CanUseBank
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean canUseBank
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CanUseBank
+---
+--- Usage: canUseBank = C_Bank.CanUseBank(bankType)
+---
+-- function C_Bank.CanUseBank()
+-- end
+
+---======================================================================
+--- C_Bank.CanViewBank
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean canViewBank
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CanViewBank
+---
+--- Usage: canViewBank = C_Bank.CanViewBank(bankType)
+---
+-- function C_Bank.CanViewBank()
+-- end
+
+---======================================================================
+--- C_Bank.CanWithdrawMoney
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean canWithdrawMoney
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CanWithdrawMoney
+---
+--- Usage: canWithdrawMoney = C_Bank.CanWithdrawMoney(bankType)
+---
+-- function C_Bank.CanWithdrawMoney()
+-- end
+
+---======================================================================
+--- C_Bank.CloseBankFrame
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.CloseBankFrame
+---
+--- Usage: C_Bank.CloseBankFrame()
+---
+-- function C_Bank.CloseBankFrame()
+-- end
+
+---======================================================================
+--- C_Bank.DepositMoney
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.DepositMoney
+---
+--- Usage: C_Bank.DepositMoney(bankType, amount)
+---
+-- function C_Bank.DepositMoney()
+-- end
+
+---======================================================================
+--- C_Bank.DoesBankTypeSupportAutoDeposit
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean doesBankTypeSupportAutoDeposit
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportAutoDeposit
+---
+--- Usage: doesBankTypeSupportAutoDeposit = C_Bank.DoesBankTypeSupportAutoDeposit(bankType)
+---
+-- function C_Bank.DoesBankTypeSupportAutoDeposit()
+-- end
+
+---======================================================================
+--- C_Bank.DoesBankTypeSupportMoneyTransfer
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean doesBankTypeSupportMoneyTransfer
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportMoneyTransfer
+---
+--- Usage: doesBankTypeSupportMoneyTransfer = C_Bank.DoesBankTypeSupportMoneyTransfer(bankType)
+---
+-- function C_Bank.DoesBankTypeSupportMoneyTransfer()
+-- end
+
+---======================================================================
+--- C_Bank.FetchBankLockedReason
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return Enum.BankLockedReason reason ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchBankLockedReason
+---
+--- Usage: reason = C_Bank.FetchBankLockedReason(bankType)
+---
+-- function C_Bank.FetchBankLockedReason()
+-- end
+
+---======================================================================
+--- C_Bank.FetchDepositedMoney
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return number : WOWMONEY amount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchDepositedMoney
+---
+--- Usage: amount = C_Bank.FetchDepositedMoney(bankType)
+---
+-- function C_Bank.FetchDepositedMoney()
+-- end
+
+---======================================================================
+--- C_Bank.FetchNextPurchasableBankTabData
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return PurchasableBankTabData nextPurchasableTabData ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabData
+---
+--- Usage: nextPurchasableTabData = C_Bank.FetchNextPurchasableBankTabData(bankType)
+---
+-- function C_Bank.FetchNextPurchasableBankTabData()
+-- end
+
+---======================================================================
+--- C_Bank.FetchNumPurchasedBankTabs
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return number numPurchasedBankTabs
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNumPurchasedBankTabs
+---
+--- Usage: numPurchasedBankTabs = C_Bank.FetchNumPurchasedBankTabs(bankType)
+---
+-- function C_Bank.FetchNumPurchasedBankTabs()
+-- end
+
+---======================================================================
+--- C_Bank.FetchPurchasedBankTabData
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return BankTabData purchasedBankTabData []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchPurchasedBankTabData
+---
+--- Usage: purchasedBankTabData = C_Bank.FetchPurchasedBankTabData(bankType)
+---
+-- function C_Bank.FetchPurchasedBankTabData()
+-- end
+
+---======================================================================
+--- C_Bank.FetchPurchasedBankTabIDs
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return Enum.BagIndex purchasedBankTabIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchPurchasedBankTabIDs
+---
+--- Usage: purchasedBankTabIDs = C_Bank.FetchPurchasedBankTabIDs(bankType)
+---
+-- function C_Bank.FetchPurchasedBankTabIDs()
+-- end
+
+---======================================================================
+--- C_Bank.FetchViewableBankTypes
+---======================================================================
+--- Returns:
+--- @return Enum.BankType viewableBankTypes []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.FetchViewableBankTypes
+---
+--- Usage: viewableBankTypes = C_Bank.FetchViewableBankTypes()
+---
+-- function C_Bank.FetchViewableBankTypes()
+-- end
+
+---======================================================================
+--- C_Bank.HasMaxBankTabs
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean hasMaxBankTabs
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.HasMaxBankTabs
+---
+--- Usage: hasMaxBankTabs = C_Bank.HasMaxBankTabs(bankType)
+---
+-- function C_Bank.HasMaxBankTabs()
+-- end
+
+---======================================================================
+--- C_Bank.IsItemAllowedInBankType
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- Returns:
+--- @return boolean isItemAllowedInBankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.IsItemAllowedInBankType
+---
+--- Usage: isItemAllowedInBankType = C_Bank.IsItemAllowedInBankType(bankType, itemLocation)
+---
+-- function C_Bank.IsItemAllowedInBankType()
+-- end
+
+---======================================================================
+--- C_Bank.PurchaseBankTab
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.PurchaseBankTab
+---
+--- Usage: C_Bank.PurchaseBankTab(bankType)
+---
+-- function C_Bank.PurchaseBankTab()
+-- end
+
+---======================================================================
+--- C_Bank.UpdateBankTabSettings
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.UpdateBankTabSettings
+---
+--- Usage: C_Bank.UpdateBankTabSettings(bankType, tabID, tabName, tabIcon, depositFlags)
+---
+-- function C_Bank.UpdateBankTabSettings()
+-- end
+
+---======================================================================
+--- C_Bank.WithdrawMoney
+---======================================================================
+--- Arguments:
+--- @param bankType Enum.BankType
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_Bank.WithdrawMoney
+---
+--- Usage: C_Bank.WithdrawMoney(bankType, amount)
+---
+-- function C_Bank.WithdrawMoney()
+-- end

@@ -1,0 +1,333 @@
+--[=[
+-- C_UnitAuras API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 17
+--]=]
+
+--- @class C_UnitAuras
+--- C_UnitAuras namespace contains 17 functions
+local C_UnitAuras = {}
+
+--[=[
+-- C_UnitAuras Functions:
+-- - C_UnitAuras.AddPrivateAuraAnchor
+-- - C_UnitAuras.AddPrivateAuraAppliedSound
+-- - C_UnitAuras.AuraIsPrivate
+-- - C_UnitAuras.GetAuraDataByAuraInstanceID
+-- - C_UnitAuras.GetAuraDataByIndex
+-- - C_UnitAuras.GetAuraDataBySlot
+-- - C_UnitAuras.GetAuraDataBySpellName
+-- - C_UnitAuras.GetAuraSlots
+-- - C_UnitAuras.GetBuffDataByIndex
+-- - C_UnitAuras.GetCooldownAuraBySpellID
+-- - C_UnitAuras.GetDebuffDataByIndex
+-- - C_UnitAuras.GetPlayerAuraBySpellID
+-- - C_UnitAuras.IsAuraFilteredOutByInstanceID
+-- - C_UnitAuras.RemovePrivateAuraAnchor
+-- - C_UnitAuras.RemovePrivateAuraAppliedSound
+-- - C_UnitAuras.SetPrivateWarningTextAnchor
+-- - C_UnitAuras.WantsAlteredForm
+--]=]
+
+---======================================================================
+--- C_UnitAuras.AddPrivateAuraAnchor
+---======================================================================
+--- Arguments:
+--- @param args AddPrivateAuraAnchorArgs
+---
+--- Returns:
+--- @return number anchorID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AddPrivateAuraAnchor
+---
+--- Usage: anchorID = C_UnitAuras.AddPrivateAuraAnchor(args)
+---
+-- function C_UnitAuras.AddPrivateAuraAnchor()
+-- end
+
+---======================================================================
+--- C_UnitAuras.AddPrivateAuraAppliedSound
+---======================================================================
+--- Arguments:
+--- @param sound UnitPrivateAuraAppliedSoundInfo
+---
+--- Returns:
+--- @return number privateAuraSoundID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AddPrivateAuraAppliedSound
+---
+--- Usage: privateAuraSoundID = C_UnitAuras.AddPrivateAuraAppliedSound(sound)
+---
+-- function C_UnitAuras.AddPrivateAuraAppliedSound()
+-- end
+
+---======================================================================
+--- C_UnitAuras.AuraIsPrivate
+---======================================================================
+--- Arguments:
+--- @param spellID number
+---
+--- Returns:
+--- @return boolean isPrivate
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AuraIsPrivate
+---
+--- Usage: isPrivate = C_UnitAuras.AuraIsPrivate(spellID)
+---
+-- function C_UnitAuras.AuraIsPrivate()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetAuraDataByAuraInstanceID
+---======================================================================
+--- Returns information about an aura on a unit by a given aura instance ID.
+---
+--- Arguments:
+--- @param unit string : UnitId - The unit to query.
+--- @param auraInstanceID number - An aura instance ID.
+---
+--- Returns:
+--- @return UnitAuraInfo aura ? - Structured information about the found aura, if any.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByAuraInstanceID
+---
+--- Usage: aura = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraInstanceID)
+---
+-- function C_UnitAuras.GetAuraDataByAuraInstanceID()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetAuraDataByIndex
+---======================================================================
+--- HARMFUL: Certain debuffs that only show up on raid frames, e.g. most debuffs that are relevant in a raid context.
+---
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param index number
+--- @param filter string ? - A list of filters, separated by pipe chars or spaces. Otherwise defaults to "HELPFUL".
+---
+--- Returns:
+--- @return AuraData aura ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex
+---
+--- Usage: aura = C_UnitAuras.GetAuraDataByIndex(unitToken, index [, filter])
+---
+-- function C_UnitAuras.GetAuraDataByIndex()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetAuraDataBySlot
+---======================================================================
+--- Returns information about an aura on a unit by a given slot index.
+---
+--- Arguments:
+--- @param unit string : UnitId - The unit to query.
+--- @param slot number - A slot index obtained from the variable returns of UnitAuraSlots.
+---
+--- Returns:
+--- @return UnitAuraInfo aura ? - Structured information about the found aura, if any.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataBySlot
+---
+--- Usage: aura = C_UnitAuras.GetAuraDataBySlot(unit, slot)
+---
+-- function C_UnitAuras.GetAuraDataBySlot()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetAuraDataBySpellName
+---======================================================================
+--- HARMFUL: Certain debuffs that only show up on raid frames, e.g. most debuffs that are relevant in a raid context.
+---
+--- Arguments:
+--- @param unitToken string - UnitId
+--- @param spellName string
+--- @param filter string ? - A list of filters, separated by pipe chars or spaces. Otherwise defaults to "HELPFUL".
+---
+--- Returns:
+--- @return AuraData aura ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataBySpellName
+---
+--- Usage: aura = C_UnitAuras.GetAuraDataBySpellName(unitToken, spellName [, filter])
+---
+-- function C_UnitAuras.GetAuraDataBySpellName()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetAuraSlots
+---======================================================================
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param filter string ?
+--- @param maxSlots number ?
+--- @param continuationToken number ?
+---
+--- Returns:
+--- @return number outContinuationToken ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraSlots
+---
+--- Usage: outContinuationToken, slots, ... = C_UnitAuras.GetAuraSlots(unitToken [, filter [, maxSlots [, continuationToken]]])
+---
+-- function C_UnitAuras.GetAuraSlots()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetBuffDataByIndex
+---======================================================================
+--- HARMFUL: Certain debuffs that only show up on raid frames, e.g. most debuffs that are relevant in a raid context.
+---
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param index number
+--- @param filter string ? - A list of filters, separated by pipe chars or spaces. Otherwise defaults to "HELPFUL".
+---
+--- Returns:
+--- @return AuraData aura ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetBuffDataByIndex
+---
+--- Usage: aura = C_UnitAuras.GetBuffDataByIndex(unitToken, index [, filter])
+---
+-- function C_UnitAuras.GetBuffDataByIndex()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetCooldownAuraBySpellID
+---======================================================================
+--- Obtains the spell ID of a passive cooldown effect associated with a spell.
+---
+--- Arguments:
+--- @param spellID number - The spell ID to query.
+---
+--- Returns:
+--- @return number passiveCooldownSpellID ? - The spell ID of an associated passive aura effect, if any.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetCooldownAuraBySpellID
+---
+--- Usage: passiveCooldownSpellID = C_UnitAuras.GetCooldownAuraBySpellID(spellID)
+---
+-- function C_UnitAuras.GetCooldownAuraBySpellID()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetDebuffDataByIndex
+---======================================================================
+--- HARMFUL: Certain debuffs that only show up on raid frames, e.g. most debuffs that are relevant in a raid context.
+---
+--- Arguments:
+--- @param unitToken string : UnitToken
+--- @param index number
+--- @param filter string ? - A list of filters, separated by pipe chars or spaces. Otherwise defaults to "HARMFUL".
+---
+--- Returns:
+--- @return AuraData aura ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetDebuffDataByIndex
+---
+--- Usage: aura = C_UnitAuras.GetDebuffDataByIndex(unitToken, index [, filter])
+---
+-- function C_UnitAuras.GetDebuffDataByIndex()
+-- end
+
+---======================================================================
+--- C_UnitAuras.GetPlayerAuraBySpellID
+---======================================================================
+--- Returns information about an aura on the player by a given spell ID.
+---
+--- Arguments:
+--- @param spellID number - The spell ID to query.
+---
+--- Returns:
+--- @return AuraData aura ? - Structured information about the found aura, if any.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetPlayerAuraBySpellID
+---
+--- Usage: aura = C_UnitAuras.GetPlayerAuraBySpellID(spellID)
+---
+-- function C_UnitAuras.GetPlayerAuraBySpellID()
+-- end
+
+---======================================================================
+--- C_UnitAuras.IsAuraFilteredOutByInstanceID
+---======================================================================
+--- Tests if an aura passes a specific filter.
+---
+--- Arguments:
+--- @param unit string : UnitId - The unit to query.
+--- @param auraInstanceID number - The aura instance ID to test.
+--- @param filterString string - The aura filter string to test, eg. "HELPFUL" or "HARMFUL".
+---
+--- Returns:
+--- @return boolean isFiltered - true if the aura passes the specified filter, or false if not.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.IsAuraFilteredOutByInstanceID
+---
+--- Usage: isFiltered = C_UnitAuras.IsAuraFilteredOutByInstanceID(unit, auraInstanceID, filterString)
+---
+-- function C_UnitAuras.IsAuraFilteredOutByInstanceID()
+-- end
+
+---======================================================================
+--- C_UnitAuras.RemovePrivateAuraAnchor
+---======================================================================
+--- Arguments:
+--- @param anchorID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.RemovePrivateAuraAnchor
+---
+--- Usage: C_UnitAuras.RemovePrivateAuraAnchor(anchorID)
+---
+-- function C_UnitAuras.RemovePrivateAuraAnchor()
+-- end
+
+---======================================================================
+--- C_UnitAuras.RemovePrivateAuraAppliedSound
+---======================================================================
+--- Arguments:
+--- @param privateAuraSoundID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.RemovePrivateAuraAppliedSound
+---
+--- Usage: C_UnitAuras.RemovePrivateAuraAppliedSound(privateAuraSoundID)
+---
+-- function C_UnitAuras.RemovePrivateAuraAppliedSound()
+-- end
+
+---======================================================================
+--- C_UnitAuras.SetPrivateWarningTextAnchor
+---======================================================================
+--- Arguments:
+--- @param parent Frame🔗
+--- @param anchor AnchorBinding ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.SetPrivateWarningTextAnchor
+---
+--- Usage: C_UnitAuras.SetPrivateWarningTextAnchor(parent [, anchor])
+---
+-- function C_UnitAuras.SetPrivateWarningTextAnchor()
+-- end
+
+---======================================================================
+--- C_UnitAuras.WantsAlteredForm
+---======================================================================
+--- Arguments:
+--- @param unitToken string
+---
+--- Returns:
+--- @return boolean wantsAlteredForm
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_UnitAuras.WantsAlteredForm
+---
+--- Usage: wantsAlteredForm = C_UnitAuras.WantsAlteredForm(unitToken)
+---
+-- function C_UnitAuras.WantsAlteredForm()
+-- end

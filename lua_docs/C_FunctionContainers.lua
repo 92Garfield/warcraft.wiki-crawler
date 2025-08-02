@@ -1,0 +1,50 @@
+--[=[
+-- C_FunctionContainers API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 1
+--]=]
+
+--- @class C_FunctionContainers
+--- C_FunctionContainers namespace contains 1 functions
+local C_FunctionContainers = {}
+
+--[=[
+-- C_FunctionContainers Functions:
+-- - C_FunctionContainers.CreateCallback
+--]=]
+
+---======================================================================
+--- C_FunctionContainers.CreateCallback
+---======================================================================
+--- Creates a function container that invokes a cancellable callback function.
+---
+--- Arguments:
+--- @param func function - A Lua function to be called.
+---
+--- Returns:
+--- @return FunctionContainer container - A container object (userdata) bound to the supplied function.
+---
+--- @since Patch 10.0.0 (2022-10-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback
+---
+--- Usage: container = C_FunctionContainers.CreateCallback(func)
+---
+--- Examples:
+--- Example 1:
+---   local container
+---   container = C_FunctionContainers.CreateCallback(function()
+---       container.timesCalled = container.timesCalled + 1
+---   
+---       if container.timesCalled == 5 then
+---           container:Cancel()
+---       end
+---   
+---       print("Called!")
+---   end)
+---   
+---   container.timesCalled = 0
+---   C_Timer.NewTicker(1, container)
+---
+-- function C_FunctionContainers.CreateCallback()
+-- end

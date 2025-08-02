@@ -1,0 +1,276 @@
+--[=[
+-- C_ItemUpgrade API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 16
+--]=]
+
+--- @class C_ItemUpgrade
+--- C_ItemUpgrade namespace contains 16 functions
+local C_ItemUpgrade = {}
+
+--[=[
+-- C_ItemUpgrade Functions:
+-- - C_ItemUpgrade.CanUpgradeItem
+-- - C_ItemUpgrade.ClearItemUpgrade
+-- - C_ItemUpgrade.CloseItemUpgrade
+-- - C_ItemUpgrade.GetHighWatermarkForItem
+-- - C_ItemUpgrade.GetHighWatermarkForSlot
+-- - C_ItemUpgrade.GetHighWatermarkSlotForItem
+-- - C_ItemUpgrade.GetItemHyperlink
+-- - C_ItemUpgrade.GetItemUpgradeCurrentLevel
+-- - C_ItemUpgrade.GetItemUpgradeEffect
+-- - C_ItemUpgrade.GetItemUpgradeItemInfo
+-- - C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues
+-- - C_ItemUpgrade.GetNumItemUpgradeEffects
+-- - C_ItemUpgrade.IsItemBound
+-- - C_ItemUpgrade.SetItemUpgradeFromCursorItem
+-- - C_ItemUpgrade.SetItemUpgradeFromLocation
+-- - C_ItemUpgrade.UpgradeItem
+--]=]
+
+---======================================================================
+--- C_ItemUpgrade.CanUpgradeItem
+---======================================================================
+--- Arguments:
+--- @param baseItem ItemLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean isValid
+---
+--- @since Patch 9.0.5 (2021-03-09): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.CanUpgradeItem
+---
+--- Usage: isValid = C_ItemUpgrade.CanUpgradeItem(baseItem)
+---
+-- function C_ItemUpgrade.CanUpgradeItem()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.ClearItemUpgrade
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.ClearItemUpgrade
+---
+--- Usage: C_ItemUpgrade.ClearItemUpgrade()
+---
+-- function C_ItemUpgrade.ClearItemUpgrade()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.CloseItemUpgrade
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.CloseItemUpgrade
+---
+--- Usage: C_ItemUpgrade.CloseItemUpgrade()
+---
+-- function C_ItemUpgrade.CloseItemUpgrade()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetHighWatermarkForItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo - Item ID, Link, or Name
+---
+--- Returns:
+--- @return number characterHighWatermark
+--- @return number accountHighWatermark
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkForItem
+---
+--- Usage: characterHighWatermark, accountHighWatermark = C_ItemUpgrade.GetHighWatermarkForItem(itemInfo)
+---
+-- function C_ItemUpgrade.GetHighWatermarkForItem()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetHighWatermarkForSlot
+---======================================================================
+--- Arguments:
+--- @param itemRedundancySlot number - Must be an Enum.ItemRedundancySlot value
+---
+--- Returns:
+--- @return number characterHighWatermark
+--- @return number accountHighWatermark
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkForSlot
+---
+--- Usage: characterHighWatermark, accountHighWatermark = C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot)
+---
+-- function C_ItemUpgrade.GetHighWatermarkForSlot()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetHighWatermarkSlotForItem
+---======================================================================
+--- Arguments:
+--- @param itemInfo number |string : ItemInfo - Item ID, Link, or Name
+---
+--- Returns:
+--- @return number itemRedundancySlot - Enum.ItemRedundancySlot value
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkSlotForItem
+---
+--- Usage: itemRedundancySlot = C_ItemUpgrade.GetHighWatermarkSlotForItem(itemInfo)
+---
+-- function C_ItemUpgrade.GetHighWatermarkSlotForItem()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetItemHyperlink
+---======================================================================
+--- Returns an itemLink of the anticipated result from applying item upgrading using the ItemUpgradeFrame.
+---
+--- Returns:
+--- @return string link - itemLink
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemHyperlink
+---
+--- Usage: link = C_ItemUpgrade.GetItemHyperlink()
+---
+-- function C_ItemUpgrade.GetItemHyperlink()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetItemUpgradeCurrentLevel
+---======================================================================
+--- Returns:
+--- @return number itemLevel
+--- @return boolean isPvpItemLevel
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeCurrentLevel
+---
+--- Usage: itemLevel, isPvpItemLevel = C_ItemUpgrade.GetItemUpgradeCurrentLevel()
+---
+-- function C_ItemUpgrade.GetItemUpgradeCurrentLevel()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetItemUpgradeEffect
+---======================================================================
+--- Returns the effect of upgrading an item on one of its effects.
+---
+--- Arguments:
+--- @param effectIndex number - Index of the effect to query, ascending from 1 to C_ItemUpgrade.GetNumItemUpgradeEffects()
+--- @param numUpgradeLevels number ?
+---
+--- Returns:
+--- @return string outBaseEffect - effect text before the item upgrade (e.g. "When your attacks hit you have a chance to gain 3,386 critical strike for 30 sec.")
+--- @return string outUpgradedEffect - effect text after the item upgrade (e.g. "When your attacks hit you have a chance to gain 3,649 critical strike for 30 sec.")
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeEffect
+---
+--- Usage: outBaseEffect, outUpgradedEffect = C_ItemUpgrade.GetItemUpgradeEffect(effectIndex [, numUpgradeLevels])
+---
+--- See also:
+--- - GetItemUpgradeStats
+---
+-- function C_ItemUpgrade.GetItemUpgradeEffect()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetItemUpgradeItemInfo
+---======================================================================
+--- Returns:
+--- @return ItemUpgradeItemInfo itemInfo
+---
+--- @since Patch 10.0.5 (2023-01-24): Removed costsToUpgrade field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeItemInfo
+---
+--- Usage: itemInfo = C_ItemUpgrade.GetItemUpgradeItemInfo()
+---
+-- function C_ItemUpgrade.GetItemUpgradeItemInfo()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues
+---======================================================================
+--- Arguments:
+--- @param numUpgradeLevels number
+---
+--- Returns:
+--- @return number currentPvPItemLevel
+--- @return number upgradedPvPItemLevel
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues
+---
+--- Usage: currentPvPItemLevel, upgradedPvPItemLevel = C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues(numUpgradeLevels)
+---
+-- function C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.GetNumItemUpgradeEffects
+---======================================================================
+--- Returns the number of item effects affected by upgrading the current item.
+---
+--- Returns:
+--- @return number numItemUpgradeEffects - number of item effects that will be altere by upgrading the item.
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetNumItemUpgradeEffects
+---
+--- Usage: numItemUpgradeEffects = C_ItemUpgrade.GetNumItemUpgradeEffects()
+---
+-- function C_ItemUpgrade.GetNumItemUpgradeEffects()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.IsItemBound
+---======================================================================
+--- Returns:
+--- @return boolean isBound
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.IsItemBound
+---
+--- Usage: isBound = C_ItemUpgrade.IsItemBound()
+---
+-- function C_ItemUpgrade.IsItemBound()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.SetItemUpgradeFromCursorItem
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.SetItemUpgradeFromCursorItem
+---
+--- Usage: C_ItemUpgrade.SetItemUpgradeFromCursorItem()
+---
+-- function C_ItemUpgrade.SetItemUpgradeFromCursorItem()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.SetItemUpgradeFromLocation
+---======================================================================
+--- Arguments:
+--- @param itemToSet ItemLocationMixin 🔗
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.SetItemUpgradeFromLocation
+---
+--- Usage: C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet)
+---
+-- function C_ItemUpgrade.SetItemUpgradeFromLocation()
+-- end
+
+---======================================================================
+--- C_ItemUpgrade.UpgradeItem
+---======================================================================
+--- #protected - This can only be called from secure code.
+---
+--- Arguments:
+--- @param numUpgrades number ? = 1
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.UpgradeItem
+---
+--- Usage: C_ItemUpgrade.UpgradeItem([numUpgrades])
+---
+-- function C_ItemUpgrade.UpgradeItem()
+-- end

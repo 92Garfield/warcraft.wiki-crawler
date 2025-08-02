@@ -1,0 +1,670 @@
+--[=[
+-- C_PlayerInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 36
+--]=]
+
+--- @class C_PlayerInfo
+--- C_PlayerInfo namespace contains 36 functions
+local C_PlayerInfo = {}
+
+--[=[
+-- C_PlayerInfo Functions:
+-- - C_PlayerInfo.CanPlayerEnterChromieTime
+-- - C_PlayerInfo.CanPlayerUseAreaLoot
+-- - C_PlayerInfo.CanPlayerUseEventScheduler
+-- - C_PlayerInfo.CanPlayerUseMountEquipment
+-- - C_PlayerInfo.CanUseItem
+-- - C_PlayerInfo.GUIDIsPlayer
+-- - C_PlayerInfo.GetAlternateFormInfo
+-- - C_PlayerInfo.GetClass
+-- - C_PlayerInfo.GetContentDifficultyCreatureForPlayer
+-- - C_PlayerInfo.GetContentDifficultyQuestForPlayer
+-- - C_PlayerInfo.GetDisplayID
+-- - C_PlayerInfo.GetGlidingInfo
+-- - C_PlayerInfo.GetInstancesUnlockedAtLevel
+-- - C_PlayerInfo.GetName
+-- - C_PlayerInfo.GetNativeDisplayID
+-- - C_PlayerInfo.GetPetStableCreatureDisplayInfoID
+-- - C_PlayerInfo.GetPlayerCharacterData
+-- - C_PlayerInfo.GetPlayerMythicPlusRatingSummary
+-- - C_PlayerInfo.GetRace
+-- - C_PlayerInfo.GetSex
+-- - C_PlayerInfo.HasAccountInventoryLock
+-- - C_PlayerInfo.HasVisibleInvSlot
+-- - C_PlayerInfo.IsAccountBankEnabled
+-- - C_PlayerInfo.IsCharacterBankEnabled
+-- - C_PlayerInfo.IsConnected
+-- - C_PlayerInfo.IsDisplayRaceNative
+-- - C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer
+-- - C_PlayerInfo.IsMirrorImage
+-- - C_PlayerInfo.IsPlayerEligibleForNPE
+-- - C_PlayerInfo.IsPlayerEligibleForNPEv2
+-- - C_PlayerInfo.IsPlayerInChromieTime
+-- - C_PlayerInfo.IsPlayerNPERestricted
+-- - C_PlayerInfo.IsSelfFoundActive
+-- - C_PlayerInfo.IsTradingPostAvailable
+-- - C_PlayerInfo.IsTravelersLogAvailable
+-- - C_PlayerInfo.UnitIsSameServer
+--]=]
+
+---======================================================================
+--- C_PlayerInfo.CanPlayerEnterChromieTime
+---======================================================================
+--- Returns true if the player is eligible to enter a timewalking campaign.
+---
+--- Returns:
+--- @return boolean canEnter
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerEnterChromieTime
+---
+--- Usage: canEnter = C_PlayerInfo.CanPlayerEnterChromieTime()
+---
+-- function C_PlayerInfo.CanPlayerEnterChromieTime()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.CanPlayerUseAreaLoot
+---======================================================================
+--- Returns true if the player can use area looting.
+---
+--- Returns:
+--- @return boolean canUseAreaLoot
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerUseAreaLoot
+---
+--- Usage: canUseAreaLoot = C_PlayerInfo.CanPlayerUseAreaLoot()
+---
+-- function C_PlayerInfo.CanPlayerUseAreaLoot()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.CanPlayerUseEventScheduler
+---======================================================================
+--- Returns:
+--- @return boolean canUseEventScheduler
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerUseEventScheduler
+---
+--- Usage: canUseEventScheduler = C_PlayerInfo.CanPlayerUseEventScheduler()
+---
+-- function C_PlayerInfo.CanPlayerUseEventScheduler()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.CanPlayerUseMountEquipment
+---======================================================================
+--- Returns true if the player can use mount equipment.
+---
+--- Returns:
+--- @return boolean canUseMountEquipment
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Moved to C_PlayerInfo.CanPlayerUseMountEquipment()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerUseMountEquipment
+---
+--- Usage: canUseMountEquipment, failureReason = C_PlayerInfo.CanPlayerUseMountEquipment()
+---
+-- function C_PlayerInfo.CanPlayerUseMountEquipment()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.CanUseItem
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean isUseable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanUseItem
+---
+--- Usage: isUseable = C_PlayerInfo.CanUseItem(itemID)
+---
+-- function C_PlayerInfo.CanUseItem()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetAlternateFormInfo
+---======================================================================
+--- Returns if the player has an alternate form and if they are currently in that form.
+---
+--- Returns:
+--- @return boolean hasAlternateForm
+--- @return boolean inAlternateForm - Whether the player is in their alternate form (such as in human form for worgen).
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetAlternateFormInfo
+---
+--- Usage: hasAlternateForm, inAlternateForm = C_PlayerInfo.GetAlternateFormInfo()
+---
+-- function C_PlayerInfo.GetAlternateFormInfo()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetContentDifficultyCreatureForPlayer
+---======================================================================
+--- Returns info indicating how much difficulty the player may have if fighting a given unit.
+---
+--- Arguments:
+--- @param unitToken string : UnitId
+---
+--- Returns:
+--- @return Enum.RelativeContentDifficulty difficulty
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetContentDifficultyCreatureForPlayer
+---
+--- Usage: difficulty = C_PlayerInfo.GetContentDifficultyCreatureForPlayer(unitToken)
+---
+-- function C_PlayerInfo.GetContentDifficultyCreatureForPlayer()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetContentDifficultyQuestForPlayer
+---======================================================================
+--- Returns info indicating how much difficulty the player may have when performing a given quest.
+---
+--- Arguments:
+--- @param questID number
+---
+--- Returns:
+--- @return Enum.RelativeContentDifficulty difficulty
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetContentDifficultyQuestForPlayer
+---
+--- Usage: difficulty = C_PlayerInfo.GetContentDifficultyQuestForPlayer(questID)
+---
+-- function C_PlayerInfo.GetContentDifficultyQuestForPlayer()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetDisplayID
+---======================================================================
+--- Returns:
+--- @return number displayID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetDisplayID
+---
+--- Usage: displayID = C_PlayerInfo.GetDisplayID()
+---
+-- function C_PlayerInfo.GetDisplayID()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetGlidingInfo
+---======================================================================
+--- Returns the Dragonriding gliding speed.
+---
+--- Returns:
+--- @return boolean isGliding - True when the player is currently gliding.
+--- @return boolean canGlide - True when the player is in a Dragonriding zone and on an applicable mount.
+--- @return number forwardSpeed - The gliding speed, this is 65 for max dive speed and can go up to 100 when using abilities.
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetGlidingInfo
+---
+--- Usage: isGliding, canGlide, forwardSpeed = C_PlayerInfo.GetGlidingInfo()
+---
+--- Examples:
+--- Example 1:
+---   local f = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
+---   f:SetPoint("CENTER", 0, 50)
+---   f:SetSize(132, 50)
+---   f:SetBackdrop({
+---   	bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+---   	edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+---   	edgeSize = 16,
+---   	insets = { left = 4, right = 4, top = 4, bottom = 4 },
+---   })
+---   f:SetBackdropColor(0, 0, 0, .5)
+---   f.glide = f:CreateFontString(nil, nil, "GameTooltipText")
+---   f.glide:SetPoint("TOPLEFT", 10, -12)
+---   f.movespeed = f:CreateFontString(nil, nil, "GameTooltipText")
+---   f.movespeed:SetPoint("TOPLEFT", f.glide, "BOTTOMLEFT")
+---   
+---   C_Timer.NewTicker(.1, function()
+---   	local isGliding, canGlide, forwardSpeed = C_PlayerInfo.GetGlidingInfo()
+---   	local base = isGliding and forwardSpeed or GetUnitSpeed("player")
+---   	local movespeed = Round(base / BASE_MOVEMENT_SPEED * 100)
+---   	f.glide:SetText(format("Gliding speed: |cff71d5ff%d%%|r", forwardSpeed))
+---   	f.movespeed:SetText(format("Move speed: |cffffff00%d%%|r", movespeed))
+---   end)
+---
+--- See also:
+--- - GetUnitSpeed
+---
+-- function C_PlayerInfo.GetGlidingInfo()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetInstancesUnlockedAtLevel
+---======================================================================
+--- Arguments:
+--- @param level number
+--- @param isRaid boolean
+---
+--- Returns:
+--- @return number dungeonID []
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetInstancesUnlockedAtLevel
+---
+--- Usage: dungeonID = C_PlayerInfo.GetInstancesUnlockedAtLevel(level, isRaid)
+---
+-- function C_PlayerInfo.GetInstancesUnlockedAtLevel()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetNativeDisplayID
+---======================================================================
+--- Returns:
+--- @return number nativeDisplayID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetNativeDisplayID
+---
+--- Usage: nativeDisplayID = C_PlayerInfo.GetNativeDisplayID()
+---
+-- function C_PlayerInfo.GetNativeDisplayID()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetPetStableCreatureDisplayInfoID
+---======================================================================
+--- Arguments:
+--- @param index number
+---
+--- Returns:
+--- @return number creatureDisplayInfoID
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetPetStableCreatureDisplayInfoID
+---
+--- Usage: creatureDisplayInfoID = C_PlayerInfo.GetPetStableCreatureDisplayInfoID(index)
+---
+-- function C_PlayerInfo.GetPetStableCreatureDisplayInfoID()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetPlayerCharacterData
+---======================================================================
+--- Returns:
+--- @return PlayerInfoCharacterData characterData
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetPlayerCharacterData
+---
+--- Usage: characterData = C_PlayerInfo.GetPlayerCharacterData()
+---
+-- function C_PlayerInfo.GetPlayerCharacterData()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetPlayerMythicPlusRatingSummary
+---======================================================================
+--- Returns the players mythic+ rating summary which includes the runs they've completed as well as their current season m+ rating
+---
+--- Arguments:
+--- @param playerToken string : UnitId - The unit does not need to be in your group.
+---
+--- Returns:
+--- @return MythicPlusRatingSummary ratingSummary - The current season rating and well as a list of completed mythic plus runs.
+---
+--- @since Patch 9.1.0 (2021-06-29): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetPlayerMythicPlusRatingSummary
+---
+--- Usage: ratingSummary = C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken)
+---
+-- function C_PlayerInfo.GetPlayerMythicPlusRatingSummary()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.HasAccountInventoryLock
+---======================================================================
+--- Returns:
+--- @return boolean hasAccountInventoryLock
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.HasAccountInventoryLock
+---
+--- Usage: hasAccountInventoryLock = C_PlayerInfo.HasAccountInventoryLock()
+---
+-- function C_PlayerInfo.HasAccountInventoryLock()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.HasVisibleInvSlot
+---======================================================================
+--- Arguments:
+--- @param slot number
+---
+--- Returns:
+--- @return boolean isVisible
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.HasVisibleInvSlot
+---
+--- Usage: isVisible = C_PlayerInfo.HasVisibleInvSlot(slot)
+---
+-- function C_PlayerInfo.HasVisibleInvSlot()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsAccountBankEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isAccountBankEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsAccountBankEnabled
+---
+--- Usage: isAccountBankEnabled = C_PlayerInfo.IsAccountBankEnabled()
+---
+-- function C_PlayerInfo.IsAccountBankEnabled()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsCharacterBankEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isCharacterBankEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsCharacterBankEnabled
+---
+--- Usage: isCharacterBankEnabled = C_PlayerInfo.IsCharacterBankEnabled()
+---
+-- function C_PlayerInfo.IsCharacterBankEnabled()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsDisplayRaceNative
+---======================================================================
+--- Returns:
+--- @return boolean isDisplayRaceNative
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsDisplayRaceNative
+---
+--- Usage: isDisplayRaceNative = C_PlayerInfo.IsDisplayRaceNative()
+---
+-- function C_PlayerInfo.IsDisplayRaceNative()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer
+---======================================================================
+--- Arguments:
+--- @param expansionID number
+---
+--- Returns:
+--- @return boolean isUnlocked
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer
+---
+--- Usage: isUnlocked = C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer(expansionID)
+---
+-- function C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsMirrorImage
+---======================================================================
+--- Returns:
+--- @return boolean isMirrorImage
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsMirrorImage
+---
+--- Usage: isMirrorImage = C_PlayerInfo.IsMirrorImage()
+---
+-- function C_PlayerInfo.IsMirrorImage()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsPlayerEligibleForNPE
+---======================================================================
+--- Returns true if the player is eligible for the legacy new player experience tutorial, or false and a reason string if not.
+---
+--- Returns:
+--- @return boolean isEligible
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsPlayerEligibleForNPE
+---
+--- Usage: isEligible, failureReason = C_PlayerInfo.IsPlayerEligibleForNPE()
+---
+-- function C_PlayerInfo.IsPlayerEligibleForNPE()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsPlayerEligibleForNPEv2
+---======================================================================
+--- Returns true if the player is eligible for the updated new player experience tutorial, or false and a reasons string if not.
+---
+--- Returns:
+--- @return boolean isEligible
+--- @return string failureReason
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsPlayerEligibleForNPEv2
+---
+--- Usage: isEligible, failureReason = C_PlayerInfo.IsPlayerEligibleForNPEv2()
+---
+-- function C_PlayerInfo.IsPlayerEligibleForNPEv2()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsPlayerInChromieTime
+---======================================================================
+--- Returns true if the player is actively within a Timewalking Campaign (Chromie Time).
+---
+--- Returns:
+--- @return boolean inChromieTime
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsPlayerInChromieTime
+---
+--- Usage: inChromieTime = C_PlayerInfo.IsPlayerInChromieTime()
+---
+-- function C_PlayerInfo.IsPlayerInChromieTime()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsPlayerNPERestricted
+---======================================================================
+--- Returns true if the player has new player experience restrictions in place.
+---
+--- Returns:
+--- @return boolean isRestricted
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsPlayerNPERestricted
+---
+--- Usage: isRestricted = C_PlayerInfo.IsPlayerNPERestricted()
+---
+-- function C_PlayerInfo.IsPlayerNPERestricted()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsSelfFoundActive
+---======================================================================
+--- Returns:
+--- @return boolean active
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsSelfFoundActive
+---
+--- Usage: active = C_PlayerInfo.IsSelfFoundActive()
+---
+-- function C_PlayerInfo.IsSelfFoundActive()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsTradingPostAvailable
+---======================================================================
+--- Returns:
+--- @return boolean isAvailable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsTradingPostAvailable
+---
+--- Usage: isAvailable = C_PlayerInfo.IsTradingPostAvailable()
+---
+-- function C_PlayerInfo.IsTradingPostAvailable()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsTravelersLogAvailable
+---======================================================================
+--- Returns:
+--- @return boolean isAvailable
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsTravelersLogAvailable
+---
+--- Usage: isAvailable = C_PlayerInfo.IsTravelersLogAvailable()
+---
+-- function C_PlayerInfo.IsTravelersLogAvailable()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GUIDIsPlayer
+---======================================================================
+--- Returns true if the GUID belongs to a player.
+---
+--- Arguments:
+--- @param guid string - The GUID to be checked.
+---
+--- Returns:
+--- @return boolean isPlayer - True if the GUID represents a player unit, or false if not.
+---
+--- @since Patch 8.1.0 (2018-12-11): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GUIDIsPlayer
+---
+--- Usage: isPlayer = C_PlayerInfo.GUIDIsPlayer(guid)
+---
+-- function C_PlayerInfo.GUIDIsPlayer()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetClass
+---======================================================================
+--- Returns the class of a player.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return string className ?
+--- @return string classFilename ?
+--- @return number classID ? : ClassId
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetClass
+---
+--- Usage: className, classFilename, classID = C_PlayerInfo.GetClass(playerLocation)
+---
+-- function C_PlayerInfo.GetClass()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetName
+---======================================================================
+--- Returns the name of a player.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return string name ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetName
+---
+--- Usage: name = C_PlayerInfo.GetName(playerLocation)
+---
+-- function C_PlayerInfo.GetName()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetRace
+---======================================================================
+--- Returns the race of a player.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return number raceID ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetRace
+---
+--- Usage: raceID = C_PlayerInfo.GetRace(playerLocation)
+---
+-- function C_PlayerInfo.GetRace()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.GetSex
+---======================================================================
+--- Returns the sex of a player.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocation 🔗
+---
+--- Returns:
+--- @return Enum.UnitSex sex ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetSex
+---
+--- Usage: sex = C_PlayerInfo.GetSex(playerLocation)
+---
+--- Examples:
+--- Example 1:
+---   /dump C_PlayerInfo.GetSex(PlayerLocation:CreateFromUnit("player")) -- 1 (Female)
+---
+--- See also:
+--- - UnitSex
+---
+-- function C_PlayerInfo.GetSex()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.IsConnected
+---======================================================================
+--- Returns true if the player is connected.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin ?🔗
+---
+--- Returns:
+--- @return boolean isConnected ?
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsConnected
+---
+--- Usage: isConnected = C_PlayerInfo.IsConnected([playerLocation])
+---
+--- See also:
+--- - UnitIsConnected
+---
+-- function C_PlayerInfo.IsConnected()
+-- end
+
+---======================================================================
+--- C_PlayerInfo.UnitIsSameServer
+---======================================================================
+--- Returns true if a player is from the same or connected realm.
+---
+--- Arguments:
+--- @param playerLocation PlayerLocationMixin 🔗
+---
+--- Returns:
+--- @return boolean unitIsSameServer
+---
+--- @since Patch 8.1.5 (2019-03-12): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.UnitIsSameServer
+---
+--- Usage: unitIsSameServer = C_PlayerInfo.UnitIsSameServer(playerLocation)
+---
+--- See also:
+--- - UnitIsSameServer
+---
+-- function C_PlayerInfo.UnitIsSameServer()
+-- end

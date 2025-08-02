@@ -1,0 +1,198 @@
+--[=[
+-- C_AccountStore API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 11
+--]=]
+
+--- @class C_AccountStore
+--- C_AccountStore namespace contains 11 functions
+local C_AccountStore = {}
+
+--[=[
+-- C_AccountStore Functions:
+-- - C_AccountStore.BeginPurchase
+-- - C_AccountStore.GetCategories
+-- - C_AccountStore.GetCategoryInfo
+-- - C_AccountStore.GetCategoryItems
+-- - C_AccountStore.GetCurrencyAvailable
+-- - C_AccountStore.GetCurrencyIDForStore
+-- - C_AccountStore.GetCurrencyInfo
+-- - C_AccountStore.GetItemInfo
+-- - C_AccountStore.GetStoreFrontState
+-- - C_AccountStore.RefundItem
+-- - C_AccountStore.RequestStoreFrontInfoUpdate
+--]=]
+
+---======================================================================
+--- C_AccountStore.BeginPurchase
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean purchaseStarted
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.BeginPurchase
+---
+--- Usage: purchaseStarted = C_AccountStore.BeginPurchase(itemID)
+---
+-- function C_AccountStore.BeginPurchase()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCategories
+---======================================================================
+--- Arguments:
+--- @param storeFrontID number
+---
+--- Returns:
+--- @return number categories []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCategories
+---
+--- Usage: categories = C_AccountStore.GetCategories(storeFrontID)
+---
+-- function C_AccountStore.GetCategories()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCategoryInfo
+---======================================================================
+--- Arguments:
+--- @param categoryID number
+---
+--- Returns:
+--- @return AccountStoreCategoryInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCategoryInfo
+---
+--- Usage: info = C_AccountStore.GetCategoryInfo(categoryID)
+---
+-- function C_AccountStore.GetCategoryInfo()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCategoryItems
+---======================================================================
+--- Arguments:
+--- @param categoryID number
+---
+--- Returns:
+--- @return number itemIDs []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCategoryItems
+---
+--- Usage: itemIDs = C_AccountStore.GetCategoryItems(categoryID)
+---
+-- function C_AccountStore.GetCategoryItems()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCurrencyAvailable
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return number amount
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCurrencyAvailable
+---
+--- Usage: amount = C_AccountStore.GetCurrencyAvailable(currencyID)
+---
+-- function C_AccountStore.GetCurrencyAvailable()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCurrencyIDForStore
+---======================================================================
+--- Arguments:
+--- @param storeFrontID number
+---
+--- Returns:
+--- @return number currencyID ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCurrencyIDForStore
+---
+--- Usage: currencyID = C_AccountStore.GetCurrencyIDForStore(storeFrontID)
+---
+-- function C_AccountStore.GetCurrencyIDForStore()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetCurrencyInfo
+---======================================================================
+--- Arguments:
+--- @param currencyID number
+---
+--- Returns:
+--- @return AccountStoreCurrencyInfo info
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetCurrencyInfo
+---
+--- Usage: info = C_AccountStore.GetCurrencyInfo(currencyID)
+---
+-- function C_AccountStore.GetCurrencyInfo()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetItemInfo
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return AccountStoreItemInfo info ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetItemInfo
+---
+--- Usage: info = C_AccountStore.GetItemInfo(itemID)
+---
+-- function C_AccountStore.GetItemInfo()
+-- end
+
+---======================================================================
+--- C_AccountStore.GetStoreFrontState
+---======================================================================
+--- Arguments:
+--- @param storeFrontID number
+---
+--- Returns:
+--- @return Enum.AccountStoreState state
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.GetStoreFrontState
+---
+--- Usage: state = C_AccountStore.GetStoreFrontState(storeFrontID)
+---
+-- function C_AccountStore.GetStoreFrontState()
+-- end
+
+---======================================================================
+--- C_AccountStore.RefundItem
+---======================================================================
+--- Arguments:
+--- @param itemID number
+---
+--- Returns:
+--- @return boolean refundStarted
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.RefundItem
+---
+--- Usage: refundStarted = C_AccountStore.RefundItem(itemID)
+---
+-- function C_AccountStore.RefundItem()
+-- end
+
+---======================================================================
+--- C_AccountStore.RequestStoreFrontInfoUpdate
+---======================================================================
+--- Arguments:
+--- @param storeFrontID number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_AccountStore.RequestStoreFrontInfoUpdate
+---
+--- Usage: C_AccountStore.RequestStoreFrontInfoUpdate(storeFrontID)
+---
+-- function C_AccountStore.RequestStoreFrontInfoUpdate()
+-- end

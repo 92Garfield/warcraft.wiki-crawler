@@ -1,0 +1,389 @@
+--[=[
+-- C_GamePad API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 23
+--]=]
+
+--- @class C_GamePad
+--- C_GamePad namespace contains 23 functions
+local C_GamePad = {}
+
+--[=[
+-- C_GamePad Functions:
+-- - C_GamePad.AddSDLMapping
+-- - C_GamePad.ApplyConfigs
+-- - C_GamePad.AxisIndexToConfigName
+-- - C_GamePad.ButtonBindingToIndex
+-- - C_GamePad.ButtonIndexToBinding
+-- - C_GamePad.ButtonIndexToConfigName
+-- - C_GamePad.ClearLedColor
+-- - C_GamePad.DeleteConfig
+-- - C_GamePad.GetActiveDeviceID
+-- - C_GamePad.GetAllConfigIDs
+-- - C_GamePad.GetAllDeviceIDs
+-- - C_GamePad.GetCombinedDeviceID
+-- - C_GamePad.GetConfig
+-- - C_GamePad.GetDeviceMappedState
+-- - C_GamePad.GetDeviceRawState
+-- - C_GamePad.GetLedColor
+-- - C_GamePad.GetPowerLevel
+-- - C_GamePad.IsEnabled
+-- - C_GamePad.SetConfig
+-- - C_GamePad.SetLedColor
+-- - C_GamePad.SetVibration
+-- - C_GamePad.StickIndexToConfigName
+-- - C_GamePad.StopVibration
+--]=]
+
+---======================================================================
+--- C_GamePad.AddSDLMapping
+---======================================================================
+--- Arguments:
+--- @param platform Enum.ClientPlatformType
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.AddSDLMapping
+---
+--- Usage: success = C_GamePad.AddSDLMapping(platform, mapping)
+---
+-- function C_GamePad.AddSDLMapping()
+-- end
+
+---======================================================================
+--- C_GamePad.ApplyConfigs
+---======================================================================
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.ApplyConfigs
+---
+--- Usage: C_GamePad.ApplyConfigs()
+---
+-- function C_GamePad.ApplyConfigs()
+-- end
+
+---======================================================================
+--- C_GamePad.AxisIndexToConfigName
+---======================================================================
+--- Arguments:
+--- @param axisIndex number
+---
+--- Returns:
+--- @return string configName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.AxisIndexToConfigName
+---
+--- Usage: configName = C_GamePad.AxisIndexToConfigName(axisIndex)
+---
+-- function C_GamePad.AxisIndexToConfigName()
+-- end
+
+---======================================================================
+--- C_GamePad.ButtonBindingToIndex
+---======================================================================
+--- Converts the name of a keybinding to its assigned gamepad button index. Returns nil if no gamepad button is assigned to the requested keybinding.
+---
+--- Arguments:
+--- @param bindingName string
+---
+--- Returns:
+--- @return number buttonIndex ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonBindingToIndex
+---
+--- Usage: buttonIndex = C_GamePad.ButtonBindingToIndex(bindingName)
+---
+-- function C_GamePad.ButtonBindingToIndex()
+-- end
+
+---======================================================================
+--- C_GamePad.ButtonIndexToBinding
+---======================================================================
+--- Returns the name of the keybinding assigned to a specified gamepad button index. Returns nil if no keybinding is assigned to the requested button.
+---
+--- Arguments:
+--- @param buttonIndex number
+---
+--- Returns:
+--- @return string bindingName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonIndexToBinding
+---
+--- Usage: bindingName = C_GamePad.ButtonIndexToBinding(buttonIndex)
+---
+-- function C_GamePad.ButtonIndexToBinding()
+-- end
+
+---======================================================================
+--- C_GamePad.ButtonIndexToConfigName
+---======================================================================
+--- Arguments:
+--- @param buttonIndex number
+---
+--- Returns:
+--- @return string configName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonIndexToConfigName
+---
+--- Usage: configName = C_GamePad.ButtonIndexToConfigName(buttonIndex)
+---
+-- function C_GamePad.ButtonIndexToConfigName()
+-- end
+
+---======================================================================
+--- C_GamePad.ClearLedColor
+---======================================================================
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.ClearLedColor
+---
+--- Usage: C_GamePad.ClearLedColor()
+---
+-- function C_GamePad.ClearLedColor()
+-- end
+
+---======================================================================
+--- C_GamePad.DeleteConfig
+---======================================================================
+--- Arguments:
+--- @param configID GamePadConfigID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.DeleteConfig
+---
+--- Usage: C_GamePad.DeleteConfig(configID)
+---
+-- function C_GamePad.DeleteConfig()
+-- end
+
+---======================================================================
+--- C_GamePad.GetActiveDeviceID
+---======================================================================
+--- Returns:
+--- @return number deviceID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetActiveDeviceID
+---
+--- Usage: deviceID = C_GamePad.GetActiveDeviceID()
+---
+-- function C_GamePad.GetActiveDeviceID()
+-- end
+
+---======================================================================
+--- C_GamePad.GetAllConfigIDs
+---======================================================================
+--- Returns:
+--- @return GamePadConfigID configIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetAllConfigIDs
+---
+--- Usage: configIDs = C_GamePad.GetAllConfigIDs()
+---
+-- function C_GamePad.GetAllConfigIDs()
+-- end
+
+---======================================================================
+--- C_GamePad.GetAllDeviceIDs
+---======================================================================
+--- Returns:
+--- @return number deviceIDs []
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetAllDeviceIDs
+---
+--- Usage: deviceIDs = C_GamePad.GetAllDeviceIDs()
+---
+-- function C_GamePad.GetAllDeviceIDs()
+-- end
+
+---======================================================================
+--- C_GamePad.GetCombinedDeviceID
+---======================================================================
+--- Returns:
+--- @return number deviceID
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetCombinedDeviceID
+---
+--- Usage: deviceID = C_GamePad.GetCombinedDeviceID()
+---
+-- function C_GamePad.GetCombinedDeviceID()
+-- end
+
+---======================================================================
+--- C_GamePad.GetConfig
+---======================================================================
+--- Arguments:
+--- @param configID GamePadConfigID
+---
+--- Returns:
+--- @return GamePadConfig config ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetConfig
+---
+--- Usage: config = C_GamePad.GetConfig(configID)
+---
+-- function C_GamePad.GetConfig()
+-- end
+
+---======================================================================
+--- C_GamePad.GetDeviceMappedState
+---======================================================================
+--- Arguments:
+--- @param deviceID number ?
+---
+--- Returns:
+--- @return GamePadMappedState state ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetDeviceMappedState
+---
+--- Usage: state = C_GamePad.GetDeviceMappedState([deviceID])
+---
+-- function C_GamePad.GetDeviceMappedState()
+-- end
+
+---======================================================================
+--- C_GamePad.GetDeviceRawState
+---======================================================================
+--- Arguments:
+--- @param deviceID number
+---
+--- Returns:
+--- @return GamePadRawState rawState ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetDeviceRawState
+---
+--- Usage: rawState = C_GamePad.GetDeviceRawState(deviceID)
+---
+-- function C_GamePad.GetDeviceRawState()
+-- end
+
+---======================================================================
+--- C_GamePad.GetLedColor
+---======================================================================
+--- Returns:
+--- @return ColorMixin color 🔗
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetLedColor
+---
+--- Usage: color = C_GamePad.GetLedColor()
+---
+-- function C_GamePad.GetLedColor()
+-- end
+
+---======================================================================
+--- C_GamePad.GetPowerLevel
+---======================================================================
+--- Arguments:
+--- @param deviceID number ?
+---
+--- Returns:
+--- @return GamePadPowerLevel powerLevel
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.GetPowerLevel
+---
+--- Usage: powerLevel = C_GamePad.GetPowerLevel([deviceID])
+---
+-- function C_GamePad.GetPowerLevel()
+-- end
+
+---======================================================================
+--- C_GamePad.IsEnabled
+---======================================================================
+--- Returns true if gamepad support is enabled on this system.
+---
+--- Returns:
+--- @return boolean enabled
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.IsEnabled
+---
+--- Usage: enabled = C_GamePad.IsEnabled()
+---
+-- function C_GamePad.IsEnabled()
+-- end
+
+---======================================================================
+--- C_GamePad.SetConfig
+---======================================================================
+--- Arguments:
+--- @param config GamePadConfig
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.SetConfig
+---
+--- Usage: C_GamePad.SetConfig(config)
+---
+-- function C_GamePad.SetConfig()
+-- end
+
+---======================================================================
+--- C_GamePad.SetLedColor
+---======================================================================
+--- Arguments:
+--- @param color ColorMixin 🔗
+---
+--- @since Patch 9.2.0 (2022-02-22): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.SetLedColor
+---
+--- Usage: C_GamePad.SetLedColor(color)
+---
+-- function C_GamePad.SetLedColor()
+-- end
+
+---======================================================================
+--- C_GamePad.SetVibration
+---======================================================================
+--- Makes the gamepad vibrate.
+---
+--- Arguments:
+--- @param vibrationType string : ["Low", "High", "LTrigger", "RTrigger"]
+--- @param intensity number : [0.0-1.0]
+---
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.SetVibration
+---
+--- Usage: C_GamePad.SetVibration(vibrationType, intensity)
+---
+-- function C_GamePad.SetVibration()
+-- end
+
+---======================================================================
+--- C_GamePad.StickIndexToConfigName
+---======================================================================
+--- Arguments:
+--- @param stickIndex number
+---
+--- Returns:
+--- @return string configName ?
+---
+--- @since Patch 9.0.1 (2020-10-13): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.StickIndexToConfigName
+---
+--- Usage: configName = C_GamePad.StickIndexToConfigName(stickIndex)
+---
+-- function C_GamePad.StickIndexToConfigName()
+-- end
+
+---======================================================================
+--- C_GamePad.StopVibration
+---======================================================================
+--- @since Patch 9.1.5 (2021-11-02): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_GamePad.StopVibration
+---
+--- Usage: C_GamePad.StopVibration()
+---
+-- function C_GamePad.StopVibration()
+-- end

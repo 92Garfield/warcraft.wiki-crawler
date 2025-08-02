@@ -1,0 +1,892 @@
+--[=[
+-- C_ClubFinder API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 55
+--]=]
+
+--- @class C_ClubFinder
+--- C_ClubFinder namespace contains 55 functions
+local C_ClubFinder = {}
+
+--[=[
+-- C_ClubFinder Functions:
+-- - C_ClubFinder.ApplicantAcceptClubInvite
+-- - C_ClubFinder.ApplicantDeclineClubInvite
+-- - C_ClubFinder.CancelMembershipRequest
+-- - C_ClubFinder.CheckAllPlayerApplicantSettings
+-- - C_ClubFinder.ClearAllFinderCache
+-- - C_ClubFinder.ClearClubApplicantsCache
+-- - C_ClubFinder.ClearClubFinderPostingsCache
+-- - C_ClubFinder.DoesPlayerBelongToClubFromClubGUID
+-- - C_ClubFinder.GetClubFinderDisableReason
+-- - C_ClubFinder.GetClubRecruitmentSettings
+-- - C_ClubFinder.GetClubTypeFromFinderGUID
+-- - C_ClubFinder.GetFocusIndexFromFlag
+-- - C_ClubFinder.GetPlayerApplicantLocaleFlags
+-- - C_ClubFinder.GetPlayerApplicantSettings
+-- - C_ClubFinder.GetPlayerClubApplicationStatus
+-- - C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount
+-- - C_ClubFinder.GetPostingIDFromClubFinderGUID
+-- - C_ClubFinder.GetRecruitingClubInfoFromClubID
+-- - C_ClubFinder.GetRecruitingClubInfoFromFinderGUID
+-- - C_ClubFinder.GetStatusOfPostingFromClubId
+-- - C_ClubFinder.GetTotalMatchingCommunityListSize
+-- - C_ClubFinder.GetTotalMatchingGuildListSize
+-- - C_ClubFinder.HasAlreadyAppliedToLinkedPosting
+-- - C_ClubFinder.HasPostingBeenDelisted
+-- - C_ClubFinder.IsCommunityFinderEnabled
+-- - C_ClubFinder.IsEnabled
+-- - C_ClubFinder.IsListingEnabledFromFlags
+-- - C_ClubFinder.IsPostingBanned
+-- - C_ClubFinder.IsValidSearchString
+-- - C_ClubFinder.LookupClubPostingFromClubFinderGUID
+-- - C_ClubFinder.PlayerGetClubInvitationList
+-- - C_ClubFinder.PlayerRequestPendingClubsList
+-- - C_ClubFinder.PlayerReturnPendingCommunitiesList
+-- - C_ClubFinder.PlayerReturnPendingGuildsList
+-- - C_ClubFinder.PostClub
+-- - C_ClubFinder.RequestApplicantList
+-- - C_ClubFinder.RequestClubsList
+-- - C_ClubFinder.RequestMembershipToClub
+-- - C_ClubFinder.RequestNextCommunityPage
+-- - C_ClubFinder.RequestNextGuildPage
+-- - C_ClubFinder.RequestPostingInformationFromClubId
+-- - C_ClubFinder.RequestSubscribedClubPostingIDs
+-- - C_ClubFinder.ResetClubPostingMapCache
+-- - C_ClubFinder.RespondToApplicant
+-- - C_ClubFinder.ReturnClubApplicantList
+-- - C_ClubFinder.ReturnMatchingCommunityList
+-- - C_ClubFinder.ReturnMatchingGuildList
+-- - C_ClubFinder.ReturnPendingClubApplicantList
+-- - C_ClubFinder.SendChatWhisper
+-- - C_ClubFinder.SetAllRecruitmentSettings
+-- - C_ClubFinder.SetPlayerApplicantLocaleFlags
+-- - C_ClubFinder.SetPlayerApplicantSettings
+-- - C_ClubFinder.SetRecruitmentLocale
+-- - C_ClubFinder.SetRecruitmentSettings
+-- - C_ClubFinder.ShouldShowClubFinder
+--]=]
+
+---======================================================================
+--- C_ClubFinder.ApplicantAcceptClubInvite
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ApplicantAcceptClubInvite
+---
+--- Usage: C_ClubFinder.ApplicantAcceptClubInvite(clubFinderGUID)
+---
+-- function C_ClubFinder.ApplicantAcceptClubInvite()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ApplicantDeclineClubInvite
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ApplicantDeclineClubInvite
+---
+--- Usage: C_ClubFinder.ApplicantDeclineClubInvite(clubFinderGUID)
+---
+-- function C_ClubFinder.ApplicantDeclineClubInvite()
+-- end
+
+---======================================================================
+--- C_ClubFinder.CancelMembershipRequest
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.CancelMembershipRequest
+---
+--- Usage: C_ClubFinder.CancelMembershipRequest(clubFinderGUID)
+---
+-- function C_ClubFinder.CancelMembershipRequest()
+-- end
+
+---======================================================================
+--- C_ClubFinder.CheckAllPlayerApplicantSettings
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.CheckAllPlayerApplicantSettings
+---
+--- Usage: C_ClubFinder.CheckAllPlayerApplicantSettings()
+---
+-- function C_ClubFinder.CheckAllPlayerApplicantSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ClearAllFinderCache
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearAllFinderCache
+---
+--- Usage: C_ClubFinder.ClearAllFinderCache()
+---
+-- function C_ClubFinder.ClearAllFinderCache()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ClearClubApplicantsCache
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearClubApplicantsCache
+---
+--- Usage: C_ClubFinder.ClearClubApplicantsCache()
+---
+-- function C_ClubFinder.ClearClubApplicantsCache()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ClearClubFinderPostingsCache
+---======================================================================
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearClubFinderPostingsCache
+---
+--- Usage: C_ClubFinder.ClearClubFinderPostingsCache()
+---
+-- function C_ClubFinder.ClearClubFinderPostingsCache()
+-- end
+
+---======================================================================
+--- C_ClubFinder.DoesPlayerBelongToClubFromClubGUID
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- Returns:
+--- @return boolean belongsToClub
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.DoesPlayerBelongToClubFromClubGUID
+---
+--- Usage: belongsToClub = C_ClubFinder.DoesPlayerBelongToClubFromClubGUID(clubFinderGUID)
+---
+-- function C_ClubFinder.DoesPlayerBelongToClubFromClubGUID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetClubFinderDisableReason
+---======================================================================
+--- Returns:
+--- @return Enum.ClubFinderDisableReason disableReason ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added VeteranTrial field.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubFinderDisableReason
+---
+--- Usage: disableReason = C_ClubFinder.GetClubFinderDisableReason()
+---
+-- function C_ClubFinder.GetClubFinderDisableReason()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetClubRecruitmentSettings
+---======================================================================
+--- Returns:
+--- @return  settings structure - ClubSettingsInfo
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubRecruitmentSettings
+---
+--- Usage: settings = C_ClubFinder.GetClubRecruitmentSettings()
+---
+-- function C_ClubFinder.GetClubRecruitmentSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetClubTypeFromFinderGUID
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- Returns:
+--- @return number clubType - Enum.ClubFinderRequestType
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubTypeFromFinderGUID
+---
+--- Usage: clubType = C_ClubFinder.GetClubTypeFromFinderGUID(clubFinderGUID)
+---
+-- function C_ClubFinder.GetClubTypeFromFinderGUID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetFocusIndexFromFlag
+---======================================================================
+--- Arguments:
+--- @param flags number
+---
+--- Returns:
+--- @return number index
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetFocusIndexFromFlag
+---
+--- Usage: index = C_ClubFinder.GetFocusIndexFromFlag(flags)
+---
+-- function C_ClubFinder.GetFocusIndexFromFlag()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetPlayerApplicantLocaleFlags
+---======================================================================
+--- Returns:
+--- @return number localeFlags
+---
+--- @since Patch 8.3.0 (2020-01-14): Added (Build 33724, Mar 17 2020).
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerApplicantLocaleFlags
+---
+--- Usage: localeFlags = C_ClubFinder.GetPlayerApplicantLocaleFlags()
+---
+-- function C_ClubFinder.GetPlayerApplicantLocaleFlags()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetPlayerApplicantSettings
+---======================================================================
+--- Returns:
+--- @return  settings structure - ClubSettingsInfo
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerApplicantSettings
+---
+--- Usage: settings = C_ClubFinder.GetPlayerApplicantSettings()
+---
+-- function C_ClubFinder.GetPlayerApplicantSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetPlayerClubApplicationStatus
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- Returns:
+--- @return number clubStatus - Enum.PlayerClubRequestStatus
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerClubApplicationStatus
+---
+--- Usage: clubStatus = C_ClubFinder.GetPlayerClubApplicationStatus(clubFinderGUID)
+---
+-- function C_ClubFinder.GetPlayerClubApplicationStatus()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount
+---======================================================================
+--- Returns:
+--- @return number focusCount
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount
+---
+--- Usage: focusCount = C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount()
+---
+-- function C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetPostingIDFromClubFinderGUID
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- Returns:
+--- @return number postingID ?
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPostingIDFromClubFinderGUID
+---
+--- Usage: postingID = C_ClubFinder.GetPostingIDFromClubFinderGUID(clubFinderGUID)
+---
+-- function C_ClubFinder.GetPostingIDFromClubFinderGUID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetRecruitingClubInfoFromClubID
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  clubInfo structure - RecruitingClubInfo (nilable)
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromClubID
+---
+--- Usage: clubInfo = C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId)
+         = C_ClubFinder.GetRecruitingClubInfoFromFinderGUID(clubFinderGUID)
+---
+-- function C_ClubFinder.GetRecruitingClubInfoFromClubID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetRecruitingClubInfoFromFinderGUID
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  clubInfo structure - RecruitingClubInfo (nilable)
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromFinderGUID
+---
+--- Usage: clubInfo = C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId)
+         = C_ClubFinder.GetRecruitingClubInfoFromFinderGUID(clubFinderGUID)
+---
+-- function C_ClubFinder.GetRecruitingClubInfoFromFinderGUID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetStatusOfPostingFromClubId
+---======================================================================
+--- Arguments:
+--- @param postingID string
+---
+--- Returns:
+--- @return number postingFlags - Enum.ClubFinderClubPostingStatusFlags[]
+---
+--- @since Patch 8.2.5 (2019-09-24): Added. (Build 32494 Nov 11 2019)
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetStatusOfPostingFromClubId
+---
+--- Usage: postingFlags = C_ClubFinder.GetStatusOfPostingFromClubId(postingID)
+---
+-- function C_ClubFinder.GetStatusOfPostingFromClubId()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetTotalMatchingCommunityListSize
+---======================================================================
+--- Returns:
+--- @return number totalSize
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetTotalMatchingCommunityListSize
+---
+--- Usage: totalSize = C_ClubFinder.GetTotalMatchingCommunityListSize()
+---
+-- function C_ClubFinder.GetTotalMatchingCommunityListSize()
+-- end
+
+---======================================================================
+--- C_ClubFinder.GetTotalMatchingGuildListSize
+---======================================================================
+--- Returns:
+--- @return number totalSize
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetTotalMatchingGuildListSize
+---
+--- Usage: totalSize = C_ClubFinder.GetTotalMatchingGuildListSize()
+---
+-- function C_ClubFinder.GetTotalMatchingGuildListSize()
+-- end
+
+---======================================================================
+--- C_ClubFinder.HasAlreadyAppliedToLinkedPosting
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+---
+--- Returns:
+--- @return boolean hasAlreadyApplied
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.HasAlreadyAppliedToLinkedPosting
+---
+--- Usage: hasAlreadyApplied = C_ClubFinder.HasAlreadyAppliedToLinkedPosting(clubFinderGUID)
+---
+-- function C_ClubFinder.HasAlreadyAppliedToLinkedPosting()
+-- end
+
+---======================================================================
+--- C_ClubFinder.HasPostingBeenDelisted
+---======================================================================
+--- Arguments:
+--- @param postingID string
+---
+--- Returns:
+--- @return boolean postingDelisted
+---
+--- @since Patch 8.2.5 (2019-09-24): Added. (Build 32494 Nov 11 2019)
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.HasPostingBeenDelisted
+---
+--- Usage: postingDelisted = C_ClubFinder.HasPostingBeenDelisted(postingID)
+---
+-- function C_ClubFinder.HasPostingBeenDelisted()
+-- end
+
+---======================================================================
+--- C_ClubFinder.IsCommunityFinderEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsCommunityFinderEnabled
+---
+--- Usage: isEnabled = C_ClubFinder.IsCommunityFinderEnabled()
+---
+-- function C_ClubFinder.IsCommunityFinderEnabled()
+-- end
+
+---======================================================================
+--- C_ClubFinder.IsEnabled
+---======================================================================
+--- Returns:
+--- @return boolean isEnabled
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsEnabled
+---
+--- Usage: isEnabled = C_ClubFinder.IsEnabled()
+---
+-- function C_ClubFinder.IsEnabled()
+-- end
+
+---======================================================================
+--- C_ClubFinder.IsListingEnabledFromFlags
+---======================================================================
+--- Arguments:
+--- @param flags number
+---
+--- Returns:
+--- @return boolean isListed
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsListingEnabledFromFlags
+---
+--- Usage: isListed = C_ClubFinder.IsListingEnabledFromFlags(flags)
+---
+-- function C_ClubFinder.IsListingEnabledFromFlags()
+-- end
+
+---======================================================================
+--- C_ClubFinder.IsPostingBanned
+---======================================================================
+--- Arguments:
+--- @param postingID string
+---
+--- Returns:
+--- @return boolean postingBanned
+---
+--- @since Patch 8.2.5 (2019-09-24): Added. (Build 32494 Nov 11 2019)
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsPostingBanned
+---
+--- Usage: postingBanned = C_ClubFinder.IsPostingBanned(postingID)
+---
+-- function C_ClubFinder.IsPostingBanned()
+-- end
+
+---======================================================================
+--- C_ClubFinder.IsValidSearchString
+---======================================================================
+--- Arguments:
+--- @param name string
+---
+--- Returns:
+--- @return boolean isApproved
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsValidSearchString
+---
+--- Usage: isApproved = C_ClubFinder.IsValidSearchString(name)
+---
+-- function C_ClubFinder.IsValidSearchString()
+-- end
+
+---======================================================================
+--- C_ClubFinder.LookupClubPostingFromClubFinderGUID
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+--- @param isLinkedPosting boolean
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID
+---
+--- Usage: C_ClubFinder.LookupClubPostingFromClubFinderGUID(clubFinderGUID, isLinkedPosting)
+---
+-- function C_ClubFinder.LookupClubPostingFromClubFinderGUID()
+-- end
+
+---======================================================================
+--- C_ClubFinder.PlayerGetClubInvitationList
+---======================================================================
+--- Returns:
+--- @return  inviteList structure - RecruitingClubInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerGetClubInvitationList
+---
+--- Usage: inviteList = C_ClubFinder.PlayerGetClubInvitationList()
+---
+-- function C_ClubFinder.PlayerGetClubInvitationList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.PlayerRequestPendingClubsList
+---======================================================================
+--- Arguments:
+--- @param type number - Enum.ClubFinderRequestType
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerRequestPendingClubsList
+---
+--- Usage: C_ClubFinder.PlayerRequestPendingClubsList(type)
+---
+-- function C_ClubFinder.PlayerRequestPendingClubsList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.PlayerReturnPendingCommunitiesList
+---======================================================================
+--- Returns:
+--- @return  info structure - RecruitingClubInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerReturnPendingCommunitiesList
+---
+--- Usage: info = C_ClubFinder.PlayerReturnPendingCommunitiesList()
+---
+-- function C_ClubFinder.PlayerReturnPendingCommunitiesList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.PlayerReturnPendingGuildsList
+---======================================================================
+--- Returns:
+--- @return  info structure - RecruitingClubInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerReturnPendingGuildsList
+---
+--- Usage: info = C_ClubFinder.PlayerReturnPendingGuildsList()
+---
+-- function C_ClubFinder.PlayerReturnPendingGuildsList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.PostClub
+---======================================================================
+--- Arguments:
+--- @param clubId string
+--- @param itemLevelRequirement number
+--- @param name string
+--- @param description string
+--- @param avatarId number
+--- @param specs number []
+--- @param type Enum.ClubFinderRequestType
+---
+--- Returns:
+--- @return boolean succesful
+---
+--- @since Patch 9.2.5 (2022-05-31): Added crossFaction return.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PostClub
+---
+--- Usage: succesful = C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type [, crossFaction])
+---
+-- function C_ClubFinder.PostClub()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestApplicantList
+---======================================================================
+--- Arguments:
+--- @param type number - Enum.ClubFinderRequestType
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestApplicantList
+---
+--- Usage: C_ClubFinder.RequestApplicantList(type)
+---
+-- function C_ClubFinder.RequestApplicantList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestClubsList
+---======================================================================
+--- Arguments:
+--- @param guildListRequested boolean
+--- @param searchString string
+--- @param specIDs table
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestClubsList
+---
+--- Usage: C_ClubFinder.RequestClubsList(guildListRequested, searchString, specIDs)
+---
+-- function C_ClubFinder.RequestClubsList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestMembershipToClub
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+--- @param comment string
+--- @param specIDs table
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestMembershipToClub
+---
+--- Usage: C_ClubFinder.RequestMembershipToClub(clubFinderGUID, comment, specIDs)
+---
+-- function C_ClubFinder.RequestMembershipToClub()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestNextCommunityPage
+---======================================================================
+--- Arguments:
+--- @param startingIndex number
+--- @param pageSize number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestNextCommunityPage
+---
+--- Usage: C_ClubFinder.RequestNextCommunityPage(startingIndex, pageSize)
+---
+-- function C_ClubFinder.RequestNextCommunityPage()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestNextGuildPage
+---======================================================================
+--- Arguments:
+--- @param startingIndex number
+--- @param pageSize number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestNextGuildPage
+---
+--- Usage: C_ClubFinder.RequestNextGuildPage(startingIndex, pageSize)
+---
+-- function C_ClubFinder.RequestNextGuildPage()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestPostingInformationFromClubId
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestPostingInformationFromClubId
+---
+--- Usage: success = C_ClubFinder.RequestPostingInformationFromClubId(clubId)
+---
+-- function C_ClubFinder.RequestPostingInformationFromClubId()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RequestSubscribedClubPostingIDs
+---======================================================================
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestSubscribedClubPostingIDs
+---
+--- Usage: C_ClubFinder.RequestSubscribedClubPostingIDs()
+---
+-- function C_ClubFinder.RequestSubscribedClubPostingIDs()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ResetClubPostingMapCache
+---======================================================================
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ResetClubPostingMapCache
+---
+--- Usage: C_ClubFinder.ResetClubPostingMapCache()
+---
+-- function C_ClubFinder.ResetClubPostingMapCache()
+-- end
+
+---======================================================================
+--- C_ClubFinder.RespondToApplicant
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+--- @param playerGUID string
+--- @param shouldAccept boolean
+--- @param requestType Enum.ClubFinderRequestType
+---
+--- @since Patch 8.3.0 (2020-01-14): Added reported argument.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RespondToApplicant
+---
+--- Usage: C_ClubFinder.RespondToApplicant(clubFinderGUID, playerGUID, shouldAccept, requestType, playerName, forceAccept [, reported])
+---
+-- function C_ClubFinder.RespondToApplicant()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ReturnClubApplicantList
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  info structure - ClubFinderApplicantInfo[]
+---
+--- @since Patch 8.2.5 (2019-09-24): Combined to C_ClubFinder.ReturnClubApplicantList()
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnClubApplicantList
+---
+--- Usage: info = C_ClubFinder.ReturnClubApplicantList(clubId)
+---
+-- function C_ClubFinder.ReturnClubApplicantList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ReturnMatchingCommunityList
+---======================================================================
+--- Returns:
+--- @return  recruitingClubs structure - RecruitingClubInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnMatchingCommunityList
+---
+--- Usage: recruitingClubs = C_ClubFinder.ReturnMatchingCommunityList()
+---
+-- function C_ClubFinder.ReturnMatchingCommunityList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ReturnMatchingGuildList
+---======================================================================
+--- Returns:
+--- @return  recruitingClubs structure - RecruitingClubInfo[]
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnMatchingGuildList
+---
+--- Usage: recruitingClubs = C_ClubFinder.ReturnMatchingGuildList()
+---
+-- function C_ClubFinder.ReturnMatchingGuildList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ReturnPendingClubApplicantList
+---======================================================================
+--- Arguments:
+--- @param clubId string
+---
+--- Returns:
+--- @return  info structure - ClubFinderApplicantInfo[]
+---
+--- @since Patch 8.2.5 (2019-09-24): Combined to C_ClubFinder.ReturnPendingClubApplicantList()
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnPendingClubApplicantList
+---
+--- Usage: info = C_ClubFinder.ReturnPendingClubApplicantList(clubId)
+---
+-- function C_ClubFinder.ReturnPendingClubApplicantList()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SendChatWhisper
+---======================================================================
+--- Arguments:
+--- @param clubFinderGUID string
+--- @param playerGUID string
+--- @param applicantType Enum.ClubFinderRequestType
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SendChatWhisper
+---
+--- Usage: C_ClubFinder.SendChatWhisper(clubFinderGUID, playerGUID, applicantType, name)
+---
+-- function C_ClubFinder.SendChatWhisper()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SetAllRecruitmentSettings
+---======================================================================
+--- Arguments:
+--- @param value number
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetAllRecruitmentSettings
+---
+--- Usage: C_ClubFinder.SetAllRecruitmentSettings(value)
+---
+-- function C_ClubFinder.SetAllRecruitmentSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SetPlayerApplicantLocaleFlags
+---======================================================================
+--- Arguments:
+--- @param localeFlags number
+---
+--- @since Patch 8.3.0 (2020-01-14): Added (Build 33724, Mar 17 2020).
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetPlayerApplicantLocaleFlags
+---
+--- Usage: C_ClubFinder.SetPlayerApplicantLocaleFlags(localeFlags)
+---
+-- function C_ClubFinder.SetPlayerApplicantLocaleFlags()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SetPlayerApplicantSettings
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param checked boolean
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetPlayerApplicantSettings
+---
+--- Usage: C_ClubFinder.SetPlayerApplicantSettings(index, checked)
+---
+-- function C_ClubFinder.SetPlayerApplicantSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SetRecruitmentLocale
+---======================================================================
+--- Arguments:
+--- @param locale number
+---
+--- @since Patch 8.3.0 (2020-01-14): Added (Build 33724, Mar 17 2020).
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetRecruitmentLocale
+---
+--- Usage: C_ClubFinder.SetRecruitmentLocale(locale)
+---
+-- function C_ClubFinder.SetRecruitmentLocale()
+-- end
+
+---======================================================================
+--- C_ClubFinder.SetRecruitmentSettings
+---======================================================================
+--- Arguments:
+--- @param index number
+--- @param checked boolean
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetRecruitmentSettings
+---
+--- Usage: C_ClubFinder.SetRecruitmentSettings(index, checked)
+---
+-- function C_ClubFinder.SetRecruitmentSettings()
+-- end
+
+---======================================================================
+--- C_ClubFinder.ShouldShowClubFinder
+---======================================================================
+--- Returns:
+--- @return boolean shouldShow
+---
+--- @since Patch 8.2.0 (2019-06-25): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ShouldShowClubFinder
+---
+--- Usage: shouldShow = C_ClubFinder.ShouldShowClubFinder()
+---
+-- function C_ClubFinder.ShouldShowClubFinder()
+-- end

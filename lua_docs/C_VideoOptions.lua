@@ -1,0 +1,95 @@
+--[=[
+-- C_VideoOptions API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 5
+--]=]
+
+--- @class C_VideoOptions
+--- C_VideoOptions namespace contains 5 functions
+local C_VideoOptions = {}
+
+--[=[
+-- C_VideoOptions Functions:
+-- - C_VideoOptions.GetCurrentGameWindowSize
+-- - C_VideoOptions.GetDefaultGameWindowSize
+-- - C_VideoOptions.GetGameWindowSizes
+-- - C_VideoOptions.GetGxAdapterInfo
+-- - C_VideoOptions.SetGameWindowSize
+--]=]
+
+---======================================================================
+--- C_VideoOptions.GetCurrentGameWindowSize
+---======================================================================
+--- Returns:
+--- @return Vector2DMixin size 🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetCurrentGameWindowSize
+---
+--- Usage: size = C_VideoOptions.GetCurrentGameWindowSize()
+---
+-- function C_VideoOptions.GetCurrentGameWindowSize()
+-- end
+
+---======================================================================
+--- C_VideoOptions.GetDefaultGameWindowSize
+---======================================================================
+--- Arguments:
+--- @param monitor number
+---
+--- Returns:
+--- @return Vector2DMixin size 🔗
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetDefaultGameWindowSize
+---
+--- Usage: size = C_VideoOptions.GetDefaultGameWindowSize(monitor)
+---
+-- function C_VideoOptions.GetDefaultGameWindowSize()
+-- end
+
+---======================================================================
+--- C_VideoOptions.GetGameWindowSizes
+---======================================================================
+--- Arguments:
+--- @param monitor number
+--- @param fullscreen boolean
+---
+--- Returns:
+--- @return table sizes [] : vector2
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetGameWindowSizes
+---
+--- Usage: sizes = C_VideoOptions.GetGameWindowSizes(monitor, fullscreen)
+---
+-- function C_VideoOptions.GetGameWindowSizes()
+-- end
+
+---======================================================================
+--- C_VideoOptions.GetGxAdapterInfo
+---======================================================================
+--- Returns info about the system's graphics adapter.
+---
+--- Returns:
+--- @return  adapters structure - GxAdapterInfoDetails[]
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetGxAdapterInfo
+---
+--- Usage: adapters = C_VideoOptions.GetGxAdapterInfo()
+---
+-- function C_VideoOptions.GetGxAdapterInfo()
+-- end
+
+---======================================================================
+--- C_VideoOptions.SetGameWindowSize
+---======================================================================
+--- Arguments:
+--- @param x number
+--- @param y number
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_VideoOptions.SetGameWindowSize
+---
+--- Usage: C_VideoOptions.SetGameWindowSize(x, y)
+---
+-- function C_VideoOptions.SetGameWindowSize()
+-- end

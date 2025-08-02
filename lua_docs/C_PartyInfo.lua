@@ -1,0 +1,685 @@
+--[=[
+-- C_PartyInfo API Documentation
+-- Generated from warcraft.wiki.gg
+-- Generated on: 2025-08-02 23:23:19
+-- Functions: 42
+--]=]
+
+--- @class C_PartyInfo
+--- C_PartyInfo namespace contains 42 functions
+local C_PartyInfo = {}
+
+--[=[
+-- C_PartyInfo Functions:
+-- - C_PartyInfo.AllowedToDoPartyConversion
+-- - C_PartyInfo.CanFormCrossFactionParties
+-- - C_PartyInfo.CanInvite
+-- - C_PartyInfo.CanStartInstanceAbandonVote
+-- - C_PartyInfo.ChallengeModeRestrictionsActive
+-- - C_PartyInfo.ConfirmConvertToRaid
+-- - C_PartyInfo.ConfirmInviteTravelPass
+-- - C_PartyInfo.ConfirmInviteUnit
+-- - C_PartyInfo.ConfirmLeaveParty
+-- - C_PartyInfo.ConfirmRequestInviteFromUnit
+-- - C_PartyInfo.ConvertToParty
+-- - C_PartyInfo.ConvertToRaid
+-- - C_PartyInfo.DelveTeleportOut
+-- - C_PartyInfo.DoCountdown
+-- - C_PartyInfo.GetActiveCategories
+-- - C_PartyInfo.GetAvailableLootMethods
+-- - C_PartyInfo.GetInstanceAbandonShutdownTime
+-- - C_PartyInfo.GetInstanceAbandonVoteRequirements
+-- - C_PartyInfo.GetInstanceAbandonVoteResponse
+-- - C_PartyInfo.GetInstanceAbandonVoteTime
+-- - C_PartyInfo.GetInviteConfirmationInvalidQueues
+-- - C_PartyInfo.GetInviteReferralInfo
+-- - C_PartyInfo.GetLootMethod
+-- - C_PartyInfo.GetMinItemLevel
+-- - C_PartyInfo.GetMinLevel
+-- - C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses
+-- - C_PartyInfo.GetRestrictPings
+-- - C_PartyInfo.InviteUnit
+-- - C_PartyInfo.IsChallengeModeActive
+-- - C_PartyInfo.IsChallengeModeKeystoneOwner
+-- - C_PartyInfo.IsCrossFactionParty
+-- - C_PartyInfo.IsDelveComplete
+-- - C_PartyInfo.IsDelveInProgress
+-- - C_PartyInfo.IsPartyFull
+-- - C_PartyInfo.IsPartyInJailersTower
+-- - C_PartyInfo.IsPartyWalkIn
+-- - C_PartyInfo.LeaveParty
+-- - C_PartyInfo.RequestInviteFromUnit
+-- - C_PartyInfo.SetInstanceAbandonVoteResponse
+-- - C_PartyInfo.SetLootMethod
+-- - C_PartyInfo.SetRestrictPings
+-- - C_PartyInfo.StartInstanceAbandonVote
+--]=]
+
+---======================================================================
+--- C_PartyInfo.AllowedToDoPartyConversion
+---======================================================================
+--- Arguments:
+--- @param toRaid boolean
+---
+--- Returns:
+--- @return boolean allowed
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.AllowedToDoPartyConversion
+---
+--- Usage: allowed = C_PartyInfo.AllowedToDoPartyConversion(toRaid)
+---
+-- function C_PartyInfo.AllowedToDoPartyConversion()
+-- end
+
+---======================================================================
+--- C_PartyInfo.CanFormCrossFactionParties
+---======================================================================
+--- Returns:
+--- @return boolean canFormCrossFactionParties
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.CanFormCrossFactionParties
+---
+--- Usage: canFormCrossFactionParties = C_PartyInfo.CanFormCrossFactionParties()
+---
+-- function C_PartyInfo.CanFormCrossFactionParties()
+-- end
+
+---======================================================================
+--- C_PartyInfo.CanInvite
+---======================================================================
+--- Returns:
+--- @return boolean allowedToInvite
+---
+--- @since Patch 8.2.5 (2019-09-24): Added. This was previously a FrameXML function. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.CanInvite
+---
+--- Usage: allowedToInvite = C_PartyInfo.CanInvite()
+---
+-- function C_PartyInfo.CanInvite()
+-- end
+
+---======================================================================
+--- C_PartyInfo.CanStartInstanceAbandonVote
+---======================================================================
+--- Returns whether it's possible to start a vote at this time
+---
+--- Returns:
+--- @return boolean canStart
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.CanStartInstanceAbandonVote
+---
+--- Usage: canStart = C_PartyInfo.CanStartInstanceAbandonVote()
+---
+-- function C_PartyInfo.CanStartInstanceAbandonVote()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ChallengeModeRestrictionsActive
+---======================================================================
+--- Returns:
+--- @return boolean restrictionsActive
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ChallengeModeRestrictionsActive
+---
+--- Usage: restrictionsActive = C_PartyInfo.ChallengeModeRestrictionsActive()
+---
+-- function C_PartyInfo.ChallengeModeRestrictionsActive()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConfirmConvertToRaid
+---======================================================================
+--- Immediately convert to raid with no regard for potentially destructive actions.
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmConvertToRaid
+---
+--- Usage: C_PartyInfo.ConfirmConvertToRaid()
+---
+-- function C_PartyInfo.ConfirmConvertToRaid()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConfirmInviteTravelPass
+---======================================================================
+--- Arguments:
+--- @param targetName string
+--- @param targetGUID string
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmInviteTravelPass
+---
+--- Usage: C_PartyInfo.ConfirmInviteTravelPass(targetName, targetGUID)
+---
+-- function C_PartyInfo.ConfirmInviteTravelPass()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConfirmInviteUnit
+---======================================================================
+--- Immediately invites the named unit to a party, with no regard for potentially destructive actions.
+---
+--- Arguments:
+--- @param targetName string
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmInviteUnit
+---
+--- Usage: C_PartyInfo.ConfirmInviteUnit(targetName)
+---
+-- function C_PartyInfo.ConfirmInviteUnit()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConfirmLeaveParty
+---======================================================================
+--- Immediately leave the party with no regard for potentially destructive actions.
+---
+--- Arguments:
+--- @param category number ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmLeaveParty
+---
+--- Usage: C_PartyInfo.ConfirmLeaveParty([category])
+---
+-- function C_PartyInfo.ConfirmLeaveParty()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConfirmRequestInviteFromUnit
+---======================================================================
+--- Immediately request an invite into the target party, this is the confirmation function to call after RequestInviteFromUnit, or if you would like to skip the confirmation process.
+---
+--- Arguments:
+--- @param targetName string
+--- @param tank boolean ?
+--- @param healer boolean ?
+--- @param dps boolean ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmRequestInviteFromUnit
+---
+--- Usage: C_PartyInfo.ConfirmRequestInviteFromUnit(targetName [, tank [, healer [, dps]]])
+---
+-- function C_PartyInfo.ConfirmRequestInviteFromUnit()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConvertToParty
+---======================================================================
+--- Converts a raid group with 5 or less members to a party.
+---
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_PartyInfo.ConvertToParty()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConvertToParty
+---
+--- Usage: C_PartyInfo.ConvertToParty()
+---
+-- function C_PartyInfo.ConvertToParty()
+-- end
+
+---======================================================================
+--- C_PartyInfo.ConvertToRaid
+---======================================================================
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_PartyInfo.ConvertToRaid()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConvertToRaid
+---
+--- Usage: C_PartyInfo.ConvertToRaid()
+---
+-- function C_PartyInfo.ConvertToRaid()
+-- end
+
+---======================================================================
+--- C_PartyInfo.DelveTeleportOut
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DelveTeleportOut
+---
+--- Usage: C_PartyInfo.DelveTeleportOut()
+---
+-- function C_PartyInfo.DelveTeleportOut()
+-- end
+
+---======================================================================
+--- C_PartyInfo.DoCountdown
+---======================================================================
+--- Countdown timer sent to all party members. Has no effect if not in a group/instance.
+---
+--- Arguments:
+--- @param seconds number
+---
+--- Returns:
+--- @return boolean success
+---
+--- @since Patch 10.2.7 (2024-05-07): Added success return value.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DoCountdown
+---
+--- Usage: success = C_PartyInfo.DoCountdown(seconds)
+---
+-- function C_PartyInfo.DoCountdown()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetActiveCategories
+---======================================================================
+--- Returns:
+--- @return number categories []
+---
+--- @since Patch 8.0.1 (2018-07-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetActiveCategories
+---
+--- Usage: categories = C_PartyInfo.GetActiveCategories()
+---
+-- function C_PartyInfo.GetActiveCategories()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetAvailableLootMethods
+---======================================================================
+--- Returns:
+--- @return Enum.LootMethod methods []
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetAvailableLootMethods
+---
+--- Usage: methods = C_PartyInfo.GetAvailableLootMethods()
+---
+-- function C_PartyInfo.GetAvailableLootMethods()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInstanceAbandonShutdownTime
+---======================================================================
+--- Returns the total duration of the shutdown time after a vote passes and how much time is left before it ends
+---
+--- Returns:
+--- @return number durationSeconds ? = 0
+--- @return number timeLeftSeconds ? = 0
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonShutdownTime
+---
+--- Usage: durationSeconds, timeLeftSeconds = C_PartyInfo.GetInstanceAbandonShutdownTime()
+---
+-- function C_PartyInfo.GetInstanceAbandonShutdownTime()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInstanceAbandonVoteRequirements
+---======================================================================
+--- Returns values controlling the vote
+---
+--- Returns:
+--- @return number votesRequired ? = 0
+--- @return number keystoneOwnerVoteWeight ? = 0
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteRequirements
+---
+--- Usage: votesRequired, keystoneOwnerVoteWeight = C_PartyInfo.GetInstanceAbandonVoteRequirements()
+---
+-- function C_PartyInfo.GetInstanceAbandonVoteRequirements()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInstanceAbandonVoteResponse
+---======================================================================
+--- Returns how the player voted, nil for not yet
+---
+--- Returns:
+--- @return boolean response ?
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteResponse
+---
+--- Usage: response = C_PartyInfo.GetInstanceAbandonVoteResponse()
+---
+-- function C_PartyInfo.GetInstanceAbandonVoteResponse()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInstanceAbandonVoteTime
+---======================================================================
+--- Returns the total duration of the vote and how much time is left before it ends
+---
+--- Returns:
+--- @return number durationSeconds ? = 0
+--- @return number timeLeftSeconds ? = 0
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteTime
+---
+--- Usage: durationSeconds, timeLeftSeconds = C_PartyInfo.GetInstanceAbandonVoteTime()
+---
+-- function C_PartyInfo.GetInstanceAbandonVoteTime()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInviteConfirmationInvalidQueues
+---======================================================================
+--- Arguments:
+--- @param inviteGUID string
+---
+--- Returns:
+--- @return  invalidQueues unknown QueueSpecificInfo[]
+---
+--- @since Patch 7.2.0 (2017-03-28): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInviteConfirmationInvalidQueues
+---
+--- Usage: invalidQueues = C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID)
+---
+-- function C_PartyInfo.GetInviteConfirmationInvalidQueues()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetInviteReferralInfo
+---======================================================================
+--- Returns info for Quick join invites.
+---
+--- Arguments:
+--- @param inviteGUID string
+---
+--- Returns:
+--- @return string outReferredByGuid
+--- @return string outReferredByName
+--- @return  outRelationType Enum.PartyRequestJoinRelation
+--- @return boolean outIsQuickJoin
+--- @return string outClubId
+---
+--- @since Patch 8.1.0 (2018-12-11): Moved to C_PartyInfo.GetInviteReferralInfo. The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInviteReferralInfo
+---
+--- Usage: outReferredByGuid, outReferredByName, outRelationType, outIsQuickJoin, outClubId = C_PartyInfo.GetInviteReferralInfo(inviteGUID)
+---
+-- function C_PartyInfo.GetInviteReferralInfo()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetLootMethod
+---======================================================================
+--- Returns:
+--- @return Enum.LootMethod method
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetLootMethod
+---
+--- Usage: method, masterLootPartyID, masterLooterRaidID = C_PartyInfo.GetLootMethod()
+---
+-- function C_PartyInfo.GetLootMethod()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetMinItemLevel
+---======================================================================
+--- Arguments:
+--- @param avgItemLevelCategory Enum.AvgItemLevelCategories - The active party is always used
+---
+--- Returns:
+--- @return number minItemLevel
+--- @return string playerNameWithLowestItemLevel
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinItemLevel
+---
+--- Usage: minItemLevel, playerNameWithLowestItemLevel = C_PartyInfo.GetMinItemLevel(avgItemLevelCategory)
+---
+-- function C_PartyInfo.GetMinItemLevel()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetMinLevel
+---======================================================================
+--- Arguments:
+--- @param category number ? - If not provided, the active party is used
+---
+--- Returns:
+--- @return number minLevel
+---
+--- @since Patch 8.3.0 (2020-01-14): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinLevel
+---
+--- Usage: minLevel = C_PartyInfo.GetMinLevel([category])
+---
+-- function C_PartyInfo.GetMinLevel()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses
+---======================================================================
+--- Returns how many players have voted either way
+---
+--- Returns:
+--- @return number count
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses
+---
+--- Usage: count = C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses()
+---
+-- function C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses()
+-- end
+
+---======================================================================
+--- C_PartyInfo.GetRestrictPings
+---======================================================================
+--- Returns:
+--- @return Enum.RestrictPingsTo restrictTo
+---
+--- @since Patch 11.0.0 (2024-07-23): Changed return value from boolean restrictToAssistants to enum.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetRestrictPings
+---
+--- Usage: restrictTo = C_PartyInfo.GetRestrictPings()
+---
+-- function C_PartyInfo.GetRestrictPings()
+-- end
+
+---======================================================================
+--- C_PartyInfo.InviteUnit
+---======================================================================
+--- Invites a player to your group.
+---
+--- Arguments:
+--- @param name string - The name of the player you would like to invite.
+---
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_PartyInfo.InviteUnit(). The previous alias is deprecated. [1]. Replaces the InviteToGroup() FrameXML function.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.InviteUnit
+---
+--- Usage: C_PartyInfo.InviteUnit(name)
+---
+-- function C_PartyInfo.InviteUnit()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsChallengeModeActive
+---======================================================================
+--- Returns:
+--- @return boolean active
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsChallengeModeActive
+---
+--- Usage: active = C_PartyInfo.IsChallengeModeActive()
+---
+-- function C_PartyInfo.IsChallengeModeActive()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsChallengeModeKeystoneOwner
+---======================================================================
+--- Returns:
+--- @return boolean isKeystoneOwner
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsChallengeModeKeystoneOwner
+---
+--- Usage: isKeystoneOwner = C_PartyInfo.IsChallengeModeKeystoneOwner()
+---
+-- function C_PartyInfo.IsChallengeModeKeystoneOwner()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsCrossFactionParty
+---======================================================================
+--- Arguments:
+--- @param category number ? - If not provided, the active party is used
+---
+--- Returns:
+--- @return boolean isCrossFactionParty
+---
+--- @since Patch 9.2.5 (2022-05-31): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsCrossFactionParty
+---
+--- Usage: isCrossFactionParty = C_PartyInfo.IsCrossFactionParty([category])
+---
+-- function C_PartyInfo.IsCrossFactionParty()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsDelveComplete
+---======================================================================
+--- Returns:
+--- @return boolean isDelveComplete
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsDelveComplete
+---
+--- Usage: isDelveComplete = C_PartyInfo.IsDelveComplete()
+---
+-- function C_PartyInfo.IsDelveComplete()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsDelveInProgress
+---======================================================================
+--- Returns:
+--- @return boolean isDelveComplete
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsDelveInProgress
+---
+--- Usage: isDelveComplete = C_PartyInfo.IsDelveInProgress()
+---
+-- function C_PartyInfo.IsDelveInProgress()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsPartyFull
+---======================================================================
+--- Arguments:
+--- @param category number ? - If not provided, the active party is used.
+---
+--- Returns:
+--- @return boolean isFull
+---
+--- @since Patch 8.2.5 (2019-09-24): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyFull
+---
+--- Usage: isFull = C_PartyInfo.IsPartyFull([category])
+---
+-- function C_PartyInfo.IsPartyFull()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsPartyInJailersTower
+---======================================================================
+--- Returns:
+--- @return boolean isPartyInJailersTower
+---
+--- @since Patch 9.0.2 (2020-11-17): Added.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyInJailersTower
+---
+--- Usage: isPartyInJailersTower = C_PartyInfo.IsPartyInJailersTower()
+---
+-- function C_PartyInfo.IsPartyInJailersTower()
+-- end
+
+---======================================================================
+--- C_PartyInfo.IsPartyWalkIn
+---======================================================================
+--- Returns:
+--- @return boolean isPartyWalkIn
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyWalkIn
+---
+--- Usage: isPartyWalkIn = C_PartyInfo.IsPartyWalkIn()
+---
+-- function C_PartyInfo.IsPartyWalkIn()
+-- end
+
+---======================================================================
+--- C_PartyInfo.LeaveParty
+---======================================================================
+--- Arguments:
+--- @param category number ?
+If omitted, defaults to INSTANCE if applicable, HOME otherwise.
+---
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_PartyInfo.LeaveParty()
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.LeaveParty
+---
+--- Usage: C_PartyInfo.LeaveParty([category])
+---
+-- function C_PartyInfo.LeaveParty()
+-- end
+
+---======================================================================
+--- C_PartyInfo.RequestInviteFromUnit
+---======================================================================
+--- Attempt to request an invite into the target party, requires confirmation in some cases (e.g. there is a party sync in progress).
+---
+--- Arguments:
+--- @param targetName string
+--- @param tank boolean ?
+--- @param healer boolean ?
+--- @param dps boolean ?
+---
+--- @since Patch 8.2.5 (2019-09-24): Moved to C_PartyInfo.RequestInviteFromUnit(). The previous alias is deprecated. [1]
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.RequestInviteFromUnit
+---
+--- Usage: C_PartyInfo.RequestInviteFromUnit(targetName [, tank [, healer [, dps]]])
+---
+-- function C_PartyInfo.RequestInviteFromUnit()
+-- end
+
+---======================================================================
+--- C_PartyInfo.SetInstanceAbandonVoteResponse
+---======================================================================
+--- Vote on whether to abandon instance, true for yes, false for no
+---
+--- Arguments:
+--- @param response boolean
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetInstanceAbandonVoteResponse
+---
+--- Usage: C_PartyInfo.SetInstanceAbandonVoteResponse(response)
+---
+-- function C_PartyInfo.SetInstanceAbandonVoteResponse()
+-- end
+
+---======================================================================
+--- C_PartyInfo.SetLootMethod
+---======================================================================
+--- Arguments:
+--- @param method Enum.LootMethod
+---
+--- Returns:
+--- @return boolean success
+---
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetLootMethod
+---
+--- Usage: success = C_PartyInfo.SetLootMethod(method [, lootMaster])
+---
+-- function C_PartyInfo.SetLootMethod()
+-- end
+
+---======================================================================
+--- C_PartyInfo.SetRestrictPings
+---======================================================================
+--- Arguments:
+--- @param restrictTo Enum.RestrictPingsTo
+---
+--- @since Patch 11.0.0 (2024-07-23): Changed argument from boolean restrictToAssistants to enum.
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetRestrictPings
+---
+--- Usage: C_PartyInfo.SetRestrictPings(restrictTo)
+---
+-- function C_PartyInfo.SetRestrictPings()
+-- end
+
+---======================================================================
+--- C_PartyInfo.StartInstanceAbandonVote
+---======================================================================
+--- @see https://warcraft.wiki.gg/wiki/API_C_PartyInfo.StartInstanceAbandonVote
+---
+--- Usage: C_PartyInfo.StartInstanceAbandonVote()
+---
+-- function C_PartyInfo.StartInstanceAbandonVote()
+-- end
