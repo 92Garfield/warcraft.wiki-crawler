@@ -1,0 +1,58 @@
+{
+  "functions": {
+    "C_AccountInfo.GetIDFromBattleNetAccountGUID": {
+      "name": "C_AccountInfo.GetIDFromBattleNetAccountGUID",
+      "signature": "battleNetAccountID = C_AccountInfo.GetIDFromBattleNetAccountGUID(battleNetAccountGUID)",
+      "description": "Converts a battle.net account GUID to battle.net ID.",
+      "arguments": [
+        {
+          "name": "battleNetAccountGUID",
+          "type": "string",
+          "description": ": WOWGUID",
+          "optional": false,
+          "nested": []
+        }
+      ],
+      "returns": [
+        {
+          "name": "battleNetAccountID",
+          "type": "number",
+          "description": "",
+          "nested": []
+        }
+      ],
+      "patch_info": "Patch 8.1.5 (2019-03-12): Added.",
+      "properties": [],
+      "url": "https://warcraft.wiki.gg/wiki/API_C_AccountInfo.GetIDFromBattleNetAccountGUID",
+      "examples": [],
+      "see_also": []
+    },
+    "C_AccountInfo.IsGUIDBattleNetAccountType": {
+      "name": "C_AccountInfo.IsGUIDBattleNetAccountType",
+      "signature": "isBNet = C_AccountInfo.IsGUIDBattleNetAccountType(guid)",
+      "description": "Returns whether a GUID is a batle.net account type.",
+      "arguments": [
+        {
+          "name": "guid",
+          "type": "string",
+          "description": ": WOWGUID",
+          "optional": false,
+          "nested": []
+        }
+      ],
+      "returns": [
+        {
+          "name": "isBNet",
+          "type": "boolean",
+          "description": "",
+          "nested": []
+        }
+      ],
+      "patch_info": "Patch 8.0.1 (2018-07-17): Added.",
+      "properties": [],
+      "url": "https://warcraft.wiki.gg/wiki/API_C_AccountInfo.IsGUIDBattleNetAccountType",
+      "examples": [],
+      "see_also": []
+    }
+  }
+}
